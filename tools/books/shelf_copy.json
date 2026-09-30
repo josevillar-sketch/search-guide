@@ -1,0 +1,48 @@
+{
+ "ip": {
+  "title": "The Individual Project",
+  "hover": "The individual project of AP Seminar: the packet, one theme and your own question, the two checkpoints, the written argument row by row, your talk, the defense, and what to do when you get stuck.",
+  "card": "The individual project of AP Seminar: the packet, one theme and your own question, the two checkpoints, the written argument row by row, your talk, the defense, and what to do when you get stuck.",
+  "syllabus": "The individual project: the packet, one theme and your own question, the written argument, the presentation, the defense."
+ },
+ "ex": {
+  "title": "The End-of-Course Exam",
+  "hover": "The end-of-course exam of AP Seminar: when and how you test, how readers score, Part A and Part B row by row, a year of practice, exam day, and scores in July.",
+  "card": "The end-of-course exam of AP Seminar: when and how you test, how readers score, Part A and Part B row by row, a year of practice, exam day, and scores in July.",
+  "syllabus": "The end-of-course exam: the parts, how readers score, Part A, Part B, practice, exam day."
+ },
+ "replace": [
+  [
+   "set data-start on <main> to one of log, manual, ai, fg, pp, tp, paper, pd, pr.",
+   "set data-start on <main> to one of log, manual, ai, fg, pp, tp, paper, pd, pr, ip, ex."
+  ],
+  [
+   "The nine volumes on the shelf are links.",
+   "The eleven volumes on the shelf are links."
+  ],
+  [
+   "<p class=\"p1\">Nine books stand on the shelf in three groups.",
+   "<p class=\"p1\">Eleven books stand on the shelf in three groups."
+  ],
+  [
+   "The S books are for AP Seminar, periods 2, 5, 6, 7 and 8; two more S books are in preparation.",
+   "The S books are for AP Seminar, periods 2, 5, 6, 7 and 8."
+  ],
+  [
+   "<nav class=\"vols\" aria-label=\"The nine books\">",
+   "<nav class=\"vols\" aria-label=\"The eleven books\">"
+  ],
+  [
+   "<h2 id=\"ch\">The nine volumes</h2>",
+   "<h2 id=\"ch\">The eleven volumes</h2>"
+  ],
+  [
+   ".ptext .bib li:nth-child(5){-webkit-column-break-before:always;break-before:column}",
+   ".ptext .bib li:nth-child(6){-webkit-column-break-before:always;break-before:column}.ptext{font-size:calc(var(--a)*var(--pf)*.945)}.ptext .bib{font-size:.78em}.ptext .bib li{margin-bottom:.14em}.ptext ol li{margin-bottom:.28em}"
+  ],
+  [
+   "f.setAttribute(\"class\",\"bsh\"),",
+   "f.setAttribute(\"class\",\"bsh\"),f.setAttribute(\"preserveAspectRatio\",\"none\"),"
+  ]
+ ]
+}
