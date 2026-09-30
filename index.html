@@ -82,10 +82,34 @@ section.tools{border-top:1px solid var(--line);padding-top:22px;display:flex;fle
 .dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
 .dbcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .dbcard a{color:var(--teal);font-weight:700}
-footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);padding-top:14px}
+footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:10px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.back{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.back p{flex:1 1 220px}
+.back .again{align-self:center}
+.kw button.ph{font-weight:700;border-style:solid;border-color:var(--brass)}
+.picked{font-size:.88rem;color:var(--mute)}
+.purl{display:none}
+#printall{display:none}
 @media (max-width:480px){h1{font-size:1.65rem}.slip{padding:16px 14px}}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+/* Print: Ctrl+P prints the open slip; the teacher button prints one slip per page for a whole period. */
+@media print{
+  :root:not(#print){--ground:#fff;--panel:#fff;--panel-2:#f2f2f2;--ink:#000;--mute:#333;--line:#999;--brass:#7a5410;--on-brass:#fff;--teal:#0f5e54;--plum:#6d3a73;--slip:#fff;color-scheme:light}
+  @page{margin:12mm}
+  body{padding:0;font-size:10pt;line-height:1.35}
+  header.top,#step1,#step2,#step3 .steplabel,section.tools,footer,.again,.acts,.hint,.back,.dbwhat,.lvl,.fixb{display:none!important}
+  .slip{box-shadow:none;border:1px solid var(--line);gap:9px;padding:10px 12px;border-radius:6px}
+  .sliphead{padding-bottom:6px}.who{font-size:1.25rem}.q{font-size:1.02rem}.from{font-size:.85rem}
+  .searches{gap:6px}.search{padding:6px 10px;gap:3px;border-radius:6px}.words{padding:4px 8px}
+  .swap td{padding:3px 8px 3px 0}.tip{padding:6px 10px}.log{gap:0}
+  .search,.block{break-inside:avoid}
+  .purl{display:inline;font:8.5pt var(--mono);color:var(--mute)}
+  .log{display:block;columns:2;column-gap:24px}.log li{break-inside:avoid}
+  body.print-all .wrap{display:none}
+  body.print-all #printall{display:block}
+  #printall .slip{break-after:page}
+}
 </style>
 
 <div class="wrap">
@@ -97,6 +121,7 @@ footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);paddi
 
   <div class="step" id="step1">
     <div class="steplabel"><b>1</b><h2>Your period</h2></div>
+    <div class="back" id="back" hidden></div>
     <div class="chips" id="periods" role="group" aria-label="Choose your period"></div>
   </div>
 
@@ -114,11 +139,12 @@ footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);paddi
 
   <section class="tools" aria-labelledby="tb">
     <h2 id="tb">Changed your question? Build a new search</h2>
-    <p class="hint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. The box starts with the practice table question from class.</p>
+    <p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
     <label class="sr" for="myq">Your question</label>
-    <textarea id="myq">To what extent should Miami-Dade keep bars on bus-stop benches in 2027?</textarea>
+    <textarea id="myq">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
     <div class="kw" id="kw" aria-label="Words in your search"></div>
     <p class="words" id="built"></p>
+    <p class="picked" id="picked"></p>
     <div class="acts" id="builtacts"></div>
   </section>
 
@@ -127,8 +153,11 @@ footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);paddi
     <div class="dbgrid" id="dbgrid"></div>
   </section>
 
-  <footer>Questions as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. If your log has a newer version, your log wins: use the tool above. Every database here is free to search. Nothing on this page is graded.</footer>
+  <footer>Questions as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. If your log has a newer version, your log wins: use the tool above. Every database here is free to search. Nothing on this page is graded.
+    <button type="button" class="again" id="printp" hidden>Print this period's slips</button>
+  </footer>
 </div>
+<div id="printall" aria-hidden="true"></div>
 
 <script>
 (function(){
@@ -164,21 +193,26 @@ function url(db,q){var d=DB[db];if(!d||!d.u)return d?d.h:"#";var enc=encodeURICo
 function copyText(btn,text){function done(){btn.textContent="Copied";btn.classList.add("ok");setTimeout(function(){btn.textContent="Copy words";btn.classList.remove("ok");},1800);}
  try{navigator.clipboard.writeText(text).then(done,function(){sel(btn);});}catch(e){sel(btn);}}
 function sel(btn){var pre=btn.parentNode.parentNode.querySelector(".words");if(!pre)return;var r=document.createRange();r.selectNodeContents(pre);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Selected: tap Copy";}
-function searchRow(s,i){
+function searchRow(s,i,onTap){
  var d=DB[s.db]||DB.scholar;
  var acts=el("div",{class:"acts"});
- var cp=el("button",{type:"button",class:"copy",text:"Copy words"});cp.addEventListener("click",function(){copyText(cp,s.q);});
- if(d.copy||d.browse){acts.appendChild(cp);acts.appendChild(el("a",{class:"go",href:d.h,target:"_blank",rel:"noopener",text:"Open "+d.n}));}
- else{acts.appendChild(el("a",{class:"go",href:url(s.db,s.q),target:"_blank",rel:"noopener",text:"Search "+d.n}));acts.appendChild(cp);}
+ var cp=el("button",{type:"button",class:"copy",text:"Copy words"});cp.addEventListener("click",function(){copyText(cp,s.q);if(onTap)onTap(i);});
+ var go;
+ if(d.copy||d.browse){go=el("a",{class:"go",href:d.h,target:"_blank",rel:"noopener",text:"Open "+d.n});acts.appendChild(cp);acts.appendChild(go);}
+ else{go=el("a",{class:"go",href:url(s.db,s.q),target:"_blank",rel:"noopener",text:"Search "+d.n});acts.appendChild(go);acts.appendChild(cp);}
+ go.addEventListener("click",function(){if(onTap)onTap(i);});
  var hint=d.copy?el("p",{class:"hint",text:"Copy the words, open "+d.n+", and paste them into its search box."}):(d.browse?el("p",{class:"hint",text:"Open the list and look for these words."}):null);
  return el("div",{class:"search"},[
-  el("div",{class:"shead"},[el("span",{class:"callno",text:"Search "+(i+1)}),el("span",{class:"dbname",text:d.n})]),
+  el("div",{class:"shead"},[el("span",{class:"callno",text:"Search "+(i+1)}),el("span",{class:"dbname",text:d.n}),el("span",{class:"purl",text:d.h.replace(/^https:\/\//,"").replace(/\/$/,"")})]),
   el("p",{class:"dbwhat",text:d.w}),
   el("p",{class:"words",text:s.q}),acts,hint]);
 }
 var CHAIR='<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><circle cx="15" cy="15" r="3" fill="currentColor"/></svg>';
-function render(st){
- var g=document.getElementById("guide");g.innerHTML="";
+function today(){try{return new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});}catch(e){return new Date().toDateString();}}
+function logLines(st,s){var d=DB[s.db]||DB.scholar;
+ return ["1. Date: "+today(),"2. Source: ","3. How I found it: "+s.q+" (in "+d.n+")","4. What it argues: ",
+  "5. "+(st.c==="R"?"Method it used: ":"Perspective it holds: "),"6. Still serves my question? "].join("\n");}
+function slip(st,print){
  var isEx=st.id==="example";
  var head=el("div",{class:"sliphead"},[el("span",{class:"who",text:st.n}),
    isEx?el("span",{class:"example-tag",text:"Example"}):el("span",{class:"callno",text:"Period "+st.p+" · "+PER[st.p]+" · Set the Table "+DAY[st.p]})]);
@@ -193,52 +227,109 @@ function render(st){
  tb.appendChild(el("thead",null,[el("tr",null,[el("th",{text:"Your word"}),el("th",{html:'<span class="sr">becomes</span>'}),el("th",{text:"The field's word"})])]));
  var tbody=el("tbody");(st.sw||[]).forEach(function(p){tbody.appendChild(el("tr",null,[el("td",{text:p[0]}),el("td",{text:"to"}),el("td",{text:p[1]})]));});tb.appendChild(tbody);
  var sb=el("div",{class:"block"},[el("h3",{text:"Say it the way researchers say it"}),el("div",{style:"overflow-x:auto"},[tb])]);
- var srch=el("div",{class:"searches"});st.s.forEach(function(s,i){srch.appendChild(searchRow(s,i));});
+ var last=0,note=el("p",{class:"hint",text:"Line 3 comes from Search 1. Tap a different search and it follows you."});
+ function onTap(i){last=i;note.textContent="Line 3 comes from Search "+(i+1)+", the last one you tapped.";}
+ var srch=el("div",{class:"searches"});st.s.forEach(function(s,i){srch.appendChild(searchRow(s,i,onTap));});
  var sr=el("div",{class:"block"},[el("h3",{text:"Your three searches"}),srch]);
  var tp=el("div",{class:"block"},[el("h3",{text:"Your tip"}),el("p",{class:"tip",text:st.tip})]);
  if(st.es)tp.appendChild(el("p",{class:"hint",text:"Puedes buscar en español en SciELO y en Google Scholar. Si la fuente está en español, escribe el título traducido entre corchetes en tu log."}));
  var line5=st.c==="R"?"Method it used (none stated? write that)":"Perspective it holds: a point of view, with a reason";
+ var lcp=el("button",{type:"button",class:"copy",text:"Copy log lines"});
+ lcp.addEventListener("click",function(){copyLog(lcp,logLines(st,st.s[last]));});
  var lg=el("div",{class:"block"},[el("h3",{text:"Found one? Log it as your next entry (6, 7 and on)"}),
-  el("ol",{class:"log"},["Date","Source: author, title, year, where I found it","How I found it: my search words and the site","What it argues, in one sentence",line5,"Still serves my question? Yes or no, and why"].map(function(t){return el("li",{text:t});}))]);
+  el("ol",{class:"log"},["Date","Source: author, title, year, where I found it","How I found it: my search words and the site","What it argues, in one sentence",line5,"Still serves my question? Yes or no, and why"].map(function(t){return el("li",{text:t});})),
+  el("div",{class:"acts"},[lcp]),note]);
  var T=st.c==="R"?
   [["Stuck","Tap search 1. Open the first result with a free copy. Read the summary at the top, then write lines 1 to 3."],["Going","Run all three searches. Pick the source closest to your who, where and when. Write all six lines."],["Done early","Find a study whose method you could copy this year: a survey, interviews, or counting records. Its method goes on line 5."]]:
   [["Stuck","Tap search 1. Open the first result with a free copy. Read the summary at the top, then write lines 1 to 3."],["Going","Run all three searches. Pick the source that disagrees with one of your starred chairs. Write all six lines."],["Done early","Find the guest who argues against the source you just logged. Log it as the next entry."]];
  var tiers=el("div",{class:"tiers"});T.forEach(function(t){tiers.appendChild(el("div",{class:"tier"},[el("b",{text:t[0]}),el("p",{text:t[1]})]));});
- var fx=el("div",{class:"block"},[el("h3",{text:"No results? Change one thing at a time"}),el("ol",{class:"fix"},["Take out the least important word.","Swap your word for the field's word from the list above.","Take the quotation marks off one phrase.","Run the same words in your next database."].map(function(t){return el("li",{text:t});}))]);
- var slip=el("article",{class:"slip","aria-label":"Search slip for "+st.n},[head,qb,cb,sb,sr,tp,el("div",{class:"block"},[el("h3",{text:"Pick your level"}),tiers]),lg,fx]);
- if(!isEx){var ag=el("button",{type:"button",class:"again",text:"Not you? Pick another name"});ag.addEventListener("click",function(){clearPick();document.getElementById("find").focus();});slip.appendChild(ag);}
- g.appendChild(slip);
- document.getElementById("step3title").textContent=isEx?"What a search slip looks like":"Your search slip";
+ var fx=el("div",{class:"block fixb"},[el("h3",{text:"No results? Change one thing at a time"}),el("ol",{class:"fix"},["Take out the least important word.","Swap your word for the field's word from the list above.","Take the quotation marks off one phrase.","Run the same words in your next database."].map(function(t){return el("li",{text:t});}))]);
+ var a=el("article",{class:"slip","aria-label":"Search slip for "+st.n},[head,qb,cb,sb,sr,tp,el("div",{class:"block lvl"},[el("h3",{text:"Pick your level"}),tiers]),lg,fx]);
+ if(!isEx&&!print){var ag=el("button",{type:"button",class:"again",text:"Not you? Pick another name"});ag.addEventListener("click",function(){clearPick();document.getElementById("find").focus();});a.appendChild(ag);}
+ return a;
 }
+function copyLog(btn,text){function done(){btn.textContent="Copied: paste into your log";btn.classList.add("ok");setTimeout(function(){btn.textContent="Copy log lines";btn.classList.remove("ok");},2200);}
+ function fail(){btn.textContent="Copy did not work: type the six lines";}
+ try{navigator.clipboard.writeText(text).then(done,fail);}catch(e){fail();}}
+function render(st){
+ var g=document.getElementById("guide");g.innerHTML="";g.appendChild(slip(st,false));
+ document.getElementById("step3title").textContent=st.id==="example"?"What a search slip looks like":"Your search slip";
+}
+
+var KEY="r63sg_last";
+function store(v){try{if(v)localStorage.setItem(KEY,v);else localStorage.removeItem(KEY);}catch(e){}}
+function stored(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
+function welcome(){var id=stored();var hit=id&&DATA.filter(function(d){return d.id===id;})[0];var box=document.getElementById("back");if(!hit){box.hidden=true;return;}
+ box.innerHTML="";var first=hit.n.split(" ")[0];
+ var open=el("button",{type:"button",class:"go",text:"Open my slip"});open.addEventListener("click",function(){box.hidden=true;pickPeriod(hit.p,true);pickStudent(hit);});
+ var no=el("button",{type:"button",class:"again",text:"Not "+first+"?"});no.addEventListener("click",function(){store(null);box.hidden=true;});
+ box.appendChild(el("p",{text:"Welcome back, "+first+". Your slip is saved on this iPad."}));box.appendChild(open);box.appendChild(no);box.hidden=false;}
+
 var curP=null;
-function periods(){var box=document.getElementById("periods");ORDER.forEach(function(p){var n=DATA.filter(function(d){return d.p===p;}).length;
+function periods(){var box=document.getElementById("periods");ORDER.forEach(function(p){
  var b=el("button",{type:"button",class:"chip","aria-pressed":"false","data-p":p},[el("span",{text:"Period "+p}),el("small",{text:PER[p]})]);
  b.addEventListener("click",function(){pickPeriod(p);});box.appendChild(b);});}
 function pickPeriod(p,keep){curP=p;document.querySelectorAll("#periods .chip").forEach(function(c){c.setAttribute("aria-pressed",String(+c.getAttribute("data-p")===p));});
- document.getElementById("step2").hidden=false;var f=document.getElementById("find");if(!keep)f.value="";names();if(!keep)render(EXAMPLE);}
+ document.getElementById("step2").hidden=false;var f=document.getElementById("find");if(!keep)f.value="";names();if(!keep)render(EXAMPLE);
+ var pp=document.getElementById("printp"),n=DATA.filter(function(d){return d.p===p;}).length;pp.textContent="Print all "+n+" Period "+p+" slips, one per page";pp.hidden=false;}
 function names(){var box=document.getElementById("names");box.innerHTML="";var f=document.getElementById("find").value.trim().toLowerCase();
  DATA.filter(function(d){return d.p===curP&&(!f||d.n.toLowerCase().indexOf(f)>-1);}).forEach(function(d){
   var b=el("button",{type:"button",class:"name","aria-pressed":"false","data-id":d.id,text:d.n});b.addEventListener("click",function(){pickStudent(d);});box.appendChild(b);});
  if(!box.children.length)box.appendChild(el("p",{class:"hint",text:"No name matches. Check the period, or ask Mr. Portela."}));}
 function pickStudent(d){document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed",String(n.getAttribute("data-id")===d.id));});
- render(d);try{history.replaceState(null,"","#"+d.id);}catch(e){}
+ render(d);store(d.id);document.getElementById("back").hidden=true;try{history.replaceState(null,"","#"+d.id);}catch(e){}
+ if(d.q){document.getElementById("myq").value=d.q;document.getElementById("bhint").textContent="The box holds your question on record. Type your newest version over it. Tap a word to drop it. Put a phrase in quotation marks to keep its words together.";buildKw();}
  var s3=document.getElementById("step3");if(s3.scrollIntoView)s3.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}
-function clearPick(){try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}render(EXAMPLE);document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed","false");});}
+function clearPick(){try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}store(null);render(EXAMPLE);document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed","false");});}
 document.getElementById("find").addEventListener("input",names);
+window.addEventListener("hashchange",function(){var id=(location.hash||"").slice(1);var d=id&&DATA.filter(function(x){return x.id===id;})[0];if(d){pickPeriod(d.p,true);pickStudent(d);}});
 
-var STOP="a an the of in on at to for from by with and or but is are was were be been being do does did has have had how what why when where which who whom whose that this these those to extent can could should would will may might it its their there they them than then as into about affect affects affected influence influences impact impacts effect effects between among during through throughout truly really more most less very people person".split(" ");
+function printPeriod(p){var box=document.getElementById("printall");box.innerHTML="";
+ DATA.filter(function(d){return d.p===p;}).forEach(function(d){box.appendChild(slip(d,true));});
+ document.body.classList.add("print-all");window.print();}
+window.addEventListener("afterprint",function(){if(document.body.classList.contains("print-all")){document.body.classList.remove("print-all");document.getElementById("printall").innerHTML="";}});
+document.getElementById("printp").addEventListener("click",function(){if(curP)printPeriod(curP);});
+
+var STOP="a an the of in on at to for from by with and or but is are was were be been being do does did has have had how what why when where which who whom whose that this these those to extent can could should would will may might it its their there they them than then as into about affect affects affected influence influences impact impacts effect effects between among during through throughout truly really more most less very people person such past like also other some any all each not no".split(" ");
+/* Topic words that send the builder to a specialist database. Scholar always leads; the two best matches follow; Open Library closes. */
+var TOPIC=[
+ ["pubmed",/health|mental|medic|sleep|insomnia|diet|disease|diabet|anxiety|depress|stress|trauma|nutrition|obes|cancer|patient|doctor|hospital|exercise|athlet|injur|brain|adhd|autism|pregnan|prenatal|vaccin|suicid|eating|disorder/g],
+ ["eric",/school|student|teacher|classroom|educat|learn|college|universit|academic|curricul|homework|literacy|grades/g],
+ ["pew",/teen|americans?\b|united states|social media|religio|christian|politic|vot|generation|famil|public opinion|internet|smartphone|chatbot|\bai\b/g],
+ ["bjs",/crime|police|prison|jail|victim|justice system|arrest|incarcer|\bgun|violence|assault/g],
+ ["lii",/\blaws?\b|legal|constitution|amendment|rights\b|supreme court|statute|detention|deport/g],
+ ["ideas",/econom|wage|\bpay\b|income|price|market|money|financ|employ|trade|business|entrepreneur|poverty|\btax|cost/g],
+ ["owid",/world|global|countries|climate|environment|emission|pollution|population|energy/g],
+ ["loc",/histor|century|\bwar\b|colonial|civil rights|slavery|revolution|1[5-9]\d0s|\b1[5-9]\d\d\b/g],
+ ["scielo",/latin|cuba|venezuel|mexic|brazil|colombia|argentin|peru\b|chile|spain|spanish|hispan|latino|latina|puerto ric|español|[áéíóúñ¿]/g],
+ ["philpapers",/ethic|moral|philosoph|\bgod\b|free will|conscious|\bmind\b/g]
+];
+function pickDbs(text){var t=text.toLowerCase();var sc=TOPIC.map(function(r){return {db:r[0],n:(t.match(r[1])||[]).length};}).filter(function(x){return x.n>0;});
+ sc.sort(function(a,b){return b.n-a.n;});var out=["scholar"];sc.slice(0,2).forEach(function(x){out.push(x.db);});
+ if(out.length<3)out.push("core");out.push("openlibrary");return out;}
 var kwState=[];
-function buildKw(){var t=document.getElementById("myq").value.replace(/[?.,!;:()"]/g," ");var seen={};kwState=[];
- t.split(/\s+/).forEach(function(w){var k=w.toLowerCase();if(!w||STOP.indexOf(k)>-1||/^\d+$/.test(w)||seen[k])return;seen[k]=1;kwState.push({w:w,on:true});});drawKw();}
-function drawKw(){var box=document.getElementById("kw");box.innerHTML="";kwState.forEach(function(k){var b=el("button",{type:"button","aria-pressed":String(k.on),text:k.w});b.addEventListener("click",function(){k.on=!k.on;drawKw();});box.appendChild(b);});
+function addWords(part,seen){part.replace(/[?¿.,!¡;:()]/g," ").split(/\s+/).forEach(function(w){var k=w.toLowerCase();if(!w||STOP.indexOf(k)>-1||/^\d+$/.test(w)||seen[k])return;seen[k]=1;kwState.push({w:w,on:true});});}
+function buildKw(){var raw=document.getElementById("myq").value.replace(/[“”]/g,'"');var seen={};kwState=[];
+ var parts=raw.split('"');var closed=parts.length%2===1;
+ parts.forEach(function(part,i){
+  if(i%2===1&&(closed||i<parts.length-1)){var ph=part.replace(/[?¿.,!¡;:()]/g," ").trim().replace(/\s+/g," ");var k=ph.toLowerCase();if(ph&&!seen[k]){seen[k]=1;kwState.push({w:'"'+ph+'"',on:true,ph:true});}return;}
+  addWords(part,seen);});
+ drawKw();}
+function drawKw(){var box=document.getElementById("kw");box.innerHTML="";kwState.forEach(function(k){var b=el("button",{type:"button","aria-pressed":String(k.on),class:k.ph?"ph":"",text:k.w});b.addEventListener("click",function(){k.on=!k.on;drawKw();});box.appendChild(b);});
  var q=kwState.filter(function(k){return k.on;}).map(function(k){return k.w;}).join(" ");document.getElementById("built").textContent=q||"(tap words to bring them back)";
- var a=document.getElementById("builtacts");a.innerHTML="";if(!q)return;["scholar","openlibrary","pubmed","eric","pew"].forEach(function(db){a.appendChild(el("a",{class:db==="scholar"?"go":"copy",href:url(db,q),target:"_blank",rel:"noopener",text:DB[db].n}));});}
+ var a=document.getElementById("builtacts");a.innerHTML="";var pk=document.getElementById("picked");pk.textContent="";if(!q)return;
+ var dbs=pickDbs(document.getElementById("myq").value);
+ pk.textContent="Picked for your words: "+dbs.map(function(k){return DB[k].n;}).join(", ")+".";
+ dbs.forEach(function(db){var d=DB[db];var direct=d.u&&!d.copy;
+  a.appendChild(el("a",{class:db==="scholar"?"go":"copy",href:direct?url(db,q):d.h,target:"_blank",rel:"noopener",text:direct?d.n:"Open "+d.n}));});
+ var cp=el("button",{type:"button",class:"copy",text:"Copy words"});cp.addEventListener("click",function(){copyText(cp,q);});a.appendChild(cp);}
 document.getElementById("myq").addEventListener("input",buildKw);
 
 function dbcards(){var g=document.getElementById("dbgrid");["scholar","openlibrary","core","pubmed","eric","pew","owid","loc","bjs","lii","ideas","philpapers","scielo","nces","paleo"].forEach(function(k){var d=DB[k];
  g.appendChild(el("div",{class:"dbcard"},[el("a",{href:d.h,target:"_blank",rel:"noopener",text:d.n}),el("p",{class:"hint",text:d.w}),el("p",{text:d.how})]));});}
 
 periods();dbcards();buildKw();render(EXAMPLE);
-var h=(location.hash||"").slice(1);if(h){var hit=DATA.filter(function(d){return d.id===h;})[0];if(hit){pickPeriod(hit.p,true);pickStudent(hit);}}
+var h=(location.hash||"").slice(1);var hit=h&&DATA.filter(function(d){return d.id===h;})[0];
+if(hit){pickPeriod(hit.p,true);pickStudent(hit);}else welcome();
 })();
 </script>
