@@ -1,162 +1,644 @@
 <title>Room 63 Search Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap">
 <style>
-/* Layout: one reading column. Step 1 period, step 2 name, step 3 the student's search slip; the shared tools sit below. */
+/* Room 63 Search Guide and Question Workbench.
+   Four surfaces: page (flips light and dark), night (fixed green: #band, #pick, #desk-left), paper (fixed cream: #ficha, #vl), brass (the one primary button).
+   Components use semantic tokens only. .night and .paper redefine the same names, so every child inherits the right values. */
 :root{
-  --ground:#f3efe6; --panel:#fffcf5; --panel-2:#f7f1e4; --ink:#1c1710; --mute:#554a3c; --line:#cbbd9f;
-  --brass:#7a5410; --on-brass:#fffcf5; --teal:#0f5e54; --on-teal:#fffcf5; --plum:#6d3a73; --slip:#fdf8ea;
+  --ground:#ece4d2;--card:#fbf7ee;--card-2:#f3ead6;--ink:#1d1812;--ink-soft:#4a3f31;--hair:#c9b996;--edge:#7d6a45;
+  --brass-text:#6d4f14;--pine:#245e55;--on-pine:#fbf7ee;--oxide:#9c3322;--plum:#6d3a73;--focus:#245e55;--drop:#1d1812;--page-drop:#1d1812;
+  --ins-bg:#d4e6dd;--del-bg:#f4d6cc;--c-who:#245e55;--c-where:#6d4f14;--c-when:#9c3322;--c-judge:#6d3a73;--c-var:#2f5d8a;
+  --brass-fill:#d6ad55;--on-brass-fill:#1d1812;
   --display:"Fraunces",Georgia,"Times New Roman",serif;
   --body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;
   --mono:"Space Mono","Courier New",ui-monospace,monospace;
-}
+  color-scheme:light}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --ground:#15120e; --panel:#1e1a14; --panel-2:#26211a; --ink:#efe7d6; --mute:#c3b8a1; --line:#4d4232;
-  --brass:#e2ae4d; --on-brass:#15120e; --teal:#74cbbd; --on-teal:#15120e; --plum:#d3a0d4; --slip:#221d16; color-scheme:dark}}
+  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#a8883f;
+  --brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;--drop:#8f7336;--page-drop:#8f7336;
+  --ins-bg:#1d4a3f;--del-bg:#4d2219;--c-who:#7fd1c0;--c-where:#e2b964;--c-when:#f08a74;--c-judge:#d9a5dc;--c-var:#9cc2ea;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --ground:#15120e; --panel:#1e1a14; --panel-2:#26211a; --ink:#efe7d6; --mute:#c3b8a1; --line:#4d4232;
-  --brass:#e2ae4d; --on-brass:#15120e; --teal:#74cbbd; --on-teal:#15120e; --plum:#d3a0d4; --slip:#221d16; color-scheme:dark}
+  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#a8883f;
+  --brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;--drop:#8f7336;--page-drop:#8f7336;
+  --ins-bg:#1d4a3f;--del-bg:#4d2219;--c-who:#7fd1c0;--c-where:#e2b964;--c-when:#f08a74;--c-judge:#d9a5dc;--c-var:#9cc2ea;color-scheme:dark}
+/* Legacy slip names, kept as aliases. --brass stays a text color; the fill is --brass-fill. */
+:root,.night,.paper{--panel:var(--card);--panel-2:var(--card-2);--mute:var(--ink-soft);--line:var(--hair);--teal:var(--pine);--on-teal:var(--on-pine);--slip:var(--card);--brass:var(--brass-text);--on-brass:var(--card)}
+.night{--ink:#f3ead6;--ink-soft:#c9d8cf;--card:#135046;--card-2:#0c3a33;--hair:rgba(214,173,85,.35);--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--focus:#f0c56a;--drop:#8f7336;
+  color:var(--ink);color-scheme:dark;background-color:#0c3a33;
+  background-image:radial-gradient(circle at 20px 30px,rgba(236,196,110,.7) 1px,transparent 1.6px),radial-gradient(circle at 120px 80px,rgba(236,196,110,.45) 1px,transparent 1.6px),radial-gradient(circle at 70px 150px,rgba(236,196,110,.8) 1px,transparent 1.6px),
+    radial-gradient(circle at 40px 190px,rgba(236,196,110,.4) 1px,transparent 1.6px),radial-gradient(circle at 160px 20px,rgba(236,196,110,.6) 1px,transparent 1.6px),radial-gradient(circle at 100px 110px,rgba(236,196,110,.5) 1px,transparent 1.6px),
+    radial-gradient(120% 90% at 50% 40%,#135046 0%,#0c3a33 50%,#041713 100%);
+  background-size:173px 173px,173px 173px,173px 173px,211px 211px,211px 211px,211px 211px,100% 100%;
+  background-repeat:repeat,repeat,repeat,repeat,repeat,repeat,no-repeat}
+.paper{--ink:#1d1812;--ink-soft:#4a3f31;--card:#f3ead6;--card-2:#ebdfc5;--hair:#b9a987;--edge:#1d1812;--brass-text:#6d4f14;--pine:#245e55;--on-pine:#fbf7ee;--oxide:#9c3322;--plum:#6d3a73;--focus:#245e55;--drop:#1d1812;--rule-blue:#8fb0d2;--margin-red:#cf5b4c;
+  background:var(--card);color:var(--ink);border:1.5px solid #1d1812;border-radius:6px;color-scheme:light}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html,body{background:var(--ground)}
-body{color:var(--ink);font:17px/1.55 var(--body);padding-inline:16px;padding-block:0 64px}
-.wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
-header.top{padding-block:22px 6px;display:flex;flex-direction:column;gap:6px}
-.eyebrow{font:700 .72rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass)}
-h1{font:650 2rem/1.1 var(--display);margin:0;letter-spacing:-.01em;text-wrap:balance}
-.lede{margin:0;color:var(--mute);max-width:62ch}
-h2{font:600 1.25rem/1.25 var(--display);margin:0;text-wrap:balance}
-h3{font:700 .78rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body{background:radial-gradient(120% 90% at 50% 0%,#135046 0%,#0c3a33 45%,#041713 100%) fixed,var(--ground)}}
+:root[data-theme="dark"] body{background:radial-gradient(120% 90% at 50% 0%,#135046 0%,#0c3a33 45%,#041713 100%) fixed,var(--ground)}
+body{margin:0;padding:0;color:var(--ink);font:400 17px/26px var(--body)}
 p{margin:0}
-.step{display:flex;flex-direction:column;gap:10px}
-.steplabel{display:flex;gap:10px;align-items:baseline}
-.steplabel b{font:700 .8rem var(--mono);color:var(--on-brass);background:var(--brass);border-radius:4px;padding:2px 7px}
-.chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
-.chip{font:700 1rem var(--body);text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:52px;cursor:pointer;display:flex;flex-direction:column;gap:2px}
-.chip small{font:400 .78rem var(--mono);color:var(--mute);letter-spacing:.02em}
-.chip[aria-pressed="true"]{background:var(--brass);border-color:var(--brass);color:var(--on-brass)}
-.chip[aria-pressed="true"] small{color:var(--on-brass)}
-.names{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px}
-.name{font:400 1rem var(--body);text-align:left;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-height:46px;cursor:pointer}
-.name[aria-pressed="true"]{border-color:var(--teal);box-shadow:inset 0 0 0 2px var(--teal)}
-input[type=search],textarea{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;width:100%;max-width:420px}
-textarea{max-width:100%;min-height:84px;resize:vertical}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
-.slip{background:var(--slip);border:1px solid var(--line);border-radius:12px;padding:20px 18px;display:flex;flex-direction:column;gap:22px;box-shadow:0 1px 0 var(--line)}
-.sliphead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 14px;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:12px}
-.who{font:600 1.45rem/1.15 var(--display)}
-.callno{font:400 .8rem var(--mono);color:var(--mute);letter-spacing:.04em}
-.example-tag{font:700 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--plum);border:1px solid currentColor;border-radius:4px;padding:2px 7px}
-.q{font:500 1.18rem/1.45 var(--display);margin:0;padding-left:14px;border-left:3px solid var(--brass);max-width:62ch;overflow-wrap:anywhere}
-.from{font-size:.9rem;color:var(--mute)}
-.block{display:flex;flex-direction:column;gap:8px;min-width:0}
-.chair{display:flex;gap:12px;align-items:flex-start}
-.chair svg{flex:0 0 auto;margin-top:2px}
-.swap{border-collapse:collapse;width:100%;max-width:560px;font-size:.98rem}
-.swap th{font:700 .72rem var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:4px 8px 6px 0;border-bottom:1px solid var(--line)}
-.swap td{padding:7px 8px 7px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.swap td:nth-child(2){color:var(--mute)}
-.swap td:last-child{font-weight:700}
-.searches{display:flex;flex-direction:column;gap:12px;counter-reset:s}
-.search{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.shead{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline}
-.dbname{font:700 1.02rem var(--body)}
-.dbwhat{font-size:.9rem;color:var(--mute)}
-.words{font:400 .98rem/1.5 var(--mono);background:var(--panel-2);border:1px dashed var(--line);border-radius:6px;padding:8px 10px;overflow-wrap:anywhere;margin:0}
-.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.go,.copy{font:700 .95rem var(--body);border-radius:8px;padding:10px 16px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-.go{background:var(--teal);color:var(--on-teal);border:1px solid var(--teal)}
-.copy{background:transparent;color:var(--ink);border:1px solid var(--line)}
-.copy.ok{border-color:var(--teal);color:var(--teal)}
-.hint{font-size:.88rem;color:var(--mute)}
-.tip{background:var(--panel-2);border-radius:8px;padding:12px 14px;max-width:66ch}
-.log{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:3px}
-.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.tier{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel);display:flex;flex-direction:column;gap:4px;min-width:0}
-.tier b{font:700 .74rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
-.fix{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:3px}
-.again{align-self:flex-start;font:700 .9rem var(--body);background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 14px;min-height:44px;cursor:pointer}
-section.tools{border-top:1px solid var(--line);padding-top:22px;display:flex;flex-direction:column;gap:14px}
-.kw{display:flex;flex-wrap:wrap;gap:6px}
-.kw button{font:400 .95rem var(--mono);background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 12px;min-height:40px;cursor:pointer}
-.kw button[aria-pressed="false"]{text-decoration:line-through;color:var(--mute);border-style:dashed}
-.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
-.dbcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.dbcard a{color:var(--teal);font-weight:700}
-footer{color:var(--mute);font-size:.86rem;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:10px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.back{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--panel-2);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+p,li,h1,h2,h3,label,legend,summary,.q{overflow-wrap:anywhere;min-width:0}
+a{color:var(--pine)}
+button{font:700 16px/20px var(--body);color:inherit}
+h1{font:900 28px/32px var(--display);text-transform:uppercase;letter-spacing:.02em;margin:0;text-wrap:balance}
+h2{font:650 21px/26px var(--display);margin:0;text-wrap:balance}
+h3{font:650 18px/24px var(--display);margin:0}
+.slip h3{font:700 13px/18px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.lbl{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+.hint{font-size:15px;line-height:22px;color:var(--mute)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
+:is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+[tabindex="-1"]:focus{outline:none}
+[tabindex="-1"]{scroll-margin-top:64px}
+.skip{position:absolute;left:8px;top:8px;z-index:100;transform:translateY(-300%);background:var(--brass-fill);color:var(--on-brass-fill);border:1.5px solid #1d1812;border-radius:6px;padding:12px 16px;font:700 16px/20px var(--body);text-decoration:none}
+.skip:focus{transform:none}
+
+/* Shared controls. One brass-filled button on screen at a time. */
+.btn-brass{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:14px 20px;background:var(--brass-fill);color:var(--on-brass-fill);border:1.5px solid #1d1812;border-radius:6px;box-shadow:4px 4px 0 var(--drop);font:700 16px/20px var(--body);text-align:center;cursor:pointer}
+.btn-line{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;background:transparent;color:var(--ink);border:1.5px solid var(--edge);border-radius:6px;font:700 16px/20px var(--body);text-align:center;text-decoration:none;cursor:pointer}
+.btn-brass:active,.chip:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--drop)}
+button:disabled,[aria-disabled="true"]{cursor:not-allowed}
+button:disabled{opacity:.6}
+input[type=text],input[type=search],input[type=date],textarea,select{font:400 18px/26px var(--body);color:var(--ink);background:var(--card);border:1.5px solid var(--edge);border-radius:6px;padding:10px 12px;width:100%;min-width:0;margin:0}
+textarea{resize:vertical;display:block}
+input[type=date]{padding-inline:8px}
+[aria-invalid="true"]{border-color:var(--oxide)!important;border-width:2px!important}
+fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:8px}
+legend{padding:0;font:700 16px/22px var(--body)}
+label{font:700 16px/22px var(--body)}
+.badge{display:inline-block;font:700 13px/18px var(--mono);letter-spacing:.04em;background:var(--card-2);color:var(--ink);border-radius:999px;padding:1px 8px}
+.stamp{display:inline-block;font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--oxide)}
+.stamp.in{color:var(--pine);border:1.5px solid currentColor;border-radius:6px;padding:2px 8px;transform:rotate(-2deg)}
+.panel{background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:16px;min-width:0}
+.err{display:flex;gap:8px;align-items:flex-start;color:var(--oxide);font:700 15px/22px var(--body)}
+.err svg{flex:0 0 auto;margin-top:2px}
+.chipset{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.rchip{position:relative;display:inline-flex;max-width:100%;min-width:0;font:inherit}
+.rchip input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;z-index:1}
+.rchip span{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:0;padding:10px 16px;border:1.5px solid var(--edge);border-radius:999px;background:var(--card);color:var(--ink);font:400 16px/20px var(--body);overflow-wrap:anywhere}
+.rchip span svg{display:none;flex:0 0 auto}
+.rchip input:checked+span{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.rchip input:checked+span svg{display:block}
+.rchip input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.rchip input:disabled+span{opacity:.6}
+.confirm{display:grid;gap:12px;background:var(--card-2);border-left:4px solid var(--oxide);border-radius:6px;padding:16px}
+.row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* Layout. Base is the phone (375); 700px is iPad portrait (820); 1024px is iPad landscape (1180). */
+.shell{padding-inline:16px}
+#band{padding-block:24px 16px;border-bottom:1px solid #d6ad55}
+#band.compact{padding-block:16px 8px}
+#band .shell{display:grid;gap:8px}
+#band.compact h1{font-size:20px;line-height:24px}
+.eyebrow{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-text)}
+.lede{color:var(--ink-soft);max-width:62ch}
+#pick{padding-block:0 24px;border-bottom:1px solid #d6ad55}
+.step{display:grid;gap:16px;min-width:0}
+#pick .step{padding-top:24px}
+.steplabel{display:flex;gap:12px;align-items:center}
+.steplabel b{font:700 13px/18px var(--mono);color:var(--ink);background:transparent;border:1.5px solid var(--edge);border-radius:6px;padding:2px 8px}
+.desk[data-on="true"] #step3 .steplabel b{display:none}
+#periods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.chip{display:grid;justify-items:center;align-content:center;gap:2px;min-height:72px;min-width:0;padding:8px;text-align:center;background:var(--card);color:var(--ink);border:1.5px solid var(--edge);border-radius:6px;box-shadow:4px 4px 0 var(--drop);font:700 16px/20px var(--body);cursor:pointer}
+.chip svg{color:#d6ad55;margin-bottom:4px}
+.chip small{font:700 13px/18px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
+.chip[aria-pressed="true"]{background:#f3ead6;color:#1d1812}
+.chip[aria-pressed="true"] small{color:#4a3f31}
+.chip[aria-pressed="true"] svg{color:#6d4f14}
+#find{max-width:420px}
+#names{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.name{font:400 17px/22px var(--body);text-align:left;background:#f3ead6;color:#1d1812;border:1.5px solid #1d1812;border-radius:6px;padding:12px 16px;min-height:48px;min-width:0;cursor:pointer;overflow-wrap:anywhere}
+.name[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #245e55}
+.back{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:12px 16px}
 .back p{flex:1 1 220px}
 .back .again{align-self:center}
+
+.desk[data-on="false"] :is(#desk-left,#desk-nav,#st-versions,#st-checks,#ipad){display:none}
+.desk[data-on="true"]{display:grid;grid-template-columns:minmax(0,1fr)}
+#desk-left{display:grid;gap:16px;padding:16px 16px 24px;border-bottom:1px solid #d6ad55;min-width:0;align-content:start}
+#desk-left>*{min-width:0}
+#desk-main{display:grid;gap:32px;padding:0 16px 64px;min-width:0}
+#desk-main>*{min-width:0}
+.desk[data-on="false"] #desk-main{padding-top:24px}
+#desk-nav{position:sticky;top:0;z-index:10;height:48px;margin-inline:-16px;padding-inline:16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:var(--ground);border-bottom:1px solid var(--hair)}
+body.typing #desk-nav{position:static}
+#desk-nav a{display:flex;align-items:center;justify-content:center;gap:4px;min-width:0;height:47px;color:var(--ink);text-decoration:none;font:700 16px/20px var(--body);border-bottom:3px solid transparent;white-space:nowrap}
+#desk-nav a[aria-current="location"]{border-bottom-color:var(--ink)}
+#desk-nav .badge{padding:1px 5px;letter-spacing:0}
+#st-versions,#st-checks,#step3,#tools-build,#tools-db,#ipad,#compare,#wb-form,#vl{scroll-margin-top:64px}
+.station{display:grid;gap:16px;min-width:0}
+.station>*{min-width:0}
+
+/* Identity strip */
+#who{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+#who .seal{flex:0 0 32px;display:block;line-height:0}
+.who-id{flex:1 1 160px;display:grid;min-width:0}
+#who-name{font:650 20px/24px var(--display)}
+#who-meta{color:var(--ink-soft)}
+.who-acts{display:flex;flex-wrap:wrap;gap:8px;flex-basis:100%}
+.who-acts .btn-line{min-height:44px;padding:10px 12px}
+
+/* Banners */
+#desk-alerts{display:grid;gap:8px}
+.banner{background:var(--card);color:var(--ink);border-left:4px solid var(--oxide);border-radius:6px;padding:12px 16px;display:grid;gap:12px}
+#rec-ask{border-left-color:var(--brass-text)}
+
+/* The ficha: the student's newest question on a paper card */
+#ficha{position:relative;display:grid;gap:12px;padding:16px 16px 32px;box-shadow:4px 4px 0 #8f7336;min-width:0}
+#ficha::after{content:"";position:absolute;left:50%;bottom:10px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#0c3a33;border:1.5px solid #1d1812}
+#ficha-h{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.ficha-top{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:end}
+#ficha-num{display:grid;justify-items:start}
+.num-l{font:700 13px/18px var(--mono);letter-spacing:.12em;color:var(--brass-text)}
+.num-v{font:900 64px/56px var(--display);font-variation-settings:"opsz" 144;font-variant-numeric:lining-nums tabular-nums;color:var(--brass-text)}
+.ficha-cat{display:grid;gap:4px;justify-items:start;min-width:0}
+#ficha-call,#ficha-meta{color:var(--ink-soft);overflow-wrap:anywhere}
+.margin-rule{border-top:2px solid var(--margin-red);margin-inline:-16px}
+#ficha-q{font:500 20px/28px var(--display);text-wrap:pretty;max-width:58ch}
+#ficha-q.topic{color:var(--ink-soft)}
+.ficha-dotrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.mini{display:inline-flex;gap:4px;align-items:center}
+.mini i{display:block;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--ink)}
+.mini i.on{background:var(--ink)}
+#ficha-dots i{width:12px;height:12px}
+#ficha-count{font-size:15px;line-height:22px;color:var(--ink-soft)}
+#q-open{width:100%}
+#q-open.is-open{background:transparent;box-shadow:none;border-color:var(--edge);min-height:44px}
+#ficha-hint{color:var(--ink-soft)}
+
+/* Next date and the version history */
+#nextdate{display:grid;gap:4px}
+#nextdate .lbl{color:var(--brass-text)}
+#tl-wrap>summary{display:flex;align-items:center;gap:12px;min-height:44px;cursor:pointer;list-style:none}
+#tl-wrap>summary::-webkit-details-marker,.ver summary::-webkit-details-marker,.rec-details summary::-webkit-details-marker{display:none}
+#tl-wrap>summary::before,.ver summary::before,.rec-details summary::before{content:"";flex:0 0 auto;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);margin-inline:4px}
+#tl-wrap[open]>summary::before,.ver details[open]>summary::before,.rec-details[open]>summary::before{transform:rotate(45deg)}
+#timeline{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}
+.ver>details{background:var(--card);border:1px solid var(--hair);border-radius:6px}
+.ver summary{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;min-height:44px;padding:8px 12px;cursor:pointer;list-style:none}
+.ver-t{font-weight:700}
+.ver-c{color:var(--ink-soft);font-size:15px}
+.nib{display:inline-block;width:12px;height:12px;border-radius:50%;border:1.5px solid var(--ink)}
+.nib.on{background:var(--ink)}
+.recmark{display:inline-block;width:10px;height:10px;border:1.5px solid var(--ink)}
+.tag{font:700 13px/18px var(--mono);letter-spacing:.12em;color:var(--brass-text);border:1.5px solid currentColor;border-radius:6px;padding:0 6px}
+.ver-body{display:grid;gap:8px;padding:0 12px 12px}
+.ver-q{font:500 18px/26px var(--display)}
+#tl-foot,#tl-empty{color:var(--ink-soft);font-size:15px;line-height:22px}
+
+/* Versions station */
+#q-empty{display:grid;gap:16px;justify-items:start}
+#wb-form{display:grid;gap:24px}
+#wb-form>*{min-width:0}
+.fhead{display:grid;gap:8px}
+#wb-rule{border-left:4px solid var(--brass-text);padding-left:12px;font-size:15px;line-height:22px}
+#wb-draftnote,#wb-cap{background:var(--card-2);border-radius:6px;padding:8px 12px}
+.field{display:grid;gap:8px;min-width:0;align-content:start}
+#wb-reason-fix{display:grid;gap:8px}
+#wb-reason-line{border-left:4px solid var(--pine);padding-left:12px}
+#wb-check{max-width:100%}
+#wb-empty{justify-self:start}
+.wb-pair{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:end}
+.wb-pair>.field:first-child{width:144px}
+.stepper{display:grid;grid-template-columns:44px 56px 44px;width:144px}
+.stepper button{min-height:48px;background:var(--card);color:var(--ink);border:1.5px solid var(--edge);cursor:pointer;display:grid;place-items:center;padding:0}
+.stepper button:first-child{border-radius:6px 0 0 6px;border-right:0}
+.stepper button:last-child{border-radius:0 6px 6px 0;border-left:0}
+#wb-n{width:56px;border-radius:0;padding:10px 4px;text-align:center}
+.fnotes{display:grid;gap:8px}
+.wb-acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* The version-line card: what the student copies into the log, in pen */
+#vl{display:grid;gap:16px;padding:16px;box-shadow:4px 4px 0 var(--page-drop);min-width:0}
+#vl-text{margin-inline:-16px;padding:0 16px 0 52px;font:400 18px/32px var(--body);
+  background:linear-gradient(to right,transparent 39px,var(--margin-red) 39px,var(--margin-red) 41px,transparent 41px),repeating-linear-gradient(to bottom,transparent 0,transparent 31px,var(--rule-blue) 31px,var(--rule-blue) 32px)}
+#vl-text p{overflow-wrap:anywhere}
+#vl-dots{display:flex;flex-wrap:wrap;gap:8px}
+.ld{display:grid;justify-items:center;gap:4px}
+.ld span{font:700 13px/18px var(--mono)}
+.penrow{display:flex;align-items:center;gap:12px;min-height:44px;cursor:pointer}
+.penrow input{width:24px;height:24px;margin:0;accent-color:#245e55;flex:0 0 auto}
+#vl-fix{display:grid;gap:12px}
+#vl-next{display:flex;flex-wrap:wrap;gap:12px}
+
+/* Compare */
+#compare{display:grid;gap:12px}
+.cmp-pick{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#cmp-out{font:400 18px/30px var(--body);overflow-wrap:anywhere}
+del{background:var(--del-bg);color:var(--ink);text-decoration-line:line-through;text-decoration-thickness:2px;text-decoration-color:var(--oxide)}
+ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:var(--pine);text-underline-offset:3px}
+
+/* Seven checks */
+#ck-new{font-weight:700;border-left:4px solid var(--brass-text);padding-left:12px}
+#ck-count{font-weight:700}
+#ck-search{justify-self:start}
+#checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.check{display:grid;grid-template-columns:32px minmax(0,1fr) 56px;gap:4px 12px;align-items:start;background:var(--card);border:1px solid var(--hair);border-radius:6px;padding:12px}
+.ck-n{font:700 13px/18px var(--mono);color:var(--brass-text);padding-top:4px;text-align:center}
+.ck-body{display:grid;gap:4px;min-width:0}
+.ck-name{font-weight:700}
+.ck-ask{color:var(--ink-soft)}
+.dot{position:relative;width:56px;height:56px;margin:-8px 0;display:grid;place-items:center;background:transparent;border:0;border-radius:50%;padding:0;cursor:pointer;color:var(--card)}
+.dot::before{content:"";position:absolute;left:14px;top:14px;width:28px;height:28px;border-radius:50%;border:2px solid var(--ink)}
+.dot[aria-pressed="true"]::before{background:var(--ink)}
+.dot svg{position:relative;display:none}
+.dot[aria-pressed="true"] svg{display:block}
+.ck-more{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:8px}
+.ck-more .btn-line{min-height:44px;padding:8px 12px;font-size:15px}
+.fail,.refbox{grid-column:1/-1;display:grid;gap:8px;background:var(--card-2);border-radius:6px;padding:12px 16px}
+.repair-go{justify-self:start}
+#notes{display:grid;gap:12px}
+#notes-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+#notes-list li{display:grid;gap:4px;border-left:4px solid var(--brass-text);padding-left:12px}
+
+/* Circle it: color and line style both code the label */
+#circle{display:grid;gap:16px}
+#words{display:flex;flex-wrap:wrap;column-gap:0;row-gap:24px;padding:8px 4px 24px;overflow-x:clip}
+.w{position:relative;font:500 20px/28px var(--display);min-height:44px;padding:6px 8px;background:transparent;border:0;color:var(--ink);cursor:pointer;max-width:100%;overflow-wrap:anywhere;text-align:left}
+.w::before{content:"";position:absolute;inset:1px 1px;border-radius:50%/60%;transform:rotate(-1.5deg);pointer-events:none}
+.w[data-l="who"]::before{border:2px solid var(--c-who)}
+.w[data-l="where"]::before{border:2px dashed var(--c-where)}
+.w[data-l="when"]::before{border:3px dotted var(--c-when)}
+.w[data-l="judge"]::before,.w[data-l="verb"]::before{border:4px double var(--c-judge)}
+.w[data-l="var"]::before{border:0;border-bottom:3px solid var(--c-var);border-radius:0;transform:none;inset:auto 6px 4px}
+.w.l-start::before{border-top-right-radius:0;border-bottom-right-radius:0;border-right:0;right:0;transform:none}
+.w.l-mid::before{border-radius:0;border-left:0;border-right:0;left:0;right:0;transform:none}
+.w.l-end::before{border-top-left-radius:0;border-bottom-left-radius:0;border-left:0;left:0;transform:none}
+.w[data-l="var"].l-start::before,.w[data-l="var"].l-mid::before,.w[data-l="var"].l-end::before{left:0;right:0}
+.w-tag{position:absolute;left:8px;top:calc(100% - 2px);font:700 13px/18px var(--mono);letter-spacing:.12em;white-space:nowrap;pointer-events:none}
+.w[data-l="who"] .w-tag{color:var(--c-who)}.w[data-l="where"] .w-tag{color:var(--c-where)}.w[data-l="when"] .w-tag{color:var(--c-when)}
+.w[data-l="judge"] .w-tag,.w[data-l="verb"] .w-tag{color:var(--c-judge)}.w[data-l="var"] .w-tag{color:var(--c-var)}
+.pen-who span{border-style:solid}.pen-where span{border-style:dashed}.pen-when span{border-style:dotted;border-width:2.5px}.pen-judge span,.pen-verb span{border-style:double;border-width:4px}
+
+/* This iPad */
+#ipad .panel{display:grid;gap:16px;justify-items:start}
+#ipad .panel>*{max-width:100%}
+#ipad-backup{min-height:160px;font-size:16px}
+
+/* Search slip (existing), now on the 8px grid */
+.slip{background:var(--slip);border:1px solid var(--line);border-radius:6px;padding:16px;display:flex;flex-direction:column;gap:24px;min-width:0}
+.slip>*{min-width:0}
+.sliphead{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;align-items:baseline;border-bottom:1px dashed var(--line);padding-bottom:12px}
+.who{font:650 23px/28px var(--display)}
+.callno{font:400 13px/18px var(--mono);color:var(--mute);letter-spacing:.04em}
+.example-tag{font:700 13px/18px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--plum);border:1px solid currentColor;border-radius:6px;padding:2px 8px}
+.q{font:500 19px/28px var(--display);margin:0;padding-left:16px;border-left:3px solid var(--brass);max-width:62ch}
+.from{font-size:15px;line-height:22px;color:var(--mute)}
+.block{display:flex;flex-direction:column;gap:8px;min-width:0}
+.rec-details summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:8px;font-weight:700;list-style:none}
+.rec-details{display:grid;gap:8px}
+.q-rec{font:500 17px/26px var(--display);padding-left:16px;border-left:3px solid var(--hair)}
+.chair{display:flex;gap:12px;align-items:flex-start}
+.chair svg{flex:0 0 auto;margin-top:2px}
+.swap{border-collapse:collapse;width:100%;max-width:560px;font-size:16px}
+.swap th{font:700 13px/18px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);text-align:left;padding:4px 8px 8px 0;border-bottom:1px solid var(--line)}
+.swap td{padding:8px 8px 8px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.swap td:nth-child(2){color:var(--mute)}
+.swap td:last-child{font-weight:700}
+.searches{display:flex;flex-direction:column;gap:12px}
+.search{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.shead{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.dbname{font:700 17px/24px var(--body)}
+.dbwhat{font-size:15px;line-height:22px;color:var(--mute)}
+.words{font:400 16px/24px var(--mono);background:var(--panel-2);border:1px dashed var(--line);border-radius:6px;padding:8px 12px;overflow-wrap:anywhere;margin:0}
+.acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.go,.copy{font:700 16px/20px var(--body);border-radius:6px;padding:10px 16px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.go{background:var(--teal);color:var(--on-teal);border:1.5px solid var(--teal)}
+.copy{background:transparent;color:var(--ink);border:1.5px solid var(--edge)}
+.copy.ok{border-color:var(--teal);color:var(--teal)}
+.tip{background:var(--panel-2);border-radius:6px;padding:12px 16px;max-width:66ch}
+.log{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:4px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
+.tier{border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--panel);display:flex;flex-direction:column;gap:4px;min-width:0}
+.tier b{font:700 13px/18px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--brass)}
+.fix{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:4px}
+.again{align-self:flex-start;justify-self:start;font:700 16px/20px var(--body);background:transparent;border:1.5px solid var(--edge);color:var(--ink);border-radius:6px;padding:10px 16px;min-height:44px;cursor:pointer}
+section.tools{border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:16px}
+#myq{max-width:100%;min-height:88px}
+.kw{display:flex;flex-wrap:wrap;gap:8px}
+.kw button{font:400 16px/20px var(--mono);background:var(--panel);color:var(--ink);border:1.5px solid var(--edge);border-radius:999px;padding:8px 12px;min-height:44px;cursor:pointer;max-width:100%;overflow-wrap:anywhere}
+.kw button[aria-pressed="false"]{text-decoration:line-through;color:var(--mute);border-style:dashed}
 .kw button.ph{font-weight:700;border-style:solid;border-color:var(--brass)}
-.picked{font-size:.88rem;color:var(--mute)}
+.picked{font-size:15px;line-height:22px;color:var(--mute)}
+.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,232px),1fr));gap:8px}
+.dbcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.dbcard a{color:var(--teal);font-weight:700}
+footer{border-top:1px solid var(--hair);color:var(--ink-soft);font-size:15px;line-height:22px}
+footer .shell{display:grid;gap:12px;padding-block:16px 48px}
+#printp{justify-self:start}
 .purl{display:none}
 #printall{display:none}
-@media (max-width:480px){h1{font-size:1.65rem}.slip{padding:16px 14px}}
-@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-/* Print: Ctrl+P prints the open slip; the teacher button prints one slip per page for a whole period. */
+
+@media (min-width:700px){
+  h1{font-size:36px;line-height:40px}
+  h2{font-size:24px;line-height:30px}
+  .shell{max-width:808px;margin-inline:auto;padding-inline:24px}
+  #periods{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  #names{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #desk-left{padding:24px max(24px,calc((100% - 760px)/2)) 32px;grid-template-columns:minmax(0,1fr) 240px;grid-template-areas:"who who" "alerts alerts" "ficha ficha" "tl next";gap:16px 24px}
+  #who{grid-area:who}#desk-alerts{grid-area:alerts}#ficha{grid-area:ficha}#nextdate{grid-area:next}#tl-wrap{grid-area:tl}
+  .who-acts{flex-basis:auto}
+  #desk-main{max-width:808px;margin-inline:auto;padding:0 24px 80px;width:100%}
+  #desk-nav{margin-inline:-24px;padding-inline:24px}
+  #ficha{padding:24px 24px 40px}
+  .margin-rule{margin-inline:-24px}
+  .num-v{font-size:96px;line-height:84px}
+  #ficha-q{font-size:23px;line-height:32px}
+  #q-open{width:auto;justify-self:start}
+  .panel{padding:24px}
+  #vl{padding:24px}
+  #vl-text{margin-inline:-24px;padding-right:24px}
+  .slip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding:24px}
+  .slip>.sliphead,.slip>.qblk,.slip>.srchb,.slip>.tipb,.slip>.lvl,.slip>.again{grid-column:1/-1}
+  .tiers{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (min-width:1024px){
+  h1{font-size:40px;line-height:44px}
+  .shell{max-width:1184px;padding-inline:32px}
+  #periods{grid-template-columns:repeat(8,minmax(0,1fr))}
+  #names{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .desk[data-on="true"]{grid-template-columns:380px minmax(0,1fr);column-gap:32px;align-items:start;max-width:1184px;margin-inline:auto;padding:24px 32px 0}
+  #desk-left{position:sticky;top:16px;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow-y:auto;overscroll-behavior:contain;border-radius:6px;border-bottom:0;padding:24px;
+    grid-template-columns:minmax(0,1fr);grid-template-areas:"who" "alerts" "ficha" "next" "tl"}
+  .who-acts{flex-basis:100%}
+  #desk-main{max-width:none;margin:0;padding:0 0 80px}
+  #desk-nav{margin-inline:0;padding-inline:0}
+  .desk[data-on="false"] #desk-main{max-width:808px;margin-inline:auto;padding-inline:32px}
+  .num-v{font-size:80px;line-height:72px}
+  #ficha-q{font-size:22px;line-height:30px}
+}
+/* The one moment of motion: the save. */
+@keyframes numIn{from{transform:translateY(.35em);opacity:0}}
+@keyframes cardIn{from{transform:translateY(8px);opacity:0}}
+.just-saved #ficha-num .num-v{display:inline-block;animation:numIn 200ms cubic-bezier(.2,.8,.2,1)}
+.just-saved #vl{animation:cardIn 220ms cubic-bezier(.2,.8,.2,1) 80ms both}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.just-saved *{animation:none!important}}
+@media (forced-colors:active){.dot[aria-pressed=true]::before{background:CanvasText}.w[data-l]::before{border-color:CanvasText}}
+/* Print: Ctrl+P prints the open slip with the newest version; the teacher button prints one slip per page for a whole period, from the record. */
 @media print{
-  :root:not(#print){--ground:#fff;--panel:#fff;--panel-2:#f2f2f2;--ink:#000;--mute:#333;--line:#999;--brass:#7a5410;--on-brass:#fff;--teal:#0f5e54;--plum:#6d3a73;--slip:#fff;color-scheme:light}
+  :root:not(#print){--ground:#fff;--panel:#fff;--panel-2:#f2f2f2;--ink:#000;--mute:#333;--line:#999;--brass:#7a5410;--on-brass:#fff;--teal:#0f5e54;--plum:#6d3a73;--slip:#fff;
+    --card:#fff;--card-2:#f2f2f2;--ink-soft:#333;--hair:#999;--edge:#666;--brass-text:#7a5410;--pine:#0f5e54;--on-pine:#fff;color-scheme:light}
+  html,body{background:#fff!important}
   @page{margin:12mm}
   body{padding:0;font-size:10pt;line-height:1.35}
+  #skip,#band,#pick,#desk-left,#desk-nav,#st-versions,#st-checks,#ipad,#desk-alerts,#store-banner,#wb-notice,#rec-ask,.rec-details,.q-open-slip,.srch-note,
   header.top,#step1,#step2,#step3 .steplabel,section.tools,footer,.again,.acts,.hint,.back,.dbwhat,.lvl,.fixb{display:none!important}
-  .slip{box-shadow:none;border:1px solid var(--line);gap:9px;padding:10px 12px;border-radius:6px}
-  .sliphead{padding-bottom:6px}.who{font-size:1.25rem}.q{font-size:1.02rem}.from{font-size:.85rem}
+  .desk[data-on]{display:block;padding:0;max-width:none}
+  #desk-main{padding:0;max-width:none;display:block}
+  .slip{display:flex!important;box-shadow:none;border:1px solid var(--line);gap:9px;padding:10px 12px;border-radius:6px}
+  .sliphead{padding-bottom:6px}.who{font-size:1.25rem;line-height:1.15}.q{font-size:1.02rem;line-height:1.45;padding-left:14px}.from{font-size:.85rem;line-height:1.35}
+  .slip h3{font-size:.78rem;line-height:1.3}.callno,.dbname,.swap th{line-height:normal}.words{line-height:1.5}.swap th{padding-bottom:6px}
+  .callno{font-size:.8rem}.dbname{font-size:1.02rem}.words,.swap{font-size:.98rem}.swap th{font-size:.72rem}
   .searches{gap:6px}.search{padding:6px 10px;gap:3px;border-radius:6px}.words{padding:4px 8px}
   .swap td{padding:3px 8px 3px 0}.tip{padding:6px 10px}.log{gap:0}
   .search,.block{break-inside:avoid}
   .purl{display:inline;font:8.5pt var(--mono);color:var(--mute)}
   .log{display:block;columns:2;column-gap:24px}.log li{break-inside:avoid}
-  body.print-all .wrap{display:none}
+  body.print-all>:not(#printall){display:none!important}
   body.print-all #printall{display:block}
   #printall .slip{break-after:page}
 }
 </style>
 
-<div class="wrap">
-  <header class="top">
-    <span class="eyebrow">Room 63 · AP Capstone · Set the Table</span>
+<a id="skip" class="skip" href="#pick">Skip to your period</a>
+<header id="band" class="band night">
+  <div class="shell">
+    <span class="eyebrow">Room 63 · AP Capstone · Question Workbench</span>
     <h1>Room 63 Search Guide</h1>
-    <p class="lede">Your question, the chair your table still needs, and three searches built for you in the free databases that fit your topic. Tap a search, find one source, and log it as your next entry.</p>
-  </header>
-
-  <div class="step" id="step1">
-    <div class="steplabel"><b>1</b><h2>Your period</h2></div>
-    <div class="back" id="back" hidden></div>
-    <div class="chips" id="periods" role="group" aria-label="Choose your period"></div>
+    <p class="lede" id="lede">Pick your period, then your name. Your question, your seven checks, and your searches open on one desk. When your question changes in your log, the desk keeps the newest version on this iPad.</p>
   </div>
-
-  <div class="step" id="step2" hidden>
-    <div class="steplabel"><b>2</b><h2>Your name</h2></div>
-    <label class="sr" for="find">Type your first name</label>
-    <input type="search" id="find" placeholder="Type your first name" autocomplete="off">
-    <div class="names" id="names" role="group" aria-label="Choose your name"></div>
-  </div>
-
-  <div class="step" id="step3">
-    <div class="steplabel"><b>3</b><h2 id="step3title">Your search slip</h2></div>
-    <div id="guide" aria-live="polite"></div>
-  </div>
-
-  <section class="tools" aria-labelledby="tb">
-    <h2 id="tb">Changed your question? Build a new search</h2>
-    <p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
-    <label class="sr" for="myq">Your question</label>
-    <textarea id="myq">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
-    <div class="kw" id="kw" aria-label="Words in your search"></div>
-    <p class="words" id="built"></p>
-    <p class="picked" id="picked"></p>
-    <div class="acts" id="builtacts"></div>
+</header>
+<main id="main">
+  <section id="pick" class="night" aria-label="Find your desk">
+    <div class="shell">
+      <div class="step" id="step1">
+        <div class="steplabel"><b>1</b><h2 tabindex="-1">Your period</h2></div>
+        <div class="back" id="back" hidden></div>
+        <div class="chips" id="periods" role="group" aria-label="Choose your period"></div>
+      </div>
+      <div class="step" id="step2" hidden>
+        <div class="steplabel"><b>2</b><h2>Your name</h2></div>
+        <label class="sr" for="find">Type your first name</label>
+        <input type="search" id="find" placeholder="Type your first name" autocomplete="off">
+        <div class="names" id="names" role="group" aria-label="Choose your name"></div>
+      </div>
+    </div>
   </section>
 
-  <section class="tools" aria-labelledby="dbh">
-    <h2 id="dbh">How each database works on the iPad</h2>
-    <div class="dbgrid" id="dbgrid"></div>
-  </section>
+  <div id="desk" class="desk" data-on="false">
+    <section id="desk-left" class="night" aria-labelledby="ficha-h">
+      <div id="who"></div>
+      <div id="desk-alerts" hidden>
+        <div id="store-banner" class="banner" hidden><p>This iPad is not saving right now. Everything works until you close this page. Copy your version line into your log before you leave.</p></div>
+        <div id="wb-notice" class="banner" hidden></div>
+        <div id="rec-ask" class="banner" role="group" aria-labelledby="rec-ask-q" hidden>
+          <p id="rec-ask-q"></p>
+          <div class="row"><button type="button" class="btn-line" id="rec-ask-record">The record</button><button type="button" class="btn-line" id="rec-ask-mine">My version</button></div>
+        </div>
+      </div>
+      <article id="ficha" class="paper">
+        <h2 id="ficha-h" tabindex="-1">Your question</h2>
+        <div class="ficha-top">
+          <div id="ficha-num"><span class="num-l"></span><span class="num-v"></span></div>
+          <div class="ficha-cat">
+            <span id="ficha-call" class="lbl"></span>
+            <span id="ficha-meta" class="lbl"></span>
+            <span id="ficha-stamp" class="stamp" hidden></span>
+          </div>
+        </div>
+        <div class="margin-rule" aria-hidden="true"></div>
+        <p id="ficha-q"></p>
+        <div class="ficha-dotrow"><span id="ficha-dots" class="mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><p id="ficha-count"></p></div>
+        <button type="button" id="q-open" class="btn-brass" aria-controls="wb-form" aria-expanded="false">My question changed</button>
+        <p id="ficha-hint" class="hint" hidden></p>
+      </article>
+      <div id="nextdate"></div>
+      <details id="tl-wrap">
+        <summary><h3>All your versions</h3><span class="badge" id="tl-count">0</span></summary>
+        <ol id="timeline"></ol>
+        <p id="tl-empty">Nothing saved on this iPad yet.</p>
+        <p id="tl-foot" hidden>Old versions stay. Never erase.</p>
+      </details>
+    </section>
 
-  <footer>Questions as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. If your log has a newer version, your log wins: use the tool above. Every database here is free to search. Nothing on this page is graded.
+    <div id="desk-main">
+      <nav id="desk-nav" aria-label="Your desk">
+        <a id="nav-versions" href="#st-versions">Versions <span class="badge" id="nav-v-badge" hidden></span></a>
+        <a id="nav-checks" href="#st-checks">Checks <span class="badge" id="nav-c-badge" aria-hidden="true"></span><span class="sr" id="nav-c-sr"></span></a>
+        <a id="nav-search" href="#step3">Searches</a>
+      </nav>
+
+      <section id="st-versions" class="station" aria-labelledby="stv-h">
+        <h2 id="stv-h" tabindex="-1">Versions</h2>
+        <div id="q-empty" class="panel" hidden>
+          <p>Nothing is saved on this iPad yet. When your question changes in your log, tap My question changed.</p>
+          <button type="button" id="q-open-2" class="btn-line" aria-controls="wb-form">My question changed</button>
+        </div>
+        <form id="wb-form" class="panel" novalidate hidden aria-labelledby="wb-h">
+          <div class="fhead">
+            <h3 id="wb-h">My question changed</h3>
+            <p id="wb-intro"></p>
+            <p id="wb-rule">Every word of your question is yours. No tool writes, rewrites, or narrows your question. This page does not either.</p>
+            <p id="wb-draftnote" hidden></p>
+            <p id="wb-cap" hidden>This iPad holds 40 versions for you. Your log holds all of them. Save shows your version line but does not keep it here.</p>
+          </div>
+          <fieldset id="wb-reasons" aria-describedby="wb-reasons-hint">
+            <legend>What happened?</legend>
+            <p class="hint" id="wb-reasons-hint">Pick one if it fits. Nothing here types into your question.</p>
+            <div class="chipset" id="wb-reason-set"></div>
+            <div id="wb-reason-fix">
+              <div class="field" id="wb-check-row" hidden><label for="wb-check">Which check was empty?</label><select id="wb-check"></select></div>
+              <p id="wb-reason-line" hidden></p>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="wb-text">Your new version</label>
+            <p class="hint" id="wb-text-help"></p>
+            <textarea id="wb-text" rows="4" maxlength="400" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-text-help wb-text-err"></textarea>
+            <p class="err" id="wb-text-err" hidden></p>
+            <button type="button" id="wb-empty" class="btn-line">Empty the box</button>
+          </div>
+          <div class="field">
+            <label for="wb-why">What I changed, and why</label>
+            <p class="hint" id="wb-why-help">One sentence in your words. That line is proof of your thinking.</p>
+            <textarea id="wb-why" rows="2" maxlength="300" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-why-help wb-why-err"></textarea>
+            <p class="err" id="wb-why-err" hidden></p>
+          </div>
+          <div class="fnotes">
+            <div class="wb-pair">
+              <div class="field">
+                <label for="wb-n">Version number in your log</label>
+                <div class="stepper">
+                  <button type="button" id="wb-n-minus" aria-label="Lower the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+                  <input id="wb-n" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" aria-describedby="wb-n-help wb-n-info wb-n-err">
+                  <button type="button" id="wb-n-plus" aria-label="Raise the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+                </div>
+              </div>
+              <div class="field">
+                <label for="wb-date">Date on your log line</label>
+                <input id="wb-date" type="date" aria-describedby="wb-date-err">
+              </div>
+            </div>
+            <p class="hint" id="wb-n-help">Use the number your log shows. Your log wins.</p>
+            <p class="hint" id="wb-n-info" hidden></p>
+            <p class="err" id="wb-n-err" hidden></p>
+            <p class="err" id="wb-date-err" hidden></p>
+          </div>
+          <div class="wb-acts">
+            <button type="submit" id="wb-save" class="btn-brass">Save this version</button>
+            <button type="button" id="wb-cancel" class="btn-line">Cancel</button>
+          </div>
+          <div id="wb-confirm" class="confirm" role="group" aria-labelledby="wb-confirm-q" hidden>
+            <p id="wb-confirm-q">Throw away what you typed here?</p>
+            <div class="row"><button type="button" id="wb-confirm-keep" class="btn-line">Keep writing</button><button type="button" id="wb-confirm-drop" class="btn-line">Throw it away</button></div>
+          </div>
+        </form>
+        <section id="vl" class="paper" aria-labelledby="vl-h" hidden>
+          <h3 id="vl-h" tabindex="-1">Write this in your log, in pen.</h3>
+          <div id="vl-text"></div>
+          <div id="vl-dots"></div>
+          <p id="vl-note" class="hint">Next open line. Draw seven dots under it and fill one for each check that passes. Old versions stay in the log. Never erase.</p>
+          <div class="row"><button type="button" id="vl-copy" class="btn-line">Copy version line</button></div>
+          <label class="penrow" for="vl-penned"><input type="checkbox" id="vl-penned"><span>I wrote it in my log, in pen.</span></label>
+          <p><span id="vl-stamp" class="stamp"></span></p>
+          <div id="vl-fix">
+            <p id="vl-fixhint">Not in your log yet, so you can still fix it here.</p>
+            <div class="row"><button type="button" id="vl-edit" class="btn-line" aria-controls="wb-form">Fix a typo</button><button type="button" id="vl-remove" class="btn-line">Remove this version</button></div>
+            <div id="vl-remove-confirm" class="confirm" role="group" aria-labelledby="vl-remove-q" hidden>
+              <p id="vl-remove-q"></p>
+              <div class="row"><button type="button" id="vl-remove-no" class="btn-line">Keep it</button><button type="button" id="vl-remove-yes" class="btn-line">Remove it</button></div>
+            </div>
+          </div>
+        </section>
+        <div id="vl-next" hidden><a id="next-checks" class="btn-line" href="#st-checks">Run the seven checks</a><a id="next-search" class="btn-line" href="#tools-build">Search with your version</a></div>
+        <section id="compare" class="panel" aria-labelledby="cmp-h" hidden>
+          <h3 id="cmp-h" tabindex="-1">Compare two versions</h3>
+          <div class="cmp-pick">
+            <div class="field"><label for="cmp-from">From</label><select id="cmp-from"></select></div>
+            <div class="field"><label for="cmp-to">To</label><select id="cmp-to"></select></div>
+          </div>
+          <p id="cmp-sum"></p>
+          <p id="cmp-out"></p>
+          <p class="hint">Struck through: words that went out. Underlined: words that came in.</p>
+        </section>
+      </section>
+
+      <section id="st-checks" class="station" aria-labelledby="ck-h">
+        <h2 id="ck-h" tabindex="-1">Seven checks</h2>
+        <p id="ck-intro">Ask yourself each check. Tap the dot when it passes. You decide. The page never fills a dot for you.</p>
+        <p id="ck-new" hidden>New version, new dots. Run all seven again.</p>
+        <p id="ck-count" role="status"></p>
+        <a id="ck-search" class="btn-line" href="#tools-build" hidden>Search with your version</a>
+        <p id="ck-empty" hidden>Save your first version, then run the seven checks on it.</p>
+        <section id="notes" class="panel" aria-labelledby="notes-h">
+          <h3 id="notes-h">What the page notices</h3>
+          <ul id="notes-list"></ul>
+          <p id="notes-empty">Nothing to point out. The seven checks are still yours to run.</p>
+          <p class="hint">These are patterns in your words, not a grade. You decide what to change. The page points. It never writes your question.</p>
+        </section>
+        <ol id="checks"></ol>
+        <section id="circle" class="panel" aria-labelledby="circle-h">
+          <h3 id="circle-h">Circle it</h3>
+          <p>Pick a pen, then tap the words in your question. Tap a word again to take the circle off. What you cannot circle is missing.</p>
+          <fieldset id="pens"><legend>Pen</legend><div class="chipset" id="pen-set"></div></fieldset>
+          <div id="words" role="group" aria-label="Words in your question"></div>
+          <p id="circ-slots" aria-live="polite"></p>
+          <p>Then write two answers.</p>
+          <div class="field"><label for="c-expect">The answer you expect</label><textarea id="c-expect" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+          <div class="field"><label for="c-hate">The answer you would hate to reach</label><textarea id="c-hate" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+          <p class="hint">Can't write the second? It is not open yet.</p>
+        </section>
+      </section>
+
+      <div class="step" id="step3">
+        <div class="steplabel"><b>3</b><h2 id="step3title" tabindex="-1">Your search slip</h2></div>
+        <div id="guide"></div>
+      </div>
+
+      <section class="tools" id="tools-build" aria-labelledby="tb">
+        <h2 id="tb" tabindex="-1">Changed your question? Build a new search</h2>
+        <p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
+        <label class="sr" for="myq">Your question</label>
+        <textarea id="myq">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
+        <div class="kw" id="kw" aria-label="Words in your search"></div>
+        <p class="words" id="built"></p>
+        <p class="picked" id="picked"></p>
+        <div class="acts" id="builtacts"></div>
+      </section>
+
+      <section class="tools" id="tools-db" aria-labelledby="dbh">
+        <h2 id="dbh">How each database works on the iPad</h2>
+        <div class="dbgrid" id="dbgrid"></div>
+      </section>
+
+      <section id="ipad" class="station" aria-labelledby="ipad-h">
+        <h2 id="ipad-h" tabindex="-1">This iPad</h2>
+        <div class="panel">
+          <p>Saved only on this iPad. It does not go online, and Mr. Portela cannot see it here. Anyone who taps your name on this iPad can see it. Your log is the record.</p>
+          <p id="ipad-status"></p>
+          <button type="button" id="ipad-copyall" class="btn-line">Copy all my versions</button>
+          <p class="hint">Copies every version as text, oldest first. Paste it into a Doc or an email to yourself. There is no import: on another iPad, type your newest version again from your log.</p>
+          <textarea id="ipad-backup" readonly hidden aria-label="All your versions as text"></textarea>
+          <button type="button" id="ipad-remove" class="btn-line">Remove my versions from this iPad</button>
+          <div id="ipad-remove-confirm" class="confirm" role="group" aria-labelledby="ipad-remove-q" hidden>
+            <p id="ipad-remove-q"></p>
+            <div class="row"><button type="button" id="ipad-remove-no" class="btn-line">Keep them</button><button type="button" id="ipad-remove-yes" class="btn-line">Remove them</button></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="wb-live" class="sr" role="status" aria-live="polite"></div>
+</main>
+<footer>
+  <div class="shell">
+    <p>Questions on record as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. Your log wins: when your question changes, tap My question changed. Every database here is free to search. Nothing on this page is graded. Nothing on this page writes, rewrites, or narrows your question. The words are yours.</p>
     <button type="button" class="again" id="printp" hidden>Print this period's slips</button>
-  </footer>
-</div>
+  </div>
+</footer>
 <div id="printall" aria-hidden="true"></div>
 
 <script>
@@ -188,11 +670,74 @@ var EXAMPLE={id:"example",n:"Example: the practice table from class",p:0,c:"S",q
  s:[{db:"scholar",q:"\"hostile architecture\" benches homelessness"},{db:"core",q:"\"hostile architecture\" \"public space\" transit"},{db:"openlibrary",q:"public space design"}],
  tip:"Researchers call bench bars hostile architecture or defensive design. Put the phrase in quotation marks.",es:false,nt:false};
 
-function el(t,a,c){var e=document.createElement(t);if(a)for(var k in a){if(k==="text")e.textContent=a[k];else if(k==="html")e.innerHTML=a[k];else e.setAttribute(k,a[k]);}if(c)c.forEach(function(x){if(x)e.appendChild(x);});return e;}
+/* RULE: every question string rendered comes from DATA[i].q or from text this student typed. Nothing here builds, completes, reorders, narrows, scores or suggests question wording. */
+var ASOF="2026-09-29";
+var DATES={R:[["2026-10-16","October 16","A question you can defend. Quarter 1 ends."],
+              ["2026-11-30","November 30","Proposal approved."],
+              ["2027-04-30","April 30, 2027","Final paper."]],
+           S:[["2027-01-15","Early January","The written-argument packet.",1],
+              ["2027-05-10","Monday, May 10, 2027","The AP Seminar exam."]]};
+var REASONS=[["yes-no","The answer was yes or no","Ask how, why, or to what extent."],
+ ["too-big","It was too big","Add a place, a group, or a time."],
+ ["known","The answer is already known","Move to the part no one has studied."],
+ ["no-sources","I found no sources","Widen it, or change the words you search."],
+ ["surprise","A source surprised me","Follow the surprise."],
+ ["check","A check was empty",""],["other","Something else",""]];
+var CHECKS={S:[
+ ["Open","A question mark, a verb, a judgment word?","Yes or no answers it.","Start with a judgment word."],
+ ["Debatable","Would informed people answer it differently? Name two.","You cannot name two. It is a report.","Name two people who would answer differently."],
+ ["Two lenses","Does a good answer need two lenses?","One lens: a summary of one field.","Add a second lens."],
+ ["Specific: who, where, when","Who, where, when?","Two of the three are missing. It is still a topic.","Add the missing who, where, or when."],
+ ["Unsettled","Do credible sources disagree?","Every good source agrees. A fact is evidence, not a question.","Move to the part people argue about."],
+ ["A source on the other side","Can you name one source that argues against your view? Will you read it?","Only one side has sources.","Find the source that argues back, and log it."],
+ ["Someone needs the answer","Who needs it, and what would they do with it?","You cannot say.","Name who needs the answer, and why."]],
+R:[
+ ["Focused","A narrow subject, and a verb?","It is only a subject, like \"teen sleep.\"","Add a verb: how, which, to what extent, does."],
+ ["Purpose","Explore, explain, or create?","No method could answer it.","Match the verb to a purpose and a method."],
+ ["Something to measure","Something to count, measure, code, or compare? Making something? Name the features you will judge it by.","There is nothing to find.","Name what you will count, code, or compare."],
+ ["Who, where, when","Which people, which place, which time?","Two of the three are missing. It is still a topic.","Add the missing who, where, or when."],
+ ["Someone needs it","Who needs the answer? What changes for them?","You cannot name them.","Add the stakes: who decides, pays, or is hurt."],
+ ["Doable this year","The time, tools, places, people, and permissions you really have?","It needs a lab, a grant, or ten years.","Shrink the where and the when to fit one year."],
+ ["Either way","Could the result go either way? Would you report it honestly either way?","Only one answer is allowed. That is a belief.","Turn the belief into a question."]]};
+var YN=/^\s*["“'‘¿(]*\s*(is|are|am|was|were|do|does|did|should|can|could|will|would|has|have|had|must|may)\b/i;
+var QM=/\?\s*["”'’)]*\s*$/;
+var LENSES=[["cultural","Cultural and social: who is in, who is left out"],["artistic","Artistic and philosophical: what it means"],["political","Political and historical: who decides, and what came before"],["environmental","Environmental: the place and its resources"],["economic","Economic: costs, who pays, who profits"],["scientific","Scientific: what can be measured and tested"],["futuristic","Futuristic: what happens next if this spreads"],["ethical","Ethical: rights, fairness, harm"]];
+var PURPOSES=[["explore","Explore: what is there"],["explain","Explain: why, how, how much"],["create","Create: make it, and defend your choices"]];
+var PENS={S:[["who","Who"],["where","Where"],["when","When"],["judge","Judgment word"]],R:[["verb","Verb"],["var","Variable"],["who","Who"],["where","Where"],["when","When"]]};
+var TAGS={who:"WHO",where:"WHERE",when:"WHEN",judge:"JUDGMENT",verb:"VERB","var":"VARIABLE"};
+var LNAME={who:"who",where:"where",when:"when",judge:"judgment word",verb:"verb","var":"variable"};
+var MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+var SMON=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec"];
+var WDAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var MIGRATE={};
+var CAP=40;
+var HOSTED=/claude\.ai|claudeusercontent|anthropic/.test(location.hostname);
+var TXT={
+ intro:"Type your newest version word for word, the way it is, or will be, in your log in pen. It is saved only on this iPad.",
+ fixIntro:"Not in your log yet, so you can still fix it here.",
+ help:"The box starts with your last version, in your words. Change it to match your log.",
+ help0:"Type your first version, word for word from your log.",
+ banner:"This iPad is not saving right now. Everything works until you close this page. Copy your version line into your log before you leave.",
+ bad:"Your saved versions on this iPad could not be read. Your log has every version. Type your newest one again.",
+ newer:"This iPad saved your versions with a newer Search Guide. They show here, but cannot change. Open the newest Search Guide link to change them.",
+ recHint:"Saved a newer version on another iPad? Type it again from your log.",
+ bhint:"The box starts with your newest version. Typing here builds a search. It does not save a version. Tap a word to drop it. Put a phrase in quotation marks to keep its words together.",
+ notSaved:"This iPad did not save it. Write the version line in your log now."};
+var SVG_CHECK='<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+var SVG_ALERT='<svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="7.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 4.8v5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="9" cy="13" r="1.3" fill="currentColor"/></svg>';
+var SVG_PULL='<svg width="24" height="8" viewBox="0 0 24 8" aria-hidden="true" focusable="false"><path d="M1.5 1h21v1.6a4.4 4.4 0 0 1-4.4 4.4H5.9A4.4 4.4 0 0 1 1.5 2.6z" fill="currentColor"/></svg>';
+var SVG_SEAL='<svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="none" stroke="#d6ad55" stroke-width="1.5"/><circle cx="16" cy="16" r="12" fill="none" stroke="#d6ad55" stroke-width=".75"/><text x="16" y="20.6" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="900" font-size="13" fill="#d6ad55">63</text></svg>';
+
+function el(t,a,c){var e=document.createElement(t);if(a)for(var k in a){if(k==="text")e.textContent=a[k];else if(k==="html")e.innerHTML=a[k];else e.setAttribute(k,a[k]);}if(c)c.forEach(function(x){if(x)e.appendChild(typeof x==="string"?document.createTextNode(x):x);});return e;}
+function $(id){return document.getElementById(id);}
+function txt(id,s){var e=$(id);if(e)e.textContent=s;}
+function motionOK(){try{return !matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){return false;}}
+function scrollBeh(){return motionOK()?"smooth":"auto";}
 function url(db,q){var d=DB[db];if(!d||!d.u)return d?d.h:"#";var enc=encodeURIComponent(q);if(d.plus)enc=enc.replace(/%20/g,"+");return d.u.replace("{q}",enc);}
 function copyText(btn,text){function done(){btn.textContent="Copied";btn.classList.add("ok");setTimeout(function(){btn.textContent="Copy words";btn.classList.remove("ok");},1800);}
  try{navigator.clipboard.writeText(text).then(done,function(){sel(btn);});}catch(e){sel(btn);}}
-function sel(btn){var pre=btn.parentNode.parentNode.querySelector(".words");if(!pre)return;var r=document.createRange();r.selectNodeContents(pre);var s=window.getSelection();s.removeAllRanges();s.addRange(r);btn.textContent="Selected: tap Copy";}
+function sel(btn){var pre=btn.parentNode.parentNode.querySelector(".words");if(!pre)return;selectNode(pre);btn.textContent="Selected: tap Copy";}
+function selectNode(n){try{var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}}
 function searchRow(s,i,onTap){
  var d=DB[s.db]||DB.scholar;
  var acts=el("div",{class:"acts"});
@@ -208,35 +753,42 @@ function searchRow(s,i,onTap){
   el("p",{class:"words",text:s.q}),acts,hint]);
 }
 var CHAIR='<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 3"/><circle cx="15" cy="15" r="3" fill="currentColor"/></svg>';
-function today(){try{return new Date().toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});}catch(e){return new Date().toDateString();}}
+function today(){var t=new Date();return WDAYS[t.getDay()]+", "+MONTHS[t.getMonth()]+" "+t.getDate()+", "+t.getFullYear();}
 function logLines(st,s){var d=DB[s.db]||DB.scholar;
  return ["1. Date: "+today(),"2. Source: ","3. How I found it: "+s.q+" (in "+d.n+")","4. What it argues: ",
   "5. "+(st.c==="R"?"Method it used: ":"Perspective it holds: "),"6. Still serves my question? "].join("\n");}
-function slip(st,print){
- var isEx=st.id==="example";
+/* The slip. view = {text, n, date, local} when the newest version is saved on this iPad; print-all passes no view and uses the record. */
+function slip(st,print,view){
+ var isEx=st.id==="example",loc=!!(view&&view.local);
  var head=el("div",{class:"sliphead"},[el("span",{class:"who",text:st.n}),
    isEx?el("span",{class:"example-tag",text:"Example"}):el("span",{class:"callno",text:"Period "+st.p+" · "+PER[st.p]+" · Set the Table "+DAY[st.p]})]);
- var qb=el("div",{class:"block"},[el("h3",{text:"Your question"})]);
- if(st.q){qb.appendChild(el("p",{class:"q",text:st.q}));qb.appendChild(el("p",{class:"from",text:"From "+st.qf+". Your log's newest version wins; if it changed, the searches still start from your topic: "+st.tp+"."}));}
+ var qb=el("div",{class:"block qblk"},[el("h3",{text:"Your question"})]);
+ if(loc){qb.appendChild(el("p",{class:"q",text:view.text}));qb.appendChild(el("p",{class:"from",text:"Version "+view.n+" · "+fLong(view.date)+" · saved on this iPad. Your log wins."}));
+  if(st.q)qb.appendChild(el("details",{class:"rec-details"},[el("summary",{text:"On record, "+fMD(ASOF)}),el("p",{class:"q-rec",text:st.q}),el("p",{class:"from",text:"From "+st.qf+"."})]));}
+ else if(st.q){qb.appendChild(el("p",{class:"q",text:st.q}));qb.appendChild(el("p",{class:"from",text:"From "+st.qf+". Your log's newest version wins; if it changed, the searches still start from your topic: "+st.tp+"."}));}
  else if(st.nt){qb.appendChild(el("p",{class:"q",text:"No question or topic is on record yet."}));qb.appendChild(el("p",{class:"from",text:"Start with the Pew search below: skim the report titles until one makes you curious. Then write your question in your log as your next version, with the date, and use the tool at the bottom of this page."}));}
  else{qb.appendChild(el("p",{class:"q",text:"Topic: "+st.tp}));qb.appendChild(el("p",{class:"from",text:"No question is on record in your Docs yet. Write it in your log as your next version, with the date. These searches start from your topic."}));}
  if(!st.nt)qb.appendChild(el("p",{class:"from",text:"The field that studies this: "+st.f+"."}));
- var cb=el("div",{class:"block"},[el("h3",{text:"The chair to fill"}),el("div",{class:"chair",html:CHAIR},[el("p",{text:st.ch})])]);
+ if(!isEx&&!print){var qo=el("button",{type:"button",class:"again q-open-slip","aria-controls":"wb-form",text:"My question changed"});if(READONLY)qo.disabled=true;
+  qo.addEventListener("click",function(){openForm({mode:"new"});});qb.appendChild(qo);}
+ var cb=el("div",{class:"block chairb"},[el("h3",{text:"The chair to fill"}),el("div",{class:"chair",html:CHAIR},[el("p",{text:st.ch})])]);
  cb.querySelector("svg").style.color="var(--brass)";
  var tb=el("table",{class:"swap"});
  tb.appendChild(el("thead",null,[el("tr",null,[el("th",{text:"Your word"}),el("th",{html:'<span class="sr">becomes</span>'}),el("th",{text:"The field's word"})])]));
  var tbody=el("tbody");(st.sw||[]).forEach(function(p){tbody.appendChild(el("tr",null,[el("td",{text:p[0]}),el("td",{text:"to"}),el("td",{text:p[1]})]));});tb.appendChild(tbody);
- var sb=el("div",{class:"block"},[el("h3",{text:"Say it the way researchers say it"}),el("div",{style:"overflow-x:auto"},[tb])]);
+ var sb=el("div",{class:"block swapb"},[el("h3",{text:"Say it the way researchers say it"}),el("div",{style:"overflow-x:auto"},[tb]),el("p",{class:"hint swap-note",text:"For your searches. Your question keeps your words."})]);
  var last=0,note=el("p",{class:"hint",text:"Line 3 comes from Search 1. Tap a different search and it follows you."});
  function onTap(i){last=i;note.textContent="Line 3 comes from Search "+(i+1)+", the last one you tapped.";}
  var srch=el("div",{class:"searches"});st.s.forEach(function(s,i){srch.appendChild(searchRow(s,i,onTap));});
- var sr=el("div",{class:"block"},[el("h3",{text:"Your three searches"}),srch]);
- var tp=el("div",{class:"block"},[el("h3",{text:"Your tip"}),el("p",{class:"tip",text:st.tip})]);
+ var sr=el("div",{class:"block srchb"},[el("h3",{text:"Your three searches"})]);
+ if(loc)sr.appendChild(el("p",{class:"hint srch-note",text:"These three searches start from your topic, set on "+fMD(ASOF)+": "+st.tp+". For the words in Version "+view.n+", use Searches from Version "+view.n+" below."}));
+ sr.appendChild(srch);
+ var tp=el("div",{class:"block tipb"},[el("h3",{text:"Your tip"}),el("p",{class:"tip",text:st.tip})]);
  if(st.es)tp.appendChild(el("p",{class:"hint",text:"Puedes buscar en español en SciELO y en Google Scholar. Si la fuente está en español, escribe el título traducido entre corchetes en tu log."}));
  var line5=st.c==="R"?"Method it used (none stated? write that)":"Perspective it holds: a point of view, with a reason";
  var lcp=el("button",{type:"button",class:"copy",text:"Copy log lines"});
  lcp.addEventListener("click",function(){copyLog(lcp,logLines(st,st.s[last]));});
- var lg=el("div",{class:"block"},[el("h3",{text:"Found one? Log it as your next entry (6, 7 and on)"}),
+ var lg=el("div",{class:"block logb"},[el("h3",{text:"Found one? Log it as your next entry (6, 7 and on)"}),
   el("ol",{class:"log"},["Date","Source: author, title, year, where I found it","How I found it: my search words and the site","What it argues, in one sentence",line5,"Still serves my question? Yes or no, and why"].map(function(t){return el("li",{text:t});})),
   el("div",{class:"acts"},[lcp]),note]);
  var T=st.c==="R"?
@@ -245,50 +797,464 @@ function slip(st,print){
  var tiers=el("div",{class:"tiers"});T.forEach(function(t){tiers.appendChild(el("div",{class:"tier"},[el("b",{text:t[0]}),el("p",{text:t[1]})]));});
  var fx=el("div",{class:"block fixb"},[el("h3",{text:"No results? Change one thing at a time"}),el("ol",{class:"fix"},["Take out the least important word.","Swap your word for the field's word from the list above.","Take the quotation marks off one phrase.","Run the same words in your next database."].map(function(t){return el("li",{text:t});}))]);
  var a=el("article",{class:"slip","aria-label":"Search slip for "+st.n},[head,qb,cb,sb,sr,tp,el("div",{class:"block lvl"},[el("h3",{text:"Pick your level"}),tiers]),lg,fx]);
- if(!isEx&&!print){var ag=el("button",{type:"button",class:"again",text:"Not you? Pick another name"});ag.addEventListener("click",function(){clearPick();document.getElementById("find").focus();});a.appendChild(ag);}
+ if(!isEx&&!print){var ag=el("button",{type:"button",class:"again",text:"Not you? Pick another name"});ag.addEventListener("click",leaveDesk);a.appendChild(ag);}
  return a;
 }
 function copyLog(btn,text){function done(){btn.textContent="Copied: paste into your log";btn.classList.add("ok");setTimeout(function(){btn.textContent="Copy log lines";btn.classList.remove("ok");},2200);}
  function fail(){btn.textContent="Copy did not work: type the six lines";}
  try{navigator.clipboard.writeText(text).then(done,fail);}catch(e){fail();}}
-function render(st){
- var g=document.getElementById("guide");g.innerHTML="";g.appendChild(slip(st,false));
- document.getElementById("step3title").textContent=st.id==="example"?"What a search slip looks like":"Your search slip";
+function render(st,view){
+ var g=$("guide");g.innerHTML="";g.appendChild(slip(st,false,view));
+ $("step3title").textContent=st.id==="example"?"What a search slip looks like":"Your search slip";
 }
 
 var KEY="r63sg_last";
 function store(v){try{if(v)localStorage.setItem(KEY,v);else localStorage.removeItem(KEY);}catch(e){}}
 function stored(){try{return localStorage.getItem(KEY);}catch(e){return null;}}
-function welcome(){var id=stored();var hit=id&&DATA.filter(function(d){return d.id===id;})[0];var box=document.getElementById("back");if(!hit){box.hidden=true;return;}
- box.innerHTML="";var first=hit.n.split(" ")[0];
- var open=el("button",{type:"button",class:"go",text:"Open my slip"});open.addEventListener("click",function(){box.hidden=true;pickPeriod(hit.p,true);pickStudent(hit);});
- var no=el("button",{type:"button",class:"again",text:"Not "+first+"?"});no.addEventListener("click",function(){store(null);box.hidden=true;});
- box.appendChild(el("p",{text:"Welcome back, "+first+". Your slip is saved on this iPad."}));box.appendChild(open);box.appendChild(no);box.hidden=false;}
+function first(st){return st.n.split(" ")[0];}
+function initial(st){var w=st.n.trim().split(/\s+/);return w[w.length-1].charAt(0).toUpperCase();}
+function welcome(){var id=stored();var hit=id&&DATA.filter(function(d){return d.id===id;})[0];var box=$("back");if(!hit){box.hidden=true;return;}
+ box.innerHTML="";var f=first(hit);
+ var open=el("button",{type:"button",class:"go",text:"Open my desk"});open.addEventListener("click",function(){box.hidden=true;pickPeriod(hit.p,true);pickStudent(hit);});
+ var no=el("button",{type:"button",class:"again",text:"Not "+f+"?"});no.addEventListener("click",function(){store(null);box.hidden=true;});
+ box.appendChild(el("p",{text:"Welcome back, "+f+". Your desk is on this iPad."}));box.appendChild(open);box.appendChild(no);box.hidden=false;}
 
 var curP=null;
-function periods(){var box=document.getElementById("periods");ORDER.forEach(function(p){
- var b=el("button",{type:"button",class:"chip","aria-pressed":"false","data-p":p},[el("span",{text:"Period "+p}),el("small",{text:PER[p]})]);
+function periods(){var box=$("periods");ORDER.forEach(function(p){
+ var b=el("button",{type:"button",class:"chip","aria-pressed":"false","data-p":p,html:SVG_PULL},[el("span",{text:"Period "+p}),el("small",{text:PER[p]})]);
  b.addEventListener("click",function(){pickPeriod(p);});box.appendChild(b);});}
 function pickPeriod(p,keep){curP=p;document.querySelectorAll("#periods .chip").forEach(function(c){c.setAttribute("aria-pressed",String(+c.getAttribute("data-p")===p));});
- document.getElementById("step2").hidden=false;var f=document.getElementById("find");if(!keep)f.value="";names();if(!keep)render(EXAMPLE);
- var pp=document.getElementById("printp"),n=DATA.filter(function(d){return d.p===p;}).length;pp.textContent="Print all "+n+" Period "+p+" slips, one per page";pp.hidden=false;}
-function names(){var box=document.getElementById("names");box.innerHTML="";var f=document.getElementById("find").value.trim().toLowerCase();
+ $("step2").hidden=false;var f=$("find");if(!keep)f.value="";names();if(!keep)render(EXAMPLE);
+ var pp=$("printp"),n=DATA.filter(function(d){return d.p===p;}).length;pp.textContent="Print all "+n+" Period "+p+" slips, one per page";pp.hidden=HOSTED;}
+function names(){var box=$("names");box.innerHTML="";var f=$("find").value.trim().toLowerCase();
  DATA.filter(function(d){return d.p===curP&&(!f||d.n.toLowerCase().indexOf(f)>-1);}).forEach(function(d){
-  var b=el("button",{type:"button",class:"name","aria-pressed":"false","data-id":d.id,text:d.n});b.addEventListener("click",function(){pickStudent(d);});box.appendChild(b);});
+  var b=el("button",{type:"button",class:"name","aria-pressed":String(!!CUR&&CUR.id===d.id),"data-id":d.id,text:d.n});b.addEventListener("click",function(){pickStudent(d);});box.appendChild(b);});
  if(!box.children.length)box.appendChild(el("p",{class:"hint",text:"No name matches. Check the period, or ask Mr. Portela."}));}
-function pickStudent(d){document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed",String(n.getAttribute("data-id")===d.id));});
- render(d);store(d.id);document.getElementById("back").hidden=true;try{history.replaceState(null,"","#"+d.id);}catch(e){}
- if(d.q){document.getElementById("myq").value=d.q;document.getElementById("bhint").textContent="The box holds your question on record. Type your newest version over it. Tap a word to drop it. Put a phrase in quotation marks to keep its words together.";buildKw();}
- var s3=document.getElementById("step3");if(s3.scrollIntoView)s3.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"});}
-function clearPick(){try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}store(null);render(EXAMPLE);document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed","false");});}
-document.getElementById("find").addEventListener("input",names);
-window.addEventListener("hashchange",function(){var id=(location.hash||"").slice(1);var d=id&&DATA.filter(function(x){return x.id===id;})[0];if(d){pickPeriod(d.p,true);pickStudent(d);}});
 
-function printPeriod(p){var box=document.getElementById("printall");box.innerHTML="";
+/* ---------- Workbench: the student's versions, saved only on this iPad ---------- */
+var CUR=null,R=null,READONLY=false,NOTICE="",ASK=false,VLK=null,TEMP=null,CKNEW=false,ROV=0,CMPRESET=true;
+var STORE={ok:true,told:false};
+try{localStorage.setItem("r63sg_probe","1");localStorage.removeItem("r63sg_probe");}catch(e){STORE.ok=false;}
+var ORIG={myq:$("myq").value,tb:$("tb").textContent,bhint:$("bhint").textContent};
+
+function pad2(n){return (n<10?"0":"")+n;}
+function pd(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(typeof s==="string"?s:"");if(!m)return null;var y=+m[1],mo=+m[2],d=+m[3];
+ var t=new Date(Date.UTC(y,mo-1,d));if(t.getUTCFullYear()!==y||t.getUTCMonth()!==mo-1||t.getUTCDate()!==d)return null;return {y:y,m:mo,d:d};}
+function fLong(s){var p=pd(s);return p?MONTHS[p.m-1]+" "+p.d+", "+p.y:"";}
+function fMD(s){var p=pd(s);return p?MONTHS[p.m-1]+" "+p.d:"";}
+function fShort(s){var p=pd(s);return p?SMON[p.m-1]+" "+p.d:"";}
+function fShortY(s){var p=pd(s);return p?SMON[p.m-1]+" "+p.d+", "+p.y:"";}
+function isoLocal(t){return t.getFullYear()+"-"+pad2(t.getMonth()+1)+"-"+pad2(t.getDate());}
+function isoToday(){return isoLocal(new Date());}
+function dayGap(a,b){var x=pd(a),y=pd(b);return Math.round((Date.UTC(y.y,y.m-1,y.d)-Date.UTC(x.y,x.m-1,x.d))/864e5);}
+function toks(s){s=(s||"").trim();return s?s.split(/\s+/):[];}
+function norm(s){return (s||"").trim().replace(/\s+/g," ").toLowerCase();}
+function cnt(d){return d.filter(function(x){return x===1;}).length;}
+function newK(){return Date.now().toString(36)+Math.random().toString(36).slice(2,5);}
+function say(m){var l=$("wb-live");if(l.textContent===m)m+=" ";l.textContent=m;}
+function wbKey(id){return "r63sg_wb_"+id;}
+function freshSheet(){return {dots:[0,0,0,0,0,0,0],circles:[],lenses:[],purpose:"",expect:"",hate:""};}
+function freshRec(st){return {schema:1,id:st.id,course:st.c,rec:{q:st.q||"",asof:ASOF,leads:false,sheet:freshSheet()},versions:[],draft:null,updated:0};}
+function str(x,n){return typeof x==="string"?x.slice(0,n):"";}
+function isInt(x,lo,hi){return typeof x==="number"&&x%1===0&&x>=lo&&x<=hi;}
+function labelsFor(c){return PENS[c].map(function(p){return p[0];});}
+function cleanSheet(s,text,c){s=(s&&typeof s==="object")?s:{};var o=freshSheet(),d=Array.isArray(s.dots)?s.dots:[];
+ for(var i=0;i<7;i++)o.dots[i]=(d[i]===1||d[i]===true)?1:0;
+ var nt=toks(text).length,ok=labelsFor(c),seen={};
+ (Array.isArray(s.circles)?s.circles:[]).forEach(function(p){if(Array.isArray(p)&&isInt(p[0],0,nt-1)&&ok.indexOf(p[1])>-1&&!seen[p[0]]){seen[p[0]]=1;o.circles.push([p[0],p[1]]);}});
+ if(c==="S")o.lenses=(Array.isArray(s.lenses)?s.lenses:[]).filter(function(k,i,a){return LENSES.some(function(l){return l[0]===k;})&&a.indexOf(k)===i;});
+ if(c==="R"&&["explore","explain","create"].indexOf(s.purpose)>-1)o.purpose=s.purpose;
+ o.expect=str(s.expect,200);o.hate=str(s.hate,200);return o;}
+function okReason(r){return REASONS.some(function(x){return x[0]===r;})?r:"";}
+function cleanV(v,c){if(!v||typeof v!=="object")return null;
+ if(!isInt(v.n,1,99)||typeof v.text!=="string")return null;var t=v.text.trim();if(!t||t.length>400)return null;
+ if(!pd(v.date))return null;var reason=okReason(v.reason);
+ return {k:(typeof v.k==="string"&&v.k)?v.k.slice(0,40):newK(),n:v.n,date:v.date,text:t,prev:str(v.prev,400),why:str(v.why,300),reason:reason,rc:(reason==="check"&&isInt(v.rc,1,7))?v.rc:0,
+  saved:typeof v.saved==="number"?v.saved:0,penned:v.penned===true,sheet:cleanSheet(v.sheet,t,c)};}
+function cleanDraft(d){if(!d||typeof d!=="object")return null;var r=okReason(d.reason);
+ return {text:str(d.text,400),why:str(d.why,300),reason:r,rc:(r==="check"&&isInt(d.rc,1,7))?d.rc:0,n:isInt(d.n,1,99)?d.n:null,date:pd(d.date)?d.date:"",at:typeof d.at==="number"?d.at:Date.now()};}
+function cleanRec(o,st){var c=st.c,rc=(o.rec&&typeof o.rec==="object")?o.rec:null,rq=(rc&&typeof rc.q==="string")?rc.q.slice(0,400):(st.q||"");
+ var r={schema:o.schema,id:st.id,course:c,rec:{q:rq,asof:(rc&&pd(rc.asof))?rc.asof:ASOF,leads:!!(rc&&rc.leads===true),sheet:cleanSheet(rc&&rc.sheet,rq,c)},versions:[],draft:cleanDraft(o.draft),updated:typeof o.updated==="number"?o.updated:0};
+ var by={},keys={};(Array.isArray(o.versions)?o.versions:[]).forEach(function(v){var x=cleanV(v,c);if(!x)return;var h=by[x.n];if(!h||x.saved>h.saved)by[x.n]=x;});
+ var vs=Object.keys(by).map(function(k){return by[k];}).sort(function(a,b){return a.n-b.n;});
+ if(vs.length>CAP)vs=vs.slice(vs.length-CAP);
+ vs.forEach(function(v){if(keys[v.k])v.k=newK();keys[v.k]=1;});
+ r.versions=vs;return r;}
+/* Load one student's record: probe, read, parse, quarantine, schema, validate, then the record check. */
+var WB={load:function(st){
+ READONLY=false;NOTICE="";ASK=false;var raw=null,o=null,had=false;
+ try{raw=localStorage.getItem(wbKey(st.id));}catch(e){raw=null;}
+ if(typeof raw==="string"){
+  try{o=JSON.parse(raw);}catch(e){o=null;}
+  if(!o||typeof o!=="object"||Array.isArray(o))o=null;
+  else if(o.schema===undefined||o.schema===null){if(Array.isArray(o.versions))o.schema=1;else o=null;}
+  if(o&&(typeof o.schema!=="number"||o.schema!==o.schema))o=null;
+  while(o&&o.schema<1&&MIGRATE[o.schema])o=MIGRATE[o.schema](o);
+  if(o&&o.schema<1)o=null;
+  if(!o){try{localStorage.setItem("r63sg_bad_"+st.id+"_"+Date.now(),raw);}catch(e){}NOTICE="bad";}
+  else{had=true;if(o.schema>1){READONLY=true;NOTICE="newer";}}
+ }
+ R=o?cleanRec(o,st):freshRec(st);
+ recCheck(st,had);},
+ put:function(quiet){if(!STORE.ok||READONLY||!R)return false;R.updated=Date.now();
+  try{localStorage.setItem(wbKey(R.id),JSON.stringify(R));return true;}catch(e){storeOff(quiet);return false;}}};
+function put(q){return WB.put(q);}
+function storeOff(quiet){STORE.ok=false;$("store-banner").hidden=false;syncAlerts();if(!quiet&&!STORE.told)say(TXT.banner);STORE.told=true;saveLabel();renderIpad();}
+function recCheck(st,had){var dq=st.q||"";if(R.rec.q===dq)return;
+ if(!R.versions.length){R.rec={q:dq,asof:ASOF,leads:false,sheet:freshSheet()};if(had)put(true);return;}
+ var md="";R.versions.forEach(function(v){if(v.date>md)md=v.date;});
+ if(ASOF>md&&!READONLY){ASK=true;return;}
+ R.rec={q:dq,asof:ASOF,leads:false,sheet:freshSheet()};if(had)put(true);}
+
+function topV(){var v=null;if(R)R.versions.forEach(function(x){if(!v||x.n>v.n)v=x;});return v;}
+function findK(k){var v=null;if(R)R.versions.forEach(function(x){if(x.k===k)v=x;});return v;}
+/* The newest item: the record if it leads, else the highest-numbered local version, else the record. */
+function lead(){var v=topV();if(!R||R.rec.leads||!v)return {rec:true,v:null,text:(CUR&&CUR.q)||"",sheet:R?R.rec.sheet:freshSheet()};return {rec:false,v:v,text:v.text,sheet:v.sheet};}
+function vlV(){if(TEMP)return TEMP;var v=VLK&&findK(VLK);return v||topV();}
+function dotsLine(d){var on=[];d.forEach(function(x,i){if(x)on.push(i+1);});return "Dots: "+on.length+" of 7 filled"+(on.length?" ("+on.join(", ")+")":"");}
+function vlText(v){return ["Version "+v.n+" · Date "+fLong(v.date)+": "+v.text,"My last version said: "+(v.prev||"none. This is my first."),"What I changed, and why: "+v.why,dotsLine(v.sheet.dots)].join("\n");}
+function miniDots(d,cls){var s=el("span",{class:"mini"+(cls?" "+cls:""),"aria-hidden":"true"});d.forEach(function(x){s.appendChild(el("i",x?{class:"on"}:null));});return s;}
+
+/* ---------- Rendering ---------- */
+function renderAll(){if(!CUR)return;renderAlerts();renderFicha();renderNext();renderTL();renderNav();renderVersions();renderChecks();renderSlip();renderIpad();saveLabel();}
+function renderDots(){renderFicha();renderTL();renderNav();renderVL();renderChecks();}
+function renderWho(){var w=$("who");w.innerHTML="";var f=first(CUR);
+ w.appendChild(el("span",{class:"seal",html:SVG_SEAL}));
+ w.appendChild(el("div",{class:"who-id"},[el("span",{id:"who-name",text:f+" "+initial(CUR)+"."}),el("span",{id:"who-meta",class:"lbl",text:"P"+CUR.p+" · "+PER[CUR.p].toUpperCase()})]));
+ var done=el("button",{type:"button",id:"who-done",class:"btn-line",text:"Done on this iPad"}),not=el("button",{type:"button",id:"who-not",class:"btn-line",text:"Not "+f+"?"});
+ done.addEventListener("click",function(){leaveDesk();say("Done. Your versions stay on this iPad under your name.");});
+ not.addEventListener("click",leaveDesk);
+ w.appendChild(el("div",{class:"who-acts"},[done,not]));}
+function syncAlerts(){$("desk-alerts").hidden=["store-banner","wb-notice","rec-ask"].every(function(id){return $(id).hidden;});}
+function renderAlerts(){$("store-banner").hidden=STORE.ok;
+ var n=$("wb-notice");n.textContent=NOTICE==="bad"?TXT.bad:NOTICE==="newer"?TXT.newer:"";n.hidden=!NOTICE;
+ var a=$("rec-ask"),v=topV();a.hidden=!(ASK&&v);
+ if(ASK&&v){txt("rec-ask-q","Mr. Portela's record changed on "+fMD(ASOF)+". Which one is newest in your log?");txt("rec-ask-mine","My Version "+v.n);}
+ syncAlerts();}
+function renderFicha(){var nw=lead(),v=nw.v,has=!!nw.text,numL=$("ficha-num").querySelector(".num-l"),numV=$("ficha-num").querySelector(".num-v"),q=$("ficha-q"),stp=$("ficha-stamp");
+ txt("ficha-call","R63 · P"+CUR.p+" · "+PER[CUR.p].toUpperCase());q.classList.remove("topic");stp.hidden=true;
+ if(v){$("ficha-num").hidden=false;numL.textContent="VERSION";numV.textContent=String(v.n);txt("ficha-meta","SAVED ON THIS IPAD · "+fShortY(v.date).toUpperCase());
+  stp.hidden=false;stp.textContent=v.penned?"IN YOUR LOG":"NOT IN YOUR LOG YET";stp.className="stamp"+(v.penned?" in":"");q.textContent=v.text;}
+ else if(has){var p=pd(R.rec.asof)||pd(ASOF);$("ficha-num").hidden=false;numL.textContent=SMON[p.m-1].toUpperCase();numV.textContent=String(p.d);
+  txt("ficha-meta","ON RECORD · "+fShortY(R.rec.asof).toUpperCase());q.textContent=nw.text;}
+ else{$("ficha-num").hidden=true;numL.textContent="";numV.textContent="";txt("ficha-meta","NO QUESTION ON RECORD YET");q.textContent=CUR.nt?"No question or topic is on record yet.":"Topic: "+CUR.tp;q.classList.add("topic");}
+ var ds=$("ficha-dots").children,c=cnt(nw.sheet.dots);for(var i=0;i<7;i++)ds[i].className=nw.sheet.dots[i]?"on":"";
+ $("ficha-dots").hidden=!has;var fc=$("ficha-count");fc.hidden=!has;fc.textContent=c===7?"7 of 7 filled · Passes":c+" of 7 filled · Draft";
+ var qo=$("q-open");qo.textContent=has?"My question changed":"Save my first version";qo.disabled=READONLY;
+ var h=$("ficha-hint");if(READONLY){h.textContent=TXT.newer;h.hidden=false;}else if(!v&&has){h.textContent=TXT.recHint;h.hidden=false;}else{h.textContent="";h.hidden=true;}}
+function renderNext(){var box=$("nextdate");box.innerHTML="";var t=isoToday(),e=null;(DATES[CUR.c]||[]).some(function(x){if(x[0]>=t){e=x;return true;}return false;});
+ if(!e){box.hidden=true;return;}box.hidden=false;var line=el("p");
+ if(!e[3]){var g=dayGap(t,e[0]);line.appendChild(el("b",{text:g===0?"Today":g===1?"1 day":g+" days"}));line.appendChild(document.createTextNode(" · "));}
+ line.appendChild(document.createTextNode(e[1]+": "+e[2]));
+ box.appendChild(el("p",{class:"lbl",text:"NEXT DATE"}));box.appendChild(line);box.appendChild(el("p",{class:"hint",text:"Checked September 24. The newest Google Classroom post wins."}));}
+function renderTL(){var ol=$("timeline"),open={};ol.querySelectorAll("li.ver").forEach(function(li){var d=li.querySelector("details");if(d&&d.open)open[li.getAttribute("data-n")||"rec"]=1;});
+ ol.innerHTML="";var vs=R.versions.slice().sort(function(a,b){return b.n-a.n;}),items=[];
+ if(R.rec.leads&&CUR.q)items.push("rec");vs.forEach(function(v){items.push(v);});if(!R.rec.leads&&CUR.q)items.push("rec");
+ items.forEach(function(it,i){var li=it==="rec"?recLi(i===0):verLi(it,i===0);var d=li.querySelector("details");if(open[it==="rec"?"rec":String(it.n)])d.open=true;ol.appendChild(li);});
+ txt("tl-count",String(R.versions.length));$("tl-empty").hidden=R.versions.length>0;$("tl-foot").hidden=!R.versions.length;}
+function verLi(v,isNew){var sm=el("summary",null,[el("span",{class:"ver-t",text:"Version "+v.n+" · "+fShort(v.date)}),miniDots(v.sheet.dots),el("span",{class:"ver-c",text:cnt(v.sheet.dots)+" of 7"}),
+  el("span",{class:"nib"+(v.penned?" on":"")},[el("span",{class:"sr",text:v.penned?"In your log":"Not in your log yet"})])]);
+ if(isNew)sm.appendChild(el("span",{class:"tag",text:"NEWEST"}));
+ var body=el("div",{class:"ver-body"},[el("p",{class:"ver-q",text:v.text}),el("p",{text:"What I changed, and why: "+v.why})]);
+ var bk=beforeKey(String(v.n));if(bk){var b=el("button",{type:"button",class:"btn-line ver-cmp",text:"Compare with the one before"});
+  b.addEventListener("click",function(){renderCompare(bk,String(v.n));var c=$("compare");c.scrollIntoView({behavior:scrollBeh(),block:"start"});$("cmp-h").focus({preventScroll:true});});body.appendChild(b);}
+ return el("li",{class:"ver","data-n":String(v.n)},[el("details",null,[sm,body])]);}
+function recLi(isNew){var sm=el("summary",null,[el("span",{class:"recmark","aria-hidden":"true"}),el("span",{class:"ver-t",text:"On record · "+fShort(ASOF)})]);
+ if(isNew)sm.appendChild(el("span",{class:"tag",text:"NEWEST"}));
+ return el("li",{class:"ver rec"},[el("details",null,[sm,el("div",{class:"ver-body"},[el("p",{class:"ver-q",text:CUR.q}),el("p",{text:"From "+CUR.qf+"."})])])]);}
+function renderNav(){var nw=lead(),vb=$("nav-v-badge");if(nw.v){vb.hidden=false;vb.textContent="V"+nw.v.n;}else{vb.hidden=true;vb.textContent="";}
+ var cb=$("nav-c-badge"),c=cnt(nw.sheet.dots);cb.hidden=!nw.text;cb.textContent=c+"/7";txt("nav-c-sr",nw.text?", "+c+" of 7 filled":"");}
+function renderVersions(){$("q-empty").hidden=!(R.versions.length===0&&$("wb-form").hidden);$("q-open-2").disabled=READONLY;
+ txt("q-open-2",lead().text?"My question changed":"Save my first version");renderVL();renderCompare();}
+function renderVL(){var v=vlV(),on=!!v&&(!!TEMP||!R.rec.leads);$("vl").hidden=!on;$("vl-next").hidden=!on;
+ if(!on){$("vl-text").innerHTML="";$("vl-dots").innerHTML="";return;}
+ var box=$("vl-text");box.innerHTML="";
+ box.appendChild(el("p",{"data-line":"1"},["Version "+v.n+" · Date "+fLong(v.date)+": ",el("span",{class:"vl-q",text:v.text})]));
+ box.appendChild(el("p",{"data-line":"2",text:"My last version said: "+(v.prev||"none. This is my first.")}));
+ box.appendChild(el("p",{"data-line":"3",text:"What I changed, and why: "+v.why}));
+ var dd=$("vl-dots");dd.innerHTML="";var vis=el("div",{class:"row","aria-hidden":"true"});
+ v.sheet.dots.forEach(function(x,i){vis.appendChild(el("span",{class:"ld",html:'<svg width="28" height="28" viewBox="0 0 28 28" focusable="false"><circle cx="14" cy="14" r="13" fill="'+(x?"#1d1812":"none")+'" stroke="#1d1812" stroke-width="2"/></svg>'},[el("span",{text:String(i+1)})]));});
+ dd.appendChild(vis);dd.appendChild(el("span",{class:"sr",text:dotsLine(v.sheet.dots)}));
+ var pen=$("vl-penned");pen.checked=!!v.penned;pen.disabled=READONLY||!!TEMP;
+ var st=$("vl-stamp");st.textContent=v.penned?"IN YOUR LOG":"NOT IN YOUR LOG YET";st.className="stamp"+(v.penned?" in":"");
+ var can=!READONLY&&!TEMP&&!v.penned&&v===topV();$("vl-fix").hidden=!can;if(!can)$("vl-remove-confirm").hidden=true;
+ txt("vl-remove-q","Remove Version "+v.n+" from this iPad? It is not in your log yet.");txt("next-search","Search with Version "+v.n);}
+function cmpItems(){var a=[];if(CUR.q)a.push({key:"rec",label:"On record · "+fShort(ASOF),text:CUR.q});
+ R.versions.slice().sort(function(x,y){return x.n-y.n;}).forEach(function(v){a.push({key:String(v.n),label:"Version "+v.n+" · "+fShort(v.date),text:v.text,n:v.n});});return a;}
+function beforeKey(toK){var items=cmpItems();if(items.length<2)return null;
+ if(toK==="rec"){var t=topV();return t?String(t.n):null;}
+ var n=+toK,best=null;R.versions.forEach(function(v){if(v.n<n&&(!best||v.n>best.n))best=v;});
+ if(best)return String(best.n);if(CUR.q)return "rec";return null;}
+function renderCompare(fromK,toK){var items=cmpItems(),box=$("compare"),on=R.versions.length>0&&items.length>=2;box.hidden=!on;
+ var f=$("cmp-from"),t=$("cmp-to");if(!on){f.innerHTML="";t.innerHTML="";$("cmp-out").innerHTML="";txt("cmp-sum","");return;}
+ var f0=f.value,t0=t.value,has=function(k){return items.some(function(i){return i.key===k;});};
+ [f,t].forEach(function(s){s.innerHTML="";items.forEach(function(it){s.appendChild(el("option",{value:it.key,text:it.label}));});});
+ if(!fromK){var nw=lead();toK=nw.v?String(nw.v.n):"rec";fromK=beforeKey(toK);
+  if(!CMPRESET&&has(f0)&&has(t0)){fromK=f0;toK=t0;}}
+ if(!fromK||!has(fromK))fromK=items.filter(function(i){return i.key!==toK;})[0].key;
+ CMPRESET=false;f.value=fromK;t.value=toK;diffOut();}
+function dkey(t){return t.toLowerCase().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu,"");}
+function diffOps(x,y){var a=toks(x),b=toks(y),ka=a.map(dkey),kb=b.map(dkey),m=a.length,n=b.length,L=[],i,j;
+ for(i=m;i>=0;i--){L[i]=[];for(j=n;j>=0;j--)L[i][j]=(i===m||j===n)?0:(ka[i]===kb[j]?L[i+1][j+1]+1:Math.max(L[i+1][j],L[i][j+1]));}
+ var ops=[];i=0;j=0;
+ while(i<m&&j<n){if(ka[i]===kb[j]){ops.push(["s",b[j]]);i++;j++;}else if(L[i+1][j]>=L[i][j+1]){ops.push(["d",a[i]]);i++;}else{ops.push(["i",b[j]]);j++;}}
+ while(i<m)ops.push(["d",a[i++]]);while(j<n)ops.push(["i",b[j++]]);return ops;}
+function diffOut(){var items=cmpItems(),pick=function(k){return items.filter(function(i){return i.key===k;})[0];},a=pick($("cmp-from").value),b=pick($("cmp-to").value),out=$("cmp-out");out.innerHTML="";
+ if(!a||!b){txt("cmp-sum","");return;}
+ var ops=diffOps(a.text,b.text),runs=[],nd=0,ni=0;
+ ops.forEach(function(o){if(o[0]==="d")nd++;if(o[0]==="i")ni++;var r=runs[runs.length-1];if(r&&r.t===o[0])r.w.push(o[1]);else runs.push({t:o[0],w:[o[1]]});});
+ runs.forEach(function(r,i){if(i)out.appendChild(document.createTextNode(" "));
+  if(r.t==="s")out.appendChild(document.createTextNode(r.w.join(" ")));
+  else out.appendChild(el(r.t==="d"?"del":"ins",null,[el("span",{class:"sr",text:r.t==="d"?"removed: ":"added: "}),r.w.join(" ")]));});
+ var w=function(n){return n+" word"+(n===1?"":"s");};txt("cmp-sum",nd||ni?w(nd)+" out · "+w(ni)+" in":"Same words.");}
+
+/* Seven checks: the student fills every dot. The page never does. */
+function buildChecks(){var c=CUR.c,ol=$("checks");ol.innerHTML="";
+ CHECKS[c].forEach(function(ck,i){var k=i+1,fid="fail-"+k;
+  var dot=el("button",{type:"button",class:"dot","aria-pressed":"false","aria-label":"Check "+k+", "+ck[0],html:SVG_CHECK});dot.addEventListener("click",function(){tapDot(k);});
+  var wf=el("button",{type:"button",class:"btn-line why-fail","aria-expanded":"false","aria-controls":fid,text:"If it fails"});
+  var go=el("button",{type:"button",class:"btn-line repair-go","aria-controls":"wb-form",text:"I made this repair"});go.addEventListener("click",function(){openForm({mode:"new",reason:"check",rc:k});});
+  var fail=el("div",{class:"fail",id:fid,hidden:""},[el("p",{text:"It fails when: "+ck[2]}),el("p",{text:"Repair (Plate VII): "+ck[3]}),el("p",{text:"Make one repair, then run all seven again. A repair makes a new version."}),go]);
+  wf.addEventListener("click",function(){disclose(wf,fail);});
+  var more=el("div",{class:"ck-more"},[wf]),parts=[el("span",{class:"ck-n",text:String(k)}),el("div",{class:"ck-body"},[el("p",{class:"ck-name",text:ck[0]}),el("p",{class:"ck-ask",text:ck[1]})]),dot,more,fail];
+  if((c==="S"&&k===3)||(c==="R"&&k===2)){var rid="ref-"+k,isS=c==="S";
+   var rb=el("button",{type:"button",class:"btn-line ref-btn","aria-expanded":"false","aria-controls":rid,text:isS?"The eight lenses":"The three purposes"});
+   var fs=el("fieldset",null,[el("legend",{text:isS?"Which lenses would a good answer need?":"Which purpose fits your verb?"})]),set=el("div",{class:"chipset"});
+   (isS?LENSES:PURPOSES).forEach(function(l){var inp=el("input",{type:isS?"checkbox":"radio",name:isS?"lens":"purpose",value:l[0]});
+    inp.addEventListener("change",function(){if(isS)setLens(l[0],inp.checked);else setPurpose(l[0]);});
+    set.appendChild(el("label",{class:"rchip"},[inp,el("span",{html:SVG_CHECK},[l[1]])]));});
+   fs.appendChild(set);var ref=el("div",{class:"refbox",id:rid,hidden:""},[fs]);rb.addEventListener("click",function(){disclose(rb,ref);});more.appendChild(rb);parts.push(ref);}
+  ol.appendChild(el("li",{class:"check","data-k":String(k)},parts));});
+ var sel2=$("wb-check");sel2.innerHTML="";CHECKS[c].forEach(function(ck,i){sel2.appendChild(el("option",{value:String(i+1),text:(i+1)+" · "+ck[0]}));});
+ var rs=$("wb-reason-set");rs.innerHTML="";REASONS.forEach(function(r){var inp=el("input",{type:"radio",name:"wb-reason",value:r[0]});inp.addEventListener("change",function(){reasonFix();draftLater();});
+  rs.appendChild(el("label",{class:"rchip"},[inp,el("span",{html:SVG_CHECK},[r[1]])]));});
+ var ps=$("pen-set");ps.innerHTML="";PENS[c].forEach(function(p,i){var inp=el("input",{type:"radio",name:"pen",value:p[0]});if(i===0)inp.checked=true;
+  ps.appendChild(el("label",{class:"rchip pen-"+p[0]},[inp,el("span",{html:SVG_CHECK},[p[1]])]));});}
+function disclose(btn,panel){var open=btn.getAttribute("aria-expanded")!=="true";btn.setAttribute("aria-expanded",String(open));panel.hidden=!open;}
+function tapDot(k){if(READONLY||!CUR)return;var nw=lead();if(!nw.text)return;var d=nw.sheet.dots;d[k-1]=d[k-1]?0:1;CKNEW=false;put();renderDots();}
+function setLens(key,on){if(READONLY)return;var s=lead().sheet,i=s.lenses.indexOf(key);if(on&&i<0)s.lenses.push(key);if(!on&&i>-1)s.lenses.splice(i,1);put();}
+function setPurpose(key){if(READONLY)return;lead().sheet.purpose=key;put();}
+function renderChecks(){var nw=lead(),has=!!nw.text,c=cnt(nw.sheet.dots);
+ txt("ck-h",!has?"Seven checks for your question":nw.v?"Seven checks for Version "+nw.v.n:"Seven checks for your question on record");
+ $("ck-empty").hidden=has;$("checks").hidden=!has;$("circle").hidden=!has;$("notes").hidden=!has;$("ck-count").hidden=!has;$("ck-new").hidden=!(CKNEW&&has);
+ txt("ck-count",!has?"":c<7?c+" of 7 filled. Until all seven are filled, it is a draft. A draft is normal.":"All seven are filled. Your question passes. Fill the same seven dots in your log, and show Mr. Portela.");
+ $("ck-search").hidden=!(has&&c===7);txt("ck-search",nw.v?"Search with Version "+nw.v.n:"Search with your question on record");
+ $("checks").querySelectorAll(".dot").forEach(function(b,i){b.setAttribute("aria-pressed",String(nw.sheet.dots[i]===1));if(READONLY)b.setAttribute("aria-disabled","true");else b.removeAttribute("aria-disabled");});
+ $("checks").querySelectorAll('input[name="lens"]').forEach(function(x){x.checked=nw.sheet.lenses.indexOf(x.value)>-1;x.disabled=READONLY;});
+ $("checks").querySelectorAll('input[name="purpose"]').forEach(function(x){x.checked=nw.sheet.purpose===x.value;x.disabled=READONLY;});
+ $("checks").querySelectorAll(".repair-go").forEach(function(b){b.disabled=READONLY;});
+ renderNotes();renderCircle();}
+/* What the page notices: patterns in the newest saved text and its circles. It points; it never writes. */
+function renderNotes(){var ul=$("notes-list");ul.innerHTML="";var nw=lead(),t=nw.text,c=CUR.c,cir=nw.sheet.circles,out=[];
+ var has=function(l){return cir.some(function(p){return p[1]===l;});};
+ if(t){if(c==="S"){var m=YN.exec(t);if(m)out.push(["yesno","Your question starts with “"+m[1]+".” The Field Guide calls that a yes-or-no shape.","Check 1 repair (Plate VII): Start with a judgment word."]);
+   if(!QM.test(t))out.push(["qmark","Your question has no question mark at the end. Check 1 asks: A question mark, a verb, a judgment word?"]);}
+  if(cir.length){var k=["who","where","when"].filter(has).length;
+   if(k<2)out.push(["slots","You circled "+k+" of who, where, when. Check 4 fails when two of the three are missing.","Check 4 repair (Plate VII): Add the missing who, where, or when."]);
+   if(c==="R"&&!has("verb"))out.push(["verb","No verb is circled yet. Check 1 asks for a verb.","Check 1 repair (Plate VII): Add a verb: how, which, to what extent, does."]);
+   if(c==="S"&&!has("judge"))out.push(["judge","No judgment word is circled yet. Check 1 asks for one.","Check 1 repair (Plate VII): Start with a judgment word."]);}}
+ out.slice(0,3).forEach(function(n){ul.appendChild(el("li",{"data-note":n[0]},n.slice(1).map(function(s){return el("p",{text:s});})));});
+ $("notes-empty").hidden=out.length>0;}
+function pen(){var r=document.querySelector('input[name="pen"]:checked');return r?r.value:PENS[CUR.c][0][0];}
+function renderCircle(focusI){var nw=lead(),w=$("words"),tk=toks(nw.text),map={};w.innerHTML="";nw.sheet.circles.forEach(function(p){map[p[0]]=p[1];});
+ if(ROV>=tk.length)ROV=0;
+ tk.forEach(function(t,i){var l=map[i],b=el("button",{type:"button",class:"w","data-i":String(i),tabindex:i===ROV?"0":"-1"},[t]);
+  if(l){b.setAttribute("data-l",l);var pl=map[i-1]===l,nl=map[i+1]===l;if(pl&&nl)b.classList.add("l-mid");else if(pl)b.classList.add("l-end");else if(nl)b.classList.add("l-start");
+   if(!pl)b.appendChild(el("span",{class:"w-tag","aria-hidden":"true",text:TAGS[l]}));b.appendChild(el("span",{class:"sr",text:", circled: "+LNAME[l]}));}
+  if(READONLY)b.setAttribute("aria-disabled","true");
+  b.addEventListener("click",function(){tapWord(i);});b.addEventListener("keydown",function(e){roveKey(e,i,tk.length);});b.addEventListener("focus",function(){ROV=i;});
+  w.appendChild(b);});
+ var labs=labelsFor(CUR.c),got=labs.filter(function(l){return nw.sheet.circles.some(function(p){return p[1]===l;});}),miss=labs.filter(function(l){return got.indexOf(l)<0;}),nm=function(a){return a.map(function(l){return LNAME[l];}).join(", ");};
+ txt("circ-slots",!got.length?"Nothing circled yet.":!miss.length?"Everything is circled.":"Circled: "+nm(got)+". Not circled yet: "+nm(miss)+".");
+ document.querySelectorAll('input[name="pen"]').forEach(function(x){x.disabled=READONLY;});
+ ["expect","hate"].forEach(function(f){var ta=$("c-"+f);ta.readOnly=READONLY;if(document.activeElement!==ta)ta.value=nw.sheet[f]||"";});
+ if(focusI!=null){var fb=w.querySelector('[data-i="'+focusI+'"]');if(fb)fb.focus();}}
+function tapWord(i){if(READONLY||!CUR)return;var c=lead().sheet.circles,p=pen(),ix=-1;c.forEach(function(x,j){if(x[0]===i)ix=j;});
+ if(ix>-1&&c[ix][1]===p)c.splice(ix,1);else if(ix>-1)c[ix][1]=p;else c.push([i,p]);ROV=i;put();renderCircle(i);renderNotes();}
+function roveKey(e,i,n){var j=null;if(e.key==="ArrowRight")j=Math.min(n-1,i+1);else if(e.key==="ArrowLeft")j=Math.max(0,i-1);else if(e.key==="Home")j=0;else if(e.key==="End")j=n-1;
+ if(j===null)return;e.preventDefault();ROV=j;var ws=$("words").querySelectorAll(".w");ws.forEach(function(b,x){b.tabIndex=x===j?0:-1;});ws[j].focus();}
+var ansT={};
+["expect","hate"].forEach(function(f){var ta=$("c-"+f);ta.addEventListener("input",function(){if(READONLY||!CUR)return;var s=lead().sheet;clearTimeout(ansT[f]);ansT[f]=setTimeout(function(){ansT[f]=0;s[f]=ta.value.slice(0,200);put();},600);});});
+function flushAns(){["expect","hate"].forEach(function(f){if(ansT[f]){clearTimeout(ansT[f]);ansT[f]=0;if(CUR&&!READONLY){lead().sheet[f]=$("c-"+f).value.slice(0,200);put();}}});}
+function renderSlip(){var nw=lead();render(CUR,nw.v?{text:nw.v.text,n:nw.v.n,date:nw.v.date,local:true}:null);}
+function setBuilder(){var nw=lead();$("myq").value=nw.text;txt("tb",nw.v?"Searches from Version "+nw.v.n:nw.text?"Searches from your question on record":"Searches from your words");txt("bhint",TXT.bhint);buildKw();}
+function renderIpad(){if(!CUR||!R)return;var n=R.versions.length;
+ txt("ipad-status",!STORE.ok?"This iPad is not saving right now.":n?n+" version"+(n===1?"":"s")+" saved on this iPad.":"Nothing saved on this iPad yet.");
+ var kept=false;try{kept=localStorage.getItem(wbKey(CUR.id))!==null;}catch(e){}
+ $("ipad-remove").hidden=READONLY||!(n||kept);if($("ipad-remove").hidden)$("ipad-remove-confirm").hidden=true;
+ txt("ipad-remove-q",n>1?"Remove all "+n+" versions from this iPad? Your log keeps them.":n===1?"Remove your 1 version from this iPad? Your log keeps it.":"Remove what this iPad saved for you? Your log keeps every version.");}
+function allText(){var st=CUR,b=["Room 63 · "+st.n+" · Period "+st.p+" · "+PER[st.p]+"\nCopied "+fLong(isoToday())+" from this iPad. Your log is the record."];
+ if(st.q)b.push("On record, "+fLong(R.rec.asof||ASOF)+": "+st.q);
+ R.versions.slice().sort(function(x,y){return x.n-y.n;}).forEach(function(v){b.push(vlText(v)+"\nIn my log: "+(v.penned?"yes":"not yet"));});
+ return b.join("\n\n");}
+
+/* ---------- The form: always inline, never a modal ---------- */
+var FORM={mode:null,k:null,start:"",dt:0};
+function reasonVal(){var r=document.querySelector('input[name="wb-reason"]:checked');return r?r.value:"";}
+function fv(){var r=reasonVal();return {text:$("wb-text").value,why:$("wb-why").value,reason:r,rc:r==="check"?(+$("wb-check").value||0):0,n:$("wb-n").value,date:$("wb-date").value};}
+function snap(){return JSON.stringify(fv());}
+function setReason(v,rc){document.querySelectorAll('input[name="wb-reason"]').forEach(function(i){i.checked=i.value===v;});$("wb-check").value=String(rc||1);reasonFix();}
+function reasonFix(){var v=reasonVal(),line=$("wb-reason-line"),r=REASONS.filter(function(x){return x[0]===v;})[0];$("wb-check-row").hidden=v!=="check";line.textContent="";line.hidden=true;
+ if(v==="check"){line.textContent="The Field Guide says (Plate VII): "+CHECKS[CUR.c][(+$("wb-check").value||1)-1][3];line.hidden=false;}
+ else if(r&&r[2]){line.textContent="Your Research Log says: "+r[2];line.hidden=false;}}
+function nVal(){var s=$("wb-n").value.trim();return (/^\d{1,2}$/.test(s)&&+s>=1&&+s<=99)?+s:0;}
+function defN(){var t=topV();return t?Math.min(99,t.n+1):(CUR.q?2:1);}
+function otherTop(){var v=null;R.versions.forEach(function(x){if(x.k!==FORM.k&&(!v||x.n>v.n))v=x;});return v;}
+function prevFor(n,skip){var best=null;R.versions.forEach(function(v){if(v.k!==skip&&v.n<n&&(!best||v.n>best.n))best=v;});return best?best.text:(R.rec.q||"");}
+function qOpenState(open){var b=$("q-open");b.setAttribute("aria-expanded",String(open));b.classList.toggle("is-open",open);}
+function saveLabel(){if(!CUR||!R)return;var b=$("wb-save"),n=nVal();
+ if(!STORE.ok||(FORM.mode!=="edit"&&R.versions.length>=CAP))b.textContent="Show my version line";
+ else if(FORM.mode==="edit")b.textContent="Save changes to Version "+(n||(findK(FORM.k)||{}).n||"");
+ else b.textContent=n?"Save Version "+n+" for "+first(CUR):"Save this version for "+first(CUR);}
+function nInfo(){var n=nVal(),t=otherTop(),p=$("wb-n-info");if(n&&t&&n<t.n){p.textContent="Version "+n+" comes before your newest, Version "+t.n+". It will be saved behind it.";p.hidden=false;}else{p.textContent="";p.hidden=true;}}
+function openForm(o){if(!CUR||READONLY)return;o=o||{};var f=$("wb-form"),mode=o.mode==="edit"?"edit":"new";
+ if(!f.hidden&&FORM.mode===mode&&mode==="new"){if(o.reason)setReason(o.reason,o.rc);draftLater();goForm();return;}
+ flushDraft();clearErrs();$("wb-confirm").hidden=true;FORM.mode=mode;FORM.k=null;
+ var base=lead().text,t,w,rs="",rc=0,n,d,note="";
+ if(mode==="edit"){var v=topV();if(!v){FORM.mode=null;return;}FORM.k=v.k;t=v.text;w=v.why;rs=v.reason;rc=v.rc;n=String(v.n);d=v.date;
+  txt("wb-h","Fix Version "+v.n);txt("wb-intro",TXT.fixIntro);}
+ else{var dr=R.draft;
+  if(dr){t=dr.text;w=dr.why;rs=dr.reason;rc=dr.rc;n=String(dr.n||defN());d=dr.date||isoToday();note="You started this on "+fLong(isoLocal(new Date(dr.at)))+". It is not saved as a version yet.";}
+  else{t=base;w="";n=String(defN());d=isoToday();}
+  if(o.reason){rs=o.reason;rc=o.rc||0;}
+  txt("wb-h","My question changed");txt("wb-intro",TXT.intro);}
+ $("wb-text").value=t;$("wb-why").value=w;$("wb-n").value=n;$("wb-date").value=d;setReason(rs,rc);
+ txt("wb-draftnote",note);$("wb-draftnote").hidden=!note;
+ txt("wb-text-help",(base||mode==="edit")?TXT.help:TXT.help0);$("wb-empty").hidden=!t;
+ $("wb-cap").hidden=!(mode==="new"&&R.versions.length>=CAP);
+ FORM.start=snap();f.hidden=false;$("q-empty").hidden=true;qOpenState(true);saveLabel();nInfo();goForm();}
+function goForm(){var f=$("wb-form");try{f.scrollIntoView({behavior:scrollBeh(),block:"start"});}catch(e){}
+ var ta=$("wb-text");ta.focus({preventScroll:true});var L=ta.value.length;try{ta.setSelectionRange(L,L);}catch(e){}}
+function closeForm(){clearTimeout(FORM.dt);FORM.dt=0;$("wb-form").hidden=true;$("wb-confirm").hidden=true;FORM.mode=null;FORM.k=null;clearErrs();qOpenState(false);
+ $("q-empty").hidden=!(CUR&&R&&!R.versions.length);}
+function draftLater(){if(FORM.mode!=="new"||READONLY)return;clearTimeout(FORM.dt);FORM.dt=setTimeout(saveDraft,600);}
+function saveDraft(){FORM.dt=0;if(FORM.mode!=="new"||!R||READONLY)return;var v=fv(),nn=nVal();
+ R.draft={text:v.text.slice(0,400),why:v.why.slice(0,300),reason:v.reason,rc:v.rc,n:nn||null,date:pd(v.date)?v.date:"",at:(R.draft&&R.draft.at)||Date.now()};put();}
+function flushDraft(){if(FORM.dt){clearTimeout(FORM.dt);saveDraft();}}
+var ERRF=["wb-text","wb-why","wb-n","wb-date"];
+function clearErr(id){var p=$(id+"-err");p.hidden=true;p.textContent="";$(id).removeAttribute("aria-invalid");}
+function clearErrs(){ERRF.forEach(clearErr);}
+function showErr(id,msg){var p=$(id+"-err");p.innerHTML=SVG_ALERT;p.appendChild(document.createTextNode(msg));p.hidden=false;$(id).setAttribute("aria-invalid","true");}
+function validate(){clearErrs();var v=fv(),n=nVal(),bad=[];
+ if(!v.text.trim())bad.push(["wb-text","Type your new version first."]);
+ else if(norm(v.text)===norm(n?prevFor(n,FORM.k):lead().text))bad.push(["wb-text","This matches your last version word for word. Change at least one word, or tap Cancel."]);
+ if(!v.why.trim())bad.push(["wb-why","Write what you changed, and why. That line is proof of your thinking."]);
+ if(!n)bad.push(["wb-n","Use a whole number from 1 to 99, the number in your log."]);
+ else if(R.versions.some(function(x){return x.n===n&&x.k!==FORM.k;}))bad.push(["wb-n","Version "+n+" is already saved on this iPad. Use the next number in your log."]);
+ if(!pd(v.date)||v.date<"2026-08-01"||v.date>"2027-07-31")bad.push(["wb-date","Use the date on your log line."]);
+ bad.forEach(function(b){showErr(b[0],b[1]);});if(bad.length){$(bad[0][0]).focus();return false;}return true;}
+function afterSave(msg){closeForm();renderAll();setBuilder();savedMoment();$("vl-h").focus();say(msg);}
+function saveForm(){if(!CUR||READONLY||!FORM.mode)return;if(!validate())return;clearTimeout(FORM.dt);FORM.dt=0;
+ var v=fv(),n=nVal(),text=v.text.trim().replace(/\s+/g," "),why=v.why.trim(),reason=v.reason,rc=reason==="check"?(v.rc||0):0,ok;
+ if(FORM.mode==="edit"){var x=findK(FORM.k);if(!x){closeForm();return;}var changed=x.text!==text;
+  x.n=n;x.date=v.date;x.text=text;x.why=why;x.reason=reason;x.rc=rc;x.prev=prevFor(n,x.k);x.saved=Date.now();if(changed)x.sheet.circles=[];
+  ok=put(true);VLK=x.k;TEMP=null;CMPRESET=true;afterSave(ok?"Version "+n+" fixed on this iPad.":TXT.notSaved);return;}
+ var nv={k:newK(),n:n,date:v.date,text:text,prev:prevFor(n,null),why:why,reason:reason,rc:rc,saved:Date.now(),penned:false,sheet:freshSheet()};
+ if(R.versions.length>=CAP){TEMP=nv;afterSave("This iPad holds 40 versions for you, so it did not keep this one. Write the version line in your log now.");return;}
+ R.versions.push(nv);R.rec.leads=false;R.draft=null;ok=put(true);VLK=nv.k;TEMP=null;CKNEW=true;CMPRESET=true;
+ afterSave(ok?"Saved on this iPad as Version "+n+". Now write it in your log, in pen.":TXT.notSaved);}
+function savedMoment(){if(!motionOK())return;var d=$("desk");d.classList.remove("just-saved");void d.offsetWidth;d.classList.add("just-saved");clearTimeout(savedMoment.t);savedMoment.t=setTimeout(function(){d.classList.remove("just-saved");},600);}
+
+$("wb-form").addEventListener("submit",function(e){e.preventDefault();saveForm();});
+["wb-text","wb-why"].forEach(function(id){$(id).addEventListener("input",function(){if(!$(id+"-err").hidden)clearErr(id);draftLater();});});
+$("wb-n").addEventListener("input",function(){if(!$("wb-n-err").hidden)clearErr("wb-n");saveLabel();nInfo();draftLater();});
+$("wb-date").addEventListener("input",function(){if(!$("wb-date-err").hidden)clearErr("wb-date");draftLater();});
+$("wb-date").addEventListener("change",draftLater);
+$("wb-check").addEventListener("change",function(){reasonFix();draftLater();});
+function stepN(d){var n=nVal()||(d>0?0:defN()+1);n=Math.max(1,Math.min(99,n+d));$("wb-n").value=String(n);clearErr("wb-n");saveLabel();nInfo();draftLater();}
+$("wb-n-minus").addEventListener("click",function(){stepN(-1);});
+$("wb-n-plus").addEventListener("click",function(){stepN(1);});
+$("wb-empty").addEventListener("click",function(){var ta=$("wb-text");ta.value="";ta.focus();draftLater();});
+$("wb-cancel").addEventListener("click",function(){if(snap()!==FORM.start){$("wb-confirm").hidden=false;$("wb-confirm-keep").focus();}else dropForm();});
+$("wb-confirm-keep").addEventListener("click",function(){$("wb-confirm").hidden=true;$("wb-cancel").focus();});
+$("wb-confirm-drop").addEventListener("click",dropForm);
+function dropForm(){clearTimeout(FORM.dt);FORM.dt=0;if(FORM.mode==="new"&&R&&R.draft){R.draft=null;put();}closeForm();$("q-open").focus();}
+$("q-open").addEventListener("click",function(){openForm({mode:"new"});});
+$("q-open-2").addEventListener("click",function(){openForm({mode:"new"});});
+$("vl-edit").addEventListener("click",function(){openForm({mode:"edit"});});
+$("vl-remove").addEventListener("click",function(){$("vl-remove-confirm").hidden=false;$("vl-remove-no").focus();});
+$("vl-remove-no").addEventListener("click",function(){$("vl-remove-confirm").hidden=true;$("vl-remove").focus();});
+$("vl-remove-yes").addEventListener("click",function(){var v=vlV();if(!v||READONLY||v.penned||v!==topV())return;
+ R.versions=R.versions.filter(function(x){return x!==v;});put();VLK=null;TEMP=null;CKNEW=false;CMPRESET=true;$("vl-remove-confirm").hidden=true;
+ if(!$("wb-form").hidden&&FORM.mode==="edit")closeForm();
+ renderAll();setBuilder();$("ficha-h").focus();say("Version "+v.n+" removed from this iPad.");});
+$("vl-penned").addEventListener("change",function(){var v=vlV();if(!v||READONLY||TEMP)return;v.penned=this.checked;put();
+ if(v.penned&&FORM.mode==="edit"&&FORM.k===v.k)closeForm();renderFicha();renderTL();renderVL();});
+$("vl-copy").addEventListener("click",function(){var b=this,v=vlV();if(!v)return;
+ function ok(){b.textContent="Copied. Now write it in your log.";clearTimeout(b._t);b._t=setTimeout(function(){b.textContent="Copy version line";},2500);}
+ function bad(){selectNode($("vl-text"));b.textContent="Copy did not work. The lines are selected. Write them in your log.";}
+ try{navigator.clipboard.writeText(vlText(v)).then(ok,bad);}catch(e){bad();}});
+$("cmp-from").addEventListener("change",diffOut);
+$("cmp-to").addEventListener("change",diffOut);
+$("rec-ask-record").addEventListener("click",function(){recChoose(true);});
+$("rec-ask-mine").addEventListener("click",function(){recChoose(false);});
+function recChoose(leads){if(!CUR)return;R.rec={q:CUR.q||"",asof:ASOF,leads:leads,sheet:freshSheet()};ASK=false;put();CMPRESET=true;VLK=null;renderAll();setBuilder();$("ficha-h").focus();}
+$("ipad-copyall").addEventListener("click",function(){if(!CUR)return;var b=this,t=allText(),ta=$("ipad-backup");
+ function ok(){b.textContent="Copied. Paste it somewhere safe.";clearTimeout(b._t);b._t=setTimeout(function(){b.textContent="Copy all my versions";},2500);}
+ function bad(){ta.value=t;ta.hidden=false;ta.focus();ta.select();b.textContent="Copy did not work. The text is selected below.";}
+ try{navigator.clipboard.writeText(t).then(ok,bad);}catch(e){bad();}});
+$("ipad-remove").addEventListener("click",function(){$("ipad-remove-confirm").hidden=false;$("ipad-remove-no").focus();});
+$("ipad-remove-no").addEventListener("click",function(){$("ipad-remove-confirm").hidden=true;$("ipad-remove").focus();});
+$("ipad-remove-yes").addEventListener("click",function(){if(!CUR||READONLY)return;clearTimeout(FORM.dt);FORM.dt=0;
+ try{localStorage.removeItem(wbKey(CUR.id));}catch(e){}store(null);
+ R=freshRec(CUR);NOTICE="";ASK=false;VLK=null;TEMP=null;CKNEW=false;CMPRESET=true;closeForm();$("ipad-remove-confirm").hidden=true;$("ipad-backup").hidden=true;$("ipad-backup").value="";
+ renderAll();setBuilder();$("ficha-h").focus();say("Removed from this iPad. Your log keeps every version.");});
+
+/* Rail: in-page anchors. It stays sticky, and goes static while the student types so the keyboard never covers a field. */
+function goTo(id){var s=$(id);if(!s)return;try{s.scrollIntoView({behavior:scrollBeh(),block:"start"});}catch(e){}var h=s.querySelector("h2");if(h)h.focus({preventScroll:true});}
+[["nav-versions","st-versions"],["nav-checks","st-checks"],["nav-search","step3"],["next-checks","st-checks"],["next-search","tools-build"],["ck-search","tools-build"]].forEach(function(p){
+ $(p[0]).addEventListener("click",function(e){e.preventDefault();goTo(p[1]);});});
+function isTypeField(t){return !!t&&(t.tagName==="TEXTAREA"||t.tagName==="SELECT"||(t.tagName==="INPUT"&&/^(text|date|search)$/.test(t.type)));}
+/* While a finger or mouse is down the rail keeps its place, so leaving a field never slides the rail over the button being tapped. */
+var PDOWN=false;
+function syncTyping(){if(!PDOWN)document.body.classList.toggle("typing",isTypeField(document.activeElement));}
+document.addEventListener("pointerdown",function(){PDOWN=true;},true);
+document.addEventListener("pointerup",function(){setTimeout(function(){PDOWN=false;syncTyping();},0);},true);
+document.addEventListener("pointercancel",function(){PDOWN=false;setTimeout(syncTyping,0);},true);
+document.addEventListener("focusin",function(e){if(isTypeField(e.target))document.body.classList.add("typing");});
+document.addEventListener("focusout",function(){setTimeout(syncTyping,0);});
+if("IntersectionObserver" in window){var NAVS={"st-versions":"nav-versions","st-checks":"nav-checks","step3":"nav-search"};
+ var io=new IntersectionObserver(function(ents){ents.forEach(function(en){if(!en.isIntersecting)return;Object.keys(NAVS).forEach(function(k){var a=$(NAVS[k]);if(k===en.target.id)a.setAttribute("aria-current","location");else a.removeAttribute("aria-current");});});},{rootMargin:"-56px 0px -60% 0px"});
+ Object.keys(NAVS).forEach(function(k){io.observe($(k));});}
+$("skip").addEventListener("click",function(e){e.preventDefault();var t=CUR?$("ficha-h"):$("step1").querySelector("h2");t.focus();});
+function skipTo(q){var s=$("skip");s.textContent=q?"Skip to your question":"Skip to your period";s.setAttribute("href",q?"#ficha-h":"#pick");}
+window.addEventListener("storage",function(e){if(!CUR||e.key!==wbKey(CUR.id))return;var formOpen=!$("wb-form").hidden;WB.load(CUR);
+ if(!formOpen)closeForm();renderAll();if(!formOpen)setBuilder();});
+
+function teardown(){flushDraft();flushAns();closeForm();}
+function wipe(){["who","timeline","vl-text","vl-dots","cmp-out","cmp-from","cmp-to","checks","notes-list","words","pen-set","nextdate","wb-reason-set","wb-check"].forEach(function(id){$(id).innerHTML="";});
+ ["ficha-meta","ficha-call","ficha-q","ficha-count","ck-count","circ-slots","cmp-sum","ipad-status","rec-ask-q","vl-remove-q","ipad-remove-q"].forEach(function(id){txt(id,"");});
+ $("ficha-num").querySelector(".num-l").textContent="";$("ficha-num").querySelector(".num-v").textContent="";
+ ["wb-text","wb-why","c-expect","c-hate","ipad-backup","wb-n","wb-date"].forEach(function(id){$(id).value="";});
+ ["vl","vl-next","compare","ipad-backup","ipad-remove-confirm","vl-remove-confirm","store-banner","wb-notice","rec-ask","desk-alerts"].forEach(function(id){$(id).hidden=true;});
+ $("guide").innerHTML="";}
+function pickStudent(d){if(CUR)teardown();
+ document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed",String(n.getAttribute("data-id")===d.id));});
+ CUR=d;VLK=null;TEMP=null;CKNEW=false;ROV=0;CMPRESET=true;
+ WB.load(d);
+ $("desk").setAttribute("data-on","true");$("pick").hidden=true;$("lede").hidden=true;$("band").classList.add("compact");
+ buildChecks();renderWho();var wide=false;try{wide=matchMedia("(min-width:700px)").matches;}catch(e){}$("tl-wrap").open=wide;
+ $("timeline").innerHTML="";closeForm();renderAll();
+ setBuilder();
+ store(d.id);$("back").hidden=true;try{history.replaceState(null,"","#"+d.id);}catch(e){}
+ skipTo(true);
+ if(!STORE.ok&&!STORE.told){STORE.told=true;say(TXT.banner);}
+ var dk=$("desk");try{dk.scrollIntoView({behavior:scrollBeh(),block:"start"});}catch(e){}
+ $("ficha-h").focus({preventScroll:true});}
+function leaveDesk(){teardown();store(null);try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}
+ wipe();CUR=null;R=null;READONLY=false;NOTICE="";ASK=false;VLK=null;TEMP=null;CKNEW=false;
+ $("desk").setAttribute("data-on","false");$("pick").hidden=false;$("lede").hidden=false;$("band").classList.remove("compact");
+ $("find").value="";if(curP)names();document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed","false");});
+ render(EXAMPLE);$("myq").value=ORIG.myq;txt("tb",ORIG.tb);txt("bhint",ORIG.bhint);buildKw();
+ skipTo(false);$("step1").querySelector("h2").focus();}
+$("find").addEventListener("input",names);
+window.addEventListener("hashchange",function(){var id=(location.hash||"").slice(1);var d=id&&DATA.filter(function(x){return x.id===id;})[0];if(d&&(!CUR||CUR.id!==d.id)){pickPeriod(d.p,true);pickStudent(d);}});
+
+function printPeriod(p){var box=$("printall");box.innerHTML="";
  DATA.filter(function(d){return d.p===p;}).forEach(function(d){box.appendChild(slip(d,true));});
  document.body.classList.add("print-all");window.print();}
-window.addEventListener("afterprint",function(){if(document.body.classList.contains("print-all")){document.body.classList.remove("print-all");document.getElementById("printall").innerHTML="";}});
-document.getElementById("printp").addEventListener("click",function(){if(curP)printPeriod(curP);});
+window.addEventListener("afterprint",function(){if(document.body.classList.contains("print-all")){document.body.classList.remove("print-all");$("printall").innerHTML="";}});
+$("printp").addEventListener("click",function(){if(curP&&!HOSTED)printPeriod(curP);});
 
 var STOP="a an the of in on at to for from by with and or but is are was were be been being do does did has have had how what why when where which who whom whose that this these those to extent can could should would will may might it its their there they them than then as into about affect affects affected influence influences impact impacts effect effects between among during through throughout truly really more most less very people person such past like also other some any all each not no".split(" ");
 /* Topic words that send the builder to a specialist database. Scholar always leads; the two best matches follow; Open Library closes. */
@@ -309,23 +1275,23 @@ function pickDbs(text){var t=text.toLowerCase();var sc=TOPIC.map(function(r){ret
  if(out.length<3)out.push("core");out.push("openlibrary");return out;}
 var kwState=[];
 function addWords(part,seen){part.replace(/[?¿.,!¡;:()]/g," ").split(/\s+/).forEach(function(w){var k=w.toLowerCase();if(!w||STOP.indexOf(k)>-1||/^\d+$/.test(w)||seen[k])return;seen[k]=1;kwState.push({w:w,on:true});});}
-function buildKw(){var raw=document.getElementById("myq").value.replace(/[“”]/g,'"');var seen={};kwState=[];
+function buildKw(){var raw=$("myq").value.replace(/[“”]/g,'"');var seen={};kwState=[];
  var parts=raw.split('"');var closed=parts.length%2===1;
  parts.forEach(function(part,i){
   if(i%2===1&&(closed||i<parts.length-1)){var ph=part.replace(/[?¿.,!¡;:()]/g," ").trim().replace(/\s+/g," ");var k=ph.toLowerCase();if(ph&&!seen[k]){seen[k]=1;kwState.push({w:'"'+ph+'"',on:true,ph:true});}return;}
   addWords(part,seen);});
  drawKw();}
-function drawKw(){var box=document.getElementById("kw");box.innerHTML="";kwState.forEach(function(k){var b=el("button",{type:"button","aria-pressed":String(k.on),class:k.ph?"ph":"",text:k.w});b.addEventListener("click",function(){k.on=!k.on;drawKw();});box.appendChild(b);});
- var q=kwState.filter(function(k){return k.on;}).map(function(k){return k.w;}).join(" ");document.getElementById("built").textContent=q||"(tap words to bring them back)";
- var a=document.getElementById("builtacts");a.innerHTML="";var pk=document.getElementById("picked");pk.textContent="";if(!q)return;
- var dbs=pickDbs(document.getElementById("myq").value);
+function drawKw(){var box=$("kw");box.innerHTML="";kwState.forEach(function(k){var b=el("button",{type:"button","aria-pressed":String(k.on),class:k.ph?"ph":"",text:k.w});b.addEventListener("click",function(){k.on=!k.on;drawKw();});box.appendChild(b);});
+ var q=kwState.filter(function(k){return k.on;}).map(function(k){return k.w;}).join(" ");$("built").textContent=q||"(tap words to bring them back)";
+ var a=$("builtacts");a.innerHTML="";var pk=$("picked");pk.textContent="";if(!q)return;
+ var dbs=pickDbs($("myq").value);
  pk.textContent="Picked for your words: "+dbs.map(function(k){return DB[k].n;}).join(", ")+".";
  dbs.forEach(function(db){var d=DB[db];var direct=d.u&&!d.copy;
   a.appendChild(el("a",{class:db==="scholar"?"go":"copy",href:direct?url(db,q):d.h,target:"_blank",rel:"noopener",text:direct?d.n:"Open "+d.n}));});
  var cp=el("button",{type:"button",class:"copy",text:"Copy words"});cp.addEventListener("click",function(){copyText(cp,q);});a.appendChild(cp);}
-document.getElementById("myq").addEventListener("input",buildKw);
+$("myq").addEventListener("input",buildKw);
 
-function dbcards(){var g=document.getElementById("dbgrid");["scholar","openlibrary","core","pubmed","eric","pew","owid","loc","bjs","lii","ideas","philpapers","scielo","nces","paleo"].forEach(function(k){var d=DB[k];
+function dbcards(){var g=$("dbgrid");["scholar","openlibrary","core","pubmed","eric","pew","owid","loc","bjs","lii","ideas","philpapers","scielo","nces","paleo"].forEach(function(k){var d=DB[k];
  g.appendChild(el("div",{class:"dbcard"},[el("a",{href:d.h,target:"_blank",rel:"noopener",text:d.n}),el("p",{class:"hint",text:d.w}),el("p",{text:d.how})]));});}
 
 periods();dbcards();buildKw();render(EXAMPLE);

@@ -29,11 +29,17 @@ const check = (ok, msg) => { if (!ok) fails.push(msg); };
   // Every period, every student.
   let seen = 0;
   for (const p of [1, 2, 3, 4, 5, 6, 7, 8]) {
-    await page.click(`#periods .chip[data-p="${p}"]`);
     const roster = DATA.filter((d) => d.p === p);
     const names = page.locator("#names .name");
-    check(await names.count() === roster.length, `period ${p}: ${await names.count()} names shown, ${roster.length} in data`);
+    let counted = false;
     for (const st of roster) {
+      // A pick collapses the pickers into the desk; leave the desk to pick the next name.
+      if (!(await page.isVisible("#periods"))) await page.click("#who-not");
+      await page.click(`#periods .chip[data-p="${p}"]`);
+      if (!counted) {
+        check(await names.count() === roster.length, `period ${p}: ${await names.count()} names shown, ${roster.length} in data`);
+        counted = true;
+      }
       await page.click(`#names .name[data-id="${st.id}"]`);
       const who = await page.textContent("#guide .who");
       check(who === st.n, `${st.id}: slip shows "${who}"`);
@@ -71,6 +77,7 @@ const check = (ok, msg) => { if (!ok) fails.push(msg); };
   // Print each period: one slip per page.
   await page.evaluate(() => { window.print = () => {}; });
   for (const p of [1, 2, 3, 4, 5, 6, 7, 8]) {
+    if (!(await page.isVisible("#periods"))) await page.click("#who-not");
     await page.click(`#periods .chip[data-p="${p}"]`);
     await page.click("#printp");
     const n = DATA.filter((d) => d.p === p).length;
