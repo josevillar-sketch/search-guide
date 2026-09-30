@@ -15,11 +15,11 @@
   --mono:"Space Mono","Courier New",ui-monospace,monospace;
   color-scheme:light}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#a8883f;
+  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;
   --brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;--drop:#8f7336;--page-drop:#8f7336;
   --ins-bg:#1d4a3f;--del-bg:#4d2219;--c-who:#7fd1c0;--c-where:#e2b964;--c-when:#f08a74;--c-judge:#d9a5dc;--c-var:#9cc2ea;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#a8883f;
+  --ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;
   --brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;--drop:#8f7336;--page-drop:#8f7336;
   --ins-bg:#1d4a3f;--del-bg:#4d2219;--c-who:#7fd1c0;--c-where:#e2b964;--c-when:#f08a74;--c-judge:#d9a5dc;--c-var:#9cc2ea;color-scheme:dark}
 /* Legacy slip names, kept as aliases. --brass stays a text color; the fill is --brass-fill. */
@@ -52,7 +52,7 @@ h3{font:650 18px/24px var(--display);margin:0}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
 :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 [tabindex="-1"]:focus{outline:none}
-[tabindex="-1"]{scroll-margin-top:64px}
+html{scroll-padding-top:56px}[tabindex="-1"]{scroll-margin-top:8px}
 .skip{position:absolute;left:8px;top:8px;z-index:100;transform:translateY(-300%);background:var(--brass-fill);color:var(--on-brass-fill);border:1.5px solid #1d1812;border-radius:6px;padding:12px 16px;font:700 16px/20px var(--body);text-decoration:none}
 .skip:focus{transform:none}
 
@@ -108,7 +108,7 @@ label{font:700 16px/22px var(--body)}
 .chip[aria-pressed="true"]{background:#f3ead6;color:#1d1812}
 .chip[aria-pressed="true"] small{color:#4a3f31}
 .chip[aria-pressed="true"] svg{color:#6d4f14}
-#find{max-width:420px}
+#find{max-width:420px}#find::placeholder{color:var(--ink-soft);opacity:1}
 #names{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
 .name{font:400 17px/22px var(--body);text-align:left;background:#f3ead6;color:#1d1812;border:1.5px solid #1d1812;border-radius:6px;padding:12px 16px;min-height:48px;min-width:0;cursor:pointer;overflow-wrap:anywhere}
 .name[aria-pressed="true"]{box-shadow:inset 0 0 0 2px #245e55}
@@ -128,7 +128,7 @@ body.typing #desk-nav{position:static}
 #desk-nav a{display:flex;align-items:center;justify-content:center;gap:4px;min-width:0;height:47px;color:var(--ink);text-decoration:none;font:700 16px/20px var(--body);border-bottom:3px solid transparent;white-space:nowrap}
 #desk-nav a[aria-current="location"]{border-bottom-color:var(--ink)}
 #desk-nav .badge{padding:1px 5px;letter-spacing:0}
-#st-versions,#st-checks,#step3,#tools-build,#tools-db,#ipad,#compare,#wb-form,#vl{scroll-margin-top:64px}
+#st-versions,#st-checks,#step3,#tools-build,#tools-db,#ipad,#compare,#wb-form,#vl{scroll-margin-top:8px}
 .station{display:grid;gap:16px;min-width:0}
 .station>*{min-width:0}
 
@@ -497,14 +497,14 @@ footer .shell{display:grid;gap:12px;padding-block:16px 48px}
           <div class="field">
             <label for="wb-text">Your new version</label>
             <p class="hint" id="wb-text-help"></p>
-            <textarea id="wb-text" rows="4" maxlength="400" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-text-help wb-text-err"></textarea>
+            <textarea id="wb-text" writingsuggestions="false" rows="4" maxlength="400" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-text-help wb-text-err"></textarea>
             <p class="err" id="wb-text-err" hidden></p>
             <button type="button" id="wb-empty" class="btn-line">Empty the box</button>
           </div>
           <div class="field">
             <label for="wb-why">What I changed, and why</label>
             <p class="hint" id="wb-why-help">One sentence in your words. That line is proof of your thinking.</p>
-            <textarea id="wb-why" rows="2" maxlength="300" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-why-help wb-why-err"></textarea>
+            <textarea id="wb-why" writingsuggestions="false" rows="2" maxlength="300" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-why-help wb-why-err"></textarea>
             <p class="err" id="wb-why-err" hidden></p>
           </div>
           <div class="fnotes">
@@ -587,8 +587,8 @@ footer .shell{display:grid;gap:12px;padding-block:16px 48px}
           <div id="words" role="group" aria-label="Words in your question"></div>
           <p id="circ-slots" aria-live="polite"></p>
           <p>Then write two answers.</p>
-          <div class="field"><label for="c-expect">The answer you expect</label><textarea id="c-expect" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
-          <div class="field"><label for="c-hate">The answer you would hate to reach</label><textarea id="c-hate" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+          <div class="field"><label for="c-expect">The answer you expect</label><textarea id="c-expect" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+          <div class="field"><label for="c-hate">The answer you would hate to reach</label><textarea id="c-hate" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
           <p class="hint">Can't write the second? It is not open yet.</p>
         </section>
       </section>
@@ -602,8 +602,8 @@ footer .shell{display:grid;gap:12px;padding-block:16px 48px}
         <h2 id="tb" tabindex="-1">Changed your question? Build a new search</h2>
         <p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
         <label class="sr" for="myq">Your question</label>
-        <textarea id="myq">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
-        <div class="kw" id="kw" aria-label="Words in your search"></div>
+        <textarea id="myq" aria-describedby="bhint" autocomplete="off" autocorrect="off" writingsuggestions="false">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
+        <div class="kw" id="kw" role="group" aria-label="Words in your search"></div>
         <p class="words" id="built"></p>
         <p class="picked" id="picked"></p>
         <div class="acts" id="builtacts"></div>
@@ -769,7 +769,7 @@ function slip(st,print,view){
  else if(st.nt){qb.appendChild(el("p",{class:"q",text:"No question or topic is on record yet."}));qb.appendChild(el("p",{class:"from",text:"Start with the Pew search below: skim the report titles until one makes you curious. Then write your question in your log as your next version, with the date, and use the tool at the bottom of this page."}));}
  else{qb.appendChild(el("p",{class:"q",text:"Topic: "+st.tp}));qb.appendChild(el("p",{class:"from",text:"No question is on record in your Docs yet. Write it in your log as your next version, with the date. These searches start from your topic."}));}
  if(!st.nt)qb.appendChild(el("p",{class:"from",text:"The field that studies this: "+st.f+"."}));
- if(!isEx&&!print){var qo=el("button",{type:"button",class:"again q-open-slip","aria-controls":"wb-form",text:"My question changed"});if(READONLY)qo.disabled=true;
+ if(!isEx&&!print){var qo=el("button",{type:"button",class:"again q-open-slip","aria-controls":"wb-form",text:(loc||st.q)?"My question changed":"Save my first version"});if(READONLY)qo.disabled=true;
   qo.addEventListener("click",function(){openForm({mode:"new"});});qb.appendChild(qo);}
  var cb=el("div",{class:"block chairb"},[el("h3",{text:"The chair to fill"}),el("div",{class:"chair",html:CHAIR},[el("p",{text:st.ch})])]);
  cb.querySelector("svg").style.color="var(--brass)";
@@ -781,10 +781,10 @@ function slip(st,print,view){
  function onTap(i){last=i;note.textContent="Line 3 comes from Search "+(i+1)+", the last one you tapped.";}
  var srch=el("div",{class:"searches"});st.s.forEach(function(s,i){srch.appendChild(searchRow(s,i,onTap));});
  var sr=el("div",{class:"block srchb"},[el("h3",{text:"Your three searches"})]);
- if(loc)sr.appendChild(el("p",{class:"hint srch-note",text:"These three searches start from your topic, set on "+fMD(ASOF)+": "+st.tp+". For the words in Version "+view.n+", use Searches from Version "+view.n+" below."}));
+ if(loc)sr.appendChild(el("p",{class:"hint srch-note",text:(st.nt?"These three searches were set on "+fMD(ASOF)+", before your question was on record.":"These three searches start from your topic, set on "+fMD(ASOF)+": "+st.tp+".")+" For the words in Version "+view.n+", use Searches from Version "+view.n+" below."}));
  sr.appendChild(srch);
  var tp=el("div",{class:"block tipb"},[el("h3",{text:"Your tip"}),el("p",{class:"tip",text:st.tip})]);
- if(st.es)tp.appendChild(el("p",{class:"hint",text:"Puedes buscar en español en SciELO y en Google Scholar. Si la fuente está en español, escribe el título traducido entre corchetes en tu log."}));
+ if(st.es)tp.appendChild(el("p",{class:"hint",lang:"es",text:"Puedes buscar en español en SciELO y en Google Scholar. Si la fuente está en español, escribe el título traducido entre corchetes en tu log."}));
  var line5=st.c==="R"?"Method it used (none stated? write that)":"Perspective it holds: a point of view, with a reason";
  var lcp=el("button",{type:"button",class:"copy",text:"Copy log lines"});
  lcp.addEventListener("click",function(){copyLog(lcp,logLines(st,st.s[last]));});
@@ -816,7 +816,7 @@ function initial(st){var w=st.n.trim().split(/\s+/);return w[w.length-1].charAt(
 function welcome(){var id=stored();var hit=id&&DATA.filter(function(d){return d.id===id;})[0];var box=$("back");if(!hit){box.hidden=true;return;}
  box.innerHTML="";var f=first(hit);
  var open=el("button",{type:"button",class:"go",text:"Open my desk"});open.addEventListener("click",function(){box.hidden=true;pickPeriod(hit.p,true);pickStudent(hit);});
- var no=el("button",{type:"button",class:"again",text:"Not "+f+"?"});no.addEventListener("click",function(){store(null);box.hidden=true;});
+ var no=el("button",{type:"button",class:"again",text:"Not "+f+"?"});no.addEventListener("click",function(){store(null);box.hidden=true;var h=$("step1").querySelector("h2");if(h)h.focus();});
  box.appendChild(el("p",{text:"Welcome back, "+f+". Your desk is on this iPad."}));box.appendChild(open);box.appendChild(no);box.hidden=false;}
 
 var curP=null;
@@ -891,7 +891,7 @@ var WB={load:function(st){
   if(o&&(typeof o.schema!=="number"||o.schema!==o.schema))o=null;
   while(o&&o.schema<1&&MIGRATE[o.schema])o=MIGRATE[o.schema](o);
   if(o&&o.schema<1)o=null;
-  if(!o){try{localStorage.setItem("r63sg_bad_"+st.id+"_"+Date.now(),raw);}catch(e){}NOTICE="bad";}
+  if(!o){try{localStorage.setItem("r63sg_bad_"+st.id+"_"+Date.now(),raw);localStorage.removeItem(wbKey(st.id));}catch(e){}NOTICE="bad";}
   else{had=true;if(o.schema>1){READONLY=true;NOTICE="newer";}}
  }
  R=o?cleanRec(o,st):freshRec(st);
@@ -903,7 +903,7 @@ function storeOff(quiet){STORE.ok=false;$("store-banner").hidden=false;syncAlert
 function recCheck(st,had){var dq=st.q||"";if(R.rec.q===dq)return;
  if(!R.versions.length){R.rec={q:dq,asof:ASOF,leads:false,sheet:freshSheet()};if(had)put(true);return;}
  var md="";R.versions.forEach(function(v){if(v.date>md)md=v.date;});
- if(ASOF>md&&!READONLY){ASK=true;return;}
+ if(ASOF>md&&!READONLY){ASK=true;R.rec.leads=false;R.rec.sheet=freshSheet();return;}
  R.rec={q:dq,asof:ASOF,leads:false,sheet:freshSheet()};if(had)put(true);}
 
 function topV(){var v=null;if(R)R.versions.forEach(function(x){if(!v||x.n>v.n)v=x;});return v;}
@@ -912,7 +912,7 @@ function findK(k){var v=null;if(R)R.versions.forEach(function(x){if(x.k===k)v=x;
 function lead(){var v=topV();if(!R||R.rec.leads||!v)return {rec:true,v:null,text:(CUR&&CUR.q)||"",sheet:R?R.rec.sheet:freshSheet()};return {rec:false,v:v,text:v.text,sheet:v.sheet};}
 function vlV(){if(TEMP)return TEMP;var v=VLK&&findK(VLK);return v||topV();}
 function dotsLine(d){var on=[];d.forEach(function(x,i){if(x)on.push(i+1);});return "Dots: "+on.length+" of 7 filled"+(on.length?" ("+on.join(", ")+")":"");}
-function vlText(v){return ["Version "+v.n+" · Date "+fLong(v.date)+": "+v.text,"My last version said: "+(v.prev||"none. This is my first."),"What I changed, and why: "+v.why,dotsLine(v.sheet.dots)].join("\n");}
+function vlText(v){return ["Version "+v.n+" · Date "+fLong(v.date)+": "+v.text,"My last version said: "+(v.prev||(v.n===1?"none. This is my first.":"")),"What I changed, and why: "+v.why,dotsLine(v.sheet.dots)].join("\n");}
 function miniDots(d,cls){var s=el("span",{class:"mini"+(cls?" "+cls:""),"aria-hidden":"true"});d.forEach(function(x){s.appendChild(el("i",x?{class:"on"}:null));});return s;}
 
 /* ---------- Rendering ---------- */
@@ -922,7 +922,7 @@ function renderWho(){var w=$("who");w.innerHTML="";var f=first(CUR);
  w.appendChild(el("span",{class:"seal",html:SVG_SEAL}));
  w.appendChild(el("div",{class:"who-id"},[el("span",{id:"who-name",text:f+" "+initial(CUR)+"."}),el("span",{id:"who-meta",class:"lbl",text:"P"+CUR.p+" · "+PER[CUR.p].toUpperCase()})]));
  var done=el("button",{type:"button",id:"who-done",class:"btn-line",text:"Done on this iPad"}),not=el("button",{type:"button",id:"who-not",class:"btn-line",text:"Not "+f+"?"});
- done.addEventListener("click",function(){leaveDesk();say("Done. Your versions stay on this iPad under your name.");});
+ done.addEventListener("click",function(){var ok=STORE.ok;leaveDesk();say(ok?"Done. Your versions stay on this iPad under your name.":"Done. This iPad was not saving, so nothing stayed here. Your log has your versions.");});
  not.addEventListener("click",leaveDesk);
  w.appendChild(el("div",{class:"who-acts"},[done,not]));}
 function syncAlerts(){$("desk-alerts").hidden=["store-banner","wb-notice","rec-ask"].every(function(id){return $(id).hidden;});}
@@ -965,12 +965,12 @@ function recLi(isNew){var sm=el("summary",null,[el("span",{class:"recmark","aria
 function renderNav(){var nw=lead(),vb=$("nav-v-badge");if(nw.v){vb.hidden=false;vb.textContent="V"+nw.v.n;}else{vb.hidden=true;vb.textContent="";}
  var cb=$("nav-c-badge"),c=cnt(nw.sheet.dots);cb.hidden=!nw.text;cb.textContent=c+"/7";txt("nav-c-sr",nw.text?", "+c+" of 7 filled":"");}
 function renderVersions(){$("q-empty").hidden=!(R.versions.length===0&&$("wb-form").hidden);$("q-open-2").disabled=READONLY;
- txt("q-open-2",lead().text?"My question changed":"Save my first version");renderVL();renderCompare();}
+ txt("q-open-2",lead().text?"My question changed":"Save my first version");var qe=$("q-empty").querySelector("p");if(qe)qe.textContent=lead().text?"Nothing is saved on this iPad yet. When your question changes in your log, tap My question changed.":"Nothing is saved on this iPad yet. When your first version is in your log, tap Save my first version.";renderVL();renderCompare();}
 function renderVL(){var v=vlV(),on=!!v&&(!!TEMP||!R.rec.leads);$("vl").hidden=!on;$("vl-next").hidden=!on;
  if(!on){$("vl-text").innerHTML="";$("vl-dots").innerHTML="";return;}
  var box=$("vl-text");box.innerHTML="";
  box.appendChild(el("p",{"data-line":"1"},["Version "+v.n+" · Date "+fLong(v.date)+": ",el("span",{class:"vl-q",text:v.text})]));
- box.appendChild(el("p",{"data-line":"2",text:"My last version said: "+(v.prev||"none. This is my first.")}));
+ box.appendChild(el("p",{"data-line":"2",text:"My last version said: "+(v.prev||(v.n===1?"none. This is my first.":"(copy it from your log)"))}));
  box.appendChild(el("p",{"data-line":"3",text:"What I changed, and why: "+v.why}));
  var dd=$("vl-dots");dd.innerHTML="";var vis=el("div",{class:"row","aria-hidden":"true"});
  v.sheet.dots.forEach(function(x,i){vis.appendChild(el("span",{class:"ld",html:'<svg width="28" height="28" viewBox="0 0 28 28" focusable="false"><circle cx="14" cy="14" r="13" fill="'+(x?"#1d1812":"none")+'" stroke="#1d1812" stroke-width="2"/></svg>'},[el("span",{text:String(i+1)})]));});
@@ -978,7 +978,7 @@ function renderVL(){var v=vlV(),on=!!v&&(!!TEMP||!R.rec.leads);$("vl").hidden=!o
  var pen=$("vl-penned");pen.checked=!!v.penned;pen.disabled=READONLY||!!TEMP;
  var st=$("vl-stamp");st.textContent=v.penned?"IN YOUR LOG":"NOT IN YOUR LOG YET";st.className="stamp"+(v.penned?" in":"");
  var can=!READONLY&&!TEMP&&!v.penned&&v===topV();$("vl-fix").hidden=!can;if(!can)$("vl-remove-confirm").hidden=true;
- txt("vl-remove-q","Remove Version "+v.n+" from this iPad? It is not in your log yet.");txt("next-search","Search with Version "+v.n);}
+ txt("vl-remove-q","Remove Version "+v.n+" from this iPad? It is not in your log yet.");var nw=lead();txt("next-search",nw.v?"Search with Version "+nw.v.n:"Search with your question on record");}
 function cmpItems(){var a=[];if(CUR.q)a.push({key:"rec",label:"On record · "+fShort(ASOF),text:CUR.q});
  R.versions.slice().sort(function(x,y){return x.n-y.n;}).forEach(function(v){a.push({key:String(v.n),label:"Version "+v.n+" · "+fShort(v.date),text:v.text,n:v.n});});return a;}
 function beforeKey(toK){var items=cmpItems();if(items.length<2)return null;
@@ -1031,7 +1031,7 @@ function buildChecks(){var c=CUR.c,ol=$("checks");ol.innerHTML="";
  var ps=$("pen-set");ps.innerHTML="";PENS[c].forEach(function(p,i){var inp=el("input",{type:"radio",name:"pen",value:p[0]});if(i===0)inp.checked=true;
   ps.appendChild(el("label",{class:"rchip pen-"+p[0]},[inp,el("span",{html:SVG_CHECK},[p[1]])]));});}
 function disclose(btn,panel){var open=btn.getAttribute("aria-expanded")!=="true";btn.setAttribute("aria-expanded",String(open));panel.hidden=!open;}
-function tapDot(k){if(READONLY||!CUR)return;var nw=lead();if(!nw.text)return;var d=nw.sheet.dots;d[k-1]=d[k-1]?0:1;CKNEW=false;put();renderDots();}
+function tapDot(k){if(READONLY||!CUR)return;flushAns();var nw=lead();if(!nw.text)return;var d=nw.sheet.dots;d[k-1]=d[k-1]?0:1;CKNEW=false;put();renderDots();}
 function setLens(key,on){if(READONLY)return;var s=lead().sheet,i=s.lenses.indexOf(key);if(on&&i<0)s.lenses.push(key);if(!on&&i>-1)s.lenses.splice(i,1);put();}
 function setPurpose(key){if(READONLY)return;lead().sheet.purpose=key;put();}
 function renderChecks(){var nw=lead(),has=!!nw.text,c=cnt(nw.sheet.dots);
@@ -1069,7 +1069,7 @@ function renderCircle(focusI){var nw=lead(),w=$("words"),tk=toks(nw.text),map={}
  document.querySelectorAll('input[name="pen"]').forEach(function(x){x.disabled=READONLY;});
  ["expect","hate"].forEach(function(f){var ta=$("c-"+f);ta.readOnly=READONLY;if(document.activeElement!==ta)ta.value=nw.sheet[f]||"";});
  if(focusI!=null){var fb=w.querySelector('[data-i="'+focusI+'"]');if(fb)fb.focus();}}
-function tapWord(i){if(READONLY||!CUR)return;var c=lead().sheet.circles,p=pen(),ix=-1;c.forEach(function(x,j){if(x[0]===i)ix=j;});
+function tapWord(i){if(READONLY||!CUR)return;flushAns();var c=lead().sheet.circles,p=pen(),ix=-1;c.forEach(function(x,j){if(x[0]===i)ix=j;});
  if(ix>-1&&c[ix][1]===p)c.splice(ix,1);else if(ix>-1)c[ix][1]=p;else c.push([i,p]);ROV=i;put();renderCircle(i);renderNotes();}
 function roveKey(e,i,n){var j=null;if(e.key==="ArrowRight")j=Math.min(n-1,i+1);else if(e.key==="ArrowLeft")j=Math.max(0,i-1);else if(e.key==="Home")j=0;else if(e.key==="End")j=n-1;
  if(j===null)return;e.preventDefault();ROV=j;var ws=$("words").querySelectorAll(".w");ws.forEach(function(b,x){b.tabIndex=x===j?0:-1;});ws[j].focus();}
@@ -1100,7 +1100,7 @@ function reasonFix(){var v=reasonVal(),line=$("wb-reason-line"),r=REASONS.filter
 function nVal(){var s=$("wb-n").value.trim();return (/^\d{1,2}$/.test(s)&&+s>=1&&+s<=99)?+s:0;}
 function defN(){var t=topV();return t?Math.min(99,t.n+1):(CUR.q?2:1);}
 function otherTop(){var v=null;R.versions.forEach(function(x){if(x.k!==FORM.k&&(!v||x.n>v.n))v=x;});return v;}
-function prevFor(n,skip){var best=null;R.versions.forEach(function(v){if(v.k!==skip&&v.n<n&&(!best||v.n>best.n))best=v;});return best?best.text:(R.rec.q||"");}
+function prevFor(n,skip){if(R.rec.leads&&R.rec.q&&!R.versions.some(function(v){return v.k!==skip&&v.n>=n;}))return R.rec.q;var best=null;R.versions.forEach(function(v){if(v.k!==skip&&v.n<n&&(!best||v.n>best.n))best=v;});return best?best.text:(R.rec.q||"");}
 function qOpenState(open){var b=$("q-open");b.setAttribute("aria-expanded",String(open));b.classList.toggle("is-open",open);}
 function saveLabel(){if(!CUR||!R)return;var b=$("wb-save"),n=nVal();
  if(!STORE.ok||(FORM.mode!=="edit"&&R.versions.length>=CAP))b.textContent="Show my version line";
@@ -1109,6 +1109,7 @@ function saveLabel(){if(!CUR||!R)return;var b=$("wb-save"),n=nVal();
 function nInfo(){var n=nVal(),t=otherTop(),p=$("wb-n-info");if(n&&t&&n<t.n){p.textContent="Version "+n+" comes before your newest, Version "+t.n+". It will be saved behind it.";p.hidden=false;}else{p.textContent="";p.hidden=true;}}
 function openForm(o){if(!CUR||READONLY)return;o=o||{};var f=$("wb-form"),mode=o.mode==="edit"?"edit":"new";
  if(!f.hidden&&FORM.mode===mode&&mode==="new"){if(o.reason)setReason(o.reason,o.rc);draftLater();goForm();return;}
+ if(!f.hidden&&FORM.mode==="edit"&&(mode==="edit"||snap()!==FORM.start)){if(mode==="edit")goForm();else{$("wb-confirm").hidden=false;$("wb-confirm-keep").focus();}return;}
  flushDraft();clearErrs();$("wb-confirm").hidden=true;FORM.mode=mode;FORM.k=null;
  var base=lead().text,t,w,rs="",rc=0,n,d,note="";
  if(mode==="edit"){var v=topV();if(!v){FORM.mode=null;return;}FORM.k=v.k;t=v.text;w=v.why;rs=v.reason;rc=v.rc;n=String(v.n);d=v.date;
@@ -1144,14 +1145,14 @@ function validate(){clearErrs();var v=fv(),n=nVal(),bad=[];
  if(!pd(v.date)||v.date<"2026-08-01"||v.date>"2027-07-31")bad.push(["wb-date","Use the date on your log line."]);
  bad.forEach(function(b){showErr(b[0],b[1]);});if(bad.length){$(bad[0][0]).focus();return false;}return true;}
 function afterSave(msg){closeForm();renderAll();setBuilder();savedMoment();$("vl-h").focus();say(msg);}
-function saveForm(){if(!CUR||READONLY||!FORM.mode)return;if(!validate())return;clearTimeout(FORM.dt);FORM.dt=0;
+function saveForm(){if(!CUR||READONLY||!FORM.mode)return;flushAns();if(!validate())return;clearTimeout(FORM.dt);FORM.dt=0;
  var v=fv(),n=nVal(),text=v.text.trim().replace(/\s+/g," "),why=v.why.trim(),reason=v.reason,rc=reason==="check"?(v.rc||0):0,ok;
- if(FORM.mode==="edit"){var x=findK(FORM.k);if(!x){closeForm();return;}var changed=x.text!==text;
+ if(FORM.mode==="edit"){var x=findK(FORM.k);if(!x||x.penned){closeForm();renderAll();say("This version is in your log now, so it cannot change here.");return;}var changed=x.text!==text;
   x.n=n;x.date=v.date;x.text=text;x.why=why;x.reason=reason;x.rc=rc;x.prev=prevFor(n,x.k);x.saved=Date.now();if(changed)x.sheet.circles=[];
   ok=put(true);VLK=x.k;TEMP=null;CMPRESET=true;afterSave(ok?"Version "+n+" fixed on this iPad.":TXT.notSaved);return;}
  var nv={k:newK(),n:n,date:v.date,text:text,prev:prevFor(n,null),why:why,reason:reason,rc:rc,saved:Date.now(),penned:false,sheet:freshSheet()};
  if(R.versions.length>=CAP){TEMP=nv;afterSave("This iPad holds 40 versions for you, so it did not keep this one. Write the version line in your log now.");return;}
- R.versions.push(nv);R.rec.leads=false;R.draft=null;ok=put(true);VLK=nv.k;TEMP=null;CKNEW=true;CMPRESET=true;
+ R.versions.push(nv);R.rec.leads=false;R.draft=null;ok=put(true);VLK=nv.k;TEMP=null;CKNEW=topV()===nv;CMPRESET=true;
  afterSave(ok?"Saved on this iPad as Version "+n+". Now write it in your log, in pen.":TXT.notSaved);}
 function savedMoment(){if(!motionOK())return;var d=$("desk");d.classList.remove("just-saved");void d.offsetWidth;d.classList.add("just-saved");clearTimeout(savedMoment.t);savedMoment.t=setTimeout(function(){d.classList.remove("just-saved");},600);}
 
@@ -1161,7 +1162,7 @@ $("wb-n").addEventListener("input",function(){if(!$("wb-n-err").hidden)clearErr(
 $("wb-date").addEventListener("input",function(){if(!$("wb-date-err").hidden)clearErr("wb-date");draftLater();});
 $("wb-date").addEventListener("change",draftLater);
 $("wb-check").addEventListener("change",function(){reasonFix();draftLater();});
-function stepN(d){var n=nVal()||(d>0?0:defN()+1);n=Math.max(1,Math.min(99,n+d));$("wb-n").value=String(n);clearErr("wb-n");saveLabel();nInfo();draftLater();}
+function stepN(d){var n=nVal();n=n?Math.max(1,Math.min(99,n+d)):defN();$("wb-n").value=String(n);clearErr("wb-n");saveLabel();nInfo();draftLater();}
 $("wb-n-minus").addEventListener("click",function(){stepN(-1);});
 $("wb-n-plus").addEventListener("click",function(){stepN(1);});
 $("wb-empty").addEventListener("click",function(){var ta=$("wb-text");ta.value="";ta.focus();draftLater();});
@@ -1174,7 +1175,7 @@ $("q-open-2").addEventListener("click",function(){openForm({mode:"new"});});
 $("vl-edit").addEventListener("click",function(){openForm({mode:"edit"});});
 $("vl-remove").addEventListener("click",function(){$("vl-remove-confirm").hidden=false;$("vl-remove-no").focus();});
 $("vl-remove-no").addEventListener("click",function(){$("vl-remove-confirm").hidden=true;$("vl-remove").focus();});
-$("vl-remove-yes").addEventListener("click",function(){var v=vlV();if(!v||READONLY||v.penned||v!==topV())return;
+$("vl-remove-yes").addEventListener("click",function(){var v=vlV();if(!v||READONLY||v.penned||v!==topV())return;flushAns();
  R.versions=R.versions.filter(function(x){return x!==v;});put();VLK=null;TEMP=null;CKNEW=false;CMPRESET=true;$("vl-remove-confirm").hidden=true;
  if(!$("wb-form").hidden&&FORM.mode==="edit")closeForm();
  renderAll();setBuilder();$("ficha-h").focus();say("Version "+v.n+" removed from this iPad.");});
@@ -1188,7 +1189,7 @@ $("cmp-from").addEventListener("change",diffOut);
 $("cmp-to").addEventListener("change",diffOut);
 $("rec-ask-record").addEventListener("click",function(){recChoose(true);});
 $("rec-ask-mine").addEventListener("click",function(){recChoose(false);});
-function recChoose(leads){if(!CUR)return;R.rec={q:CUR.q||"",asof:ASOF,leads:leads,sheet:freshSheet()};ASK=false;put();CMPRESET=true;VLK=null;renderAll();setBuilder();$("ficha-h").focus();}
+function recChoose(leads){if(!CUR)return;flushAns();R.rec={q:CUR.q||"",asof:ASOF,leads:leads,sheet:freshSheet()};ASK=false;put();CMPRESET=true;VLK=null;renderAll();setBuilder();$("ficha-h").focus();}
 $("ipad-copyall").addEventListener("click",function(){if(!CUR)return;var b=this,t=allText(),ta=$("ipad-backup");
  function ok(){b.textContent="Copied. Paste it somewhere safe.";clearTimeout(b._t);b._t=setTimeout(function(){b.textContent="Copy all my versions";},2500);}
  function bad(){ta.value=t;ta.hidden=false;ta.focus();ta.select();b.textContent="Copy did not work. The text is selected below.";}
@@ -1218,8 +1219,8 @@ if("IntersectionObserver" in window){var NAVS={"st-versions":"nav-versions","st-
  Object.keys(NAVS).forEach(function(k){io.observe($(k));});}
 $("skip").addEventListener("click",function(e){e.preventDefault();var t=CUR?$("ficha-h"):$("step1").querySelector("h2");t.focus();});
 function skipTo(q){var s=$("skip");s.textContent=q?"Skip to your question":"Skip to your period";s.setAttribute("href",q?"#ficha-h":"#pick");}
-window.addEventListener("storage",function(e){if(!CUR||e.key!==wbKey(CUR.id))return;var formOpen=!$("wb-form").hidden;WB.load(CUR);
- if(!formOpen)closeForm();renderAll();if(!formOpen)setBuilder();});
+window.addEventListener("storage",function(e){if(!CUR||e.key!==wbKey(CUR.id))return;var formOpen=!$("wb-form").hidden,was=lead().text;WB.load(CUR);flushAns();
+ if(!formOpen)closeForm();renderAll();if(!formOpen&&lead().text!==was)setBuilder();});
 
 function teardown(){flushDraft();flushAns();closeForm();}
 function wipe(){["who","timeline","vl-text","vl-dots","cmp-out","cmp-from","cmp-to","checks","notes-list","words","pen-set","nextdate","wb-reason-set","wb-check"].forEach(function(id){$(id).innerHTML="";});
@@ -1228,7 +1229,7 @@ function wipe(){["who","timeline","vl-text","vl-dots","cmp-out","cmp-from","cmp-
  ["wb-text","wb-why","c-expect","c-hate","ipad-backup","wb-n","wb-date"].forEach(function(id){$(id).value="";});
  ["vl","vl-next","compare","ipad-backup","ipad-remove-confirm","vl-remove-confirm","store-banner","wb-notice","rec-ask","desk-alerts"].forEach(function(id){$(id).hidden=true;});
  $("guide").innerHTML="";}
-function pickStudent(d){if(CUR)teardown();
+function pickStudent(d){if(CUR){teardown();wipe();}var ae=document.activeElement;if(ae&&ae!==document.body&&ae.blur)ae.blur();$("c-expect").value="";$("c-hate").value="";
  document.querySelectorAll("#names .name").forEach(function(n){n.setAttribute("aria-pressed",String(n.getAttribute("data-id")===d.id));});
  CUR=d;VLK=null;TEMP=null;CKNEW=false;ROV=0;CMPRESET=true;
  WB.load(d);
