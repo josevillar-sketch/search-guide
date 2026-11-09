@@ -27,6 +27,16 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 - **Cautions:** Remove UC Berkeley branding, the CPHS protocol number, and Berkeley contacts. A form must never suggest Berkeley approved a study. The school's own review route decides; these are models only.
 - **Checked:** 2026-11-09
 
+## Background reading (not citable in the paper)
+
+### Litmaps: "Types of research methods"
+
+- **Link:** https://www.litmaps.com/articles/types-of-research-methods
+- **What it is:** A free blog article by Mina Zarei, dated 2025-04-29, on the Litmaps company site. It sorts methods into qualitative, quantitative, and mixed methods, gives each technique's best use, advantages, limits, and a made-up example, then a five-step checklist for choosing a method.
+- **AP Research use:** A plain-language first overview before students choose a method. Good for a mini-lesson or a sort activity.
+- **Cautions:** It cites no sources and is company marketing, so students must not cite it to justify a method in the paper. They cite a methods text instead. The page's table of contents is broken.
+- **Checked:** 2026-11-09
+
 ## Pending: not yet verified
 
 Not for students until opened and checked, and until the access route is confirmed.
