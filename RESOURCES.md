@@ -37,6 +37,7 @@ Not for students until opened and checked, and until the access route is confirm
 - **What it is:** A subscription library on how to do research: method guides, case studies of real projects, datasets for practice, and videos. Its Project Planner and Methods Map walk a researcher from question to method.
 - **Likely AP Research use:** Choosing and justifying a method, and writing the method section with scholarly support.
 - **Blocker:** The site redirects to a SAGE sign-in. Access needs an institutional login (school, college, or public library). The Room 63 student access route is unknown.
+- **Public pieces (no login):** Sage's guide to the database, https://sagepub.libguides.com/research-methods, lists its collections and the most popular methods. The Sage Research Methods Community blog, https://researchmethodscommunity.sagepub.com/, is also public. Every link into the database itself, including the Methods Map, goes to the sign-in page.
 - **Access checks, 2026-11-09:**
   - Miami Dade College: not in its database list. MDC carries three other Sage products: Sage Journals, Sage Skills: Student Success, and Sage Skills: Business.
   - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk.
