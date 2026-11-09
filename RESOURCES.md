@@ -45,6 +45,14 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 - **Cautions:** No sources, so not citable. Its examples, such as 300 surveyed students, are larger than most AP Research samples. "Paradigm" may need a short explanation. The step 5 split is slightly off: triangulation belongs to both kinds of research, not only quantitative.
 - **Checked:** 2026-11-09
 
+### Sticky-note planning grid: "Choosing the research methods and planning the measurement"
+
+- **Source:** An image shared by Mr. Portela on 2026-11-09; creator and web address unknown. It looks like it comes from a program-evaluation guide.
+- **What it is:** A grid that plans two methods side by side, a feedback questionnaire and one-to-one interviews. Each is planned by Why, What, When, Who, and After gathering data.
+- **AP Research use:** A blank version makes a strong method-planning template. It shows how to justify each method, as in "interviews over focus groups because the questions are personal," and how a mixed design connects: interviews explain the survey numbers.
+- **Cautions:** Its example studies bullying victims, a sensitive topic with minors. That needs administrator approval under the ethics review packet and is a poor model for students. Its 3-month and 6-month follow-ups don't fit the AP Research calendar. Not citable.
+- **Checked:** 2026-11-09
+
 ## Pending: not yet verified
 
 Not for students until opened and checked, and until the access route is confirmed.
