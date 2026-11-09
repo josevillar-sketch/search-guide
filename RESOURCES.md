@@ -27,6 +27,18 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 - **Cautions:** Remove UC Berkeley branding, the CPHS protocol number, and Berkeley contacts. A form must never suggest Berkeley approved a study. The school's own review route decides; these are models only.
 - **Checked:** 2026-11-09
 
+## Pending: not yet verified
+
+Not for students until opened and checked, and until the access route is confirmed.
+
+### SAGE Research Methods
+
+- **Link:** https://methods.sagepub.com/
+- **What it is:** A subscription library on how to do research: method guides, case studies of real projects, datasets for practice, and videos. Its Project Planner and Methods Map walk a researcher from question to method.
+- **Likely AP Research use:** Choosing and justifying a method, and writing the method section with scholarly support.
+- **Blocker:** The site redirects to a SAGE sign-in. Access needs an institutional login (school, college, or public library). The Room 63 student access route is unknown.
+- **Noted:** 2026-11-09 (sign-in wall; content not opened)
+
 ## To add
 
 New resources go here once opened and checked.
