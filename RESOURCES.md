@@ -37,6 +37,14 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 - **Cautions:** It cites no sources and is company marketing, so students must not cite it to justify a method in the paper. They cite a methods text instead. The page's table of contents is broken.
 - **Checked:** 2026-11-09
 
+### ResearchRabbit infographic: "How to Write a Research Methodology Section"
+
+- **Source:** An image from ResearchRabbit, a literature-mapping tool. Shared by Mr. Portela on 2026-11-09; original web address not recorded.
+- **What it is:** Six steps: restate the problem, choose a paradigm (positivist, interpretivist, pragmatic), describe the methods, justify the choices, address reliability and validity, and acknowledge limitations. Each step has a one-line example.
+- **AP Research use:** A one-page checklist for drafting and peer-reviewing the method section. Step 4, "justify your choices," matches what the rubric rewards most.
+- **Cautions:** No sources, so not citable. Its examples, such as 300 surveyed students, are larger than most AP Research samples. "Paradigm" may need a short explanation. The step 5 split is slightly off: triangulation belongs to both kinds of research, not only quantitative.
+- **Checked:** 2026-11-09
+
 ## Pending: not yet verified
 
 Not for students until opened and checked, and until the access route is confirmed.
