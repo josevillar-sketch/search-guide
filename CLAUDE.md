@@ -50,6 +50,7 @@ All four are teacher-only and hold student names. Read them in Drive when needed
 | `index.html` | The search guide page. Student data lives in the `DATA` array. |
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
+| `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
 | `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests). |
 
 ## Before pushing changes to `index.html`
