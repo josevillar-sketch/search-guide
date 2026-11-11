@@ -24,10 +24,10 @@ Folder names only. Student records stay in Drive and never come into this repo.
 |---|---|
 | AP Capstone at Mater Academy - School Year 26 / 27 | Course home for the year |
 | Room 63 Project Archive | Documents rotated out of the claude.ai project "AP RESEARCH & AP SEMINAR: AP CAPSTONE PROGRAM"; see its "Project Archive Index" sheet |
-| ChatGPT (school Drive) | ChatGPT-era work, recovered work histories, and private student backups |
+| ChatGPT (school Drive and personal Drive) | Folders that connect to ChatGPT. The school one is the most active: recovered work histories, guest-lab and book-fair files, and private student backups |
 | Room 63 Claude Handoff, and other "... Claude Handoff" folders | Handoff notes between Claude sessions |
 | Room 63 — Approved learning resources — 2026-10-25 | Guest speaker cards |
-| Room 63 — Grading working records and recovery — Private | Teacher-only grading records |
+| Room 63 — Grading working records and recovery — Private | Teacher-only grading records. Active in November 2026: each Claude or Cowork chat saves a backup subfolder here named "[Topic] Chat Backup - [date] - Portela J" |
 
 The claude.ai project also keeps a "Where It Lives" register; it is the fuller map.
 
