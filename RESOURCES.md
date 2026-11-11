@@ -16,6 +16,32 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 - **Cautions:** The interface is dated; use the SDA YouTube tutorials. Variable names are cryptic, so students read the codebook first. Created variables sit in a shared workspace, so name them distinctively.
 - **Checked:** 2026-11-09
 
+### Pew Research Center datasets
+
+- **Link:** https://www.pewresearch.org/datasets/
+- **What it is:** Pew's raw survey data, released some time after each report: American Trends Panel waves, global attitudes surveys, the Religious Landscape Study, and more.
+- **AP Research use:** A secondary-data path like SDA, with no human participants. Students can pair a Pew report, as a source, with its raw data, as their own analysis.
+- **Cautions:** Downloads need a free Pew account. Check Pew's terms for users under 18 before students sign up; a teacher account may be the route. Files come in SPSS format, which needs converting for Sheets.
+- **Checked:** 2026-11-11
+
+### Google Dataset Search
+
+- **Link:** https://datasetsearch.research.google.com/
+- **What it is:** A Google search engine for datasets across the web. Searching works without signing in.
+- **AP Research use:** Finding whether data on a topic already exists, before choosing between collecting data and using public data.
+- **Cautions:** It finds data; it doesn't vouch for it. Students judge each dataset's source, sample, and date like any other source.
+- **Checked:** 2026-11-11
+
+## Methods texts (free and citable)
+
+### Bhattacherjee, *Social Science Research: Principles, Methods, and Practices* (2012)
+
+- **Link:** https://digitalcommons.usf.edu/oa_textbooks/3/
+- **What it is:** A free open textbook from the University of South Florida covering the whole research process. License: CC BY-NC-SA 3.0. The full PDF downloads without a login.
+- **AP Research use:** A citable methods text for justifying a method in the academic paper. It is the free stand-in for SAGE Research Methods.
+- **Cautions:** Written for graduate students, so it reads densely; assign chapters, not the book. Dated 2012, so pair it with newer sources on online surveys.
+- **Checked:** 2026-11-11
+
 ## Ethics and consent
 
 ### UC Berkeley CPHS informed consent templates
@@ -56,6 +82,11 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 ## Pending: not yet verified
 
 Not for students until opened and checked, and until the access route is confirmed.
+
+### Blocked by a bot check (open in a normal browser to verify)
+
+- **BCcampus open textbook on research methods:** https://opentextbc.ca/researchmethods/ . Likely a free, citable methods text.
+- **ICPSR, the Inter-university Consortium for Political and Social Research:** https://www.icpsr.umich.edu/ . A large social science data archive; some data needs a member login.
 
 ### SAGE Research Methods
 
