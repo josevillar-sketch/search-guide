@@ -4,6 +4,15 @@ Tools and datasets checked by opening them, for Room 63 AP Capstone. Students ge
 
 Each entry: what it is, the AP Research use, cautions, and the date it was checked.
 
+## Official College Board (start here)
+
+These outrank every other entry: they define what AP Research is scored on. All free, checked 2026-11-11.
+
+- **AP Research Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf . The course framework and rubrics. Check the clarifications and corrections file beside it: https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description-clarifications.pdf
+- **Scored student samples, 2023 to 2026:** https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions . Real academic papers and presentations with scoring commentary and score distributions. The best model of what a strong method section looks like.
+- **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . Includes the school's responsibilities for review of research with human participants.
+- **Guidance for AI tools:** https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools . What students may and may not use AI for. Read it before recommending any AI-based tool, such as Litmaps or ResearchRabbit.
+
 ## Data
 
 ### SDA: Survey Documentation and Analysis (UC Berkeley)
