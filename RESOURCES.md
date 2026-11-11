@@ -42,21 +42,21 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Cautions:** It finds data; it doesn't vouch for it. Students judge each dataset's source, sample, and date like any other source.
 - **Checked:** 2026-11-11
 
-### IPUMS USA (proposed 2026-11-11, awaiting Mr. Portela's review)
+### IPUMS USA
 
 - **Link:** https://usa.ipums.org/usa/
 - **What it is:** U.S. census microdata from the University of Minnesota, made consistent across years: censuses from 1790 to 2010 and the American Community Survey from 2000 on. The site says data and services are free of charge.
 - **AP Research use:** Public data on households, work, language, and migration, down to local areas. A no-participants path like SDA.
 - **Cautions:** Registration and its age terms were not confirmed in this check; confirm before sending students. Extracts are large and technical. SDA's census files are the easier start.
-- **Checked:** 2026-11-11 (home page only)
+- **Checked:** 2026-11-11 (home page only). Approved by Mr. Portela 2026-11-11, with the cautions above.
 
-### CDC WONDER (proposed 2026-11-11, awaiting Mr. Portela's review)
+### CDC WONDER
 
 - **Link:** https://wonder.cdc.gov/
 - **What it is:** The Centers for Disease Control and Prevention's query system for public health data: births, deaths, cancer, environment, population, and more.
 - **AP Research use:** Counts and rates for health topics, by year, place, age, and sex. Public data, no participants.
 - **Cautions:** Whether any dataset needs a login was not confirmed. Small counts are suppressed, so local questions may return blanks. Students must record the exact query they ran.
-- **Checked:** 2026-11-11 (home page only)
+- **Checked:** 2026-11-11 (home page only). Approved by Mr. Portela 2026-11-11, with the cautions above.
 
 ## Methods texts (free and citable)
 
@@ -68,17 +68,17 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Cautions:** Written for graduate students, so it reads densely; assign chapters, not the book. Dated 2012, so pair it with newer sources on online surveys.
 - **Checked:** 2026-11-11
 
-### OpenIntro Statistics (proposed 2026-11-11, awaiting Mr. Portela's review)
+### OpenIntro Statistics
 
 - **Link:** https://www.openintro.org/book/os/
 - **What it is:** A free introductory statistics textbook. The PDF downloads free, with an optional contribution. The publisher recommends it for college courses and self-study.
 - **AP Research use:** A citable reference when a student reports a mean, a comparison, or a correlation and must explain the test.
 - **Cautions:** Edition, authors, and license were not shown on the page checked (the download name suggests a 4th edition); confirm before citing. College level, so assign sections.
-- **Checked:** 2026-11-11
+- **Checked:** 2026-11-11. Approved by Mr. Portela 2026-11-11, with the cautions above.
 
-## Free tools (proposed 2026-11-11, awaiting Mr. Portela's review)
+## Free tools
 
-Read College Board's AI guidance first. None of these three uses AI to write or analyze for the student.
+Approved by Mr. Portela on 2026-11-11, with the cautions below. Read College Board's AI guidance first. None of these three uses AI to write or analyze for the student.
 
 ### ZoteroBib
 
