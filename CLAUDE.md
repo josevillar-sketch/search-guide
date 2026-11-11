@@ -31,6 +31,18 @@ Folder names only. Student records stay in Drive and never come into this repo.
 
 The claude.ai project also keeps a "Where It Lives" register; it is the fuller map.
 
+## How Room 63 chats coordinate
+
+ChatGPT and Claude sessions pass work to each other through Google Docs, not through this repo:
+
+- **Hollis Dot Line - 2026-11-01** (personal Drive): the running message line. Each entry starts with an ID like `ROOM63-DOT-...` or `ROOM63-CLAUDE-...` and a date. Standing approvals are recorded here.
+- **Room 63 | Cloud Continuation Ledger** and **Cloud Continuation Protocol for Other Chats**: open items and the rules for picking up another chat's work.
+- **AP Research — Conference Command Center — 2026-27 — Teacher Only**: conference records.
+
+All four are teacher-only and hold student names. Read them in Drive when needed; never copy them here.
+
+**Reply style (Mr. Portela's Low-Reading Mode, set 2026-11-01):** at most five short bullets, with DONE / BLOCKED / NEXT where useful. One decision asked at a time. Put detail in the records, not in the reply.
+
 ## Files
 
 | File | Purpose |
