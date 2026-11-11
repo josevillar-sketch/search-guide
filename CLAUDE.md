@@ -51,6 +51,7 @@ All four are teacher-only and hold student names. Read them in Drive when needed
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
 | `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
+| `classroom/` | Printable AP Research handouts: the own-data-or-public-data guide, the method planning grid, the SDA lab, and the consent and assent templates (Word, English and Spanish). Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
 | `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests). |
 
 ## Before pushing changes to `index.html`

@@ -23,7 +23,8 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Tools:** Codebooks, frequencies, crosstabs, means, regression, charts, CSV export.
 - **AP Research use:** A secondary-data method path. Public, de-identified data means no human participants, so the risk screen is "none" and no consent forms are needed. The exported CSV becomes the student's data file for analysis.
 - **Cautions:** The interface is dated; use the SDA YouTube tutorials. Variable names are cryptic, so students read the codebook first. Created variables sit in a shared workspace, so name them distinctively.
-- **Checked:** 2026-11-09
+- **Classroom use:** `classroom/sda-lab.html` is a one-period lab with a tested demo table.
+- **Checked:** 2026-11-09. Demo table and year filter re-run 2026-11-11.
 
 ### Pew Research Center datasets
 
@@ -58,7 +59,7 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Link:** https://cphs.berkeley.edu/informedconsent.html
 - **What it is:** Free Word templates and guidance for consent, parent permission, and child assent, with bracketed instructions and filled-in examples.
 - **Most useful:** Assent form for ages 13–17 (school-based), parent permission form (school-based), online survey consent, interview with audio recording, consent checklist PDF, IRB decision tree PDF, AI consent language guide.
-- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms.
+- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms. The Room 63 versions are in `classroom/consent-templates.docx`.
 - **Cautions:** Remove UC Berkeley branding, the CPHS protocol number, and Berkeley contacts. A form must never suggest Berkeley approved a study. The school's own review route decides; these are models only.
 - **Checked:** 2026-11-09
 
@@ -106,7 +107,7 @@ Not for students until opened and checked, and until the access route is confirm
 - **Public pieces (no login):** Sage's guide to the database, https://sagepub.libguides.com/research-methods, lists its collections and the most popular methods. The Sage Research Methods Community blog, https://researchmethodscommunity.sagepub.com/, is also public. Every link into the database itself, including the Methods Map, goes to the sign-in page.
 - **Access checks, 2026-11-09:**
   - Miami Dade College: not in its database list. MDC carries three other Sage products: Sage Journals, Sage Skills: Student Success, and Sage Skills: Business.
-  - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk.
+  - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk, Library@doral.edu.
   - A Sage quote and trial account: not found in the connected Gmail or school Outlook (only Sage marketing emails).
 - **Noted:** 2026-11-09 (sign-in wall; content not opened)
 
