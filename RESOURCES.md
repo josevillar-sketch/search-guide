@@ -23,7 +23,8 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Tools:** Codebooks, frequencies, crosstabs, means, regression, charts, CSV export.
 - **AP Research use:** A secondary-data method path. Public, de-identified data means no human participants, so the risk screen is "none" and no consent forms are needed. The exported CSV becomes the student's data file for analysis.
 - **Cautions:** The interface is dated; use the SDA YouTube tutorials. Variable names are cryptic, so students read the codebook first. Created variables sit in a shared workspace, so name them distinctively.
-- **Checked:** 2026-11-09
+- **Classroom use:** `classroom/sda-lab.html` is a one-period lab with a tested demo table.
+- **Checked:** 2026-11-09. Demo table and year filter re-run 2026-11-11.
 
 ### Pew Research Center datasets
 
@@ -41,6 +42,22 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Cautions:** It finds data; it doesn't vouch for it. Students judge each dataset's source, sample, and date like any other source.
 - **Checked:** 2026-11-11
 
+### IPUMS USA (proposed 2026-11-11, awaiting Mr. Portela's review)
+
+- **Link:** https://usa.ipums.org/usa/
+- **What it is:** U.S. census microdata from the University of Minnesota, made consistent across years: censuses from 1790 to 2010 and the American Community Survey from 2000 on. The site says data and services are free of charge.
+- **AP Research use:** Public data on households, work, language, and migration, down to local areas. A no-participants path like SDA.
+- **Cautions:** Registration and its age terms were not confirmed in this check; confirm before sending students. Extracts are large and technical. SDA's census files are the easier start.
+- **Checked:** 2026-11-11 (home page only)
+
+### CDC WONDER (proposed 2026-11-11, awaiting Mr. Portela's review)
+
+- **Link:** https://wonder.cdc.gov/
+- **What it is:** The Centers for Disease Control and Prevention's query system for public health data: births, deaths, cancer, environment, population, and more.
+- **AP Research use:** Counts and rates for health topics, by year, place, age, and sex. Public data, no participants.
+- **Cautions:** Whether any dataset needs a login was not confirmed. Small counts are suppressed, so local questions may return blanks. Students must record the exact query they ran.
+- **Checked:** 2026-11-11 (home page only)
+
 ## Methods texts (free and citable)
 
 ### Bhattacherjee, *Social Science Research: Principles, Methods, and Practices* (2012)
@@ -51,6 +68,42 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Cautions:** Written for graduate students, so it reads densely; assign chapters, not the book. Dated 2012, so pair it with newer sources on online surveys.
 - **Checked:** 2026-11-11
 
+### OpenIntro Statistics (proposed 2026-11-11, awaiting Mr. Portela's review)
+
+- **Link:** https://www.openintro.org/book/os/
+- **What it is:** A free introductory statistics textbook. The PDF downloads free, with an optional contribution. The publisher recommends it for college courses and self-study.
+- **AP Research use:** A citable reference when a student reports a mean, a comparison, or a correlation and must explain the test.
+- **Cautions:** Edition, authors, and license were not shown on the page checked (the download name suggests a 4th edition); confirm before citing. College level, so assign sections.
+- **Checked:** 2026-11-11
+
+## Free tools (proposed 2026-11-11, awaiting Mr. Portela's review)
+
+Read College Board's AI guidance first. None of these three uses AI to write or analyze for the student.
+
+### ZoteroBib
+
+- **Link:** https://zbib.org/
+- **What it is:** A free, ad-free bibliography builder from the team behind Zotero. No account and no install. It supports APA, MLA, Chicago, and thousands of other styles.
+- **AP Research use:** Building the reference list in the class style from a title, link, or DOI.
+- **Cautions:** The list is stored in the browser on that device, not on a server. On a shared iPad it can be lost or seen by the next user, so students export or copy it out each session. Students still check every entry against the style sheet.
+- **Checked:** 2026-11-11
+
+### Taguette
+
+- **Link:** https://www.taguette.org/
+- **What it is:** A free, open-source tool for qualitative coding. Import documents, highlight passages, and tag them. It exports the codebook, the tagged quotes, and the highlighted documents.
+- **AP Research use:** Coding interview notes or open-ended survey answers. The exported codebook and quote list become part of the student's data file.
+- **Cautions:** It installs on macOS, Windows, or Linux, which keeps data on that computer. There is also a hosted version; where it stores data, and whether it needs an account, were not confirmed. Do not put participant data on the hosted version until that is checked against the ethics packet's data plan. No iPad app was confirmed.
+- **Checked:** 2026-11-11
+
+### jamovi
+
+- **Link:** https://www.jamovi.org/
+- **What it is:** Free, open-source statistics software that looks like a spreadsheet. The desktop version is free and works offline. A cloud version runs in a browser, and the site says it works on Chromebooks and tablets.
+- **AP Research use:** Descriptive statistics and simple tests on a student's own data file, with the output saved beside the data.
+- **Cautions:** The cloud version's cost and account terms were not confirmed, and iPad support is not named. The software runs the test; the student still has to justify it.
+- **Checked:** 2026-11-11
+
 ## Ethics and consent
 
 ### UC Berkeley CPHS informed consent templates
@@ -58,7 +111,7 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Link:** https://cphs.berkeley.edu/informedconsent.html
 - **What it is:** Free Word templates and guidance for consent, parent permission, and child assent, with bracketed instructions and filled-in examples.
 - **Most useful:** Assent form for ages 13–17 (school-based), parent permission form (school-based), online survey consent, interview with audio recording, consent checklist PDF, IRB decision tree PDF, AI consent language guide.
-- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms.
+- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms. The Room 63 versions are in `classroom/consent-templates.docx`.
 - **Cautions:** Remove UC Berkeley branding, the CPHS protocol number, and Berkeley contacts. A form must never suggest Berkeley approved a study. The school's own review route decides; these are models only.
 - **Checked:** 2026-11-09
 
@@ -97,6 +150,17 @@ Not for students until opened and checked, and until the access route is confirm
 - **BCcampus open textbook on research methods:** https://opentextbc.ca/researchmethods/ . Likely a free, citable methods text.
 - **ICPSR, the Inter-university Consortium for Political and Social Research:** https://www.icpsr.umich.edu/ . A large social science data archive; some data needs a member login.
 
+### Not reachable on 2026-11-11 (round two; not retried)
+
+Each needs one look in a normal browser before it can be listed.
+
+- **Purdue OWL:** https://owl.purdue.edu/ . Server error 503 on two pages. Expected use: citation and research writing guides.
+- **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Server error 503. Expected use: more free methods texts.
+- **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Server error 503. Expected use: the General Social Survey's own site and its citation.
+- **Seeing Theory:** https://seeing-theory.brown.edu/ . Server error 503. Expected use: visual introduction to statistics.
+- **DOAJ, the Directory of Open Access Journals:** https://doaj.org/ . Access refused, error 403. Not retried.
+- **data.census.gov, Harvard Dataverse, Unpaywall:** each page loaded with no readable content, so nothing was confirmed.
+
 ### SAGE Research Methods
 
 - **Link:** https://methods.sagepub.com/
@@ -106,8 +170,8 @@ Not for students until opened and checked, and until the access route is confirm
 - **Public pieces (no login):** Sage's guide to the database, https://sagepub.libguides.com/research-methods, lists its collections and the most popular methods. The Sage Research Methods Community blog, https://researchmethodscommunity.sagepub.com/, is also public. Every link into the database itself, including the Methods Map, goes to the sign-in page.
 - **Access checks, 2026-11-09:**
   - Miami Dade College: not in its database list. MDC carries three other Sage products: Sage Journals, Sage Skills: Student Success, and Sage Skills: Business.
-  - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk.
-  - A Sage quote and trial account: not found in the connected Gmail or school Outlook (only Sage marketing emails).
+  - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk, Library@doral.edu.
+  - A Sage quote and trial account: not found in the connected Gmail or the ISA Broward Outlook (only Sage marketing emails, 2025 to 2026). A second search of that Outlook on 2026-11-11 found the same. The Mater mailbox has not been searched. Student access stays unconfirmed.
 - **Noted:** 2026-11-09 (sign-in wall; content not opened)
 
 ## To add
