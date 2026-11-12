@@ -13,33 +13,40 @@ body{margin:0;padding:24px 16px 40px}
 .page:last-child{break-after:auto;margin-bottom:0}
 .page::before{content:"63";position:absolute;top:.5in;right:.55in;width:2.9rem;height:2.9rem;border:.12rem solid var(--ink);border-radius:50%;outline:.06rem solid var(--ink);outline-offset:-.32rem;
   display:grid;place-items:center;font:900 1.15rem/1 var(--display);letter-spacing:-.02em}
-.kicker{font:700 .74rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 3.6rem .35rem 0}
-h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0 0 .8rem;padding-right:3.6rem;text-wrap:balance}
+h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0;padding-right:3.6rem;text-wrap:balance}
 h1::after{content:"";display:block;margin:.6rem -3.6rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
+/* The slug says who the sheet is for. It sits under the title rule, never above the title. */
+.slug{font:700 .74rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:.45rem 0 .9rem;max-width:none}
 h2{font:650 1.3rem/1.15 var(--display);margin:0 0 .4rem;text-wrap:balance}
-h3{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem}
+h3,h2.lab{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem;text-wrap:balance}
+/* Running text holds a 72-character measure even where the sheet is wider. */
+p,li{max-width:72ch;text-wrap:pretty}
 p{margin:0 0 .5rem} ul,ol{margin:0 0 .5rem;padding-left:1.5rem} li{margin-bottom:.2rem}
 li::marker{font-weight:700;color:var(--brass)}
 b{font-weight:700}
-.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:44rem}
+.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:66ch}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .card{border:.1rem solid var(--ink);padding:.85rem 1rem}
 .card.a{border-top:.45rem solid var(--oxide)}.card.b{border-top:.45rem solid var(--pine)}
-.band{background:var(--tint);border-left:.3rem solid var(--brass);padding:.6rem .9rem;margin:.8rem 0}
-.rule{font:700 .95rem/1.35 var(--body);border:.12rem solid var(--ink);border-left-width:.55rem;padding:.6rem .9rem;margin:.8rem 0}
+.band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 72ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
+.rule{font:700 .95rem/1.35 var(--body);border:.2rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 70ch)) .6rem .9rem;margin:.8rem 0;text-wrap:balance}
 .foot{font:400 .68rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.3rem;border-top:.08rem solid var(--ink);padding-top:.4rem}
-table{width:100%;border-collapse:collapse;margin:.6rem 0}
+table{width:100%;border-collapse:collapse;margin:.6rem 0;font-variant-numeric:tabular-nums}
 th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left}
 th{font:700 .92rem/1.2 var(--body);background:var(--tint);border-bottom-width:.16rem}
 td.q{font:700 .95rem/1.2 var(--body);width:1.15in;background:var(--tint-2)}
+td p,td li,th p{max-width:none}
 td.q small{display:block;font-weight:400;font-size:.85rem;line-height:1.25;color:var(--soft);margin-top:.2rem}
 .blank td{height:.98in}.blank td.q{height:auto}
 td.tick{width:.34in;text-align:center}
 .box{display:inline-block;width:1.05rem;height:1.05rem;border:.12rem solid var(--ink);vertical-align:-.15rem}
 .line{border-bottom:.08rem solid var(--ink);height:18pt;margin-bottom:2pt}
+/* A ruled block after a writing line needs air, or its top rule reads as one more line to write on. */
+.line+.band,.line+.rule{margin-top:1.3rem}
 .name{display:flex;gap:1.4rem;font:700 .7rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.4rem 0 .8rem}
 .name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.3rem}
 code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
+::selection{background:#d6ad55;color:#1d1812}
 .ex{font-style:italic;color:var(--soft)}
 @media print{html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
 @media screen and (prefers-color-scheme:dark){html{background:#07201b}.page{border-color:#2f5a50}}
@@ -48,8 +55,8 @@ code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
 @media screen and (max-width:640px) and (prefers-color-scheme:dark){.page{border-bottom-color:#07201b}}
 </style></head><body>
 
-<section class="page"><div class="kicker">AP Research · Plan before you write the method section</div>
-<h1>Method planning grid</h1>
+<section class="page"><h1>Method planning grid</h1>
+<p class="slug">AP Research · Plan before you write the method section</p>
 <div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
 <p>Copy your question from your log, word for word. Then plan each method in its own column. One method is fine: leave the second column empty.</p>
 <div class="line"></div><div class="line"></div>
@@ -59,10 +66,10 @@ code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
 <tr><td class="q">When?<small>Dates, and how many times.</small></td><td class="ex"></td><td class="ex"></td></tr>
 <tr><td class="q">Who?<small>Who you gather data from, how many, how you reach them.</small></td><td class="ex"></td><td class="ex"></td></tr>
 <tr><td class="q">After gathering data<small>How you will analyze it and what you will compare.</small></td><td class="ex"></td><td class="ex"></td></tr></table>
-<div class="two"><div><h3>Approval I need before I start</h3><div class="line"></div></div><div><h3>Methods text I will cite to justify this</h3><div class="line"></div></div></div>
+<div class="two"><div><h2 class="lab">Approval I need before I start</h2><div class="line"></div></div><div><h2 class="lab">Methods text I will cite to justify this</h2><div class="line"></div></div></div>
 <div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela · Method planning grid · page 1</div></section>
-<section class="page"><div class="kicker">Example only · do not copy</div>
-<h1>What a filled-in grid looks like</h1>
+<section class="page"><h1>What a filled-in grid looks like</h1>
+<p class="slug">Example only · do not copy</p>
 <p class="lede">The topic here is invented to show the level of detail: <i>how students use the library's quiet study room</i>. Your grid comes from your own question.</p>
 <table><tr><th></th><th>Method 1: Short questionnaire</th><th>Method 2: One-to-one interviews</th></tr>
 <tr><td class="q">Why?<small>Why this method fits your question. Why this and not another method.</small></td><td class="ex">To get counts: how often people use the room and at what times.</td><td class="ex">To learn the reasons behind the counts. Interviews, not a focus group, because schedules are personal and people speak more freely alone.</td></tr>
@@ -72,7 +79,7 @@ code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
 <tr><td class="q">After gathering data<small>How you will analyze it and what you will compare.</small></td><td class="ex">Tally each answer. Compare by grade level. Report every count with its total.</td><td class="ex">Code the notes for repeated reasons. Report each theme with how many people raised it.</td></tr></table>
 <div class="band"><b>What to notice.</b> Every "why" names a reason, and one rejects an alternative. The second method explains the first: the interviews give reasons for the counts. The "who" for Method 2 comes out of Method 1. Each "after" says what will be compared and how it will be reported.</div>
 <div class="rule">If two methods do not connect, you have two small studies. Ask: what does Method 2 tell me that Method 1 cannot?</div>
-<h3>Check your own grid</h3>
+<h2 class="lab">Check your own grid</h2>
 <ul><li>Could a classmate run my study from this page alone?</li><li>Does each "why" give a reason, not a description?</li><li>Is the time I ask of each person stated?</li><li>Do I know what approval I need, and have I allowed time for it?</li><li>Can I name what my data will <b>not</b> be able to show?</li></ul>
 <div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela · Method planning grid · page 2</div></section>
 

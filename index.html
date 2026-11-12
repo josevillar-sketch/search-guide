@@ -39,16 +39,19 @@ html,body{background:var(--ground)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) body{background:radial-gradient(120% 90% at 50% 0%,#135046 0%,#0c3a33 45%,#041713 100%) fixed,var(--ground)}}
 :root[data-theme="dark"] body{background:radial-gradient(120% 90% at 50% 0%,#135046 0%,#0c3a33 45%,#041713 100%) fixed,var(--ground)}
 body{margin:0;padding:0;color:var(--ink);font:400 17px/26px var(--body)}
-p{margin:0}
+p{margin:0;text-wrap:pretty}
+/* The parts the browser draws carry the palette too. */
+::selection{background:var(--brass-fill);color:var(--on-brass-fill)}
+input,textarea{caret-color:var(--pine)}
 p,li,h1,h2,h3,label,legend,summary,.q{overflow-wrap:anywhere;min-width:0}
 a{color:var(--pine)}
 button{font:700 16px/20px var(--body);color:inherit}
 h1{font:900 28px/32px var(--display);text-transform:uppercase;letter-spacing:.02em;margin:0;text-wrap:balance}
 h2{font:650 21px/26px var(--display);margin:0;text-wrap:balance}
-h3{font:650 18px/24px var(--display);margin:0}
+h3{font:650 18px/24px var(--display);margin:0;text-wrap:balance}
 .slip h3{font:700 13px/18px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .lbl{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.hint{font-size:15px;line-height:22px;color:var(--mute)}
+.hint{font-size:15px;line-height:22px;color:var(--mute);max-width:72ch}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
 :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 [tabindex="-1"]:focus{outline:none}
@@ -259,7 +262,7 @@ ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;tex
 /* Circle it: color and line style both code the label */
 #circle{display:grid;gap:16px}
 #words{display:flex;flex-wrap:wrap;column-gap:0;row-gap:24px;padding:8px 4px 24px;overflow-x:clip}
-.w{position:relative;font:500 20px/28px var(--display);min-height:44px;padding:6px 8px;background:transparent;border:0;color:var(--ink);cursor:pointer;max-width:100%;overflow-wrap:anywhere;text-align:left}
+.w{position:relative;font:500 20px/28px var(--display);min-height:44px;min-width:44px;padding:6px 8px;background:transparent;border:0;color:var(--ink);cursor:pointer;max-width:100%;overflow-wrap:anywhere;text-align:center}
 .w::before{content:"";position:absolute;inset:1px 1px;border-radius:50%/60%;transform:rotate(-1.5deg);pointer-events:none}
 .w[data-l="who"]::before{border:2px solid var(--c-who)}
 .w[data-l="where"]::before{border:2px dashed var(--c-where)}
@@ -327,9 +330,11 @@ section.tools{border-top:1px solid var(--line);padding-top:24px;display:flex;fle
 .picked{font-size:15px;line-height:22px;color:var(--mute)}
 .dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,232px),1fr));gap:8px}
 .dbcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
-.dbcard a{color:var(--teal);font-weight:700}
+/* The name is the only link on the card: a 44px tap target without moving the layout. */
+.dbcard a{color:var(--teal);font-weight:700;display:block;padding-block:9px;margin-block:-9px}
 footer{border-top:1px solid var(--hair);color:var(--ink-soft);font-size:15px;line-height:22px}
 footer .shell{display:grid;gap:12px;padding-block:16px 48px}
+footer p{max-width:75ch}
 #printp{justify-self:start}
 .purl{display:none}
 #printall{display:none}
@@ -408,8 +413,8 @@ footer .shell{display:grid;gap:12px;padding-block:16px 48px}
 <a id="skip" class="skip" href="#pick">Skip to your period</a>
 <header id="band" class="band night">
   <div class="shell">
-    <span class="eyebrow">Room 63 · AP Capstone · Question Workbench</span>
     <h1>Room 63 Search Guide</h1>
+    <span class="eyebrow">Room 63 · AP Capstone · Question Workbench</span>
     <p class="lede" id="lede">Pick your period, then your name. Your question, your seven checks, and your searches open on one desk. When your question changes in your log, the desk keeps the newest version on this iPad.</p>
   </div>
 </header>

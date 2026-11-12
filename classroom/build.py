@@ -17,33 +17,40 @@ body{margin:0;padding:24px 16px 40px}
 .page:last-child{break-after:auto;margin-bottom:0}
 .page::before{content:"63";position:absolute;top:.5in;right:.55in;width:2.9rem;height:2.9rem;border:.12rem solid var(--ink);border-radius:50%;outline:.06rem solid var(--ink);outline-offset:-.32rem;
   display:grid;place-items:center;font:900 1.15rem/1 var(--display);letter-spacing:-.02em}
-.kicker{font:700 .74rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 3.6rem .35rem 0}
-h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0 0 .8rem;padding-right:3.6rem;text-wrap:balance}
+h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0;padding-right:3.6rem;text-wrap:balance}
 h1::after{content:"";display:block;margin:.6rem -3.6rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
+/* The slug says who the sheet is for. It sits under the title rule, never above the title. */
+.slug{font:700 .74rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:.45rem 0 .9rem;max-width:none}
 h2{font:650 1.3rem/1.15 var(--display);margin:0 0 .4rem;text-wrap:balance}
-h3{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem}
+h3,h2.lab{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem;text-wrap:balance}
+/* Running text holds a 72-character measure even where the sheet is wider. */
+p,li{max-width:72ch;text-wrap:pretty}
 p{margin:0 0 .5rem} ul,ol{margin:0 0 .5rem;padding-left:1.5rem} li{margin-bottom:.2rem}
 li::marker{font-weight:700;color:var(--brass)}
 b{font-weight:700}
-.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:44rem}
+.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:66ch}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .card{border:.1rem solid var(--ink);padding:.85rem 1rem}
 .card.a{border-top:.45rem solid var(--oxide)}.card.b{border-top:.45rem solid var(--pine)}
-.band{background:var(--tint);border-left:.3rem solid var(--brass);padding:.6rem .9rem;margin:.8rem 0}
-.rule{font:700 .95rem/1.35 var(--body);border:.12rem solid var(--ink);border-left-width:.55rem;padding:.6rem .9rem;margin:.8rem 0}
+.band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 72ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
+.rule{font:700 .95rem/1.35 var(--body);border:.2rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 70ch)) .6rem .9rem;margin:.8rem 0;text-wrap:balance}
 .foot{font:400 .68rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.3rem;border-top:.08rem solid var(--ink);padding-top:.4rem}
-table{width:100%;border-collapse:collapse;margin:.6rem 0}
+table{width:100%;border-collapse:collapse;margin:.6rem 0;font-variant-numeric:tabular-nums}
 th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left}
 th{font:700 .92rem/1.2 var(--body);background:var(--tint);border-bottom-width:.16rem}
 td.q{font:700 .95rem/1.2 var(--body);width:1.15in;background:var(--tint-2)}
+td p,td li,th p{max-width:none}
 td.q small{display:block;font-weight:400;font-size:.85rem;line-height:1.25;color:var(--soft);margin-top:.2rem}
 .blank td{height:.98in}.blank td.q{height:auto}
 td.tick{width:.34in;text-align:center}
 .box{display:inline-block;width:1.05rem;height:1.05rem;border:.12rem solid var(--ink);vertical-align:-.15rem}
 .line{border-bottom:.08rem solid var(--ink);height:18pt;margin-bottom:2pt}
+/* A ruled block after a writing line needs air, or its top rule reads as one more line to write on. */
+.line+.band,.line+.rule{margin-top:1.3rem}
 .name{display:flex;gap:1.4rem;font:700 .7rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.4rem 0 .8rem}
 .name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.3rem}
 code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
+::selection{background:#d6ad55;color:#1d1812}
 .ex{font-style:italic;color:var(--soft)}
 @media print{html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
 @media screen and (prefers-color-scheme:dark){html{background:#07201b}.page{border-color:#2f5a50}}
@@ -70,8 +77,8 @@ FOOT = '<div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela
 page("own-data-or-public-data.html", "Own data or public data?", f"""
 <style>/* This sheet carries the most text. Print it a step smaller so it stays on one page; build-pdf.cjs checks the count. */
 @media print{{html{{font-size:9.4pt}}.card{{padding:.7rem .9rem}}.band,.rule{{margin:.6rem 0}}h3{{margin-top:.6rem}}}}</style>
-<div class="kicker">AP Research · Choosing a method</div>
 <h1>Own data or public data?</h1>
+<p class="slug">AP Research · Choosing a method</p>
 <p class="lede">Two roads can lead to evidence for your paper. This page does not change your question. Your question is the one in your log.</p>
 <div class="band"><b>Ask first:</b> does the evidence you need already exist? Spend twenty minutes looking before you decide to collect anything. Search the SDA archive, the Pew Research Center datasets, and Google Dataset Search. All three are in the Research Library.</div>
 <div class="two">
@@ -120,53 +127,55 @@ EX = [("Short questionnaire","One-to-one interviews"),
  ("Students who use the room. Guardian permission and student assent first. Aim: every user that week.","Volunteers from the questionnaire group. Aim: 5 or 6."),
  ("Tally each answer. Compare by grade level. Report every count with its total.","Code the notes for repeated reasons. Report each theme with how many people raised it."),]
 page("method-planning-grid.html", "Method planning grid", f"""
-<section class="page"><div class="kicker">AP Research · Plan before you write the method section</div>
-<h1>Method planning grid</h1>
+<section class="page"><h1>Method planning grid</h1>
+<p class="slug">AP Research · Plan before you write the method section</p>
 <div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
 <p>Copy your question from your log, word for word. Then plan each method in its own column. One method is fine: leave the second column empty.</p>
 <div class="line"></div><div class="line"></div>
 {grid()}
-<div class="two"><div><h3>Approval I need before I start</h3><div class="line"></div></div><div><h3>Methods text I will cite to justify this</h3><div class="line"></div></div></div>
+<div class="two"><div><h2 class="lab">Approval I need before I start</h2><div class="line"></div></div><div><h2 class="lab">Methods text I will cite to justify this</h2><div class="line"></div></div></div>
 {FOOT.format(x="Method planning grid · page 1")}</section>
-<section class="page"><div class="kicker">Example only · do not copy</div>
-<h1>What a filled-in grid looks like</h1>
+<section class="page"><h1>What a filled-in grid looks like</h1>
+<p class="slug">Example only · do not copy</p>
 <p class="lede">The topic here is invented to show the level of detail: <i>how students use the library's quiet study room</i>. Your grid comes from your own question.</p>
 {grid(EX, blank=False)}
 <div class="band"><b>What to notice.</b> Every "why" names a reason, and one rejects an alternative. The second method explains the first: the interviews give reasons for the counts. The "who" for Method 2 comes out of Method 1. Each "after" says what will be compared and how it will be reported.</div>
 <div class="rule">If two methods do not connect, you have two small studies. Ask: what does Method 2 tell me that Method 1 cannot?</div>
-<h3>Check your own grid</h3>
+<h2 class="lab">Check your own grid</h2>
 <ul><li>Could a classmate run my study from this page alone?</li><li>Does each "why" give a reason, not a description?</li><li>Is the time I ask of each person stated?</li><li>Do I know what approval I need, and have I allowed time for it?</li><li>Can I name what my data will <b>not</b> be able to show?</li></ul>
 {FOOT.format(x="Method planning grid · page 2")}</section>
 """)
 
 # ---------- 3. SDA lab ----------
 page("sda-lab.html", "SDA lab: national survey data in one period", f"""
-<section class="page"><div class="kicker">Teacher page · one 45-minute period</div>
-<h1>SDA lab: national survey data in one period</h1>
+<style>/* Two full sheets. Print a step smaller so each stays on its own page; build-pdf.cjs checks the count. */
+@media print{{html{{font-size:9.6pt}}}}</style>
+<section class="page"><h1>SDA lab: national survey data in one period</h1>
+<p class="slug">Teacher page · one 45-minute period</p>
 <p class="lede">Students learn to find a variable in the General Social Survey, read its codebook entry, run one table, and save it. Nobody's question is rewritten. The lab only shows what public data exists.</p>
-<h3>Setup</h3>
+<h2 class="lab">Setup</h2>
 <ul><li>Go to <code>sda.berkeley.edu</code>, choose <b>Archive</b>, then <b>General Social Survey (GSS) Cumulative Datafile 1972-2024 - release 3 (SDA 4)</b>. No login.</li>
 <li>Test once on a student iPad before class. Results open in a new tab, so pop-ups must be allowed.</li></ul>
-<h3>Run of the period</h3>
+<h2 class="lab">Run of the period</h2>
 <table><tr><th style="width:.9in">Minutes</th><th>What happens</th></tr>
 <tr><td>0 to 5</td><td>Frame it: real researchers reuse data. Thousands of adults answered these questions, and the answers are free. Hand out the student sheet.</td></tr>
 <tr><td>5 to 15</td><td><b>Demo on the board.</b> Type <code>consci</code> in <b>Row</b> and <code>degree</code> in <b>Column</b>. Leave the weight as it is. Press <b>Run the Table</b>. Then open the <b>Codebook</b> tab and show the exact question for <code>consci</code>.</td></tr>
 <tr><td>15 to 35</td><td>Students work through steps 1 to 5 on their sheet. Circulate. The common snag is a variable that was only asked in some years.</td></tr>
 <tr><td>35 to 45</td><td>Students finish the record box and the two exit lines. Collect the sheets.</td></tr></table>
-<h3>What the demo should show</h3>
+<h2 class="lab">What the demo should show</h2>
 <p>Confidence in the scientific community, by highest degree. In the row "a great deal," the column percentages rise from <b>34.6</b> for less than high school to <b>60.5</b> for a graduate degree. Valid cases: <b>47,772</b>. Checked on November 11, 2026. A newer data release may shift these slightly.</p>
-<h3>Three things to say out loud</h3>
+<h2 class="lab">Three things to say out loud</h2>
 <ul><li><b>Read down, compare across.</b> Each column adds to 100. Compare the same row across columns.</li>
 <li><b>A pattern is not a cause.</b> The table shows that two answers go together. It cannot show that one produces the other.</li>
 <li><b>The question is the measurement.</b> Whatever the survey asked, in those exact words, is what the number means.</li></ul>
-<h3>Useful moves</h3>
+<h2 class="lab">Useful moves</h2>
 <ul><li>Change over time: put <code>year</code> in <b>Column</b>.</li>
 <li>Recent years only: type <code>year(2018-2024)</code> in <b>Selection Filter(s)</b>.</li>
 <li>Save the table: open <b>Create and Download CSV File</b> before running. Charts are under <b>Chart Options</b>.</li></ul>
 <div class="rule">Rule for this lab: a student may discover that a dataset fits their question, or that it does not. The lab never suggests new wording for a question.</div>
 {FOOT.format(x="SDA lab · teacher page")}</section>
-<section class="page"><div class="kicker">Student sheet · SDA lab</div>
-<h1>Find it, read it, run it, save it</h1>
+<section class="page"><h1>Find it, read it, run it, save it</h1>
+<p class="slug">Student sheet · SDA lab</p>
 <div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
 <ol>
 <li><b>Open the data.</b> <code>sda.berkeley.edu</code>, then Archive, then the General Social Survey 1972-2024, release 3.</li>
@@ -186,8 +195,8 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 <tr><td class="q">Valid cases<small>bottom of the results</small></td><td style="height:.36in"></td></tr>
 <tr><td class="q">Weight shown</td><td style="height:.36in"></td></tr>
 </table>
-<h3>One thing this table shows (give the numbers)</h3><div class="line"></div><div class="line"></div>
-<h3>One thing this table cannot show</h3><div class="line"></div><div class="line"></div>
+<h2 class="lab">One thing this table shows (give the numbers)</h2><div class="line"></div><div class="line"></div>
+<h2 class="lab">One thing this table cannot show</h2><div class="line"></div><div class="line"></div>
 <div class="band">If you use this in your paper: cite the General Social Survey (NORC at the University of Chicago, gss.norc.org) in the class citation style. Give the release from your record box, and say you analyzed it through SDA on today's date.</div>
 {FOOT.format(x="SDA lab · student sheet")}</section>
 """)
@@ -196,31 +205,31 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 def checks(items):
     return "<table>"+"".join(f'<tr><td class="tick"><span class="box"></span></td><td><b>{a}</b> {b}</td></tr>' for a,b in items)+"</table>"
 page("method-section-checklist.html", "Method section checklist", f"""
-<div class="kicker">AP Research · Academic paper · Self-check, then peer check</div>
 <h1>Method section checklist</h1>
+<p class="slug">AP Research · Academic paper · Self-check, then peer check</p>
 <div class="name"><span>Writer's code</span><span>Reader's code</span><span>Date</span></div>
 <div class="band"><b>What College Board asks of this section:</b> it "explains and provides justification for the chosen method, process, or approach and its alignment with the research question." Two verbs, <b>explain</b> and <b>justify</b>, and one test, <b>alignment</b>.</div>
 <div class="two"><div>
-<h3>Explain: could a reader repeat it?</h3>
+<h2 class="lab">Explain: could a reader repeat it?</h2>
 {checks([("Who or what.","Who or what was studied, how many, and how they were chosen."),
 ("Instrument.","The survey, interview guide, dataset, or texts are described. The full instrument is in an appendix."),
 ("Steps.","What was done, in order, with dates and how long each part took."),
 ("Analysis.","How the data was analyzed, named plainly: counts, a comparison, coding for themes.")])}
-<h3>Ethics: is it on the page?</h3>
+<h2 class="lab">Ethics: is it on the page?</h2>
 {checks([("Approval.","Says the study was approved before any data was collected."),
 ("Consent and privacy.","Says how people agreed to take part and how their identities are protected. For public data: says no participants were contacted.")])}
 </div><div>
-<h3>Justify: why this, and not something else?</h3>
+<h2 class="lab">Justify: why this, and not something else?</h2>
 {checks([("Alignment.","One or two sentences connect the method to the research question in the writer's own words."),
 ("The road not taken.","Names at least one other method and gives a reason it was not used."),
 ("A methods source.","Cites a methods text or a published study for the choice. A blog or infographic does not count."),
 ("Limits.","Names what this method cannot show. Small sample, one school, one year, self-report.")])}
-<h3>Evidence: can it be traced?</h3>
+<h2 class="lab">Evidence: can it be traced?</h2>
 {checks([("Every number.","Each number in the section matches the writer's own data file."),
 ("Nothing borrowed.","No number, example, or wording comes from a sample paper or a template.")])}
 </div></div>
-<h3>Reader: one place I could not follow (ask a question; do not rewrite it)</h3><div class="line"></div><div class="line"></div>
-<h3>Writer: what I will change, in my own words</h3><div class="line"></div><div class="line"></div>
+<h2 class="lab">Reader: one place I could not follow (ask a question; do not rewrite it)</h2><div class="line"></div><div class="line"></div>
+<h2 class="lab">Writer: what I will change, in my own words</h2><div class="line"></div><div class="line"></div>
 <div class="rule">Readers ask questions and point to gaps. They do not write, rewrite, or suggest wording. The paper is the writer's own work.</div>
 {FOOT.format(x="Method section checklist")}
 """)
@@ -269,7 +278,7 @@ LIB = [
 def card(need,letter,n,tag,title,who,url,what,care):
     label,cls,_ = STAMPS[tag]
     host = url.split('/')[2].replace('www.','') if url else ''
-    go = (f'<a class="open" href="{url}" target="_blank" rel="noopener" aria-label="Open {title}">Open {host} <span aria-hidden="true">&#8599;</span></a>'
+    go = (f'<a class="open" href="{url}" target="_blank" rel="noopener" aria-label="Open {title}">Open {host} <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>'
           if url else '<span class="open none">Ask in Room 63</span>')
     return (f'<li class="card"><div class="card-top"><span class="callno">R63.{letter}.{n:02d}</span>'
             f'<span class="stamp {cls}">{label}</span></div><h3>{title}</h3><p class="who">{who}</p>'
@@ -299,16 +308,18 @@ body{{background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--bo
 body::before{{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}}
 .wrap{{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;gap:2rem}}
 a:focus-visible,button:focus-visible{{outline:3px solid var(--focus);outline-offset:3px}}
+::selection{{background:var(--brass-fill);color:var(--on-brass)}}
+p{{text-wrap:pretty}}
 
 .mast{{display:flex;flex-direction:column;gap:1rem;border-bottom:3px solid var(--ink);padding-bottom:1.25rem}}
-.eyebrow{{font:700 .8125rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);margin:0}}
-h1{{font:900 clamp(2.9rem,15.4vw,9rem)/.84 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:0;max-width:100%}}
+/* Display type stops at 6rem. Past that the masthead shouts over the cards it introduces. */
+h1{{font:900 clamp(2.9rem,15.4vw,6rem)/.84 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:0;max-width:100%;text-wrap:balance}}
 h1 span{{display:block}}
 h1 .l2{{color:var(--pine)}}
 .strip{{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font:700 .8125rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0;padding:0;list-style:none}}
 .lede{{margin:0;max-width:40rem;font-size:1.125rem;color:var(--ink)}}
 
-.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
+.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem max(1.25rem,calc(100% - 72ch)) 1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
 .pledge b{{display:block;font:650 clamp(1.3rem,4.6vw,1.9rem)/1.12 var(--display);text-wrap:balance}}
 .pledge span{{display:block;margin-top:.4rem}}
 
@@ -339,7 +350,8 @@ h1 .l2{{color:var(--pine)}}
 .card h3{{font:650 clamp(1.3rem,4.4vw,1.6rem)/1.15 var(--display);margin:.35rem 0 0;text-wrap:balance}}
 .who{{font:400 .8125rem/1.45 var(--mono);letter-spacing:.03em;color:var(--paper-soft);margin:0}}
 .what{{margin:.15rem 0 0;max-width:42rem}}
-.care{{margin:.15rem 0 0;background:var(--paper-2);border-left:4px solid var(--paper-edge);padding:.55rem .75rem;max-width:42rem}}
+/* A ruled note, the same form as the notes on the print handouts. No side stripe. */
+.care{{margin:.15rem 0 0;background:var(--paper-2);border-block:1.5px solid var(--paper-edge);padding:.55rem .75rem;max-width:42rem}}
 .care-l{{display:block;font:700 .75rem/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--st-oxide)}}
 .open{{align-self:flex-start;margin-top:.4rem;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem .95rem;font:700 1rem/1.2 var(--body);color:var(--paper-ink);background:transparent;border:1.5px solid var(--paper-edge);border-radius:6px;text-decoration:none;overflow-wrap:anywhere}}
 a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
@@ -354,17 +366,16 @@ footer{{font:700 .8125rem/1.6 var(--mono);letter-spacing:.06em;text-transform:up
   .drawer{{grid-template-columns:15rem minmax(0,1fr);gap:2rem;align-items:start}}
   .plate{{position:sticky;top:calc(84px + env(safe-area-inset-top,0px));flex-direction:column;align-items:flex-start}}
   .mast{{display:grid;grid-template-columns:minmax(0,1fr) 20rem;align-items:end;column-gap:2rem}}
-  .mast .eyebrow,.mast h1{{grid-column:1/-1}}
+  .mast h1{{grid-column:1/-1}}
   .legend{{grid-template-columns:repeat(4,minmax(0,1fr))}}
 }}
 @media (prefers-reduced-motion:no-preference){{.chip{{transition:transform .08s,box-shadow .08s,background .12s}}}}
 </style>
 <div class="wrap">
 <header class="mast">
-<p class="eyebrow">Room 63 · AP Research · Mr. Portela</p>
 <h1><span>Research</span><span class="l2">Library</span></h1>
 <p class="lede">Every card here was opened and checked. Each one says what it is for, whether you may cite it, and what to watch out for.</p>
-<ul class="strip"><li>{len(LIB)} cards</li><li>{len(NEEDS)} drawers</li><li>Checked Nov 2026</li></ul>
+<ul class="strip"><li>Room 63</li><li>AP Research</li><li>Mr. Portela</li><li>{len(LIB)} cards</li><li>{len(NEEDS)} drawers</li><li>Checked Nov 2026</li></ul>
 </header>
 <p class="pledge"><b>Nothing here writes or changes your research question.</b><span>Your question is the one in your log. To find sources on your own topic, use your Search Guide slip.</span></p>
 <ul class="legend" aria-label="What the stamps mean">{legend}</ul>
