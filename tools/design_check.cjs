@@ -81,6 +81,7 @@ function sourceChecks(file) {
     if (side && +side[3] >= 2 && !STRIPE_OK.some((ok) => selector.includes(ok))) out.push(`side stripe in the stylesheet: ${selector.slice(0, 48)} (${side[3]}px)`);
   }
   if (/\{\{/.test(css)) out.push("doubled opening braces in a style block: the browser drops the rules that follow");
+  if (file.startsWith("classroom/") && /_{4,}/.test(text.replace(/<(script|style)[\s\S]*?<\/\1>/g, ""))) out.push("typed underscores for a blank: draw it as a rule (.fill)");
   if (!/::selection/.test(text)) out.push("no ::selection style: selected text falls back to the browser's blue");
   if (/<(input|textarea)\b/.test(text) && !/caret-color/.test(text)) out.push("fields without caret-color");
   if (!/:focus-visible/.test(text) && /<(a|button|input|textarea|select|summary)\b/.test(text)) out.push("no :focus-visible style");
