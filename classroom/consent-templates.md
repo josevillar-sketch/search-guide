@@ -254,6 +254,10 @@ This study was reviewed for Mater Academy by [Mr. Jose Portela, AP Research teac
 
 ☐ I have read this, and I agree to take part.  ☐ I do not want to take part. [This choice ends the survey.]
 
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
 # Pantalla inicial de la encuesta en línea
 
 **[Título de tu estudio]**

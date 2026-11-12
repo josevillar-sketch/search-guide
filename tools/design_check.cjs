@@ -145,19 +145,22 @@ function renderedChecks(opts) {
     if (!/balance/.test(wrap) && h.getClientRects().length && h.getBoundingClientRect().height > px(cs.lineHeight) * 1.5) add("heading wraps without text-wrap: balance", h);
   }
 
-  // 5. Measure: running text that wraps stays within 75ch.
+  // 5. Measure: running text that wraps stays within 75 characters a line. Counted in the element's own letters,
+  //    not in "ch": a zero is far wider than an average letter, so a 75ch box can hold over 100 characters.
   const probe = document.createElement("span");
-  probe.textContent = "0000000000";
-  probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;letter-spacing:0";
+  probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0";
   for (const e of shown.filter((x) => /^(P|LI|DD|BLOCKQUOTE)$/.test(x.tagName) || opts.proseAlso.some((s) => x.matches(s)))) {
     if (e.querySelector("p,li,table,ul,ol")) continue;
+    const text = e.textContent.replace(/\s+/g, " ").trim();
+    if (text.length < 90) continue;
     const cs = getComputedStyle(e), lh = px(cs.lineHeight) || px(cs.fontSize) * 1.4;
     const inner = e.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
     if (e.getBoundingClientRect().height - px(cs.paddingTop) - px(cs.paddingBottom) < lh * 1.6) continue; // one line
+    probe.textContent = text.slice(0, 240);
     e.appendChild(probe);
-    const ch = probe.getBoundingClientRect().width / 10;
+    const per = probe.getBoundingClientRect().width / probe.textContent.length;
     probe.remove();
-    if (ch && inner / ch > 76.5) add("measure over 75ch", e, `${Math.round(inner / ch)}ch`);
+    if (per && inner / per > 78) add("line longer than 75 characters", e, `about ${Math.round(inner / per)}`);
   }
 
   // 6. Contrast of every piece of text against the nearest solid ground.
@@ -272,7 +275,7 @@ function renderedChecks(opts) {
         const fails = await page.evaluate(renderedChecks, {
           phone: v.w < 500, print: media === "print", sheets: !!s.print,
           stripeAllow: [".q", ".q-rec", "blockquote"], // a quoted question keeps its quotation bar
-          proseAlso: [".band", ".lede", ".hint", ".rule"],
+          proseAlso: [".band", ".lede", ".hint", ".rule:not(.sign)"], // a sign-off line is a row of blanks, not running text
           nestAllow: ["#ficha", "#vl", "form", ".page"], // the question card on the night desk, the paper version list, a form, a printed sheet
         });
         for (const f of fails) note(f, view);
