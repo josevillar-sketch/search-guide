@@ -35,11 +35,11 @@ The claude.ai project also keeps a "Where It Lives" register; it is the fuller m
 
 ChatGPT and Claude sessions pass work to each other through Google Docs, not through this repo:
 
-- **Hollis Dot Line - 2026-11-01** (personal Drive): the running message line. Each entry starts with an ID like `ROOM63-DOT-...` or `ROOM63-CLAUDE-...` and a date. Standing approvals are recorded here.
+- **Hollis Dot Line 2 - 2026-11-12 - Portela J**: the active running message line for all new entries. Each entry starts with an ID like `ROOM63-DOT-...` or `ROOM63-CLAUDE-...` and a date. The first **Hollis Dot Line - 2026-11-01** is full and is now the preserved archive: read historical receipts there, but do not append, delete or truncate it. Standing approvals and earlier receipts remain in that archive; nothing is deleted.
 - **Room 63 | Cloud Continuation Ledger** and **Cloud Continuation Protocol for Other Chats**: open items and the rules for picking up another chat's work.
 - **AP Research — Conference Command Center — 2026-27 — Teacher Only**: conference records.
 
-All four are teacher-only and hold student names. Read them in Drive when needed; never copy them here.
+These documents are teacher-only and hold student names. Read them in Drive when needed; never copy them here.
 
 **Reply style (Mr. Portela's Low-Reading Mode, set 2026-11-01):** at most five short bullets, with DONE / BLOCKED / NEXT where useful. One decision asked at a time. Put detail in the records, not in the reply.
 
@@ -52,7 +52,7 @@ What that means in this repo:
 **Do without asking**
 - Check, log, and merge additions to `RESOURCES.md`, `BOOKS.md`, and `classroom/`. Open the pull request, run the checks, merge it.
 - Fix what you find: a dead link, a wrong edition, a claim a source no longer supports. Say what you fixed.
-- After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post an entry to the Hollis Dot Line.
+- After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post any new entry to Hollis Dot Line 2. The first Line is the archive and receives no new entries.
 - Close your own loose ends before reporting. A reply that ends in a list of things you could have done is unfinished.
 - Verify before you state. Run the demo, open the page, hash the file. Say which of those you did.
 - Audit after you build. Re-read what you made against the primary source, not against your memory of it. The 2026-11-12 audit found a claim about a College Board guide that had never been checked against the guide; read the document before describing it.

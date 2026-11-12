@@ -2,6 +2,8 @@
 
 ## Current source and scope
 
+Coordination routing, updated from the user's November 12 notice: all new entries use **Hollis Dot Line 2 - 2026-11-12 - Portela J**. The first Line reached Google's size limit and remains the intact historical archive. This routing update changes no application source or existing document content.
+
 The Search Guide is published as version 5 at its existing private address. Published source is `40809a56b3b034e4179f1deba64fae05ccc8d8df`; publication receipt is merged in PR #20. This includes the PR #16 recovery/navigation integration and PR #19's phone label-wrap correction, preserving independent classroom, resource, book, and design-system work. The original integration baseline was `847dec07` on default branch `claude/dazzling-hopper-eexjgx`.
 
 Current published `index.html`: 359,601 bytes; SHA-256 `22ced45d4709339f9523dfc2314d41e91097738211d5d1fb736b7d86867bd716`. Student DATA is byte-identical to the baseline, SHA-256 `13650200ffbdcf49b705d6776afbd6ffcd22e3c50d1768c3e98199167d1e3011`. All inline JavaScript is byte-identical to PR #16; the later application delta is label markup/CSS only. No student question was written, rewritten, narrowed, completed, or suggested. The standalone page requires no application build or runtime dependency. Historical PR #16 source was 359,421 bytes, hash `9e9d81c38f93fd6ffd10d0676994f251df241f397604c841b1af563b00f6cf65`; its checks below retain that scope.
