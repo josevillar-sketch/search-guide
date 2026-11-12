@@ -101,6 +101,8 @@ label{font:700 16px/22px var(--body)}
 .steplabel{display:flex;gap:12px;align-items:center}
 .steplabel b{font:700 13px/18px var(--mono);color:var(--ink);background:transparent;border:1.5px solid var(--edge);border-radius:6px;padding:2px 8px}
 .desk[data-on="true"] #step3 .steplabel b{display:none}
+/* Before a period is picked, step 2 is hidden. The example slip is then not a third step, so it carries no number. */
+body:has(#step2[hidden]) #step3 .steplabel b{display:none}
 #periods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .chip{display:grid;justify-items:center;align-content:center;gap:2px;min-height:72px;min-width:0;padding:8px;text-align:center;background:var(--card);color:var(--ink);border:1.5px solid var(--edge);border-radius:6px;box-shadow:4px 4px 0 var(--drop);font:700 16px/20px var(--body);cursor:pointer}
 .chip svg{color:#d6ad55;margin-bottom:4px}
