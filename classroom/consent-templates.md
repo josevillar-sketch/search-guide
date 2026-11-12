@@ -5,12 +5,14 @@ subtitle: "AP Research · Mater Academy · English and Spanish"
 
 **For the student researcher. Do not hand this page to participants.**
 
-1. Do not use any form until your ethics review is approved and logged. No form, no data.
-2. Pick the forms your study needs. A participant under 18 needs **two**: the guardian permission form and the student assent form. An adult needs the adult consent form. An online survey uses the survey opening text as its first screen.
-3. Replace every [bracket] with your own details, then delete the brackets. Keep each form to one page.
-4. Give each family the language they read best. The English and Spanish forms say the same thing.
-5. Use plain words. If a ninth grader would not understand a sentence, rewrite it.
-6. Keep signed forms with your Process and Reflection Portfolio. Never post or share them.
+1. Do not use any form until Mr. Portela has approved your proposal and your instruments. College Board requires the teacher to review every proposal, survey, and set of interview questions before any data is collected. A study with more than minimal risk cannot be approved.
+2. Attach your draft forms, with your survey or interview questions, to item 9 of your Inquiry Proposal Form.
+3. If you plan to publish, enter a competition, or present your findings publicly outside this course, tell Mr. Portela now. College Board then requires approval from a registered institutional review board as well.
+4. Pick the forms your study needs. A participant under 18 needs **two**: the guardian permission form and the student assent form. An adult needs the adult consent form. An online survey uses the survey opening text as its first screen.
+5. Replace every [bracket] with your own details, then delete the brackets. Keep each form to one page.
+6. Give each family the language they read best. The English and Spanish forms say the same thing.
+7. Use plain words. If a ninth grader would not understand a sentence, rewrite it.
+8. Keep signed forms with your Process and Reflection Portfolio. College Board lists permissions among the documents it must hold. Never post or share them.
 
 These templates follow the structure of the public consent templates from the University of California, Berkeley, Committee for Protection of Human Subjects. They are a starting point. Mater Academy's review decides what your study needs.
 
@@ -42,7 +44,7 @@ I am a student in the AP Research course at Mater Academy. I am doing a research
 
 **Questions.** Please contact Mr. Portela at [school email] or the school at [school phone].
 
-This study was reviewed for Mater Academy by [reviewer name and role] on [date].
+This study was reviewed for Mater Academy by [Mr. Jose Portela, AP Research teacher] on [date].
 
 ☐ I give permission for my child to take part.  ☐ I do **not** give permission.
 [If recording:] ☐ I give permission for audio recording.  ☐ I do **not**.
@@ -81,7 +83,7 @@ Soy estudiante del curso AP Research en Mater Academy. Estoy realizando un estud
 
 **Preguntas.** Puede comunicarse con el Sr. Portela en [correo de la escuela] o con la escuela al [teléfono de la escuela].
 
-Este estudio fue revisado para Mater Academy por [nombre y cargo de quien revisó] el [fecha].
+Este estudio fue revisado para Mater Academy por [el Sr. Jose Portela, profesor de AP Research] el [fecha].
 
 ☐ Doy permiso para que mi hijo o hija participe.  ☐ **No** doy permiso.
 [Si hay grabación:] ☐ Doy permiso para la grabación de audio.  ☐ **No** doy permiso.
@@ -186,7 +188,7 @@ I am a student in the AP Research course at Mater Academy. I am doing a research
 
 **Questions.** Please contact Mr. Portela at [school email].
 
-This study was reviewed for Mater Academy by [reviewer name and role] on [date].
+This study was reviewed for Mater Academy by [Mr. Jose Portela, AP Research teacher] on [date].
 
 ☐ I agree to take part in this study.
 [If recording:] ☐ I agree to be audio recorded.  ☐ I do **not** agree to be recorded.
@@ -221,7 +223,7 @@ Soy estudiante del curso AP Research en Mater Academy. Estoy realizando un estud
 
 **Preguntas.** Puede comunicarse con el Sr. Portela en [correo de la escuela].
 
-Este estudio fue revisado para Mater Academy por [nombre y cargo de quien revisó] el [fecha].
+Este estudio fue revisado para Mater Academy por [el Sr. Jose Portela, profesor de AP Research] el [fecha].
 
 ☐ Acepto participar en este estudio.
 [Si hay grabación:] ☐ Acepto que se grabe el audio.  ☐ **No** acepto que se me grabe.
@@ -248,7 +250,7 @@ I am a student in the AP Research course at Mater Academy. This survey is part o
 - **Risks:** [plain words from your risk screen].
 - **Questions:** contact my teacher, Mr. Portela, at [school email].
 
-This study was reviewed for Mater Academy by [reviewer name and role] on [date].
+This study was reviewed for Mater Academy by [Mr. Jose Portela, AP Research teacher] on [date].
 
 ☐ I have read this, and I agree to take part.  ☐ I do not want to take part. [This choice ends the survey.]
 
@@ -264,6 +266,6 @@ Soy estudiante del curso AP Research en Mater Academy. Esta encuesta es parte de
 - **Riesgos:** [palabras sencillas de tu evaluación de riesgos].
 - **Preguntas:** comunícate con mi profesor, el Sr. Portela, en [correo de la escuela].
 
-Este estudio fue revisado para Mater Academy por [nombre y cargo de quien revisó] el [fecha].
+Este estudio fue revisado para Mater Academy por [el Sr. Jose Portela, profesor de AP Research] el [fecha].
 
 ☐ He leído esto y acepto participar.  ☐ No quiero participar. [Esta opción termina la encuesta.]
