@@ -16,7 +16,8 @@
     "test:mobile:chromium": "node tools/mobile.cjs --browser=chromium",
     "test:regressions": "node tools/regressions.cjs",
     "test:workbench": "node tools/workbench.cjs",
-    "test:smoke": "node tools/smoke.cjs"
+    "test:smoke": "node tools/smoke.cjs",
+    "test:download": "node tools/download.test.cjs"
   },
   "engines": {
     "node": ">=18"
