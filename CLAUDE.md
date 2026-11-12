@@ -76,7 +76,7 @@ What that means in this repo:
 | `DESIGN.md` | The design standard for everything students see, on screen and on paper: colors, type, shapes, components, and the rules with names. Read it before building or restyling anything. `tools/design_check.cjs` measures those rules on the rendered pages. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
 | `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
-| `classroom/` | AP Research materials. Printable handouts: the own-data-or-public-data guide, the method planning grid, the method section checklist, the SDA lab, the ethics packet (risk screen, data plan with recruitment script, survey and interview question check), and the consent and assent templates (Word, English and Spanish). Also `research-library.html`, the student-facing page of approved resources, published as a private claude.ai artifact at https://claude.ai/artifact/JBuyyEu4YsMEezCL1R3xUG (republish to that address after any change; Mr. Portela decides when to share it); every link on it must be in the verified part of `RESOURCES.md`, and `tools/check_links.py` enforces that. Rebuild with `python3 classroom/build.py`, then `NODE_PATH="$(npm root -g)" node classroom/build-pdf.cjs` (prints the PDFs and fails if a handout changes page count, a font is missing, or content runs off the sheet), and `classroom/build-consent.sh`. One look for everything students see: Fraunces, Atkinson Hyperlegible and Space Mono, in the ink, brass and pine of `index.html`. The Word consent templates stay in a system font on purpose, so they open the same in Word and Google Docs. |
+| `classroom/` | AP Research materials. Printable handouts: the own-data-or-public-data guide, the method planning grid, the method section checklist, the SDA lab, the ethics packet (risk screen, data plan with recruitment script, survey and interview question check), and the consent and assent templates (Word, English and Spanish). Also `research-library.html`, the student-facing page of approved resources, published as a private claude.ai artifact at https://claude.ai/artifact/JBuyyEu4YsMEezCL1R3xUG (republish to that address after any change; Mr. Portela decides when to share it); every link on it must be in the verified part of `RESOURCES.md`, and `tools/check_links.py` enforces that. Rebuild with `python3 classroom/build.py`, then `NODE_PATH="$(npm root -g)" node classroom/build-pdf.cjs` (prints the PDFs and fails if a handout changes page count, a font is missing, or content runs off the sheet), and `classroom/build-consent.sh` (which also fails if a consent form runs past one page). One look for everything students see: Fraunces, Atkinson Hyperlegible and Space Mono, in the ink, brass and pine of `index.html`. The Word consent templates use Georgia and Verdana, the fallback faces `DESIGN.md` names, so they open the same in Word and Google Docs. |
 | `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests), `check_links.py` (every link in the resources log and handouts), `check_privacy.py` (fails while the repository is public), `design_check.cjs` (the `DESIGN.md` floor on every page and handout, phone and desktop, light and dark). |
 
 ## Before pushing changes to `index.html`
@@ -94,5 +94,13 @@ This covers `index.html`, `classroom/research-library.html` and every handout. I
 ```sh
 NODE_PATH="$(npm root -g)" node tools/design_check.cjs
 ```
+
+Or run everything at once, privacy first. It must end with ALL CHECKS PASS.
+
+```sh
+sh tools/check_all.sh
+```
+
+A new handout or page is not done until it is listed in `classroom/build-pdf.cjs` (with its page count) and in the `SURFACES` list of `tools/design_check.cjs`.
 
 The standard is `DESIGN.md`. It was set on 2026-11-12 from the Impeccable design guidance Mr. Portela asked for (github.com/pbakaus/impeccable) and the Room 63 design system. The `/impeccable` command itself cannot be installed in a cloud session, so the rules live in this repo instead. If a new page needs to break a rule, change `DESIGN.md` and say why; do not quietly add an exception to the check.

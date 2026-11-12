@@ -31,6 +31,7 @@ const SURFACES = [
   { name: "handout question-check", file: "classroom/question-check.html", print: true },
 ];
 const VIEWS = [
+  { w: 320, h: 700, scheme: "light" }, // the narrowest screen a page must reflow to
   { w: 380, h: 800, scheme: "light" },
   { w: 380, h: 800, scheme: "dark" },
   { w: 1280, h: 900, scheme: "light" },
@@ -278,6 +279,17 @@ function renderedChecks(opts) {
         for (const e of errors) note("script error: " + e, view);
         await ctx.close();
       }
+    }
+    // A school network may block the web fonts. The fallback faces are wider, and the page must still fit.
+    if (!s.state) {
+      const ctx = await browser.newContext({ viewport: { width: 380, height: 800 } });
+      await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
+      const page = await ctx.newPage();
+      await page.goto("file://" + path.join(ROOT, s.file) + (s.hash ? "#" + s.hash : ""));
+      await page.waitForTimeout(600);
+      const wide = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      if (wide > 1) note(`overflow with the web fonts blocked: the page scrolls sideways by ${wide}px`, "380 fallback fonts");
+      await ctx.close();
     }
     console.log(`${found.size ? "FAIL" : "ok  "} ${s.name}${found.size ? "  " + found.size + " finding" + (found.size === 1 ? "" : "s") : ""}`);
     for (const [f, views] of found) console.log(`       ${f}   [${[...views].join(", ")}]`);

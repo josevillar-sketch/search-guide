@@ -152,7 +152,7 @@ A warm, low-chroma paper palette with three inks: brass for the one action and f
 **Character:** A heavy, slightly eccentric serif for the voice, over a sans drawn so that no two letters can be confused. The mono face is for labels, call numbers, search strings and dates: things a student copies exactly.
 
 ### Hierarchy
-- **Display** (900, 28px/32px on the Search Guide, up to 6rem on the Library masthead): page titles. Uppercase on screen.
+- **Display** (900): page titles. Uppercase on screen. The Search Guide welcome runs from 40px to 88px before a period is picked and folds to 20px on the desk; the Library masthead runs up to 6rem; a handout title is 31pt.
 - **Headline** (650, 21px/26px): section headings such as "Seven checks".
 - **Title** (650, 18px/24px): card and block titles.
 - **Body** (400, 17px/26px on screen, 10pt/1.4 in print): everything a student reads. Measure 45 to 75 characters.
@@ -165,11 +165,13 @@ A warm, low-chroma paper palette with three inks: brass for the one action and f
 
 **The Banned Faces Rule.** Inter, Roboto and Arial never appear, in any file.
 
+**The Fallback Rule.** Where a web font cannot load, the named fallbacks carry the page: Georgia for Fraunces, Verdana for Atkinson Hyperlegible, Courier New for Space Mono. The Word consent forms are set in Georgia and Verdana on purpose, because families open them on any computer. Every page must still fit a phone with the web fonts blocked.
+
 **The Plain Punctuation Rule.** No en dash, no em dash, no emoji, in pages or in the source.
 
 ## Layout
 
-An 8px grid: 8, 16, 24, 32, 48. One column on a phone with a 16px gutter. From 700px the shell is 808px wide; from 1024px it is 1184px and the desk sits beside the work in two columns. The Library is one reading column up to 62rem with a sticky drawer label beside it on wide screens.
+An 8px grid: 8, 16, 24, 32, 48. One column on a phone with a 16px gutter, reflowing down to 320px without a sideways scroll. From 700px the shell is 808px wide; from 1024px it is 1184px and the desk sits beside the work in two columns. The Library is one reading column up to 62rem with a sticky drawer label beside it on wide screens.
 
 Printed handouts are US letter with 0.5in by 0.55in margins. Each `.page` is one sheet; on screen it is drawn as a sheet of paper on the ground color. A one-page handout stays one page: `classroom/build-pdf.cjs` fails the build if the count changes.
 
@@ -223,15 +225,20 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 ### Signature components
 - **The ficha.** The student's question on a cream card with a large Fraunces date, a red margin rule and a row of seven dots.
 - **The slip.** One paper card with an ink edge and a pressed shadow. An oxide rule under its head, the student's question in Fraunces at 23px to 32px beside its quotation bar, then the three searches as numbered rows divided by hairlines, each with a boxed Fraunces numeral. The searches are rows on the card, never cards inside it. On paper the slip prints flat on one page.
-- **The stamp.** A double-edged inked label, slightly rotated: Cite it, Don't cite, Ask first, Tool.
+- **The stamp.** A double-edged inked label, slightly rotated: Cite it, Don't cite, Ask first, Tool, Example. On a handout it marks the page a student must not copy.
 - **The ruled note.** Deeper paper between two hairlines, for "Mind this" and for the notes on a handout.
 - **The 63 seal.** A double ring with a Fraunces `63`, top right of every printed sheet.
+- **The numeral.** A boxed Fraunces numeral with a small pressed shadow marks anything a student does in order: the three searches, the seven checks. A check that passes inks its numeral.
+- **The plate.** A brass square with a Fraunces letter: the Library's drawers, the two roads on the decision guide.
+- **The rule box.** A sheet's one rule, in Fraunces, inside a full ink frame. A sign-off line inside the frame keeps the reading face, and each label stays with its blank.
 - **The slug.** One mono line under a handout's title rule saying who the sheet is for.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** run `NODE_PATH="$(npm root -g)" node tools/design_check.cjs` before any page or handout is pushed. It must print PASS.
+- **Do** run `NODE_PATH="$(npm root -g)" node tools/design_check.cjs` before any page or handout is pushed. It must print PASS. `sh tools/check_all.sh` runs it with every other check.
+- **Do** frame a warning in oxide all the way round, and rule a note above and below.
+- **Do** design the states a student reaches by acting (form open, version saved, a check passed), not only the page as it loads.
 - **Do** draw every icon as inline SVG, stroked at about 2px in the current color.
 - **Do** give every tinted block a rule or border too, so a printer with background graphics off loses nothing.
 - **Do** make every tap target on a phone at least 44px in both directions, apart from a link inside a sentence.
