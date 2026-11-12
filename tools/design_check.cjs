@@ -23,6 +23,9 @@ const SURFACES = [
   { name: "handout planning-grid", file: "classroom/method-planning-grid.html", print: true },
   { name: "handout checklist", file: "classroom/method-section-checklist.html", print: true },
   { name: "handout sda-lab", file: "classroom/sda-lab.html", print: true },
+  { name: "handout risk-screen", file: "classroom/risk-screen.html", print: true },
+  { name: "handout data-plan", file: "classroom/data-plan.html", print: true },
+  { name: "handout question-check", file: "classroom/question-check.html", print: true },
 ];
 const VIEWS = [
   { w: 380, h: 800, scheme: "light" },
