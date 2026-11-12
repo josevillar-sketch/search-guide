@@ -1,9 +1,21 @@
 #!/bin/sh
+set -eu
 # Rebuilds consent-templates.docx from consent-templates.md. Run from this folder.
 # The forms are Word files that families and students edit, so they use the two faces every computer has and that
 # DESIGN.md names as the fallbacks: Georgia for titles, Verdana for text. Same ink, same title rule as the handouts.
-# If LibreOffice is installed, the script also checks that every form still fits on its own page.
-pandoc -f markdown+hard_line_breaks consent-templates.md -o consent-templates.docx && python3 - <<'PY'
+# A supported soffice/libreoffice renderer is required. Both the stress copy and
+# the actual distribution render must keep every form on its own page.
+for required in pandoc python3 pdfinfo; do
+  if ! command -v "$required" >/dev/null 2>&1; then
+    echo "BLOCKED consent: missing build dependency $required"; exit 1
+  fi
+done
+renderer=$(command -v soffice || command -v libreoffice || true)
+if [ -z "$renderer" ]; then
+  echo "BLOCKED consent: renderer unavailable; page check did not run"; exit 1
+fi
+pandoc -f markdown+hard_line_breaks consent-templates.md -o consent-templates.docx
+python3 - <<'PY'
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml import OxmlElement
@@ -45,6 +57,14 @@ for st in d.styles:
     if st.name == 'Subtitle':
         st.font.size = Pt(10); st.font.bold = True; st.font.color.rgb = BRASS
         pf.alignment = WD_ALIGN_PARAGRAPH.LEFT; pf.space_after = Pt(16)
+# The Spanish guardian form has more prose. Keep its 10pt text, line spacing,
+# choice boxes and signature heights; reduce only redundant paragraph-after air.
+spanish_guardian = False
+for par in d.paragraphs:
+    if par.style.name == 'Heading 1':
+        spanish_guardian = par.text.startswith('Formulario de permiso para padres o tutores')
+    elif spanish_guardian and par.style.name in ('Normal', 'Body Text', 'First Paragraph', 'Compact'):
+        par.paragraph_format.space_after = Pt(2)
 # ---- Choices and signatures are places a parent writes, so they are drawn, not typed.
 # A choice is a ruled box on its own line (a typed box character changes size from one computer to the next,
 # and two opposite choices on one line invite a tick between them). A name, signature or date is a full-width rule.
@@ -162,9 +182,16 @@ for tbl in tables:
 d.save('consent-templates.docx')
 PY
 # Page check. Verdana and Georgia may not be installed where this runs, and LibreOffice would then swap in a narrower
-# face and undercount. The check copy names DejaVu Sans and DejaVu Serif, which are as wide or wider, so a pass here holds.
-if command -v soffice >/dev/null 2>&1; then
-  tmp=$(mktemp -d) && python3 - "$tmp" <<'PY'
+# face and undercount. The DejaVu copy stresses horizontal fit; vertical substitution metrics can still differ,
+# so the actual distribution DOCX is also rendered and checked separately below.
+if [ -n "${CONSENT_OUT:-}" ]; then
+  mkdir -p "$CONSENT_OUT"; chmod 700 "$CONSENT_OUT"
+  tmp=$(mktemp -d "$CONSENT_OUT/consent-XXXXXX")
+else
+  tmp=$(mktemp -d)
+  trap 'rm -rf "$tmp"' 0
+fi
+python3 - "$tmp" <<'PY'
 import sys, zipfile
 src, dst = zipfile.ZipFile('consent-templates.docx'), zipfile.ZipFile(sys.argv[1] + '/check.docx', 'w', zipfile.ZIP_DEFLATED)
 for item in src.infolist():
@@ -174,8 +201,20 @@ for item in src.infolist():
     dst.writestr(item, data)
 dst.close()
 PY
-  soffice --headless --convert-to pdf --outdir "$tmp" "$tmp/check.docx" >/dev/null 2>&1
+  "$renderer" --headless --convert-to pdf --outdir "$tmp" "$tmp/check.docx" >"$tmp/render.log" 2>&1
+  if [ ! -s "$tmp/check.pdf" ]; then
+    echo "FAIL consent: renderer did not produce a fresh PDF"; exit 1
+  fi
   pages=$(pdfinfo "$tmp/check.pdf" 2>/dev/null | awk '/^Pages/{print $2}')
   if [ "$pages" = "9" ]; then echo "ok   consent-templates.docx  9 pages: cover, six forms, two survey screens"
   else echo "FAIL consent-templates.docx  $pages pages, expected 9: a form has run onto a second page"; exit 1; fi
-else echo "note: LibreOffice is not installed, so the one-page check did not run"; fi
+  # Also retain the actual distribution DOCX as rendered by this runtime. Its fonts may be substituted;
+  # this is distinct from the deliberately wider DejaVu check and from Microsoft Word on a family computer.
+  mkdir "$tmp/distribution"
+  "$renderer" --headless --convert-to pdf --outdir "$tmp/distribution" consent-templates.docx >"$tmp/distribution/render.log" 2>&1
+  actual="$tmp/distribution/consent-templates.pdf"
+  if [ ! -s "$actual" ]; then echo "FAIL consent: actual distribution render is missing"; exit 1; fi
+  actual_pages=$(pdfinfo "$actual" | awk '/^Pages/{print $2}')
+  if [ "$actual_pages" != "9" ]; then echo "FAIL consent: distribution render has $actual_pages pages, expected 9"; exit 1; fi
+  echo "ok   consent distribution render  9 pages: runtime conversion; fonts may be substituted"
+  if command -v pdffonts >/dev/null 2>&1; then pdffonts "$actual" >"$tmp/distribution/fonts.txt"; fi
