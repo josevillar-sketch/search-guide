@@ -101,6 +101,6 @@ Or run everything at once, privacy first. It must end with ALL CHECKS PASS.
 sh tools/check_all.sh
 ```
 
-A new handout or page is not done until it is listed in `classroom/build-pdf.cjs` (with its page count) and in the `SURFACES` list of `tools/design_check.cjs`.
+A new handout or page is not done until it is listed in `classroom/build-pdf.cjs` (with its page count) and in the `SURFACES` list of `tools/design_check.cjs`. `index.html` must stay under 360,000 bytes (a `workbench.cjs` test); on 2026-11-12 it was about 200 bytes under, so new styles there have to replace old ones, not add to them.
 
 The standard is `DESIGN.md`. It was set on 2026-11-12 from the Impeccable design guidance Mr. Portela asked for (github.com/pbakaus/impeccable) and the Room 63 design system. The `/impeccable` command itself cannot be installed in a cloud session, so the rules live in this repo instead. If a new page needs to break a rule, change `DESIGN.md` and say why; do not quietly add an exception to the check.
