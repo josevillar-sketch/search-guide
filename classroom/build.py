@@ -416,6 +416,136 @@ page("oral-defense-questions.html", "Oral defense: the questions", f"""
 </section>
 """)
 
+# ---------- 11. AP Seminar: task check for the IRR and the IWA ----------
+# The middle column is College Board's wording, AP Seminar Course and Exam Description (2024), student task directions, pages 56 and 64.
+IRR = [
+ "Identify an area of investigation and explain its relationship to the overall problem or issue.",
+ "Summarize, explain, analyze and evaluate the main ideas and reasoning in the chosen sources.",
+ "Demonstrate you have evaluated the credibility of your chosen sources and selected evidence relevant to the inquiry.",
+ "Identify, compare and interpret a range of perspectives about the problem or issue.",
+ "Cite all sources that you have used, and include a list of works cited or a bibliography.",
+ "Use correct grammar and a style appropriate to an academic audience.",
+]
+IWA = [
+ "Explain the significance or importance of your research question by situating it within a larger context.",
+ "Establish a well-organized argument that links claims and evidence and leads to a specific and plausible conclusion, resolution or solution that addresses your research question.",
+ "Integrate at least one of the stimulus materials as part of your argument.",
+ "Evaluate different perspectives by considering objections to them, and their limitations and/or implications.",
+ "Include relevant evidence from credible sources to support your claims. You should include evidence from scholarly work.",
+ "Cite all sources that you have used, including the stimulus materials, and include a list of works cited or a bibliography.",
+ "Use correct grammar and a style appropriate for an academic audience.",
+]
+SFOOT = FOOT.replace("AP Research","AP Seminar")
+def rows(items):
+    return "".join(f'<tr><td>{a}</td><td></td></tr>' for a in items)
+page("seminar-task-check.html", "AP Seminar task check", f"""
+<section class="page">
+<h1>Research Report check</h1>
+<p class="slug">AP Seminar · Performance Task 1 · Your own check of your own report</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<div class="band"><b>College Board's directions.</b> You present your findings "in a well-researched and well-written report in which you" do the six things below. The words in the left column are College Board's own, from the student task directions.</div>
+<table>
+<tr><th>In my report, I</th><th style="width:2in">Where: page or paragraph</th></tr>
+{rows(IRR)}
+</table>
+<div class="two"><div>
+<h2 class="lab">Length and form</h2>
+{checks([("1,200 words or fewer.","<span style='white-space:nowrap'>My count is <span class='fill in' style='width:1.1in'></span>.</span>"),
+("Counted correctly.","Titles, sub-headings, and in-text citations count. Footnoted citations, the bibliography, and text in figures or tables do not."),
+("No name.","I removed every reference to my name, my school, and my teacher.")])}
+</div><div>
+<h2 class="lab">My own work</h2>
+{checks([("Entirely mine.","My team shares a question. The report is my own work."),
+("Sources shown.","I gave my teacher evidence of the original sources I found and read."),
+("Checkpoint done.","I discussed my research and sources with my teacher.")])}
+</div></div>
+<div class="rule">This sheet checks that each part is present. It does not judge quality, and nobody fills it in for you.</div>
+{SFOOT.format(x="Individual Research Report check")}
+</section>
+<section class="page">
+<h1>Written Argument check</h1>
+<p class="slug">AP Seminar · Performance Task 2 · Your own check of your own argument</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<div class="band"><b>College Board's directions.</b> You compose "a coherent, convincing and well-written argument in which you" do the seven things below. The words in the left column are College Board's own, from the student task directions.</div>
+<table>
+<tr><th>In my argument, I</th><th style="width:2in">Where: page or paragraph</th></tr>
+{rows(IWA)}
+</table>
+<div class="two"><div>
+<h2 class="lab">Length and form</h2>
+{checks([("2,000 words or fewer.","<span style='white-space:nowrap'>My count is <span class='fill in' style='width:1.1in'></span>.</span>"),
+("Counted correctly.","Titles, sub-headings, and in-text citations count. Footnoted citations, the bibliography, and text in figures or tables do not."),
+("No name.","I removed every reference to my name, my school, and my teacher.")])}
+</div><div>
+<h2 class="lab">Stimulus and checkpoints</h2>
+{checks([("Two stimulus materials.","My question relates to a theme that connects at least two of them."),
+("Sources shown and discussed.","My teacher has evidence of the sources I read, and we discussed them."),
+("Outline presented.","I presented and discussed my argument outline with my teacher.")])}
+</div></div>
+<div class="rule">This sheet checks that each part is present. It does not judge quality, and nobody fills it in for you.</div>
+{SFOOT.format(x="Individual Written Argument check")}
+</section>
+""")
+
+# ---------- 12. AP Seminar: oral defense sample questions and notes ----------
+# College Board's sample questions, AP Seminar Course and Exam Description (2024), pages 58 and 65 to 66. AI row: page 39.
+SOD1 = [
+ "Student A, how did the group decide to include Student B's perspective/lens/conclusions into the overall presentation?",
+ "Student A, give one specific way that your thinking changed as a result of learning about Student B's findings.",
+ "Reflecting on your colleagues' work, which one had the greatest impact on your overall understanding of the problem your group identified?",
+ "What is an example of a compelling argument from one of your peer's individual reports that you decided to exclude from your team presentation and why?",
+ "What is a way in which your team's resolution makes you think differently about your own individual research?",
+ "Describe an argument from one of your peer's individual reports that made you think differently about your team's solution or conclusion?",
+ "If you had another team member, what other perspectives or limitations could they have researched that would have made a useful contribution to the project?",
+]
+SOD2 = [
+ ("Reflection on the research process",[
+  "How did some preliminary information you gathered inform your research?",
+  "What evidence did you gather that you didn't include? Why did you choose not to include it?",
+  "How did your research question evolve as you moved through the research process?",
+  "Did your research go in a different direction than you originally expected?",
+  "What information did you need that you weren't able to find or locate?",
+  "How did you approach and synthesize the differing perspectives in order to reach a conclusion?"]),
+ ("Extending argumentation through effective questioning and inquiry",[
+  "What additional questions emerged from your research? Why are these questions important?",
+  "What are the implications of your findings to your community?",
+  "How is your conclusion in conversation with the body of literature or other research sources you examined?",
+  "How did you use the conclusions or questions of others to advance your own research?"]),
+]
+def ql(qs): return "<ol>" + "".join(f"<li>{q}</li>" for q in qs) + "</ol>"
+page("seminar-oral-defense-questions.html", "AP Seminar oral defense: sample questions", f"""
+<section class="page">
+<h1>Oral defense: sample questions</h1>
+<p class="slug">AP Seminar · Both performance tasks · Asked by your teacher after you present</p>
+<div class="band"><b>These are examples only.</b> College Board says your teacher may ask you different questions. The wording below is College Board's, from the student task directions in the Course and Exam Description. Be ready to answer with specific details about your own work.</div>
+<h2 class="lab">Team presentation: one question for each team member</h2>
+<p>You reflect on your team's collaboration and defend its work. You may be asked about any part of the presentation or research, including what a teammate researched or presented.</p>
+{ql(SOD1)}
+<h2 class="lab">Individual presentation: two questions, one from each category</h2>
+{"".join(f'<h3>{t}</h3>{ql(qs)}' for t,qs in SOD2)}
+<div class="rule">College Board allows no use of AI to prepare for the oral defense. You may not use it to generate possible answers. Your answers come from your own work.</div>
+{SFOOT.format(x="Oral defense sample questions")}
+</section>
+<section class="page">
+<h1>Oral defense: my evidence</h1>
+<p class="slug">Your own notes, in your own words</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<p class="lede">Do not write answers to memorize. Note where in your own work the evidence is, so that you can speak from it.</p>
+<table>
+<tr><th style="width:1.9in">Task 1, with my team</th><th>Specific details I can point to: reports, dates, decisions</th></tr>
+<tr><td class="q">What each teammate found<small>I have read every report</small></td><td style="height:1.3in"></td></tr>
+<tr><td class="q">How we decided<small>what we kept, what we left out, and why</small></td><td style="height:1.3in"></td></tr>
+</table>
+<table>
+<tr><th style="width:1.9in">Task 2, on my own</th><th>Specific details I can point to: sources, drafts, pages</th></tr>
+<tr><td class="q">My research process<small>what changed, and what I left out</small></td><td style="height:1.3in"></td></tr>
+<tr><td class="q">Beyond my argument<small>new questions, and what my findings mean for others</small></td><td style="height:1.3in"></td></tr>
+</table>
+<div class="rule">Your teacher gives you the list of possible questions, not the exact ones you will be asked. Be prepared to answer every one.</div>
+{SFOOT.format(x="Oral defense · my evidence")}
+</section>
+""")
+
 # ---------- 5. Research Library (student page; published as an artifact) ----------
 # Every link here must also be in the verified part of RESOURCES.md; tools/check_links.py enforces it.
 NEEDS = [("start","A","Start","Start here"),("data","B","Find data","Find data that already exists"),("method","C","Method","Choose and justify a method"),

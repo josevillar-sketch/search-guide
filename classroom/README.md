@@ -13,6 +13,8 @@ For Mr. Portela. These are teacher notes, not a student page. Every piece is bui
 | Drafting the paper | writing the method section | `method-section-checklist` (1 page) | A self-check and a peer check against College Board's wording. |
 | Before a draft is submitted | checking the whole paper | `paper-elements-check` (1 page) | The six required elements located by page, and the word count, in College Board's own words. |
 | After the paper | preparing to present | `oral-defense-questions` (2 pages: the official questions, a notes page) | A map from each question group to evidence in the student's own portfolio. No scripted answers. |
+| AP Seminar, before the report or argument is submitted | checking the whole piece | `seminar-task-check` (2 pages: the Individual Research Report, the Individual Written Argument) | Each part College Board's task directions name, located by page or paragraph, with the word limit and the required checkpoints. |
+| AP Seminar, before either presentation | preparing to defend | `seminar-oral-defense-questions` (2 pages: College Board's sample questions, a notes page) | The sample questions for the team defense and the individual defense, and where the student's own evidence is. College Board says they are examples only. |
 | Any time | looking for a source or a tool | `research-library.html` (the published page) | Nothing to collect. It points only to resources verified in `RESOURCES.md`. |
 
 ## What College Board requires of you
