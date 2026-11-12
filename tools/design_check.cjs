@@ -4,6 +4,7 @@
 // desktop width, light and dark, and measures the rules in DESIGN.md on the rendered page. Exit 1 on any failure.
 // It reports selectors only, never page text, so no student name or question reaches the output.
 const { launchHarness } = require("./browser-harness.cjs");
+const { fontSamples, forceFallbackFonts, inspectRenderedFonts } = require("./rendered-fonts.cjs");
 const fs = require("fs");
 const path = require("path");
 
@@ -280,6 +281,9 @@ function renderedChecks(opts) {
         if (s.state) await enterState(page, s.state);
         if (media === "print") await page.emulateMedia({ media: "print" });
         const view = media === "print" ? "print" : `${v.w} ${v.scheme}`;
+        const fontProof = await inspectRenderedFonts(page, await fontSamples(page));
+        for (const failure of fontProof.failures) note(failure, view);
+        if (v.w === 320 && media === "screen") console.log("fonts actually used (normal): " + JSON.stringify(fontProof.evidence));
         const fails = await page.evaluate(renderedChecks, {
           phone: v.w < 500, print: media === "print", sheets: !!s.print,
           stripeAllow: [".q", ".q-rec", "blockquote"], // a quoted question keeps its quotation bar
@@ -297,6 +301,9 @@ function renderedChecks(opts) {
       await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
       const page = await ctx.newPage();
       await page.goto(harness.baseURL + "/" + s.file + (s.hash ? "#" + s.hash : ""));
+      const fontProof = await inspectRenderedFonts(page, await forceFallbackFonts(page), { fallback: true });
+      for (const failure of fontProof.failures) note(failure, "380 fallback fonts");
+      console.log("fonts actually used (fallback): " + JSON.stringify(fontProof.evidence));
       await page.waitForTimeout(600);
       const wide = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
       if (wide > 1) note(`overflow with the web fonts blocked: the page scrolls sideways by ${wide}px`, "380 fallback fonts");

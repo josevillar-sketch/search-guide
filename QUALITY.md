@@ -125,3 +125,18 @@ The existing `npm test` run exercised all suites on this unchanged application h
 Native iPad Safari/WebKit and VoiceOver remain unverified; Chromium viewport and keyboard evidence is bounded. Distribution is not changed by this candidate. Keep the Research Log as the record and keep downloaded private copies private.
 
 On the same final application hash, the six Search Guide design states and eight supplemental mobile Chromium scenarios passed. Independent bounded review reproduced the mixed-entry rejection before object-URL creation, with zero writes and unchanged storage, inspected all four safe phone crops, and verified the 12-context actual-font evidence. No remaining consequential defect was reproduced. Review evidence remains local at `/workspace/followup-review/download/review.json`; no generated artifact is part of the commit.
+
+
+## Rendered-font verification followup: November 12, 2026
+
+Baseline: `534bd1f2f99ca77aa6a9121acf029519521317c7` (PR 21). This is a verification-tools change. The application, DATA, RULE, classroom HTML and generated documents remain byte-identical to that baseline.
+
+A bounded Chromium probe reproduced the gap: `document.fonts.size` was zero, `document.fonts.check` returned true even for a deliberately absent family, and blocking font hosts still rendered locally installed Fraunces. The old fallback path therefore exercised the primary font on this machine. This was not evidence of a broken product font; it was a weak availability/fallback test.
+
+The shared helper now obtains positive-glyph font evidence from Chromium's `CSS.getPlatformFontsForNode`. Normal checks require each expected primary family to be used, whether supplied by the web or installed locally. Missing proof elements and zero glyphs fail. Fallback contexts remove primary families from the test page's tokens, explicit stacks and SVG text, then reject any remaining primary-family glyphs. Product source is not overridden or changed. The PDF builder uses actual glyph evidence instead of the weak FontFaceSet load/check gate.
+
+Seven real-browser font regressions passed on the exact current app; they are included in the existing `npm test` runner and available as `npm run test:font-gate`. The final helper also passed all nine handout PDF count/font checks in a disposable copy. All 16 existing design surfaces passed before the final readiness wait; their geometry checks and input bytes were unchanged. A final rerun covered all six Search Guide surfaces/states with the final helper and PR 21's exact 359,251-byte app. The retained non-app design sweep has that explicit readiness-wait delta limit. No 244-slip or other unaffected application suite was repeated for this tools-only edit.
+
+Actual normal samples used Fraunces, Atkinson Hyperlegible and Space Mono. Forced fallback samples used Liberation Serif, Noto Sans and Liberation Mono in this Linux runtime. All ten installed official-font/license files matched the previously recorded pinned Google Fonts source hashes. This does not assert literal Georgia/Verdana availability on Linux, successful web-font downloads, every glyph/weight/typography role, or WebKit behavior. Existing fallback coverage remains at 380px for non-interactive surfaces; the normal sweep retains its existing phone/desktop/state coverage.
+
+Private local evidence: ignored `test-results/font-integrity/` contains the before probe, seven-case results, full design and final app design logs, final PDF log, source/input hashes, official-font hash comparison and independent source review. No generated PDF, screenshot, browser state or student artifact is committed.
