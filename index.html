@@ -384,6 +384,32 @@ footer p{max-width:75ch}
 .just-saved #vl{animation:cardIn 220ms cubic-bezier(.2,.8,.2,1) 80ms both}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.just-saved *{animation:none!important}}
 @media (forced-colors:active){.dot[aria-pressed=true]::before{background:CanvasText}.w[data-l]::before{border-color:CanvasText}}
+/* The slip at full strength. Screen only, so the printed slip keeps its one-page layout.
+   Every move here is one the page already owns: the paper object with an ink edge and a pressed shadow (the ficha), the red rule under a card's head,
+   Fraunces carrying the student's own words, the inked stamp. The three searches are numbered rows on one card, not cards inside a card. */
+@media screen{
+  .slip{border:1.5px solid var(--page-drop);box-shadow:6px 6px 0 var(--page-drop);padding:20px 16px 24px;gap:28px}
+  .sliphead{border-bottom:2px solid var(--oxide);padding-bottom:14px;align-items:center}
+  .who{font:650 26px/30px var(--display);text-wrap:balance}
+  .example-tag{border:2px solid currentColor;border-radius:3px;outline:1px solid currentColor;outline-offset:2px;padding:4px 8px 3px;transform:rotate(-2.5deg)}
+  .slip .q{font:650 clamp(23px,calc(15px + 2.1vw),32px)/1.22 var(--display);letter-spacing:-.005em;padding-left:18px;border-left-width:4px;max-width:30ch;text-wrap:balance}
+  .slip .searches{gap:0;counter-reset:srch}
+  .slip .search{counter-increment:srch;background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:18px 0 20px;
+    display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;row-gap:8px}
+  .slip .search:last-child{padding-bottom:4px}
+  .slip .search>*{grid-column:2}
+  .slip .search::before{content:counter(srch);grid-column:1;grid-row:1/span 6;align-self:start;display:grid;place-items:center;width:44px;height:44px;
+    font:900 26px/1 var(--display);color:var(--ink);border:1.5px solid var(--page-drop);border-radius:6px;box-shadow:3px 3px 0 var(--page-drop)}
+  .slip .search .callno{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  .slip .dbname{font:650 21px/26px var(--display)}
+  .slip .words{font-size:17px;line-height:26px;padding:10px 14px}
+  .slip .tip{border-radius:0;border-block:1.5px solid var(--hair)}
+  .slip .tier{background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:12px 0 0}
+}
+@media screen and (min-width:1024px){
+  .slip{padding:32px 32px 36px;gap:32px}
+  .slip .q{max-width:32ch}
+}
 /* Print: Ctrl+P prints the open slip with the newest version; the teacher button prints one slip per page for a whole period, from the record. */
 @media print{
   :root:not(#print){--ground:#fff;--panel:#fff;--panel-2:#f2f2f2;--ink:#000;--mute:#333;--line:#999;--brass:#7a5410;--on-brass:#fff;--teal:#0f5e54;--plum:#6d3a73;--slip:#fff;
