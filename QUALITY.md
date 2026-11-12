@@ -46,6 +46,8 @@ The disposable full-repository run passed data, classroom HTML generation, conse
 
 ## Limits, delivery and recovery
 
+Implementation commit `d919d2a0ab666732da6d2bcd4f2abf40982979a9` was pushed to `codex/search-guide-recovery`. Draft [PR #16](https://github.com/josevillar-sketch/search-guide/pull/16) targets `claude/dazzling-hopper-eexjgx` from baseline `847dec07`. The PR contains code and verification/documentation source only. It is not merged or live; neither private claude.ai artifact was republished. Documentation-only delivery receipts do not change the tested HTML hash above.
+
 - The application scope is verified in installed Chromium, with authored-font and fallback-font checks. Automated scans do not establish full accessibility conformance, native iPad Safari, on-screen keyboard behavior, or VoiceOver usability.
 - Playwright WebKit is absent. The managed network previously denied its official download hosts. Authorization is present; no runtime installation or network-policy change is claimed.
 - External links and live CLI repository metadata require a working network/authentication route before their checks can be called verified. These technical limits do not reopen the resolved public-access decision.
