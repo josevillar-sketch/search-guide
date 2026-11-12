@@ -87,7 +87,8 @@ label{font:700 16px/22px var(--body)}
 .rchip input:checked+span svg{display:block}
 .rchip input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
 .rchip input:disabled+span{opacity:.6}
-.confirm{display:grid;gap:12px;background:var(--card-2);border-left:4px solid var(--oxide);border-radius:6px;padding:16px}
+/* A warning is framed in oxide all the way round. No block carries a stripe down one side. */
+.confirm{display:grid;gap:12px;background:var(--card-2);border:1.5px solid var(--oxide);border-radius:6px;padding:16px}
 .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
 /* Layout. Base is the phone (375); 700px is iPad portrait (820); 1024px is iPad landscape (1180). */
@@ -148,7 +149,7 @@ body.typing #desk-nav{position:static}
 
 /* Banners */
 #desk-alerts{display:grid;gap:8px}
-.banner{background:var(--card);color:var(--ink);border-left:4px solid var(--oxide);border-radius:6px;padding:12px 16px;display:grid;gap:12px}
+.banner{background:var(--card);color:var(--ink);border:1.5px solid var(--oxide);border-radius:6px;padding:12px 16px;display:grid;gap:12px}
 #rec-ask{border-left-color:var(--brass-text)}
 
 /* The ficha: the student's newest question on a paper card */
@@ -199,11 +200,12 @@ body.typing #desk-nav{position:static}
 #wb-form{display:grid;gap:24px}
 #wb-form>*{min-width:0}
 .fhead{display:grid;gap:8px}
-#wb-rule{border-left:4px solid var(--brass-text);padding-left:12px;font-size:15px;line-height:22px}
+/* Notes are ruled above and below, the same form as the notes on the handouts and the Library. */
+#wb-rule{border-block:1.5px solid var(--hair);padding-block:10px;font-size:15px;line-height:22px}
 #wb-draftnote,#wb-cap{background:var(--card-2);border-radius:6px;padding:8px 12px}
 .field{display:grid;gap:8px;min-width:0;align-content:start}
 #wb-reason-fix{display:grid;gap:8px}
-#wb-reason-line{border-left:4px solid var(--pine);padding-left:12px}
+#wb-reason-line{border-block:1.5px solid var(--hair);padding-block:10px}
 #wb-check{max-width:100%}
 #wb-empty{justify-self:start}
 .wb-pair{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:end}
@@ -237,7 +239,7 @@ del{background:var(--del-bg);color:var(--ink);text-decoration-line:line-through;
 ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:var(--pine);text-underline-offset:3px}
 
 /* Seven checks */
-#ck-new{font-weight:700;border-left:4px solid var(--brass-text);padding-left:12px}
+#ck-new{font-weight:700;border-block:1.5px solid var(--hair);padding-block:10px}
 #ck-count{font-weight:700}
 #ck-search{justify-self:start}
 #checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -257,7 +259,7 @@ ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;tex
 .repair-go{justify-self:start}
 #notes{display:grid;gap:12px}
 #notes-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-#notes-list li{display:grid;gap:4px;border-left:4px solid var(--brass-text);padding-left:12px}
+#notes-list li{display:grid;gap:4px;border-top:1.5px solid var(--hair);padding-top:10px}
 
 /* Circle it: color and line style both code the label */
 #circle{display:grid;gap:16px}
@@ -405,6 +407,18 @@ footer p{max-width:75ch}
   .slip .words{font-size:17px;line-height:26px;padding:10px 14px}
   .slip .tip{border-radius:0;border-block:1.5px solid var(--hair)}
   .slip .tier{background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:12px 0 0}
+}
+/* The welcome at full strength. Before a period is picked the title is the page; on the desk it folds back to the compact band. */
+@media screen{
+  #band:not(.compact){padding-block:32px 24px}
+  #band:not(.compact) .shell{gap:12px}
+  #band:not(.compact) h1{font-size:clamp(40px,calc(12px + 7.6vw),88px);line-height:.92;letter-spacing:-.012em}
+  #band:not(.compact) .lede{font-size:19px;line-height:28px;color:var(--ink)}
+  /* Numbered things carry the boxed Fraunces numeral: the three searches on the slip, the seven checks here. A check that passes inks its numeral. */
+  .check{grid-template-columns:40px minmax(0,1fr) 56px}
+  .ck-n{display:grid;place-items:center;width:40px;height:40px;padding:0;font:900 22px/1 var(--display);color:var(--ink);border:1.5px solid var(--page-drop);border-radius:6px;box-shadow:3px 3px 0 var(--page-drop)}
+  .check:has(.dot[aria-pressed="true"]) .ck-n{background:var(--ink);color:var(--card);box-shadow:1px 1px 0 var(--page-drop);transform:translate(2px,2px)}
+  .ck-name{font:650 19px/24px var(--display)}
 }
 @media screen and (min-width:1024px){
   .slip{padding:32px 32px 36px;gap:32px}

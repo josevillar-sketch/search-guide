@@ -237,7 +237,7 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 - **Do** make every tap target on a phone at least 44px in both directions, apart from a link inside a sentence.
 - **Do** balance headings (`text-wrap: balance`) and let body copy wrap `pretty`.
 - **Do** theme what the browser draws: selection, caret, focus ring, underline offset.
-- **Do** set numbers in tables with tabular figures.
+- **Do** set columns of figures with tabular numerals. Leave numbers inside a sentence alone: tabular figures pull "12" apart.
 - **Do** keep handout wording, student question text and every claim exactly as written. Design moves words; it does not change them.
 
 ### Don't:
