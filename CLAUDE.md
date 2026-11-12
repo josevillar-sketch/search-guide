@@ -43,6 +43,29 @@ All four are teacher-only and hold student names. Read them in Drive when needed
 
 **Reply style (Mr. Portela's Low-Reading Mode, set 2026-11-01):** at most five short bullets, with DONE / BLOCKED / NEXT where useful. One decision asked at a time. Put detail in the records, not in the reply.
 
+## Standing approval and proactive workflow
+
+On 2026-11-12 Mr. Portela wrote: "Keep it moving at the zenith level and bake proactivity into the workflow across all Work… I grant you all approvals and permissions you need and accept nothing but your absolute best work."
+
+What that means in this repo:
+
+**Do without asking**
+- Check, log, and merge additions to `RESOURCES.md`, `BOOKS.md`, and `classroom/`. Open the pull request, run the checks, merge it.
+- Fix what you find: a dead link, a wrong edition, a claim a source no longer supports. Say what you fixed.
+- After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post an entry to the Hollis Dot Line.
+- Close your own loose ends before reporting. A reply that ends in a list of things you could have done is unfinished.
+- Verify before you state. Run the demo, open the page, hash the file. Say which of those you did.
+
+**The approval does not change these**
+- Rules 1 to 5 above. Rule 1 is College Board policy; no approval lifts it.
+- Student privacy. No names or records leave the teacher-only Drive folders.
+- Nothing goes to students or families until Mr. Portela has seen it. Building and merging is not distributing.
+- Anything sent in Mr. Portela's name states only facts that are confirmed. Remove a guess before sending.
+- Other sessions' files. Grade entry, Pinnacle, Classroom, and other chats' records keep the approval rules written in their own records; this grant was given in the Search Guide session.
+- Site access denials and bot checks are not worked around.
+
+**Still follow Low-Reading Mode** for replies: short, DONE / BLOCKED / NEXT, one decision at a time.
+
 ## Files
 
 | File | Purpose |
@@ -52,7 +75,7 @@ All four are teacher-only and hold student names. Read them in Drive when needed
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
 | `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
 | `classroom/` | Printable AP Research handouts: the own-data-or-public-data guide, the method planning grid, the SDA lab, and the consent and assent templates (Word, English and Spanish). Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
-| `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests). |
+| `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests), `check_links.py` (every link in the resources log and handouts). |
 
 ## Before pushing changes to `index.html`
 
