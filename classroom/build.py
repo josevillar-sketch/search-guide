@@ -234,6 +234,92 @@ page("method-section-checklist.html", "Method section checklist", f"""
 {FOOT.format(x="Method section checklist")}
 """)
 
+# ---------- 6. Risk screen ----------
+def opts(*labels):
+    return " ".join(f'<span class="opt"><span class="box"></span> {l}</span>' for l in labels)
+OPT_CSS = '<style>.opt{{display:inline-block;margin-right:.9rem;white-space:nowrap}}td.w{{height:.5in}}td.w2{{height:.36in}}.tight td{{padding:.32rem .5rem}}.tight{{margin:.3rem 0}}</style>'
+page("risk-screen.html", "Risk screen", f"""
+{OPT_CSS}
+<h1>Risk screen</h1>
+<p class="slug">AP Research · One per study · Before any data is collected</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<div class="band"><b>College Board's rule.</b> Your teacher must judge four things: possible harm, possible benefit, how people agree to take part, and how their identity is protected. "Proposals that pose more than minimal risk to participants cannot be approved."</div>
+<p>{opts("My study has <b>no participants</b>: public data or published texts only. Skip to the last box.")}</p>
+<table class="tight">
+<tr><td class="q">Who takes part<small>who, how many, how I reach them</small></td><td class="w"></td></tr>
+<tr><td class="q">Ages</td><td>{opts("All 18 or older","Some or all under 18: guardian permission and student assent")}</td></tr>
+<tr><td class="q">What they do<small>each step, and the minutes it takes</small></td><td class="w"></td></tr>
+<tr><td class="q">What I collect</td><td>{opts("No names at all","Names replaced by codes","It could identify a person")}</td></tr>
+</table>
+<table class="tight">
+<tr><th>Possible harm</th><th style="width:3.1in">Rate it</th><th>Why</th></tr>
+<tr><td class="q">Physical</td><td>{opts("None","Minimal","More")}</td><td></td></tr>
+<tr><td class="q">Emotional</td><td>{opts("None","Minimal","More")}</td><td></td></tr>
+<tr><td class="q">Social</td><td>{opts("None","Minimal","More")}</td><td></td></tr>
+<tr><td class="q">Academic</td><td>{opts("None","Minimal","More")}</td><td></td></tr>
+</table>
+<table class="tight">
+<tr><td class="q">Benefit<small>to the person, or to the community</small></td><td class="w2"></td></tr>
+<tr><td class="q">How people agree</td><td>{opts("Signed form","Told they may skip or stop","A different activity for anyone who says no")}</td></tr>
+<tr><td class="q">Privacy</td><td>{opts("Data plan attached","Code key kept apart from the answers","Deletion date set")}</td></tr>
+<tr><td class="q">Beyond this course</td><td>{opts("I will not publish, compete, or present publicly","I plan to: a registered review board must also approve")}</td></tr>
+</table>
+<div class="rule">Teacher: {opts("Approved","Revise and return","Not approved")} Initials ________ Date ________ Data collection may start on ________</div>
+{FOOT.format(x="Risk screen")}
+""")
+
+# ---------- 7. Data plan and recruitment script ----------
+page("data-plan.html", "Data plan", f"""
+{OPT_CSS}
+<h1>Data plan</h1>
+<p class="slug">AP Research · Attach to your risk screen · For any study with people</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<p class="lede">People are trusting you with their answers. This page says how you will keep that trust.</p>
+<table class="tight">
+<tr><td class="q">Where the data lives<small>one place; never a shared iPad</small></td><td class="w"></td></tr>
+<tr><td class="q">Who can see it</td><td>{opts("Me","Mr. Portela","No one else")}</td></tr>
+<tr><td class="q">Names</td><td>{opts("Never collected","Replaced by a code; the key is kept in a different place")}</td></tr>
+<tr><td class="q">What I will never collect</td><td class="w2"></td></tr>
+<tr><td class="q">Recordings</td><td>{opts("None","Audio, with permission on the form; deleted after I take notes")}</td></tr>
+<tr><td class="q">If someone withdraws</td><td>I delete their answers that day and note it in my log.</td></tr>
+<tr><td class="q">Deletion date<small>after the paper is final</small></td><td class="w2"></td></tr>
+</table>
+<h2 class="lab">Recruitment script: what I will say or send, in 100 words or fewer</h2>
+<p>It must say: {opts("who I am","what the study is about","what they would do, and for how long","that it is voluntary and has no effect on grades","how to say yes or no")}</p>
+<div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+<div class="rule">Signed forms and this plan go in your Process and Reflection Portfolio. College Board lists permissions among the records it must hold.</div>
+{FOOT.format(x="Data plan")}
+""")
+
+# ---------- 8. Survey and interview question check ----------
+page("question-check.html", "Survey and interview question check", f"""
+<h1>Survey and interview question check</h1>
+<p class="slug">AP Research · Check your instrument before Mr. Portela reviews it</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<div class="band"><b>College Board's rule.</b> "The teacher must review any surveys, interview questions, questionnaires, or other interventions to be used in a project." Bring a clean draft. This sheet is about the questions you ask participants. It never changes your research question.</div>
+<div class="two"><div>
+<h2 class="lab">Every question</h2>
+{checks([("One idea.","It asks about one thing. A question joined by \"and\" is two questions."),
+("Plain words.","A ninth grader would understand it the first time."),
+("No push.","The wording does not point toward the answer I hope for."),
+("Choices fit.","Every person can find their answer, and no two choices overlap."),
+("Skippable.","A person can leave it blank or choose \"prefer not to say.\""),
+("Earns its place.","I know which part of my analysis will use the answer.")])}
+</div><div>
+<h2 class="lab">The whole instrument</h2>
+{checks([("Time.","I timed it on one person. It took ______ minutes, and my form says so."),
+("No identities.","It does not ask for a name or anything that points to one person."),
+("Minimal risk.","Nothing in it could embarrass, upset, or expose a participant."),
+("Order.","Easy questions first. Anything harder comes later."),
+("Interviews.","Questions are open, and my follow-ups are neutral: \"Tell me more about that.\""),
+("Tried once.","One person tried it and told me what confused them.")])}
+</div></div>
+<h2 class="lab">After my trial run: what I cut or changed, and why</h2><div class="line"></div><div class="line"></div><div class="line"></div>
+<h2 class="lab">Number of questions in the final version, and the minutes it takes</h2><div class="line"></div>
+<div class="rule">Attach the final instrument to item 9 of your Inquiry Proposal Form. No question goes to a participant before it is approved.</div>
+{FOOT.format(x="Survey and interview question check")}
+""")
+
 # ---------- 5. Research Library (student page; published as an artifact) ----------
 # Every link here must also be in the verified part of RESOURCES.md; tools/check_links.py enforces it.
 NEEDS = [("start","A","Start","Start here"),("data","B","Find data","Find data that already exists"),("method","C","Method","Choose and justify a method"),
@@ -256,6 +342,8 @@ LIB = [
   "Raw data behind Pew's national surveys.","Downloading needs an account, and Pew's terms limit how the data is reused. Ask first."),
  ("data","ask","IPUMS USA","University of Minnesota","https://usa.ipums.org/usa/",
   "Census data on households, work, language, and migration.","Needs a registered account, and the files are large. SDA's census files are the easier start."),
+ ("data","cite","data.census.gov","U.S. Census Bureau","https://data.census.gov/",
+  "The Census Bureau's own search for population and economic tables, down to your city or ZIP code.","Note the table number and the survey year. A one-year estimate and a five-year estimate are different things."),
  ("data","cite","CDC WONDER","Centers for Disease Control and Prevention","https://wonder.cdc.gov/",
   "Public health counts and rates: births, deaths, and more, by year, place, age, and sex.","Small local counts are hidden. Write down the exact query you ran."),
  ("method","cite","Social Science Research: Principles, Methods, and Practices","Anol Bhattacherjee, University of South Florida","https://digitalcommons.usf.edu/oa_textbooks/3/",
@@ -264,6 +352,8 @@ LIB = [
   "A free statistics textbook. Use it when you must explain a mean, a comparison, or a correlation.","College level. Check the edition on the title page before you cite it."),
  ("method","nocite","Types of research methods","Litmaps blog","https://www.litmaps.com/articles/types-of-research-methods",
   "A plain overview of qualitative, quantitative, and mixed methods.","A company blog with no sources. Use it to get oriented, then cite a real methods text."),
+ ("people","cite","College Board's rule on research with people","College Board, Course and Exam Description, pages 46 to 47","https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf",
+  "The rule your study must meet: your teacher reviews your proposal and every question before any data is collected.","A study with more than minimal risk cannot be approved. Publishing or competing needs a registered review board too."),
  ("people","ask","Room 63 consent and assent forms","Mr. Portela","",
   "The forms for a guardian's permission, a student's own agreement, and adult consent, in English and Spanish.","No form goes out, and no data is collected, until your proposal and questions are approved."),
  ("people","nocite","Informed consent templates and guidance","UC Berkeley","https://cphs.berkeley.edu/informedconsent.html",

@@ -12,6 +12,9 @@ const HANDOUTS = [
   ["method-planning-grid", 2],
   ["method-section-checklist", 1],
   ["sda-lab", 2],
+  ["risk-screen", 1],
+  ["data-plan", 1],
+  ["question-check", 1],
 ];
 const FACES = ['900 20px "Fraunces"', '650 20px "Fraunces"', '400 12px "Atkinson Hyperlegible"', '700 12px "Atkinson Hyperlegible"', '700 12px "Space Mono"'];
 
