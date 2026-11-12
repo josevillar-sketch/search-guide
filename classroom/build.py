@@ -7,7 +7,7 @@ CSS = """
 /* Room 63 print register. Same ink, brass and pine, and the same three faces, as the Search Guide and the Research Library.
    Each .page is one letter sheet. On screen it shows as a sheet of paper; in print the sheet is the page.
    Every tinted block also carries a rule or border, so a printer with background graphics off loses nothing. */
-@page{size:letter;margin:.5in .55in}
+@page{size:letter;margin:.45in .55in}
 :root{--ink:#1d1812;--soft:#4a3f31;--hair:#c9b996;--brass:#6d4f14;--pine:#245e55;--oxide:#9c3322;--tint:#f3ead6;--tint-2:#fbf7ee;--ground:#ece4d2;
   --display:"Fraunces",Georgia,"Times New Roman",serif;--body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;--mono:"Space Mono","Courier New",ui-monospace,monospace;color-scheme:light}
 *{box-sizing:border-box}
@@ -15,46 +15,67 @@ html{font:10pt/1.4 var(--body);color:var(--ink);background:var(--ground);-webkit
 body{margin:0;padding:24px 16px 40px}
 .page{position:relative;background:#fff;max-width:8.5in;margin:0 auto 24px;padding:.5in .55in;border:1px solid var(--hair);break-after:page}
 .page:last-child{break-after:auto;margin-bottom:0}
-.page::before{content:"63";position:absolute;top:.5in;right:.55in;width:2.9rem;height:2.9rem;border:.12rem solid var(--ink);border-radius:50%;outline:.06rem solid var(--ink);outline-offset:-.32rem;
-  display:grid;place-items:center;font:900 1.15rem/1 var(--display);letter-spacing:-.02em}
-h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0;padding-right:3.6rem;text-wrap:balance}
-h1::after{content:"";display:block;margin:.6rem -3.6rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
+.page::before{content:"63";position:absolute;top:.5in;right:.55in;width:3.2rem;height:3.2rem;border:.14rem solid var(--ink);border-radius:50%;outline:.07rem solid var(--ink);outline-offset:-.37rem;
+  display:grid;place-items:center;font:900 1.45rem/1 var(--display);letter-spacing:-.02em}
+h1{font:900 3rem/.98 var(--display);letter-spacing:-.02em;margin:0;padding-right:4rem;min-height:3.2rem;text-wrap:balance}
+h1::after{content:"";display:block;margin:.7rem -4rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
 /* The slug says who the sheet is for. It sits under the title rule, never above the title. */
-.slug{font:700 .74rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:.45rem 0 .9rem;max-width:none}
+.slug{font:700 .8rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:.4rem 0 .75rem;max-width:none}
 h2{font:650 1.3rem/1.15 var(--display);margin:0 0 .4rem;text-wrap:balance}
-h3,h2.lab{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem;text-wrap:balance}
-/* Running text holds a 72-character measure even where the sheet is wider. */
-p,li{max-width:72ch;text-wrap:pretty}
+/* Section headings are the sheet's structure, so they are set in the Title role in solid ink, never in the smallest type on the page. */
+h3,h2.lab{font:650 1.15rem/1.2 var(--display);color:var(--ink);margin:.9rem 0 .3rem;text-wrap:balance}
+.card h3{font-size:1.05rem;margin-top:.6rem}
+/* Running text holds about 72 characters a line even where the sheet is wider. In Atkinson that is 52ch: a zero is much wider than an average letter. */
+p,li{max-width:52ch;text-wrap:pretty}
+/* A list that stands alone on the sheet runs in two columns, which keeps each line short and saves the page. */
+.page>ul,.page>ol{columns:2;column-gap:2rem}
+.page>ul>li,.page>ol>li{break-inside:avoid;max-width:none}
 p{margin:0 0 .5rem} ul,ol{margin:0 0 .5rem;padding-left:1.5rem} li{margin-bottom:.2rem}
 li::marker{font-weight:700;color:var(--brass)}
 b{font-weight:700}
-.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:66ch}
+.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:50ch}
 .two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .card{border:.1rem solid var(--ink);padding:.85rem 1rem}
 .card.a{border-top:.45rem solid var(--oxide)}.card.b{border-top:.45rem solid var(--pine)}
-.band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 72ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
-.rule{font:700 .95rem/1.35 var(--body);border:.2rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 70ch)) .6rem .9rem;margin:.8rem 0;text-wrap:balance}
-.foot{font:400 .68rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.3rem;border-top:.08rem solid var(--ink);padding-top:.4rem}
-table{width:100%;border-collapse:collapse;margin:.6rem 0;font-variant-numeric:tabular-nums}
-th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left}
+/* The two roads carry the lettered plate from the Library's drawers. */
+.card>h2{display:flex;align-items:center;gap:.7rem;font-size:1.4rem;margin-bottom:.4rem}
+.card>h2::before{flex:none;display:grid;place-items:center;width:2rem;height:2rem;font:900 1.35rem/1 var(--display);background:#d6ad55;border:.1rem solid var(--ink)}
+.card.a>h2::before{content:"A"}.card.b>h2::before{content:"B"}
+/* A sign-off line is a form to fill in, so it keeps the reading face inside the rule box. */
+.rule.sign{font:700 1rem/2.1 var(--body);text-wrap:balance;padding-right:.9rem}
+.fill.in{display:inline-block;flex:none;height:1rem;vertical-align:baseline;margin-left:.3rem}
+.rule.sign .opt{margin-right:.9rem;white-space:nowrap}
+/* A warning slug is an inked stamp, as on a Library card. */
+.slug.stamp{display:inline-block;font-size:.95rem;color:var(--oxide);border:.16rem solid currentColor;outline:.07rem solid currentColor;outline-offset:.14rem;padding:.3rem .55rem .22rem;margin:.75rem 0 1.1rem .2rem;transform:rotate(-1.6deg)}
+/* A note keeps one column, so no sentence is cut by a column rule. The band runs full width; its text holds the measure. */
+.band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 51ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
+.rule{font:650 1.2rem/1.22 var(--display);border:.2rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 50ch)) .6rem .9rem;margin:.8rem 0;text-wrap:balance}
+.foot{font:400 .74rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.1rem;border-top:.06rem solid var(--hair);padding-top:.4rem;max-width:none}
+table{width:100%;border-collapse:collapse;margin:.6rem 0}
+th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left;overflow-wrap:anywhere}
 th{font:700 .92rem/1.2 var(--body);background:var(--tint);border-bottom-width:.16rem}
 td.q{font:700 .95rem/1.2 var(--body);width:1.15in;background:var(--tint-2)}
 td p,td li,th p{max-width:none}
 td.q small{display:block;font-weight:400;font-size:.85rem;line-height:1.25;color:var(--soft);margin-top:.2rem}
-.blank td{height:.98in}.blank td.q{height:auto}
+.blank{table-layout:fixed}.blank th:first-child{width:1.15in}
+.blank td{height:1.12in}.blank td.q{height:auto}
 td.tick{width:.34in;text-align:center}
+td.tick,td.tick+td{padding-block:.38rem}
 .box{display:inline-block;width:1.05rem;height:1.05rem;border:.12rem solid var(--ink);vertical-align:-.15rem}
 .line{border-bottom:.08rem solid var(--ink);height:18pt;margin-bottom:2pt}
-/* A ruled block after a writing line needs air, or its top rule reads as one more line to write on. */
-.line+.band,.line+.rule{margin-top:1.3rem}
-.name{display:flex;gap:1.4rem;font:700 .7rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.4rem 0 .8rem}
-.name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.3rem}
+/* A ruled block, a table or the footer after a writing line needs more than one line of air, or its rule reads as one more line to write on. */
+.line+.band,.line+.rule,.line+.foot,.line+table,.line+.two,.two+.foot{margin-top:24pt}
+/* A blank to fill in is a rule that runs to the edge of its cell, not a row of typed underscores. */
+.fillrow{display:flex;align-items:flex-end;gap:.4rem}.fill{flex:1;min-width:2rem;height:1.2rem;border-bottom:.08rem solid var(--ink)}
+.name{display:flex;gap:1.4rem;font:700 .8rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:.4rem 0 .8rem}
+.name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.2rem}
 code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
 ::selection{background:#d6ad55;color:#1d1812}
 .ex{font-style:italic;color:var(--soft)}
-@media print{html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
+/* On paper, small type prints in solid ink: a black-and-white laser turns small colored type into gray dots. */
+@media print{.slug:not(.stamp){color:var(--ink)}.foot{color:var(--ink)}html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
 @media screen and (prefers-color-scheme:dark){html{background:#07201b}.page{border-color:#2f5a50}}
-@media screen and (max-width:640px){html{font-size:15px}body{padding:0}h1{font-size:2rem}.two{grid-template-columns:1fr}
+@media screen and (max-width:640px){.page>ul,.page>ol{columns:1}.rule.sign .opt{white-space:normal}.fill.in{max-width:60%}html{font-size:15px}body{padding:0}h1{font-size:2.2rem}td.q{width:5.4rem}.two{grid-template-columns:1fr}
   .page{border:0;border-bottom:12px solid var(--ground);margin:0;padding:20px 16px 24px}.page::before{top:20px;right:16px}}
 @media screen and (max-width:640px) and (prefers-color-scheme:dark){.page{border-bottom-color:#07201b}}
 """
@@ -76,7 +97,7 @@ FOOT = '<div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela
 # ---------- 1. Own data or public data? ----------
 page("own-data-or-public-data.html", "Own data or public data?", f"""
 <style>/* This sheet carries the most text. Print it a step smaller so it stays on one page; build-pdf.cjs checks the count. */
-@media print{{html{{font-size:9.4pt}}.card{{padding:.7rem .9rem}}.band,.rule{{margin:.6rem 0}}h3{{margin-top:.6rem}}}}</style>
+@media print{{html{{font-size:9.1pt}}.card{{padding:.55rem .9rem .35rem}}.card li{{margin-bottom:.1rem}}.card h3{{margin-top:.5rem}}.band,.rule{{margin:.45rem 0}}.lede{{margin-bottom:.5rem}}}}</style>
 <h1>Own data or public data?</h1>
 <p class="slug">AP Research · Choosing a method</p>
 <p class="lede">Two roads can lead to evidence for your paper. This page does not change your question. Your question is the one in your log.</p>
@@ -103,7 +124,7 @@ page("own-data-or-public-data.html", "Own data or public data?", f"""
 </div>
 <div class="band"><b>A third road:</b> analyzing published texts or media, such as news articles, speeches, or advertisements. Texts are not participants. Posts by private people are different, so ask before using social media.</div>
 <div class="rule">On every road: each number in your paper traces to your own file · you justify your method with a methods text you cite · you state what your data cannot show.</div>
-<h3>My decision today (it can change)</h3><div class="line"></div><div class="line"></div>
+<h3>My decision today (it can change)</h3><div class="line"></div>
 {FOOT.format(x="Own data or public data?")}
 """)
 
@@ -114,7 +135,7 @@ ROWS = [("Why?","Why this method fits your question. Why this and not another me
         ("Who?","Who you gather data from, how many, how you reach them."),
         ("After gathering data","How you will analyze it and what you will compare.")]
 def grid(cells=None, blank=True):
-    out = ['<table class="%s"><tr><th></th><th>Method 1: ____________________</th><th>Method 2 (if you use one): ____________</th></tr>' % ("blank" if blank else "")]
+    out = ['<table class="%s"><tr><th></th><th><div class="fillrow">Method 1: <span class="fill"></span></div></th><th><div class="fillrow">Method 2 (if you use one): <span class="fill"></span></div></th></tr>' % ("blank" if blank else "")]
     if cells: out[0] = '<table><tr><th></th><th>Method 1: %s</th><th>Method 2: %s</th></tr>' % cells[0]
     for i,(q,h) in enumerate(ROWS):
         a,b = (cells[i+1] if cells else ("",""))
@@ -136,7 +157,7 @@ page("method-planning-grid.html", "Method planning grid", f"""
 <div class="two"><div><h2 class="lab">Approval I need before I start</h2><div class="line"></div></div><div><h2 class="lab">Methods text I will cite to justify this</h2><div class="line"></div></div></div>
 {FOOT.format(x="Method planning grid · page 1")}</section>
 <section class="page"><h1>What a filled-in grid looks like</h1>
-<p class="slug">Example only · do not copy</p>
+<p class="slug stamp">Example only · do not copy</p>
 <p class="lede">The topic here is invented to show the level of detail: <i>how students use the library's quiet study room</i>. Your grid comes from your own question.</p>
 {grid(EX, blank=False)}
 <div class="band"><b>What to notice.</b> Every "why" names a reason, and one rejects an alternative. The second method explains the first: the interviews give reasons for the counts. The "who" for Method 2 comes out of Method 1. Each "after" says what will be compared and how it will be reported.</div>
@@ -149,7 +170,7 @@ page("method-planning-grid.html", "Method planning grid", f"""
 # ---------- 3. SDA lab ----------
 page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 <style>/* Two full sheets. Print a step smaller so each stays on its own page; build-pdf.cjs checks the count. */
-@media print{{html{{font-size:9.6pt}}}}</style>
+@media print{{html{{font-size:9.5pt}}}}</style>
 <section class="page"><h1>SDA lab: national survey data in one period</h1>
 <p class="slug">Teacher page · one 45-minute period</p>
 <p class="lede">Students learn to find a variable in the General Social Survey, read its codebook entry, run one table, and save it. Nobody's question is rewritten. The lab only shows what public data exists.</p>
@@ -185,15 +206,13 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 <li><b>Save it.</b> Run it again with <b>Create and Download CSV File</b> open, or screenshot the table. This file is your data.</li>
 </ol>
 <table>
-<tr><th colspan="2">Record box: copy from the screen, exactly</th></tr>
-<tr><td class="q">Dataset and release</td><td style="height:.36in"></td></tr>
-<tr><td class="q">Variable name and label</td><td style="height:.36in"></td></tr>
-<tr><td class="q">Exact question asked<small>from the codebook</small></td><td style="height:.7in"></td></tr>
-<tr><td class="q">Answer choices</td><td style="height:.42in"></td></tr>
-<tr><td class="q">Years it was asked</td><td style="height:.36in"></td></tr>
-<tr><td class="q">Column variable</td><td style="height:.36in"></td></tr>
-<tr><td class="q">Valid cases<small>bottom of the results</small></td><td style="height:.36in"></td></tr>
-<tr><td class="q">Weight shown</td><td style="height:.36in"></td></tr>
+<tr><th colspan="4">Record box: copy from the screen, exactly</th></tr>
+<tr><td class="q">Dataset and release</td><td colspan="3" style="height:.34in"></td></tr>
+<tr><td class="q">Variable name and label</td><td colspan="3" style="height:.34in"></td></tr>
+<tr><td class="q">Exact question asked<small>from the codebook</small></td><td colspan="3" style="height:1.1in"></td></tr>
+<tr><td class="q">Answer choices</td><td colspan="3" style="height:.68in"></td></tr>
+<tr><td class="q">Years it was asked</td><td style="height:.32in"></td><td class="q">Column variable</td><td></td></tr>
+<tr><td class="q">Valid cases<small>bottom of the results</small></td><td style="height:.32in"></td><td class="q">Weight shown</td><td></td></tr>
 </table>
 <h2 class="lab">One thing this table shows (give the numbers)</h2><div class="line"></div><div class="line"></div>
 <h2 class="lab">One thing this table cannot show</h2><div class="line"></div><div class="line"></div>
@@ -237,7 +256,8 @@ page("method-section-checklist.html", "Method section checklist", f"""
 # ---------- 6. Risk screen ----------
 def opts(*labels):
     return " ".join(f'<span class="opt"><span class="box"></span> {l}</span>' for l in labels)
-OPT_CSS = '<style>.opt{{display:inline-block;margin-right:.9rem;white-space:nowrap}}td.w{{height:.5in}}td.w2{{height:.36in}}.tight td{{padding:.32rem .5rem}}.tight{{margin:.3rem 0}}</style>'
+# A plain string, not an f-string: single braces. Doubled braces here reach the page as invalid CSS and every rule is dropped.
+OPT_CSS = '<style>.opt{display:inline-block;margin-right:1.1rem;white-space:nowrap}.opt .box{margin-right:.3rem}td.w{height:.5in}td.w2{height:.36in}.tight td{padding:.32rem .5rem}.tight{margin:.3rem 0}@media screen and (max-width:640px){.opt{white-space:normal}}</style>'
 page("risk-screen.html", "Risk screen", f"""
 {OPT_CSS}
 <h1>Risk screen</h1>
@@ -264,7 +284,7 @@ page("risk-screen.html", "Risk screen", f"""
 <tr><td class="q">Privacy</td><td>{opts("Data plan attached","Code key kept apart from the answers","Deletion date set")}</td></tr>
 <tr><td class="q">Beyond this course</td><td>{opts("I will not publish, compete, or present publicly","I plan to: a registered review board must also approve")}</td></tr>
 </table>
-<div class="rule">Teacher: {opts("Approved","Revise and return","Not approved")} Initials ________ Date ________ Data collection may start on ________</div>
+<div class="rule sign">Teacher: {opts("Approved","Revise and return","Not approved")} <span class="opt">Initials <span class="fill in" style="width:.8in"></span></span> <span class="opt">Date <span class="fill in" style="width:1.3in"></span></span> <span class="opt">Data collection may start on <span class="fill in" style="width:1.3in"></span></span></div>
 {FOOT.format(x="Risk screen")}
 """)
 
@@ -394,7 +414,7 @@ legend = "".join(f'<li><span class="stamp {cls}">{label}</span><span>{mean}</spa
 :root[data-theme="dark"]{{--ground:#07201b;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--focus:#f0c56a;--drop:#8f7336;color-scheme:dark}}
 *{{box-sizing:border-box}}
 html{{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}}
-body{{background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.25rem 4rem}}
+body{{margin:0;background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.25rem 4rem}}
 body::before{{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}}
 .wrap{{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;gap:2rem}}
 a:focus-visible,button:focus-visible{{outline:3px solid var(--focus);outline-offset:3px}}
@@ -407,9 +427,9 @@ h1{{font:900 clamp(2.9rem,15.4vw,6rem)/.84 var(--display);text-transform:upperca
 h1 span{{display:block}}
 h1 .l2{{color:var(--pine)}}
 .strip{{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font:700 .8125rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0;padding:0;list-style:none}}
-.lede{{margin:0;max-width:40rem;font-size:1.125rem;color:var(--ink)}}
+.lede{{margin:0;max-width:34rem;font-size:1.125rem;color:var(--ink)}}
 
-.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem max(1.25rem,calc(100% - 72ch)) 1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
+.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem max(1.25rem,calc(100% - 54ch)) 1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
 .pledge b{{display:block;font:650 clamp(1.3rem,4.6vw,1.9rem)/1.12 var(--display);text-wrap:balance}}
 .pledge span{{display:block;margin-top:.4rem}}
 
@@ -439,9 +459,9 @@ h1 .l2{{color:var(--pine)}}
 .s-pine{{color:var(--st-pine)}}.s-oxide{{color:var(--st-oxide)}}.s-plum{{color:var(--st-plum)}}.s-brass{{color:var(--st-brass)}}
 .card h3{{font:650 clamp(1.3rem,4.4vw,1.6rem)/1.15 var(--display);margin:.35rem 0 0;text-wrap:balance}}
 .who{{font:400 .8125rem/1.45 var(--mono);letter-spacing:.03em;color:var(--paper-soft);margin:0}}
-.what{{margin:.15rem 0 0;max-width:42rem}}
+.what{{margin:.15rem 0 0;max-width:34rem}}
 /* A ruled note, the same form as the notes on the print handouts. No side stripe. */
-.care{{margin:.15rem 0 0;background:var(--paper-2);border-block:1.5px solid var(--paper-edge);padding:.55rem .75rem;max-width:42rem}}
+.care{{margin:.15rem 0 0;background:var(--paper-2);border-block:1.5px solid var(--paper-edge);padding:.55rem .75rem;max-width:35.5rem}}
 .care-l{{display:block;font:700 .75rem/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--st-oxide)}}
 .open{{align-self:flex-start;margin-top:.4rem;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem .95rem;font:700 1rem/1.2 var(--body);color:var(--paper-ink);background:transparent;border:1.5px solid var(--paper-edge);border-radius:6px;text-decoration:none;overflow-wrap:anywhere}}
 a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
@@ -449,7 +469,7 @@ a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
 
 .withdrawn{{background:var(--paper);color:var(--paper-ink);border:2px solid var(--st-oxide);border-radius:6px;padding:1rem 1.1rem;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center}}
 .withdrawn .stamp{{font-size:1rem;flex:none}}
-.withdrawn p{{margin:0;flex:1 1 18rem;min-width:0}}
+.withdrawn p{{margin:0;flex:0 1 34rem;min-width:0}}
 footer{{font:700 .8125rem/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);border-top:3px solid var(--ink);padding-top:.9rem}}
 
 @media (min-width:54rem){{

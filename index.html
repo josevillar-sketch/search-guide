@@ -26,8 +26,8 @@
 :root,.night,.paper{--panel:var(--card);--panel-2:var(--card-2);--mute:var(--ink-soft);--line:var(--hair);--teal:var(--pine);--on-teal:var(--on-pine);--slip:var(--card);--brass:var(--brass-text);--on-brass:var(--card)}
 .night{--ink:#f3ead6;--ink-soft:#c9d8cf;--card:#135046;--card-2:#0c3a33;--hair:rgba(214,173,85,.35);--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--focus:#f0c56a;--drop:#8f7336;
   color:var(--ink);color-scheme:dark;background-color:#0c3a33;
-  background-image:radial-gradient(circle at 20px 30px,rgba(236,196,110,.7) 1px,transparent 1.6px),radial-gradient(circle at 120px 80px,rgba(236,196,110,.45) 1px,transparent 1.6px),radial-gradient(circle at 70px 150px,rgba(236,196,110,.8) 1px,transparent 1.6px),
-    radial-gradient(circle at 40px 190px,rgba(236,196,110,.4) 1px,transparent 1.6px),radial-gradient(circle at 160px 20px,rgba(236,196,110,.6) 1px,transparent 1.6px),radial-gradient(circle at 100px 110px,rgba(236,196,110,.5) 1px,transparent 1.6px),
+  background-image:radial-gradient(circle at 20px 30px,rgba(236,196,110,.24) 1px,transparent 1.6px),radial-gradient(circle at 120px 80px,rgba(236,196,110,.16) 1px,transparent 1.6px),radial-gradient(circle at 70px 150px,rgba(236,196,110,.26) 1px,transparent 1.6px),
+    radial-gradient(circle at 40px 190px,rgba(236,196,110,.14) 1px,transparent 1.6px),radial-gradient(circle at 160px 20px,rgba(236,196,110,.2) 1px,transparent 1.6px),radial-gradient(circle at 100px 110px,rgba(236,196,110,.17) 1px,transparent 1.6px),
     radial-gradient(120% 90% at 50% 40%,#135046 0%,#0c3a33 50%,#041713 100%);
   background-size:173px 173px,173px 173px,173px 173px,211px 211px,211px 211px,211px 211px,100% 100%;
   background-repeat:repeat,repeat,repeat,repeat,repeat,repeat,no-repeat}
@@ -40,7 +40,6 @@ html,body{background:var(--ground)}
 :root[data-theme="dark"] body{background:radial-gradient(120% 90% at 50% 0%,#135046 0%,#0c3a33 45%,#041713 100%) fixed,var(--ground)}
 body{margin:0;padding:0;color:var(--ink);font:400 17px/26px var(--body)}
 p{margin:0;text-wrap:pretty}
-/* The parts the browser draws carry the palette too. */
 ::selection{background:var(--brass-fill);color:var(--on-brass-fill)}
 input,textarea{caret-color:var(--pine)}
 p,li,h1,h2,h3,label,legend,summary,.q{overflow-wrap:anywhere;min-width:0}
@@ -51,7 +50,7 @@ h2{font:650 21px/26px var(--display);margin:0;text-wrap:balance}
 h3{font:650 18px/24px var(--display);margin:0;text-wrap:balance}
 .slip h3{font:700 13px/18px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
 .lbl{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.hint{font-size:15px;line-height:22px;color:var(--mute);max-width:72ch}
+.hint{font-size:15px;line-height:22px;color:var(--mute);max-width:52ch}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
 :is(a,button,input,select,textarea,summary):focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 [tabindex="-1"]:focus{outline:none}
@@ -87,7 +86,7 @@ label{font:700 16px/22px var(--body)}
 .rchip input:checked+span svg{display:block}
 .rchip input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
 .rchip input:disabled+span{opacity:.6}
-.confirm{display:grid;gap:12px;background:var(--card-2);border-left:4px solid var(--oxide);border-radius:6px;padding:16px}
+.confirm{display:grid;gap:12px;background:var(--card-2);border:1.5px solid var(--oxide);border-radius:6px;padding:16px}
 .row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 
 /* Layout. Base is the phone (375); 700px is iPad portrait (820); 1024px is iPad landscape (1180). */
@@ -97,14 +96,13 @@ label{font:700 16px/22px var(--body)}
 #band .shell{display:grid;gap:8px}
 #band.compact h1{font-size:20px;line-height:24px}
 .eyebrow{font:700 13px/18px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-text)}
-.lede{color:var(--ink-soft);max-width:62ch}
+.lede{color:var(--ink-soft);max-width:52ch}
 #pick{padding-block:0 24px;border-bottom:1px solid #d6ad55}
 .step{display:grid;gap:16px;min-width:0}
 #pick .step{padding-top:24px}
 .steplabel{display:flex;gap:12px;align-items:center}
 .steplabel b{font:700 13px/18px var(--mono);color:var(--ink);background:transparent;border:1.5px solid var(--edge);border-radius:6px;padding:2px 8px}
 .desk[data-on="true"] #step3 .steplabel b{display:none}
-/* Before a period is picked, step 2 is hidden. The example slip is then not a third step, so it carries no number. */
 body:has(#step2[hidden]) #step3 .steplabel b{display:none}
 #periods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .chip{display:grid;justify-items:center;align-content:center;gap:2px;min-height:72px;min-width:0;padding:8px;text-align:center;background:var(--card);color:var(--ink);border:1.5px solid var(--edge);border-radius:6px;box-shadow:4px 4px 0 var(--drop);font:700 16px/20px var(--body);cursor:pointer}
@@ -148,7 +146,7 @@ body.typing #desk-nav{position:static}
 
 /* Banners */
 #desk-alerts{display:grid;gap:8px}
-.banner{background:var(--card);color:var(--ink);border-left:4px solid var(--oxide);border-radius:6px;padding:12px 16px;display:grid;gap:12px}
+.banner{background:var(--card);color:var(--ink);border:1.5px solid var(--oxide);border-radius:6px;padding:12px 16px;display:grid;gap:12px}
 #rec-ask{border-left-color:var(--brass-text)}
 
 /* The ficha: the student's newest question on a paper card */
@@ -199,11 +197,11 @@ body.typing #desk-nav{position:static}
 #wb-form{display:grid;gap:24px}
 #wb-form>*{min-width:0}
 .fhead{display:grid;gap:8px}
-#wb-rule{border-left:4px solid var(--brass-text);padding-left:12px;font-size:15px;line-height:22px}
+#wb-rule{border-block:1.5px solid var(--hair);padding-block:10px;font-size:15px;line-height:22px}
 #wb-draftnote,#wb-cap{background:var(--card-2);border-radius:6px;padding:8px 12px}
 .field{display:grid;gap:8px;min-width:0;align-content:start}
 #wb-reason-fix{display:grid;gap:8px}
-#wb-reason-line{border-left:4px solid var(--pine);padding-left:12px}
+#wb-reason-line{border-block:1.5px solid var(--hair);padding-block:10px}
 #wb-check{max-width:100%}
 #wb-empty{justify-self:start}
 .wb-pair{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:end}
@@ -237,7 +235,7 @@ del{background:var(--del-bg);color:var(--ink);text-decoration-line:line-through;
 ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;text-decoration-thickness:2px;text-decoration-color:var(--pine);text-underline-offset:3px}
 
 /* Seven checks */
-#ck-new{font-weight:700;border-left:4px solid var(--brass-text);padding-left:12px}
+#ck-new{font-weight:700;border-block:1.5px solid var(--hair);padding-block:10px}
 #ck-count{font-weight:700}
 #ck-search{justify-self:start}
 #checks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
@@ -257,7 +255,7 @@ ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;tex
 .repair-go{justify-self:start}
 #notes{display:grid;gap:12px}
 #notes-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-#notes-list li{display:grid;gap:4px;border-left:4px solid var(--brass-text);padding-left:12px}
+#notes-list li{display:grid;gap:4px;border-top:1.5px solid var(--hair);padding-top:10px}
 
 /* Circle it: color and line style both code the label */
 #circle{display:grid;gap:16px}
@@ -314,7 +312,7 @@ ins{background:var(--ins-bg);color:var(--ink);text-decoration-line:underline;tex
 .go{background:var(--teal);color:var(--on-teal);border:1.5px solid var(--teal)}
 .copy{background:transparent;color:var(--ink);border:1.5px solid var(--edge)}
 .copy.ok{border-color:var(--teal);color:var(--teal)}
-.tip{background:var(--panel-2);border-radius:6px;padding:12px 16px;max-width:66ch}
+.tip{background:var(--panel-2);border-radius:6px;padding:12px 16px;max-width:calc(52ch + 32px)}
 .log{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:4px}
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px}
 .tier{border:1px solid var(--line);border-radius:6px;padding:12px;background:var(--panel);display:flex;flex-direction:column;gap:4px;min-width:0}
@@ -328,13 +326,12 @@ section.tools{border-top:1px solid var(--line);padding-top:24px;display:flex;fle
 .kw button[aria-pressed="false"]{text-decoration:line-through;color:var(--mute);border-style:dashed}
 .kw button.ph{font-weight:700;border-style:solid;border-color:var(--brass)}
 .picked{font-size:15px;line-height:22px;color:var(--mute)}
-.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,232px),1fr));gap:8px}
+.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:8px}
 .dbcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
-/* The name is the only link on the card: a 44px tap target without moving the layout. */
 .dbcard a{color:var(--teal);font-weight:700;display:block;padding-block:9px;margin-block:-9px}
 footer{border-top:1px solid var(--hair);color:var(--ink-soft);font-size:15px;line-height:22px}
 footer .shell{display:grid;gap:12px;padding-block:16px 48px}
-footer p{max-width:75ch}
+footer p{max-width:54ch}
 #printp{justify-self:start}
 .purl{display:none}
 #printall{display:none}
@@ -384,31 +381,46 @@ footer p{max-width:75ch}
 .just-saved #vl{animation:cardIn 220ms cubic-bezier(.2,.8,.2,1) 80ms both}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.just-saved *{animation:none!important}}
 @media (forced-colors:active){.dot[aria-pressed=true]::before{background:CanvasText}.w[data-l]::before{border-color:CanvasText}}
-/* The slip at full strength. Screen only, so the printed slip keeps its one-page layout.
-   Every move here is one the page already owns: the paper object with an ink edge and a pressed shadow (the ficha), the red rule under a card's head,
-   Fraunces carrying the student's own words, the inked stamp. The three searches are numbered rows on one card, not cards inside a card. */
+/* Design floor and bolder pass, screen only. See DESIGN.md. */
 @media screen{
-  .slip{border:1.5px solid var(--page-drop);box-shadow:6px 6px 0 var(--page-drop);padding:20px 16px 24px;gap:28px}
-  .sliphead{border-bottom:2px solid var(--oxide);padding-bottom:14px;align-items:center}
-  .who{font:650 26px/30px var(--display);text-wrap:balance}
-  .example-tag{border:2px solid currentColor;border-radius:3px;outline:1px solid currentColor;outline-offset:2px;padding:4px 8px 3px;transform:rotate(-2.5deg)}
-  .slip .q{font:650 clamp(23px,calc(15px + 2.1vw),32px)/1.22 var(--display);letter-spacing:-.005em;padding-left:18px;border-left-width:4px;max-width:30ch;text-wrap:balance}
-  .slip .searches{gap:0;counter-reset:srch}
-  .slip .search{counter-increment:srch;background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:18px 0 20px;
-    display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;row-gap:8px}
-  .slip .search:last-child{padding-bottom:4px}
-  .slip .search>*{grid-column:2}
-  .slip .search::before{content:counter(srch);grid-column:1;grid-row:1/span 6;align-self:start;display:grid;place-items:center;width:44px;height:44px;
-    font:900 26px/1 var(--display);color:var(--ink);border:1.5px solid var(--page-drop);border-radius:6px;box-shadow:3px 3px 0 var(--page-drop)}
-  .slip .search .callno{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-  .slip .dbname{font:650 21px/26px var(--display)}
-  .slip .words{font-size:17px;line-height:26px;padding:10px 14px}
-  .slip .tip{border-radius:0;border-block:1.5px solid var(--hair)}
-  .slip .tier{background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:12px 0 0}
+.slip{--card:#fbf7ee;--card-2:#f3ead6;--ink:#1d1812;--ink-soft:#4a3f31;--hair:#c9b996;--edge:#7d6a45;--brass-text:#6d4f14;--pine:#245e55;--on-pine:#fbf7ee;--oxide:#9c3322;--plum:#6d3a73;--focus:#245e55;
+--panel:var(--card);--panel-2:var(--card-2);--mute:var(--ink-soft);--line:var(--hair);--teal:var(--pine);--on-teal:var(--on-pine);--slip:var(--card);--brass:var(--brass-text);
+color:var(--ink);color-scheme:light;border:1.5px solid #1d1812;box-shadow:6px 6px 0 var(--page-drop);padding:20px 16px 24px;gap:28px}
+.slip table{color:var(--ink)}
+.sliphead{border-bottom:2px solid var(--oxide);padding-bottom:14px;align-items:center}
+.example-tag{border:2px solid currentColor;border-radius:3px;outline:1px solid currentColor;outline-offset:2px;padding:4px 8px 3px;transform:rotate(-2.5deg)}
+.slip .q{font:650 clamp(23px,calc(15px + 2.1vw),32px)/1.22 var(--display);letter-spacing:-.005em;padding-left:18px;border-left-width:4px;max-width:30ch;text-wrap:balance}
+.slip .qblk>h3,.slip .search .callno{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.slip .searches{gap:0;counter-reset:srch}
+.slip .search{counter-increment:srch;background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:18px 0 20px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px 16px}
+.slip .search>*{grid-column:2}
+.slip .search::before{content:counter(srch);grid-column:1;grid-row:1/span 6;align-self:start;display:grid;place-items:center;width:44px;height:44px;font:900 26px/1 var(--display);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink)}
+.slip .dbname{font:650 21px/26px var(--display)}
+.slip .tip,.fail,.refbox{border-radius:0;border-block:1.5px solid var(--hair)}
+.slip .tier{background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:12px 0 0}
+:where(#main,footer) p:not(.words){max-width:50ch}
+.hint,.from,.panel p,#ipad .panel>p,#vl-note,#wb-rule,#wb-intro,footer p{max-width:48ch}
+.eyebrow,#ficha-call,#ficha-meta,.sliphead .callno{text-wrap:balance}
+.penrow:has(#vl-penned:enabled:not(:checked)){min-height:52px;padding:8px 14px;background:var(--card);border:1.5px solid #1d1812;border-radius:6px;box-shadow:4px 4px 0 var(--drop);font-weight:700}
+.desk:has(#vl:not([hidden]) #vl-penned:enabled:not(:checked)) #q-open{background:transparent;color:var(--ink);box-shadow:none;border-color:var(--edge);min-height:44px}
+body:has(#step2[hidden]) #band:not(.compact){padding-block:32px 24px}
+body:has(#step2[hidden]) #band:not(.compact) h1{font-size:clamp(40px,calc(12px + 7.6vw),88px);line-height:.92;letter-spacing:-.012em}
+body:has(#step2[hidden]) #band:not(.compact) .lede{font-size:19px;line-height:28px;color:var(--ink);max-width:44ch}
+.check{grid-template-columns:40px minmax(0,1fr) 56px}
+.ck-n{display:grid;place-items:center;width:40px;height:40px;padding:0;font:900 22px/1 var(--display);color:var(--ink);border:1.5px solid var(--page-drop);border-radius:6px;box-shadow:3px 3px 0 var(--page-drop)}
+.check:has(.dot[aria-pressed="true"]) .ck-n{background:var(--ink);color:var(--card);box-shadow:1px 1px 0 var(--page-drop);transform:translate(2px,2px)}
+.ck-name{font:650 19px/24px var(--display)}
 }
+@media screen and (max-width:479px){.cmp-pick{grid-template-columns:minmax(0,1fr)}}
 @media screen and (min-width:1024px){
-  .slip{padding:32px 32px 36px;gap:32px}
-  .slip .q{max-width:32ch}
+.slip{padding:32px 32px 36px;gap:32px}
+.slip .q{max-width:32ch}
+body:has(.desk[data-on="false"]) :is(#band,#pick,footer) .shell{max-width:808px}
+body:has(#step2[hidden]) #periods{grid-template-columns:repeat(4,minmax(0,1fr))}
+#desk-left{gap:10px;padding:16px}
+#ficha{gap:8px;padding:12px 16px 26px}
+.margin-rule{margin-inline:-16px}
+.num-v{font-size:52px;line-height:46px}
 }
 /* Print: Ctrl+P prints the open slip with the newest version; the teacher button prints one slip per page for a whole period, from the record. */
 @media print{
@@ -1267,7 +1279,7 @@ function pickStudent(d){if(CUR){teardown();wipe();}var ae=document.activeElement
  CUR=d;VLK=null;TEMP=null;CKNEW=false;ROV=0;CMPRESET=true;
  WB.load(d);
  $("desk").setAttribute("data-on","true");$("pick").hidden=true;$("lede").hidden=true;$("band").classList.add("compact");
- buildChecks();renderWho();var wide=false;try{wide=matchMedia("(min-width:700px)").matches;}catch(e){}$("tl-wrap").open=wide;
+ buildChecks();renderWho();var wide=false;try{wide=matchMedia("(min-width:700px) and (max-width:1023px)").matches;}catch(e){}$("tl-wrap").open=wide;
  $("timeline").innerHTML="";closeForm();renderAll();
  setBuilder();
  store(d.id);$("back").hidden=true;try{history.replaceState(null,"","#"+d.id);}catch(e){}

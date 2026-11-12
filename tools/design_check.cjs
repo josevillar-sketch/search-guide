@@ -18,6 +18,9 @@ const SURFACES = [
   { name: "search-guide home", file: "index.html" },
   { name: "search-guide desk (research)", file: "index.html", hash: research.id },
   { name: "search-guide desk (seminar)", file: "index.html", hash: seminar.id },
+  { name: "search-guide desk, form open", file: "index.html", hash: research.id, state: "form" },
+  { name: "search-guide desk, version saved", file: "index.html", hash: research.id, state: "saved" },
+  { name: "search-guide desk, circled and checked", file: "index.html", hash: seminar.id, state: "worked" },
   { name: "research-library", file: "classroom/research-library.html" },
   { name: "handout own-data", file: "classroom/own-data-or-public-data.html", print: true },
   { name: "handout planning-grid", file: "classroom/method-planning-grid.html", print: true },
@@ -28,11 +31,36 @@ const SURFACES = [
   { name: "handout question-check", file: "classroom/question-check.html", print: true },
 ];
 const VIEWS = [
+  { w: 320, h: 700, scheme: "light" }, // the narrowest screen a page must reflow to
   { w: 380, h: 800, scheme: "light" },
   { w: 380, h: 800, scheme: "dark" },
   { w: 1280, h: 900, scheme: "light" },
   { w: 1280, h: 900, scheme: "dark" },
 ];
+
+// The only one-sided borders allowed: the quotation bar beside a student's own question, and drawn chevrons.
+const STRIPE_OK = [".q", ".q-rec", "summary::before"];
+
+// States a student reaches by acting. The words typed here are test filler in a throwaway browser profile.
+async function enterState(page, state) {
+  if (state === "form" || state === "saved") {
+    await page.click("#q-open");
+    await page.waitForSelector("#wb-form", { state: "visible" });
+  }
+  if (state === "saved") {
+    await page.fill("#wb-text", "Design check filler version, not a question.");
+    await page.fill("#wb-why", "Design check filler reason.");
+    await page.click("#wb-save");
+    await page.waitForTimeout(500);
+  }
+  if (state === "worked") {
+    for (const sel of ["#st-checks .dot", "#st-checks .ck-more button", "#words .w"]) {
+      const el = page.locator(sel).first();
+      if (await el.count()) await el.click().catch(() => {});
+    }
+    await page.waitForTimeout(300);
+  }
+}
 
 // Source rules: checked on the files themselves.
 function sourceChecks(file) {
@@ -43,6 +71,13 @@ function sourceChecks(file) {
   if (banned) out.push(`banned font named: ${[...new Set(banned)].join(", ")}`);
   if (/[–—]/.test(text)) out.push("en or em dash in the source");
   if (/[\u{1F300}-\u{1FAFF}]/u.test(text)) out.push("emoji in the source");
+  const css = (text.match(/<style>[\s\S]*?<\/style>/g) || []).join("\n");
+  for (const m of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    const side = m[2].match(/border-(left|right|inline-start|inline-end)(-width)?\s*:\s*(\d+(?:\.\d+)?)px/);
+    const selector = m[1].trim();
+    if (side && +side[3] >= 2 && !STRIPE_OK.some((ok) => selector.includes(ok))) out.push(`side stripe in the stylesheet: ${selector.slice(0, 48)} (${side[3]}px)`);
+  }
+  if (/\{\{/.test(css)) out.push("doubled opening braces in a style block: the browser drops the rules that follow");
   if (!/::selection/.test(text)) out.push("no ::selection style: selected text falls back to the browser's blue");
   if (/<(input|textarea)\b/.test(text) && !/caret-color/.test(text)) out.push("fields without caret-color");
   if (!/:focus-visible/.test(text) && /<(a|button|input|textarea|select|summary)\b/.test(text)) out.push("no :focus-visible style");
@@ -111,19 +146,23 @@ function renderedChecks(opts) {
     if (!/balance/.test(wrap) && h.getClientRects().length && h.getBoundingClientRect().height > px(cs.lineHeight) * 1.5) add("heading wraps without text-wrap: balance", h);
   }
 
-  // 5. Measure: running text that wraps stays within 75ch.
+  // 5. Measure: running text that wraps stays within 75 characters a line. Counted in the element's own letters,
+  //    not in "ch": a zero is far wider than an average letter, so a 75ch box can hold over 100 characters.
   const probe = document.createElement("span");
-  probe.textContent = "0000000000";
-  probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;letter-spacing:0";
+  probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;left:-9999px;top:0";
   for (const e of shown.filter((x) => /^(P|LI|DD|BLOCKQUOTE)$/.test(x.tagName) || opts.proseAlso.some((s) => x.matches(s)))) {
     if (e.querySelector("p,li,table,ul,ol")) continue;
+    const text = e.textContent.replace(/\s+/g, " ").trim();
+    if (text.length < 90) continue;
     const cs = getComputedStyle(e), lh = px(cs.lineHeight) || px(cs.fontSize) * 1.4;
-    const inner = e.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    const cols = parseInt(cs.columnCount, 10) || 1; // a note set in two columns is measured by its column
+    const inner = (e.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight) - (cols - 1) * (px(cs.columnGap) || 0)) / cols;
     if (e.getBoundingClientRect().height - px(cs.paddingTop) - px(cs.paddingBottom) < lh * 1.6) continue; // one line
+    probe.textContent = text.slice(0, 240);
     e.appendChild(probe);
-    const ch = probe.getBoundingClientRect().width / 10;
+    const per = probe.getBoundingClientRect().width / probe.textContent.length;
     probe.remove();
-    if (ch && inner / ch > 76.5) add("measure over 75ch", e, `${Math.round(inner / ch)}ch`);
+    if (per && inner / per > 78) add("line longer than 75 characters", e, `about ${Math.round(inner / per)}`);
   }
 
   // 6. Contrast of every piece of text against the nearest solid ground.
@@ -159,7 +198,8 @@ function renderedChecks(opts) {
   if (opts.phone && !opts.print) {
     for (const e of shown.filter((x) => x.matches("a[href],button,input:not([type=hidden]),select,textarea,summary,[role=button],[role=tab]"))) {
       if (e.tagName === "A" && e.closest("p,li,td,dd,figcaption,small") && getComputedStyle(e).display.startsWith("inline")) continue;
-      const r = e.getBoundingClientRect();
+      const lab = e.matches("input[type=checkbox],input[type=radio]") && e.closest("label"); // the label is the target
+      const r = (lab || e).getBoundingClientRect();
       if (r.height < 43.5 || r.width < 43.5) add("touch target under 44px", e, `${Math.round(r.width)}x${Math.round(r.height)}`);
     }
   }
@@ -180,7 +220,24 @@ function renderedChecks(opts) {
     }
   }
 
-  // 9. Structure: one h1, no skipped heading level, every field labelled, every icon button named.
+  // 9. No card inside a card. A card is a bordered, filled, round-cornered block that holds other blocks.
+  const isCard = (e) => {
+    if (e.matches("button,a,input,textarea,select,summary,code,pre,table,td,th,svg,span,p,label,li > b")) return false;
+    const cs = getComputedStyle(e);
+    const b = ["Top", "Right", "Bottom", "Left"].map((k) => px(cs["border" + k + "Width"]) > 0 && cs["border" + k + "Style"] !== "none");
+    const bg = rgb(cs.backgroundColor);
+    return b.every(Boolean) && px(cs.borderTopLeftRadius) > 0 && bg && bg.a > 0 && e.children.length > 1 && e.getBoundingClientRect().height > 60;
+  };
+  for (const e of shown.filter(isCard)) {
+    for (let n = e.parentElement; n && n !== document.body; n = n.parentElement) {
+      if (!visible(n) || !isCard(n)) continue;
+      const a = getComputedStyle(e).backgroundColor, b = getComputedStyle(n).backgroundColor;
+      if (!opts.nestAllow.some((sel) => e.matches(sel))) add("card inside a card", e, a === b ? "same ground" : "");
+      break;
+    }
+  }
+
+  // 10. Structure: one h1, no skipped heading level, every field labelled, every icon button named.
   const hs = shown.filter((e) => /^H[1-6]$/.test(e.tagName));
   const h1s = hs.filter((h) => h.tagName === "H1").length;
   if (!opts.sheets && h1s !== 1) fails.push(`structure: ${h1s} h1 elements on screen`); // a handout has one title per sheet
@@ -203,7 +260,7 @@ function renderedChecks(opts) {
     if (only && !s.name.includes(only)) continue;
     const found = new Map(); // failure -> views
     const note = (f, view) => found.set(f, (found.get(f) || new Set()).add(view));
-    if (!s.hash) for (const f of sourceChecks(s.file)) note("source: " + f, "file");
+    if (!s.hash && !s.state) for (const f of sourceChecks(s.file)) note("source: " + f, "file");
     for (const v of VIEWS) {
       for (const media of s.print ? ["screen", "print"] : ["screen"]) {
         if (media === "print" && (v.w !== 1280 || v.scheme !== "light")) continue;
@@ -214,17 +271,30 @@ function renderedChecks(opts) {
         await page.goto("file://" + path.join(ROOT, s.file) + (s.hash ? "#" + s.hash : ""));
         await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(350);
+        if (s.state) await enterState(page, s.state);
         if (media === "print") await page.emulateMedia({ media: "print" });
         const view = media === "print" ? "print" : `${v.w} ${v.scheme}`;
         const fails = await page.evaluate(renderedChecks, {
           phone: v.w < 500, print: media === "print", sheets: !!s.print,
-          stripeAllow: [".q", "blockquote"], // a quoted question keeps its quotation bar
-          proseAlso: [".band", ".lede", ".hint", ".rule"],
+          stripeAllow: [".q", ".q-rec", "blockquote"], // a quoted question keeps its quotation bar
+          proseAlso: [".band", ".lede", ".hint", ".rule:not(.sign)"], // a sign-off line is a row of blanks, not running text
+          nestAllow: ["#ficha", "#vl", "form", ".page"], // the question card on the night desk, the paper version list, a form, a printed sheet
         });
         for (const f of fails) note(f, view);
         for (const e of errors) note("script error: " + e, view);
         await ctx.close();
       }
+    }
+    // A school network may block the web fonts. The fallback faces are wider, and the page must still fit.
+    if (!s.state) {
+      const ctx = await browser.newContext({ viewport: { width: 380, height: 800 } });
+      await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
+      const page = await ctx.newPage();
+      await page.goto("file://" + path.join(ROOT, s.file) + (s.hash ? "#" + s.hash : ""));
+      await page.waitForTimeout(600);
+      const wide = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      if (wide > 1) note(`overflow with the web fonts blocked: the page scrolls sideways by ${wide}px`, "380 fallback fonts");
+      await ctx.close();
     }
     console.log(`${found.size ? "FAIL" : "ok  "} ${s.name}${found.size ? "  " + found.size + " finding" + (found.size === 1 ? "" : "s") : ""}`);
     for (const [f, views] of found) console.log(`       ${f}   [${[...views].join(", ")}]`);
