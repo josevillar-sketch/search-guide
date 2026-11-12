@@ -227,9 +227,9 @@ page("method-section-checklist.html", "Method section checklist", f"""
 
 # ---------- 5. Research Library (student page; published as an artifact) ----------
 # Every link here must also be in the verified part of RESOURCES.md; tools/check_links.py enforces it.
-NEEDS = [("start","Start here"),("data","Find data that already exists"),("method","Choose and justify a method"),
-         ("people","Study people safely"),("analyze","Analyze what you collected"),("cite","Cite it")]
-TAGS = {"cite":"Cite it in your paper","nocite":"Read it, do not cite it","ask":"Ask Mr. Portela first","tool":"Tool"}
+NEEDS = [("start","A","Start","Start here"),("data","B","Find data","Find data that already exists"),("method","C","Method","Choose and justify a method"),
+         ("people","D","People","Study people safely"),("analyze","E","Analyze","Analyze what you collected"),("cite","F","Cite","Build your reference list")]
+STAMPS = {"cite":("Cite it","s-pine","You may cite this in your paper."),"nocite":("Don't cite","s-oxide","Read it to learn. Cite something stronger."),"ask":("Ask first","s-plum","See Mr. Portela before you use it."),"tool":("Tool","s-brass","It does a job. You do the thinking.")}
 LIB = [
  ("start","cite","AP Research Course and Exam Description","College Board","https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf",
   "The rules of the course and the rubrics your paper and presentation are scored on.","Read the rubric for the paper before you draft anything."),
@@ -266,79 +266,122 @@ LIB = [
  ("cite","tool","ZoteroBib","Zotero","https://zbib.org/",
   "A free bibliography builder. No account. Paste a title or link, pick the class style.","It saves only on that device. Copy your list out before you leave a shared iPad. Check every entry."),
 ]
-def card(need,tag,title,who,url,what,care):
-    head = f'<a href="{url}" target="_blank" rel="noopener">{title}</a>' if url else title
-    host = url.split('/')[2].replace('www.','') if url else 'ask in Room 63'
-    return (f'<li class="item" data-need="{need}"><div class="top"><span class="tag t-{tag}">{TAGS[tag]}</span>'
-            f'<span class="host">{host}</span></div><h3>{head}</h3><p class="who">{who}</p>'
-            f'<p>{what}</p><p class="care"><b>Mind this.</b> {care}</p></li>')
-sections = "".join(
-    f'<section class="need" id="{k}" data-need="{k}"><h2>{label}</h2><ul class="items">'
-    + "".join(card(*r) for r in LIB if r[0]==k) + '</ul></section>' for k,label in NEEDS)
-chips = '<button type="button" class="chip" id="chip-all" data-need="all" aria-pressed="true">Everything</button>' + "".join(
-    f'<button type="button" class="chip" id="chip-{k}" data-need="{k}" aria-pressed="false">{label}</button>' for k,label in NEEDS)
+def card(need,letter,n,tag,title,who,url,what,care):
+    label,cls,_ = STAMPS[tag]
+    host = url.split('/')[2].replace('www.','') if url else ''
+    go = (f'<a class="open" href="{url}" target="_blank" rel="noopener" aria-label="Open {title}">Open {host} <span aria-hidden="true">&#8599;</span></a>'
+          if url else '<span class="open none">Ask in Room 63</span>')
+    return (f'<li class="card"><div class="card-top"><span class="callno">R63.{letter}.{n:02d}</span>'
+            f'<span class="stamp {cls}">{label}</span></div><h3>{title}</h3><p class="who">{who}</p>'
+            f'<p class="what">{what}</p><p class="care"><span class="care-l">Mind this</span>{care}</p>{go}</li>')
+sections = ""
+for k,letter,short,label in NEEDS:
+    rows = [r for r in LIB if r[0]==k]
+    sections += (f'<section class="drawer" id="{k}" data-need="{k}"><div class="plate"><span class="letter" aria-hidden="true">{letter}</span>'
+                 f'<div><h2>{label}</h2><p class="count">Drawer {letter} · {len(rows)} {"card" if len(rows)==1 else "cards"}</p></div></div><ul class="cards">'
+                 + "".join(card(k,letter,n,*r[1:]) for n,r in enumerate(rows,1)) + '</ul></section>')
+chips = '<button type="button" class="chip" id="chip-all" data-need="all" aria-pressed="true">All</button>' + "".join(
+    f'<button type="button" class="chip" id="chip-{k}" data-need="{k}" aria-pressed="false"><span class="chip-l" aria-hidden="true">{letter}</span>{short}</button>' for k,letter,short,label in NEEDS)
+legend = "".join(f'<li><span class="stamp {cls}">{label}</span><span>{mean}</span></li>' for label,cls,mean in STAMPS.values())
 (HERE/"research-library.html").write_text(f"""<title>Room 63 Research Library</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap">
 <style>
-/* Layout: one reading column of index cards, grouped by what the student needs to do next. Same paper, brass and pine as the Room 63 Search Guide. */
-:root{{--ground:#ece4d2;--card:#fbf7ee;--card-2:#f3ead6;--ink:#1d1812;--ink-soft:#4a3f31;--hair:#c9b996;--edge:#7d6a45;--brass-text:#6d4f14;--pine:#245e55;--on-pine:#fbf7ee;--oxide:#9c3322;--plum:#6d3a73;--focus:#245e55;
+/* Layout: a card catalog. A loud masthead, then six lettered drawers; each resource is a paper catalog card with a call number and an inked stamp. The cards stay paper in both themes, as the Search Guide's own cards do. */
+:root{{--ground:#ece4d2;--ink:#1d1812;--ink-soft:#4a3f31;--hair:#c9b996;--edge:#7d6a45;--brass-text:#6d4f14;--brass-fill:#d6ad55;--on-brass:#1d1812;--pine:#245e55;--on-pine:#fbf7ee;--focus:#245e55;--drop:#1d1812;
+--paper:#fbf7ee;--paper-2:#f3ead6;--paper-ink:#1d1812;--paper-soft:#4a3f31;--paper-edge:#1d1812;--margin-red:#cf5b4c;--st-pine:#245e55;--st-oxide:#9c3322;--st-plum:#6d3a73;--st-brass:#6d4f14;
 --display:"Fraunces",Georgia,"Times New Roman",serif;--body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;--mono:"Space Mono","Courier New",ui-monospace,monospace}}
-@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{--ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;color-scheme:dark}}}}
-:root[data-theme="dark"]{{--ground:#07201b;--card:#0f2a25;--card-2:#15392f;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--oxide:#f08a74;--plum:#d9a5dc;--focus:#f0c56a;color-scheme:dark}}
+@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{--ground:#07201b;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--focus:#f0c56a;--drop:#8f7336;color-scheme:dark}}}}
+:root[data-theme="dark"]{{--ground:#07201b;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--focus:#f0c56a;--drop:#8f7336;color-scheme:dark}}
 *{{box-sizing:border-box}}
-body{{background:var(--ground);color:var(--ink);font:1.0625rem/1.5 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.5rem 3rem}}
-.wrap{{max-width:44rem;margin:0 auto;display:flex;flex-direction:column;gap:1.5rem}}
-.eyebrow{{font:700 .75rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass-text);margin:0 0 .6rem}}
-h1{{font:900 clamp(2rem,7vw,3rem)/1.02 var(--display);margin:0 0 .6rem;text-wrap:balance;letter-spacing:-.01em}}
-.lede{{margin:0;color:var(--ink-soft);max-width:36rem}}
-.rule{{border:2px solid var(--ink);background:var(--card);padding:.8rem 1rem;font-weight:700}}
-.rule span{{display:block;font-weight:400;color:var(--ink-soft);margin-top:.25rem}}
-.chips{{display:flex;flex-wrap:wrap;gap:.5rem}}
-.chip{{font:700 .9rem/1.2 var(--body);padding:.55rem .8rem;border:1.5px solid var(--edge);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer;min-height:44px}}
-.chip[aria-pressed="true"]{{background:var(--pine);border-color:var(--pine);color:var(--on-pine)}}
-.chip:focus-visible,a:focus-visible{{outline:3px solid var(--focus);outline-offset:2px}}
-.need h2{{font:650 1.45rem/1.15 var(--display);margin:0 0 .75rem;padding-bottom:.4rem;border-bottom:1.5px solid var(--hair);text-wrap:balance}}
-.items{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.75rem}}
-.item{{background:var(--card);border:1px solid var(--hair);padding:.9rem 1rem;min-width:0}}
-.top{{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:space-between;align-items:center;margin-bottom:.5rem}}
-.tag{{font:700 .72rem/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:.3rem .45rem;border:1.5px solid currentColor}}
-.t-cite{{color:var(--pine)}}.t-nocite{{color:var(--oxide)}}.t-ask{{color:var(--plum)}}.t-tool{{color:var(--brass-text)}}
-.host{{font:.75rem/1 var(--mono);color:var(--ink-soft);overflow-wrap:anywhere}}
-.item h3{{font:650 1.15rem/1.25 var(--display);margin:0 0 .15rem}}
-.item a{{color:var(--ink);text-decoration-color:var(--edge);text-underline-offset:.18em}}
-/* The title is the only way into a card. Pad the link so the tap target is 44px tall without moving the layout. */
-.item h3 a{{display:inline-block;padding-block:.7rem;margin-block:-.7rem}}
-.item p{{margin:.35rem 0 0}}
-.who{{color:var(--ink-soft);font-size:.92rem}}
-.care{{background:var(--card-2);padding:.5rem .65rem;font-size:.95rem}}
-.no{{border:2px solid var(--oxide);padding:.9rem 1rem;background:var(--card)}}
-.no h2{{font:650 1.2rem/1.2 var(--display);margin:0 0 .3rem;color:var(--oxide)}}
-.no p{{margin:0}}
-footer{{font:.78rem/1.5 var(--mono);color:var(--ink-soft);border-top:1.5px solid var(--hair);padding-top:.8rem}}
-@media (prefers-reduced-motion:no-preference){{.chip{{transition:background .15s,color .15s}}}}
+html{{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}}
+body{{background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.25rem 4rem}}
+body::before{{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}}
+.wrap{{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;gap:2rem}}
+a:focus-visible,button:focus-visible{{outline:3px solid var(--focus);outline-offset:3px}}
+
+.mast{{display:flex;flex-direction:column;gap:1rem;border-bottom:3px solid var(--ink);padding-bottom:1.25rem}}
+.eyebrow{{font:700 .8125rem/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass-text);margin:0}}
+h1{{font:900 clamp(2.9rem,15.4vw,9rem)/.84 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:0;max-width:100%}}
+h1 span{{display:block}}
+h1 .l2{{color:var(--pine)}}
+.strip{{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font:700 .8125rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0;padding:0;list-style:none}}
+.lede{{margin:0;max-width:40rem;font-size:1.125rem;color:var(--ink)}}
+
+.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
+.pledge b{{display:block;font:650 clamp(1.3rem,4.6vw,1.9rem)/1.12 var(--display);text-wrap:balance}}
+.pledge span{{display:block;margin-top:.4rem}}
+
+.legend{{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}}
+.legend li{{display:flex;flex-direction:column;gap:.6rem;align-items:flex-start;min-width:0;background:var(--paper);color:var(--paper-ink);border:1.5px solid var(--paper-edge);border-radius:6px;padding:.8rem .8rem .7rem;font-size:.95rem;line-height:1.4}}
+.legend .stamp{{flex:none}}
+
+.tabs{{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ground);margin-inline:-4px;padding:.6rem 4px .75rem;border-bottom:1.5px solid var(--hair)}}
+.chips{{display:flex;gap:.6rem;overflow-x:auto;padding:2px 6px 6px 2px;scrollbar-width:thin}}
+.chip{{flex:none;display:inline-flex;align-items:center;gap:.45rem;min-height:46px;padding:.5rem .9rem;background:var(--paper);color:var(--paper-ink);border:1.5px solid var(--paper-edge);border-radius:6px;box-shadow:4px 4px 0 var(--drop);font:700 1rem/1.2 var(--body);cursor:pointer}}
+.chip-l{{font:700 .75rem/1 var(--mono);border:1.5px solid currentColor;border-radius:4px;padding:.2rem .32rem}}
+.chip[aria-pressed="true"]{{background:var(--brass-fill);color:var(--on-brass);box-shadow:1px 1px 0 var(--drop);transform:translate(3px,3px)}}
+
+.drawer{{display:grid;gap:1rem;min-width:0}}
+.plate{{display:flex;gap:.9rem;align-items:center;min-width:0}}
+.letter{{flex:none;display:grid;place-items:center;width:3.4rem;height:3.4rem;font:900 2.1rem/1 var(--display);color:var(--on-brass);background:var(--brass-fill);border:1.5px solid var(--paper-edge);border-radius:6px;box-shadow:4px 4px 0 var(--drop)}}
+.plate h2{{font:900 clamp(1.45rem,5vw,2rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}}
+.count{{font:700 .8125rem/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:.25rem 0 0}}
+.cards{{list-style:none;margin:0;padding:0;display:grid;gap:1.1rem;min-width:0}}
+
+.card{{position:relative;background:var(--paper);color:var(--paper-ink);border:1.5px solid var(--paper-edge);border-radius:6px;box-shadow:6px 6px 0 var(--drop);padding:0 1.1rem 2.6rem;display:flex;flex-direction:column;gap:.5rem;min-width:0}}
+.card::after{{content:"";position:absolute;left:50%;bottom:.75rem;width:.95rem;height:.95rem;margin-left:-.475rem;border-radius:50%;background:var(--ground);border:1.5px solid var(--paper-edge)}}
+.card-top{{display:flex;flex-wrap:wrap;gap:.5rem 1rem;justify-content:space-between;align-items:center;margin-inline:-1.1rem;padding:.7rem 1.1rem .65rem;border-bottom:2px solid var(--margin-red)}}
+.callno{{font:700 .8125rem/1 var(--mono);letter-spacing:.08em;color:var(--paper-soft)}}
+.stamp{{display:inline-block;font:700 .78rem/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;padding:.34rem .5rem .3rem;border:2px solid currentColor;border-radius:3px;outline:1px solid currentColor;outline-offset:2px;transform:rotate(-2.5deg);white-space:nowrap}}
+.card:nth-child(even) .stamp{{transform:rotate(1.8deg)}}
+.s-pine{{color:var(--st-pine)}}.s-oxide{{color:var(--st-oxide)}}.s-plum{{color:var(--st-plum)}}.s-brass{{color:var(--st-brass)}}
+.card h3{{font:650 clamp(1.3rem,4.4vw,1.6rem)/1.15 var(--display);margin:.35rem 0 0;text-wrap:balance}}
+.who{{font:400 .8125rem/1.45 var(--mono);letter-spacing:.03em;color:var(--paper-soft);margin:0}}
+.what{{margin:.15rem 0 0;max-width:42rem}}
+.care{{margin:.15rem 0 0;background:var(--paper-2);border-left:4px solid var(--paper-edge);padding:.55rem .75rem;max-width:42rem}}
+.care-l{{display:block;font:700 .75rem/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--st-oxide)}}
+.open{{align-self:flex-start;margin-top:.4rem;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem .95rem;font:700 1rem/1.2 var(--body);color:var(--paper-ink);background:transparent;border:1.5px solid var(--paper-edge);border-radius:6px;text-decoration:none;overflow-wrap:anywhere}}
+a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
+.open.none{{border-style:dashed;color:var(--paper-soft)}}
+
+.withdrawn{{background:var(--paper);color:var(--paper-ink);border:2px solid var(--st-oxide);border-radius:6px;padding:1rem 1.1rem;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center}}
+.withdrawn .stamp{{font-size:1rem;flex:none}}
+.withdrawn p{{margin:0;flex:1 1 18rem;min-width:0}}
+footer{{font:700 .8125rem/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);border-top:3px solid var(--ink);padding-top:.9rem}}
+
+@media (min-width:54rem){{
+  .drawer{{grid-template-columns:15rem minmax(0,1fr);gap:2rem;align-items:start}}
+  .plate{{position:sticky;top:calc(84px + env(safe-area-inset-top,0px));flex-direction:column;align-items:flex-start}}
+  .mast{{display:grid;grid-template-columns:minmax(0,1fr) 20rem;align-items:end;column-gap:2rem}}
+  .mast .eyebrow,.mast h1{{grid-column:1/-1}}
+  .legend{{grid-template-columns:repeat(4,minmax(0,1fr))}}
+}}
+@media (prefers-reduced-motion:no-preference){{.chip{{transition:transform .08s,box-shadow .08s,background .12s}}}}
 </style>
 <div class="wrap">
-<header>
+<header class="mast">
 <p class="eyebrow">Room 63 · AP Research · Mr. Portela</p>
-<h1>Research Library</h1>
-<p class="lede">Every source and tool here was opened and checked. Each card says what it is for, whether you may cite it, and what to watch out for. To find sources on your own topic, use your Search Guide slip.</p>
+<h1><span>Research</span><span class="l2">Library</span></h1>
+<p class="lede">Every card here was opened and checked. Each one says what it is for, whether you may cite it, and what to watch out for.</p>
+<ul class="strip"><li>{len(LIB)} cards</li><li>{len(NEEDS)} drawers</li><li>Checked Nov 2026</li></ul>
 </header>
-<p class="rule">Nothing here writes or changes your research question.<span>Your question is the one in your log. These tools help you answer it.</span></p>
-<nav class="chips" aria-label="Show one need">{chips}</nav>
+<p class="pledge"><b>Nothing here writes or changes your research question.</b><span>Your question is the one in your log. To find sources on your own topic, use your Search Guide slip.</span></p>
+<ul class="legend" aria-label="What the stamps mean">{legend}</ul>
+<nav class="tabs" aria-label="Open one drawer"><div class="chips">{chips}</div></nav>
 {sections}
-<section class="no"><h2>Do not use</h2><p><b>PapersOwl</b> and sites like it. Their advice pages sell papers written for you. College Board requires your paper to be your own work.</p></section>
-<footer>{len(LIB)} entries · checked November 2026 · If a link breaks, tell Mr. Portela.</footer>
+<section class="withdrawn" aria-label="Do not use"><span class="stamp s-oxide">Withdrawn</span><p><b>PapersOwl</b> and sites like it. Their advice pages sell papers written for you. College Board requires your paper to be your own work.</p></section>
+<footer>Room 63 Research Library · If a link breaks, tell Mr. Portela</footer>
 </div>
 <script>
 (function(){{
-  var chips=[].slice.call(document.querySelectorAll('.chip')),secs=[].slice.call(document.querySelectorAll('.need'));
+  var chips=[].slice.call(document.querySelectorAll('.chip')),secs=[].slice.call(document.querySelectorAll('.drawer'));
   function show(n){{
     chips.forEach(function(c){{c.setAttribute('aria-pressed',String(c.dataset.need===n));}});
     secs.forEach(function(s){{s.hidden=!(n==='all'||s.dataset.need===n);}});
     try{{localStorage.setItem('r63lib_need',n);}}catch(e){{}}
   }}
-  chips.forEach(function(c){{c.addEventListener('click',function(){{show(c.dataset.need);}});}});
+  chips.forEach(function(c){{c.addEventListener('click',function(){{show(c.dataset.need);c.scrollIntoView({{block:'nearest',inline:'center'}});}});}});
   var saved='all';try{{saved=localStorage.getItem('r63lib_need')||'all';}}catch(e){{}}
   if(!chips.some(function(c){{return c.dataset.need===saved;}}))saved='all';
   show(saved);
