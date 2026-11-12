@@ -64,4 +64,4 @@ Student records live in the `DATA` array in `index.html` (one line). Fields: `id
 - `DESIGN.md`: the design standard for everything students see.
 - `CLAUDE.md`: context and rules for any Claude session working here.
 
-This repository holds the student roster inside `index.html`. It must be private. `python3 tools/check_privacy.py` fails while it is public.
+This repository holds the student roster inside `index.html`, and it is public by Mr. Portela's decision of 2026-11-12. `python3 tools/check_privacy.py` reports the current state. Add no other student data here.
