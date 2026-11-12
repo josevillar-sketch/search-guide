@@ -1,42 +1,65 @@
 #!/usr/bin/env python3
-"""Builds the three printable one-pagers in this folder. Run: python3 classroom/build.py"""
+"""Builds the printable handouts and the Research Library page in this folder.
+Run: python3 classroom/build.py, then node classroom/build-pdf.cjs to print the PDFs and check their page counts."""
 import pathlib
 HERE = pathlib.Path(__file__).parent
 CSS = """
-@page{size:letter;margin:.55in}
+/* Room 63 print register. Same ink, brass and pine, and the same three faces, as the Search Guide and the Research Library.
+   Each .page is one letter sheet. On screen it shows as a sheet of paper; in print the sheet is the page.
+   Every tinted block also carries a rule or border, so a printer with background graphics off loses nothing. */
+@page{size:letter;margin:.5in .55in}
+:root{--ink:#1d1812;--soft:#4a3f31;--hair:#c9b996;--brass:#6d4f14;--pine:#245e55;--oxide:#9c3322;--tint:#f3ead6;--tint-2:#fbf7ee;--ground:#ece4d2;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;--body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;--mono:"Space Mono","Courier New",ui-monospace,monospace;color-scheme:light}
 *{box-sizing:border-box}
-html{font:10.4pt/1.38 Georgia,'Times New Roman',serif;color:#1c1b19;background:#f4f1ea}
-body{max-width:7.4in;margin:0 auto;padding:.4in .25in;background:#fff}
-h1{font:700 20pt/1.1 'Helvetica Neue',Arial,sans-serif;margin:0 0 2pt;letter-spacing:-.01em}
-h2{font:700 11.5pt/1.2 'Helvetica Neue',Arial,sans-serif;margin:0 0 4pt}
-h3{font:700 9pt/1.2 'Helvetica Neue',Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:8pt 0 2pt;color:#5b564c}
-p{margin:0 0 5pt} ul,ol{margin:0 0 5pt;padding-left:15pt} li{margin-bottom:2pt}
-.kicker{font:700 8pt/1 'Helvetica Neue',Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8a5a00;margin-bottom:5pt}
-.lede{font-size:11pt;margin-bottom:9pt}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:10pt}
-.card{border:1.2pt solid #1c1b19;border-radius:5pt;padding:9pt 10pt}
-.card.a{border-top:5pt solid #a3470f}.card.b{border-top:5pt solid #17557a}
-.band{background:#f3efe4;border-radius:5pt;padding:7pt 10pt;margin:8pt 0}
-.rule{font:700 9.2pt/1.3 'Helvetica Neue',Arial,sans-serif;border:1.2pt solid #1c1b19;padding:6pt 9pt;border-radius:5pt;margin:8pt 0}
-.foot{font:8pt/1.3 'Helvetica Neue',Arial,sans-serif;color:#6b665b;margin-top:8pt;border-top:.6pt solid #bbb;padding-top:4pt}
-table{width:100%;border-collapse:collapse;margin:6pt 0}
-th,td{border:.9pt solid #1c1b19;padding:5pt 6pt;vertical-align:top;text-align:left}
-th{font:700 9.2pt/1.2 'Helvetica Neue',Arial,sans-serif;background:#f3efe4}
-td.q{font:700 9.5pt/1.2 'Helvetica Neue',Arial,sans-serif;width:1.15in;background:#faf8f2}
-td.q small{display:block;font-weight:400;color:#5b564c;margin-top:2pt}
+html{font:10pt/1.4 var(--body);color:var(--ink);background:var(--ground);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;padding:24px 16px 40px}
+.page{position:relative;background:#fff;max-width:8.5in;margin:0 auto 24px;padding:.5in .55in;border:1px solid var(--hair);break-after:page}
+.page:last-child{break-after:auto;margin-bottom:0}
+.page::before{content:"63";position:absolute;top:.5in;right:.55in;width:2.9rem;height:2.9rem;border:.12rem solid var(--ink);border-radius:50%;outline:.06rem solid var(--ink);outline-offset:-.32rem;
+  display:grid;place-items:center;font:900 1.15rem/1 var(--display);letter-spacing:-.02em}
+.kicker{font:700 .74rem/1.3 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 3.6rem .35rem 0}
+h1{font:900 2.5rem/1.02 var(--display);letter-spacing:-.015em;margin:0 0 .8rem;padding-right:3.6rem;text-wrap:balance}
+h1::after{content:"";display:block;margin:.6rem -3.6rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
+h2{font:650 1.3rem/1.15 var(--display);margin:0 0 .4rem;text-wrap:balance}
+h3{font:700 .74rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.8rem 0 .3rem}
+p{margin:0 0 .5rem} ul,ol{margin:0 0 .5rem;padding-left:1.5rem} li{margin-bottom:.2rem}
+li::marker{font-weight:700;color:var(--brass)}
+b{font-weight:700}
+.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:44rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.card{border:.1rem solid var(--ink);padding:.85rem 1rem}
+.card.a{border-top:.45rem solid var(--oxide)}.card.b{border-top:.45rem solid var(--pine)}
+.band{background:var(--tint);border-left:.3rem solid var(--brass);padding:.6rem .9rem;margin:.8rem 0}
+.rule{font:700 .95rem/1.35 var(--body);border:.12rem solid var(--ink);border-left-width:.55rem;padding:.6rem .9rem;margin:.8rem 0}
+.foot{font:400 .68rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.3rem;border-top:.08rem solid var(--ink);padding-top:.4rem}
+table{width:100%;border-collapse:collapse;margin:.6rem 0}
+th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left}
+th{font:700 .92rem/1.2 var(--body);background:var(--tint);border-bottom-width:.16rem}
+td.q{font:700 .95rem/1.2 var(--body);width:1.15in;background:var(--tint-2)}
+td.q small{display:block;font-weight:400;font-size:.85rem;line-height:1.25;color:var(--soft);margin-top:.2rem}
 .blank td{height:.98in}.blank td.q{height:auto}
-.line{border-bottom:.8pt solid #1c1b19;height:17pt;margin-bottom:2pt}
-.name{display:flex;gap:14pt;font:9pt 'Helvetica Neue',Arial,sans-serif;margin:4pt 0 8pt}
-.name span{flex:1;border-bottom:.8pt solid #1c1b19;padding-bottom:10pt}
-code{font:9.2pt ui-monospace,Menlo,Consolas,monospace;background:#f3efe4;padding:0 3pt;border-radius:2pt}
-.page{break-after:page}.page:last-child{break-after:auto}
-.ex{font-style:italic;color:#3d3a33}
-@media print{html,body{background:#fff}body{padding:0;max-width:none}}
-@media (max-width:640px){.two{grid-template-columns:1fr}body{padding:16px}}
+td.tick{width:.34in;text-align:center}
+.box{display:inline-block;width:1.05rem;height:1.05rem;border:.12rem solid var(--ink);vertical-align:-.15rem}
+.line{border-bottom:.08rem solid var(--ink);height:18pt;margin-bottom:2pt}
+.name{display:flex;gap:1.4rem;font:700 .7rem/1.3 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:.4rem 0 .8rem}
+.name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.3rem}
+code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
+.ex{font-style:italic;color:var(--soft)}
+@media print{html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
+@media screen and (prefers-color-scheme:dark){html{background:#07201b}.page{border-color:#2f5a50}}
+@media screen and (max-width:640px){html{font-size:15px}body{padding:0}h1{font-size:2rem}.two{grid-template-columns:1fr}
+  .page{border:0;border-bottom:12px solid var(--ground);margin:0;padding:20px 16px 24px}.page::before{top:20px;right:16px}}
+@media screen and (max-width:640px) and (prefers-color-scheme:dark){.page{border-bottom-color:#07201b}}
 """
+FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
+         '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,900'
+         '&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap">')
 def page(fn, title, body):
+    # One-sheet handouts are written without a wrapper; give them the same sheet as the two-page ones.
+    if '<section class="page">' not in body:
+        body = '<section class="page">' + body.strip() + '</section>'
     (HERE/fn).write_text(f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title><style>{CSS}</style></head><body>
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title>{FONTS}<style>{CSS}</style></head><body>
 {body}
 </body></html>
 """, encoding="utf-8")
@@ -45,7 +68,8 @@ FOOT = '<div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela
 
 # ---------- 1. Own data or public data? ----------
 page("own-data-or-public-data.html", "Own data or public data?", f"""
-<style>html{{font-size:10pt}}.card{{padding:7pt 9pt}}.band{{margin:6pt 0}}</style>
+<style>/* This sheet carries the most text. Print it a step smaller so it stays on one page; build-pdf.cjs checks the count. */
+@media print{{html{{font-size:9.4pt}}.card{{padding:.7rem .9rem}}.band,.rule{{margin:.6rem 0}}h3{{margin-top:.6rem}}}}</style>
 <div class="kicker">AP Research · Choosing a method</div>
 <h1>Own data or public data?</h1>
 <p class="lede">Two roads can lead to evidence for your paper. This page does not change your question. Your question is the one in your log.</p>
@@ -72,7 +96,7 @@ page("own-data-or-public-data.html", "Own data or public data?", f"""
 </div>
 <div class="band"><b>A third road:</b> analyzing published texts or media, such as news articles, speeches, or advertisements. Texts are not participants. Posts by private people are different, so ask before using social media.</div>
 <div class="rule">On every road: each number in your paper traces to your own file · you justify your method with a methods text you cite · you state what your data cannot show.</div>
-<h3>My decision today (it can change)</h3><div class="line"></div>
+<h3>My decision today (it can change)</h3><div class="line"></div><div class="line"></div>
 {FOOT.format(x="Own data or public data?")}
 """)
 
@@ -124,7 +148,7 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 <ul><li>Go to <code>sda.berkeley.edu</code>, choose <b>Archive</b>, then <b>General Social Survey (GSS) Cumulative Datafile 1972-2024 - release 3 (SDA 4)</b>. No login.</li>
 <li>Test once on a student iPad before class. Results open in a new tab, so pop-ups must be allowed.</li></ul>
 <h3>Run of the period</h3>
-<table><tr><th style="width:.7in">Minutes</th><th>What happens</th></tr>
+<table><tr><th style="width:.9in">Minutes</th><th>What happens</th></tr>
 <tr><td>0 to 5</td><td>Frame it: real researchers reuse data. Thousands of adults answered these questions, and the answers are free. Hand out the student sheet.</td></tr>
 <tr><td>5 to 15</td><td><b>Demo on the board.</b> Type <code>consci</code> in <b>Row</b> and <code>degree</code> in <b>Column</b>. Leave the weight as it is. Press <b>Run the Table</b>. Then open the <b>Codebook</b> tab and show the exact question for <code>consci</code>.</td></tr>
 <tr><td>15 to 35</td><td>Students work through steps 1 to 5 on their sheet. Circulate. The common snag is a variable that was only asked in some years.</td></tr>
@@ -170,7 +194,7 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 
 # ---------- 4. Method section checklist ----------
 def checks(items):
-    return "<table>"+"".join(f'<tr><td style="width:.34in;text-align:center;font-size:13pt">&#9744;</td><td><b>{a}</b> {b}</td></tr>' for a,b in items)+"</table>"
+    return "<table>"+"".join(f'<tr><td class="tick"><span class="box"></span></td><td><b>{a}</b> {b}</td></tr>' for a,b in items)+"</table>"
 page("method-section-checklist.html", "Method section checklist", f"""
 <div class="kicker">AP Research · Academic paper · Self-check, then peer check</div>
 <h1>Method section checklist</h1>
@@ -283,6 +307,8 @@ h1{{font:900 clamp(2rem,7vw,3rem)/1.02 var(--display);margin:0 0 .6rem;text-wrap
 .host{{font:.75rem/1 var(--mono);color:var(--ink-soft);overflow-wrap:anywhere}}
 .item h3{{font:650 1.15rem/1.25 var(--display);margin:0 0 .15rem}}
 .item a{{color:var(--ink);text-decoration-color:var(--edge);text-underline-offset:.18em}}
+/* The title is the only way into a card. Pad the link so the tap target is 44px tall without moving the layout. */
+.item h3 a{{display:inline-block;padding-block:.7rem;margin-block:-.7rem}}
 .item p{{margin:.35rem 0 0}}
 .who{{color:var(--ink-soft);font-size:.92rem}}
 .care{{background:var(--card-2);padding:.5rem .65rem;font-size:.95rem}}

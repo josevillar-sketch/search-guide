@@ -28,6 +28,8 @@ h1{font:900 clamp(2rem,7vw,3rem)/1.02 var(--display);margin:0 0 .6rem;text-wrap:
 .host{font:.75rem/1 var(--mono);color:var(--ink-soft);overflow-wrap:anywhere}
 .item h3{font:650 1.15rem/1.25 var(--display);margin:0 0 .15rem}
 .item a{color:var(--ink);text-decoration-color:var(--edge);text-underline-offset:.18em}
+/* The title is the only way into a card. Pad the link so the tap target is 44px tall without moving the layout. */
+.item h3 a{display:inline-block;padding-block:.7rem;margin-block:-.7rem}
 .item p{margin:.35rem 0 0}
 .who{color:var(--ink-soft);font-size:.92rem}
 .care{background:var(--card-2);padding:.5rem .65rem;font-size:.95rem}
