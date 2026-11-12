@@ -411,7 +411,7 @@ legend = "".join(f'<li><span class="stamp {cls}">{label}</span><span>{mean}</spa
 :root[data-theme="dark"]{{--ground:#07201b;--ink:#f3ead6;--ink-soft:#c9bb9c;--hair:#2f5a50;--edge:#b8995a;--brass-text:#e2b964;--pine:#7fd1c0;--on-pine:#07201b;--focus:#f0c56a;--drop:#8f7336;color-scheme:dark}}
 *{{box-sizing:border-box}}
 html{{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}}
-body{{background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.25rem 4rem}}
+body{{margin:0;background:var(--ground);color:var(--ink);font:400 1.0625rem/1.53 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:1.25rem 4rem}}
 body::before{{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ground)}}
 .wrap{{max-width:62rem;margin:0 auto;display:flex;flex-direction:column;gap:2rem}}
 a:focus-visible,button:focus-visible{{outline:3px solid var(--focus);outline-offset:3px}}
@@ -424,9 +424,9 @@ h1{{font:900 clamp(2.9rem,15.4vw,6rem)/.84 var(--display);text-transform:upperca
 h1 span{{display:block}}
 h1 .l2{{color:var(--pine)}}
 .strip{{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;font:700 .8125rem/1.5 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin:0;padding:0;list-style:none}}
-.lede{{margin:0;max-width:40rem;font-size:1.125rem;color:var(--ink)}}
+.lede{{margin:0;max-width:34rem;font-size:1.125rem;color:var(--ink)}}
 
-.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem max(1.25rem,calc(100% - 72ch)) 1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
+.pledge{{background:var(--pine);color:var(--on-pine);padding:1.1rem max(1.25rem,calc(100% - 54ch)) 1.1rem 1.25rem;border-radius:6px;box-shadow:6px 6px 0 var(--drop);margin:0}}
 .pledge b{{display:block;font:650 clamp(1.3rem,4.6vw,1.9rem)/1.12 var(--display);text-wrap:balance}}
 .pledge span{{display:block;margin-top:.4rem}}
 
@@ -456,9 +456,9 @@ h1 .l2{{color:var(--pine)}}
 .s-pine{{color:var(--st-pine)}}.s-oxide{{color:var(--st-oxide)}}.s-plum{{color:var(--st-plum)}}.s-brass{{color:var(--st-brass)}}
 .card h3{{font:650 clamp(1.3rem,4.4vw,1.6rem)/1.15 var(--display);margin:.35rem 0 0;text-wrap:balance}}
 .who{{font:400 .8125rem/1.45 var(--mono);letter-spacing:.03em;color:var(--paper-soft);margin:0}}
-.what{{margin:.15rem 0 0;max-width:42rem}}
+.what{{margin:.15rem 0 0;max-width:34rem}}
 /* A ruled note, the same form as the notes on the print handouts. No side stripe. */
-.care{{margin:.15rem 0 0;background:var(--paper-2);border-block:1.5px solid var(--paper-edge);padding:.55rem .75rem;max-width:42rem}}
+.care{{margin:.15rem 0 0;background:var(--paper-2);border-block:1.5px solid var(--paper-edge);padding:.55rem .75rem;max-width:35.5rem}}
 .care-l{{display:block;font:700 .75rem/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--st-oxide)}}
 .open{{align-self:flex-start;margin-top:.4rem;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.55rem .95rem;font:700 1rem/1.2 var(--body);color:var(--paper-ink);background:transparent;border:1.5px solid var(--paper-edge);border-radius:6px;text-decoration:none;overflow-wrap:anywhere}}
 a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
@@ -466,7 +466,7 @@ a.open:hover{{background:var(--brass-fill);color:var(--on-brass)}}
 
 .withdrawn{{background:var(--paper);color:var(--paper-ink);border:2px solid var(--st-oxide);border-radius:6px;padding:1rem 1.1rem;display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center}}
 .withdrawn .stamp{{font-size:1rem;flex:none}}
-.withdrawn p{{margin:0;flex:1 1 18rem;min-width:0}}
+.withdrawn p{{margin:0;flex:0 1 34rem;min-width:0}}
 footer{{font:700 .8125rem/1.6 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);border-top:3px solid var(--ink);padding-top:.9rem}}
 
 @media (min-width:54rem){{

@@ -154,7 +154,8 @@ function renderedChecks(opts) {
     const text = e.textContent.replace(/\s+/g, " ").trim();
     if (text.length < 90) continue;
     const cs = getComputedStyle(e), lh = px(cs.lineHeight) || px(cs.fontSize) * 1.4;
-    const inner = e.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight);
+    const cols = parseInt(cs.columnCount, 10) || 1; // a note set in two columns is measured by its column
+    const inner = (e.clientWidth - px(cs.paddingLeft) - px(cs.paddingRight) - (cols - 1) * (px(cs.columnGap) || 0)) / cols;
     if (e.getBoundingClientRect().height - px(cs.paddingTop) - px(cs.paddingBottom) < lh * 1.6) continue; // one line
     probe.textContent = text.slice(0, 240);
     e.appendChild(probe);
