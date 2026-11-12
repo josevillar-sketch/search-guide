@@ -3,7 +3,7 @@
 // Run after build.py:  NODE_PATH="$(npm root -g)" node classroom/build-pdf.cjs
 // Fails (exit 1) when a handout does not have the page count listed here, when a web font did not load
 // (the PDF would silently fall back to Georgia or Verdana), or when anything runs past the sheet's edge.
-const { chromium } = require("playwright");
+const { launchHarness } = require("../tools/browser-harness.cjs");
 const path = require("path");
 const fs = require("fs");
 
@@ -19,11 +19,15 @@ const HANDOUTS = [
 const FACES = ['900 20px "Fraunces"', '650 20px "Fraunces"', '400 12px "Atkinson Hyperlegible"', '700 12px "Atkinson Hyperlegible"', '700 12px "Space Mono"'];
 
 (async () => {
-  const browser = await chromium.launch();
+  const harness = await launchHarness(path.join(__dirname, HANDOUTS[0][0] + ".html"), {
+    additionalFiles: Object.fromEntries(HANDOUTS.map(([name]) => ["/" + name + ".html", path.join(__dirname, name + ".html")])),
+  });
+  const browser = harness.browser;
   let bad = 0;
+  try {
   for (const [name, want] of HANDOUTS) {
     const page = await browser.newPage();
-    await page.goto("file://" + path.join(__dirname, name + ".html"));
+    await page.goto(harness.baseURL + "/" + name + ".html");
     await page.evaluate((faces) => Promise.all(faces.map((f) => document.fonts.load(f))), FACES);
     await page.evaluate(() => document.fonts.ready);
     const missing = await page.evaluate((faces) => faces.filter((f) => !document.fonts.check(f)), FACES);
@@ -41,6 +45,6 @@ const FACES = ['900 20px "Fraunces"', '650 20px "Fraunces"', '400 12px "Atkinson
     bad += problems.length;
     await page.close();
   }
-  await browser.close();
-  process.exit(bad ? 1 : 0);
-})();
+  } finally { await harness.close(); }
+  process.exitCode = bad ? 1 : 0;
+})().catch((error) => { console.error("Handout print check failed: " + error.message); process.exitCode = 1; });

@@ -1,0 +1,28 @@
+{
+  "name": "room63-search-guide",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local verification tools for the single-file Room 63 Search Guide.",
+  "scripts": {
+    "test": "node tools/verify.cjs",
+    "compact:artifact": "node tools/compact-artifact.cjs",
+    "test:design": "node tools/design_check.cjs",
+    "test:upstream-gate": "node tools/upstream-gate.test.cjs",
+    "verify:release": "node tools/release-check.cjs",
+    "test:release-gate": "node tools/release-check.test.cjs",
+    "test:harness": "node tools/harness-check.cjs",
+    "test:webkit": "node tools/mobile.cjs --browser=webkit",
+    "test:mobile:chromium": "node tools/mobile.cjs --browser=chromium",
+    "test:regressions": "node tools/regressions.cjs",
+    "test:workbench": "node tools/workbench.cjs",
+    "test:smoke": "node tools/smoke.cjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "clean-css": "5.3.3",
+    "playwright": "1.56.1",
+    "terser": "5.51.2"
+  }
+}

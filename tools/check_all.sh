@@ -6,6 +6,7 @@ export NODE_PATH="$(npm root -g)"
 fail=0
 run() { name=$1; shift; printf '\n== %s\n' "$name"; "$@" || { fail=1; printf 'FAILED: %s\n' "$name"; }; }
 run "privacy: report the repository's state"    python3 tools/check_privacy.py
+[ "$fail" -eq 0 ] || exit "$fail"
 run "data: roster, searches, databases"          python3 tools/check.py
 run "build: handouts and Research Library"       python3 classroom/build.py
 run "print: handout page counts and fonts"       node classroom/build-pdf.cjs
