@@ -48,6 +48,7 @@ After a pick, the pickers fold away and the student's desk opens:
 python3 tools/check.py                          # data: ids, searches, databases, quotes, course by period
 NODE_PATH="$(npm root -g)" node tools/smoke.cjs # headless Chromium: all slips, log copy, welcome back, builder, print page counts, phone width in both themes
 NODE_PATH="$(npm root -g)" node tools/workbench.cjs # headless Chromium: the workbench acceptance tests
+NODE_PATH="$(npm root -g)" node tools/design_check.cjs # the DESIGN.md floor on every page and handout: contrast, measure, tap targets, type limits, no eyebrow, no side stripe
 ```
 
 ## Updating student data
