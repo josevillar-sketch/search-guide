@@ -13,6 +13,7 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **College Board's rule on research with people:** in the Course and Exam Description above, pages 46 to 47, "Reviewing Student Research Proposals for Ethical Considerations." The teacher reviews every proposal, survey, and interview question before any data collection. A proposal with more than minimal risk cannot be approved. Teacher approval is enough unless the student will publish, compete, or present publicly; then a federally registered institutional review board must also approve. Item 9 of the Inquiry Proposal Form asks students to attach draft consent forms and instruments. Read from the PDF on 2026-11-12.
 - **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . How the program runs at a school: becoming an AP Capstone school, teacher and coordinator roles, and the year's calendar. It does not cover research ethics; an earlier version of this log wrongly said it did (corrected 2026-11-12).
 - **AP Seminar Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf . The Seminar framework and rubrics, with its clarifications file: https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description-clarifications.pdf . Checked 2026-11-12.
+- **AP Seminar scoring guidelines, 2023 to 2026:** https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions . Scoring guidelines for the end-of-course exam and both performance tasks. No sample student responses were listed on the page when checked on 2026-11-12.
 - **Guidance for AI tools:** https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools . What students may and may not use AI for. Read it before recommending any AI-based tool, such as Litmaps or ResearchRabbit.
 
 ## Data
@@ -60,6 +61,14 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Cautions:** Free registration is required before any download. The form asks for name, institution, and a research statement, and states no minimum age, so a teacher account is the safer route. Extracts are large and technical. SDA's census files are the easier start.
 - **Checked:** 2026-11-11; registration page read 2026-11-12. Approved by Mr. Portela 2026-11-11, with the cautions above.
 
+### data.census.gov
+
+- **Link:** https://data.census.gov/
+- **What it is:** The U.S. Census Bureau's main search for its population and economic tables. The Bureau's own description (https://www.census.gov/data/what-is-data-census-gov.html) says users can search statistics and download tables.
+- **AP Research use:** Local numbers for a community context section: population, age, income, language, housing, by city or ZIP code.
+- **Cautions:** The tool itself runs in the browser and could not be read by script, so this entry rests on the Bureau's description page. Students record the table number and the survey year, and do not mix one-year and five-year estimates.
+- **Checked:** 2026-11-12 (description page). Approved under Mr. Portela's standing approval of 2026-11-12.
+
 ### CDC WONDER
 
 - **Link:** https://wonder.cdc.gov/
@@ -73,9 +82,9 @@ These outrank every other entry: they define what AP Research is scored on. All 
 ### Bhattacherjee, *Social Science Research: Principles, Methods, and Practices* (2012)
 
 - **Link:** https://digitalcommons.usf.edu/oa_textbooks/3/
-- **What it is:** A free open textbook from the University of South Florida covering the whole research process. License: CC BY-NC-SA 3.0. The full PDF downloads without a login.
+- **What it is:** A free open textbook from the University of South Florida covering the whole research process. License: CC BY-NC-SA 3.0. Its page offers a full-text download with no login.
 - **AP Research use:** A citable methods text for justifying a method in the academic paper. It is the free stand-in for SAGE Research Methods.
-- **Cautions:** Written for graduate students, so it reads densely; assign chapters, not the book. Dated 2012, so pair it with newer sources on online surveys.
+- **Cautions:** Written for graduate students, so it reads densely; assign chapters, not the book. Dated 2012, so pair it with newer sources on online surveys. Only the book's landing page was opened in these checks: the download link turns away scripts, so the book's contents were not read here. Open it once in a browser before assigning chapters.
 - **Checked:** 2026-11-11
 
 ### OpenIntro Statistics
@@ -164,12 +173,12 @@ Not for students until opened and checked, and until the access route is confirm
 
 Each needs one look in a normal browser before it can be listed.
 
-- **Purdue OWL:** https://owl.purdue.edu/ . Server error 503 on two pages. Expected use: citation and research writing guides.
-- **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Server error 503. Expected use: more free methods texts.
+- **Purdue OWL:** https://owl.purdue.edu/ . Server error 503 on four tries across two days. Expected use: citation and research writing guides.
+- **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Server error 503 on three tries across two days. Expected use: more free methods texts.
 - **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Server error 503. Expected use: custom extracts. The survey's home site is verified above.
-- **Seeing Theory:** https://seeing-theory.brown.edu/ . Server error 503. Expected use: visual introduction to statistics.
+- **Seeing Theory:** https://seeing-theory.brown.edu/ . Server error 503 on three tries across two days. Expected use: visual introduction to statistics.
 - **DOAJ, the Directory of Open Access Journals:** https://doaj.org/ . Access refused, error 403. Not retried.
-- **data.census.gov, Harvard Dataverse, Unpaywall:** each page loaded with no readable content, so nothing was confirmed.
+- **Harvard Dataverse, Unpaywall:** each page loaded with no readable content on two tries, so nothing was confirmed. (data.census.gov moved to the verified list on 2026-11-12, on the strength of the Census Bureau's description page.)
 
 ### SAGE Research Methods
 
