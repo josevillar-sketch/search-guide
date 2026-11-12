@@ -32,6 +32,9 @@ b{font-weight:700}
 .card>h2{display:flex;align-items:center;gap:.7rem;font-size:1.45rem;margin-bottom:.55rem}
 .card>h2::before{flex:none;display:grid;place-items:center;width:2.3rem;height:2.3rem;font:900 1.5rem/1 var(--display);background:#d6ad55;border:.1rem solid var(--ink)}
 .card.a>h2::before{content:"A"}.card.b>h2::before{content:"B"}
+/* A sign-off line is a form to fill in, so it keeps the reading face inside the rule box. */
+.rule.sign{font:700 1rem/2 var(--body);text-wrap:balance;padding-right:.9rem}
+.rule.sign .opt{margin-right:.9rem;white-space:nowrap}
 /* A warning slug is an inked stamp, as on a Library card. */
 .slug.stamp{display:inline-block;color:var(--oxide);border:.16rem solid currentColor;outline:.07rem solid currentColor;outline-offset:.14rem;padding:.3rem .55rem .22rem;margin:.75rem 0 1.1rem .2rem;transform:rotate(-1.6deg)}
 .band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 72ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
