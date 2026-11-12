@@ -55,3 +55,13 @@ NODE_PATH="$(npm root -g)" node tools/design_check.cjs # the DESIGN.md floor on 
 ## Updating student data
 
 Student records live in the `DATA` array in `index.html` (one line). Fields: `id`, `n` name, `p` period, `c` course (`R` Research, `S` Seminar), `q` question, `qf` where it came from, `tp` topic, `f` field, `ch` the chair to fill, `sw` word swaps, `s` three searches `{db, q}`, `tip`, `es` show the Spanish-search note, `nt` no topic yet. Database keys are defined in `DB`.
+
+## Also in this repository
+
+- `RESOURCES.md`: the verified research resources log. Students are sent only to what is listed there.
+- `BOOKS.md`: the methods book request list, with confirmed editions and ISBNs.
+- `classroom/`: AP Research handouts, the consent templates, and the student Research Library page. `classroom/README.md` says what to use when.
+- `DESIGN.md`: the design standard for everything students see.
+- `CLAUDE.md`: context and rules for any Claude session working here.
+
+This repository holds the student roster inside `index.html`. It must be private. `python3 tools/check_privacy.py` fails while it is public.
