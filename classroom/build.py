@@ -327,7 +327,7 @@ page("question-check.html", "Survey and interview question check", f"""
 ("Earns its place.","I know which part of my analysis will use the answer.")])}
 </div><div>
 <h2 class="lab">The whole instrument</h2>
-{checks([("Time.","I timed it on one person. It took ______ minutes, and my form says so."),
+{checks([("Time.","I timed it on one person. It took <span class='fill in' style='width:.6in'></span> minutes, and my form says so."),
 ("No identities.","It does not ask for a name or anything that points to one person."),
 ("Minimal risk.","Nothing in it could embarrass, upset, or expose a participant."),
 ("Order.","Easy questions first. Anything harder comes later."),
@@ -360,7 +360,7 @@ page("paper-elements-check.html", "Academic paper elements check", f"""
 </table>
 <div class="two"><div>
 <h2 class="lab">Length</h2>
-{checks([("4,000 to 5,000 words.","My count is ____________."),
+{checks([("4,000 to 5,000 words.","<span style='white-space:nowrap'>My count is <span class='fill in' style='width:1.1in'></span>.</span>"),
 ("Counted correctly.","Titles, sub-headings, and in-text citations count. Graphs, figures, data tables, images, appendices, the abstract, footnoted citations, and the bibliography do not.")])}
 </div><div>
 <h2 class="lab">Form</h2>
