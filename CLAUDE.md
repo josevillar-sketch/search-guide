@@ -75,7 +75,7 @@ What that means in this repo:
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
 | `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
-| `classroom/` | AP Research materials. Printable handouts: the own-data-or-public-data guide, the method planning grid, the method section checklist, the SDA lab, and the consent and assent templates (Word, English and Spanish). Also `research-library.html`, the student-facing page of approved resources, published as a claude.ai artifact; every link on it must be in the verified part of `RESOURCES.md`, and `tools/check_links.py` enforces that. Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
+| `classroom/` | AP Research materials. Printable handouts: the own-data-or-public-data guide, the method planning grid, the method section checklist, the SDA lab, and the consent and assent templates (Word, English and Spanish). Also `research-library.html`, the student-facing page of approved resources, published as a private claude.ai artifact at https://claude.ai/artifact/JBuyyEu4YsMEezCL1R3xUG (republish to that address after any change; Mr. Portela decides when to share it); every link on it must be in the verified part of `RESOURCES.md`, and `tools/check_links.py` enforces that. Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
 | `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests), `check_links.py` (every link in the resources log and handouts). |
 
 ## Before pushing changes to `index.html`
