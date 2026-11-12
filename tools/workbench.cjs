@@ -1,10 +1,10 @@
 // Acceptance tests for the Room 63 Question Workbench (build spec section 10, tests 1 to 31).
-// Run: NODE_PATH="$(npm root -g)" node tools/workbench.cjs
-//      NODE_PATH="$(npm root -g)" node tools/workbench.cjs 1 25 30   (only these tests; asking for any of
+// Run: node tools/workbench.cjs (after npm ci).
+//      node tools/workbench.cjs 1 25 30   (only these tests; asking for any of
 //      2-10, 12-15 or 31 runs the whole R1 chain 2-10 and 12-15, because each step builds on the one before)
 // Prints "ok N Name" or "FAIL N Name: reason" for each test, then "N passed, M failed". Exits 1 on any failure.
 //
-// Harness (same as smoke.cjs): file:// URL, font hosts aborted, clipboard permissions, DATA parsed from the
+// Harness (same as smoke.cjs): ephemeral localhost URL, font hosts aborted, clipboard permissions, DATA parsed from the
 // source, and any pageerror (or console error that is not a blocked font) fails the test that was running.
 // Tests 2-10 and 12-15 share one context on R1, in order; test 31 runs last on that same context, which is
 // still in its state after test 15 (every other test uses its own fresh context). Each test is wrapped, so a
@@ -25,7 +25,7 @@
 // - Test 16 "the Example question" is #myq's original value (1.3): the textarea's content in the source,
 //   which has quotation marks around "bus-stop benches".
 // - Test 17 starts from a fresh context, so it saves V2 on R1 first. "Reload with no hash" is a full load
-//   of the file URL without a fragment.
+//   of the local page URL without a fragment.
 // - Test 20 "The form works": saving V2 shows #vl and stores a readable record with one version.
 // - Test 21 completes {"schema":2,...} as an otherwise valid record with one version. "#q-open is disabled"
 //   accepts the disabled property or aria-disabled="true". The dot is clicked with force (it may be disabled).
@@ -47,13 +47,13 @@
 //   The other strings are matched as written (case-sensitive substrings). The RULE comment must match 9.1
 //   word for word. \p{Extended_Pictographic} is searched in the whole file, DATA included.
 // - Test 31 splits each text node (outside .sr) on whitespace and compares exact tokens.
-const { chromium } = require("playwright");
+const { launchHarness } = require("./browser-harness.cjs");
 const path = require("path");
 const fs = require("fs");
 
 // WB_INDEX points the suite at another copy of the page (used only to self-test this harness).
 const INDEX = process.env.WB_INDEX ? path.resolve(process.env.WB_INDEX) : path.resolve(__dirname, "..", "index.html");
-const FILE = "file://" + INDEX;
+let FILE;
 const SRC = fs.readFileSync(INDEX, "utf8");
 const DATA = JSON.parse(SRC.match(/var DATA = (\[.*?\]);\n/s)[1]);
 const byId = (id) => {
@@ -107,6 +107,7 @@ const ACTION_MS = 5000; // Playwright action timeout
 const CHAIN = [2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15];
 
 let browser = null;
+let harness = null;
 let T = null; // the running test: { fails, errors, cleanup }
 let SHARED = null; // the R1 chain context from test 2
 const results = [];
@@ -1064,11 +1065,12 @@ TESTS[31] = ["Wording invariant", async () => {
   if (asked.some((n) => CHAIN.includes(n) || n === 31)) CHAIN.forEach((n) => pick.add(n));
   pick = [...pick].sort((a, b) => a - b);
 
-  browser = await chromium.launch();
+  harness = await launchHarness(INDEX);
+  ({ browser, url: FILE } = harness);
   process.on("unhandledRejection", (e) => { if (T) T.errors.push("unhandled: " + errLine(e)); });
   for (const n of pick) await run(n, TESTS[n][0], TESTS[n][1]);
   if (SHARED) await SHARED.ctx.close().catch(() => {});
-  await browser.close();
+  await harness.close();
 
   const passed = results.filter((r) => r.ok).length;
   const failed = results.length - passed;
@@ -1076,6 +1078,6 @@ TESTS[31] = ["Wording invariant", async () => {
   process.exit(failed ? 1 : 0);
 })().catch(async (e) => {
   console.error("workbench.cjs crashed: " + (e && e.stack ? e.stack : e));
-  try { if (browser) await browser.close(); } catch (x) { /* ignore */ }
+  try { if (harness) await harness.close(); } catch (x) { /* ignore */ }
   process.exit(1);
 });

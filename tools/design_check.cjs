@@ -3,7 +3,7 @@
 // Renders the Search Guide, the Research Library and the print handouts in headless Chromium, at phone and
 // desktop width, light and dark, and measures the rules in DESIGN.md on the rendered page. Exit 1 on any failure.
 // It reports selectors only, never page text, so no student name or question reaches the output.
-const { chromium } = require("playwright");
+const { launchHarness } = require("./browser-harness.cjs");
 const fs = require("fs");
 const path = require("path");
 
@@ -254,8 +254,12 @@ function renderedChecks(opts) {
 }
 
 (async () => {
-  const browser = await chromium.launch();
+  const harness = await launchHarness(path.join(ROOT, "index.html"), {
+    additionalFiles: Object.fromEntries(SURFACES.map((s) => ["/" + s.file, path.join(ROOT, s.file)])),
+  });
+  const browser = harness.browser;
   let total = 0;
+  try {
   for (const s of SURFACES) {
     if (only && !s.name.includes(only)) continue;
     const found = new Map(); // failure -> views
@@ -268,7 +272,7 @@ function renderedChecks(opts) {
         const page = await ctx.newPage();
         const errors = [];
         page.on("pageerror", (e) => errors.push(String(e).slice(0, 80)));
-        await page.goto("file://" + path.join(ROOT, s.file) + (s.hash ? "#" + s.hash : ""));
+        await page.goto(harness.baseURL + "/" + s.file + (s.hash ? "#" + s.hash : ""));
         await page.evaluate(() => document.fonts.ready);
         await page.waitForTimeout(350);
         if (s.state) await enterState(page, s.state);
@@ -290,7 +294,7 @@ function renderedChecks(opts) {
       const ctx = await browser.newContext({ viewport: { width: 380, height: 800 } });
       await ctx.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.abort());
       const page = await ctx.newPage();
-      await page.goto("file://" + path.join(ROOT, s.file) + (s.hash ? "#" + s.hash : ""));
+      await page.goto(harness.baseURL + "/" + s.file + (s.hash ? "#" + s.hash : ""));
       await page.waitForTimeout(600);
       const wide = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
       if (wide > 1) note(`overflow with the web fonts blocked: the page scrolls sideways by ${wide}px`, "380 fallback fonts");
@@ -300,7 +304,7 @@ function renderedChecks(opts) {
     for (const [f, views] of found) console.log(`       ${f}   [${[...views].join(", ")}]`);
     total += found.size;
   }
-  await browser.close();
+  } finally { await harness.close(); }
   console.log(total ? `\n${total} findings. The rules are in DESIGN.md.` : "\nPASS: every surface meets the design floor in DESIGN.md.");
-  process.exit(total ? 1 : 0);
-})();
+  process.exitCode = total ? 1 : 0;
+})().catch((error) => { console.error("Design check failed: " + error.message); process.exitCode = 1; });

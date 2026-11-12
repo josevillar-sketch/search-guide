@@ -1,20 +1,22 @@
-// Headless smoke test for index.html. Run: NODE_PATH="$(npm root -g)" node tools/smoke.cjs
+// Headless smoke test for index.html. Run: node tools/smoke.cjs (after npm ci).
 // Opens every period and every student slip, then exercises the log copy, the welcome-back bar,
 // the question builder, period printing, and phone width. Exits 1 on the first failure.
-const { chromium } = require("playwright");
+const { launchHarness } = require("./browser-harness.cjs");
 const path = require("path");
 const fs = require("fs");
 
-const FILE = "file://" + path.resolve(__dirname, "..", "index.html");
-const OUT = process.env.SMOKE_OUT || path.resolve(__dirname, "..", "smoke-out");
+const INDEX = path.resolve(__dirname, "..", "index.html");
+const OUT = process.env.SMOKE_OUT || path.resolve(__dirname, "..", "test-results", "smoke");
 const html = fs.readFileSync(path.resolve(__dirname, "..", "index.html"), "utf8");
 const DATA = JSON.parse(html.match(/var DATA = (\[.*?\]);\n/s)[1]);
 const fails = [];
 const check = (ok, msg) => { if (!ok) fails.push(msg); };
+let harness;
 
 (async () => {
   fs.mkdirSync(OUT, { recursive: true });
-  const browser = await chromium.launch();
+  harness = await launchHarness(INDEX);
+  const { browser, url: FILE } = harness;
   const ctx = await browser.newContext({ permissions: ["clipboard-read", "clipboard-write"] });
   const page = await ctx.newPage();
   const errors = [];
@@ -103,7 +105,11 @@ const check = (ok, msg) => { if (!ok) fails.push(msg); };
   }
 
   check(errors.length === 0, "errors: " + errors.join(" / "));
-  await browser.close();
-  if (fails.length) { console.error("FAIL\n- " + fails.join("\n- ")); process.exit(1); }
+  await harness.close();
+  if (fails.length) { console.error("FAIL\n- " + fails.join("\n- ")); process.exitCode = 1; return; }
   console.log(`PASS: ${seen} slips across 8 periods, log copy, welcome back, builder, print, phone width`);
-})();
+})().catch(async (error) => {
+  console.error("smoke.cjs crashed: " + (error && error.stack ? error.stack : error));
+  if (harness) await harness.close().catch(() => {});
+  process.exitCode = 1;
+});

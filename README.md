@@ -24,7 +24,11 @@ After a pick, the pickers fold away and the student's desk opens:
 
 **The rule.** College Board and Room 63 both say no tool writes, rewrites or narrows a student's question. Every question string on the page comes from the `DATA` record or from text the student typed. The workbench never suggests wording, fills a dot, or types into the student's fields; notes and repairs are the Field Guide's generic moves. The rule is written as a comment at the top of the workbench code.
 
-**Privacy.** Versions live only in this browser's `localStorage`, one key per student: `r63sg_wb_<id>` (schema 1). Nothing goes online and Mr. Portela cannot see it. Anyone who taps the student's name on the same iPad can see it, which the page tells students. The desk never lists other students, the question never goes in the URL, and **Done on this iPad** / **Not you?** clear the desk and the builder. An unreadable record is copied to `r63sg_bad_<id>_<time>` before anything is written; a record from a newer schema shows read-only and is never overwritten. When storage is off or full, everything keeps working for the session and the page says so.
+**Privacy.** New versions live only in this browser's `localStorage`, one key per student: `r63sg_wb_<id>` (schema 1). The app does not upload those versions or give Mr. Portela remote access to them. The original roster and questions are embedded in the HTML; access to those depends on where the file is distributed. Anyone who taps the student's name on the same iPad can see saved versions, which the page tells students. The desk never lists other students, the question never goes in the URL, and **Done on this iPad** / **Not you?** clear the desk and the builder. Delayed copy callbacks cannot reopen a previous desk's export. A record from a newer schema shows read-only and is never overwritten. When storage is off or full, everything keeps working for the session and the page says so.
+
+**Recovery.** Unreadable or partially damaged records are preserved under `r63sg_bad_<id>_<time-and-random-digits>` before sanitized data can replace them. **Show recovery data** under **This iPad** selects the original data for copying; **Copy all my versions** includes it. If that backup cannot be saved, editing is disabled and the original remains intact. Recovery text can still be copied during the session. Successful device removal clears that student's main record and recovery copies; a failed removal reports failure and leaves the displayed work available. The export is text for recovery, not an import feature.
+
+**Other tabs.** Pending answers remain attached to the version on which they were typed when another tab updates the desk. Conflicting answers are kept in recovery data. A stale write is refused rather than overwriting another tab's saved record. Copy unsaved work before reloading after a conflict. This is same-browser coordination; the student's log remains the record across devices.
 
 **Keyboard.** The skip link goes to the period picker, or after a pick to the question. The rail (Versions, Checks, Searches) moves focus to each section's heading. The Circle it words take the arrow keys, Home and End. The rail stops sticking while a field has focus, so the iPad keyboard never covers it.
 
@@ -35,12 +39,31 @@ After a pick, the pickers fold away and the student's desk opens:
 | `r63sg_last` | the last student id opened on this device |
 | `r63sg_probe` | written and removed once at startup to test storage |
 | `r63sg_wb_<id>` | that student's record: the record question, their versions, dots, circles, answers, and an unsaved draft |
-| `r63sg_bad_<id>_<epoch>` | a best-effort copy of a record that could not be read |
+| `r63sg_bad_<id>_<time-and-random-digits>` | original unreadable data or conflicting typed answers for recovery |
 
 ## Printing
 
 - Ctrl+P / Share, Print prints the open slip on one page, with each database's address in place of the buttons. It shows the student's newest version.
 - After picking a period, the footer button prints every slip in that period, one per page, from the record. The button appears only when the file is opened locally: printing does nothing inside the claude.ai viewer, so the hosted page never shows it.
+
+## Reproducible local verification
+
+```sh
+npm ci
+npm test
+npm run test:mobile:chromium
+npm run test:design
+```
+
+Playwright is locked as a development dependency. Chromium selection uses an explicit executable override, the bundled browser, or installed Chromium/Chrome; see [tools/VERIFY.md](tools/VERIFY.md). The application remains standalone HTML with no runtime dependencies. Local tests cover cleanup, storage/recovery, all 31 workbench acceptance cases, 244 slips, and eight period print sets. Generated browser artifacts stay under ignored `test-results/` and must remain local.
+
+These application checks supplement the existing whole-repository checks below. They do not replace classroom builds, link checks, consent pagination, or the required DESIGN.md audit. Run mutating builds in a disposable copy and never stage regenerated files as a side effect of checking this change.
+
+`npm run verify:release` verifies the exact repository metadata against the approved existing public-repository policy before app checks. It never publishes. Unknown metadata is unverified; a reported fork requires review. No further kinds of student data are authorized. `npm run test:release-gate` tests that control flow with synthetic metadata only.
+
+`npm run test:webkit` requests WebKit explicitly and reports a missing runtime as blocked; Chromium emulation does not establish native iPad Safari or VoiceOver behavior. `npm run compact:artifact` optionally compacts CSS and JavaScript formatting to retain the 360,000-byte cap without changing DATA, reference content, identifiers, or the RULE comment. JavaScript compression and name mangling are disabled. The delivered HTML requires no build step.
+
+[QUALITY.md](QUALITY.md) records the exact source, observed checks, limits, and recovery path. [AGENTS.md](AGENTS.md) describes the ongoing inspect, repair, verify, and deliver workflow.
 
 ## Checks
 
