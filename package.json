@@ -8,6 +8,7 @@
     "compact:artifact": "node tools/compact-artifact.cjs",
     "test:design": "node tools/design_check.cjs",
     "test:upstream-gate": "node tools/upstream-gate.test.cjs",
+    "test:consent-gate": "node tools/consent-gate.test.cjs",
     "verify:release": "node tools/release-check.cjs",
     "test:release-gate": "node tools/release-check.test.cjs",
     "test:harness": "node tools/harness-check.cjs",

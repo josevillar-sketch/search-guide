@@ -60,3 +60,20 @@ Live publication is a separate, unverified state: this session has no Claude art
 Reproduce with `npm ci`, `npm test`, `npm run test:mobile:chromium`, `npm run test:upstream-gate`, and `npm run test:design`. Run mutating `sh tools/check_all.sh` in a disposable copy; keep failed/unverified external checks explicit. See `tools/VERIFY.md` for engine selection and optional formatting maintenance. `npm audit --json` reported zero vulnerabilities for the pinned development dependencies on November 12, 2026.
 
 Preserve the original local work at `/workspace/search-guide`. Do not reset it or force-push shared history. Before delivery, verify the remote base has not changed; reconcile in isolation if it has. If rollback is needed, compare against the baseline above in a separate copy. On later edits, reopen the affected acceptance row, reproduce the defect, fix its cause, rerun affected checks, and update this record against the final hash. Stop when applicable outcomes pass and genuine external limitations are documented.
+
+## Consent builder followup: November 12, 2026
+
+Baseline: `c408ab0d8228738a2ebf54915a04ff6b503d4c78`. This is a consent-only source change. The application, student DATA, consent Markdown, current release policy and browser architecture are unchanged.
+
+The builder now requires its conversion dependencies and a supported `soffice` or `libreoffice` renderer. Sequential commands stop after a failed pandoc or Python step. Fresh temporary outputs prevent an old DOCX/PDF or an optional-render skip from producing a pass. Both the DejaVu stress copy and the actual runtime distribution render must have nine pages.
+
+The Spanish guardian form uses 2pt paragraph-after spacing instead of 4pt. Its 10pt text, line spacing, choice boxes, signature heights and wording are preserved. This keeps the form together under the observed Noto Sans/Noto Serif runtime substitutions.
+
+`npm run test:consent-gate` passed eight POSIX actual-shell control-flow cases, including failed pandoc with a stale DOCX, failed Python/rendering, missing renderer/fresh output, and either pagination gate failing. The existing verification runner includes these synthetic cases. A separate fresh build produced two nine-page PDFs. Independent review matched all 18 raster frames to the individually reviewed repaired stress/distribution pages. This is runtime-render evidence; Microsoft Word output is not established. Verification for this edit is scoped to consent, with application bytes unchanged. Generated documents, PDFs and logs remain local and untracked. The POSIX-only suite reports Windows as blocked with exit 2; no Windows pass is implied.
+
+Exact source SHA-256 values before this documentation-only receipt:
+
+- `classroom/build-consent.sh`: `dbfcae08d7572e62706b87953bee1ea8b7311a6970aef6cc261ade02148c862b`
+- `tools/consent-gate.test.cjs`: `a825351a229c9efac3af21ef7bed281a4cad3a86c0afdd6cf8e05bd46cb0bafe`
+- `package.json`: `7896d30c0293014e94e417babcc1437fe33919504827c381d84c6d671cdf1f97`
+- `tools/verify.cjs`: `d74d0b14d93ec0a5e9776adda323797ace9f6a3efecec903748dac95f4e5ce8a`
