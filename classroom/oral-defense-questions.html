@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Oral defense: the questions</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,650;9..144,900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Space+Mono:wght@400;700&display=swap"><style>
+/* Room 63 print register. Same ink, brass and pine, and the same three faces, as the Search Guide and the Research Library.
+   Each .page is one letter sheet. On screen it shows as a sheet of paper; in print the sheet is the page.
+   Every tinted block also carries a rule or border, so a printer with background graphics off loses nothing. */
+@page{size:letter;margin:.45in .55in}
+:root{--ink:#1d1812;--soft:#4a3f31;--hair:#c9b996;--brass:#6d4f14;--pine:#245e55;--oxide:#9c3322;--tint:#f3ead6;--tint-2:#fbf7ee;--ground:#ece4d2;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;--body:"Atkinson Hyperlegible",Verdana,system-ui,sans-serif;--mono:"Space Mono","Courier New",ui-monospace,monospace;color-scheme:light}
+*{box-sizing:border-box}
+html{font:10pt/1.4 var(--body);color:var(--ink);background:var(--ground);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{margin:0;padding:24px 16px 40px}
+.page{position:relative;background:#fff;max-width:8.5in;margin:0 auto 24px;padding:.5in .55in;border:1px solid var(--hair);break-after:page}
+.page:last-child{break-after:auto;margin-bottom:0}
+.page::before{content:"63";position:absolute;top:.5in;right:.55in;width:3.2rem;height:3.2rem;border:.14rem solid var(--ink);border-radius:50%;outline:.07rem solid var(--ink);outline-offset:-.37rem;
+  display:grid;place-items:center;font:900 1.45rem/1 var(--display);letter-spacing:-.02em}
+h1{font:900 3rem/.98 var(--display);letter-spacing:-.02em;margin:0;padding-right:4rem;min-height:3.2rem;text-wrap:balance}
+h1::after{content:"";display:block;margin:.7rem -4rem 0 0;height:.34rem;border-top:.2rem solid var(--ink);border-bottom:.06rem solid var(--ink)}
+/* The slug says who the sheet is for. It sits under the title rule, never above the title. */
+.slug{font:700 .8rem/1.3 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--brass);margin:.4rem 0 .75rem;max-width:none}
+h2{font:650 1.3rem/1.15 var(--display);margin:0 0 .4rem;text-wrap:balance}
+/* Section headings are the sheet's structure, so they are set in the Title role in solid ink, never in the smallest type on the page. */
+h3,h2.lab{font:650 1.15rem/1.2 var(--display);color:var(--ink);margin:.9rem 0 .3rem;text-wrap:balance}
+.card h3{font-size:1.05rem;margin-top:.6rem}
+/* Running text holds about 72 characters a line even where the sheet is wider. In Atkinson that is 52ch: a zero is much wider than an average letter. */
+p,li{max-width:52ch;text-wrap:pretty}
+/* A list that stands alone on the sheet runs in two columns, which keeps each line short and saves the page. */
+.page>ul,.page>ol{columns:2;column-gap:2rem}
+.page>ul>li,.page>ol>li{break-inside:avoid;max-width:none}
+p{margin:0 0 .5rem} ul,ol{margin:0 0 .5rem;padding-left:1.5rem} li{margin-bottom:.2rem}
+li::marker{font-weight:700;color:var(--brass)}
+b{font-weight:700}
+.lede{font-size:1.1rem;line-height:1.38;margin-bottom:.8rem;max-width:50ch}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.card{border:.1rem solid var(--ink);padding:.85rem 1rem}
+.card.a{border-top:.45rem solid var(--oxide)}.card.b{border-top:.45rem solid var(--pine)}
+/* The two roads carry the lettered plate from the Library's drawers. */
+.card>h2{display:flex;align-items:center;gap:.7rem;font-size:1.4rem;margin-bottom:.4rem}
+.card>h2::before{flex:none;display:grid;place-items:center;width:2rem;height:2rem;font:900 1.35rem/1 var(--display);background:#d6ad55;border:.1rem solid var(--ink)}
+.card.a>h2::before{content:"A"}.card.b>h2::before{content:"B"}
+/* A sign-off line is a form to fill in, so it keeps the reading face inside the rule box. */
+.rule.sign{font:700 1rem/2.1 var(--body);text-wrap:balance;padding-right:.9rem}
+.fill.in{display:inline-block;flex:none;height:1rem;vertical-align:baseline;margin-left:.3rem}
+.rule.sign .opt{margin-right:.9rem;white-space:nowrap}
+/* A warning slug is an inked stamp, as on a Library card. */
+.slug.stamp{display:inline-block;font-size:.95rem;color:var(--oxide);border:.16rem solid currentColor;outline:.07rem solid currentColor;outline-offset:.14rem;padding:.3rem .55rem .22rem;margin:.75rem 0 1.1rem .2rem;transform:rotate(-1.6deg)}
+/* A note keeps one column, so no sentence is cut by a column rule. The band runs full width; its text holds the measure. */
+.band{background:var(--tint);border-block:.08rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 51ch)) .6rem .9rem;margin:.8rem 0;text-wrap:pretty}
+.rule{font:650 1.2rem/1.22 var(--display);border:.2rem solid var(--ink);padding:.6rem max(.9rem,calc(100% - 50ch)) .6rem .9rem;margin:.8rem 0;text-wrap:balance}
+.foot{font:400 .74rem/1.3 var(--mono);letter-spacing:.02em;color:var(--soft);margin-top:1.1rem;border-top:.06rem solid var(--hair);padding-top:.4rem;max-width:none}
+table{width:100%;border-collapse:collapse;margin:.6rem 0}
+th,td{border:.08rem solid var(--ink);padding:.5rem .6rem;vertical-align:top;text-align:left;overflow-wrap:anywhere}
+th{font:700 .92rem/1.2 var(--body);background:var(--tint);border-bottom-width:.16rem}
+td.q{font:700 .95rem/1.2 var(--body);width:1.15in;background:var(--tint-2)}
+td p,td li,th p{max-width:none}
+td.q small{display:block;font-weight:400;font-size:.85rem;line-height:1.25;color:var(--soft);margin-top:.2rem}
+.blank{table-layout:fixed}.blank th:first-child{width:1.15in}
+.blank td{height:1.12in}.blank td.q{height:auto}
+td.tick{width:.34in;text-align:center}
+td.tick,td.tick+td{padding-block:.38rem}
+.box{display:inline-block;width:1.05rem;height:1.05rem;border:.12rem solid var(--ink);vertical-align:-.15rem}
+.line{border-bottom:.08rem solid var(--ink);height:18pt;margin-bottom:2pt}
+/* A ruled block, a table or the footer after a writing line needs more than one line of air, or its rule reads as one more line to write on. */
+.line+.band,.line+.rule,.line+.foot,.line+table,.line+.two,.two+.foot{margin-top:24pt}
+/* A blank to fill in is a rule that runs to the edge of its cell, not a row of typed underscores. */
+.fillrow{display:flex;align-items:flex-end;gap:.4rem}.fill{flex:1;min-width:2rem;height:1.2rem;border-bottom:.08rem solid var(--ink)}
+.name{display:flex;gap:1.4rem;font:700 .8rem/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin:.4rem 0 .8rem}
+.name span{flex:1;border-bottom:.08rem solid var(--ink);padding-bottom:1.2rem}
+code{font:400 .88rem/1 var(--mono);background:var(--tint);padding:.05rem .3rem}
+::selection{background:#d6ad55;color:#1d1812}
+.ex{font-style:italic;color:var(--soft)}
+/* On paper, small type prints in solid ink: a black-and-white laser turns small colored type into gray dots. */
+@media print{.slug:not(.stamp){color:var(--ink)}.foot{color:var(--ink)}html{background:#fff}body{padding:0}.page{border:0;margin:0;padding:0;max-width:none}.page::before{top:0;right:0}}
+@media screen and (prefers-color-scheme:dark){html{background:#07201b}.page{border-color:#2f5a50}}
+@media screen and (max-width:640px){.page>ul,.page>ol{columns:1}.rule.sign .opt{white-space:normal}.fill.in{max-width:60%}html{font-size:15px}body{padding:0}h1{font-size:2.2rem}td.q{width:5.4rem}.two{grid-template-columns:1fr}
+  .page{border:0;border-bottom:12px solid var(--ground);margin:0;padding:20px 16px 24px}.page::before{top:20px;right:16px}}
+@media screen and (max-width:640px) and (prefers-color-scheme:dark){.page{border-bottom-color:#07201b}}
+</style></head><body>
+
+<section class="page">
+<h1>Oral defense: the questions</h1>
+<p class="slug">AP Research · Presentation and oral defense · 25 percent of your score</p>
+<div class="band"><b>How it works.</b> You present for no more than 15 minutes. Then a panel of three, your teacher and two other adults, asks you three questions from this list: one from each group. They may tailor the wording to your project, and may ask a fourth question to clarify an answer. These are College Board's questions, word for word, from the Course and Exam Description, page 62.</div>
+<h2 class="lab">Research or inquiry process: choices made throughout the research process</h2><ol><li>How did your initial exploration of the scholarly conversation lead to your final research question/project goal?</li><li>How did your review of the methods used by scholars in the field inform your selection of a research method/process that is aligned with your research question/project goal?</li><li>How did the choices you made when designing or implementing your research method impact your research process?</li><li>How did you determine which results generated by your research method were most important in informing your new understanding?</li></ol><h2 class="lab">Depth of understanding: relating student data/results to the new understanding</h2><ol><li>How does your new understanding address a gap in the scholarly conversation?</li><li>How did the limitations of your method or data influence your new understanding?</li><li>What are the real-world implications or consequences related to your findings?</li><li>How do your findings provide directions for future research in the field?</li></ol><h2 class="lab">Reflection throughout the inquiry process: how the inquiry process informs growth and self-awareness as a researcher</h2><ol><li>Think back to the initial curiosity that sparked your inquiry. What other curiosities do you have and how has this process prepared you to explore them?</li><li>How did you handle the uncertainty of the research process?</li><li>If you could revisit your research process, what would you do differently and why?</li><li>What was the most important research skill you developed as a result of this process, and how might you apply it to your future endeavors?</li><li>How did your expert adviser facilitate your deeper understanding of the research process? (Asked only if you worked with an expert adviser.)</li></ol>
+<div class="rule">College Board allows no use of AI to prepare for the oral defense. You may not use it to generate possible answers. Your answers come from your own work and your own portfolio.</div>
+<div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela · Oral defense · the questions</div>
+</section>
+<section class="page">
+<h1>Oral defense: my evidence</h1>
+<p class="slug">Your own notes, in your own words · Bring your portfolio</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<p class="lede">Do not write answers to memorize. For each group, note where in your own work the evidence is, so that you can speak from it.</p>
+<table>
+<tr><th style="width:1.7in">Group</th><th>Where the evidence is in my paper and portfolio: pages, dates, entries</th></tr>
+<tr><td class="q">Research or inquiry process<small>the choices I made, and why</small></td><td style="height:1.75in"></td></tr>
+<tr><td class="q">Depth of understanding<small>what my results mean, and their limits</small></td><td style="height:1.75in"></td></tr>
+<tr><td class="q">Reflection<small>how I changed as a researcher</small></td><td style="height:1.75in"></td></tr>
+</table>
+<h2 class="lab">One choice I would make differently, and where my portfolio shows it</h2><div class="line"></div><div class="line"></div>
+<div class="rule">The third question draws on your reflection "as evidenced in your process and reflection portfolio." Keep the portfolio current. It is your evidence.</div>
+<div class="foot">Room 63 · AP Research · Mater Academy · Mr. Portela · Oral defense · my evidence</div>
+</section>
+
+</body></html>
