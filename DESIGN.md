@@ -161,7 +161,7 @@ A warm, low-chroma paper palette with three inks: brass for the one action and f
 ### Named Rules
 **The No Eyebrow Rule.** No small tracked label sits above a heading. The heading carries its own weight. What a label would have said goes in a strip or slug under the title.
 
-**The Measure Rule.** Text that wraps never runs past 75 characters a line, counted in letters, even where the container is wider. In Atkinson Hyperlegible that is about 50ch, not 75ch: a zero is far wider than an average letter. Cap the text, not the box. On a full-width printed sheet a note or a stand-alone list runs in two columns to hold the measure without costing the page.
+**The Measure Rule.** Text that wraps never runs past 75 characters a line, counted in letters, even where the container is wider. In Atkinson Hyperlegible that is about 50ch, not 75ch: a zero is far wider than an average letter. Cap the text, not the box: a note or a rule box runs the full width of the sheet with its text capped inside. A stand-alone list on a printed sheet runs in two columns. A note never does, because a column break cuts its sentences.
 
 **The Banned Faces Rule.** Inter, Roboto and Arial never appear, in any file.
 
@@ -230,7 +230,7 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 - **The 63 seal.** A double ring with a Fraunces `63`, top right of every printed sheet.
 - **The numeral.** A boxed Fraunces numeral with a small pressed shadow marks anything a student does in order: the three searches, the seven checks. A check that passes inks its numeral.
 - **The plate.** A brass square with a Fraunces letter: the Library's drawers, the two roads on the decision guide.
-- **The rule box.** A sheet's one rule, in Fraunces, inside a full ink frame. A sign-off line inside the frame keeps the reading face, and each label stays with its blank.
+- **The rule box.** A sheet's one rule, in Fraunces, inside a full-width ink frame. A sign-off line inside the frame keeps the reading face; each label stays with its blank, and each blank is a drawn rule long enough for what goes on it.
 - **The slug.** One mono line under a handout's title rule saying who the sheet is for.
 
 ## Do's and Don'ts
@@ -243,7 +243,7 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 - **Do** keep a raised paper object paper in the dark: the question card, the slip, a Library card.
 - **Do** set a handout's section headings in the Title role in solid ink. On paper, type under 9pt prints in ink, never in a color.
 - **Do** leave room to write: a writing line every 18pt or more, 24pt of air before any rule that follows the last line, a blank drawn as a rule to the edge of its cell.
-- **Do** draw a choice on a form as a ruled box on its own line, and a signature as a full-width rule with the date on its own line.
+- **Do** draw a choice on a form as a ruled box on its own line, and a signature as a full-width rule with the date on its own line. Keep a box closer to its own label than to the one before it, and keep a form's choices and signature rows together on one page.
 - **Do** draw every icon as inline SVG, stroked at about 2px in the current color.
 - **Do** give every tinted block a rule or border too, so a printer with background graphics off loses nothing.
 - **Do** make every tap target on a phone at least 44px in both directions, apart from a link inside a sentence.

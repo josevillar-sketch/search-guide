@@ -37,7 +37,7 @@ for st in d.styles:
     if st.name in ('Normal', 'Body Text', 'First Paragraph', 'Compact'):
         st.font.size = Pt(10); pf.space_after = Pt(4); pf.space_before = Pt(0); pf.line_spacing = 1.12
     if st.name == 'Heading 1':
-        face(st, 'Georgia'); st.font.size = Pt(20); st.font.bold = True
+        face(st, 'Georgia'); st.font.size = Pt(19); st.font.bold = True
         pf.space_before = Pt(0); pf.space_after = Pt(8); pf.keep_with_next = True; rule_below(st)
     if st.name == 'Title':
         face(st, 'Georgia'); st.font.size = Pt(28); st.font.bold = True
@@ -112,7 +112,7 @@ for par in list(d.paragraphs):
         grid[0].set(qn('w:w'), str(int(0.22 * 1440))); grid[1].set(qn('w:w'), str(int(6.12 * 1440)))
         for i, (kind, pieces) in enumerate(rows):
             row, gap = table.rows[2 * i], table.rows[2 * i + 1]
-            row.height = Inches(0.22); row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
+            row.height = Inches(0.21); row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
             gap.height = Inches(0.045); gap.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
             for r in (row, gap):
                 r.cells[0].width = Inches(0.22); r.cells[1].width = Inches(6.12)
@@ -130,11 +130,34 @@ for par in list(d.paragraphs):
         table = d.add_table(rows=len(labels), cols=1); table.autofit = False       # one full-width rule per label
         table.columns[0].width = Inches(6.34); table._tbl.tblGrid.findall(qn('w:gridCol'))[0].set(qn('w:w'), str(int(6.34 * 1440)))
         for row, label in zip(table.rows, labels):
-            row.height = Inches(0.37); row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
+            row.height = Inches(0.35); row.height_rule = WD_ROW_HEIGHT_RULE.EXACTLY
             cell = row.cells[0]; cell.width = Inches(6.34); bottom_rule(cell)
             cell.vertical_alignment = WD_CELL_VERTICAL_ALIGNMENT.BOTTOM
             write(cell.paragraphs[0], [(label + ':', False)])
         par._p.addprevious(table._tbl); par._p.getparent().remove(par._p)
+
+# ---- Keep each form's ending together. A student replaces the brackets with their own words; if that adds a line,
+# the choices and the signature rows must move to the next page as one block, never a date row on its own.
+from docx.table import Table
+body = d.element.body
+tables = [el for el in body if el.tag == qn('w:tbl')]
+for tbl in tables:
+    t = Table(tbl, d)
+    pr = tbl.tblPr; mar = OxmlElement('w:tblCellMar')            # no cell inset, so labels line up with the text above
+    for side in ('left', 'right'):
+        e = OxmlElement('w:' + side); e.set(qn('w:w'), '0'); e.set(qn('w:type'), 'dxa'); mar.append(e)
+    pr.append(mar)
+    nxt = tbl.getnext()
+    last_of_block = nxt is None or nxt.tag != qn('w:tbl')
+    for i, row in enumerate(t.rows):
+        trPr = row._tr.get_or_add_trPr(); trPr.append(OxmlElement('w:cantSplit'))
+        if last_of_block and i == len(t.rows) - 1: continue
+        for c in row.cells:
+            for par in c.paragraphs: par.paragraph_format.keep_with_next = True
+    prev = tbl.getprevious()                                       # the line before the choices stays with them
+    if prev is not None and prev.tag == qn('w:p'):
+        ppr = prev.get_or_add_pPr()
+        if ppr.find(qn('w:keepNext')) is None: ppr.append(OxmlElement('w:keepNext'))
 
 d.save('consent-templates.docx')
 PY

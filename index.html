@@ -326,7 +326,7 @@ section.tools{border-top:1px solid var(--line);padding-top:24px;display:flex;fle
 .kw button[aria-pressed="false"]{text-decoration:line-through;color:var(--mute);border-style:dashed}
 .kw button.ph{font-weight:700;border-style:solid;border-color:var(--brass)}
 .picked{font-size:15px;line-height:22px;color:var(--mute)}
-.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,232px),1fr));gap:8px}
+.dbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:8px}
 .dbcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .dbcard a{color:var(--teal);font-weight:700;display:block;padding-block:9px;margin-block:-9px}
 footer{border-top:1px solid var(--hair);color:var(--ink-soft);font-size:15px;line-height:22px}
@@ -381,20 +381,18 @@ footer p{max-width:54ch}
 .just-saved #vl{animation:cardIn 220ms cubic-bezier(.2,.8,.2,1) 80ms both}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.just-saved *{animation:none!important}}
 @media (forced-colors:active){.dot[aria-pressed=true]::before{background:CanvasText}.w[data-l]::before{border-color:CanvasText}}
-/* Bolder pass and design floor, screen only (the printed slip keeps its layout). Every rule here is explained in DESIGN.md. */
+/* Design floor and bolder pass, screen only. See DESIGN.md. */
 @media screen{
 .slip{--card:#fbf7ee;--card-2:#f3ead6;--ink:#1d1812;--ink-soft:#4a3f31;--hair:#c9b996;--edge:#7d6a45;--brass-text:#6d4f14;--pine:#245e55;--on-pine:#fbf7ee;--oxide:#9c3322;--plum:#6d3a73;--focus:#245e55;
 --panel:var(--card);--panel-2:var(--card-2);--mute:var(--ink-soft);--line:var(--hair);--teal:var(--pine);--on-teal:var(--on-pine);--slip:var(--card);--brass:var(--brass-text);
 color:var(--ink);color-scheme:light;border:1.5px solid #1d1812;box-shadow:6px 6px 0 var(--page-drop);padding:20px 16px 24px;gap:28px}
 .slip table{color:var(--ink)}
 .sliphead{border-bottom:2px solid var(--oxide);padding-bottom:14px;align-items:center}
-.who{font:650 26px/30px var(--display);text-wrap:balance}
 .example-tag{border:2px solid currentColor;border-radius:3px;outline:1px solid currentColor;outline-offset:2px;padding:4px 8px 3px;transform:rotate(-2.5deg)}
 .slip .q{font:650 clamp(23px,calc(15px + 2.1vw),32px)/1.22 var(--display);letter-spacing:-.005em;padding-left:18px;border-left-width:4px;max-width:30ch;text-wrap:balance}
 .slip .qblk>h3,.slip .search .callno{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .slip .searches{gap:0;counter-reset:srch}
 .slip .search{counter-increment:srch;background:none;border:0;border-top:1.5px solid var(--hair);border-radius:0;padding:18px 0 20px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:8px 16px}
-.slip .search:last-child{padding-bottom:4px}
 .slip .search>*{grid-column:2}
 .slip .search::before{content:counter(srch);grid-column:1;grid-row:1/span 6;align-self:start;display:grid;place-items:center;width:44px;height:44px;font:900 26px/1 var(--display);border:1.5px solid var(--ink);border-radius:6px;box-shadow:3px 3px 0 var(--ink)}
 .slip .dbname{font:650 21px/26px var(--display)}
@@ -405,9 +403,9 @@ color:var(--ink);color-scheme:light;border:1.5px solid #1d1812;box-shadow:6px 6p
 .eyebrow,#ficha-call,#ficha-meta,.sliphead .callno{text-wrap:balance}
 .penrow:has(#vl-penned:enabled:not(:checked)){min-height:52px;padding:8px 14px;background:var(--card);border:1.5px solid #1d1812;border-radius:6px;box-shadow:4px 4px 0 var(--drop);font-weight:700}
 .desk:has(#vl:not([hidden]) #vl-penned:enabled:not(:checked)) #q-open{background:transparent;color:var(--ink);box-shadow:none;border-color:var(--edge);min-height:44px}
-#band:not(.compact){padding-block:32px 24px}
-#band:not(.compact) h1{font-size:clamp(40px,calc(12px + 7.6vw),88px);line-height:.92;letter-spacing:-.012em}
-#band:not(.compact) .lede{font-size:19px;line-height:28px;color:var(--ink);max-width:44ch}
+body:has(#step2[hidden]) #band:not(.compact){padding-block:32px 24px}
+body:has(#step2[hidden]) #band:not(.compact) h1{font-size:clamp(40px,calc(12px + 7.6vw),88px);line-height:.92;letter-spacing:-.012em}
+body:has(#step2[hidden]) #band:not(.compact) .lede{font-size:19px;line-height:28px;color:var(--ink);max-width:44ch}
 .check{grid-template-columns:40px minmax(0,1fr) 56px}
 .ck-n{display:grid;place-items:center;width:40px;height:40px;padding:0;font:900 22px/1 var(--display);color:var(--ink);border:1.5px solid var(--page-drop);border-radius:6px;box-shadow:3px 3px 0 var(--page-drop)}
 .check:has(.dot[aria-pressed="true"]) .ck-n{background:var(--ink);color:var(--card);box-shadow:1px 1px 0 var(--page-drop);transform:translate(2px,2px)}
@@ -418,9 +416,10 @@ color:var(--ink);color-scheme:light;border:1.5px solid #1d1812;box-shadow:6px 6p
 .slip{padding:32px 32px 36px;gap:32px}
 .slip .q{max-width:32ch}
 body:has(.desk[data-on="false"]) :is(#band,#pick,footer) .shell{max-width:808px}
-body:has(.desk[data-on="false"]) #periods{grid-template-columns:repeat(4,minmax(0,1fr))}
+body:has(#step2[hidden]) #periods{grid-template-columns:repeat(4,minmax(0,1fr))}
 #desk-left{gap:10px;padding:16px}
 #ficha{gap:8px;padding:12px 16px 26px}
+.margin-rule{margin-inline:-16px}
 .num-v{font-size:52px;line-height:46px}
 }
 /* Print: Ctrl+P prints the open slip with the newest version; the teacher button prints one slip per page for a whole period, from the record. */
@@ -1280,7 +1279,7 @@ function pickStudent(d){if(CUR){teardown();wipe();}var ae=document.activeElement
  CUR=d;VLK=null;TEMP=null;CKNEW=false;ROV=0;CMPRESET=true;
  WB.load(d);
  $("desk").setAttribute("data-on","true");$("pick").hidden=true;$("lede").hidden=true;$("band").classList.add("compact");
- buildChecks();renderWho();var wide=false;try{wide=matchMedia("(min-width:700px)").matches;}catch(e){}$("tl-wrap").open=wide;
+ buildChecks();renderWho();var wide=false;try{wide=matchMedia("(min-width:700px) and (max-width:1023px)").matches;}catch(e){}$("tl-wrap").open=wide;
  $("timeline").innerHTML="";closeForm();renderAll();
  setBuilder();
  store(d.id);$("back").hidden=true;try{history.replaceState(null,"","#"+d.id);}catch(e){}
