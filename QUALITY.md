@@ -89,3 +89,13 @@ Fix: the three phrases are three spans; the separator is drawn before each span 
 `index.html` after the change: 359,601 bytes, SHA-256 `22ced45d4709339f9523dfc2314d41e91097738211d5d1fb736b7d86867bd716`. DATA SHA-256 unchanged: `13650200ffbdcf49b705d6776afbd6ffcd22e3c50d1768c3e98199167d1e3011`.
 
 Checks on that exact file, in Chromium with the globally installed Playwright: `node tools/verify.cjs` passed (workbench 31 of 31, smoke 244 slips, and the other suites it runs); `node tools/design_check.cjs search-guide` passed all six Search Guide surfaces and states; `node tools/mobile.cjs --browser=chromium` passed 8 of 8. The label line was looked at, at 380 and 1280 pixels. WebKit remains unavailable and was not run.
+
+## Live publication receipt: November 12, 2026
+
+The existing publisher consumed the recorded handoff. Before publishing, the live artifact was read: it was still version 4 (`1794463587-5255`, from `53b3bb8`), not the merged source, so a publish was needed.
+
+Published `index.html` from the default branch at `40809a5` to the existing address https://claude.ai/artifact/4xssWsEokXLKS5uY55FjS8 . Observed result: version 5, version id `1794469701-66dc`. Sharing was not changed; the artifact remains private to its owner and the people the owner has given access.
+
+Read back after publishing. The artifact service wraps the page in its own document shell, so the stored file is 359,965 bytes with SHA-256 `d1a00cf484c681a161c8de067822052aa060a136794a3a5522d16b7e246158aa`, not the repository file's hash. Compared from `<title>` to the end of the closing script, the live body is identical to the merged file (359,382 characters). Live DATA SHA-256: `13650200ffbdcf49b705d6776afbd6ffcd22e3c50d1768c3e98199167d1e3011`, unchanged.
+
+The read-back copy was loaded once in Chromium through a loopback server at 380 and 1180 pixels: standards mode, UTF-8, `lang="en"`, eight period buttons, names listed after a period tap, no script errors, no sideways scroll. Native iPad Safari was not tested.
