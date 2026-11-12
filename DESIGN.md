@@ -222,6 +222,7 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 
 ### Signature components
 - **The ficha.** The student's question on a cream card with a large Fraunces date, a red margin rule and a row of seven dots.
+- **The slip.** One paper card with an ink edge and a pressed shadow. An oxide rule under its head, the student's question in Fraunces at 23px to 32px beside its quotation bar, then the three searches as numbered rows divided by hairlines, each with a boxed Fraunces numeral. The searches are rows on the card, never cards inside it. On paper the slip prints flat on one page.
 - **The stamp.** A double-edged inked label, slightly rotated: Cite it, Don't cite, Ask first, Tool.
 - **The ruled note.** Deeper paper between two hairlines, for "Mind this" and for the notes on a handout.
 - **The 63 seal.** A double ring with a Fraunces `63`, top right of every printed sheet.
