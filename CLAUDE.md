@@ -71,7 +71,7 @@ What that means in this repo:
 
 | File | Purpose |
 |---|---|
-| `index.html` | The search guide page. Student data lives in the `DATA` array. |
+| `index.html` | The search guide page. Student data lives in the `DATA` array. Published as a private claude.ai artifact at https://claude.ai/artifact/4xssWsEokXLKS5uY55FjS8 (version 4, republished 2026-11-12 on Mr. Portela's word, from the merged and tested file). This is the page students use, so republish it only when he says to. |
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `DESIGN.md` | The design standard for everything students see, on screen and on paper: colors, type, shapes, components, and the rules with names. Read it before building or restyling anything. `tools/design_check.cjs` measures those rules on the rendered pages. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
