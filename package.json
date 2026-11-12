@@ -7,6 +7,7 @@
     "test": "node tools/verify.cjs",
     "compact:artifact": "node tools/compact-artifact.cjs",
     "test:design": "node tools/design_check.cjs",
+    "test:font-gate": "node tools/font-gate.test.cjs",
     "test:upstream-gate": "node tools/upstream-gate.test.cjs",
     "test:consent-gate": "node tools/consent-gate.test.cjs",
     "verify:release": "node tools/release-check.cjs",

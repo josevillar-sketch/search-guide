@@ -67,6 +67,7 @@ async function step(name, command, args) {
   const steps = [
     ["release-gate", process.execPath, [path.join(__dirname, "release-check.test.cjs")]],
     ["consent-gate", process.execPath, [path.join(__dirname, "consent-gate.test.cjs")]],
+    ["font-gate", process.execPath, [path.join(__dirname, "font-gate.test.cjs")]],
     ["data", process.env.PYTHON || "python3", [path.join(__dirname, "check.py")]],
     ["harness", process.execPath, [path.join(__dirname, "harness-check.cjs")]],
     ["regressions", process.execPath, [path.join(__dirname, "regressions.cjs")]],
