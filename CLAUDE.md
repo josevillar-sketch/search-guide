@@ -55,6 +55,7 @@ What that means in this repo:
 - After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post an entry to the Hollis Dot Line.
 - Close your own loose ends before reporting. A reply that ends in a list of things you could have done is unfinished.
 - Verify before you state. Run the demo, open the page, hash the file. Say which of those you did.
+- Audit after you build. Re-read what you made against the primary source, not against your memory of it. The 2026-11-12 audit found a claim about a College Board guide that had never been checked against the guide; read the document before describing it.
 
 **The approval does not change these**
 - Rules 1 to 5 above. Rule 1 is College Board policy; no approval lifts it.
@@ -74,7 +75,7 @@ What that means in this repo:
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
 | `BOOKS.md` | Book request list with confirmed editions and ISBNs. Move a book to `RESOURCES.md` when it arrives. |
-| `classroom/` | Printable AP Research handouts: the own-data-or-public-data guide, the method planning grid, the SDA lab, and the consent and assent templates (Word, English and Spanish). Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
+| `classroom/` | AP Research materials. Printable handouts: the own-data-or-public-data guide, the method planning grid, the method section checklist, the SDA lab, and the consent and assent templates (Word, English and Spanish). Also `research-library.html`, the student-facing page of approved resources, published as a claude.ai artifact; every link on it must be in the verified part of `RESOURCES.md`, and `tools/check_links.py` enforces that. Rebuild with `python3 classroom/build.py` and `classroom/build-consent.sh`. |
 | `tools/` | Checks: `check.py` (data), `smoke.cjs` and `workbench.cjs` (browser tests), `check_links.py` (every link in the resources log and handouts). |
 
 ## Before pushing changes to `index.html`

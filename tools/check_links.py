@@ -34,8 +34,15 @@ def main():
     soft = links(res[cut:]) if cut > 0 else set()
     must |= links((ROOT / 'BOOKS.md').read_text(encoding='utf-8'))
     for f in list((ROOT / 'classroom').glob('*.md')) + list((ROOT / 'classroom').glob('*.html')):
-        must |= links(f.read_text(encoding='utf-8'))
+        must |= {u for u in links(f.read_text(encoding='utf-8')) if 'fonts.googleapis.com' not in u}
     soft -= must
+    # The student library may only link to resources verified in RESOURCES.md.
+    verified = links(res[:cut] if cut > 0 else res)
+    lib = ROOT / 'classroom' / 'research-library.html'
+    stray = sorted(u for u in links(lib.read_text(encoding='utf-8')) - verified
+                   if 'fonts.googleapis.com' not in u) if lib.exists() else []
+    for u in stray:
+        print(f"NOT IN RESOURCES.md  {u}  (linked from the student library)")
     manual = sorted(u for u in must if any(h in u for h in REFUSES_SCRIPTS))
     auto = sorted(must - set(manual))
     with ThreadPoolExecutor(8) as ex:
@@ -47,7 +54,7 @@ def main():
         print(f"SKIP  {u}  (refuses scripts; check in a browser)")
     print(f"\n{len(auto)} links checked, {len(bad)} failing, "
           f"{len(manual)} need a browser, {len(soft)} pending links not requested.")
-    return 1 if bad else 0
+    return 1 if (bad or stray) else 0
 
 if __name__ == '__main__':
     sys.exit(main())

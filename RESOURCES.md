@@ -8,9 +8,10 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 
 These outrank every other entry: they define what AP Research is scored on. All free, checked 2026-11-11.
 
-- **AP Research Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf . The course framework and rubrics. Check the clarifications and corrections file beside it: https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description-clarifications.pdf
+- **AP Research Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf . The course framework and rubrics. On the method section it asks that the paper "explains and provides justification for the chosen method, process, or approach and its alignment with the research question." Check the clarifications and corrections file beside it: https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description-clarifications.pdf
 - **Scored student samples, 2023 to 2026:** https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions . Real academic papers and presentations with scoring commentary and score distributions. The best model of what a strong method section looks like.
-- **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . Includes the school's responsibilities for review of research with human participants.
+- **College Board's rule on research with people:** in the Course and Exam Description above, pages 46 to 47, "Reviewing Student Research Proposals for Ethical Considerations." The teacher reviews every proposal, survey, and interview question before any data collection. A proposal with more than minimal risk cannot be approved. Teacher approval is enough unless the student will publish, compete, or present publicly; then a federally registered institutional review board must also approve. Item 9 of the Inquiry Proposal Form asks students to attach draft consent forms and instruments. Read from the PDF on 2026-11-12.
+- **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . How the program runs at a school: becoming an AP Capstone school, teacher and coordinator roles, and the year's calendar. It does not cover research ethics; an earlier version of this log wrongly said it did (corrected 2026-11-12).
 - **AP Seminar Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf . The Seminar framework and rubrics, with its clarifications file: https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description-clarifications.pdf . Checked 2026-11-12.
 - **Guidance for AI tools:** https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools . What students may and may not use AI for. Read it before recommending any AI-based tool, such as Litmaps or ResearchRabbit.
 
@@ -120,7 +121,7 @@ Approved by Mr. Portela on 2026-11-11, with the cautions below. Read College Boa
 - **Link:** https://cphs.berkeley.edu/informedconsent.html
 - **What it is:** Free Word templates and guidance for consent, parent permission, and child assent, with bracketed instructions and filled-in examples.
 - **Most useful:** Assent form for ages 13–17 (school-based), parent permission form (school-based), online survey consent, interview with audio recording, consent checklist PDF, IRB decision tree PDF, AI consent language guide.
-- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms. The Room 63 versions are in `classroom/consent-templates.docx`.
+- **AP Research use:** Models for the ethics review packet's guardian consent and student assent forms. The Room 63 versions are in `classroom/consent-templates.docx`. Students attach their drafts to item 9 of the Inquiry Proposal Form.
 - **Cautions:** Remove UC Berkeley branding, the CPHS protocol number, and Berkeley contacts. A form must never suggest Berkeley approved a study. The school's own review route decides; these are models only.
 - **Checked:** 2026-11-09
 
