@@ -11,6 +11,7 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **AP Research Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf . The course framework and rubrics. Check the clarifications and corrections file beside it: https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description-clarifications.pdf
 - **Scored student samples, 2023 to 2026:** https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions . Real academic papers and presentations with scoring commentary and score distributions. The best model of what a strong method section looks like.
 - **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . Includes the school's responsibilities for review of research with human participants.
+- **AP Seminar Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf . The Seminar framework and rubrics, with its clarifications file: https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description-clarifications.pdf . Checked 2026-11-12.
 - **Guidance for AI tools:** https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools . What students may and may not use AI for. Read it before recommending any AI-based tool, such as Litmaps or ResearchRabbit.
 
 ## Data
@@ -31,8 +32,16 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Link:** https://www.pewresearch.org/datasets/
 - **What it is:** Pew's raw survey data, released some time after each report: American Trends Panel waves, global attitudes surveys, the Religious Landscape Study, and more.
 - **AP Research use:** A secondary-data path like SDA, with no human participants. Students can pair a Pew report, as a source, with its raw data, as their own analysis.
-- **Cautions:** Downloads need a free Pew account. Check Pew's terms for users under 18 before students sign up; a teacher account may be the route. Files come in SPSS format, which needs converting for Sheets.
-- **Checked:** 2026-11-11
+- **Cautions:** Downloads need a free Pew account. Pew's terms state no minimum age, so a teacher account is the safer route. The terms limit reuse to excerpts, require Pew's citation and its disclaimer that Pew is not responsible for the student's analysis, and forbid trying to identify respondents. Files come in SPSS format, which needs converting for Sheets.
+- **Checked:** 2026-11-11; terms read 2026-11-12
+
+### General Social Survey home site (NORC)
+
+- **Link:** https://gss.norc.org/
+- **What it is:** The survey's own site, run by NORC at the University of Chicago: data files, questionnaires, documentation, and a bibliography of studies that used the survey.
+- **AP Research use:** The source of record for anything a student analyzes through SDA. The questionnaires show exactly how each question was asked. The bibliography helps a literature review.
+- **Cautions:** The home page gives no citation format. Students cite the dataset in the class style, with the release and the date used. Its GSS Data Explorer tool was unreachable when checked.
+- **Checked:** 2026-11-12
 
 ### Google Dataset Search
 
@@ -47,8 +56,8 @@ These outrank every other entry: they define what AP Research is scored on. All 
 - **Link:** https://usa.ipums.org/usa/
 - **What it is:** U.S. census microdata from the University of Minnesota, made consistent across years: censuses from 1790 to 2010 and the American Community Survey from 2000 on. The site says data and services are free of charge.
 - **AP Research use:** Public data on households, work, language, and migration, down to local areas. A no-participants path like SDA.
-- **Cautions:** Registration and its age terms were not confirmed in this check; confirm before sending students. Extracts are large and technical. SDA's census files are the easier start.
-- **Checked:** 2026-11-11 (home page only). Approved by Mr. Portela 2026-11-11, with the cautions above.
+- **Cautions:** Free registration is required before any download. The form asks for name, institution, and a research statement, and states no minimum age, so a teacher account is the safer route. Extracts are large and technical. SDA's census files are the easier start.
+- **Checked:** 2026-11-11; registration page read 2026-11-12. Approved by Mr. Portela 2026-11-11, with the cautions above.
 
 ### CDC WONDER
 
@@ -93,16 +102,16 @@ Approved by Mr. Portela on 2026-11-11, with the cautions below. Read College Boa
 - **Link:** https://www.taguette.org/
 - **What it is:** A free, open-source tool for qualitative coding. Import documents, highlight passages, and tag them. It exports the codebook, the tagged quotes, and the highlighted documents.
 - **AP Research use:** Coding interview notes or open-ended survey answers. The exported codebook and quote list become part of the student's data file.
-- **Cautions:** It installs on macOS, Windows, or Linux, which keeps data on that computer. There is also a hosted version; where it stores data, and whether it needs an account, were not confirmed. Do not put participant data on the hosted version until that is checked against the ethics packet's data plan. No iPad app was confirmed.
-- **Checked:** 2026-11-11
+- **Cautions:** It installs on macOS, Windows, or Linux, which keeps data on that computer. The hosted version asks users to register, and its page states no privacy terms or storage location. Use the installed version for anything from participants. No iPad app was confirmed.
+- **Checked:** 2026-11-11; hosted page read 2026-11-12
 
 ### jamovi
 
 - **Link:** https://www.jamovi.org/
 - **What it is:** Free, open-source statistics software that looks like a spreadsheet. The desktop version is free and works offline. A cloud version runs in a browser, and the site says it works on Chromebooks and tablets.
 - **AP Research use:** Descriptive statistics and simple tests on a student's own data file, with the output saved beside the data.
-- **Cautions:** The cloud version's cost and account terms were not confirmed, and iPad support is not named. The software runs the test; the student still has to justify it.
-- **Checked:** 2026-11-11
+- **Cautions:** The cloud version has a free Guest plan that needs a sign-up but no payment card; it has queues, shorter sessions, and smaller data limits than the paid plan. iPad support is not named. Coded data only: no names in any file uploaded to the cloud. The software runs the test; the student still has to justify it.
+- **Checked:** 2026-11-11; cloud plans read 2026-11-12
 
 ## Ethics and consent
 
@@ -150,13 +159,13 @@ Not for students until opened and checked, and until the access route is confirm
 - **BCcampus open textbook on research methods:** https://opentextbc.ca/researchmethods/ . Likely a free, citable methods text.
 - **ICPSR, the Inter-university Consortium for Political and Social Research:** https://www.icpsr.umich.edu/ . A large social science data archive; some data needs a member login.
 
-### Not reachable on 2026-11-11 (round two; not retried)
+### Not reachable on 2026-11-11 and again on 2026-11-12
 
 Each needs one look in a normal browser before it can be listed.
 
 - **Purdue OWL:** https://owl.purdue.edu/ . Server error 503 on two pages. Expected use: citation and research writing guides.
 - **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Server error 503. Expected use: more free methods texts.
-- **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Server error 503. Expected use: the General Social Survey's own site and its citation.
+- **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Server error 503. Expected use: custom extracts. The survey's home site is verified above.
 - **Seeing Theory:** https://seeing-theory.brown.edu/ . Server error 503. Expected use: visual introduction to statistics.
 - **DOAJ, the Directory of Open Access Journals:** https://doaj.org/ . Access refused, error 403. Not retried.
 - **data.census.gov, Harvard Dataverse, Unpaywall:** each page loaded with no readable content, so nothing was confirmed.
@@ -173,6 +182,12 @@ Each needs one look in a normal browser before it can be listed.
   - Doral College: its databases come through LIRN, a shared package students reach from Canvas. Whether LIRN includes SAGE Research Methods is unconfirmed; ask the Doral College library helpdesk, Library@doral.edu.
   - A Sage quote and trial account: not found in the connected Gmail or the ISA Broward Outlook (only Sage marketing emails, 2025 to 2026). A second search of that Outlook on 2026-11-11 found the same. The Mater mailbox has not been searched. Student access stays unconfirmed.
 - **Noted:** 2026-11-09 (sign-in wall; content not opened)
+
+## Do not use
+
+Sites checked and rejected. Students are not sent here, and a student who cites one gets redirected.
+
+- **PapersOwl** (papersowl.com). Checked 2026-11-09. Its advice articles carry buttons such as "Write my methodology" and the site sells written papers. College Board requires the academic paper to be the student's own work. The article also cites no sources.
 
 ## To add
 

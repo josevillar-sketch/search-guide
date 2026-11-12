@@ -163,7 +163,7 @@ page("sda-lab.html", "SDA lab: national survey data in one period", f"""
 </table>
 <h3>One thing this table shows (give the numbers)</h3><div class="line"></div><div class="line"></div>
 <h3>One thing this table cannot show</h3><div class="line"></div><div class="line"></div>
-<div class="band">If you use this in your paper: cite the General Social Survey as its own site, gss.norc.org, tells you to, and say you analyzed it through SDA on today's date.</div>
+<div class="band">If you use this in your paper: cite the General Social Survey (NORC at the University of Chicago, gss.norc.org) in the class citation style. Give the release from your record box, and say you analyzed it through SDA on today's date.</div>
 {FOOT.format(x="SDA lab · student sheet")}</section>
 """)
 print("built")
