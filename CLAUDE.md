@@ -71,7 +71,7 @@ What that means in this repo:
 
 | File | Purpose |
 |---|---|
-| `index.html` | The search guide page. Student data lives in the `DATA` array. Published as a private claude.ai artifact at https://claude.ai/artifact/4xssWsEokXLKS5uY55FjS8 (version 4, republished 2026-11-12 on Mr. Portela's word, from the merged and tested file). This is the page students use, so republish it only when he says to. |
+| `index.html` | The search guide page. Student data lives in the `DATA` array. Existing private artifact: https://claude.ai/artifact/4xssWsEokXLKS5uY55FjS8 . Last reported live version: 4, republished 2026-11-12 from `53b3bb8`. Recovery/navigation PR #16 is now merged at `7917d7a`; its exact tested HTML hash and the separate live-publication status are in `QUALITY.md`. The user's subsequent "Finish" authorized completion; the existing publisher handoff is recorded in the private coordination line. Check the live body before updating, skip a duplicate if already current, preserve sharing, and return an observed receipt. Do not ask again for the same permission or claim that a repository merge updated the artifact. |
 | `README.md` | How the page works, storage keys, printing, checks. |
 | `DESIGN.md` | The design standard for everything students see, on screen and on paper: colors, type, shapes, components, and the rules with names. Read it before building or restyling anything. `tools/design_check.cjs` measures those rules on the rendered pages. |
 | `RESOURCES.md` | Verified research tools and datasets, with how each fits AP Research. |
