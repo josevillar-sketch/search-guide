@@ -20,7 +20,7 @@ After a pick, the pickers fold away and the student's desk opens:
 - **My question changed:** an inline form. The box starts with the student's own last version, and they type the new version word for word from their log, plus one sentence on what they changed and why, the version number and the date. Saving shows the version line to copy into the log in pen, and **I wrote it in my log** stamps it. Until then, **Fix a typo** and **Remove this version** stay available.
 - **All your versions** and **Compare two versions:** every saved version stays in the history, and a word diff shows what changed between any two.
 - **Seven checks:** the course's Plate VI checks. The student taps a dot when a check passes; each check has its Plate VII repair behind **If it fails**. **Circle it** labels the who, where and when (plus the judgment word for Seminar, or the verb and the variable for Research), and **What the page notices** points out patterns such as a yes-or-no opening.
-- **This iPad:** copy every version as text, or remove them.
+- **This iPad:** copy every version as text, download a private copy of the saved data, or remove them. A downloaded JSON file preserves the current desk's saved record and recovery text; it excludes unsaved fields. Keep the file private. There is no in-app import or Undo; your Research Log remains the record.
 
 **The rule.** College Board and Room 63 both say no tool writes, rewrites or narrows a student's question. Every question string on the page comes from the `DATA` record or from text the student typed. The workbench never suggests wording, fills a dot, or types into the student's fields; notes and repairs are the Field Guide's generic moves. The rule is written as a comment at the top of the workbench code.
 
@@ -55,7 +55,7 @@ npm run test:mobile:chromium
 npm run test:design
 ```
 
-Playwright is locked as a development dependency. Chromium selection uses an explicit executable override, the bundled browser, or installed Chromium/Chrome; see [tools/VERIFY.md](tools/VERIFY.md). The application remains standalone HTML with no runtime dependencies. Local tests cover cleanup, storage/recovery, all 31 workbench acceptance cases, 244 slips, and eight period print sets. Generated browser artifacts stay under ignored `test-results/` and must remain local.
+Playwright is locked as a development dependency. Chromium selection uses an explicit executable override, the bundled browser, or installed Chromium/Chrome; see [tools/VERIFY.md](tools/VERIFY.md). The application remains standalone HTML with no runtime dependencies. Local tests cover cleanup, storage/recovery, all 31 workbench acceptance cases, private-copy download checks, 244 slips, and eight period print sets. Generated browser artifacts stay under ignored `test-results/` and must remain local.
 
 These application checks supplement the existing whole-repository checks below. They do not replace classroom builds, link checks, consent pagination, or the required DESIGN.md audit. Run mutating builds in a disposable copy and never stage regenerated files as a side effect of checking this change.
 

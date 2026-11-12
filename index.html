@@ -12,240 +12,241 @@
 
 <a id="skip" class="skip" href="#pick">Skip to your period</a>
 <header id="band" class="band night">
-  <div class="shell">
-    <h1>Room 63 Search Guide</h1>
-    <span class="eyebrow"><span>Room 63</span><span>AP Capstone</span><span>Question Workbench</span></span>
-    <p class="lede" id="lede">Pick your period, then your name. Your question, your seven checks, and your searches open on one desk. When your question changes in your log, the desk keeps the newest version on this iPad.</p>
-  </div>
+<div class="shell">
+<h1>Room 63 Search Guide</h1>
+<span class="eyebrow"><span>Room 63</span><span>AP Capstone</span><span>Question Workbench</span></span>
+<p class="lede" id="lede">Pick your period, then your name. Your question, your seven checks, and your searches open on one desk. When your question changes in your log, the desk keeps the newest version on this iPad.</p>
+</div>
 </header>
 <main id="main">
-  <section id="pick" class="night" aria-label="Find your desk">
-    <div class="shell">
-      <div class="step" id="step1">
-        <div class="steplabel"><b>1</b><h2 tabindex="-1">Your period</h2></div>
-        <div class="back" id="back" hidden></div>
-        <div class="chips" id="periods" role="group" aria-label="Choose your period"></div>
-      </div>
-      <div class="step" id="step2" hidden>
-        <div class="steplabel"><b>2</b><h2>Your name</h2></div>
-        <label class="sr" for="find">Type your first name</label>
-        <input type="search" id="find" placeholder="Type your first name" autocomplete="off">
-        <p id="name-status" class="sr" role="status" aria-atomic="true"></p>
-        <div class="names" id="names" role="group" aria-label="Choose your name"></div>
-      </div>
-    </div>
-  </section>
+<section id="pick" class="night" aria-label="Find your desk">
+<div class="shell">
+<div class="step" id="step1">
+<div class="steplabel"><b>1</b><h2 tabindex="-1">Your period</h2></div>
+<div class="back" id="back" hidden></div>
+<div class="chips" id="periods" role="group" aria-label="Choose your period"></div>
+</div>
+<div class="step" id="step2" hidden>
+<div class="steplabel"><b>2</b><h2>Your name</h2></div>
+<label class="sr" for="find">Type your first name</label>
+<input type="search" id="find" placeholder="Type your first name" autocomplete="off">
+<p id="name-status" class="sr" role="status" aria-atomic="true"></p>
+<div class="names" id="names" role="group" aria-label="Choose your name"></div>
+</div>
+</div>
+</section>
 
-  <div id="desk" class="desk" data-on="false">
-      <nav id="desk-nav" aria-label="Your desk">
-        <a id="nav-versions" href="#st-versions">Versions <span class="badge" id="nav-v-badge" hidden></span></a>
-        <a id="nav-checks" href="#st-checks">Checks <span class="badge" id="nav-c-badge" aria-hidden="true"></span><span class="sr" id="nav-c-sr"></span></a>
-        <a id="nav-search" href="#step3">Searches</a>
-      </nav>
-    <section id="desk-left" class="night" aria-labelledby="ficha-h">
-      <div id="who"></div>
-      <div id="desk-alerts" hidden>
-        <div id="store-banner" class="banner" hidden><p>This iPad is not saving right now. Everything works until you close this page. Copy your version line into your log before you leave.</p></div>
-        <div id="wb-notice" class="banner" role="status" aria-atomic="true" hidden></div>
-        <div id="rec-ask" class="banner" role="group" aria-labelledby="rec-ask-q" hidden>
-          <p id="rec-ask-q"></p>
-          <div class="row"><button type="button" class="btn-line" id="rec-ask-record">The record</button><button type="button" class="btn-line" id="rec-ask-mine">My version</button></div>
-        </div>
-      </div>
-      <article id="ficha" class="paper">
-        <h2 id="ficha-h" tabindex="-1">Your question</h2>
-        <div class="ficha-top">
-          <div id="ficha-num"><span class="num-l"></span><span class="num-v"></span></div>
-          <div class="ficha-cat">
-            <span id="ficha-call" class="lbl"></span>
-            <span id="ficha-meta" class="lbl"></span>
-            <span id="ficha-stamp" class="stamp" hidden></span>
-          </div>
-        </div>
-        <div class="margin-rule" aria-hidden="true"></div>
-        <p id="ficha-q"></p>
-        <div class="ficha-dotrow"><span id="ficha-dots" class="mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><p id="ficha-count"></p></div>
-        <button type="button" id="q-open" class="btn-brass" aria-controls="wb-form" aria-expanded="false">My question changed</button>
-        <p id="ficha-hint" class="hint" hidden></p>
-      </article>
-      <div id="nextdate"></div>
-      <details id="tl-wrap">
-        <summary><h3>All your versions</h3><span class="badge" id="tl-count">0</span></summary>
-        <ol id="timeline"></ol>
-        <p id="tl-empty">Nothing saved on this iPad yet.</p>
-        <p id="tl-foot" hidden>Old versions stay. Never erase.</p>
-      </details>
-    </section>
+<div id="desk" class="desk" data-on="false">
+<nav id="desk-nav" aria-label="Your desk">
+<a id="nav-versions" href="#st-versions">Versions <span class="badge" id="nav-v-badge" hidden></span></a>
+<a id="nav-checks" href="#st-checks">Checks <span class="badge" id="nav-c-badge" aria-hidden="true"></span><span class="sr" id="nav-c-sr"></span></a>
+<a id="nav-search" href="#step3">Searches</a>
+</nav>
+<section id="desk-left" class="night" aria-labelledby="ficha-h">
+<div id="who"></div>
+<div id="desk-alerts" hidden>
+<div id="store-banner" class="banner" hidden><p>This iPad is not saving right now. Everything works until you close this page. Copy your version line into your log before you leave.</p></div>
+<div id="wb-notice" class="banner" role="status" aria-atomic="true" hidden></div>
+<div id="rec-ask" class="banner" role="group" aria-labelledby="rec-ask-q" hidden>
+<p id="rec-ask-q"></p>
+<div class="row"><button type="button" class="btn-line" id="rec-ask-record">The record</button><button type="button" class="btn-line" id="rec-ask-mine">My version</button></div>
+</div>
+</div>
+<article id="ficha" class="paper">
+<h2 id="ficha-h" tabindex="-1">Your question</h2>
+<div class="ficha-top">
+<div id="ficha-num"><span class="num-l"></span><span class="num-v"></span></div>
+<div class="ficha-cat">
+<span id="ficha-call" class="lbl"></span>
+<span id="ficha-meta" class="lbl"></span>
+<span id="ficha-stamp" class="stamp" hidden></span>
+</div>
+</div>
+<div class="margin-rule" aria-hidden="true"></div>
+<p id="ficha-q"></p>
+<div class="ficha-dotrow"><span id="ficha-dots" class="mini" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><p id="ficha-count"></p></div>
+<button type="button" id="q-open" class="btn-brass" aria-controls="wb-form" aria-expanded="false">My question changed</button>
+<p id="ficha-hint" class="hint" hidden></p>
+</article>
+<div id="nextdate"></div>
+<details id="tl-wrap">
+<summary><h3>All your versions</h3><span class="badge" id="tl-count">0</span></summary>
+<ol id="timeline"></ol>
+<p id="tl-empty">Nothing saved on this iPad yet.</p>
+<p id="tl-foot" hidden>Old versions stay. Never erase.</p>
+</details>
+</section>
 
-    <div id="desk-main">
-      <section id="st-versions" class="station" aria-labelledby="stv-h">
-        <h2 id="stv-h" tabindex="-1">Versions</h2>
-        <div id="q-empty" class="panel" hidden>
-          <p>Nothing is saved on this iPad yet. When your question changes in your log, tap My question changed.</p>
-          <button type="button" id="q-open-2" class="btn-line" aria-controls="wb-form">My question changed</button>
-        </div>
-        <form id="wb-form" class="panel" novalidate hidden aria-labelledby="wb-h">
-          <div class="fhead">
-            <h3 id="wb-h">My question changed</h3>
-            <p id="wb-intro"></p>
-            <p id="wb-rule">Every word of your question is yours. No tool writes, rewrites, or narrows your question. This page does not either.</p>
-            <p id="wb-draftnote" hidden></p>
-            <p id="wb-cap" hidden>This iPad holds 40 versions for you. Your log holds all of them. Save shows your version line but does not keep it here.</p>
-          </div>
-          <fieldset id="wb-reasons" aria-describedby="wb-reasons-hint">
-            <legend>What happened?</legend>
-            <p class="hint" id="wb-reasons-hint">Pick one if it fits. Nothing here types into your question.</p>
-            <div class="chipset" id="wb-reason-set"></div>
-            <div id="wb-reason-fix">
-              <div class="field" id="wb-check-row" hidden><label for="wb-check">Which check was empty?</label><select id="wb-check"></select></div>
-              <p id="wb-reason-line" hidden></p>
-            </div>
-          </fieldset>
-          <div class="field">
-            <label for="wb-text">Your new version</label>
-            <p class="hint" id="wb-text-help"></p>
+<div id="desk-main">
+<section id="st-versions" class="station" aria-labelledby="stv-h">
+<h2 id="stv-h" tabindex="-1">Versions</h2>
+<div id="q-empty" class="panel" hidden>
+<p>Nothing is saved on this iPad yet. When your question changes in your log, tap My question changed.</p>
+<button type="button" id="q-open-2" class="btn-line" aria-controls="wb-form">My question changed</button>
+</div>
+<form id="wb-form" class="panel" novalidate hidden aria-labelledby="wb-h">
+<div class="fhead">
+<h3 id="wb-h">My question changed</h3>
+<p id="wb-intro"></p>
+<p id="wb-rule">Every word of your question is yours. No tool writes, rewrites, or narrows your question. This page does not either.</p>
+<p id="wb-draftnote" hidden></p>
+<p id="wb-cap" hidden>This iPad holds 40 versions for you. Your log holds all of them. Save shows your version line but does not keep it here.</p>
+</div>
+<fieldset id="wb-reasons" aria-describedby="wb-reasons-hint">
+<legend>What happened?</legend>
+<p class="hint" id="wb-reasons-hint">Pick one if it fits. Nothing here types into your question.</p>
+<div class="chipset" id="wb-reason-set"></div>
+<div id="wb-reason-fix">
+<div class="field" id="wb-check-row" hidden><label for="wb-check">Which check was empty?</label><select id="wb-check"></select></div>
+<p id="wb-reason-line" hidden></p>
+</div>
+</fieldset>
+<div class="field">
+<label for="wb-text">Your new version</label>
+<p class="hint" id="wb-text-help"></p>
             <textarea id="wb-text" writingsuggestions="false" rows="4" maxlength="400" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-text-help wb-text-err"></textarea>
-            <p class="err" id="wb-text-err" hidden></p>
-            <button type="button" id="wb-empty" class="btn-line">Empty the box</button>
-          </div>
-          <div class="field">
-            <label for="wb-why">What I changed, and why</label>
-            <p class="hint" id="wb-why-help">One sentence in your words. That line is proof of your thinking.</p>
+<p class="err" id="wb-text-err" hidden></p>
+<button type="button" id="wb-empty" class="btn-line">Empty the box</button>
+</div>
+<div class="field">
+<label for="wb-why">What I changed, and why</label>
+<p class="hint" id="wb-why-help">One sentence in your words. That line is proof of your thinking.</p>
             <textarea id="wb-why" writingsuggestions="false" rows="2" maxlength="300" autocomplete="off" autocorrect="off" autocapitalize="sentences" spellcheck="true" aria-describedby="wb-why-help wb-why-err"></textarea>
-            <p class="err" id="wb-why-err" hidden></p>
-          </div>
-          <div class="fnotes">
-            <div class="wb-pair">
-              <div class="field">
-                <label for="wb-n">Version number in your log</label>
-                <div class="stepper">
-                  <button type="button" id="wb-n-minus" aria-label="Lower the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
-                  <input id="wb-n" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" aria-describedby="wb-n-help wb-n-info wb-n-err">
-                  <button type="button" id="wb-n-plus" aria-label="Raise the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
-                </div>
-              </div>
-              <div class="field">
-                <label for="wb-date">Date on your log line</label>
-                <input id="wb-date" type="date" aria-describedby="wb-date-err">
-              </div>
-            </div>
-            <p class="hint" id="wb-n-help">Use the number your log shows. Your log wins.</p>
-            <p class="hint" id="wb-n-info" hidden></p>
-            <p class="err" id="wb-n-err" hidden></p>
-            <p class="err" id="wb-date-err" hidden></p>
-          </div>
-          <div class="wb-acts">
-            <button type="submit" id="wb-save" class="btn-brass">Save this version</button>
-            <button type="button" id="wb-cancel" class="btn-line">Cancel</button>
-          </div>
-          <div id="wb-confirm" class="confirm" role="group" aria-labelledby="wb-confirm-q" hidden>
-            <p id="wb-confirm-q">Throw away what you typed here?</p>
-            <div class="row"><button type="button" id="wb-confirm-keep" class="btn-line">Keep writing</button><button type="button" id="wb-confirm-drop" class="btn-line">Throw it away</button></div>
-          </div>
-        </form>
-        <section id="vl" class="paper" aria-labelledby="vl-h" hidden>
-          <h3 id="vl-h" tabindex="-1">Write this in your log, in pen.</h3>
-          <div id="vl-text"></div>
-          <div id="vl-dots"></div>
-          <p id="vl-note" class="hint">Next open line. Draw seven dots under it and fill one for each check that passes. Old versions stay in the log. Never erase.</p>
-          <div class="row"><button type="button" id="vl-copy" class="btn-line">Copy version line</button></div>
-          <label class="penrow" for="vl-penned"><input type="checkbox" id="vl-penned"><span>I wrote it in my log, in pen.</span></label>
-          <p><span id="vl-stamp" class="stamp"></span></p>
-          <div id="vl-fix">
-            <p id="vl-fixhint">Not in your log yet, so you can still fix it here.</p>
-            <div class="row"><button type="button" id="vl-edit" class="btn-line" aria-controls="wb-form">Fix a typo</button><button type="button" id="vl-remove" class="btn-line">Remove this version</button></div>
-            <div id="vl-remove-confirm" class="confirm" role="group" aria-labelledby="vl-remove-q" hidden>
-              <p id="vl-remove-q"></p>
-              <div class="row"><button type="button" id="vl-remove-no" class="btn-line">Keep it</button><button type="button" id="vl-remove-yes" class="btn-line">Remove it</button></div>
-            </div>
-          </div>
-        </section>
-        <div id="vl-next" hidden><a id="next-checks" class="btn-line" href="#st-checks">Run the seven checks</a><a id="next-search" class="btn-line" href="#tools-build">Search with your version</a></div>
-        <section id="compare" class="panel" aria-labelledby="cmp-h" hidden>
-          <h3 id="cmp-h" tabindex="-1">Compare two versions</h3>
-          <div class="cmp-pick">
-            <div class="field"><label for="cmp-from">From</label><select id="cmp-from"></select></div>
-            <div class="field"><label for="cmp-to">To</label><select id="cmp-to"></select></div>
-          </div>
-          <p id="cmp-sum"></p>
-          <p id="cmp-out"></p>
-          <p class="hint">Struck through: words that went out. Underlined: words that came in.</p>
-        </section>
-      </section>
+<p class="err" id="wb-why-err" hidden></p>
+</div>
+<div class="fnotes">
+<div class="wb-pair">
+<div class="field">
+<label for="wb-n">Version number in your log</label>
+<div class="stepper">
+<button type="button" id="wb-n-minus" aria-label="Lower the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+<input id="wb-n" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off" aria-describedby="wb-n-help wb-n-info wb-n-err">
+<button type="button" id="wb-n-plus" aria-label="Raise the version number"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8h10M8 3v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+</div>
+</div>
+<div class="field">
+<label for="wb-date">Date on your log line</label>
+<input id="wb-date" type="date" aria-describedby="wb-date-err">
+</div>
+</div>
+<p class="hint" id="wb-n-help">Use the number your log shows. Your log wins.</p>
+<p class="hint" id="wb-n-info" hidden></p>
+<p class="err" id="wb-n-err" hidden></p>
+<p class="err" id="wb-date-err" hidden></p>
+</div>
+<div class="wb-acts">
+<button type="submit" id="wb-save" class="btn-brass">Save this version</button>
+<button type="button" id="wb-cancel" class="btn-line">Cancel</button>
+</div>
+<div id="wb-confirm" class="confirm" role="group" aria-labelledby="wb-confirm-q" hidden>
+<p id="wb-confirm-q">Throw away what you typed here?</p>
+<div class="row"><button type="button" id="wb-confirm-keep" class="btn-line">Keep writing</button><button type="button" id="wb-confirm-drop" class="btn-line">Throw it away</button></div>
+</div>
+</form>
+<section id="vl" class="paper" aria-labelledby="vl-h" hidden>
+<h3 id="vl-h" tabindex="-1">Write this in your log, in pen.</h3>
+<div id="vl-text"></div>
+<div id="vl-dots"></div>
+<p id="vl-note" class="hint">Next open line. Draw seven dots under it and fill one for each check that passes. Old versions stay in the log. Never erase.</p>
+<div class="row"><button type="button" id="vl-copy" class="btn-line">Copy version line</button></div>
+<label class="penrow" for="vl-penned"><input type="checkbox" id="vl-penned"><span>I wrote it in my log, in pen.</span></label>
+<p><span id="vl-stamp" class="stamp"></span></p>
+<div id="vl-fix">
+<p id="vl-fixhint">Not in your log yet, so you can still fix it here.</p>
+<div class="row"><button type="button" id="vl-edit" class="btn-line" aria-controls="wb-form">Fix a typo</button><button type="button" id="vl-remove" class="btn-line">Remove this version</button></div>
+<div id="vl-remove-confirm" class="confirm" role="group" aria-labelledby="vl-remove-q" hidden>
+<p id="vl-remove-q"></p>
+<div class="row"><button type="button" id="vl-remove-no" class="btn-line">Keep it</button><button type="button" id="vl-remove-yes" class="btn-line">Remove it</button></div>
+</div>
+</div>
+</section>
+<div id="vl-next" hidden><a id="next-checks" class="btn-line" href="#st-checks">Run the seven checks</a><a id="next-search" class="btn-line" href="#tools-build">Search with your version</a></div>
+<section id="compare" class="panel" aria-labelledby="cmp-h" hidden>
+<h3 id="cmp-h" tabindex="-1">Compare two versions</h3>
+<div class="cmp-pick">
+<div class="field"><label for="cmp-from">From</label><select id="cmp-from"></select></div>
+<div class="field"><label for="cmp-to">To</label><select id="cmp-to"></select></div>
+</div>
+<p id="cmp-sum"></p>
+<p id="cmp-out"></p>
+<p class="hint">Struck through: words that went out. Underlined: words that came in.</p>
+</section>
+</section>
 
-      <section id="st-checks" class="station" aria-labelledby="ck-h">
-        <h2 id="ck-h" tabindex="-1">Seven checks</h2>
-        <p id="ck-intro">Ask yourself each check. Tap the dot when it passes. You decide. The page never fills a dot for you.</p>
-        <p id="ck-new" hidden>New version, new dots. Run all seven again.</p>
-        <p id="ck-count" role="status"></p>
-        <a id="ck-search" class="btn-line" href="#tools-build" hidden>Search with your version</a>
-        <p id="ck-empty" hidden>Save your first version, then run the seven checks on it.</p>
-        <section id="notes" class="panel" aria-labelledby="notes-h">
-          <h3 id="notes-h">What the page notices</h3>
-          <ul id="notes-list"></ul>
-          <p id="notes-empty">Nothing to point out. The seven checks are still yours to run.</p>
-          <p class="hint">These are patterns in your words, not a grade. You decide what to change. The page points. It never writes your question.</p>
-        </section>
-        <ol id="checks"></ol>
-        <section id="circle" class="panel" aria-labelledby="circle-h">
-          <h3 id="circle-h">Circle it</h3>
-          <p>Pick a pen, then tap the words in your question. Tap a word again to take the circle off. What you cannot circle is missing.</p>
-          <fieldset id="pens"><legend>Pen</legend><div class="chipset" id="pen-set"></div></fieldset>
-          <div id="words" role="group" aria-label="Words in your question"></div>
-          <p id="circ-slots" aria-live="polite"></p>
-          <p>Then write two answers.</p>
-          <div class="field"><label for="c-expect">The answer you expect</label><textarea id="c-expect" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
-          <div class="field"><label for="c-hate">The answer you would hate to reach</label><textarea id="c-hate" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
-          <p class="hint">Can't write the second? It is not open yet.</p>
-        </section>
-      </section>
+<section id="st-checks" class="station" aria-labelledby="ck-h">
+<h2 id="ck-h" tabindex="-1">Seven checks</h2>
+<p id="ck-intro">Ask yourself each check. Tap the dot when it passes. You decide. The page never fills a dot for you.</p>
+<p id="ck-new" hidden>New version, new dots. Run all seven again.</p>
+<p id="ck-count" role="status"></p>
+<a id="ck-search" class="btn-line" href="#tools-build" hidden>Search with your version</a>
+<p id="ck-empty" hidden>Save your first version, then run the seven checks on it.</p>
+<section id="notes" class="panel" aria-labelledby="notes-h">
+<h3 id="notes-h">What the page notices</h3>
+<ul id="notes-list"></ul>
+<p id="notes-empty">Nothing to point out. The seven checks are still yours to run.</p>
+<p class="hint">These are patterns in your words, not a grade. You decide what to change. The page points. It never writes your question.</p>
+</section>
+<ol id="checks"></ol>
+<section id="circle" class="panel" aria-labelledby="circle-h">
+<h3 id="circle-h">Circle it</h3>
+<p>Pick a pen, then tap the words in your question. Tap a word again to take the circle off. What you cannot circle is missing.</p>
+<fieldset id="pens"><legend>Pen</legend><div class="chipset" id="pen-set"></div></fieldset>
+<div id="words" role="group" aria-label="Words in your question"></div>
+<p id="circ-slots" aria-live="polite"></p>
+<p>Then write two answers.</p>
+<div class="field"><label for="c-expect">The answer you expect</label><textarea id="c-expect" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+<div class="field"><label for="c-hate">The answer you would hate to reach</label><textarea id="c-hate" writingsuggestions="false" rows="2" maxlength="200" autocomplete="off" autocorrect="off" autocapitalize="sentences"></textarea></div>
+<p class="hint">Can't write the second? It is not open yet.</p>
+</section>
+</section>
 
-      <div class="step" id="step3">
-        <div class="steplabel"><b>3</b><h2 id="step3title" tabindex="-1">Your search slip</h2></div>
-        <div id="guide"></div>
-      </div>
+<div class="step" id="step3">
+<div class="steplabel"><b>3</b><h2 id="step3title" tabindex="-1">Your search slip</h2></div>
+<div id="guide"></div>
+</div>
 
-      <section class="tools" id="tools-build" aria-labelledby="tb">
-        <h2 id="tb" tabindex="-1">Changed your question? Build a new search</h2>
-        <p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
-        <label class="sr" for="myq">Your question</label>
+<section class="tools" id="tools-build" aria-labelledby="tb">
+<h2 id="tb" tabindex="-1">Changed your question? Build a new search</h2>
+<p class="hint" id="bhint">Type your newest question. Tap a word to drop it. Keep the nouns that name who, what and where. Put a phrase in quotation marks to keep its words together. The box starts with the practice table question from class.</p>
+<label class="sr" for="myq">Your question</label>
         <textarea id="myq" aria-describedby="bhint" autocomplete="off" autocorrect="off" writingsuggestions="false">To what extent should Miami-Dade keep bars on "bus-stop benches" in 2027?</textarea>
-        <div class="kw" id="kw" role="group" aria-label="Words in your search"></div>
-        <p class="words" id="built"></p>
-        <p class="picked" id="picked"></p>
-        <div class="acts" id="builtacts"></div>
-      </section>
+<div class="kw" id="kw" role="group" aria-label="Words in your search"></div>
+<p class="words" id="built"></p>
+<p class="picked" id="picked"></p>
+<div class="acts" id="builtacts"></div>
+</section>
 
-      <section class="tools" id="tools-db" aria-labelledby="dbh">
-        <h2 id="dbh">How each database works on the iPad</h2>
-        <div class="dbgrid" id="dbgrid"></div>
-      </section>
+<section class="tools" id="tools-db" aria-labelledby="dbh">
+<h2 id="dbh">How each database works on the iPad</h2>
+<div class="dbgrid" id="dbgrid"></div>
+</section>
 
-      <section id="ipad" class="station" aria-labelledby="ipad-h">
-        <h2 id="ipad-h" tabindex="-1">This iPad</h2>
-        <div class="panel">
-          <p>Saved only on this iPad. It does not go online, and Mr. Portela cannot see it here. Anyone who taps your name on this iPad can see it. Your log is the record.</p>
-          <p id="ipad-status"></p>
-          <button type="button" id="ipad-copyall" class="btn-line">Copy all my versions</button>
-          <button type="button" id="ipad-recover" class="btn-line" hidden>Show recovery data</button>
-          <p class="hint">Copies every version as text, oldest first. Paste it into a Doc or an email to yourself. There is no import: on another iPad, type your newest version again from your log.</p>
+<section id="ipad" class="station" aria-labelledby="ipad-h">
+<h2 id="ipad-h" tabindex="-1">This iPad</h2>
+<div class="panel">
+<p>Saved only on this iPad. It does not go online, and Mr. Portela cannot see it here. Anyone who taps your name on this iPad can see it. Your log is the record.</p>
+<p id="ipad-status"></p>
+<button type="button" id="ipad-copyall" class="btn-line">Copy all my versions</button>
+<button type="button" id="ipad-download" class="btn-line">Download private copy</button>
+<button type="button" id="ipad-recover" class="btn-line" hidden>Show recovery data</button>
+<p class="hint">Copies every version as text, oldest first. Paste it into a Doc or an email to yourself. Downloaded files contain saved data only. Keep them private. There is no import: on another iPad, type your newest version again from your log.</p>
           <textarea id="ipad-backup" readonly hidden aria-label="All your versions as text"></textarea>
-          <button type="button" id="ipad-remove" class="btn-line">Remove my versions from this iPad</button>
-          <div id="ipad-remove-confirm" class="confirm" role="group" aria-labelledby="ipad-remove-q" hidden>
-            <p id="ipad-remove-q"></p>
-            <div class="row"><button type="button" id="ipad-remove-no" class="btn-line">Keep them</button><button type="button" id="ipad-remove-yes" class="btn-line">Remove them</button></div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </div>
-  <div id="wb-live" class="sr" role="status" aria-live="polite"></div>
+<button type="button" id="ipad-remove" class="btn-line">Remove my versions from this iPad</button>
+<div id="ipad-remove-confirm" class="confirm" role="group" aria-labelledby="ipad-remove-q" hidden>
+<p id="ipad-remove-q"></p>
+<div class="row"><button type="button" id="ipad-remove-no" class="btn-line">Keep them</button><button type="button" id="ipad-remove-yes" class="btn-line">Remove them</button></div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div id="wb-live" class="sr" role="status" aria-live="polite"></div>
 </main>
 <footer>
-  <div class="shell">
-    <p>Questions on record as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. Your log wins: when your question changes, tap My question changed. Every database here is free to search. Nothing on this page is graded. Nothing on this page writes, rewrites, or narrows your question. The words are yours.</p>
-    <button type="button" class="again" id="printp" hidden>Print this period's slips</button>
-  </div>
+<div class="shell">
+<p>Questions on record as of Tuesday, September 29, 2026, read from your Classroom Docs and your emails to Mr. Portela. Your log wins: when your question changes, tap My question changed. Every database here is free to search. Nothing on this page is graded. Nothing on this page writes, rewrites, or narrows your question. The words are yours.</p>
+<button type="button" class="again" id="printp" hidden>Print this period's slips</button>
+</div>
 </footer>
 <div id="printall" aria-hidden="true"></div>
 
@@ -393,7 +394,7 @@ var b=el("button",{type:"button",class:"name","aria-pressed":String(!!CUR&&CUR.i
 pickStudent(d)});box.appendChild(b)});var n=box.children.length;txt("name-status",n?n+" names found.":"No name matches. Check the period, or ask Mr. Portela.")
 ;if(!n)box.appendChild(el("p",{class:"hint",text:"No name matches. Check the period, or ask Mr. Portela."}))}
 var CUR=null,R=null,READONLY=false,NOTICE="",ASK=false,VLK=null,TEMP=null,CKNEW=false,ROV=0,CMPRESET=true;var STORE={ok:true,told:false
-},SESSION=0,BASE=null,RECOVERY="";try{localStorage.setItem("r63sg_probe","1");localStorage.removeItem("r63sg_probe")}catch(e){STORE.ok=false}var ORIG={
+},SESSION=0,BASE=null,RECOVERY="",RECOVERY_PARTS=[];try{localStorage.setItem("r63sg_probe","1");localStorage.removeItem("r63sg_probe")}catch(e){STORE.ok=false}var ORIG={
 myq:$("myq").value,tb:$("tb").textContent,bhint:$("bhint").textContent};function pad2(n){return(n<10?"0":"")+n}function pd(s){
 var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(typeof s==="string"?s:"");if(!m)return null;var y=+m[1],mo=+m[2],d=+m[3];var t=new Date(Date.UTC(y,mo-1,d))
 ;if(t.getUTCFullYear()!==y||t.getUTCMonth()!==mo-1||t.getUTCDate()!==d)return null;return{y:y,m:mo,d:d}}function fLong(s){var p=pd(s)
@@ -422,10 +423,10 @@ q:rq,asof:rc&&pd(rc.asof)?rc.asof:ASOF,leads:!!(rc&&rc.leads===true),sheet:clean
 updated:typeof o.updated==="number"?o.updated:0};var by={},keys={};(Array.isArray(o.versions)?o.versions:[]).forEach(function(v){var x=cleanV(v,c);if(!x)return
 ;var h=by[x.n];if(!h||x.saved>h.saved)by[x.n]=x});var vs=Object.keys(by).map(function(k){return by[k]}).sort(function(a,b){return a.n-b.n})
 ;if(vs.length>CAP)vs=vs.slice(vs.length-CAP);vs.forEach(function(v){if(keys[v.k])v.k=newK();keys[v.k]=1});r.versions=vs;return r}function recovery(raw){
-RECOVERY+=(RECOVERY?"\n\n":"")+raw;try{localStorage.setItem("r63sg_bad_"+CUR.id+"_"+Date.now()+String(Math.random()).slice(2,8),raw);return true}catch(e){
-return false}}var WB={load:function(st){READONLY=false;NOTICE="";ASK=false;RECOVERY="";var raw=null,o=null,had=false;try{
-var ks=Object.keys(localStorage).filter(function(k){return k.indexOf("r63sg_bad_"+st.id+"_")===0}).sort();RECOVERY=ks.map(function(k){
-return localStorage.getItem(k)||""}).join("\n\n")}catch(e){}try{raw=localStorage.getItem(wbKey(st.id))}catch(e){raw=null}BASE=raw;if(typeof raw==="string"){try{
+RECOVERY_PARTS.push(raw);RECOVERY+=(RECOVERY?"\n\n":"")+raw;try{localStorage.setItem("r63sg_bad_"+CUR.id+"_"+Date.now()+String(Math.random()).slice(2,8),raw);return true}catch(e){
+return false}}var WB={load:function(st){READONLY=false;NOTICE="";ASK=false;RECOVERY="",RECOVERY_PARTS=[];var raw=null,o=null,had=false;try{
+var ks=Object.keys(localStorage).filter(function(k){return k.indexOf("r63sg_bad_"+st.id+"_")===0}).sort();RECOVERY_PARTS=ks.map(function(k){
+return localStorage.getItem(k)||""});RECOVERY=RECOVERY_PARTS.join("\n\n")}catch(e){}try{raw=localStorage.getItem(wbKey(st.id))}catch(e){raw=null}BASE=raw;if(typeof raw==="string"){try{
 o=JSON.parse(raw)}catch(e){o=null}if(!o||typeof o!=="object"||Array.isArray(o))o=null;else if(o.schema===undefined||o.schema===null){
 if(Array.isArray(o.versions))o.schema=1;else o=null}if(o&&(typeof o.schema!=="number"||o.schema!==o.schema))o=null
 ;while(o&&o.schema<1&&MIGRATE[o.schema])o=MIGRATE[o.schema](o);if(o&&o.schema<1)o=null;if(!o){NOTICE=recovery(raw)?"bad":"recover"
@@ -674,14 +675,15 @@ if(session!==SESSION)return;b.textContent="Copied. Paste it somewhere safe.";cle
 if(session===SESSION)b.textContent="Copy all my versions"},2500)}function bad(){if(session!==SESSION)return
 ;ta.setAttribute("aria-label","All your versions as text");ta.value=t;ta.hidden=false;ta.focus();ta.select()
 ;b.textContent="Copy did not work. The text is selected below."}try{navigator.clipboard.writeText(t).then(ok,bad)}catch(e){bad()}})
-;$("ipad-recover").addEventListener("click",function(){var ta=$("ipad-backup");ta.setAttribute("aria-label","Recovery data as text");ta.value=RECOVERY
+;$("ipad-download").addEventListener("click",function(){if(!CUR)return;var session=SESSION,id=CUR.id,base=BASE,url;try{var raw=localStorage.getItem(wbKey(id));if(raw!==base){say("Another tab changed this desk. Reload before making a copy.");return}if(raw===null&&!RECOVERY){say("Nothing is saved on this desk yet.");return}function foreign(s){try{var v=JSON.parse(s);return !!(v&&typeof v==="object"&&v.id&&v.id!==id)}catch(e){return false}}if(foreign(raw)||RECOVERY_PARTS.some(foreign)){say("This saved data belongs to another desk. No copy was made.");return}var bad=/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(^|[^\uD800-\uDBFF])[\uDC00-\uDFFF]/;if(bad.test(raw||"")||bad.test(RECOVERY)){say("This saved text is unreadable. No copy was made.");return}url=URL.createObjectURL(new Blob([JSON.stringify({format:"room63-saved-data",version:1,saved:raw,recovery:RECOVERY})],{type:"application/json"}));if(session!==SESSION||!CUR||CUR.id!==id||BASE!==base||localStorage.getItem(wbKey(id))!==raw){URL.revokeObjectURL(url);return}var a=el("a",{href:url,download:"room63-private-copy.json"});document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url)},60000);say("Private copy prepared. Check your downloads; your log is the record.")}catch(e){if(url)URL.revokeObjectURL(url);say("Copy unavailable. Your saved data is unchanged.")}});
+$("ipad-recover").addEventListener("click",function(){var ta=$("ipad-backup");ta.setAttribute("aria-label","Recovery data as text");ta.value=RECOVERY
 ;ta.hidden=false;ta.focus();ta.select();say("Recovery data selected. Copy it somewhere safe before making changes.")})
 ;$("ipad-remove").addEventListener("click",function(){$("ipad-remove-confirm").hidden=false;$("ipad-remove-no").focus()})
 ;$("ipad-remove-no").addEventListener("click",function(){$("ipad-remove-confirm").hidden=true;$("ipad-remove").focus()})
 ;$("ipad-remove-yes").addEventListener("click",function(){if(!CUR||READONLY)return;try{var ks=Object.keys(localStorage).filter(function(k){
 return k===wbKey(CUR.id)||k.indexOf("r63sg_bad_"+CUR.id+"_")===0});ks.forEach(function(k){localStorage.removeItem(k)
 ;if(localStorage.getItem(k)!==null)throw new Error("remove")})}catch(e){
-say("Removal did not finish. Your versions are still shown here. Copy them before trying again.");return}clearTimeout(FORM.dt);FORM.dt=0;BASE=null;RECOVERY=""
+say("Removal did not finish. Your versions are still shown here. Copy them before trying again.");return}clearTimeout(FORM.dt);FORM.dt=0;BASE=null;RECOVERY="",RECOVERY_PARTS=[]
 ;store(null);SESSION++;txt("ipad-copyall","Copy all my versions");R=freshRec(CUR);NOTICE="";ASK=false;VLK=null;TEMP=null;CKNEW=false;CMPRESET=true;closeForm()
 ;$("ipad-remove-confirm").hidden=true;$("ipad-backup").hidden=true;$("ipad-backup").value="";renderAll();setBuilder();$("ficha-h").focus()
 ;say("Removed from this iPad. Your log keeps every version.")});function goTo(id){var s=$(id);if(!s)return;try{s.scrollIntoView({behavior:scrollBeh(),
@@ -710,7 +712,7 @@ recovery(JSON.stringify(p));say("Another tab changed this answer. Your typed ans
 ;if(pending.length&&document.activeElement&&/^c-(expect|hate)$/.test(document.activeElement.id))document.activeElement.blur();if(!formOpen)closeForm()
 ;renderAll();if(!formOpen&&lead().text!==was)setBuilder()});function teardown(){flushDraft();flushAns();closeForm()}function wipe(){
 ["who","timeline","vl-text","vl-dots","cmp-out","cmp-from","cmp-to","checks","notes-list","words","pen-set","nextdate","wb-reason-set","wb-check"].forEach(function(id){
-$(id).innerHTML=""});SESSION++;RECOVERY="";clearTimeout($("ipad-copyall")._t);clearTimeout($("vl-copy")._t);txt("ipad-copyall","Copy all my versions")
+$(id).innerHTML=""});SESSION++;RECOVERY="",RECOVERY_PARTS=[];clearTimeout($("ipad-copyall")._t);clearTimeout($("vl-copy")._t);txt("ipad-copyall","Copy all my versions")
 ;txt("vl-copy","Copy version line")
 ;["ficha-meta","ficha-call","ficha-q","ficha-count","ck-count","circ-slots","cmp-sum","ipad-status","rec-ask-q","vl-remove-q","ipad-remove-q"].forEach(function(id){
 txt(id,"")});$("ficha-num").querySelector(".num-l").textContent="";$("ficha-num").querySelector(".num-v").textContent=""

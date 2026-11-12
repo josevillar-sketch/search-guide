@@ -71,6 +71,7 @@ async function step(name, command, args) {
     ["harness", process.execPath, [path.join(__dirname, "harness-check.cjs")]],
     ["regressions", process.execPath, [path.join(__dirname, "regressions.cjs")]],
     ["workbench", process.execPath, [path.join(__dirname, "workbench.cjs")]],
+    ["download", process.execPath, [path.join(__dirname, "download.test.cjs")]],
     ["smoke", process.execPath, [path.join(__dirname, "smoke.cjs")]],
   ];
   const results = [];
