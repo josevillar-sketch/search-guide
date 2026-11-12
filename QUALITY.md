@@ -77,3 +77,15 @@ Exact source SHA-256 values before this documentation-only receipt:
 - `tools/consent-gate.test.cjs`: `a825351a229c9efac3af21ef7bed281a4cad3a86c0afdd6cf8e05bd46cb0bafe`
 - `package.json`: `7896d30c0293014e94e417babcc1437fe33919504827c381d84c6d671cdf1f97`
 - `tools/verify.cjs`: `d74d0b14d93ec0a5e9776adda323797ace9f6a3efecec903748dac95f4e5ce8a`
+
+## Label line followup: November 12, 2026
+
+Baseline: `cfd9859` on the default branch. One presentation change to `index.html`; no behavior, DATA or wording change.
+
+Defect: at phone width the label line under the title ("Room 63 · AP Capstone · Question Workbench") wrapped with a separator dot starting its second line, on the home page and on every desk. Cause: the separators were typed characters inside one span, so a break could fall before one.
+
+Fix: the three phrases are three spans; the separator is drawn before each span and the line clips it when it would start a line. The words are unchanged.
+
+`index.html` after the change: 359,601 bytes, SHA-256 `22ced45d4709339f9523dfc2314d41e91097738211d5d1fb736b7d86867bd716`. DATA SHA-256 unchanged: `13650200ffbdcf49b705d6776afbd6ffcd22e3c50d1768c3e98199167d1e3011`.
+
+Checks on that exact file, in Chromium with the globally installed Playwright: `node tools/verify.cjs` passed (workbench 31 of 31, smoke 244 slips, and the other suites it runs); `node tools/design_check.cjs search-guide` passed all six Search Guide surfaces and states; `node tools/mobile.cjs --browser=chromium` passed 8 of 8. The label line was looked at, at 380 and 1280 pixels. WebKit remains unavailable and was not run.
