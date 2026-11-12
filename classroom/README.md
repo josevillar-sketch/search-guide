@@ -11,6 +11,8 @@ For Mr. Portela. These are teacher notes, not a student page. Every piece is bui
 | Before the Inquiry Proposal Form | planning the method in detail | `method-planning-grid` (2 pages: blank grid, worked example) | A grid a classmate could run the study from. |
 | With the Inquiry Proposal Form, studies with people | preparing for your ethics review | `risk-screen`, `data-plan`, `question-check` (1 page each), then `consent-templates.docx` | The packet College Board asks you to review: risks, instrument, consent forms, data handling. Your decision goes on the risk screen. |
 | Drafting the paper | writing the method section | `method-section-checklist` (1 page) | A self-check and a peer check against College Board's wording. |
+| Before a draft is submitted | checking the whole paper | `paper-elements-check` (1 page) | The six required elements located by page, and the word count, in College Board's own words. |
+| After the paper | preparing to present | `oral-defense-questions` (2 pages: the official questions, a notes page) | A map from each question group to evidence in the student's own portfolio. No scripted answers. |
 | Any time | looking for a source or a tool | `research-library.html` (the published page) | Nothing to collect. It points only to resources verified in `RESOURCES.md`. |
 
 ## What College Board requires of you
@@ -22,6 +24,8 @@ From the AP Research Course and Exam Description, pages 46 to 47, read on 2026-1
 - Do not approve a proposal that poses more than minimal risk to participants.
 - Your approval is sufficient unless the student will publish, compete, or present publicly. Then a federally registered institutional review board must also approve.
 - The Process and Reflection Portfolio must hold documentation of permissions and approvals.
+- For the oral defense, ask three questions from the published list, one from each group; you may tailor the wording, and a fourth may clarify an earlier answer (pages 61 to 62).
+- Do not assign, provide, or generate research questions, and do not write, revise, or correct anything that is part of the submitted work (page 63, "Role of the Teacher").
 
 The risk screen, the data plan, and the question check are how a student brings you those four things on paper. The Room 63 forms add what your own packet asks for: a logged start date and a deletion date.
 

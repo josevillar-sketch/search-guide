@@ -15,6 +15,8 @@ const HANDOUTS = [
   ["risk-screen", 1],
   ["data-plan", 1],
   ["question-check", 1],
+  ["paper-elements-check", 1],
+  ["oral-defense-questions", 2],
 ];
 const FACES = ['900 20px "Fraunces"', '650 20px "Fraunces"', '400 12px "Atkinson Hyperlegible"', '700 12px "Atkinson Hyperlegible"', '700 12px "Space Mono"'];
 

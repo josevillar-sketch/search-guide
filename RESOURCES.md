@@ -9,6 +9,7 @@ Each entry: what it is, the AP Research use, cautions, and the date it was check
 These outrank every other entry: they define what AP Research is scored on. All free, checked 2026-11-11.
 
 - **AP Research Course and Exam Description:** https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf . The course framework and rubrics. On the method section it asks that the paper "explains and provides justification for the chosen method, process, or approach and its alignment with the research question." Check the clarifications and corrections file beside it: https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description-clarifications.pdf
+- **The oral defense questions and the paper's required elements:** in the same Course and Exam Description, pages 60 to 62. The panel asks three questions, one from each of three groups, from a published list of 13. College Board's AI table (page 45) allows no use of AI to prepare for the oral defense. Classroom versions: `classroom/oral-defense-questions` and `classroom/paper-elements-check`. Read from the PDF on 2026-11-12.
 - **Scored student samples, 2023 to 2026:** https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions . Real academic papers and presentations with scoring commentary and score distributions. The best model of what a strong method section looks like.
 - **College Board's rule on research with people:** in the Course and Exam Description above, pages 46 to 47, "Reviewing Student Research Proposals for Ethical Considerations." The teacher reviews every proposal, survey, and interview question before any data collection. A proposal with more than minimal risk cannot be approved. Teacher approval is enough unless the student will publish, compete, or present publicly; then a federally registered institutional review board must also approve. Item 9 of the Inquiry Proposal Form asks students to attach draft consent forms and instruments. Read from the PDF on 2026-11-12.
 - **2026-27 AP Capstone Implementation Guide:** https://apcentral.collegeboard.org/media/pdf/ap-capstone-implementation-guide.pdf . How the program runs at a school: becoming an AP Capstone school, teacher and coordinator roles, and the year's calendar. It does not cover research ethics; an earlier version of this log wrongly said it did (corrected 2026-11-12).
@@ -169,16 +170,21 @@ Not for students until opened and checked, and until the access route is confirm
 - **BCcampus open textbook on research methods:** https://opentextbc.ca/researchmethods/ . Likely a free, citable methods text.
 - **ICPSR, the Inter-university Consortium for Political and Social Research:** https://www.icpsr.umich.edu/ . A large social science data archive; some data needs a member login.
 
-### Not reachable on 2026-11-11 and again on 2026-11-12
+### Not reachable from this cloud environment
 
-Each needs one look in a normal browser before it can be listed.
+Each needs one look in a normal browser before it can be listed. None of this is a judgment on the site.
 
-- **Purdue OWL:** https://owl.purdue.edu/ . Server error 503 on four tries across two days. Expected use: citation and research writing guides.
-- **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Server error 503 on three tries across two days. Expected use: more free methods texts.
-- **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Server error 503. Expected use: custom extracts. The survey's home site is verified above.
-- **Seeing Theory:** https://seeing-theory.brown.edu/ . Server error 503 on three tries across two days. Expected use: visual introduction to statistics.
-- **DOAJ, the Directory of Open Access Journals:** https://doaj.org/ . Access refused, error 403. Not retried.
-- **Harvard Dataverse, Unpaywall:** each page loaded with no readable content on two tries, so nothing was confirmed. (data.census.gov moved to the verified list on 2026-11-12, on the strength of the Census Bureau's description page.)
+**The site's security certificate could not be verified here.** Diagnosed on 2026-11-12: the server does not send its full certificate chain, which a browser repairs on its own and this environment does not. Verification was not switched off. An earlier note here called these "server error 503"; that was the fetch tool's wording, not the cause.
+
+- **Purdue OWL:** https://owl.purdue.edu/ . Expected use: citation and research writing guides.
+- **Seeing Theory:** https://seeing-theory.brown.edu/ . Expected use: a visual introduction to statistics.
+- **Open Textbook Library:** https://open.umn.edu/opentextbooks/subjects/social-sciences . Expected use: more free methods texts.
+- **GSS Data Explorer:** https://gssdataexplorer.norc.org/ . Expected use: custom extracts. The survey's home site is verified above.
+
+**The site refused or returned nothing readable.** Not retried by other means.
+
+- **DOAJ, the Directory of Open Access Journals:** https://doaj.org/ . Access refused, error 403.
+- **Harvard Dataverse, Unpaywall:** each page loaded with no readable content on two tries. (data.census.gov moved to the verified list on 2026-11-12.)
 
 ### SAGE Research Methods
 
