@@ -546,6 +546,35 @@ page("seminar-oral-defense-questions.html", "AP Seminar oral defense: sample que
 </section>
 """)
 
+# ---------- 13. Process and Reflection Portfolio contents check ----------
+# The left column is College Board's wording, AP Research Course and Exam Description (2024), pages 48 to 49.
+PREP = [
+ "Annotated bibliography of any source important to the student's work",
+ "A completed and approved Inquiry Proposal Form",
+ "Documentation of permission(s) and approval(s), if required",
+ "Documentation or log of the student's interaction with expert adviser(s) and the role the expert adviser(s) played in the student's learning and inquiry process",
+ "Feedback from peer and adult reviewers both in the initial stages and at key points in the research process; reflection on whether or not this feedback was accepted or rejected and why",
+ "Photographs, charts, spreadsheets, and/or links to videos or other relevant visual research/project artifacts",
+ "Draft versions of selected sections of the academic paper",
+ "Specific pieces of work selected by the student to represent what they consider to be the best showcase for their work",
+ "Notes taken in preparation for presentation and oral defense",
+ "Affirmation signed by the student",
+]
+page("portfolio-contents-check.html", "Portfolio contents check", f"""
+<h1>Portfolio contents check</h1>
+<p class="slug">AP Research · Process and Reflection Portfolio · Your own check of your own portfolio</p>
+<div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
+<div class="band"><b>College Board's list.</b> The final form of the portfolio "should have a clear organizational structure and include" the ten things below, along with your responses to the questions and tasks your teacher gives you. The words in the left column are College Board's own.</div>
+<table>
+<tr><th>My portfolio includes</th><th style="width:1.9in">Where: section, date, or file</th></tr>
+{"".join(f'<tr><td>{a}</td><td></td></tr>' for a in PREP)}
+</table>
+<h2 class="lab">The affirmation, in College Board's words</h2>
+<p>"I hereby affirm that the work contained in this Process and Reflection Portfolio is my own and that I have read and understand the AP Capstone Policy on Plagiarism and Falsification or Fabrication of Information"</p>
+<div class="rule">Keep it current all year. A portfolio that does not document authentic work, or missed work-in-progress checks with your teacher, means a score of zero on the Academic Paper.</div>
+{FOOT.format(x="Portfolio contents check")}
+""")
+
 # ---------- 5. Research Library (student page; published as an artifact) ----------
 # Every link here must also be in the verified part of RESOURCES.md; tools/check_links.py enforces it.
 NEEDS = [("start","A","Start","Start here"),("data","B","Find data","Find data that already exists"),("method","C","Method","Choose and justify a method"),
