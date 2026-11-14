@@ -20,6 +20,7 @@ const HANDOUTS = [
   ["oral-defense-questions", 2],
   ["seminar-task-check", 2],
   ["seminar-oral-defense-questions", 2],
+  ["portfolio-contents-check", 1],
 ];
 (async () => {
   const harness = await launchHarness(path.join(__dirname, HANDOUTS[0][0] + ".html"), {
