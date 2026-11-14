@@ -35,6 +35,7 @@ const SURFACES = [
   { name: "handout seminar-task-check", file: "classroom/seminar-task-check.html", print: true },
   { name: "handout seminar-oral-defense", file: "classroom/seminar-oral-defense-questions.html", print: true },
   { name: "handout portfolio-contents", file: "classroom/portfolio-contents-check.html", print: true },
+  { name: "handout seminar-exam-map", file: "classroom/seminar-exam-map.html", print: true },
 ];
 const VIEWS = [
   { w: 320, h: 700, scheme: "light" }, // the narrowest screen a page must reflow to
