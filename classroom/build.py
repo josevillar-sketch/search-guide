@@ -575,6 +575,36 @@ page("portfolio-contents-check.html", "Portfolio contents check", f"""
 {FOOT.format(x="Portfolio contents check")}
 """)
 
+# ---------- 14. AP Seminar: the end-of-course exam on one page ----------
+# College Board's wording, AP Seminar Course and Exam Description (2024), pages 52 to 53.
+EXA = [
+ "Identify the author's argument, main idea, or thesis.",
+ "Explain the author's line of reasoning by identifying the claims used to build the argument and the connections between them.",
+ "Evaluate the effectiveness of the evidence the author uses to support the claims made in the argument.",
+]
+page("seminar-exam-map.html", "AP Seminar exam map", f"""
+<h1>The end-of-course exam</h1>
+<p class="slug">AP Seminar · May · 2 hours · 45 percent of your score</p>
+<div class="band"><b>The prompts do not change.</b> College Board says the four prompts "will remain the same on the end-of-course exam from year to year." Only the five sources change. The wording below is College Board's, from the Course and Exam Description.</div>
+<div class="two"><div>
+<h2 class="lab">Part A: analyze an argument</h2>
+<p>One source. Suggested time: 30 minutes. 30 percent of the exam.</p>
+<ol>{"".join(f"<li>{q}</li>" for q in EXA)}</ol>
+</div><div>
+<h2 class="lab">Part B: build your own argument</h2>
+<p>Four sources on a common theme, each from a different perspective. Suggested time: 90 minutes. 70 percent of the exam.</p>
+</div></div>
+<h2 class="lab">Part B directions, word for word</h2>
+<p>"Read the four sources carefully, focusing on a theme or issue that connects them and the different perspective each represents. Then, write a logically organized, well-reasoned, and well-written argument that presents your own perspective on the theme or issue you identified. You must incorporate at least two of the sources provided and link the claims in your argument to supporting evidence. You may also use the other provided sources or draw upon your own knowledge. In your response, refer to the provided sources as Source A, Source B, Source C, or Source D, or by the authors' names."</p>
+<h2 class="lab">My timed practice</h2>
+<table>
+<tr><th style="width:.9in">Date</th><th>Released exam or source set</th><th style="width:.8in">Part</th><th style="width:1.1in">Minutes I took</th><th style="width:1.6in">What I ran out of time for</th></tr>
+{"".join('<tr><td style="height:.42in"></td><td></td><td></td><td></td><td></td></tr>' for _ in range(4))}
+</table>
+<div class="rule">Practice on released exams under the suggested times. This sheet records your practice. It does not score it.</div>
+{SFOOT.format(x="End-of-course exam map")}
+""")
+
 # ---------- 5. Research Library (student page; published as an artifact) ----------
 # Every link here must also be in the verified part of RESOURCES.md; tools/check_links.py enforces it.
 NEEDS = [("start","A","Start","Start here"),("data","B","Find data","Find data that already exists"),("method","C","Method","Choose and justify a method"),
