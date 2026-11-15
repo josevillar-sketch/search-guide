@@ -302,17 +302,21 @@ page("data-plan.html", "Data plan", f"""
 <tr><td class="q">What I will never collect</td><td class="w2"></td></tr>
 <tr><td class="q">Recordings</td><td>{opts("None","Audio, with permission on the form; deleted after I take notes")}</td></tr>
 <tr><td class="q">If someone withdraws</td><td>I delete their answers that day and note it in my log.</td></tr>
+<tr><td class="q">If someone reveals harm<small>abuse, or risk to self or others</small></td><td>I stop and do not probe. I tell Mr. Portela the same day; he follows school reporting procedures. I record nothing that identifies it.</td></tr>
 <tr><td class="q">Deletion date<small>after the paper is final</small></td><td class="w2"></td></tr>
 </table>
 <h2 class="lab">Recruitment script: what I will say or send, in 100 words or fewer</h2>
 <p>It must say: {opts("who I am","what the study is about","what they would do, and for how long","that it is voluntary and has no effect on grades","how to say yes or no")}</p>
-<div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+<p><b>Outside Mater?</b> Recruiting at other schools, workplaces, studios, churches, or online groups is decided case by case at the school ethics review, <span style="white-space:nowrap">Dec 7&ndash;11.</span> Nothing is sent before approval.</p>
+<div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
 <div class="rule">Signed forms and this plan go in your Process and Reflection Portfolio. College Board lists permissions among the records it must hold.</div>
 {FOOT.format(x="Data plan")}
 """)
 
 # ---------- 8. Survey and interview question check ----------
+PPRA_CSS = '<style>.ppra{columns:2;column-gap:1.2rem;font-size:.84em;line-height:1.3;margin:.15rem 0 .2rem;padding-left:1.3rem}.ppra li{break-inside:avoid}.ppra+p{max-width:none;margin:.2rem 0}@media screen and (max-width:640px){.ppra{columns:1}}@media print{td.tick,td.tick+td{padding-block:.24rem}}</style>'
 page("question-check.html", "Survey and interview question check", f"""
+{OPT_CSS}{PPRA_CSS}
 <h1>Survey and interview question check</h1>
 <p class="slug">AP Research · Check your instrument before Mr. Portela reviews it</p>
 <div class="name"><span>Student code</span><span>Period</span><span>Date</span></div>
@@ -334,8 +338,10 @@ page("question-check.html", "Survey and interview question check", f"""
 ("Interviews.","Questions are open, and my follow-ups are neutral: \"Tell me more about that.\""),
 ("Tried once.","One person tried it and told me what confused them.")])}
 </div></div>
-<h2 class="lab">After my trial run: what I cut or changed, and why</h2><div class="line"></div><div class="line"></div><div class="line"></div>
-<h2 class="lab">Number of questions in the final version, and the minutes it takes</h2><div class="line"></div>
+<h2 class="lab">Eight protected areas, 20 U.S.C. 1232h(b): does any item touch one? {opts("No","Yes")}</h2>
+<ol class="ppra"><li>political affiliations or beliefs of the student or the student's parent</li><li>mental or psychological problems of the student or the student's family</li><li>sex behavior or attitudes</li><li>illegal, anti-social, self-incriminating, or demeaning behavior</li><li>critical appraisals of other individuals with whom respondents have close family relationships</li><li>legally recognized privileged or analogous relationships, such as those of lawyers, physicians, and ministers</li><li>religious practices, affiliations, or beliefs of the student or student's parent</li><li>income (other than that required by law to determine eligibility for participation in a program or for receiving financial assistance under such program)</li></ol>
+<p><b>If yes:</b> signed written parent consent, and the parent can see the instrument first.</p>
+<h2 class="lab">After my trial run: what I cut or changed, and why. Final number of questions and minutes.</h2><div class="line"></div><div class="line"></div>
 <div class="rule">Attach the final instrument to item 9 of your Inquiry Proposal Form. No question goes to a participant before it is approved.</div>
 {FOOT.format(x="Survey and interview question check")}
 """)

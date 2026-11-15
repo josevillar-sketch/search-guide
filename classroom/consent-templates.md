@@ -8,7 +8,7 @@ subtitle: "AP Research · Mater Academy · English and Spanish"
 1. Do not use any form until Mr. Portela has approved your proposal and your instruments. College Board requires the teacher to review every proposal, survey, and set of interview questions before any data is collected. A study with more than minimal risk cannot be approved.
 2. Attach your draft forms, with your survey or interview questions, to item 9 of your Inquiry Proposal Form.
 3. If you plan to publish, enter a competition, or present your findings publicly outside this course, tell Mr. Portela now. College Board then requires approval from a registered institutional review board as well.
-4. Pick the forms your study needs. A participant under 18 needs **two**: the guardian permission form and the student assent form. An adult needs the adult consent form. An online survey uses the survey opening text as its first screen.
+4. Pick the forms your study needs. A participant under 18 needs **two**: the guardian permission form and the student assent form. An adult needs the adult consent form. An online survey may add the survey opening screen, but only after the signed forms are on file. It never replaces them.
 5. Replace every [bracket] with your own details, then delete the brackets. Keep each form to one page.
 6. Give each family the language they read best. The English and Spanish forms say the same thing.
 7. Use plain words. If a ninth grader would not understand a sentence, rewrite it.
@@ -238,7 +238,7 @@ Firma: ______________________________  Fecha: ______________
 
 # Online survey opening screen
 
-Use this as the first screen of the survey. The participant must choose "I agree" before any question appears. For participants under 18, a signed guardian permission form is still required first.
+An add-on only. Use it after the signed forms are on file: guardian permission and student assent for anyone under 18, or adult consent for an adult. It never replaces them; Mr. Portela accepts no waivers and no checkbox consent. The participant must choose "I agree" before any question appears.
 
 **[Title of your study]**
 
@@ -259,6 +259,8 @@ This study was reviewed for Mater Academy by [Mr. Jose Portela, AP Research teac
 ```
 
 # Pantalla inicial de la encuesta en línea
+
+Solo es un paso adicional. Úsala después de tener los formularios firmados: permiso del padre, madre o tutor y asentimiento del estudiante para menores de 18 años, o consentimiento del adulto. Nunca los reemplaza; el Sr. Portela no acepta exenciones ni consentimiento con una casilla. El participante debe elegir "acepto participar" antes de ver cualquier pregunta.
 
 **[Título de tu estudio]**
 
