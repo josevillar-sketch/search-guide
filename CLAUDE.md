@@ -32,6 +32,12 @@ Folder names only. Student records stay in Drive and never come into this repo.
 
 The claude.ai project also keeps a "Where It Lives" register; it is the fuller map.
 
+## Google account ownership (Mr. Portela's rule, 2026-11-15)
+
+- Everything new made for school is created and owned by his school Google account. If a session's Google connector is signed in to another account, say so before creating files.
+- Everything his school account owns is shared with his personal account as editor.
+- From his personal and business accounts, only school files are shared with the school account. Never share personal or business files in bulk.
+
 ## How Room 63 chats coordinate
 
 ChatGPT and Claude sessions pass work to each other through Google Docs, not through this repo:
