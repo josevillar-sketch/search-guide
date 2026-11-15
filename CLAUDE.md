@@ -26,10 +26,17 @@ Folder names only. Student records stay in Drive and never come into this repo.
 | Room 63 Project Archive | Documents rotated out of the claude.ai project "AP RESEARCH & AP SEMINAR: AP CAPSTONE PROGRAM"; see its "Project Archive Index" sheet |
 | ChatGPT (school Drive and personal Drive) | Folders that connect to ChatGPT. The school one is the most active: recovered work histories, guest-lab and book-fair files, and private student backups |
 | Room 63 Claude Handoff, and other "... Claude Handoff" folders | Handoff notes between Claude sessions |
+| AP Research Student Dossiers - 2026-11-15 - Portela J (inside the Grading working records folder) | Teacher-only dossier per AP Research student, the class summary sheet, period action-card PDFs, drafts for review, and the "Build kit" zip the Sunday-night weekly rebuild reads. Rebuilds go into "Week of ..." subfolders; earlier copies are never overwritten |
 | Room 63 — Approved learning resources — 2026-10-25 | Guest speaker cards |
 | Room 63 — Grading working records and recovery — Private | Teacher-only grading records. Active in November 2026: each Claude or Cowork chat saves a backup subfolder here named "[Topic] Chat Backup - [date] - Portela J" |
 
 The claude.ai project also keeps a "Where It Lives" register; it is the fuller map.
+
+## Google account ownership (Mr. Portela's rule, 2026-11-15)
+
+- Everything new made for school is created and owned by his school Google account. If a session's Google connector is signed in to another account, say so before creating files.
+- Everything his school account owns is shared with his personal account as editor.
+- From his personal and business accounts, only school files are shared with the school account. Never share personal or business files in bulk.
 
 ## How Room 63 chats coordinate
 
