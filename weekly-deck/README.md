@@ -19,6 +19,19 @@ Nothing here deploys anything. Going live always needs Mr. Portela's approval.
 | `assets/maps.json` | Offline SVG map paths (U.S. Census Bureau boundaries via us-atlas, Natural Earth via world-atlas; public domain). |
 | `vendor/qrcode-generator-2.0.4.mjs` | QR encoder by Kazuhiko Arase (MIT), used only at build time. |
 
+## THE PUBLIC-LANGUAGE GATE (never skip)
+
+The site is public. Mr. Portela's rule, November 16, 2026: "All such teacher-facing and production-related language can never be in public facing products."
+
+Before every build is handed over or deployed, a person or session reads every student-facing line and removes anything written for the teacher or about making the deck: draft or release labels, version notes, speaker-note or script references, timing cues, setup or AV notes, approval or placeholder notes, file names, tool names, session or build notes, and anything that says what is pending, proposed or unchecked. Those belong in the teacher packet. The words that stay must make sense to a student reading them on that day.
+
+Three locks back this up. None of them replaces the read-through.
+1. `build.mjs` strips teacher mode, timing cues, unlinked video entries, internal fields and source comments, then refuses to build if production language is left.
+2. `qa.cjs` reads the rendered page and fails on the same language.
+3. Step 7 below: the hand-over note states that the gate was read, by whom, and what was removed.
+
+Friday and any day Mr. Portela is out: the site's directions must match the substitute plan for that day, word for word where the plan gives students words to hear.
+
 ## Make a new week
 
 1. Thursday: copy `weeks/example.json` (or last week) to `weeks/<monday-date>.json`.
@@ -28,7 +41,7 @@ Nothing here deploys anything. Going live always needs Mr. Portela's approval.
 4. Propose the visual set in `weeks/<week>.visuals.md`: every photograph with source page, item ID, rights statement as the source gives it, credit line and alt text. Order of sources: Mr. Portela's Drive libraries and `RESOURCES.md`, then public-domain archives (Library of Congress, Smithsonian Open Access, NASA, NARA, the Met), then Creative Commons with credit, then original illustrations (stylized, never photorealistic, credited "Original illustration, Room 63"). Drop any item whose rights are restricted or not evaluated. Mr. Portela approves the set with the Thursday draft.
 5. Build: `node weekly-deck/build.mjs <week>`
 6. QA: `NODE_PATH="$(npm root -g)" node weekly-deck/qa.cjs <week> --shots <folder>` until it prints `QA PASS`. Look at the screenshots.
-7. Sunday: final build, QA again, and hand the two zips to Mr. Portela.
+7. Sunday: final build, QA again, the public-language gate read line by line (above), and hand the two zips to Mr. Portela with a note saying what the gate removed.
 8. Deploy only after his approval: drag `dist/<week>/archive/` to the dated site (`room-63-week-of-<month>-<day>-<year>`) and `dist/<week>/current/` to the permanent current-week site named in `week.publish.current_site`. Both send `X-Robots-Tag: noindex`.
 
 Cadence: Thursday draft, Sunday final.

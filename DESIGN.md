@@ -243,6 +243,9 @@ The weekly projected decks (`weekly-deck/` and the matching Google Slides) do no
 - Images are toned in this palette. Every image carries a verified license and a credit; generated images are stylized illustrations, never documentary-looking photographs.
 - `weekly-deck/qa.cjs` checks this register. `tools/design_check.cjs` keeps checking the Search Guide pages against the rules above.
 
+
+Public language: a weekly site never shows teacher-facing or production language (rule 6 in `CLAUDE.md`; the gate in `weekly-deck/README.md`). On a day Mr. Portela is out, the site's directions match the substitute plan for that day.
+
 ## Do's and Don'ts
 
 ### Do:

@@ -87,14 +87,22 @@
       "card": {
         "title": "Early release",
         "lines": [
-          "School ends at noon.",
-          "Miami Book Fair trip.",
-          "Not on the trip (P2, P4, P6): finish the work on your class's Wednesday absent sheet."
+          "School ends at noon. Miami Book Fair trip.",
+          "Not on the trip? Your class still meets, 47 minutes: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. You work alone, then write a short closing note.",
+          "AP Seminar: Open the own-source writing, source log, report plan or feedback you already have. Choose one existing piece to improve. If you have no draft, use an accessible source already in your work to identify its claim, evidence, reasoning and one limitation in your existing document. If you cannot open your work, record the access problem and your next step on paper. Work quietly on your own piece. If you are stuck, record the exact question and continue another part you can advance.",
+          "AP Seminar closing: Save your work where it already belongs. Record what you improved and one question for Mr. Portela. If access failed, record that problem and your next step.",
+          "AP Research: Open your portfolio and your latest feedback or last status entry. Work on one part of your proposal you can advance. If you are stuck, record the exact question, then continue another accessible part. Before the bell, update your status and the first step for the next class.",
+          "AP Research: no surveys, interviews, observations or data from other people today. That work needs a review first.",
+          "Nobody has to finish a report, a plan or a section today. No new grade and no homework come from these classes."
         ],
         "lines_es": [
-          "La escuela termina al mediodía.",
-          "Viaje a la Feria del Libro de Miami.",
-          "Si no vas al viaje (P2, P4, P6): termina el trabajo de la hoja de ausentes del miércoles de tu clase."
+          "La escuela termina al mediodía. Viaje a la Feria del Libro de Miami.",
+          "¿No vas al viaje? Tu clase se reúne igual, 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas solo y luego escribes una nota breve de cierre.",
+          "AP Seminar: Abre el escrito con tus fuentes, el registro de fuentes, el plan del informe o la retroalimentación que ya tienes. Elige una parte que ya existe para mejorarla. Si no tienes borrador, usa una fuente accesible que ya esté en tu trabajo para identificar su afirmación, evidencia, razonamiento y una limitación en tu documento. Si no puedes abrir tu trabajo, anota en papel el problema de acceso y tu próximo paso. Trabaja en silencio en tu propia parte. Si te atascas, anota la pregunta exacta y sigue con otra parte que puedas avanzar.",
+          "Cierre de AP Seminar: Guarda tu trabajo donde ya está. Anota lo que mejoraste y una pregunta para el Sr. Portela. Si no pudiste entrar, anota el problema y tu próximo paso.",
+          "AP Research: Abre tu portafolio y tu retroalimentación más reciente o tu última entrada de estado. Trabaja en una parte de tu propuesta que puedas avanzar. Si te atascas, anota la pregunta exacta y sigue con otra parte accesible. Antes del timbre, actualiza tu estado y el primer paso para la próxima clase.",
+          "AP Research: hoy no hay encuestas, entrevistas, observaciones ni datos de otras personas. Ese trabajo necesita una revisión primero.",
+          "Nadie tiene que terminar un informe, un plan ni una sección hoy. Estas clases no dan nota nueva ni tarea."
         ],
         "title_es": "Salida temprana"
       }
