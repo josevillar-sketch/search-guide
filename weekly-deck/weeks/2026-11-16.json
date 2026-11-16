@@ -1,0 +1,550 @@
+{
+  "$schema": "../week.schema.json",
+  "week": {
+    "id": "2026-11-16",
+    "title": "Week of November 16-20, 2026",
+    "range": "Nov 16-20",
+    "date": "2026-11-16",
+    "brand": "ROOM 63",
+    "school": "Mater Academy",
+    "teacher": "Mr. Portela",
+    "owner": "Portela J",
+    "version": "Room 63 weekly deck, week of 2026-11-16, build from the AP Research deck and the AP Seminar student view as read 2026-11-16"
+  },
+  "bells": {
+    "1": ["7:30", "8:55"],
+    "2": ["7:30", "8:55"],
+    "3": ["9:17", "10:42"],
+    "4": ["9:17", "10:42"],
+    "5": ["10:49", "12:28"],
+    "6": ["10:49", "12:28"],
+    "7": ["13:05", "14:30"],
+    "8": ["13:05", "14:30"]
+  },
+  "days": [
+    {"id": "mon", "name": "Monday", "date": "November 16", "letter": "B"},
+    {"id": "tue", "name": "Tuesday", "date": "November 17", "letter": "A"},
+    {"id": "wed", "name": "Wednesday", "date": "November 18", "letter": "B"},
+    {"id": "thu", "name": "Thursday", "date": "November 19", "letter": "A"},
+    {"id": "fri", "name": "Friday", "date": "November 20", "letter": "B",
+     "card": {"title": "Early release", "lines": ["School ends at noon.", "Miami Book Fair trip."]}}
+  ],
+  "readings": {
+    "goldsmith": {
+      "before": "Kenneth Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), paragraphs 4-7. In ",
+      "book": "They Say / I Say with Readings",
+      "after": ", 6th ed. (Norton, 2024), beginning on p. 401.",
+      "note": "Use the class copy. This site gives the citation only."
+    },
+    "carr": {
+      "before": "Nicholas Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7-10. In ",
+      "book": "They Say / I Say with Readings",
+      "after": ", 6th ed. (Norton, 2024), beginning on p. 418.",
+      "note": "Use the class copy. This site gives the citation only."
+    }
+  },
+  "guests": {
+    "kohler": {
+      "name": "Michelle Kohler",
+      "affiliation": "Illinois Natural History Survey, University of Illinois Urbana-Champaign",
+      "topic": "Insect specimens, collection labels and what preserved evidence can show",
+      "when": "10:00-10:20 AM Eastern",
+      "mode": "Virtual visit",
+      "initials": "MK",
+      "links": [{"label": "INHS Insect Collection", "url": "https://insect.inhs.illinois.edu/"}]
+    },
+    "cooper": {
+      "name": "Professor Cecily Cooper",
+      "affiliation": "University of Miami, Department of Management",
+      "topic": "Leader humor and how to conduct a simple field study",
+      "when": "10:00-10:20 AM Eastern",
+      "mode": "Virtual visit",
+      "initials": "CC",
+      "links": [{"label": "University of Miami Business School", "url": "https://www.mbs.miami.edu/"}]
+    },
+    "obejas": {
+      "name": "Achy Obejas",
+      "affiliation": "Writer and translator",
+      "topic": "One translation decision and the research behind it",
+      "when": "1:30-1:50 PM Eastern",
+      "mode": "Virtual visit",
+      "language": "Conversation in English",
+      "initials": "AO",
+      "links": [{"label": "Achy Obejas, author site", "url": "https://www.achyobejas.com/"}]
+    },
+    "piao": {
+      "name": "Professor Daqing Piao",
+      "affiliation": "Oklahoma State University, School of Electrical and Computer Engineering",
+      "topic": "Choosing measurements, testing alternative explanations and judging what results support",
+      "when": "8:00-8:30 AM Eastern",
+      "mode": "Virtual visit",
+      "initials": "DP",
+      "links": []
+    },
+    "rosales": {
+      "name": "Colleen Rosales",
+      "affiliation": "OpenAQ",
+      "topic": "The Global Landscape Report, air-quality data coverage and missing measurements",
+      "when": "9:30-10:00 AM Eastern",
+      "mode": "Virtual visit",
+      "initials": "CR",
+      "links": [{"label": "OpenAQ", "url": "https://openaq.org/"}]
+    }
+  },
+  "slides": {
+    "r-cover": {
+      "kind": "cover",
+      "title": "AP Research",
+      "subtitle": "Proposal work and support",
+      "body": [
+        "Private review draft 0.5 · RELEASE HOLD",
+        "Individual proposal work comes first.",
+        "Eight optional support modules; sixteen designs",
+        "November 2026 to January 2027",
+        "Routine group conferences are paused.",
+        "Individual help is by agreed appointment."
+      ],
+      "footer": "Teacher scripts and source controls are linked in speaker notes.",
+      "origin": "AP Research deck, slide p"
+    },
+    "r-studio": {
+      "kind": "content",
+      "title": "Your proposal work",
+      "body": [
+        "Use your existing feedback.",
+        "Choose your most important next step.",
+        "Revise, retain or investigate; explain why.",
+        "Save your decision and next step; keep prior work.",
+        "Individual help is by agreed appointment."
+      ],
+      "footer": "Use your existing portfolio · No new submission",
+      "origin": "AP Research deck, SL_STUDIO_1"
+    },
+    "r1-open": {
+      "kind": "opener",
+      "title": "Question and evidence match",
+      "subtitle": "AP Research · R1 reteach",
+      "body": []
+    },
+    "r1-1": {
+      "kind": "content",
+      "title": "R1 · Follow the evidence",
+      "body": ["What is one record?", "What time does it represent?", "What claim could it support?"],
+      "footer": "R1.1 | Explain your reasoning",
+      "origin": "AP Research deck, SL_R1_1"
+    },
+    "r1-2": {
+      "kind": "content",
+      "title": "Practice · Three libraries",
+      "body": [
+        "Library A: 400 registered users; 3 average monthly loans per registered user.",
+        "Library B: 800 registered users; 5 average monthly loans per registered user.",
+        "Library C: 1,200 registered users; 6 average monthly loans per registered user.",
+        "Reference period not specified. What can these averages tell us?"
+      ],
+      "footer": "Fictional practice example: not research evidence",
+      "origin": "AP Research deck, SL_R1_2"
+    },
+    "r1-3": {
+      "kind": "content",
+      "title": "Test the claims",
+      "body": [
+        "Libraries with more registered users in this table have higher averages.",
+        "Joining a larger library makes a person read more.",
+        "Every reader in the largest library borrows more than every reader in the smallest.",
+        "Which claims exceed the records?"
+      ],
+      "footer": "Fictional practice example: not research evidence",
+      "origin": "AP Research deck, SL_R1_3"
+    },
+    "r1-23": {"kind": "pair", "title": "R1.2 with R1.3", "pair": ["r1-2", "r1-3"]},
+    "r1-4": {
+      "kind": "content",
+      "title": "Practice · Time matters",
+      "body": [
+        "Question: change from 2018 to 2025.",
+        "Evidence: a 2026 questionnaire about current habits.",
+        "Separate the question's period, collection date and period represented."
+      ],
+      "footer": "Fictional practice example: not research evidence",
+      "origin": "AP Research deck, SL_R1_4"
+    },
+    "r1-5": {
+      "kind": "content",
+      "title": "Your decision",
+      "body": [
+        "Explain your question → evidence → analysis connection.",
+        "Identify one unresolved step or justify the fit.",
+        "Keep earlier work; record your own decision and reason."
+      ],
+      "footer": "R1.5 | Explain your reasoning",
+      "origin": "AP Research deck, SL_R1_5"
+    },
+    "g-kohler": {"kind": "guest", "guest": "kohler", "title": "Michelle Kohler"},
+    "g-cooper": {"kind": "guest", "guest": "cooper", "title": "Professor Cecily Cooper"},
+    "g-obejas": {"kind": "guest", "guest": "obejas", "title": "Achy Obejas"},
+    "g-piao": {"kind": "guest", "guest": "piao", "title": "Professor Daqing Piao"},
+    "g-rosales": {"kind": "guest", "guest": "rosales", "title": "Colleen Rosales"},
+    "w1-open": {"kind": "opener", "title": "Source reasoning", "subtitle": "AP Seminar · Workshop 1", "body": []},
+    "w2-open": {"kind": "opener", "title": "Comparing sources", "subtitle": "AP Seminar · Workshop 2", "body": []},
+    "sem-1": {"kind": "content", "title": "Source reasoning: Retrieve and locate", "body": ["What is the author claiming? What supports it? What does it not establish?"], "origin": "AP Seminar student view, slide 1"},
+    "sem-2": {"kind": "content", "title": "Source reasoning: Locate the task", "body": [
+      "Paragraph /4: claim, support, inference, limit.",
+      "P2/P5/P7: paragraph + decision exit (/4 each).",
+      "P6/P8: one source-reasoning score /4.",
+      "Decision exit (P2/P5/P7), one point each:",
+      "1. Shows the sentence that changed",
+      "2. Says what the partner's check found",
+      "3. Explains one choice in the revision",
+      "4. Checks the changed sentence against the source"
+    ], "origin": "AP Seminar student view, slide 2"},
+    "sem-3": {"kind": "content", "title": "Source reasoning: Read the common passage", "body": [
+      "Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), paragraphs 4 to 7.",
+      "Mark claim, example and inference.",
+      "Treat the passage as a historical argument, not a current scientific finding."
+    ], "reading": "goldsmith", "origin": "AP Seminar student view, slide 3"},
+    "sem-4": {"kind": "content", "title": "Source reasoning: Model the reasoning", "body": ["Observation → inference → scope."], "origin": "AP Seminar student view, slide 4"},
+    "sem-5": {"kind": "content", "title": "Source reasoning: Test the inference", "body": [
+      "Which conclusion exceeds the evidence?",
+      "A: Some device use includes sustained reading.",
+      "B: The passage challenges a blanket claim.",
+      "C: Devices improve concentration for all users."
+    ], "origin": "AP Seminar student view, slide 5"},
+    "sem-6": {"kind": "content", "title": "Source reasoning: Transfer to students' own sources", "body": [
+      "Check credibility and relevance.",
+      "Who produced it? What supports trust?",
+      "Why does it fit? What needs checking?",
+      "Write: claim, support, explanation, limit.",
+      "Keep the source open."
+    ], "origin": "AP Seminar student view, slide 6"},
+    "sem-7": {"kind": "content", "title": "Source reasoning: Peer check and revise", "body": [
+      "Keep the paragraph before the check.",
+      "Point to evidence. Test the explanation and limit.",
+      "Identify a specific issue or strength.",
+      "Revise a sentence and explain the source-based reason."
+    ], "origin": "AP Seminar student view, slide 7"},
+    "sem-8": {"kind": "content", "title": "Source reasoning: Exit and next lesson", "body": [
+      "Show the sentence that changed.",
+      "Say what the partner's check found.",
+      "Explain one choice in the revision.",
+      "Check the changed sentence against the source.",
+      "P2/P5/P7: exit /4. P6/P8: paragraph /4."
+    ], "origin": "AP Seminar student view, slide 8"},
+    "sem-9": {"kind": "content", "title": "Practice card: Source reasoning", "body": [
+      "Use current work or the accessible passage.",
+      "Paragraph: claim, support, inference, limit.",
+      "Keep the paragraph before the peer check.",
+      "Show a changed sentence and explain your choice.",
+      "Report the partner check; check against the source.",
+      "Use your period's scoring criteria on slide 2."
+    ], "origin": "AP Seminar student view, slide 9"},
+    "sem-10": {"kind": "content", "title": "Comparing sources: Retrieve", "body": ["Read yesterday's paragraph. Circle the claim; underline its support; box the limit."], "origin": "AP Seminar student view, slide 10"},
+    "sem-11": {"kind": "content", "title": "Comparing sources: Read Carr", "body": [
+      "Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7 to 10.",
+      "What was compared? Who participated? What was measured? What does Carr infer?",
+      "Carr reports others' research. Separate his account from the original study."
+    ], "reading": "carr", "origin": "AP Seminar student view, slide 11"},
+    "sem-12": {"kind": "content", "title": "Comparing sources: Comparison model", "body": ["Conditions | outcome | support | scope"], "origin": "AP Seminar student view, slide 12"},
+    "sem-13": {"kind": "content", "title": "Comparing sources: A real connection", "body": ["Agree / qualify / complement / conflict: explain the relation."], "origin": "AP Seminar student view, slide 13"},
+    "sem-14": {"kind": "content", "title": "Comparing sources: Own-source matrix", "body": ["Source A claim/support/limit; Source B claim/support/limit; relationship; significance."], "origin": "AP Seminar student view, slide 14"},
+    "sem-15": {"kind": "content", "title": "Comparing sources: Write the synthesis", "body": ["Write a connected explanation. Preserve attribution."], "origin": "AP Seminar student view, slide 15"},
+    "sem-16": {"kind": "content", "title": "Comparing sources: From paragraph to report plan", "body": ["Investigation question → analytical sections → evidence connections → unresolved gap."], "origin": "AP Seminar student view, slide 16"},
+    "sem-17": {"kind": "content", "title": "Comparing sources: Exit", "body": ["What did the comparison change? What is your next evidence need?"], "origin": "AP Seminar student view, slide 17"},
+    "sem-18": {"kind": "content", "title": "Practice card: Compare sources", "body": [
+      "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
+      "If a second source is unavailable, name the gap and continue source reasoning.",
+      "Use your current document. Formative practice."
+    ], "origin": "AP Seminar student view, slide 18"}
+  },
+  "practice": {
+    "w1-core": {"tier": "core", "task": "IRR", "rubric_rows": ["Analyze and evaluate sources", "Credibility and relevance"], "minutes": 20, "dok": 3, "lines": [
+      "Paragraph: claim, support, inference, limit.",
+      "Keep the paragraph before the peer check.",
+      "Show a changed sentence and explain your choice.",
+      "Report the partner check; check against the source."]},
+    "w1-sup": {"tier": "supported", "task": "IRR", "rubric_rows": ["Analyze and evaluate sources"], "minutes": 20, "dok": 2, "lines": [
+      "Use current work or the accessible passage.",
+      "Mark claim, example and inference.",
+      "Write: claim, support, explanation, limit."]},
+    "w1-ext": {"tier": "extension", "task": "IRR", "rubric_rows": ["Credibility and relevance", "Analyze and evaluate sources"], "minutes": 20, "dok": 4, "lines": [
+      "Check credibility and relevance.",
+      "Who produced it? What supports trust?",
+      "Why does it fit? What needs checking?",
+      "Treat the passage as a historical argument, not a current scientific finding."]},
+    "w2-core": {"tier": "core", "task": "IRR", "rubric_rows": ["Compare perspectives", "Analyze and evaluate sources"], "minutes": 15, "dok": 3, "lines": [
+      "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
+      "Agree / qualify / complement / conflict: explain the relation."]},
+    "w2-sup": {"tier": "supported", "task": "IRR", "rubric_rows": ["Analyze and evaluate sources"], "minutes": 15, "dok": 2, "lines": [
+      "Source A claim/support/limit; Source B claim/support/limit; relationship; significance.",
+      "If a second source is unavailable, name the gap and continue source reasoning."]},
+    "w2-ext": {"tier": "extension", "task": "IRR", "rubric_rows": ["Compare perspectives", "Area of investigation"], "minutes": 15, "dok": 4, "lines": [
+      "Investigation question → analytical sections → evidence connections → unresolved gap."]},
+    "r-core": {"tier": "core", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach"], "minutes": 20, "dok": 3, "lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Revise, retain or investigate; explain why.",
+      "Save your decision and next step; keep prior work."]},
+    "r-sup": {"tier": "supported", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach"], "minutes": 20, "dok": 2, "lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Individual help is by agreed appointment."]},
+    "r-ext": {"tier": "extension", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach"], "minutes": 20, "dok": 4, "lines": [
+      "Explain your question → evidence → analysis connection.",
+      "Identify one unresolved step or justify the fit."]},
+    "r1-core": {"tier": "core", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach"], "minutes": 20, "dok": 3, "lines": [
+      "Explain your question → evidence → analysis connection.",
+      "Identify one unresolved step or justify the fit.",
+      "Keep earlier work; record your own decision and reason."]},
+    "r1-sup": {"tier": "supported", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach"], "minutes": 20, "dok": 2, "lines": [
+      "What is one record?",
+      "What time does it represent?",
+      "What claim could it support?"]},
+    "r1-ext": {"tier": "extension", "task": "Academic Paper", "rubric_rows": ["Method, Process, or Approach", "Results, Product, or Findings"], "minutes": 20, "dok": 4, "lines": [
+      "Which claims exceed the records?",
+      "Separate the question's period, collection date and period represented."]}
+  },
+  "rubric_rows": {
+    "IRR": {
+      "source": "AP Seminar Performance Task 1 student task directions, as quoted in classroom/seminar-task-check.html",
+      "rows": {
+        "Area of investigation": "Identify an area of investigation and explain its relationship to the overall problem or issue.",
+        "Analyze and evaluate sources": "Summarize, explain, analyze and evaluate the main ideas and reasoning in the chosen sources.",
+        "Credibility and relevance": "Demonstrate you have evaluated the credibility of your chosen sources and selected evidence relevant to the inquiry.",
+        "Compare perspectives": "Identify, compare and interpret a range of perspectives about the problem or issue."
+      }
+    },
+    "Academic Paper": {
+      "source": "AP Research Course and Exam Description, academic paper elements, as quoted in classroom/paper-elements-check.html",
+      "rows": {
+        "Method, Process, or Approach": "Explains and provides justification for the chosen method, process, or approach and its alignment with the research question.",
+        "Results, Product, or Findings": "Presents the findings, evidence, results, or performance/exhibit/product generated by the research method."
+      }
+    }
+  },
+  "absent": {
+    "w1": {"lines": [
+      "Use current work or the accessible passage.",
+      "Paragraph: claim, support, inference, limit.",
+      "Keep the paragraph before the peer check.",
+      "Show a changed sentence and explain your choice.",
+      "Report the partner check; check against the source.",
+      "Use your period's scoring criteria on slide 2."], "reading": "goldsmith"},
+    "w2": {"lines": [
+      "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
+      "If a second source is unavailable, name the gap and continue source reasoning.",
+      "Use your current document. Formative practice."], "reading": "carr"},
+    "w2-guest": {"lines": [
+      "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
+      "If a second source is unavailable, name the gap and continue source reasoning.",
+      "Use your current document. Formative practice."], "reading": "carr",
+      "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it."},
+    "r": {"lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Revise, retain or investigate; explain why.",
+      "Save your decision and next step; keep prior work.",
+      "Individual help is by agreed appointment."]},
+    "r-guest": {"lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Revise, retain or investigate; explain why.",
+      "Save your decision and next step; keep prior work.",
+      "Individual help is by agreed appointment."],
+      "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it."},
+    "r1": {"lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Explain your question → evidence → analysis connection.",
+      "Identify one unresolved step or justify the fit.",
+      "Keep earlier work; record your own decision and reason."]},
+    "r1-guest": {"lines": [
+      "Use your existing feedback.",
+      "Choose your most important next step.",
+      "Explain your question → evidence → analysis connection.",
+      "Identify one unresolved step or justify the fit.",
+      "Keep earlier work; record your own decision and reason."],
+      "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it."}
+  },
+  "materials": {
+    "all": [],
+    "AP Research": [
+      {"label": "AP Research Course and Exam Description (College Board)", "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf"},
+      {"label": "Bhattacherjee, Social Science Research (free text)", "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"},
+      {"label": "ZoteroBib (citations)", "url": "https://zbib.org/"}
+    ],
+    "AP Seminar": [
+      {"label": "AP Seminar Course and Exam Description (College Board)", "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"},
+      {"label": "ZoteroBib (citations)", "url": "https://zbib.org/"}
+    ],
+    "P1": [{"label": "P1 Classroom: Research checkpoints (Material)", "url": "https://classroom.google.com/c/ODcyMDU3MjYzNjg2/m/ODgzMTAzNjM1MTk5/details"}],
+    "P3": [{"label": "P3 Classroom: Research checkpoints (Material)", "url": "https://classroom.google.com/c/ODcyMDU3Njg5NzE4/m/ODgzMTAzMTY5Mjg2/details"}],
+    "P4": [{"label": "P4 Classroom: Research checkpoints (Material)", "url": "https://classroom.google.com/c/ODcyMDU3ODQ3NzEx/m/ODgzMTAzNTczNzUy/details"}],
+    "P5": [{"label": "P5 Classroom: Classwork", "url": "https://classroom.google.com/w/ODcyMDU2NDExMjAx/t/all"}],
+    "P7": [{"label": "P7 Classroom: Classwork", "url": "https://classroom.google.com/w/ODcyMDU3NzM4NjIz/t/all"}]
+  },
+  "library": [
+    {"id": "tools", "label": "Research tools", "intro": "Every link here is in the verified list of the Room 63 Search Guide.", "items": [
+      {"label": "AP Research Course and Exam Description", "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf", "note": "The course framework and rubrics."},
+      {"label": "AP Seminar Course and Exam Description", "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf", "note": "The Seminar framework and rubrics."},
+      {"label": "AP Seminar scoring guidelines", "url": "https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions", "note": "Scoring guidelines for the exam and both performance tasks."},
+      {"label": "Scored AP Research samples", "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions", "note": "Real papers with scoring commentary."},
+      {"label": "Bhattacherjee, Social Science Research", "url": "https://digitalcommons.usf.edu/oa_textbooks/3/", "note": "Free, citable methods text."},
+      {"label": "OpenIntro Statistics", "url": "https://www.openintro.org/book/os/", "note": "Free statistics text."},
+      {"label": "Google Dataset Search", "url": "https://datasetsearch.research.google.com/", "note": "Find public datasets."},
+      {"label": "ZoteroBib", "url": "https://zbib.org/", "note": "Build a bibliography."}
+    ]}
+  ],
+  "routes": [
+    {"day": "mon", "period": 2, "course": "AP Seminar", "label": "Workshop 1: Source reasoning", "practice": ["w1-core", "w1-sup", "w1-ext"], "absent": "w1", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w1-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and the task", "steps": [{"slide": "sem-1", "minutes": 5}, {"slide": "sem-2", "minutes": 3}]},
+      {"type": "slide", "label": "Read and model", "steps": [{"slide": "sem-3", "minutes": 14}, {"slide": "sem-4", "minutes": 5}, {"slide": "sem-5", "minutes": 6}]},
+      {"type": "practice", "label": "Transfer to your own sources", "steps": [{"slide": "sem-6", "minutes": 22}]},
+      {"type": "practice", "label": "Peer check and revise", "steps": [{"slide": "sem-7", "minutes": 16}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-8", "minutes": 10}, {"slide": "sem-9", "minutes": 2}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "mon", "period": 4, "course": "AP Research", "label": "Proposal work, then guest Michelle Kohler", "guest": "kohler", "practice": ["r-core", "r-sup", "r-ext"], "absent": "r-guest", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 41}]},
+      {"type": "guest", "label": "Guest: Michelle Kohler, 10:00-10:20", "steps": [{"slide": "g-kohler", "minutes": 20}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 17}]},
+      {"type": "exit", "label": "Save your decision and next step", "steps": [{"slide": "r-studio", "minutes": 5}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "mon", "period": 6, "course": "AP Seminar", "label": "Workshop 1: Source reasoning", "practice": ["w1-core", "w1-sup", "w1-ext"], "absent": "w1", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w1-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and the task", "steps": [{"slide": "sem-1", "minutes": 6}, {"slide": "sem-2", "minutes": 3}]},
+      {"type": "slide", "label": "Read and model", "steps": [{"slide": "sem-3", "minutes": 15}, {"slide": "sem-4", "minutes": 5}, {"slide": "sem-5", "minutes": 6}]},
+      {"type": "practice", "label": "Transfer to your own sources", "steps": [{"slide": "sem-6", "minutes": 30}]},
+      {"type": "practice", "label": "Peer check and revise", "steps": [{"slide": "sem-7", "minutes": 20}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-8", "minutes": 10}, {"slide": "sem-9", "minutes": 2}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "mon", "period": 8, "course": "AP Seminar", "label": "Workshop 1: Source reasoning", "practice": ["w1-core", "w1-sup", "w1-ext"], "absent": "w1", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w1-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and the task", "steps": [{"slide": "sem-1", "minutes": 5}, {"slide": "sem-2", "minutes": 3}]},
+      {"type": "slide", "label": "Read and model", "steps": [{"slide": "sem-3", "minutes": 14}, {"slide": "sem-4", "minutes": 5}, {"slide": "sem-5", "minutes": 6}]},
+      {"type": "practice", "label": "Transfer to your own sources", "steps": [{"slide": "sem-6", "minutes": 22}]},
+      {"type": "practice", "label": "Peer check and revise", "steps": [{"slide": "sem-7", "minutes": 16}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-8", "minutes": 10}, {"slide": "sem-9", "minutes": 2}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "tue", "period": 1, "course": "AP Research", "label": "Proposal work and R1 reteach", "practice": ["r1-core", "r1-sup", "r1-ext"], "absent": "r1", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 30}]},
+      {"type": "reteach", "label": "R1 reteach: Question and evidence match", "steps": [{"slide": "r1-open", "minutes": 1}, {"slide": "r1-1", "minutes": 5}, {"slide": "r1-23", "minutes": 10}, {"slide": "r1-4", "minutes": 6}]},
+      {"type": "exit", "label": "Your decision", "steps": [{"slide": "r1-5", "minutes": 8}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 23}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "tue", "period": 3, "course": "AP Research", "label": "Proposal work, R1 reteach, then guest Cecily Cooper", "guest": "cooper", "practice": ["r1-core", "r1-sup", "r1-ext"], "absent": "r1-guest", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 12}]},
+      {"type": "reteach", "label": "R1 reteach: Question and evidence match", "steps": [{"slide": "r1-open", "minutes": 1}, {"slide": "r1-1", "minutes": 4}, {"slide": "r1-23", "minutes": 8}, {"slide": "r1-4", "minutes": 5}]},
+      {"type": "exit", "label": "Your decision", "steps": [{"slide": "r1-5", "minutes": 6}]},
+      {"type": "guest", "label": "Connect, guest Cecily Cooper 10:00-10:20, debrief", "steps": [{"slide": "g-cooper", "minutes": 30}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 12}]},
+      {"type": "exit", "label": "Save your decision and next step", "steps": [{"slide": "r-studio", "minutes": 5}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "tue", "period": 5, "course": "AP Seminar", "label": "Workshop 1: Source reasoning", "practice": ["w1-core", "w1-sup", "w1-ext"], "absent": "w1", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w1-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and the task", "steps": [{"slide": "sem-1", "minutes": 6}, {"slide": "sem-2", "minutes": 3}]},
+      {"type": "slide", "label": "Read and model", "steps": [{"slide": "sem-3", "minutes": 15}, {"slide": "sem-4", "minutes": 5}, {"slide": "sem-5", "minutes": 6}]},
+      {"type": "practice", "label": "Transfer to your own sources", "steps": [{"slide": "sem-6", "minutes": 30}]},
+      {"type": "practice", "label": "Peer check and revise", "steps": [{"slide": "sem-7", "minutes": 20}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-8", "minutes": 10}, {"slide": "sem-9", "minutes": 2}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "tue", "period": 7, "course": "AP Seminar", "label": "Workshop 1: Source reasoning", "practice": ["w1-core", "w1-sup", "w1-ext"], "absent": "w1", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w1-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and the task", "steps": [{"slide": "sem-1", "minutes": 5}, {"slide": "sem-2", "minutes": 3}]},
+      {"type": "slide", "label": "Read and model", "steps": [{"slide": "sem-3", "minutes": 14}, {"slide": "sem-4", "minutes": 5}, {"slide": "sem-5", "minutes": 6}]},
+      {"type": "practice", "label": "Transfer to your own sources", "steps": [{"slide": "sem-6", "minutes": 22}]},
+      {"type": "practice", "label": "Peer check and revise", "steps": [{"slide": "sem-7", "minutes": 16}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-8", "minutes": 10}, {"slide": "sem-9", "minutes": 2}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "wed", "period": 2, "course": "AP Seminar", "label": "Workshop 2: Comparing sources", "practice": ["w2-core", "w2-sup", "w2-ext"], "absent": "w2", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w2-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and read Carr", "steps": [{"slide": "sem-10", "minutes": 5}, {"slide": "sem-11", "minutes": 15}]},
+      {"type": "slide", "label": "Model the comparison", "steps": [{"slide": "sem-12", "minutes": 6}, {"slide": "sem-13", "minutes": 7}]},
+      {"type": "practice", "label": "Own-source matrix and synthesis", "steps": [{"slide": "sem-14", "minutes": 15}, {"slide": "sem-15", "minutes": 16}]},
+      {"type": "practice", "label": "Report plan", "steps": [{"slide": "sem-16", "minutes": 8}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-17", "minutes": 8}, {"slide": "sem-18", "minutes": 3}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "wed", "period": 4, "course": "AP Research", "label": "Proposal work and R1 reteach", "practice": ["r1-core", "r1-sup", "r1-ext"], "absent": "r1", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 30}]},
+      {"type": "reteach", "label": "R1 reteach: Question and evidence match", "steps": [{"slide": "r1-open", "minutes": 1}, {"slide": "r1-1", "minutes": 5}, {"slide": "r1-23", "minutes": 10}, {"slide": "r1-4", "minutes": 6}]},
+      {"type": "exit", "label": "Your decision", "steps": [{"slide": "r1-5", "minutes": 8}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 23}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "wed", "period": 6, "course": "AP Seminar", "label": "Workshop 2: Comparing sources", "practice": ["w2-core", "w2-sup", "w2-ext"], "absent": "w2", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w2-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and read Carr", "steps": [{"slide": "sem-10", "minutes": 5}, {"slide": "sem-11", "minutes": 18}]},
+      {"type": "slide", "label": "Model the comparison", "steps": [{"slide": "sem-12", "minutes": 6}, {"slide": "sem-13", "minutes": 7}]},
+      {"type": "practice", "label": "Own-source matrix and synthesis", "steps": [{"slide": "sem-14", "minutes": 18}, {"slide": "sem-15", "minutes": 22}]},
+      {"type": "practice", "label": "Report plan", "steps": [{"slide": "sem-16", "minutes": 10}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-17", "minutes": 8}, {"slide": "sem-18", "minutes": 3}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "wed", "period": 8, "course": "AP Seminar", "label": "Workshop 2 with guest Achy Obejas", "guest": "obejas", "practice": ["w2-core", "w2-sup", "w2-ext"], "absent": "w2-guest", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w2-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and read Carr", "steps": [{"slide": "sem-10", "minutes": 5}, {"slide": "sem-11", "minutes": 15}]},
+      {"type": "guest", "label": "Connect and guest Achy Obejas, 1:30-1:50", "steps": [{"slide": "g-obejas", "minutes": 23}]},
+      {"type": "slide", "label": "Model the comparison", "steps": [{"slide": "sem-12", "minutes": 4}, {"slide": "sem-13", "minutes": 5}]},
+      {"type": "practice", "label": "Own-source matrix and synthesis", "steps": [{"slide": "sem-14", "minutes": 10}, {"slide": "sem-15", "minutes": 10}]},
+      {"type": "practice", "label": "Report plan", "steps": [{"slide": "sem-16", "minutes": 4}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-17", "minutes": 6}, {"slide": "sem-18", "minutes": 1}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "thu", "period": 1, "course": "AP Research", "label": "Proposal work, then guest Daqing Piao", "guest": "piao", "practice": ["r-core", "r-sup", "r-ext"], "absent": "r-guest", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 25}]},
+      {"type": "guest", "label": "Connect and guest Daqing Piao, 8:00-8:30", "steps": [{"slide": "g-piao", "minutes": 33}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 20}]},
+      {"type": "exit", "label": "Save your decision and next step", "steps": [{"slide": "r-studio", "minutes": 5}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "thu", "period": 3, "course": "AP Research", "label": "Proposal work, then guest Colleen Rosales", "guest": "rosales", "practice": ["r-core", "r-sup", "r-ext"], "absent": "r-guest", "segments": [
+      {"type": "slide", "label": "Cover", "steps": [{"slide": "r-cover", "minutes": 2}]},
+      {"type": "slide", "label": "Your proposal work", "steps": [{"slide": "r-studio", "minutes": 6}]},
+      {"type": "guest", "label": "Connect, guest Colleen Rosales 9:30-10:00, debrief", "steps": [{"slide": "g-rosales", "minutes": 40}]},
+      {"type": "practice", "label": "Proposal work continues", "steps": [{"slide": "@practice", "minutes": 32}]},
+      {"type": "exit", "label": "Save your decision and next step", "steps": [{"slide": "r-studio", "minutes": 5}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "thu", "period": 5, "course": "AP Seminar", "label": "Workshop 2: Comparing sources", "practice": ["w2-core", "w2-sup", "w2-ext"], "absent": "w2", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w2-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and read Carr", "steps": [{"slide": "sem-10", "minutes": 5}, {"slide": "sem-11", "minutes": 18}]},
+      {"type": "slide", "label": "Model the comparison", "steps": [{"slide": "sem-12", "minutes": 6}, {"slide": "sem-13", "minutes": 7}]},
+      {"type": "practice", "label": "Own-source matrix and synthesis", "steps": [{"slide": "sem-14", "minutes": 18}, {"slide": "sem-15", "minutes": 22}]},
+      {"type": "practice", "label": "Report plan", "steps": [{"slide": "sem-16", "minutes": 10}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-17", "minutes": 8}, {"slide": "sem-18", "minutes": 3}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]},
+    {"day": "thu", "period": 7, "course": "AP Seminar", "label": "Workshop 2: Comparing sources", "practice": ["w2-core", "w2-sup", "w2-ext"], "absent": "w2", "segments": [
+      {"type": "slide", "label": "Opening", "steps": [{"slide": "w2-open", "minutes": 2}]},
+      {"type": "slide", "label": "Retrieve and read Carr", "steps": [{"slide": "sem-10", "minutes": 5}, {"slide": "sem-11", "minutes": 15}]},
+      {"type": "slide", "label": "Model the comparison", "steps": [{"slide": "sem-12", "minutes": 6}, {"slide": "sem-13", "minutes": 7}]},
+      {"type": "practice", "label": "Own-source matrix and synthesis", "steps": [{"slide": "sem-14", "minutes": 15}, {"slide": "sem-15", "minutes": 16}]},
+      {"type": "practice", "label": "Report plan", "steps": [{"slide": "sem-16", "minutes": 8}]},
+      {"type": "exit", "label": "Exit", "steps": [{"slide": "sem-17", "minutes": 8}, {"slide": "sem-18", "minutes": 3}]},
+      {"type": "practice", "label": "Practice tiers", "steps": [{"slide": "@practice", "minutes": 0}]},
+      {"type": "absent", "label": "Absent work", "steps": [{"slide": "@absent", "minutes": 0}]}
+    ]}
+  ]
+}
