@@ -104,14 +104,18 @@
    "book": "They Say / I Say with Readings",
    "after": ", 6th ed. (Norton, 2024), beginning on p. 401.",
    "note": "Use the class copy. This site gives the citation only.",
-   "note_es": "Usa la copia de la clase. Este sitio da solo la cita."
+   "note_es": "Usa la copia de la clase. Este sitio da solo la cita.",
+   "year": 2016,
+   "short": "Goldsmith, \"Go Ahead: Waste Time on the Internet\""
   },
   "carr": {
    "before": "Nicholas Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7-10. In ",
    "book": "They Say / I Say with Readings",
    "after": ", 6th ed. (Norton, 2024), beginning on p. 418.",
    "note": "Use the class copy. This site gives the citation only.",
-   "note_es": "Usa la copia de la clase. Este sitio da solo la cita."
+   "note_es": "Usa la copia de la clase. Este sitio da solo la cita.",
+   "year": 2017,
+   "short": "Carr, \"How Smartphones Hijack Our Minds\""
   }
  },
  "guests": {
@@ -196,7 +200,12 @@
     "Individual help is by agreed appointment."
    ],
    "footer": "Teacher scripts and source controls are linked in speaker notes.",
-   "origin": "AP Research deck, slide p"
+   "origin": "AP Research deck, slide p",
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-dome"
+   }
   },
   "r-studio": {
    "kind": "content",
@@ -209,13 +218,31 @@
     "Individual help is by agreed appointment."
    ],
    "footer": "Use your existing portfolio · No new submission",
-   "origin": "AP Research deck, SL_STUDIO_1"
+   "origin": "AP Research deck, SL_STUDIO_1",
+   "visual": {
+    "type": "flow",
+    "steps": [
+     "Use your existing feedback",
+     "Choose your most important next step",
+     {
+      "branch": [
+       "Revise",
+       "Retain",
+       "Investigate"
+      ]
+     },
+     "Save your decision and next step"
+    ]
+   }
   },
   "r1-open": {
    "kind": "opener",
    "title": "Question and evidence match",
    "subtitle": "AP Research · R1 reteach",
-   "body": []
+   "body": [],
+   "visual": {
+    "type": "record"
+   }
   },
   "r1-1": {
    "kind": "content",
@@ -226,7 +253,10 @@
     "What claim could it support?"
    ],
    "footer": "R1.1 | Explain your reasoning",
-   "origin": "AP Research deck, SL_R1_1"
+   "origin": "AP Research deck, SL_R1_1",
+   "visual": {
+    "type": "record"
+   }
   },
   "r1-2": {
    "kind": "content",
@@ -258,7 +288,11 @@
    "pair": [
     "r1-2",
     "r1-3"
-   ]
+   ],
+   "visual": {
+    "type": "chart",
+    "static": true
+   }
   },
   "r1-4": {
    "kind": "content",
@@ -269,7 +303,10 @@
     "Separate the question's period, collection date and period represented."
    ],
    "footer": "Fictional practice example: not research evidence",
-   "origin": "AP Research deck, SL_R1_4"
+   "origin": "AP Research deck, SL_R1_4",
+   "visual": {
+    "type": "timeline"
+   }
   },
   "r1-5": {
    "kind": "content",
@@ -280,46 +317,105 @@
     "Keep earlier work; record your own decision and reason."
    ],
    "footer": "R1.5 | Explain your reasoning",
-   "origin": "AP Research deck, SL_R1_5"
+   "origin": "AP Research deck, SL_R1_5",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Question",
+     "Evidence",
+     "Analysis"
+    ]
+   }
   },
   "g-kohler": {
    "kind": "guest",
    "guest": "kohler",
-   "title": "Michelle Kohler"
+   "title": "Michelle Kohler",
+   "visual": {
+    "type": "guest",
+    "img": "loc-butterflies",
+    "mode": "exhibit",
+    "map": {
+     "map": "us",
+     "focus": "champaign"
+    }
+   }
   },
   "g-cooper": {
    "kind": "guest",
    "guest": "cooper",
-   "title": "Professor Cecily Cooper"
+   "title": "Professor Cecily Cooper",
+   "visual": {
+    "type": "guest",
+    "img": "loc-office",
+    "mode": "editorial",
+    "map": {
+     "map": "miami",
+     "focus": "coralgables"
+    }
+   }
   },
   "g-obejas": {
    "kind": "guest",
    "guest": "obejas",
-   "title": "Achy Obejas"
+   "title": "Achy Obejas",
+   "visual": {
+    "type": "guest",
+    "img": "loc-typist",
+    "mode": "editorial"
+   }
   },
   "g-piao": {
    "kind": "guest",
    "guest": "piao",
-   "title": "Professor Daqing Piao"
+   "title": "Professor Daqing Piao",
+   "visual": {
+    "type": "guest",
+    "img": "nasa-mirrors",
+    "mode": "editorial",
+    "map": {
+     "map": "us",
+     "focus": "stillwater"
+    }
+   }
   },
   "g-rosales": {
    "kind": "guest",
    "guest": "rosales",
-   "title": "Colleen Rosales"
+   "title": "Colleen Rosales",
+   "visual": {
+    "type": "guest",
+    "img": "nasa-air",
+    "mode": "exhibit",
+    "map": {
+     "map": "world",
+     "focus": "delhi"
+    }
+   }
   },
   "w1-open": {
    "kind": "opener",
    "title": "Source reasoning",
    "subtitle": "AP Seminar · Workshop 1",
    "body": [],
-   "subtitle_es": "AP Seminar · Taller 1"
+   "subtitle_es": "AP Seminar · Taller 1",
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-newspaper"
+   }
   },
   "w2-open": {
    "kind": "opener",
    "title": "Comparing sources",
    "subtitle": "AP Seminar · Workshop 2",
    "body": [],
-   "subtitle_es": "AP Seminar · Taller 2"
+   "subtitle_es": "AP Seminar · Taller 2",
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "nasa-mcc"
+   }
   },
   "sem-1": {
    "kind": "content",
@@ -329,7 +425,15 @@
    ],
    "origin": "AP Seminar student view, slide 1",
    "deck_no": 1,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Claim",
+     "Support",
+     "Not established"
+    ]
+   }
   },
   "sem-2": {
    "kind": "content",
@@ -346,7 +450,11 @@
    ],
    "origin": "AP Seminar student view, slide 2",
    "deck_no": 2,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "meter",
+    "max": 4
+   }
   },
   "sem-3": {
    "kind": "content",
@@ -359,7 +467,11 @@
    "reading": "goldsmith",
    "origin": "AP Seminar student view, slide 3",
    "deck_no": 3,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "rtime",
+    "focus": "goldsmith"
+   }
   },
   "sem-4": {
    "kind": "content",
@@ -369,7 +481,15 @@
    ],
    "origin": "AP Seminar student view, slide 4",
    "deck_no": 4,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Observation",
+     "Inference",
+     "Scope"
+    ]
+   }
   },
   "sem-5": {
    "kind": "content",
@@ -382,7 +502,15 @@
    ],
    "origin": "AP Seminar student view, slide 5",
    "deck_no": 5,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "poll",
+    "options": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
   },
   "sem-6": {
    "kind": "content",
@@ -396,7 +524,10 @@
    ],
    "origin": "AP Seminar student view, slide 6",
    "deck_no": 6,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "check"
+   }
   },
   "sem-7": {
    "kind": "content",
@@ -409,7 +540,10 @@
    ],
    "origin": "AP Seminar student view, slide 7",
    "deck_no": 7,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "peers"
+   }
   },
   "sem-8": {
    "kind": "content",
@@ -423,7 +557,11 @@
    ],
    "origin": "AP Seminar student view, slide 8",
    "deck_no": 8,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "meter",
+    "max": 4
+   }
   },
   "sem-9": {
    "kind": "content",
@@ -438,7 +576,10 @@
    ],
    "origin": "AP Seminar student view, slide 9",
    "deck_no": 9,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "peers"
+   }
   },
   "sem-10": {
    "kind": "content",
@@ -448,7 +589,10 @@
    ],
    "origin": "AP Seminar student view, slide 10",
    "deck_no": 10,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "mark"
+   }
   },
   "sem-11": {
    "kind": "content",
@@ -461,7 +605,11 @@
    "reading": "carr",
    "origin": "AP Seminar student view, slide 11",
    "deck_no": 11,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "rtime",
+    "focus": "carr"
+   }
   },
   "sem-12": {
    "kind": "content",
@@ -471,7 +619,20 @@
    ],
    "origin": "AP Seminar student view, slide 12",
    "deck_no": 12,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "matrix",
+    "cols": [
+     "Conditions",
+     "Outcome",
+     "Support",
+     "Scope"
+    ],
+    "rows": [
+     "Source A",
+     "Source B"
+    ]
+   }
   },
   "sem-13": {
    "kind": "content",
@@ -481,7 +642,10 @@
    ],
    "origin": "AP Seminar student view, slide 13",
    "deck_no": 13,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "concept"
+   }
   },
   "sem-14": {
    "kind": "content",
@@ -491,7 +655,19 @@
    ],
    "origin": "AP Seminar student view, slide 14",
    "deck_no": 14,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "matrix",
+    "cols": [
+     "Claim",
+     "Support",
+     "Limit"
+    ],
+    "rows": [
+     "Source A",
+     "Source B"
+    ]
+   }
   },
   "sem-15": {
    "kind": "content",
@@ -501,7 +677,10 @@
    ],
    "origin": "AP Seminar student view, slide 15",
    "deck_no": 15,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "merge"
+   }
   },
   "sem-16": {
    "kind": "content",
@@ -511,7 +690,16 @@
    ],
    "origin": "AP Seminar student view, slide 16",
    "deck_no": 16,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Investigation question",
+     "Analytical sections",
+     "Evidence connections",
+     "Unresolved gap"
+    ]
+   }
   },
   "sem-17": {
    "kind": "content",
@@ -521,7 +709,10 @@
    ],
    "origin": "AP Seminar student view, slide 17",
    "deck_no": 17,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "concept"
+   }
   },
   "sem-18": {
    "kind": "content",
@@ -533,14 +724,31 @@
    ],
    "origin": "AP Seminar student view, slide 18",
    "deck_no": 18,
-   "deck_of": 18
+   "deck_of": 18,
+   "visual": {
+    "type": "merge"
+   }
   },
   "r-open": {
    "kind": "opener",
    "title": "Proposal work",
    "subtitle": "AP Research · Week of November 16",
    "subtitle_es": "AP Research · Semana del 16 de noviembre",
-   "body": []
+   "body": [],
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-kcreading"
+   }
+  },
+  "r1-lab": {
+   "kind": "lab",
+   "title": "Lab: the three libraries",
+   "body": [],
+   "note": "Interactive version of the fictional R1.2 table. The words on R1.2 and R1.3 are unchanged.",
+   "visual": {
+    "type": "lab"
+   }
   }
  },
  "practice": {
@@ -2045,8 +2253,14 @@
       },
       {
        "slide": "r1-23",
-       "minutes": 10,
+       "minutes": 5,
        "mode": "Partner"
+      },
+      {
+       "slide": "r1-lab",
+       "minutes": 5,
+       "mode": "Partner",
+       "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
       },
       {
        "slide": "r1-4",
@@ -2238,8 +2452,14 @@
       },
       {
        "slide": "r1-23",
-       "minutes": 8,
+       "minutes": 4,
        "mode": "Partner"
+      },
+      {
+       "slide": "r1-lab",
+       "minutes": 4,
+       "mode": "Partner",
+       "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
       },
       {
        "slide": "r1-4",
@@ -2719,7 +2939,8 @@
    },
    "next": {
     "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana."
+    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+    "visual": "fri"
    },
    "practice": [
     "w2-core",
@@ -2904,7 +3125,8 @@
    },
    "next": {
     "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana."
+    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+    "visual": "fri"
    },
    "practice": [
     "r1-core",
@@ -2979,8 +3201,14 @@
       },
       {
        "slide": "r1-23",
-       "minutes": 10,
+       "minutes": 5,
        "mode": "Partner"
+      },
+      {
+       "slide": "r1-lab",
+       "minutes": 5,
+       "mode": "Partner",
+       "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
       },
       {
        "slide": "r1-4",
@@ -3090,7 +3318,8 @@
    },
    "next": {
     "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana."
+    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+    "visual": "fri"
    },
    "practice": [
     "w2-core",
@@ -3268,7 +3497,8 @@
    },
    "next": {
     "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana."
+    "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+    "visual": "fri"
    },
    "practice": [
     "w2-core",
@@ -4162,5 +4392,209 @@
     }
    ]
   }
- ]
+ ],
+ "images": {
+  "loc-dome": {
+   "item_id": "2007684367",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-dome.webp",
+   "w": 1600,
+   "h": 1201,
+   "alt": "The coffered dome of the Main Reading Room at the Library of Congress, seen from directly below.",
+   "title": "[Main Reading Room. Interior of dome. Library of Congress Thomas Jefferson Building, Washington, D.C.]",
+   "creator": "Highsmith, Carol M., 1946-, photographer",
+   "date": "2007",
+   "source_url": "https://www.loc.gov/item/2007684367/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Carol M. Highsmith / Library of Congress · 2007 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-kcreading": {
+   "item_id": "2021756055",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-kcreading.webp",
+   "w": 1024,
+   "h": 768,
+   "alt": "A quiet public library reading room with long tables, lamps and shelves of books.",
+   "title": "Reading room at the Kansas City Central Library, the main downtown library in Missouri's largest city",
+   "creator": "Highsmith, Carol M., 1946-, photographer",
+   "date": "2021",
+   "source_url": "https://www.loc.gov/item/2021756055/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Carol M. Highsmith / Library of Congress · 2021 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-miami": {
+   "item_id": "2011630408",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-miami.webp",
+   "w": 1600,
+   "h": 2048,
+   "alt": "Downtown Miami towers along the water under a cloudy sky.",
+   "title": "Downtown Miami, Florida",
+   "creator": "Highsmith, Carol M., 1946-, photographer",
+   "date": "between 1980 and 2006",
+   "source_url": "https://www.loc.gov/item/2011630408/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Carol M. Highsmith / Library of Congress · betw · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-office": {
+   "item_id": "2016884729",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-office.webp",
+   "w": 1024,
+   "h": 743,
+   "alt": "A large early twentieth-century office with rows of people working at desks.",
+   "title": "[Office workers]",
+   "creator": "Harris & Ewing, photographer",
+   "date": "between 1915 and 1923",
+   "source_url": "https://www.loc.gov/item/2016884729/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Harris & Ewing / Library of Congress · betw · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-newspaper": {
+   "item_id": "2020636246",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-newspaper.webp",
+   "w": 810,
+   "h": 1024,
+   "alt": "A young man leans on a counter, reading a newspaper closely.",
+   "title": "[Young man reading newspaper]",
+   "creator": "Rizzuto, Angelo, 1906-1967, photographer",
+   "date": "1956",
+   "source_url": "https://www.loc.gov/item/2020636246/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Angelo Rizzuto / Library of Congress · 1956 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "nasa-mcc": {
+   "item_id": "41g-90128",
+   "rights_statement": "NASA Image and Video Library item; NASA images and media guidelines: NASA content is generally not subject to copyright in the United States. Credited to NASA, no third-party credit.",
+   "file": "assets/img/nasa-mcc.webp",
+   "w": 1600,
+   "h": 636,
+   "alt": "A wide view of a 1984 NASA mission control room with rows of consoles and screens.",
+   "title": "Wide angle view of the Flight control room of Mission control center",
+   "creator": "NASA Johnson Space Center",
+   "date": "1984-10-06",
+   "source_url": "https://images.nasa.gov/details/41g-90128",
+   "license": "Public domain: NASA media usage guidelines: not subject to copyright in the United States",
+   "credit": "NASA JSC / NASA · 1984 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "nasa-air": {
+   "item_id": "PIA21100",
+   "rights_statement": "NASA Image and Video Library item; NASA images and media guidelines: NASA content is generally not subject to copyright in the United States. Credited to NASA, no third-party credit.",
+   "file": "assets/img/nasa-air.webp",
+   "w": 1600,
+   "h": 1263,
+   "alt": "Two satellite image strips of northern India; the right strip maps aerosol haze over New Delhi.",
+   "title": "Severe Air Pollution in New Delhi View by NASA MISR",
+   "creator": "NASA/GSFC/LaRC/JPL, MISR Team",
+   "date": "2016-11-16",
+   "source_url": "https://images.nasa.gov/details/PIA21100",
+   "license": "Public domain: NASA media usage guidelines: not subject to copyright in the United States",
+   "credit": "NASA/GSFC/LaRC/JPL, MISR Team / NASA/JPL · 2016 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "nasa-mirrors": {
+   "item_id": "PIA26386",
+   "rights_statement": "NASA Image and Video Library item; NASA images and media guidelines: NASA content is generally not subject to copyright in the United States. Credited to NASA, no third-party credit.",
+   "file": "assets/img/nasa-mirrors.webp",
+   "w": 1600,
+   "h": 1199,
+   "alt": "Technicians in clean-room suits inspect a large telescope mirror in a laboratory.",
+   "title": "NEO Surveyor's Mirrors Undergo Inspection at JPL",
+   "creator": "NASA/JPL-Caltech",
+   "date": "2024-08-28",
+   "source_url": "https://images.nasa.gov/details/PIA26386",
+   "license": "Public domain: NASA media usage guidelines: not subject to copyright in the United States",
+   "credit": "NASA/JPL-Caltech / NASA/JPL-Caltech · 2024 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-typist": {
+   "item_id": "2016885576",
+   "rights_statement": "No known restrictions on publication. For more information, see Harris & Ewing Photographs - Rights and Restrictions Information https://www.loc.gov/rr/print/res/140_harr.html",
+   "file": "assets/img/loc-typist.webp",
+   "w": 1024,
+   "h": 730,
+   "alt": "A woman sits at a typewriter beside a desk and filing cabinet, about 1921.",
+   "title": "[Woman at typewriter]",
+   "creator": "Harris & Ewing, photographer",
+   "date": "1921-01-01",
+   "source_url": "https://www.loc.gov/item/2016885576/",
+   "license": "Public domain: No known restrictions on publication. For more information, see Harris & Ewing Photographs - Rights and Restrictions Information https://www.loc.gov/rr/print/res/140_harr.html",
+   "credit": "Harris & Ewing / Library of Congress · 1921 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-butterflies": {
+   "item_id": "2018679080",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-butterflies.webp",
+   "w": 1024,
+   "h": 914,
+   "alt": "A 1905 photograph of a poster of butterfly specimens arranged in rows.",
+   "title": "[Poster showing scientific illustrations of butterfly specimens, taken in the Academy of Sciences, St. Petersburg]",
+   "creator": "Prokudin-Gorskii, Sergei Mikhailovich, 1863-1944, photographer",
+   "date": "1905",
+   "source_url": "https://www.loc.gov/item/2018679080/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "S. M. Prokudin-Gorskii / Library of Congress · 1905 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  }
+ },
+ "maps_credit": "Maps: U.S. Census Bureau boundaries via us-atlas, and Natural Earth via world-atlas; both public domain. Drawn by Room 63.",
+ "anthology": {
+  "year": 2024,
+  "short": "They Say / I Say with Readings, 6th ed."
+ },
+ "step_visuals": {
+  "@donow:r": {
+   "type": "mark"
+  },
+  "@exit:r": {
+   "type": "flow",
+   "steps": [
+    "Decision",
+    "Next step",
+    "Prior work kept"
+   ]
+  }
+ },
+ "next_visuals": {
+  "fri": {
+   "type": "map",
+   "map": "miami",
+   "focus": "wolfson",
+   "img": "loc-miami"
+  }
+ },
+ "video": [
+  {
+   "label": "Teacher intro for this week",
+   "status": "placeholder",
+   "note": "Mr. Portela's recorded intro goes here when he records it."
+  },
+  {
+   "label": "Guest recordings",
+   "status": "placeholder",
+   "note": "Only with the guest's written permission. None has been asked yet; recording stays off."
+  },
+  {
+   "label": "Short captioned clips",
+   "status": "proposed",
+   "note": "Clips from PBS, museums or university channels are proposed in the visual manifest and wait for approval. None is linked yet."
+  }
+ ],
+ "audio": {
+  "default": "off",
+  "sounds": [
+   "timer chime",
+   "transition",
+   "work-time soundscape"
+  ],
+  "source": "generated in the browser with the Web Audio API; no audio files"
+ }
 }
