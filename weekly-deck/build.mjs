@@ -108,7 +108,7 @@ for (const sl of Object.values(data.slides || {})) delete sl.origin;
 for (const rb of Object.values(data.rubric_rows || {})) delete rb.source;
 for (const r of data.routes || []) for (const sg of r.segments || []) for (const st of sg.steps || []) delete st.cue;
 data.video = (data.video || []).filter(v => v.url).map(v => ({ label: v.label, url: v.url }));
-const PRODUCTION = /release hold|private review|review draft|draft \d|speaker notes|teacher scripts|source controls|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined|words on R\d|are unchanged|teacher only|do not share|search guide|\.md\b|classroom\/[a-z-]+\.html|approval/i;
+const PRODUCTION = /release hold|private review|review draft|draft \d|speaker notes|teacher scripts|source controls|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined|words on R\d|are unchanged|teacher only|do not share|search guide|web audio|build time|two screens|projector\)|\.md\b|classroom\/[a-z-]+\.html|approval/i;
 { const txt = JSON.stringify(data); const hit = txt.match(PRODUCTION) || txt.match(/\bQA\b/); if (hit) { console.error(`public site holds teacher-facing or production language: "${hit[0]}"`); process.exit(1); } }
 let imgBytes = 0;
 for (const [k, m] of Object.entries(data.images || {})) {
