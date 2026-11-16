@@ -104,6 +104,7 @@ const data = JSON.parse(JSON.stringify(week)); delete data.$schema;
 // Teacher mode and timing cues stay in the teacher packet, never in the site.
 delete data.teacher;
 delete data.week.version; delete data.week.publish;
+for (const sl of Object.values(data.slides || {})) delete sl.origin;
 for (const rb of Object.values(data.rubric_rows || {})) delete rb.source;
 for (const r of data.routes || []) for (const sg of r.segments || []) for (const st of sg.steps || []) delete st.cue;
 data.video = (data.video || []).filter(v => v.url).map(v => ({ label: v.label, url: v.url }));

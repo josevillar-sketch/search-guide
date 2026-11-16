@@ -59,25 +59,33 @@
       "id": "mon",
       "name": "Monday",
       "date": "November 16",
-      "letter": "B"
+      "letter": "B",
+      "name_es": "Lunes",
+      "date_es": "16 de noviembre"
     },
     {
       "id": "tue",
       "name": "Tuesday",
       "date": "November 17",
-      "letter": "A"
+      "letter": "A",
+      "name_es": "Martes",
+      "date_es": "17 de noviembre"
     },
     {
       "id": "wed",
       "name": "Wednesday",
       "date": "November 18",
-      "letter": "B"
+      "letter": "B",
+      "name_es": "Miércoles",
+      "date_es": "18 de noviembre"
     },
     {
       "id": "thu",
       "name": "Thursday",
       "date": "November 19",
-      "letter": "A"
+      "letter": "A",
+      "name_es": "Jueves",
+      "date_es": "19 de noviembre"
     },
     {
       "id": "fri",
@@ -92,20 +100,26 @@
           "AP Seminar: Open the own-source writing, source log, report plan or feedback you already have. Choose one existing piece to improve. If you have no draft, use an accessible source already in your work to identify its claim, evidence, reasoning and one limitation in your existing document. If you cannot open your work, record the access problem and your next step on paper. Work quietly on your own piece. If you are stuck, record the exact question and continue another part you can advance.",
           "AP Seminar closing: Save your work where it already belongs. Record what you improved and one question for Mr. Portela. If access failed, record that problem and your next step.",
           "AP Research: Open your portfolio and your latest feedback or last status entry. Work on one part of your proposal you can advance. If you are stuck, record the exact question, then continue another accessible part. Before the bell, update your status and the first step for the next class.",
+          "If you cannot access your existing materials, use paper to record the access problem, your current status and your next step.",
+          "AP Research closing: Save your work. In your portfolio, update your status and write the first step for the next class. If you could not open your work, write the problem, your status and your next step on paper.",
           "AP Research: no surveys, interviews, observations or data from other people today. That work needs a review first.",
           "Nobody has to finish a report, a plan or a section today. No new grade and no homework come from these classes."
         ],
         "lines_es": [
           "La escuela termina al mediodía. Viaje a la Feria del Libro de Miami.",
-          "¿No vas al viaje? Tu clase se reúne igual, 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas solo y luego escribes una nota breve de cierre.",
+          "¿No vas al viaje? Tu clase se reúne igual, 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas de forma individual y luego escribes una nota breve de cierre.",
           "AP Seminar: Abre el escrito con tus fuentes, el registro de fuentes, el plan del informe o la retroalimentación que ya tienes. Elige una parte que ya existe para mejorarla. Si no tienes borrador, usa una fuente accesible que ya esté en tu trabajo para identificar su afirmación, evidencia, razonamiento y una limitación en tu documento. Si no puedes abrir tu trabajo, anota en papel el problema de acceso y tu próximo paso. Trabaja en silencio en tu propia parte. Si te atascas, anota la pregunta exacta y sigue con otra parte que puedas avanzar.",
           "Cierre de AP Seminar: Guarda tu trabajo donde ya está. Anota lo que mejoraste y una pregunta para el Sr. Portela. Si no pudiste entrar, anota el problema y tu próximo paso.",
           "AP Research: Abre tu portafolio y tu retroalimentación más reciente o tu última entrada de estado. Trabaja en una parte de tu propuesta que puedas avanzar. Si te atascas, anota la pregunta exacta y sigue con otra parte accesible. Antes del timbre, actualiza tu estado y el primer paso para la próxima clase.",
+          "Si no puedes entrar a tus materiales, usa papel para anotar el problema de acceso, tu estado actual y tu próximo paso.",
+          "Cierre de AP Research: Guarda tu trabajo. En tu portafolio, actualiza tu estado y escribe el primer paso para la próxima clase. Si no pudiste abrir tu trabajo, escribe en papel el problema, tu estado y tu próximo paso.",
           "AP Research: hoy no hay encuestas, entrevistas, observaciones ni datos de otras personas. Ese trabajo necesita una revisión primero.",
           "Nadie tiene que terminar un informe, un plan ni una sección hoy. Estas clases no dan nota nueva ni tarea."
         ],
         "title_es": "Salida temprana"
-      }
+      },
+      "name_es": "Viernes",
+      "date_es": "20 de noviembre"
     }
   ],
   "readings": {
@@ -141,7 +155,10 @@
           "label": "INHS Insect Collection",
           "url": "https://insect.inhs.illinois.edu/"
         }
-      ]
+      ],
+      "label_es": "Invitada",
+      "when_es": "10:00-10:20 AM, hora del Este",
+      "mode_es": "Visita virtual"
     },
     "cooper": {
       "name": "Professor Cecily Cooper",
@@ -155,7 +172,10 @@
           "label": "University of Miami Business School",
           "url": "https://www.mbs.miami.edu/"
         }
-      ]
+      ],
+      "label_es": "Invitada",
+      "when_es": "10:00-10:20 AM, hora del Este",
+      "mode_es": "Visita virtual"
     },
     "obejas": {
       "name": "Achy Obejas",
@@ -170,7 +190,10 @@
           "label": "Achy Obejas, author site",
           "url": "https://www.achyobejas.com/"
         }
-      ]
+      ],
+      "label_es": "Invitada",
+      "when_es": "1:30-1:50 PM, hora del Este",
+      "mode_es": "Visita virtual"
     },
     "piao": {
       "name": "Professor Daqing Piao",
@@ -179,7 +202,10 @@
       "when": "8:00-8:30 AM Eastern",
       "mode": "Virtual visit",
       "initials": "DP",
-      "links": []
+      "links": [],
+      "label_es": "Invitado",
+      "when_es": "8:00-8:30 AM, hora del Este",
+      "mode_es": "Visita virtual"
     },
     "rosales": {
       "name": "Colleen Rosales",
@@ -193,7 +219,10 @@
           "label": "OpenAQ",
           "url": "https://openaq.org/"
         }
-      ]
+      ],
+      "label_es": "Invitada",
+      "when_es": "9:30-10:00 AM, hora del Este",
+      "mode_es": "Visita virtual"
     }
   },
   "slides": {
@@ -203,8 +232,6 @@
       "subtitle": "Proposal work and support",
       "body": [
         "Individual proposal work comes first.",
-        "Eight optional support modules; sixteen designs",
-        "November 2026 to January 2027",
         "Routine group conferences are paused.",
         "Individual help is by agreed appointment."
       ],
@@ -757,6 +784,16 @@
       "visual": {
         "type": "lab"
       }
+    },
+    "q-dec1": {
+      "kind": "content",
+      "title": "Questions for our December 1 guest",
+      "body": [
+        "Dr. Mario Del Angel-Guevara, University of New Mexico Curanderismo Program, visits Period 8 on Tuesday, December 1.",
+        "Topic: documenting traditional healing, and experience versus clinical evidence.",
+        "Write two questions you would ask him. Make each one about evidence: how something is known, recorded or tested.",
+        "Write them in your current document."
+      ]
     }
   },
   "practice": {
@@ -1179,7 +1216,7 @@
         "Si no tienes una segunda fuente, nombra lo que falta y continúa el razonamiento con fuentes.",
         "Usa tu documento actual. Práctica formativa."
       ],
-      "guest_note_es": "La conversación con el invitado es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+      "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r": {
       "lines": [
@@ -1213,7 +1250,7 @@
         "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
         "La ayuda individual es con cita acordada."
       ],
-      "guest_note_es": "La conversación con el invitado es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+      "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r1": {
       "lines": [
@@ -1247,7 +1284,7 @@
         "Identifica un paso sin resolver o justifica que encaja.",
         "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
       ],
-      "guest_note_es": "La conversación con el invitado es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+      "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     }
   },
   "materials": {
@@ -3596,23 +3633,14 @@
           "label_es": "Práctica",
           "steps": [
             {
-              "slide": "sem-14",
-              "minutes": 3,
-              "mode": "Silent"
-            },
-            {
-              "slide": "sem-15",
-              "minutes": 3,
-              "mode": "Silent"
-            },
-            {
-              "slide": "sem-16",
-              "minutes": 3,
-              "mode": "Silent"
+              "slide": "q-dec1",
+              "minutes": 10,
+              "mode": "Silent",
+              "cue": "Questions for Dr. Del Angel-Guevara are promised to him by Nov 20; this is the last P8 class before then. Collect them."
             },
             {
               "slide": "@practice",
-              "minutes": 14,
+              "minutes": 13,
               "mode": "Silent",
               "cue": "Core first. Open supported or extension for students who need it."
             }
@@ -3865,8 +3893,8 @@
       "day": "thu",
       "period": 3,
       "course": "AP Research",
-      "label": "Proposal work, then guest Colleen Rosales",
-      "label_es": "Trabajo de propuesta y la invitada Colleen Rosales",
+      "label": "Guest Colleen Rosales, then proposal work",
+      "label_es": "La invitada Colleen Rosales, luego trabajo de propuesta",
       "opener": "r-open",
       "target": {
         "en": "I can choose my most important next proposal step and explain why.",
@@ -3926,7 +3954,7 @@
             },
             {
               "slide": "@donow",
-              "minutes": 3,
+              "minutes": 5,
               "mode": "Silent",
               "cue": "Start the do-now timer. Silent start."
             },
@@ -3941,18 +3969,6 @@
               "minutes": 1,
               "mode": "Group",
               "cue": "Students check these again at the exit."
-            }
-          ]
-        },
-        {
-          "type": "slide",
-          "label": "Your proposal work",
-          "label_es": "Tu trabajo de propuesta",
-          "steps": [
-            {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
             }
           ]
         },
@@ -3976,7 +3992,7 @@
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 33,
+              "minutes": 32,
               "mode": "Silent",
               "cue": "Core first. Open supported or extension for students who need it."
             }
