@@ -52,8 +52,8 @@ Cadence: Thursday draft, Sunday final.
 - Touch and smart boards: large buttons and swipe left or right.
 - The timer chimes softly at zero (once sound is on) and waits; it never advances by itself.
 - Two windows on one computer (presenter and projector) follow each other through `BroadcastChannel`.
-- Tools: English or Spanish for directions and absent work (slides stay English), text size A, A+, A++, wide reading spacing, builds on or off, sound, print, name picker, teacher mode.
-- Teacher mode opens with a passcode and shows scripts and timing cues only. A passcode on a static site is not security: anyone who reads the file can find the cues. Never put student names, meeting links or grades there.
+- Tools: English or Spanish for directions and absent work (slides stay English), text size A, A+, A++, wide reading spacing, builds on or off, sound, print, name picker.
+- The site is public, so it never holds teacher-facing or production language: no teacher mode, timing cues, scripts, draft or release labels, notes about approvals or placeholders. Those live in the teacher packet. `build.mjs` strips teacher mode, cues and unlinked video entries, and fails if such language remains; `qa.cjs` checks the rendered page too (Mr. Portela's rule, 2026-11-16).
 
 ## Print (US Letter)
 

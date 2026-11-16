@@ -258,9 +258,8 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   ok((await page.inputValue('#pickin')) === '', 'the pasted list is cleared from the box');
   await page.click('#pickgo'); await page.waitForTimeout(1100); const picked = await page.textContent('#pickout'); ok(['AB', 'CD', 'EFG'].includes(picked), 'picker draws an initial', picked);
   ok(await page.evaluate(() => !JSON.stringify(localStorage).includes('EFG') && !JSON.stringify(sessionStorage).includes('EFG')), 'initials are never stored');
-  await page.fill('#tpass', 'wrong'); await page.click('#tgo'); await page.waitForTimeout(100); ok(/did not open/.test(await page.textContent('#tmsg')), 'wrong passcode keeps teacher mode closed');
-  await page.fill('#tpass', 'room63'); await page.click('#tgo'); await page.waitForTimeout(150); ok(await page.evaluate(() => document.querySelectorAll('#toolsbody .cue li').length > 5), 'teacher passcode opens scripts and timing cues');
-  const cueText = await page.textContent('#toolsbody'); ok(!/zoom\.us|meet\.google|@/.test(cueText), 'teacher mode holds no links or emails');
+  ok(!(await page.$('#tpass')), 'no teacher mode in the public site');
+  { const html = await page.evaluate(() => { const c = document.body.cloneNode(true); c.querySelectorAll('script,style').forEach(e => e.remove()); return c.textContent + ' ' + [...document.querySelectorAll('[alt],[aria-label],[title]')].map(e => (e.getAttribute('alt') || '') + ' ' + (e.getAttribute('aria-label') || '') + ' ' + (e.getAttribute('title') || '')).join(' '); }); const m = html.match(/release hold|private review|review draft|speaker notes|teacher scripts|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined/i); ok(!m, 'no teacher-facing or production language in the page' + (m ? ': ' + m[0] : '')); }
   await page.click('[data-pref=lang][data-v=es]'); await page.keyboard.press('Escape');
   await page.goto(BASE + '#mon/P2-' + ix('mon-p2', '@absent')); ok(await page.evaluate(() => document.querySelectorAll('#content .es').length >= 3), 'Spanish toggle adds Spanish directions and absent work');
   await page.evaluate(() => window.DECK_TEST.setPref('lang', 'en'));

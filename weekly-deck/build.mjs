@@ -100,6 +100,13 @@ const fontCss = FONTS.map(([fam, style, weight, file]) => {
 
 // ---------- images (embedded WebP), maps (public-domain boundaries), QR codes ----------
 const data = JSON.parse(JSON.stringify(week)); delete data.$schema;
+// The site is public: no teacher-facing or production language ships in it (Mr. Portela's rule, 2026-11-16).
+// Teacher mode and timing cues stay in the teacher packet, never in the site.
+delete data.teacher;
+for (const r of data.routes || []) for (const sg of r.segments || []) for (const st of sg.steps || []) delete st.cue;
+data.video = (data.video || []).filter(v => v.url).map(v => ({ label: v.label, url: v.url }));
+const PRODUCTION = /release hold|private review|review draft|draft \d|speaker notes|teacher scripts|source controls|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined|words on R\d|are unchanged|teacher only|do not share/i;
+{ const txt = JSON.stringify(data); const hit = txt.match(PRODUCTION) || txt.match(/\bQA\b/); if (hit) { console.error(`public site holds teacher-facing or production language: "${hit[0]}"`); process.exit(1); } }
 let imgBytes = 0;
 for (const [k, m] of Object.entries(data.images || {})) {
   for (const f of ['alt', 'source_url', 'license', 'credit', 'item_id', 'rights_statement']) if (!m[f]) { console.error(`image ${k}: missing ${f}`); process.exit(1); }
