@@ -699,7 +699,7 @@ function weekHTML(){const periods=[...new Set(ROUTES.map(r=>r.period))].sort((a,
  periods.forEach((p,pi)=>{h+=`<div class="ph" style="grid-column:1;grid-row:${pi+2}">Period ${p}<span>${esc(bell(p))}</span></div>`});
  return h+'</div></div>'}
 function dayHTML(day){const d=dayBy(day);const rr=dayRoutes(day);
- let h=`<div class="home">${AMB}<h1>${esc(d.name)}, ${esc(d.date)}</h1><div class="rule"></div><p class="slug">${esc(d.letter)} ${t('dayletter')} · ${rr.length?t('choose').toUpperCase():''}</p>`;
+ let h=`<div class="home">${AMB}<h1>${esc(d.name)}, ${esc(d.date)}</h1><div class="rule"></div><p class="slug">${esc(d.letter)} ${t('dayletter')}${rr.length?' · '+t('choose').toUpperCase():''}</p>`;
  if(rr.length)h+=`<div class="homebar"><button type="button" class="pday">${PRN}<span>Print day handout</span></button></div>`;
  if(d.card)h+=`<div class="fricard">${SEAL.replace('class="seal"','class="seal" style="position:absolute;top:16px;right:18px;width:56px;height:56px;color:var(--ink)"')}<h2>${esc(es()&&d.card.title_es||d.card.title)}</h2><div class="rule"></div>${d.card.lines.map((x,k)=>`<p>${esc(x)}${es()&&d.card.lines_es?`<span class="es"> ${esc(d.card.lines_es[k])}</span>`:''}</p>`).join('')}</div>`;
  if(rr.length)h+='<div class="choices">'+rr.map((r,k)=>`<a class="choice" style="--d:${k}" href="#${r.day}/P${r.period}-0"><b>Period ${r.period}</b><span class="c">${esc(r.course)} · ${esc(bell(r.period))}</span><span class="l">${bil(r.label,r.label_es)}</span>${r.guest?`<span class="g">${t('guest')}: ${esc(D.guests[r.guest].name)}, ${esc(D.guests[r.guest].when)}</span>`:''}</a>`).join('')+'</div>';

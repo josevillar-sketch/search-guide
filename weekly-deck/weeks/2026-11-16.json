@@ -88,11 +88,13 @@
         "title": "Early release",
         "lines": [
           "School ends at noon.",
-          "Miami Book Fair trip."
+          "Miami Book Fair trip.",
+          "Not on the trip (P2, P4, P6): finish the work on your class's Wednesday absent sheet."
         ],
         "lines_es": [
           "La escuela termina al mediodía.",
-          "Viaje a la Feria del Libro de Miami."
+          "Viaje a la Feria del Libro de Miami.",
+          "Si no vas al viaje (P2, P4, P6): termina el trabajo de la hoja de ausentes del miércoles de tu clase."
         ],
         "title_es": "Salida temprana"
       }
