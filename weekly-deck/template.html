@@ -151,6 +151,7 @@ footer#controls{flex:none;min-height:76px;padding:8px 1.6vw;display:flex;gap:10p
 /* agenda and criteria */
 .agrid{list-style:none;margin:0;padding:0;max-width:1300px}
 .agrid li{display:grid;grid-template-columns:8.5em 1fr auto;gap:1em;align-items:center;font-size:calc(var(--t-body)*.8*var(--zoom));line-height:1.25;padding:.32em 0;border-bottom:1px solid var(--hair)}
+@media (min-width:900px){.agrid li:nth-last-child(n+10),.agrid li:nth-last-child(n+10)~li{font-size:calc(var(--t-body)*.64*var(--zoom));padding:.18em 0}}
 .agrid .t{font-family:var(--fm);font-weight:700;color:var(--brass-text);font-variant-numeric:tabular-nums;font-size:.86em}
 .agrid .es{display:block;font-size:.78em;color:var(--ink-soft);font-style:italic}
 .badge{font:700 calc(var(--t-label)*.86*var(--zoom))/1 var(--fm);letter-spacing:.06em;text-transform:uppercase;padding:.45em .8em;border-radius:999px;border:1.5px solid var(--pine);color:var(--pine);white-space:nowrap}
@@ -477,12 +478,12 @@ g.bi{transform-box:fill-box}
  #print .pair section,#print .tier,#print .source,#print .mcard,#print .gcard{background:#fff}
  #print .tier .more[hidden]{display:block!important}
  #print .slide button{display:none}
- .lp{page:letter;width:8.5in;height:11in;padding:.55in .6in;break-after:page;position:relative;overflow:hidden;font-size:11pt;line-height:1.4;color:var(--ink);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .lp{page:letter;width:8.5in;height:11in;padding:.55in .6in;break-after:page;position:relative;overflow:hidden;font-size:10pt;line-height:1.3;color:var(--ink);background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
  .lp h1{font:900 22pt/1.1 var(--fd);margin:0;padding-right:.9in}
  .lp .hr{height:3pt;background:var(--ink);margin:6pt 0 2pt}.lp .hr2{height:1pt;background:var(--hair);margin:0 0 8pt}
  .lp .slugp{font:700 8.5pt/1.3 var(--fm);letter-spacing:.06em;text-transform:uppercase;margin:0 0 8pt}
- .lp h2{font:700 13pt/1.2 var(--fd);margin:10pt 0 4pt}
- .lp ul{margin:0;padding-left:1.1em}.lp li{margin:2pt 0}
+ .lp h2{font:700 12pt/1.2 var(--fd);margin:7pt 0 3pt}
+ .lp ul{margin:0;padding-left:1.1em}.lp li{margin:1pt 0}
  .lp .es{font-style:italic;color:var(--ink-soft)}
  .lp table{border-collapse:collapse;width:100%;font-size:10pt}.lp td,.lp th{border-bottom:1pt solid var(--hair);padding:3pt 4pt;text-align:left;vertical-align:top}
  .lp .seal{position:absolute;top:.5in;right:.6in;width:.7in;height:.7in;color:var(--ink)}

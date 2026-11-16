@@ -794,6 +794,58 @@
         "Write two questions you would ask him. Make each one about evidence: how something is known, recorded or tested.",
         "Write them in your current document."
       ]
+    },
+    "study": {
+      "kind": "content",
+      "title": "Study sheet: one finished AP Research paper",
+      "body": [
+        "Read the top box: what the paper set out to do and what it found.",
+        "Part 1, with a partner: mark which of the four things your own method section already does.",
+        "Part 2: what does the paper do before it gives its reasons?",
+        "Part 3: answer the three questions about your own plan in your research log."
+      ]
+    },
+    "fieldnote": {
+      "kind": "content",
+      "title": "Guest field note",
+      "body": [
+        "Head a field note with six fields: claim, evidence and its type, method, limit, my question, link to me.",
+        "Write one question for our guest.",
+        "Complete the note while the guest speaks."
+      ]
+    },
+    "fieldnote-k": {
+      "kind": "content",
+      "title": "Guest field note",
+      "body": [
+        "Head a field note with six fields: claim, evidence and its type, method, limit, my question, link to me.",
+        "Write one question about a specimen or its label.",
+        "Complete the note while the guest speaks."
+      ]
+    },
+    "debrief": {
+      "kind": "content",
+      "title": "Debrief",
+      "body": [
+        "Write one sentence that links the talk to your own method.",
+        "Two or three of us read ours aloud."
+      ]
+    },
+    "debrief-k": {
+      "kind": "content",
+      "title": "Debrief",
+      "body": [
+        "Write one sentence that separates an observation from an inference in what the guest showed.",
+        "Two or three of us read ours aloud."
+      ]
+    },
+    "decide": {
+      "kind": "content",
+      "title": "Decision and reflection",
+      "body": [
+        "Write today's daily entry: Did, Changed, Next.",
+        "Add one decision you made today, with its reason."
+      ]
     }
   },
   "practice": {
@@ -1285,6 +1337,44 @@
         "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
       ],
       "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+    },
+    "r-study-guest": {
+      "lines": [
+        "Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
+        "Use your existing feedback.",
+        "Choose your most important next step.",
+        "Revise, retain or investigate; explain why.",
+        "Save your decision and next step; keep prior work.",
+        "Individual help is by agreed appointment."
+      ],
+      "guest_note": "The guest talk was not recorded, so there is no talk to make up. A talk you did not hear is not a source; do not cite it.",
+      "lines_es": [
+        "Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
+        "Usa la retroalimentación que ya tienes.",
+        "Elige tu próximo paso más importante.",
+        "Revisa, conserva o investiga; explica por qué.",
+        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+        "La ayuda individual es con cita acordada."
+      ],
+      "guest_note_es": "La charla no se grabó, así que no hay charla que reponer. Una charla que no escuchaste no es una fuente; no la cites."
+    },
+    "r1-study": {
+      "lines": [
+        "Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
+        "Use your existing feedback.",
+        "Choose your most important next step.",
+        "Explain your question → evidence → analysis connection.",
+        "Identify one unresolved step or justify the fit.",
+        "Keep earlier work; record your own decision and reason."
+      ],
+      "lines_es": [
+        "Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
+        "Usa la retroalimentación que ya tienes.",
+        "Elige tu próximo paso más importante.",
+        "Explica la conexión pregunta → evidencia → análisis.",
+        "Identifica un paso sin resolver o justifica que encaja.",
+        "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
+      ]
     }
   },
   "materials": {
@@ -1650,8 +1740,8 @@
       "day": "mon",
       "period": 4,
       "course": "AP Research",
-      "label": "Proposal work, then guest Michelle Kohler",
-      "label_es": "Trabajo de propuesta y la invitada Michelle Kohler",
+      "label": "Study sheet, then guest Michelle Kohler",
+      "label_es": "Hoja de estudio, luego la invitada Michelle Kohler",
       "opener": "r-open",
       "target": {
         "en": "I can choose my most important next proposal step and explain why.",
@@ -1680,10 +1770,12 @@
       },
       "exit": {
         "lines": [
-          "Save your decision and next step; keep prior work."
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
         ],
         "lines_es": [
-          "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior."
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
         ],
         "carry": true
       },
@@ -1696,7 +1788,7 @@
         "r-sup",
         "r-ext"
       ],
-      "absent": "r-guest",
+      "absent": "r-study-guest",
       "segments": [
         {
           "type": "intro",
@@ -1706,44 +1798,61 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
-              "minutes": 4,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "minutes": 2,
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
             }
           ]
         },
         {
           "type": "slide",
-          "label": "Your proposal work",
-          "label_es": "Tu trabajo de propuesta",
+          "label": "Study sheet: one finished paper",
+          "label_es": "Hoja de estudio: un trabajo terminado",
           "steps": [
             {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
-            },
+              "slide": "study",
+              "minutes": 20,
+              "mode": "Partner",
+              "cue": "Packet: intro 3, Parts 1-2 in pairs 11 (Part 2 question: what does the paper do before it gives its reasons? It shows the numbers and says plainly the result was inconclusive), Part 3 6. Each student uses the assigned reading version, English or Spanish."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Guest field note",
+          "label_es": "Nota de campo para la visita",
+          "steps": [
             {
-              "slide": "r-studio",
-              "minutes": 35,
+              "slide": "fieldnote-k",
+              "minutes": 3,
               "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
+              "cue": "Guest preparation."
+            }
+          ]
+        },
+        {
+          "type": "practice",
+          "label": "Proposal work",
+          "label_es": "Trabajo de propuesta",
+          "steps": [
+            {
+              "slide": "@practice",
+              "minutes": 15,
+              "mode": "Silent",
+              "cue": "Proposal work during the video check: you check picture and sound with the guest at 9:45, so you are not free for conferences."
             }
           ]
         },
@@ -1761,15 +1870,26 @@
           ]
         },
         {
-          "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "type": "slide",
+          "label": "Debrief",
+          "label_es": "Cierre de la visita",
           "steps": [
             {
-              "slide": "@practice",
-              "minutes": 15,
-              "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "slide": "debrief-k",
+              "minutes": 5,
+              "mode": "Group"
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Decision and reflection",
+          "label_es": "Decisión y reflexión",
+          "steps": [
+            {
+              "slide": "decide",
+              "minutes": 12,
+              "mode": "Silent"
             }
           ]
         },
@@ -1792,14 +1912,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
-              "minutes": 5,
+              "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -1823,8 +1943,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
@@ -2191,8 +2310,8 @@
       "day": "tue",
       "period": 1,
       "course": "AP Research",
-      "label": "Proposal work and R1 reteach",
-      "label_es": "Trabajo de propuesta y repaso R1",
+      "label": "Study sheet, proposal work and the R1 reteach",
+      "label_es": "Hoja de estudio, trabajo de propuesta y repaso R1",
       "opener": "r-open",
       "target": {
         "en": "I can check that my question and my evidence match.",
@@ -2220,7 +2339,14 @@
         ]
       },
       "exit": {
-        "slide": "r1-5",
+        "lines": [
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
+        ],
+        "lines_es": [
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
+        ],
         "carry": true
       },
       "next": {
@@ -2232,7 +2358,7 @@
         "r1-sup",
         "r1-ext"
       ],
-      "absent": "r1",
+      "absent": "r1-study",
       "segments": [
         {
           "type": "intro",
@@ -2242,26 +2368,35 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
-              "minutes": 4,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "minutes": 2,
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Study sheet: one finished paper",
+          "label_es": "Hoja de estudio: un trabajo terminado",
+          "steps": [
+            {
+              "slide": "study",
+              "minutes": 20,
+              "mode": "Partner",
+              "cue": "Packet: intro 3, Parts 1-2 in pairs 11 (Part 2 question: what does the paper do before it gives its reasons? It shows the numbers and says plainly the result was inconclusive), Part 3 6. Each student uses the assigned reading version, English or Spanish."
             }
           ]
         },
@@ -2271,15 +2406,10 @@
           "label_es": "Tu trabajo de propuesta",
           "steps": [
             {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r-studio",
-              "minutes": 25,
+              "minutes": 17,
               "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
+              "cue": "Individual work from the feedback already in the portfolio Doc. Help by agreed appointment or as a need shows."
             }
           ]
         },
@@ -2289,43 +2419,53 @@
           "label_es": "Repaso R1: pregunta y evidencia",
           "steps": [
             {
-              "slide": "r1-open",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r1-1",
-              "minutes": 5,
-              "mode": "Partner"
-            },
-            {
-              "slide": "r1-23",
-              "minutes": 5,
-              "mode": "Partner"
+              "minutes": 1,
+              "mode": "Group",
+              "cue": "10-minute reteach (week sheet): 0-1 Follow the evidence."
             },
             {
               "slide": "r1-lab",
-              "minutes": 5,
+              "minutes": 4,
               "mode": "Partner",
-              "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
+              "cue": "1-5 Three libraries, then Test the claims: toggle the variable; students sort the claims. No answers shown."
             },
             {
               "slide": "r1-4",
-              "minutes": 6,
-              "mode": "Partner"
+              "minutes": 3,
+              "mode": "Partner",
+              "cue": "5-8 Time matters."
+            },
+            {
+              "slide": "r1-5",
+              "minutes": 2,
+              "mode": "Silent",
+              "cue": "8-10 Your decision. Never rewrite a student's question."
             }
           ]
         },
         {
           "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "label": "Proposal work, part 2",
+          "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 20,
+              "minutes": 18,
               "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "cue": "Individual work. Help by agreed appointment or as a need shows."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Decision and reflection",
+          "label_es": "Decisión y reflexión",
+          "steps": [
+            {
+              "slide": "decide",
+              "minutes": 10,
+              "mode": "Silent"
             }
           ]
         },
@@ -2348,14 +2488,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
-              "minutes": 8,
+              "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -2379,8 +2519,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
@@ -2391,7 +2530,7 @@
       "period": 3,
       "course": "AP Research",
       "label": "Proposal work, R1 reteach, then guest Cecily Cooper",
-      "label_es": "Trabajo de propuesta, repaso R1 y la invitada Cecily Cooper",
+      "label_es": "Trabajo de propuesta, repaso R1, luego la invitada Cecily Cooper",
       "opener": "r-open",
       "target": {
         "en": "I can check that my question and my evidence match.",
@@ -2419,7 +2558,14 @@
         ]
       },
       "exit": {
-        "slide": "r1-5",
+        "lines": [
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
+        ],
+        "lines_es": [
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
+        ],
         "carry": true
       },
       "next": {
@@ -2441,26 +2587,22 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
-              "minutes": 4,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "minutes": 2,
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
             }
           ]
         },
@@ -2470,15 +2612,10 @@
           "label_es": "Tu trabajo de propuesta",
           "steps": [
             {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r-studio",
-              "minutes": 12,
+              "minutes": 23,
               "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
+              "cue": "Work and preparation: students read the guest's agreed two-page summary as preparation. Individual help as needed."
             }
           ]
         },
@@ -2488,30 +2625,41 @@
           "label_es": "Repaso R1: pregunta y evidencia",
           "steps": [
             {
-              "slide": "r1-open",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r1-1",
-              "minutes": 4,
-              "mode": "Partner"
-            },
-            {
-              "slide": "r1-23",
-              "minutes": 4,
-              "mode": "Partner"
+              "minutes": 1,
+              "mode": "Group",
+              "cue": "10-minute reteach (week sheet): 0-1 Follow the evidence."
             },
             {
               "slide": "r1-lab",
               "minutes": 4,
               "mode": "Partner",
-              "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
+              "cue": "1-5 Three libraries, then Test the claims: toggle the variable; students sort the claims. No answers shown."
             },
             {
               "slide": "r1-4",
+              "minutes": 3,
+              "mode": "Partner",
+              "cue": "5-8 Time matters."
+            },
+            {
+              "slide": "r1-5",
+              "minutes": 2,
+              "mode": "Silent",
+              "cue": "8-10 Your decision. Never rewrite a student's question."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Guest field note",
+          "label_es": "Nota de campo para la visita",
+          "steps": [
+            {
+              "slide": "fieldnote",
               "minutes": 5,
-              "mode": "Partner"
+              "mode": "Silent",
+              "cue": "Connect 9:55."
             }
           ]
         },
@@ -2522,22 +2670,34 @@
           "steps": [
             {
               "slide": "g-cooper",
-              "minutes": 30,
+              "minutes": 20,
               "mode": "Group",
               "cue": "Connect 9:55. Visit 10:00-10:20 AM; the 10:30 end on the invitation is room time only. Debrief 10:20-10:25. Recording stays off unless the guest has agreed."
             }
           ]
         },
         {
+          "type": "slide",
+          "label": "Debrief",
+          "label_es": "Cierre de la visita",
+          "steps": [
+            {
+              "slide": "debrief",
+              "minutes": 5,
+              "mode": "Group"
+            }
+          ]
+        },
+        {
           "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "label": "Proposal work, part 2",
+          "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
               "minutes": 12,
               "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "cue": "Individual work. Help by agreed appointment or as a need shows."
             }
           ]
         },
@@ -2560,14 +2720,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
               "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -2591,8 +2751,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
@@ -3138,7 +3297,7 @@
       "day": "wed",
       "period": 4,
       "course": "AP Research",
-      "label": "Proposal work and R1 reteach",
+      "label": "Proposal work and the R1 reteach",
       "label_es": "Trabajo de propuesta y repaso R1",
       "opener": "r-open",
       "target": {
@@ -3167,7 +3326,14 @@
         ]
       },
       "exit": {
-        "slide": "r1-5",
+        "lines": [
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
+        ],
+        "lines_es": [
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
+        ],
         "carry": true
       },
       "next": {
@@ -3190,26 +3356,22 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
-              "minutes": 4,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "minutes": 2,
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
             }
           ]
         },
@@ -3219,15 +3381,10 @@
           "label_es": "Tu trabajo de propuesta",
           "steps": [
             {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r-studio",
-              "minutes": 25,
+              "minutes": 50,
               "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
+              "cue": "Individual work from the feedback already in the portfolio Doc. Help by agreed appointment or as a need shows."
             }
           ]
         },
@@ -3237,43 +3394,53 @@
           "label_es": "Repaso R1: pregunta y evidencia",
           "steps": [
             {
-              "slide": "r1-open",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r1-1",
-              "minutes": 5,
-              "mode": "Partner"
-            },
-            {
-              "slide": "r1-23",
-              "minutes": 5,
-              "mode": "Partner"
+              "minutes": 1,
+              "mode": "Group",
+              "cue": "10-minute reteach (week sheet): 0-1 Follow the evidence."
             },
             {
               "slide": "r1-lab",
-              "minutes": 5,
+              "minutes": 4,
               "mode": "Partner",
-              "cue": "Toggle the variable; students sort the R1.3 claims. No answers are shown."
+              "cue": "1-5 Three libraries, then Test the claims: toggle the variable; students sort the claims. No answers shown."
             },
             {
               "slide": "r1-4",
-              "minutes": 6,
-              "mode": "Partner"
+              "minutes": 3,
+              "mode": "Partner",
+              "cue": "5-8 Time matters."
+            },
+            {
+              "slide": "r1-5",
+              "minutes": 2,
+              "mode": "Silent",
+              "cue": "8-10 Your decision. Never rewrite a student's question."
             }
           ]
         },
         {
           "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "label": "Proposal work, part 2",
+          "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 20,
+              "minutes": 5,
               "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "cue": "Individual work. Help by agreed appointment or as a need shows."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Decision and reflection",
+          "label_es": "Decisión y reflexión",
+          "steps": [
+            {
+              "slide": "decide",
+              "minutes": 10,
+              "mode": "Silent"
             }
           ]
         },
@@ -3296,14 +3463,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
-              "minutes": 8,
+              "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -3327,8 +3494,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
@@ -3709,7 +3875,7 @@
       "period": 1,
       "course": "AP Research",
       "label": "Proposal work, then guest Daqing Piao",
-      "label_es": "Trabajo de propuesta y el invitado Daqing Piao",
+      "label_es": "Trabajo de propuesta, luego el invitado Daqing Piao",
       "opener": "r-open",
       "target": {
         "en": "I can choose my most important next proposal step and explain why.",
@@ -3738,10 +3904,12 @@
       },
       "exit": {
         "lines": [
-          "Save your decision and next step; keep prior work."
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
         ],
         "lines_es": [
-          "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior."
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
         ],
         "carry": true
       },
@@ -3764,26 +3932,22 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
-              "minutes": 4,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "minutes": 2,
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
             }
           ]
         },
@@ -3793,15 +3957,23 @@
           "label_es": "Tu trabajo de propuesta",
           "steps": [
             {
-              "slide": "r-cover",
-              "minutes": 1,
-              "mode": "Group"
-            },
-            {
               "slide": "r-studio",
-              "minutes": 19,
+              "minutes": 20,
               "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
+              "cue": "Individual work from the feedback already in the portfolio Doc. Help by agreed appointment or as a need shows."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Guest field note",
+          "label_es": "Nota de campo para la visita",
+          "steps": [
+            {
+              "slide": "fieldnote",
+              "minutes": 5,
+              "mode": "Silent",
+              "cue": "Connect 7:55."
             }
           ]
         },
@@ -3812,22 +3984,34 @@
           "steps": [
             {
               "slide": "g-piao",
-              "minutes": 33,
+              "minutes": 30,
               "mode": "Group",
               "cue": "Visit 8:00-8:30 AM Eastern (7:00-7:30 Central). Keep the debrief after. Recording stays off unless the guest has agreed."
             }
           ]
         },
         {
+          "type": "slide",
+          "label": "Debrief",
+          "label_es": "Cierre de la visita",
+          "steps": [
+            {
+              "slide": "debrief",
+              "minutes": 5,
+              "mode": "Group"
+            }
+          ]
+        },
+        {
           "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "label": "Proposal work, part 2",
+          "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 18,
+              "minutes": 15,
               "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "cue": "Individual work. Help by agreed appointment or as a need shows."
             }
           ]
         },
@@ -3850,14 +4034,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
-              "minutes": 5,
+              "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -3881,8 +4065,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
@@ -3923,10 +4106,12 @@
       },
       "exit": {
         "lines": [
-          "Save your decision and next step; keep prior work."
+          "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+          "Close the Doc."
         ],
         "lines_es": [
-          "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior."
+          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Cierra el documento."
         ],
         "carry": true
       },
@@ -3949,26 +4134,35 @@
             {
               "slide": "@target",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Read the target and the why aloud."
+              "mode": "Group"
             },
             {
               "slide": "@donow",
               "minutes": 5,
-              "mode": "Silent",
-              "cue": "Start the do-now timer. Silent start."
+              "mode": "Silent"
             },
             {
               "slide": "@agenda",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Point to the clock times and the work modes."
+              "mode": "Group"
             },
             {
               "slide": "@criteria",
               "minutes": 1,
-              "mode": "Group",
-              "cue": "Students check these again at the exit."
+              "mode": "Group"
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Guest field note",
+          "label_es": "Nota de campo para la visita",
+          "steps": [
+            {
+              "slide": "fieldnote",
+              "minutes": 5,
+              "mode": "Silent",
+              "cue": "Connect 9:25."
             }
           ]
         },
@@ -3979,22 +4173,34 @@
           "steps": [
             {
               "slide": "g-rosales",
-              "minutes": 40,
+              "minutes": 30,
               "mode": "Group",
               "cue": "Connect 9:25. Visit 9:30-10:00 AM, one classroom connection, Mr. Portela moderates. Debrief 10:00-10:05. Recording stays off unless the guest has agreed."
             }
           ]
         },
         {
+          "type": "slide",
+          "label": "Debrief",
+          "label_es": "Cierre de la visita",
+          "steps": [
+            {
+              "slide": "debrief",
+              "minutes": 5,
+              "mode": "Group"
+            }
+          ]
+        },
+        {
           "type": "practice",
-          "label": "Practice",
-          "label_es": "Práctica",
+          "label": "Proposal work, part 2",
+          "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
               "minutes": 32,
               "mode": "Silent",
-              "cue": "Core first. Open supported or extension for students who need it."
+              "cue": "Individual work. Help by agreed appointment or as a need shows."
             }
           ]
         },
@@ -4017,14 +4223,14 @@
         },
         {
           "type": "exit",
-          "label": "Exit ticket",
-          "label_es": "Boleto de salida",
+          "label": "Close: update your status line",
+          "label_es": "Cierre: actualiza tu línea de estado",
           "steps": [
             {
               "slide": "@exit",
               "minutes": 3,
               "mode": "Silent",
-              "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+              "cue": "Status line: ready for review; revising, next step named; or blocked, block named. Close the Doc."
             }
           ]
         },
@@ -4048,8 +4254,7 @@
             {
               "slide": "@absent",
               "minutes": 0,
-              "mode": "Silent",
-              "cue": "Absent students: print the absent sheet from Tools."
+              "mode": "Silent"
             }
           ]
         }
