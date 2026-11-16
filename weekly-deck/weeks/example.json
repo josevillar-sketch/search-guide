@@ -1,0 +1,883 @@
+{
+ "$schema": "../week.schema.json",
+ "week": {
+  "id": "example",
+  "title": "Example week (copy this file to start a new week)",
+  "range": "Example",
+  "date": "2026-01-05",
+  "brand": "ROOM 63",
+  "school": "Mater Academy",
+  "teacher": "Mr. Portela",
+  "owner": "Portela J",
+  "version": "Documented example: one day, one route",
+  "publish": {
+   "archive_site": "room-63-week-of-<month>-<day>-<year>",
+   "current_site": "room-63-current-week",
+   "note": "Going live always needs Mr. Portela's approval."
+  }
+ },
+ "teacher": {
+  "passcode_sha256": "6b78ba9bf15ef3db6abdfad59d8e36e31fc844d224b7bfba52f23d6e066739d1",
+  "note": "A passcode on a static site hides the panel; it is not security. Scripts and timing cues only."
+ },
+ "bells": {
+  "1": [
+   "7:30",
+   "8:55"
+  ],
+  "2": [
+   "7:30",
+   "8:55"
+  ],
+  "3": [
+   "9:17",
+   "10:42"
+  ],
+  "4": [
+   "9:17",
+   "10:42"
+  ],
+  "5": [
+   "10:49",
+   "12:28"
+  ],
+  "6": [
+   "10:49",
+   "12:28"
+  ],
+  "7": [
+   "13:05",
+   "14:30"
+  ],
+  "8": [
+   "13:05",
+   "14:30"
+  ]
+ },
+ "days": [
+  {
+   "id": "mon",
+   "name": "Monday",
+   "date": "November 16",
+   "letter": "B"
+  },
+  {
+   "id": "fri",
+   "name": "Friday",
+   "date": "November 20",
+   "letter": "B",
+   "card": {
+    "title": "Early release",
+    "lines": [
+     "School ends at noon.",
+     "Miami Book Fair trip."
+    ],
+    "lines_es": [
+     "La escuela termina al mediodía.",
+     "Viaje a la Feria del Libro de Miami."
+    ],
+    "title_es": "Salida temprana"
+   }
+  }
+ ],
+ "readings": {
+  "goldsmith": {
+   "before": "Kenneth Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), paragraphs 4-7. In ",
+   "book": "They Say / I Say with Readings",
+   "after": ", 6th ed. (Norton, 2024), beginning on p. 401.",
+   "note": "Use the class copy. This site gives the citation only.",
+   "note_es": "Usa la copia de la clase. Este sitio da solo la cita.",
+   "year": 2016,
+   "short": "Goldsmith, \"Go Ahead: Waste Time on the Internet\""
+  },
+  "carr": {
+   "before": "Nicholas Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7-10. In ",
+   "book": "They Say / I Say with Readings",
+   "after": ", 6th ed. (Norton, 2024), beginning on p. 418.",
+   "note": "Use the class copy. This site gives the citation only.",
+   "note_es": "Usa la copia de la clase. Este sitio da solo la cita.",
+   "year": 2017,
+   "short": "Carr, \"How Smartphones Hijack Our Minds\""
+  }
+ },
+ "guests": {},
+ "slides": {
+  "w1-open": {
+   "kind": "opener",
+   "title": "Source reasoning",
+   "subtitle": "AP Seminar · Workshop 1",
+   "body": [],
+   "subtitle_es": "AP Seminar · Taller 1",
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-newspaper"
+   }
+  },
+  "sem-1": {
+   "kind": "content",
+   "title": "Source reasoning: Retrieve and locate",
+   "body": [
+    "What is the author claiming? What supports it? What does it not establish?"
+   ],
+   "origin": "AP Seminar student view, slide 1",
+   "deck_no": 1,
+   "deck_of": 18,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Claim",
+     "Support",
+     "Not established"
+    ]
+   }
+  },
+  "sem-2": {
+   "kind": "content",
+   "title": "Source reasoning: Locate the task",
+   "body": [
+    "Paragraph /4: claim, support, inference, limit.",
+    "P2/P5/P7: paragraph + decision exit (/4 each).",
+    "P6/P8: one source-reasoning score /4.",
+    "Decision exit (P2/P5/P7), one point each:",
+    "1. Shows the sentence that changed",
+    "2. Says what the partner's check found",
+    "3. Explains one choice in the revision",
+    "4. Checks the changed sentence against the source"
+   ],
+   "origin": "AP Seminar student view, slide 2",
+   "deck_no": 2,
+   "deck_of": 18,
+   "visual": {
+    "type": "meter",
+    "max": 4
+   }
+  },
+  "sem-3": {
+   "kind": "content",
+   "title": "Source reasoning: Read the common passage",
+   "body": [
+    "Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), paragraphs 4 to 7.",
+    "Mark claim, example and inference.",
+    "Treat the passage as a historical argument, not a current scientific finding."
+   ],
+   "reading": "goldsmith",
+   "origin": "AP Seminar student view, slide 3",
+   "deck_no": 3,
+   "deck_of": 18,
+   "visual": {
+    "type": "rtime",
+    "focus": "goldsmith"
+   }
+  },
+  "sem-4": {
+   "kind": "content",
+   "title": "Source reasoning: Model the reasoning",
+   "body": [
+    "Observation → inference → scope."
+   ],
+   "origin": "AP Seminar student view, slide 4",
+   "deck_no": 4,
+   "deck_of": 18,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Observation",
+     "Inference",
+     "Scope"
+    ]
+   }
+  },
+  "sem-5": {
+   "kind": "content",
+   "title": "Source reasoning: Test the inference",
+   "body": [
+    "Which conclusion exceeds the evidence?",
+    "A: Some device use includes sustained reading.",
+    "B: The passage challenges a blanket claim.",
+    "C: Devices improve concentration for all users."
+   ],
+   "origin": "AP Seminar student view, slide 5",
+   "deck_no": 5,
+   "deck_of": 18,
+   "visual": {
+    "type": "poll",
+    "options": [
+     "A",
+     "B",
+     "C"
+    ]
+   }
+  },
+  "sem-6": {
+   "kind": "content",
+   "title": "Source reasoning: Transfer to students' own sources",
+   "body": [
+    "Check credibility and relevance.",
+    "Who produced it? What supports trust?",
+    "Why does it fit? What needs checking?",
+    "Write: claim, support, explanation, limit.",
+    "Keep the source open."
+   ],
+   "origin": "AP Seminar student view, slide 6",
+   "deck_no": 6,
+   "deck_of": 18,
+   "visual": {
+    "type": "check"
+   }
+  },
+  "sem-7": {
+   "kind": "content",
+   "title": "Source reasoning: Peer check and revise",
+   "body": [
+    "Keep the paragraph before the check.",
+    "Point to evidence. Test the explanation and limit.",
+    "Identify a specific issue or strength.",
+    "Revise a sentence and explain the source-based reason."
+   ],
+   "origin": "AP Seminar student view, slide 7",
+   "deck_no": 7,
+   "deck_of": 18,
+   "visual": {
+    "type": "peers"
+   }
+  },
+  "sem-8": {
+   "kind": "content",
+   "title": "Source reasoning: Exit and next lesson",
+   "body": [
+    "Show the sentence that changed.",
+    "Say what the partner's check found.",
+    "Explain one choice in the revision.",
+    "Check the changed sentence against the source.",
+    "P2/P5/P7: exit /4. P6/P8: paragraph /4."
+   ],
+   "origin": "AP Seminar student view, slide 8",
+   "deck_no": 8,
+   "deck_of": 18,
+   "visual": {
+    "type": "meter",
+    "max": 4
+   }
+  }
+ },
+ "practice": {
+  "w1-core": {
+   "tier": "core",
+   "task": "IRR",
+   "rubric_rows": [
+    "Analyze and evaluate sources",
+    "Credibility and relevance"
+   ],
+   "minutes": 20,
+   "dok": 3,
+   "lines": [
+    "Paragraph: claim, support, inference, limit.",
+    "Keep the paragraph before the peer check.",
+    "Show a changed sentence and explain your choice.",
+    "Report the partner check; check against the source."
+   ]
+  },
+  "w1-sup": {
+   "tier": "supported",
+   "task": "IRR",
+   "rubric_rows": [
+    "Analyze and evaluate sources"
+   ],
+   "minutes": 20,
+   "dok": 2,
+   "lines": [
+    "Use current work or the accessible passage.",
+    "Mark claim, example and inference.",
+    "Write: claim, support, explanation, limit."
+   ]
+  },
+  "w1-ext": {
+   "tier": "extension",
+   "task": "IRR",
+   "rubric_rows": [
+    "Credibility and relevance",
+    "Analyze and evaluate sources"
+   ],
+   "minutes": 20,
+   "dok": 4,
+   "lines": [
+    "Check credibility and relevance.",
+    "Who produced it? What supports trust?",
+    "Why does it fit? What needs checking?",
+    "Treat the passage as a historical argument, not a current scientific finding."
+   ]
+  }
+ },
+ "rubric_rows": {
+  "IRR": {
+   "source": "AP Seminar Performance Task 1 student task directions, as quoted in classroom/seminar-task-check.html",
+   "rows": {
+    "Area of investigation": "Identify an area of investigation and explain its relationship to the overall problem or issue.",
+    "Analyze and evaluate sources": "Summarize, explain, analyze and evaluate the main ideas and reasoning in the chosen sources.",
+    "Credibility and relevance": "Demonstrate you have evaluated the credibility of your chosen sources and selected evidence relevant to the inquiry.",
+    "Compare perspectives": "Identify, compare and interpret a range of perspectives about the problem or issue."
+   },
+   "links": [
+    {
+     "label": "AP Seminar scoring guidelines and rubrics (College Board)",
+     "url": "https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions"
+    },
+    {
+     "label": "AP Seminar Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"
+    }
+   ]
+  },
+  "Academic Paper": {
+   "source": "AP Research Course and Exam Description, academic paper elements, as quoted in classroom/paper-elements-check.html",
+   "rows": {
+    "Method, Process, or Approach": "Explains and provides justification for the chosen method, process, or approach and its alignment with the research question.",
+    "Results, Product, or Findings": "Presents the findings, evidence, results, or performance/exhibit/product generated by the research method."
+   },
+   "links": [
+    {
+     "label": "AP Research Course and Exam Description (rubrics)",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf"
+    },
+    {
+     "label": "Scored AP Research samples (College Board)",
+     "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions"
+    }
+   ]
+  }
+ },
+ "criteria": {
+  "w1": [
+   {
+    "row": "Analyze and evaluate sources",
+    "en": "I name the author's claim and what supports it.",
+    "es": "Nombro la afirmación del autor y lo que la apoya."
+   },
+   {
+    "row": "Analyze and evaluate sources",
+    "en": "I explain the inference and say what the source does not establish.",
+    "es": "Explico la inferencia y digo lo que la fuente no establece."
+   },
+   {
+    "row": "Credibility and relevance",
+    "en": "I check who produced my source and why it fits my question.",
+    "es": "Reviso quién produjo mi fuente y por qué encaja con mi pregunta."
+   }
+  ]
+ },
+ "glossary": {
+  "claim": {
+   "en": "claim",
+   "es": "afirmación",
+   "def_en": "What the author says is true.",
+   "def_es": "Lo que el autor dice que es cierto."
+  },
+  "support": {
+   "en": "support",
+   "es": "apoyo",
+   "def_en": "The evidence or reasons behind a claim.",
+   "def_es": "La evidencia o las razones detrás de una afirmación."
+  },
+  "inference": {
+   "en": "inference",
+   "es": "inferencia",
+   "def_en": "A conclusion drawn from the evidence.",
+   "def_es": "Una conclusión que se saca de la evidencia."
+  },
+  "limit": {
+   "en": "limit",
+   "es": "límite",
+   "def_en": "What the evidence cannot show.",
+   "def_es": "Lo que la evidencia no puede mostrar."
+  },
+  "scope": {
+   "en": "scope",
+   "es": "alcance",
+   "def_en": "Who and what a conclusion covers.",
+   "def_es": "A quién y a qué cubre una conclusión."
+  },
+  "credibility": {
+   "en": "credibility",
+   "es": "credibilidad",
+   "def_en": "Reasons to trust a source.",
+   "def_es": "Razones para confiar en una fuente."
+  },
+  "relevance": {
+   "en": "relevance",
+   "es": "pertinencia",
+   "def_en": "How well a source fits your question.",
+   "def_es": "Qué tan bien encaja una fuente con tu pregunta."
+  },
+  "attribution": {
+   "en": "attribution",
+   "es": "atribución",
+   "def_en": "Saying which source an idea comes from.",
+   "def_es": "Decir de qué fuente viene una idea."
+  },
+  "synthesis": {
+   "en": "synthesis",
+   "es": "síntesis",
+   "def_en": "Connecting sources to explain something new.",
+   "def_es": "Conectar fuentes para explicar algo nuevo."
+  },
+  "perspective": {
+   "en": "perspective",
+   "es": "perspectiva",
+   "def_en": "A point of view on an issue.",
+   "def_es": "Un punto de vista sobre un tema."
+  },
+  "record": {
+   "en": "record",
+   "es": "registro",
+   "def_en": "One documented observation or entry in your data.",
+   "def_es": "Una observación o entrada documentada en tus datos."
+  },
+  "reference": {
+   "en": "reference period",
+   "es": "período de referencia",
+   "def_en": "The time a record describes.",
+   "def_es": "El tiempo que describe un registro."
+  },
+  "method": {
+   "en": "method",
+   "es": "método",
+   "def_en": "How you will collect and analyze evidence.",
+   "def_es": "Cómo vas a recolectar y analizar la evidencia."
+  },
+  "feedback": {
+   "en": "feedback",
+   "es": "retroalimentación",
+   "def_en": "Comments on your work that guide revision.",
+   "def_es": "Comentarios sobre tu trabajo que guían la revisión."
+  },
+  "revision": {
+   "en": "revision",
+   "es": "revisión",
+   "def_en": "A change to your work, with a reason.",
+   "def_es": "Un cambio en tu trabajo, con una razón."
+  }
+ },
+ "absent": {
+  "w1": {
+   "lines": [
+    "Use current work or the accessible passage.",
+    "Paragraph: claim, support, inference, limit.",
+    "Keep the paragraph before the peer check.",
+    "Show a changed sentence and explain your choice.",
+    "Report the partner check; check against the source.",
+    "Use your period's scoring criteria on slide 2."
+   ],
+   "reading": "goldsmith",
+   "lines_es": [
+    "Usa tu trabajo actual o el pasaje accesible.",
+    "Párrafo: afirmación, apoyo, inferencia, límite.",
+    "Guarda el párrafo antes de la revisión entre compañeros.",
+    "Muestra una oración que cambiaste y explica tu decisión.",
+    "Informa lo que encontró la revisión de tu compañero; compara con la fuente.",
+    "Usa los criterios de puntuación de tu período en la diapositiva 2."
+   ]
+  }
+ },
+ "materials": {
+  "all": [],
+  "AP Seminar": [
+   {
+    "label": "AP Seminar Course and Exam Description (College Board)",
+    "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"
+   },
+   {
+    "label": "ZoteroBib (citations)",
+    "url": "https://zbib.org/"
+   }
+  ]
+ },
+ "library": [
+  {
+   "id": "approved",
+   "label": "Approved resources",
+   "label_es": "Recursos aprobados",
+   "intro": "Only tools from the verified list in the Room 63 Search Guide (RESOURCES.md).",
+   "items": [
+    {
+     "label": "SDA: Survey Documentation and Analysis (UC Berkeley)",
+     "url": "https://sda.berkeley.edu/"
+    },
+    {
+     "label": "Pew Research Center datasets",
+     "url": "https://www.pewresearch.org/datasets/"
+    },
+    {
+     "label": "General Social Survey (NORC)",
+     "url": "https://gss.norc.org/"
+    },
+    {
+     "label": "Google Dataset Search",
+     "url": "https://datasetsearch.research.google.com/"
+    },
+    {
+     "label": "IPUMS USA",
+     "url": "https://usa.ipums.org/usa/"
+    },
+    {
+     "label": "data.census.gov",
+     "url": "https://data.census.gov/"
+    },
+    {
+     "label": "CDC WONDER",
+     "url": "https://wonder.cdc.gov/"
+    },
+    {
+     "label": "Bhattacherjee, Social Science Research (free text)",
+     "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"
+    },
+    {
+     "label": "OpenIntro Statistics",
+     "url": "https://www.openintro.org/book/os/"
+    },
+    {
+     "label": "ZoteroBib",
+     "url": "https://zbib.org/"
+    },
+    {
+     "label": "Taguette",
+     "url": "https://www.taguette.org/"
+    },
+    {
+     "label": "jamovi",
+     "url": "https://www.jamovi.org/"
+    },
+    {
+     "label": "UC Berkeley CPHS informed consent templates",
+     "url": "https://cphs.berkeley.edu/informedconsent.html"
+    }
+   ]
+  },
+  {
+   "id": "cb",
+   "label": "College Board rubrics and guides",
+   "label_es": "Rúbricas y guías del College Board",
+   "intro": "Official rubrics and course descriptions for this week's tasks.",
+   "items": [
+    {
+     "label": "AP Seminar Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf",
+     "note": "IRR task directions and rubric."
+    },
+    {
+     "label": "AP Seminar scoring guidelines",
+     "url": "https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions",
+     "note": "Scoring guidelines for both performance tasks."
+    },
+    {
+     "label": "AP Research Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf",
+     "note": "Academic paper elements and rubric."
+    },
+    {
+     "label": "Scored AP Research samples",
+     "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions",
+     "note": "Real papers with scoring commentary."
+    },
+    {
+     "label": "College Board guidance for AI tools",
+     "url": "https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools",
+     "note": "What students may and may not use AI for."
+    }
+   ]
+  },
+  {
+   "id": "archive",
+   "label": "Past weeks",
+   "label_es": "Semanas anteriores",
+   "intro": "Earlier weekly decks.",
+   "items": [
+    {
+     "label": "Week of November 9-13, 2026",
+     "url": "https://room-63-week-of-nov-9-2026.netlify.app/"
+    },
+    {
+     "label": "Week of November 2-6, 2026",
+     "url": "https://room63-week-of-nov-2-2026.netlify.app/"
+    }
+   ]
+  },
+  {
+   "id": "portfolio",
+   "label": "Portfolio directory",
+   "label_es": "Directorio de portafolios",
+   "intro": "Room 63 portfolio directory.",
+   "items": [
+    {
+     "label": "Room 63 portfolio directory",
+     "url": "https://my-portfolio-room-63.netlify.app/"
+    }
+   ]
+  }
+ ],
+ "routes": [
+  {
+   "day": "mon",
+   "period": 2,
+   "course": "AP Seminar",
+   "label": "Workshop 1: Source reasoning",
+   "label_es": "Taller 1: razonamiento con fuentes",
+   "opener": "w1-open",
+   "target": {
+    "en": "I can write a paragraph that states a source's claim, support, inference and limit.",
+    "es": "Puedo escribir un párrafo que presente la afirmación, el apoyo, la inferencia y el límite de una fuente.",
+    "why_en": "Feeds the Individual Research Report (IRR), AP Seminar Performance Task 1: analyzing and evaluating sources.",
+    "why_es": "Prepara el Informe de Investigación Individual (IRR), Tarea de Desempeño 1 de AP Seminar: analizar y evaluar fuentes."
+   },
+   "criteria": "w1",
+   "glossary": [
+    "claim",
+    "support",
+    "inference",
+    "limit",
+    "scope",
+    "credibility"
+   ],
+   "donow": {
+    "slide": "sem-1"
+   },
+   "exit": {
+    "slide": "sem-8",
+    "carry": true
+   },
+   "next": {
+    "en": "Wednesday, November 18: Workshop 2, Comparing sources. Reading: Carr, paragraphs 7-10, in the class copy.",
+    "es": "Miércoles 18 de noviembre: Taller 2, Comparar fuentes. Lectura: Carr, párrafos 7-10, en la copia de la clase."
+   },
+   "practice": [
+    "w1-core",
+    "w1-sup",
+    "w1-ext"
+   ],
+   "absent": "w1",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Read the target and the why aloud."
+      },
+      {
+       "slide": "@donow",
+       "minutes": 5,
+       "mode": "Silent",
+       "cue": "Start the do-now timer. Silent start."
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Point to the clock times and the work modes."
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Students check these again at the exit."
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Locate, read and model",
+     "label_es": "Ubicar, leer y modelar",
+     "steps": [
+      {
+       "slide": "sem-2",
+       "minutes": 3,
+       "mode": "Silent"
+      },
+      {
+       "slide": "sem-3",
+       "minutes": 14,
+       "mode": "Silent"
+      },
+      {
+       "slide": "sem-4",
+       "minutes": 5,
+       "mode": "Group"
+      },
+      {
+       "slide": "sem-5",
+       "minutes": 6,
+       "mode": "Partner"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Practice",
+     "label_es": "Práctica",
+     "steps": [
+      {
+       "slide": "sem-6",
+       "minutes": 4,
+       "mode": "Silent"
+      },
+      {
+       "slide": "sem-7",
+       "minutes": 3,
+       "mode": "Partner"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 32,
+       "mode": "Silent",
+       "cue": "Core first. Open supported or extension for students who need it."
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit ticket",
+     "label_es": "Boleto de salida",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 8,
+       "mode": "Silent",
+       "cue": "The exit goes in the student's own document. If not reached, it returns as next class's do-now."
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent",
+       "cue": "Absent students: print the absent sheet from Tools."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "images": {
+  "loc-miami": {
+   "item_id": "2011630408",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-miami.webp",
+   "w": 1600,
+   "h": 2048,
+   "alt": "Downtown Miami towers along the water under a cloudy sky.",
+   "title": "Downtown Miami, Florida",
+   "creator": "Highsmith, Carol M., 1946-, photographer",
+   "date": "between 1980 and 2006",
+   "source_url": "https://www.loc.gov/item/2011630408/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Carol M. Highsmith / Library of Congress · betw · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-newspaper": {
+   "item_id": "2020636246",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-newspaper.webp",
+   "w": 810,
+   "h": 1024,
+   "alt": "A young man leans on a counter, reading a newspaper closely.",
+   "title": "[Young man reading newspaper]",
+   "creator": "Rizzuto, Angelo, 1906-1967, photographer",
+   "date": "1956",
+   "source_url": "https://www.loc.gov/item/2020636246/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Angelo Rizzuto / Library of Congress · 1956 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  }
+ },
+ "maps_credit": "Maps: U.S. Census Bureau boundaries via us-atlas, and Natural Earth via world-atlas; both public domain. Drawn by Room 63.",
+ "anthology": {
+  "year": 2024,
+  "short": "They Say / I Say with Readings, 6th ed."
+ },
+ "step_visuals": {
+  "@donow:r": {
+   "type": "mark"
+  },
+  "@exit:r": {
+   "type": "flow",
+   "steps": [
+    "Decision",
+    "Next step",
+    "Prior work kept"
+   ]
+  }
+ },
+ "next_visuals": {
+  "fri": {
+   "type": "map",
+   "map": "miami",
+   "focus": "wolfson",
+   "img": "loc-miami"
+  }
+ },
+ "video": [
+  {
+   "label": "Teacher intro for this week",
+   "status": "placeholder",
+   "note": "Mr. Portela's recorded intro goes here when he records it."
+  },
+  {
+   "label": "Guest recordings",
+   "status": "placeholder",
+   "note": "Only with the guest's written permission. None has been asked yet; recording stays off."
+  },
+  {
+   "label": "Short captioned clips",
+   "status": "proposed",
+   "note": "Clips from PBS, museums or university channels are proposed in the visual manifest and wait for approval. None is linked yet."
+  }
+ ],
+ "audio": {
+  "default": "off",
+  "sounds": [
+   "timer chime",
+   "transition",
+   "work-time soundscape"
+  ],
+  "source": "generated in the browser with the Web Audio API; no audio files"
+ },
+ "_comment": "Example week. Every field is described in week.schema.json and README.md. Build it with: node weekly-deck/build.mjs example"
+}

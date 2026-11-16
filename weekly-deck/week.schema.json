@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "room63-weekly-deck/week.schema.json",
+  "title": "Room 63 weekly deck: one week of content",
+  "description": "Everything that changes week to week. build.mjs also checks the rules a schema cannot: every route's minutes add up to its bell, every route has all ten parts in order, every practice item exists, and no string holds a dash, a curly quote, an emoji, a meeting link or a credential.",
+  "type": "object",
+  "required": ["week", "bells", "days", "slides", "routes", "practice", "absent", "criteria", "glossary", "readings", "materials"],
+  "$defs": {
+    "hhmm": {"type": "string", "pattern": "^([01]?\\d|2[0-3]):[0-5]\\d$", "description": "24-hour clock, e.g. 13:05"},
+    "link": {"type": "object", "required": ["label", "url"], "properties": {"label": {"type": "string"}, "url": {"type": "string", "pattern": "^https://"}, "note": {"type": "string"}}},
+    "mode": {"enum": ["Silent", "Partner", "Group"]},
+    "special": {"enum": ["@target", "@donow", "@agenda", "@criteria", "@practice", "@materials", "@glossary", "@exit", "@next", "@absent"]},
+    "visual": {
+      "type": "object", "required": ["type"],
+      "properties": {
+        "type": {"enum": ["photo", "chain", "flow", "matrix", "meter", "concept", "timeline", "rtime", "mark", "record", "peers", "merge", "check", "poll", "chart", "lab", "map", "guest"]},
+        "mode": {"enum": ["documentary", "exhibit", "editorial"], "description": "documentary: slow push-in, grain, lower third (covers and openers). exhibit: object on dark ground, spotlight, catalog label (evidence). editorial: bold crop (ideas)."},
+        "img": {"type": "string", "description": "Key in images"},
+        "steps": {"type": "array", "description": "Diagram labels for chain and flow; an item may be {branch: [labels]}"},
+        "cols": {"type": "array", "items": {"type": "string"}}, "rows": {"type": "array", "items": {"type": "string"}},
+        "max": {"type": "integer"}, "options": {"type": "array", "items": {"type": "string"}},
+        "focus": {"type": "string"}, "map": {}
+      }
+    }
+  },
+  "properties": {
+    "week": {
+      "type": "object", "required": ["id", "title", "range", "date", "brand", "school", "teacher", "owner"],
+      "properties": {
+        "id": {"type": "string", "description": "Monday's date, also the file name: 2026-11-16"},
+        "title": {"type": "string", "description": "Week of November 16-20, 2026"},
+        "range": {"type": "string", "description": "Nov 16-20, used in the zip name"},
+        "date": {"type": "string"}, "brand": {"type": "string"}, "school": {"type": "string"}, "teacher": {"type": "string"},
+        "owner": {"type": "string", "description": "Name in the zip, e.g. Portela J"},
+        "publish": {"type": "object", "properties": {"archive_site": {"type": "string"}, "current_site": {"type": "string"}, "note": {"type": "string"}}}
+      }
+    },
+    "teacher": {"type": "object", "properties": {"passcode_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}, "note": {"type": "string"}}, "description": "Teacher mode: scripts and timing cues only. The passcode hides a panel; it is not security."},
+    "bells": {"type": "object", "description": "Period number to [start, end]", "additionalProperties": {"type": "array", "prefixItems": [{"$ref": "#/$defs/hhmm"}, {"$ref": "#/$defs/hhmm"}], "minItems": 2, "maxItems": 2}},
+    "days": {"type": "array", "items": {"type": "object", "required": ["id", "name", "date", "letter"], "properties": {
+      "id": {"enum": ["mon", "tue", "wed", "thu", "fri"]}, "name": {"type": "string"}, "date": {"type": "string"}, "letter": {"enum": ["A", "B"]},
+      "card": {"type": "object", "description": "A short card instead of routes (early release, trips)", "properties": {"title": {"type": "string"}, "title_es": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}}}}}},
+    "readings": {"type": "object", "description": "Citations only. Never reading text.", "additionalProperties": {"type": "object", "required": ["before", "book", "after", "note"], "properties": {"before": {"type": "string"}, "book": {"type": "string"}, "after": {"type": "string"}, "note": {"type": "string"}, "note_es": {"type": "string"}, "year": {"type": "integer"}, "short": {"type": "string"}}}},
+    "guests": {"type": "object", "description": "Name, affiliation, topic, time. No meeting links, emails or passcodes.", "additionalProperties": {"type": "object", "required": ["name", "affiliation", "topic", "when"], "properties": {"name": {"type": "string"}, "affiliation": {"type": "string"}, "topic": {"type": "string"}, "when": {"type": "string"}, "mode": {"type": "string"}, "language": {"type": "string"}, "initials": {"type": "string"}, "links": {"type": "array", "items": {"$ref": "#/$defs/link"}}}}},
+    "slides": {"type": "object", "description": "Slide words are verbatim from the source deck.", "additionalProperties": {"type": "object", "required": ["kind"], "properties": {
+      "kind": {"enum": ["cover", "opener", "content", "guest", "card", "pair", "lab"]},
+      "title": {"type": "string"}, "subtitle": {"type": "string"}, "subtitle_es": {"type": "string"},
+      "body": {"type": "array", "items": {"type": "string"}}, "footer": {"type": "string"},
+      "reading": {"type": "string"}, "guest": {"type": "string"}, "pair": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 2},
+      "deck_no": {"type": "integer"}, "deck_of": {"type": "integer"}, "origin": {"type": "string"},
+      "visual": {"$ref": "#/$defs/visual"}}}},
+    "images": {"type": "object", "description": "Every photograph, with a license verified at its source page.", "additionalProperties": {"type": "object", "required": ["file", "alt", "title", "creator", "date", "source_url", "item_id", "rights_statement", "license", "credit"], "properties": {"file": {"type": "string"}, "w": {"type": "integer"}, "h": {"type": "integer"}, "alt": {"type": "string"}, "title": {"type": "string"}, "creator": {"type": "string"}, "date": {"type": "string"}, "source_url": {"type": "string"}, "item_id": {"type": "string"}, "rights_statement": {"type": "string"}, "license": {"type": "string"}, "credit": {"type": "string"}, "treatment": {"type": "string"}}}},
+    "practice": {"type": "object", "additionalProperties": {"type": "object", "required": ["tier", "task", "rubric_rows", "minutes", "dok", "lines"], "properties": {
+      "tier": {"enum": ["core", "supported", "extension"]}, "task": {"type": "string", "description": "IRR, IWA, TMP, Academic Paper, ..."},
+      "rubric_rows": {"type": "array", "items": {"type": "string"}, "minItems": 1}, "minutes": {"type": "integer", "minimum": 1}, "dok": {"type": "integer", "minimum": 1, "maximum": 4},
+      "lines": {"type": "array", "items": {"type": "string"}, "description": "Built from existing card and slide text"}}}},
+    "rubric_rows": {"type": "object", "additionalProperties": {"type": "object", "required": ["source", "rows"], "properties": {"source": {"type": "string"}, "rows": {"type": "object", "additionalProperties": {"type": "string"}}, "links": {"type": "array", "items": {"$ref": "#/$defs/link"}}}}},
+    "criteria": {"type": "object", "additionalProperties": {"type": "array", "items": {"type": "object", "required": ["row", "en", "es"], "properties": {"row": {"type": "string"}, "en": {"type": "string"}, "es": {"type": "string"}}}}},
+    "glossary": {"type": "object", "additionalProperties": {"type": "object", "required": ["en", "es", "def_en", "def_es"], "properties": {"en": {"type": "string"}, "es": {"type": "string"}, "def_en": {"type": "string"}, "def_es": {"type": "string"}}}},
+    "absent": {"type": "object", "additionalProperties": {"type": "object", "required": ["lines"], "properties": {"lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}, "reading": {"type": "string"}, "guest_note": {"type": "string"}, "guest_note_es": {"type": "string"}}}},
+    "materials": {"type": "object", "description": "Keys: all, a course name, or P<n>. Public or Classroom-safe https links only; each gets a QR code.", "additionalProperties": {"type": "array", "items": {"$ref": "#/$defs/link"}}},
+    "library": {"type": "array", "items": {"type": "object", "required": ["id", "label", "items"], "properties": {"id": {"type": "string"}, "label": {"type": "string"}, "label_es": {"type": "string"}, "intro": {"type": "string"}, "items": {"type": "array", "items": {"$ref": "#/$defs/link"}}}}},
+    "video": {"type": "array", "items": {"type": "object", "required": ["label", "status"], "properties": {"label": {"type": "string"}, "status": {"enum": ["placeholder", "proposed", "approved"]}, "url": {"type": "string"}, "captions": {"type": "boolean"}, "note": {"type": "string"}}}},
+    "step_visuals": {"type": "object", "additionalProperties": {"$ref": "#/$defs/visual"}},
+    "next_visuals": {"type": "object", "additionalProperties": {"$ref": "#/$defs/visual"}},
+    "routes": {"type": "array", "items": {"type": "object",
+      "required": ["day", "period", "course", "label", "target", "donow", "criteria", "glossary", "practice", "exit", "next", "absent", "segments"],
+      "properties": {
+        "day": {"enum": ["mon", "tue", "wed", "thu", "fri"]}, "period": {"type": "integer", "minimum": 1, "maximum": 8},
+        "course": {"enum": ["AP Seminar", "AP Research"]}, "label": {"type": "string"}, "label_es": {"type": "string"},
+        "opener": {"type": "string", "description": "Slide whose title, subtitle and photo frame the learning target"},
+        "guest": {"type": "string"},
+        "target": {"type": "object", "required": ["en", "why_en"], "properties": {"en": {"type": "string"}, "es": {"type": "string"}, "why_en": {"type": "string"}, "why_es": {"type": "string"}}},
+        "donow": {"type": "object", "description": "Either a deck slide or lines", "properties": {"slide": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}}},
+        "exit": {"type": "object", "properties": {"slide": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}, "carry": {"type": "boolean", "description": "If not reached, show it again as the next class's do-now"}}},
+        "next": {"type": "object", "required": ["en"], "properties": {"en": {"type": "string"}, "es": {"type": "string"}, "visual": {"type": "string"}}},
+        "criteria": {"type": "string"}, "glossary": {"type": "array", "items": {"type": "string"}},
+        "practice": {"type": "array", "items": {"type": "string"}, "description": "One core, one supported, one extension"},
+        "absent": {"type": "string"},
+        "segments": {"type": "array", "items": {"type": "object", "required": ["type", "label", "steps"], "properties": {
+          "type": {"enum": ["intro", "slide", "guest", "reteach", "practice", "info", "exit", "absent"]},
+          "label": {"type": "string"}, "label_es": {"type": "string"},
+          "steps": {"type": "array", "items": {"type": "object", "required": ["slide", "minutes"], "properties": {
+            "slide": {"type": "string", "description": "A slide key, or one of the ten special parts: @target @donow @agenda @criteria @practice @materials @glossary @exit @next @absent"},
+            "minutes": {"type": "integer", "minimum": 0}, "mode": {"$ref": "#/$defs/mode"}, "cue": {"type": "string", "description": "Teacher-mode timing cue or script line"}}}}}}}
+      }}}
+  }
+}
