@@ -45,6 +45,9 @@ const FILE_RULES = [
 ];
 const fileHits = {};
 for (const [re, what] of FILE_RULES) { const m = text.match(re) || []; fileHits[what] = m.length; if (m.length) fail('file', `${m.length} x ${what}: ${[...new Set(m)].slice(0, 5).join(' ')}`); }
+{ const m = src.match(/<script id="deckdata" type="application\/json">([\s\S]*?)<\/script>/); const data = JSON.parse(m[1]);
+  for (const [k, im] of Object.entries(data.images || {})) { const y = (im.credit.split(' \u00b7 ')[1] || ''); if (!/^(\d{4}|\d{4}-\d{4}|c\. \d{4})$/.test(y)) fail('credits', `${k}: year field "${y}" is not YYYY, YYYY-YYYY or c. YYYY`); for (const f of ['alt', 'source_url', 'item_id', 'rights_statement', 'license']) if (!im[f]) fail('credits', `${k}: missing ${f}`); }
+  fileHits['credit lines with a bad year'] = fails.filter(f => f.startsWith('credits')).length; }
 const sizeMB = fs.statSync(FILE).size / 1048576;
 if (sizeMB > 25) fail('file', `size ${sizeMB.toFixed(1)} MB is over the 25 MB target`);
 

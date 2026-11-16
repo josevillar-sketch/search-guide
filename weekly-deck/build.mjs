@@ -103,6 +103,7 @@ const data = JSON.parse(JSON.stringify(week)); delete data.$schema;
 let imgBytes = 0;
 for (const [k, m] of Object.entries(data.images || {})) {
   for (const f of ['alt', 'source_url', 'license', 'credit', 'item_id', 'rights_statement']) if (!m[f]) { console.error(`image ${k}: missing ${f}`); process.exit(1); }
+  if (!/ \u00b7 (\d{4}|\d{4}-\d{4}|c\. \d{4}) \u00b7 /.test(m.credit)) { console.error(`image ${k}: credit year must be YYYY, YYYY-YYYY or c. YYYY: ${m.credit}`); process.exit(1); }
   const buf = fs.readFileSync(path.join(HERE, m.file));
   imgBytes += buf.length;
   m.src = 'data:image/webp;base64,' + buf.toString('base64');
