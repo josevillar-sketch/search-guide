@@ -42,7 +42,7 @@ The claude.ai project also keeps a "Where It Lives" register; it is the fuller m
 
 ChatGPT and Claude sessions pass work to each other through Google Docs, not through this repo:
 
-- **Hollis Dot Line 2 - 2026-11-12 - Portela J**: the active running message line for all new entries. Each entry starts with an ID like `ROOM63-DOT-...` or `ROOM63-CLAUDE-...` and a date. The first **Hollis Dot Line - 2026-11-01** is full and is now the preserved archive: read historical receipts there, but do not append, delete or truncate it. Standing approvals and earlier receipts remain in that archive; nothing is deleted.
+- **Hollis Dot Line 3 - 2026-11-15 - Portela J**: the active running message line for all new entries, at Mr. Portela's direction (Line 2 reached 59 percent of the Google Docs size limit). Each entry starts with an ID like `ROOM63-DOT-...` or `ROOM63-CLAUDE-...` and a date, newest at the top. At 80 percent of the size limit, start Line 4 and leave a pointer (rule ROOM63-DOC-SIZE-RULE-20261115). **Hollis Dot Line 2 - 2026-11-12** and the first **Hollis Dot Line - 2026-11-01** are preserved archives: read historical receipts there, but do not append, delete or truncate them. Standing approvals and earlier receipts remain in the archives; nothing is deleted.
 - **Room 63 | Cloud Continuation Ledger** and **Cloud Continuation Protocol for Other Chats**: open items and the rules for picking up another chat's work.
 - **AP Research — Conference Command Center — 2026-27 — Teacher Only**: conference records.
 
@@ -59,7 +59,7 @@ What that means in this repo:
 **Do without asking**
 - Check, log, and merge additions to `RESOURCES.md`, `BOOKS.md`, and `classroom/`. Open the pull request, run the checks, merge it.
 - Fix what you find: a dead link, a wrong edition, a claim a source no longer supports. Say what you fixed.
-- After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post any new entry to Hollis Dot Line 2. The first Line is the archive and receives no new entries.
+- After each merge: add a dated copy to the Drive backup folder (never overwrite an earlier copy) and post any new entry to Hollis Dot Line 3. Lines 1 and 2 are archives and receive no new entries.
 - Close your own loose ends before reporting. A reply that ends in a list of things you could have done is unfinished.
 - Verify before you state. Run the demo, open the page, hash the file. Say which of those you did.
 - Audit after you build. Re-read what you made against the primary source, not against your memory of it. The 2026-11-12 audit found a claim about a College Board guide that had never been checked against the guide; read the document before describing it.
