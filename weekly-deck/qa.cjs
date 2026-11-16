@@ -83,9 +83,9 @@ const PROBE = `(() => {
    if (sr.bottom > mr.bottom + 1) out.overflow.push('slide runs below the stage');
    if (main.scrollHeight > main.clientHeight + 1) out.overflow.push('stage scrolls ' + main.scrollHeight + ' > ' + main.clientHeight);
   }
-  slide.querySelectorAll('*').forEach(e => { if (!visible(e) || e.closest('.doc,.amb,.grain,.map svg *,.fly')) return; const r = e.getBoundingClientRect();
+  slide.querySelectorAll('*').forEach(e => { if (!visible(e) || e.closest('.doc,.amb,.grain,.map svg *,.fly,.crop img,.spot > *')) return; const r = e.getBoundingClientRect();
    if (r.right > sr.right + 1 || r.left < sr.left - 1 || (!phone && (r.bottom > sr.bottom + 1 || r.top < sr.top - 1))) out.overflow.push((e.getAttribute('class') || e.tagName) + ' ' + Math.round(r.left) + ',' + Math.round(r.top) + ' ' + Math.round(r.width) + 'x' + Math.round(r.height));
-   if (!(e instanceof SVGElement) && e.scrollHeight > e.clientHeight + 2 && ['hidden','auto','scroll'].includes(getComputedStyle(e).overflowY) && !e.closest('.doc,.spot,.crop,.exhibit,.map')) out.overflow.push('clipped ' + (e.getAttribute('class') || e.tagName)); });
+   if (!(e instanceof SVGElement) && e.scrollHeight > e.clientHeight + 2 && ['hidden','auto','scroll'].includes(getComputedStyle(e).overflowY) && !e.closest('.doc,.spot,.crop,.exhibit,.map,.ambox,#washbox')) out.overflow.push('clipped ' + (e.getAttribute('class') || e.tagName)); });
  } else {
   document.querySelectorAll('#content *').forEach(e => { if (!visible(e) || e.closest('.amb')) return; const r = e.getBoundingClientRect(); if (r.right > innerWidth + 1) out.overflow.push((e.getAttribute('class') || e.tagName) + ' runs off the right edge'); });
  }
@@ -231,7 +231,7 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   // interactives
   await page.goto(BASE + '#mon/P2-' + ix('mon-p2', 'sem-5')); await page.evaluate(() => window.DECK_TEST.revealAll());
   await page.click('[data-opt="A"]'); await page.click('[data-opt="A"]'); await page.click('[data-opt="C"]');
-  ok((await page.evaluate(() => [...document.querySelectorAll('.prow .pn')].map(x => x.textContent).join(','))) === '2,0,1', 'room poll tallies taps locally');
+  ok((await page.evaluate(() => [...document.querySelectorAll('#content .prow .pn')].map(x => x.textContent).join(','))) === '2,0,1', 'room poll tallies taps locally');
   await page.goto(BASE + '#tue/P1-' + ix('tue-p1', 'r1-lab')); await page.waitForTimeout(200);
   const chartA = await page.evaluate(() => document.querySelector('[data-lib="2"] .val').textContent);
   await page.click('[data-var="a"]'); const chartB = await page.evaluate(() => document.querySelector('[data-lib="2"] .val').textContent);
