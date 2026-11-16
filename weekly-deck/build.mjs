@@ -103,9 +103,11 @@ const data = JSON.parse(JSON.stringify(week)); delete data.$schema;
 // The site is public: no teacher-facing or production language ships in it (Mr. Portela's rule, 2026-11-16).
 // Teacher mode and timing cues stay in the teacher packet, never in the site.
 delete data.teacher;
+delete data.week.version; delete data.week.publish;
+for (const rb of Object.values(data.rubric_rows || {})) delete rb.source;
 for (const r of data.routes || []) for (const sg of r.segments || []) for (const st of sg.steps || []) delete st.cue;
 data.video = (data.video || []).filter(v => v.url).map(v => ({ label: v.label, url: v.url }));
-const PRODUCTION = /release hold|private review|review draft|draft \d|speaker notes|teacher scripts|source controls|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined|words on R\d|are unchanged|teacher only|do not share/i;
+const PRODUCTION = /release hold|private review|review draft|draft \d|speaker notes|teacher scripts|source controls|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined|words on R\d|are unchanged|teacher only|do not share|search guide|\.md\b|classroom\/[a-z-]+\.html|approval/i;
 { const txt = JSON.stringify(data); const hit = txt.match(PRODUCTION) || txt.match(/\bQA\b/); if (hit) { console.error(`public site holds teacher-facing or production language: "${hit[0]}"`); process.exit(1); } }
 let imgBytes = 0;
 for (const [k, m] of Object.entries(data.images || {})) {
@@ -137,6 +139,8 @@ const json = JSON.stringify(data).replace(/</g, '\\u003c').replace(/\u2028/g, '\
 const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const tpl = fs.readFileSync(path.join(HERE, 'template.html'), 'utf8');
 for (const ph of ['/*FONTS*/', '__DATA__', '__TITLE__', '__BRAND__', '__VARIANT__']) if (!tpl.includes(ph)) { console.error('template is missing placeholder ' + ph); process.exit(1); }
+// Source comments are working notes, not for the public page: drop CSS block comments and whole-line script comments.
+const tplPublic = tpl.replace(/\/\*(?!FONTS\*\/)[\s\S]*?\*\//g, '').replace(/^[ \t]*\/\/.*$\n?/gm, '');
 const pub = week.week.publish || {};
 const VARIANTS = [
   { key: 'archive', brand: `${week.week.brand} · WEEK OF ${week.week.range.toUpperCase()}`, title: `${week.week.brand} | ${week.week.title}`, site: pub.archive_site, zip: `Room 63 Week of ${week.week.range} Deck - ${week.week.date} - ${week.week.owner || 'Portela J'}.zip` },
@@ -147,7 +151,7 @@ fs.rmSync(root, { recursive: true, force: true });
 for (const v of VARIANTS) {
   const out = path.join(root, v.key);
   fs.mkdirSync(out, { recursive: true });
-  const html = tpl.replace('/*FONTS*/', () => fontCss).replace('__DATA__', () => json).replace('__TITLE__', () => esc(v.title)).replace('__BRAND__', () => esc(v.brand)).replace('__VARIANT__', () => v.key);
+  const html = tplPublic.replace('/*FONTS*/', () => fontCss).replace('__DATA__', () => json).replace('__TITLE__', () => esc(v.title)).replace('__BRAND__', () => esc(v.brand)).replace('__VARIANT__', () => v.key);
   fs.writeFileSync(path.join(out, 'index.html'), html);
   fs.writeFileSync(path.join(out, 'netlify.toml'), `# Netlify site: ${v.site || '(set in week.publish)'}  (${v.key} variant). Deploy only with Mr. Portela's approval.\n[build]\n  publish = "."\n`);
   fs.writeFileSync(path.join(out, '_headers'), '/*\n  X-Robots-Tag: noindex\n');

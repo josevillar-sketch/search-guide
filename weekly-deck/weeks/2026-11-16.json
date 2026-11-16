@@ -583,7 +583,7 @@
       "kind": "content",
       "title": "Comparing sources: Retrieve",
       "body": [
-        "Read yesterday's paragraph. Circle the claim; underline its support; box the limit."
+        "Read your Workshop 1 paragraph. Circle the claim; underline its support; box the limit."
       ],
       "origin": "AP Seminar student view, slide 10",
       "deck_no": 10,
@@ -939,7 +939,8 @@
           "label": "AP Seminar Course and Exam Description",
           "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"
         }
-      ]
+      ],
+      "cite": "Wording from the AP Seminar Performance Task 1 student directions (College Board)."
     },
     "Academic Paper": {
       "source": "AP Research Course and Exam Description, academic paper elements, as quoted in classroom/paper-elements-check.html",
@@ -956,7 +957,8 @@
           "label": "Scored AP Research samples (College Board)",
           "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions"
         }
-      ]
+      ],
+      "cite": "Wording from the AP Research Course and Exam Description, academic paper elements (College Board)."
     }
   },
   "criteria": {
@@ -998,7 +1000,7 @@
       {
         "row": "Method, Process, or Approach",
         "en": "I act on my existing feedback.",
-        "es": "Actúo segun la retroalimentación que ya tengo."
+        "es": "Actúo según la retroalimentación que ya tengo."
       },
       {
         "row": "Method, Process, or Approach",
@@ -1129,7 +1131,7 @@
         "Keep the paragraph before the peer check.",
         "Show a changed sentence and explain your choice.",
         "Report the partner check; check against the source.",
-        "Use your period's scoring criteria on slide 2."
+        "Check your paragraph against this class's success criteria on the class site."
       ],
       "reading": "goldsmith",
       "lines_es": [
@@ -1138,7 +1140,7 @@
         "Guarda el párrafo antes de la revisión entre compañeros.",
         "Muestra una oración que cambiaste y explica tu decisión.",
         "Informa lo que encontró la revisión de tu compañero; compara con la fuente.",
-        "Usa los criterios de puntuación de tu período en la diapositiva 2."
+        "Revisa tu párrafo con los criterios de éxito de esta clase en el sitio de la clase."
       ]
     },
     "w2": {
@@ -1300,7 +1302,7 @@
       "id": "approved",
       "label": "Approved resources",
       "label_es": "Recursos aprobados",
-      "intro": "Only tools from the verified list in the Room 63 Search Guide (RESOURCES.md).",
+      "intro": "Only tools Mr. Portela has opened, checked and approved.",
       "items": [
         {
           "label": "SDA: Survey Documentation and Analysis (UC Berkeley)",
@@ -1701,7 +1703,7 @@
         {
           "type": "guest",
           "label": "Guest: Michelle Kohler",
-          "label_es": "Invitado: Michelle Kohler",
+          "label_es": "Invitada: Michelle Kohler",
           "steps": [
             {
               "slide": "g-kohler",
@@ -2469,7 +2471,7 @@
         {
           "type": "guest",
           "label": "Guest: Professor Cecily Cooper",
-          "label_es": "Invitado: Professor Cecily Cooper",
+          "label_es": "Invitada: la profesora Cecily Cooper",
           "steps": [
             {
               "slide": "g-cooper",
@@ -2936,8 +2938,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre.",
         "visual": "fri"
       },
       "practice": [
@@ -3122,8 +3124,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre.",
         "visual": "fri"
       },
       "practice": [
@@ -3315,8 +3317,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre.",
         "visual": "fri"
       },
       "practice": [
@@ -3494,8 +3496,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. After that, next week's deck.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Después, el plan de la próxima semana.",
+        "en": "Friday, November 20: early release, school ends at noon, and the Miami Book Fair trip. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía, y viaje a la Feria del Libro de Miami. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre.",
         "visual": "fri"
       },
       "practice": [
@@ -3543,7 +3545,7 @@
           "steps": [
             {
               "slide": "sem-11",
-              "minutes": 14,
+              "minutes": 15,
               "mode": "Silent"
             }
           ]
@@ -3551,7 +3553,7 @@
         {
           "type": "guest",
           "label": "Guest: Achy Obejas",
-          "label_es": "Invitado: Achy Obejas",
+          "label_es": "Invitada: Achy Obejas",
           "steps": [
             {
               "slide": "g-obejas",
@@ -3600,7 +3602,7 @@
             },
             {
               "slide": "@practice",
-              "minutes": 15,
+              "minutes": 14,
               "mode": "Silent",
               "cue": "Core first. Open supported or extension for students who need it."
             }
@@ -3706,8 +3708,8 @@
         "carry": true
       },
       "next": {
-        "en": "Next class is next week. Look for next week's deck.",
-        "es": "La próxima clase es la semana que viene. Busca el plan de la próxima semana."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
       },
       "practice": [
         "r-core",
@@ -3768,7 +3770,7 @@
         {
           "type": "guest",
           "label": "Guest: Professor Daqing Piao",
-          "label_es": "Invitado: Professor Daqing Piao",
+          "label_es": "Invitado: el profesor Daqing Piao",
           "steps": [
             {
               "slide": "g-piao",
@@ -3891,8 +3893,8 @@
         "carry": true
       },
       "next": {
-        "en": "Next class is next week. Look for next week's deck.",
-        "es": "La próxima clase es la semana que viene. Busca el plan de la próxima semana."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
       },
       "practice": [
         "r-core",
@@ -3941,19 +3943,13 @@
               "slide": "r-cover",
               "minutes": 1,
               "mode": "Group"
-            },
-            {
-              "slide": "r-studio",
-              "minutes": 1,
-              "mode": "Silent",
-              "cue": "Individual work. Individual help is by agreed appointment."
             }
           ]
         },
         {
           "type": "guest",
           "label": "Guest: Colleen Rosales",
-          "label_es": "Invitado: Colleen Rosales",
+          "label_es": "Invitada: Colleen Rosales",
           "steps": [
             {
               "slide": "g-rosales",
@@ -3970,7 +3966,7 @@
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 32,
+              "minutes": 33,
               "mode": "Silent",
               "cue": "Core first. Open supported or extension for students who need it."
             }
@@ -4064,8 +4060,8 @@
         "carry": true
       },
       "next": {
-        "en": "Next class is next week. Look for next week's deck.",
-        "es": "La próxima clase es la semana que viene. Busca el plan de la próxima semana."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -4242,8 +4238,8 @@
         "carry": true
       },
       "next": {
-        "en": "Next class is next week. Look for next week's deck.",
-        "es": "La próxima clase es la semana que viene. Busca el plan de la próxima semana."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
