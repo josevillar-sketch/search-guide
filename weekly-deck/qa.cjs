@@ -80,6 +80,8 @@ const PROBE = `(() => {
   const sr = slide.getBoundingClientRect(), mr = main.getBoundingClientRect();
   if (!phone) {
    if (slide.scrollHeight > slide.clientHeight + 1) out.overflow.push('slide content ' + slide.scrollHeight + ' > ' + slide.clientHeight);
+   slide.querySelectorAll('.body,.stage2,.tiers,.pair,.lab').forEach(b => { if (b.scrollHeight > b.clientHeight + 2) out.overflow.push('content taller than its box: ' + (b.getAttribute('class') || b.tagName) + ' ' + b.scrollHeight + ' > ' + b.clientHeight); });
+   { const h = slide.querySelector('h1,h2:not(.vh)'), f = slide.querySelector('.sfoot'); const kids = [...slide.querySelectorAll('.body > *, .vis > *, .tiers > *, .pair > *, .mgrid > *, .gloss > *')].filter(visible); if (h) { const hb = h.getBoundingClientRect().bottom; kids.forEach(k => { if (k !== h && !k.contains(h) && k.getBoundingClientRect().top < hb - 1) out.overflow.push('runs into the title: ' + (k.getAttribute('class') || k.tagName)); }); } if (f) { const ft = f.getBoundingClientRect().top; kids.forEach(k => { if (k.getBoundingClientRect().bottom > ft + 1) out.overflow.push('runs into the footer: ' + (k.getAttribute('class') || k.tagName)); }); } }
    if (sr.bottom > mr.bottom + 1) out.overflow.push('slide runs below the stage');
    if (main.scrollHeight > main.clientHeight + 1) out.overflow.push('stage scrolls ' + main.scrollHeight + ' > ' + main.clientHeight);
   }
@@ -325,7 +327,7 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
     const TYPES = [['week', 'week overview'], ['mon', 'day page'], ['fri', 'Friday card'],
       T('mon-p4', '@target', 'learning target'), T('mon-p4', '@donow', 'do now'), T('mon-p4', '@agenda', 'agenda'), T('mon-p4', '@criteria', 'success criteria'), T('mon-p4', 'r-cover', 'cover'), T('mon-p4', 'r-studio', 'proposal work'), T('mon-p4', 'g-kohler', 'guest exhibit and map'),
       T('mon-p4', '@practice', 'practice tiers'), T('mon-p4', '@materials', 'materials and QR'), T('mon-p4', '@glossary', 'glossary'), T('mon-p4', '@exit', 'exit ticket'), T('mon-p4', '@next', 'next class'), T('mon-p4', '@absent', 'absent work'),
-      T('mon-p2', 'sem-1', 'do now from the deck'), T('mon-p2', 'sem-2', 'meter'), T('mon-p2', 'sem-3', 'reading citation and timeline'), T('mon-p2', 'sem-4', 'reasoning chain'), T('mon-p2', 'sem-5', 'room poll'), T('mon-p2', 'sem-6', 'credibility check'), T('mon-p2', 'sem-7', 'peer check'), T('mon-p2', '@exit', 'Seminar exit'),
+      T('mon-p2', '@donow', 'do now from the deck'), T('mon-p2', 'sem-2', 'meter'), T('mon-p2', 'sem-3', 'reading citation and timeline'), T('mon-p2', 'sem-4', 'reasoning chain'), T('mon-p2', 'sem-5', 'room poll'), T('mon-p2', 'sem-6', 'credibility check'), T('mon-p2', 'sem-7', 'peer check'), T('mon-p2', '@exit', 'Seminar exit'),
       T('tue-p1', 'r1-open', 'R1 opener'), T('tue-p1', 'r1-1', 'record exhibit'), T('tue-p1', 'r1-23', 'R1.2 with R1.3'), T('tue-p1', 'r1-lab', 'lab'), T('tue-p1', 'r1-4', 'R1.4 timeline'), T('tue-p1', '@exit', 'R1.5 exit'),
       T('wed-p2', '@donow', 'Workshop 2 do now'), T('wed-p2', 'sem-11', 'Carr citation'), T('wed-p2', 'sem-12', 'matrix'), T('wed-p2', 'sem-13', 'concept map'), T('wed-p2', 'sem-15', 'merge'), T('wed-p2', 'sem-16', 'report plan chain'), T('wed-p2', '@next', 'Book Fair map'),
       T('wed-p8', 'g-obejas', 'guest editorial'), T('thu-p3', 'g-rosales', 'guest world map'), T('tue-p3', 'g-cooper', 'guest Miami map'), T('thu-p1', 'g-piao', 'guest US map')];
