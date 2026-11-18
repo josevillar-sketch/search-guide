@@ -508,6 +508,13 @@ g.bi{transform-box:fill-box}
  .c57.back{font-size:14pt}
  .crop{position:absolute;background:var(--ink)}
  .crop.h{height:.5pt}.crop.v{width:.5pt}
+ html[lang=es] #print .slide.target{--zoom:.8}
+ html[lang=es] #print .slide.target .doc{width:32%}
+ html[lang=es] #print .slide.target.has-doc :is(h1,.sub,.slug,.body,.rule){max-width:62%}
+ html[lang=es] #print .slide.target :is(.tgt,.why){max-width:none}
+ html[lang=es] #print .slide.statement{--zoom:.76}
+ html[lang=es] #print .slide.statement .lines{max-width:60ch}
+ html[lang=es] #print .slide.statement .lines li{max-width:none}
 }
 
 @media(min-width:901px){:root{--t-body:calc(clamp(26px,min(2.2vw,3.8vh),48px)*var(--ts))}.size-measure .bi,.size-measure .draw,.size-measure .lines li{animation:none!important;transform:none!important}}
