@@ -639,6 +639,16 @@
     "img": "nasa-mirrors",
     "mode": "editorial"
    }
+  },
+  "s-gclose": {
+   "kind": "content",
+   "title": "Finish your guest note",
+   "body": [
+    "Add one sentence: what would count as enough evidence for him.",
+    "Save the note with your work.",
+    "Pack up quietly and leave at the bell."
+   ],
+   "origin": "Week plan, guest close before the 12:28 bell"
   }
  },
  "practice": {
@@ -5264,8 +5274,22 @@
      "steps": [
       {
        "slide": "g-loeb",
-       "minutes": 28,
-       "mode": "Group"
+       "minutes": 26,
+       "mode": "Group",
+       "cue": "At 12:26, send Professor Loeb a two-minute heads-up in the chat: the bell rings at 12:28 and students will leave then, and you will stay on the call for his closing remarks."
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Guest note close",
+     "label_es": "Cierre de la nota de la visita",
+     "steps": [
+      {
+       "slide": "s-gclose",
+       "minutes": 2,
+       "mode": "Silent",
+       "cue": "Students finish the note silently while Professor Loeb wraps up. Keep the call open after the bell and thank him once the room is clear."
       }
      ]
     },
