@@ -146,30 +146,32 @@
   },
   "r-studio": {
    "kind": "content",
-   "title": "Your proposal work",
+   "title": "Your literature review work",
    "body": [
-    "Use your existing feedback.",
-    "Choose your most important next step.",
-    "Revise, retain or investigate; explain why.",
-    "Save your decision and next step; keep prior work.",
-    "Individual help is by agreed appointment."
+    "Open your introduction draft and your Literature Review Map.",
+    "Pick the source group your draft does not yet explain.",
+    "Write how those sources agree, disagree or leave the gap your question fills.",
+    "Save; keep earlier versions.",
+    "No surveys, interviews or data from other people until Mr. Portela tells you your study is approved."
    ],
    "origin": "AP Research deck, SL_STUDIO_1",
    "visual": {
     "type": "flow",
     "steps": [
-     "Use your existing feedback",
-     "Choose your most important next step",
-     {
-      "branch": [
-       "Revise",
-       "Retain",
-       "Investigate"
-      ]
-     },
-     "Save your decision and next step"
+     "Open your draft and your map",
+     "Pick the source group not yet explained",
+     "Write how they agree, disagree or leave the gap",
+     "Save; keep earlier versions"
     ]
-   }
+   },
+   "title_es": "Tu trabajo de revisión de literatura",
+   "body_es": [
+    "Abre tu borrador de la introducción y tu mapa de la revisión de literatura.",
+    "Elige el grupo de fuentes que tu borrador todavía no explica.",
+    "Escribe cómo esas fuentes coinciden, difieren o dejan el vacío que tu pregunta llena.",
+    "Guarda; conserva las versiones anteriores.",
+    "No hagas encuestas ni entrevistas, ni reúnas datos de otras personas, hasta que el Sr. Portela te diga que tu estudio está aprobado."
+   ]
   },
   "s-3": {
    "kind": "content",
@@ -1674,12 +1676,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Friday, December 11",
-     "es": "Preparación para el inicio y borrador de la introducción, viernes 11 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -1715,8 +1717,8 @@
     "carry": true
    },
    "next": {
-    "en": "Wednesday, December 9: research and literature studio.",
-    "es": "Miércoles 9 de diciembre: taller de investigación y literatura."
+    "en": "Wednesday, December 9: research and literature studio. Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "Miércoles 9 de diciembre: taller de investigación y literatura. Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -2248,12 +2250,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Thursday, December 10",
-     "es": "Preparación para el inicio y borrador de la introducción, jueves 10 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -2289,8 +2291,8 @@
     "carry": true
    },
    "next": {
-    "en": "Thursday, December 10: research and literature studio.",
-    "es": "Jueves 10 de diciembre: taller de investigación y literatura."
+    "en": "Thursday, December 10: research and literature studio. Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "Jueves 10 de diciembre: taller de investigación y literatura. Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -2432,12 +2434,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Thursday, December 10",
-     "es": "Preparación para el inicio y borrador de la introducción, jueves 10 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -2473,8 +2475,8 @@
     "carry": true
    },
    "next": {
-    "en": "Thursday, December 10: research and literature studio.",
-    "es": "Jueves 10 de diciembre: taller de investigación y literatura."
+    "en": "Thursday, December 10: research and literature studio. Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "Jueves 10 de diciembre: taller de investigación y literatura. Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -3240,12 +3242,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Friday, December 11",
-     "es": "Preparación para el inicio y borrador de la introducción, viernes 11 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -3281,8 +3283,8 @@
     "carry": true
    },
    "next": {
-    "en": "Friday, December 11: research and literature studio.",
-    "es": "Viernes 11 de diciembre: taller de investigación y literatura."
+    "en": "Friday, December 11: research and literature studio. Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "Viernes 11 de diciembre: taller de investigación y literatura. Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -3814,12 +3816,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Thursday, December 10",
-     "es": "Preparación para el inicio y borrador de la introducción, jueves 10 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not)",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)"
     }
    ],
    "criteria": "r",
@@ -3855,8 +3857,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 14: keep your portfolio Doc, your latest feedback and your last daily entry ready.",
-    "es": "El lunes 14 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria."
+    "en": "On Monday, December 14: keep your portfolio Doc, your latest feedback and your last daily entry ready. Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not).",
+    "es": "El lunes 14 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria. Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)."
    },
    "practice": [
     "r-core",
@@ -3998,12 +4000,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Thursday, December 10",
-     "es": "Preparación para el inicio y borrador de la introducción, jueves 10 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not)",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)"
     }
    ],
    "criteria": "r",
@@ -4039,8 +4041,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 14: keep your portfolio Doc, your latest feedback and your last daily entry ready.",
-    "es": "El lunes 14 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria."
+    "en": "On Monday, December 14: keep your portfolio Doc, your latest feedback and your last daily entry ready. Launch Readiness and Introduction Draft: Thursday, December 10, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not).",
+    "es": "El lunes 14 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria. Preparación para el inicio y borrador de la introducción: jueves 10 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)."
    },
    "practice": [
     "r-core",
@@ -4799,12 +4801,12 @@
    },
    "due": [
     {
-     "en": "Annotations 7 to 12 and Literature Review Map, Tuesday, December 8",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura, martes 8 de diciembre"
+     "en": "Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM",
+     "es": "Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM"
     },
     {
-     "en": "Launch Readiness and Introduction Draft, Friday, December 11",
-     "es": "Preparación para el inicio y borrador de la introducción, viernes 11 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not)",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)"
     }
    ],
    "criteria": "r",
@@ -4840,8 +4842,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Tuesday, December 15: keep your portfolio Doc, your latest feedback and your last daily entry ready.",
-    "es": "El martes 15 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria."
+    "en": "On Tuesday, December 15: keep your portfolio Doc, your latest feedback and your last daily entry ready. Launch Readiness and Introduction Draft: Friday, December 11, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM (past due: turn it in now if you have not).",
+    "es": "El martes 15 de diciembre: ten listos tu documento de portafolio, tu retroalimentación más reciente y tu última entrada diaria. Preparación para el inicio y borrador de la introducción: viernes 11 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM (fecha vencida: entrégalo ahora si no lo has hecho)."
    },
    "practice": [
     "r-core",
