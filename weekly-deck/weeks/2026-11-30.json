@@ -175,30 +175,6 @@
    "label_es": "Persona invitada",
    "when_es": "11:00-11:30 AM, hora del Este",
    "mode_es": "Visita en vivo"
-  },
-  "cunningham": {
-   "name": "Mayor Karyn Cunningham",
-   "affiliation": "Village of Palmetto Bay",
-   "topic": "How the Village weighs evidence in decisions that affect its community",
-   "when": "8:10-8:40 AM Eastern",
-   "mode": "Tentative",
-   "initials": "KC",
-   "links": [],
-   "label_es": "Persona invitada",
-   "when_es": "8:10-8:40 AM, hora del Este",
-   "mode_es": "Por confirmar"
-  },
-  "gundersen": {
-   "name": "Professor Joshua Gundersen",
-   "affiliation": "University of Miami, Department of Physics",
-   "topic": "Astrophysical measurement, uncertainty and competing explanations",
-   "when": "9:30-10:15 AM Eastern",
-   "mode": "Tentative",
-   "initials": "JG",
-   "links": [],
-   "label_es": "Persona invitada",
-   "when_es": "9:30-10:15 AM, hora del Este",
-   "mode_es": "Por confirmar"
   }
  },
  "slides": {
@@ -455,16 +431,6 @@
     "mode": "editorial"
    }
   },
-  "g-cunningham": {
-   "kind": "guest",
-   "guest": "cunningham",
-   "title": "Mayor Karyn Cunningham",
-   "visual": {
-    "type": "guest",
-    "img": "loc-office",
-    "mode": "editorial"
-   }
-  },
   "pb-open": {
    "kind": "opener",
    "title": "Timed Part A practice",
@@ -476,16 +442,6 @@
     "type": "photo",
     "mode": "documentary",
     "img": "loc-typist"
-   }
-  },
-  "g-gundersen": {
-   "kind": "guest",
-   "guest": "gundersen",
-   "title": "Professor Joshua Gundersen",
-   "visual": {
-    "type": "guest",
-    "img": "nasa-mirrors",
-    "mode": "editorial"
    }
   },
   "s-predict": {
@@ -1282,8 +1238,8 @@
    "day": "mon",
    "period": 1,
    "course": "AP Research",
-   "label": "Tentative guest Mayor Karyn Cunningham (Village of Palmetto Bay), then proposal work",
-   "label_es": "Visita por confirmar de Karyn Cunningham (Village of Palmetto Bay), luego trabajo de propuesta",
+   "label": "Proposal work",
+   "label_es": "Trabajo de propuesta",
    "opener": "r-open",
    "target": {
     "en": "I can move my own proposal forward from the feedback I already have, and record one decision and my next step.",
@@ -1332,7 +1288,7 @@
     "r-sup",
     "r-ext"
    ],
-   "absent": "r-guest",
+   "absent": "r",
    "segments": [
     {
      "type": "intro",
@@ -1368,43 +1324,7 @@
      "steps": [
       {
        "slide": "r-studio",
-       "minutes": 30,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Guest field note",
-     "label_es": "Nota de campo para la visita",
-     "steps": [
-      {
-       "slide": "fieldnote",
-       "minutes": 5,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "guest",
-     "label": "Guest (tentative): Mayor Karyn Cunningham (Village of Palmetto Bay)",
-     "label_es": "Visita por confirmar: Karyn Cunningham (Village of Palmetto Bay)",
-     "steps": [
-      {
-       "slide": "g-cunningham",
-       "minutes": 30,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Debrief",
-     "label_es": "Cierre de la visita",
-     "steps": [
-      {
-       "slide": "debrief",
-       "minutes": 3,
+       "minutes": 45,
        "mode": "Silent"
       }
      ]
@@ -1416,7 +1336,7 @@
      "steps": [
       {
        "slide": "@practice",
-       "minutes": 4,
+       "minutes": 20,
        "mode": "Silent"
       }
      ]
@@ -1428,7 +1348,7 @@
      "steps": [
       {
        "slide": "decide",
-       "minutes": 3,
+       "minutes": 10,
        "mode": "Silent"
       }
      ]
@@ -1486,8 +1406,7 @@
       }
      ]
     }
-   ],
-   "guest": "cunningham"
+   ]
   },
   {
    "day": "mon",
@@ -4194,223 +4113,6 @@
      ]
     }
    ]
-  },
-  {
-   "day": "thu",
-   "period": 4,
-   "course": "AP Research",
-   "label": "Guest day: measurement and uncertainty",
-   "label_es": "Visita: medición e incertidumbre",
-   "opener": "r-open",
-   "target": {
-    "en": "I can predict the evidence a research question needs, then compare my prediction with how a working scientist measures, handles uncertainty and weighs competing explanations.",
-    "es": "Puedo predecir la evidencia que necesita una pregunta de investigación y luego comparar mi predicción con la forma en que un científico mide, maneja la incertidumbre y compara explicaciones.",
-    "why_en": "Feeds the AP Research academic paper: a method that fits the research question.",
-    "why_es": "Prepara el trabajo académico de AP Research: un método que encaja con la pregunta de investigación."
-   },
-   "due": [
-    {
-     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
-     "es": "Auditoría ética y certificado de investigación con seres humanos: jueves 3 de diciembre, 11:59 PM"
-    },
-    {
-     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
-     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
-    }
-   ],
-   "criteria": "r",
-   "glossary": [
-    "feedback",
-    "method",
-    "revision",
-    "record",
-    "claim",
-    "limit"
-   ],
-   "donow": {
-    "lines": [
-     "Open your portfolio Doc.",
-     "Reread your latest feedback and your last daily entry.",
-     "Write the one thing you will finish today."
-    ],
-    "lines_es": [
-     "Abre tu documento de portafolio.",
-     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
-     "Escribe lo único que vas a terminar hoy."
-    ]
-   },
-   "exit": {
-    "lines": [
-     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
-     "Close the Doc."
-    ],
-    "lines_es": [
-     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
-     "Cierra el documento."
-    ],
-    "carry": true
-   },
-   "next": {
-    "en": "On Monday, December 7: research and literature studio. Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
-    "es": "El lunes 7 de diciembre: taller de investigación y literatura. Auditoría ética y certificado de investigación con seres humanos: jueves 3 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
-   },
-   "practice": [
-    "r-core",
-    "r-sup",
-    "r-ext"
-   ],
-   "absent": "r",
-   "segments": [
-    {
-     "type": "intro",
-     "label": "Target, do now, agenda, success criteria",
-     "label_es": "Meta, para empezar, agenda, criterios de éxito",
-     "steps": [
-      {
-       "slide": "@target",
-       "minutes": 1,
-       "mode": "Group"
-      },
-      {
-       "slide": "@donow",
-       "minutes": 2,
-       "mode": "Silent"
-      },
-      {
-       "slide": "@agenda",
-       "minutes": 1,
-       "mode": "Group"
-      },
-      {
-       "slide": "@criteria",
-       "minutes": 1,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Guest field note",
-     "label_es": "Nota de campo de la visita",
-     "steps": [
-      {
-       "slide": "fieldnote",
-       "minutes": 8,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "guest",
-     "label": "Guest: Professor Joshua Gundersen (University of Miami)",
-     "label_es": "Visita: Joshua Gundersen (University of Miami)",
-     "steps": [
-      {
-       "slide": "s-predict",
-       "minutes": 5,
-       "mode": "Silent",
-       "cue": "Professor Gundersen poses his question; students write predictions before he answers, and he hears three or four aloud."
-      },
-      {
-       "slide": "g-gundersen",
-       "minutes": 40,
-       "mode": "Group",
-       "cue": "9:30 to 10:15. He walks through the measurements, the uncertainty and the competing explanations, then takes student questions."
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Debrief",
-     "label_es": "Reflexión",
-     "steps": [
-      {
-       "slide": "debrief",
-       "minutes": 5,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "practice",
-     "label": "Proposal work",
-     "label_es": "Trabajo de propuesta",
-     "steps": [
-      {
-       "slide": "@practice",
-       "minutes": 12,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Decision and reflection",
-     "label_es": "Decisión y reflexión",
-     "steps": [
-      {
-       "slide": "decide",
-       "minutes": 5,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "info",
-     "label": "Materials and glossary",
-     "label_es": "Materiales y glosario",
-     "steps": [
-      {
-       "slide": "@materials",
-       "minutes": 0,
-       "mode": "Silent"
-      },
-      {
-       "slide": "@glossary",
-       "minutes": 0,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "exit",
-     "label": "Close: update your status line",
-     "label_es": "Cierre: actualiza tu línea de estado",
-     "steps": [
-      {
-       "slide": "@exit",
-       "minutes": 3,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
-     "steps": [
-      {
-       "slide": "@next",
-       "minutes": 2,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "absent",
-     "label": "Absent work",
-     "label_es": "Trabajo para ausentes",
-     "steps": [
-      {
-       "slide": "@absent",
-       "minutes": 0,
-       "mode": "Silent"
-      }
-     ]
-    }
-   ],
-   "variant": "B",
-   "guest": "gundersen"
   },
   {
    "course": "AP Seminar",
