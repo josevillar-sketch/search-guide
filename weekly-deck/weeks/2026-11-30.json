@@ -181,18 +181,6 @@
    "label_es": "Persona invitada",
    "when_es": "8:10-8:40 AM, hora del Este",
    "mode_es": "Por confirmar"
-  },
-  "simonds": {
-   "name": "Sandra Simonds",
-   "affiliation": "Poet",
-   "topic": "How a poem changes through revision or translation",
-   "when": "1:10-1:30 PM Eastern",
-   "mode": "Tentative",
-   "initials": "SS",
-   "links": [],
-   "label_es": "Persona invitada",
-   "when_es": "1:10-1:30 PM, hora del Este",
-   "mode_es": "Por confirmar"
   }
  },
  "slides": {
@@ -445,16 +433,6 @@
    "visual": {
     "type": "guest",
     "img": "loc-office",
-    "mode": "editorial"
-   }
-  },
-  "g-simonds": {
-   "kind": "guest",
-   "guest": "simonds",
-   "title": "Sandra Simonds",
-   "visual": {
-    "type": "guest",
-    "img": "loc-typist",
     "mode": "editorial"
    }
   },
@@ -1996,11 +1974,11 @@
     "pr-sup",
     "pr-ext"
    ],
-   "absent": "pr-guest",
+   "absent": "pr",
    "day": "mon",
    "period": 7,
-   "label": "Tentative guest Sandra Simonds, then a whole practice report",
-   "label_es": "Visita por confirmar de Sandra Simonds, luego un informe de práctica completo",
+   "label": "Build a whole practice report",
+   "label_es": "Construye un informe de práctica completo",
    "target": {
     "en": "I can organize my practice report by ideas, draft a section that explains my sources' reasoning, and choose my next revision from a reverse outline.",
     "es": "Puedo organizar mi informe de práctica por ideas, redactar una sección que explique el razonamiento de mis fuentes y elegir mi próxima revisión con un esquema inverso.",
@@ -2045,7 +2023,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 2,
+       "minutes": 5,
        "mode": "Silent"
       },
       {
@@ -2057,30 +2035,6 @@
        "slide": "@criteria",
        "minutes": 1,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "guest",
-     "label": "Guest (tentative): Sandra Simonds",
-     "label_es": "Visita por confirmar: Sandra Simonds",
-     "steps": [
-      {
-       "slide": "g-simonds",
-       "minutes": 20,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Return from the guest",
-     "label_es": "Regreso de la visita",
-     "steps": [
-      {
-       "slide": "s-7",
-       "minutes": 5,
-       "mode": "Silent"
       }
      ]
     },
@@ -2108,7 +2062,7 @@
       },
       {
        "slide": "@practice",
-       "minutes": 16,
+       "minutes": 33,
        "mode": "Silent"
       }
      ]
@@ -2132,7 +2086,7 @@
      "steps": [
       {
        "slide": "s-5",
-       "minutes": 5,
+       "minutes": 10,
        "mode": "Silent"
       }
      ]
@@ -2190,8 +2144,7 @@
       }
      ]
     }
-   ],
-   "guest": "simonds"
+   ]
   },
   {
    "course": "AP Seminar",
