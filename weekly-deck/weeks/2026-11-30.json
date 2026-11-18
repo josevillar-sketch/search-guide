@@ -453,10 +453,10 @@
    "kind": "content",
    "title": "How Part A works",
    "body": [
-    "Question 1: identify the author's argument. 3 points.",
-    "Question 2: explain the line of reasoning, the claims and the connections between them. 6 points.",
-    "Question 3: evaluate how well the evidence supports the claims. 6 points.",
-    "Today: 10 minutes to read, then 25 minutes to write."
+    "Question 1: the author's argument. 3 points.",
+    "Question 2: the claims and how they connect. 6 points.",
+    "Question 3: how well the evidence supports the claims. 6 points.",
+    "Today: 10 minutes to read, 25 to write."
    ],
    "origin": "AP Seminar Version B teacher script, Thu Dec 3, slide 3",
    "deck_no": 3,
@@ -502,11 +502,10 @@
    "kind": "content",
    "title": "Self-score against the rubric rows",
    "body": [
-    "Question 1, up to 3: the whole argument, part of it, or only the topic.",
-    "Question 2, 2, 4 or 6: the important claims, and how they connect.",
-    "Question 3, 2, 4 or 6: judge specific evidence, strengths and weaknesses both.",
-    "Write your score and one reason beside each answer.",
-    "Then swap with a partner: one claim they named in question 2, one connection they missed."
+    "Question 1, up to 3: whole argument, part, or only the topic.",
+    "Question 2, 2 to 6: the key claims and how they connect.",
+    "Question 3, 2 to 6: specific evidence, strengths and weaknesses.",
+    "Write your score and one reason. Then a partner checks question 2."
    ],
    "origin": "AP Seminar Version B teacher script, Thu Dec 3, slide 6",
    "deck_no": 6,
@@ -524,10 +523,9 @@
    "kind": "content",
    "title": "Strong answers and a second-color revision",
    "body": [
-    "Question 1: what should happen, the limit on it, and the reasons.",
-    "Question 2: the claims in order, each one building on the one before.",
-    "Question 3: weigh pieces of evidence against each other.",
-    "Revise your lowest-scoring answer in a second color. Don't erase anything."
+    "Question 1: what should happen, its limit, and why.",
+    "Question 2: claims in order, each building on the last.",
+    "Question 3: evidence weighed against other evidence."
    ],
    "origin": "AP Seminar Version B teacher script, Thu Dec 3, slide 7",
    "deck_no": 7,
@@ -536,13 +534,8 @@
     "type": "flow",
     "steps": [
      "Hear strong answers",
-     "Choose your lowest score",
-     {
-      "branch": [
-       "Add what was missing",
-       "Keep the before"
-      ]
-     }
+     "Pick your lowest score",
+     "Revise in a second color"
     ]
    }
   },
@@ -671,10 +664,9 @@
    "minutes": 25,
    "dok": 4,
    "lines": [
-    "Answer all three questions by hand. Label them 1, 2 and 3.",
-    "Pace: about 3 minutes on question 1, then about 11 minutes each on questions 2 and 3.",
-    "Question 2: the claims, and how each one leads to the next.",
-    "Question 3: judge specific evidence, not just \"the author uses statistics.\""
+    "Answer all three by hand, labeled 1, 2 and 3.",
+    "Pace: about 3 minutes on 1, about 11 each on 2 and 3.",
+    "Question 3: judge specific evidence, not \"the author uses statistics.\""
    ]
   },
   "pa-sup": {
@@ -687,9 +679,9 @@
    "minutes": 25,
    "dok": 3,
    "lines": [
-    "Start from your marks: the boxed argument, the numbered claims, the circled evidence.",
-    "For question 2, use words like \"first,\" \"builds on,\" \"because\" and \"then answers an objection.\"",
-    "Stuck? Check which question you are on and what it asks."
+    "Start from your marks: the box, the numbers, the circles.",
+    "Question 2 words: \"first,\" \"builds on,\" \"because.\"",
+    "Stuck? Reread what the question asks."
    ]
   },
   "pa-ext": {
@@ -800,18 +792,18 @@
   "pa": [
    {
     "row": "Question 1: argument",
-    "en": "I state the author's whole argument: what should happen, and why.",
-    "es": "Expreso todo el argumento del autor: qué debería pasar y por qué."
+    "en": "I state the whole argument: what and why.",
+    "es": "Expreso todo el argumento: qué y por qué."
    },
    {
     "row": "Question 2: line of reasoning",
-    "en": "I name the claims in order and explain how each one leads to the next.",
-    "es": "Nombro las afirmaciones en orden y explico cómo cada una lleva a la siguiente."
+    "en": "I name the claims in order and how they connect.",
+    "es": "Nombro las afirmaciones en orden y cómo se conectan."
    },
    {
     "row": "Question 3: evidence",
-    "en": "I judge whether specific evidence is relevant and credible, and where it is strong or weak.",
-    "es": "Juzgo si una evidencia específica es pertinente y creíble, y dónde es fuerte o débil."
+    "en": "I judge specific evidence: relevant, credible, strong or weak.",
+    "es": "Juzgo evidencia específica: pertinente, creíble, fuerte o débil."
    }
   ]
  },
@@ -3823,21 +3815,21 @@
    "label": "Version B: timed Part A practice",
    "label_es": "Versión B: práctica cronometrada de la Parte A",
    "target": {
-    "en": "I can read an argument closely, then explain its claims, its line of reasoning and how well its evidence works, under time.",
-    "es": "Puedo leer un argumento con atención y luego explicar sus afirmaciones, su línea de razonamiento y qué tan bien funciona su evidencia, con tiempo limitado.",
-    "why_en": "Part A of the AP Seminar exam in May gives you one argument and three questions in about 30 minutes. Today is your first full practice, with the real question wording.",
-    "why_es": "La Parte A del examen de AP Seminar en mayo te da un argumento y tres preguntas en unos 30 minutos. Hoy es tu primera práctica completa, con la redacción real de las preguntas."
+    "en": "I can explain an argument's claims, line of reasoning and evidence, under time.",
+    "es": "Puedo explicar las afirmaciones, la línea de razonamiento y la evidencia de un argumento, con tiempo limitado.",
+    "why_en": "Part A of the May exam gives you one argument and three questions. Today is your first full timed practice.",
+    "why_es": "La Parte A del examen de mayo te da un argumento y tres preguntas. Hoy es tu primera práctica completa con tiempo."
    },
    "donow": {
     "lines": [
-     "Handout stays face down. On your lined paper, write your name and today's date.",
-     "One sentence: What is the difference between a claim and evidence?",
-     "One sentence: What does \"line of reasoning\" mean?"
+     "Handout face down. Name and date on your paper.",
+     "One sentence: how is a claim different from evidence?",
+     "One sentence: what is a line of reasoning?"
     ],
     "lines_es": [
-     "La hoja se queda boca abajo. En tu papel rayado, escribe tu nombre y la fecha de hoy.",
-     "Una oración: ¿Cuál es la diferencia entre una afirmación y la evidencia?",
-     "Una oración: ¿Qué significa \"línea de razonamiento\"?"
+     "La hoja boca abajo. Nombre y fecha en tu papel.",
+     "Una oración: ¿en qué se diferencia una afirmación de la evidencia?",
+     "Una oración: ¿qué es una línea de razonamiento?"
     ]
    },
    "exit": {
