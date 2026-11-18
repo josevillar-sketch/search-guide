@@ -174,6 +174,7 @@
       "name": "Michelle Kohler",
       "affiliation": "Illinois Natural History Survey, University of Illinois Urbana-Champaign",
       "topic": "Insect specimens, collection labels and what preserved evidence can show",
+      "topic_es": "Especímenes de insectos, etiquetas de colección y lo que puede mostrar la evidencia preservada",
       "when": "10:00-10:20 AM Eastern",
       "mode": "Virtual visit",
       "initials": "MK",
@@ -191,6 +192,7 @@
       "name": "Professor Cecily Cooper",
       "affiliation": "University of Miami, Department of Management",
       "topic": "Leader humor and how to conduct a simple field study",
+      "topic_es": "El humor de los líderes y cómo hacer un estudio de campo sencillo",
       "when": "10:00-10:20 AM Eastern",
       "mode": "Virtual visit",
       "initials": "CC",
@@ -207,10 +209,13 @@
     "obejas": {
       "name": "Achy Obejas",
       "affiliation": "Writer and translator",
+      "affiliation_es": "Escritura y traducción literaria",
       "topic": "One translation decision and the research behind it",
+      "topic_es": "Una decisión de traducción y la investigación que la respalda",
       "when": "1:30-1:50 PM Eastern",
       "mode": "Virtual visit",
       "language": "Conversation in English",
+      "language_es": "Conversación en inglés",
       "initials": "AO",
       "links": [
         {
@@ -259,6 +264,7 @@
       "kind": "cover",
       "title": "AP Research",
       "subtitle": "Proposal work and support",
+      "subtitle_es": "Trabajo y apoyo en la propuesta",
       "body": [
         "Individual proposal work comes first.",
         "Routine group conferences are paused.",
@@ -274,6 +280,7 @@
     "r-studio": {
       "kind": "content",
       "title": "Your proposal work",
+      "title_es": "Tu trabajo en la propuesta",
       "body": [
         "Use your existing feedback.",
         "Choose your most important next step.",
@@ -289,6 +296,7 @@
         "La ayuda individual es con cita acordada."
       ],
       "footer": "Use your existing portfolio · Due dates are on the Next slide",
+      "footer_es": "Usa tu portafolio actual · Las fechas de entrega están en la diapositiva Siguiente",
       "origin": "AP Research deck, SL_STUDIO_1",
       "visual": {
         "type": "flow",
@@ -339,7 +347,9 @@
     "r1-open": {
       "kind": "opener",
       "title": "Question and evidence match",
+      "title_es": "Pregunta y evidencia",
       "subtitle": "AP Research · R1 reteach",
+      "subtitle_es": "AP Research · Repaso de R1",
       "body": [],
       "visual": {
         "type": "record"
@@ -348,12 +358,19 @@
     "r1-1": {
       "kind": "content",
       "title": "R1 · Follow the evidence",
+      "title_es": "R1 · Sigue la evidencia",
       "body": [
         "What is one record?",
         "What time does it represent?",
         "What claim could it support?"
       ],
+      "body_es": [
+        "¿Qué es un registro?",
+        "¿Qué momento representa?",
+        "¿Qué afirmación podría apoyar?"
+      ],
       "footer": "R1.1 | Explain your reasoning",
+      "footer_es": "R1.1 | Explica tu razonamiento",
       "origin": "AP Research deck, SL_R1_1",
       "visual": {
         "type": "record"
@@ -368,6 +385,12 @@
         "Library C: 1,200 registered users; 6 average monthly loans per registered user.",
         "Reference period not specified. What can these averages tell us?"
       ],
+      "body_es": [
+        "Biblioteca A: 400 usuarios registrados; 3 préstamos mensuales promedio por usuario registrado.",
+        "Biblioteca B: 800 usuarios registrados; 5 préstamos mensuales promedio por usuario registrado.",
+        "Biblioteca C: 1,200 usuarios registrados; 6 préstamos mensuales promedio por usuario registrado.",
+        "No se indica el periodo de referencia. ¿Qué nos pueden decir estos promedios?"
+      ],
       "footer": "Fictional practice example: not research evidence",
       "origin": "AP Research deck, SL_R1_2"
     },
@@ -379,6 +402,12 @@
         "Joining a larger library makes a person read more.",
         "Every reader in the largest library borrows more than every reader in the smallest.",
         "Which claims exceed the records?"
+      ],
+      "body_es": [
+        "En esta tabla, las bibliotecas con más usuarios registrados tienen promedios más altos.",
+        "Unirse a una biblioteca más grande hace que una persona lea más.",
+        "Cada lector de la biblioteca más grande pide más préstamos que cada lector de la más pequeña.",
+        "¿Qué afirmaciones van más allá de los registros?"
       ],
       "footer": "Fictional practice example: not research evidence",
       "origin": "AP Research deck, SL_R1_3"
@@ -398,12 +427,19 @@
     "r1-4": {
       "kind": "content",
       "title": "Practice · Time matters",
+      "title_es": "Práctica · El tiempo importa",
       "body": [
         "Question: change from 2018 to 2025.",
         "Evidence: a 2026 questionnaire about current habits.",
         "Separate the question's period, collection date and period represented."
       ],
+      "body_es": [
+        "Pregunta: el cambio de 2018 a 2025.",
+        "Evidencia: un cuestionario de 2026 sobre hábitos actuales.",
+        "Separa el periodo de la pregunta, la fecha de recolección y el periodo que representan los datos."
+      ],
       "footer": "Fictional practice example: not research evidence",
+      "footer_es": "Ejemplo de práctica ficticio: no es evidencia de investigación",
       "origin": "AP Research deck, SL_R1_4",
       "visual": {
         "type": "timeline"
@@ -412,12 +448,19 @@
     "r1-5": {
       "kind": "content",
       "title": "Your decision",
+      "title_es": "Tu decisión",
       "body": [
         "Explain your question → evidence → analysis connection.",
         "Identify one unresolved step or justify the fit.",
         "Keep earlier work; record your own decision and reason."
       ],
+      "body_es": [
+        "Explica la conexión pregunta → evidencia → análisis.",
+        "Identifica un paso sin resolver o justifica que encajan.",
+        "Conserva tu trabajo anterior; anota tu propia decisión y tu razón."
+      ],
       "footer": "R1.5 | Explain your reasoning",
+      "footer_es": "R1.5 | Explica tu razonamiento",
       "origin": "AP Research deck, SL_R1_5",
       "visual": {
         "type": "chain",
@@ -497,6 +540,7 @@
     "w1-open": {
       "kind": "opener",
       "title": "Source reasoning",
+      "title_es": "Razonamiento con fuentes",
       "subtitle": "AP Seminar · Workshop 1",
       "body": [],
       "subtitle_es": "AP Seminar · Taller 1",
@@ -509,6 +553,7 @@
     "w2-open": {
       "kind": "opener",
       "title": "Comparing sources",
+      "title_es": "Comparar fuentes",
       "subtitle": "AP Seminar · Workshop 2",
       "body": [],
       "subtitle_es": "AP Seminar · Taller 2",
@@ -521,8 +566,12 @@
     "sem-1": {
       "kind": "content",
       "title": "Source reasoning: Retrieve and locate",
+      "title_es": "Razonamiento con fuentes: recuerda y ubica",
       "body": [
         "What is the author claiming? What supports it? What does it not establish?"
+      ],
+      "body_es": [
+        "¿Qué afirma el autor? ¿Qué lo apoya? ¿Qué no establece?"
       ],
       "origin": "AP Seminar student view, slide 1",
       "deck_no": 1,
@@ -538,16 +587,17 @@
     },
     "sem-2": {
       "kind": "content",
-      "title": "Source reasoning: Locate the task",
+      "title": "Source reasoning: Today's task",
+      "title_es": "Razonamiento con fuentes: la tarea de hoy",
       "body": [
-        "Paragraph /4: claim, support, inference, limit.",
-        "P2/P5/P7: paragraph + decision exit (/4 each).",
-        "P6/P8: one source-reasoning score /4.",
-        "Decision exit (P2/P5/P7), one point each:",
-        "1. Shows the sentence that changed",
-        "2. Says what the partner's check found",
-        "3. Explains one choice in the revision",
-        "4. Checks the changed sentence against the source"
+        "Write one paragraph about a source: its claim, support, inference and limit. It is scored out of 4.",
+        "A partner checks your paragraph. Then you revise one sentence.",
+        "Exit: show the changed sentence, say what the partner's check found, explain one choice, and check the changed sentence against the source."
+      ],
+      "body_es": [
+        "Escribe un párrafo sobre una fuente: su afirmación, su apoyo, su inferencia y su límite. Se califica sobre 4.",
+        "Un compañero revisa tu párrafo. Luego cambias una oración.",
+        "Salida: muestra la oración que cambiaste, di lo que encontró la revisión de tu compañero, explica una decisión y compara la oración cambiada con la fuente."
       ],
       "origin": "AP Seminar student view, slide 2",
       "deck_no": 2,
@@ -560,10 +610,16 @@
     "sem-3": {
       "kind": "content",
       "title": "Source reasoning: Read the common passage",
+      "title_es": "Razonamiento con fuentes: lee el pasaje común",
       "body": [
         "Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), paragraphs 4 to 7.",
         "Mark claim, example and inference.",
         "Treat the passage as a historical argument, not a current scientific finding."
+      ],
+      "body_es": [
+        "Goldsmith, \"Go Ahead: Waste Time on the Internet\" (2016), párrafos 4 a 7.",
+        "Marca la afirmación, el ejemplo y la inferencia.",
+        "Lee el pasaje como un argumento histórico, no como un hallazgo científico actual."
       ],
       "reading": "goldsmith",
       "origin": "AP Seminar student view, slide 3",
@@ -577,8 +633,12 @@
     "sem-4": {
       "kind": "content",
       "title": "Source reasoning: Model the reasoning",
+      "title_es": "Razonamiento con fuentes: modelo del razonamiento",
       "body": [
         "Observation → inference → scope."
+      ],
+      "body_es": [
+        "Observación → inferencia → alcance."
       ],
       "origin": "AP Seminar student view, slide 4",
       "deck_no": 4,
@@ -595,11 +655,18 @@
     "sem-5": {
       "kind": "content",
       "title": "Source reasoning: Test the inference",
+      "title_es": "Razonamiento con fuentes: pon a prueba la inferencia",
       "body": [
         "Which conclusion exceeds the evidence?",
         "A: Some device use includes sustained reading.",
         "B: The passage challenges a blanket claim.",
         "C: Devices improve concentration for all users."
+      ],
+      "body_es": [
+        "¿Qué conclusión va más allá de la evidencia?",
+        "A: Parte del uso de dispositivos incluye lectura sostenida.",
+        "B: El pasaje cuestiona una afirmación general.",
+        "C: Los dispositivos mejoran la concentración de todos los usuarios."
       ],
       "origin": "AP Seminar student view, slide 5",
       "deck_no": 5,
@@ -616,12 +683,20 @@
     "sem-6": {
       "kind": "content",
       "title": "Source reasoning: Use your own source",
+      "title_es": "Razonamiento con fuentes: usa tu propia fuente",
       "body": [
         "Check credibility and relevance.",
         "Who produced it? What supports trust?",
         "Why does it fit? What needs checking?",
         "Write: claim, support, explanation, limit.",
         "Keep the source open."
+      ],
+      "body_es": [
+        "Revisa la credibilidad y la relevancia.",
+        "¿Quién la produjo? ¿Qué apoya la confianza?",
+        "¿Por qué encaja? ¿Qué hay que verificar?",
+        "Escribe: afirmación, apoyo, explicación, límite.",
+        "Mantén la fuente abierta."
       ],
       "origin": "AP Seminar student view, slide 6",
       "deck_no": 6,
@@ -633,11 +708,18 @@
     "sem-7": {
       "kind": "content",
       "title": "Source reasoning: Peer check and revise",
+      "title_es": "Razonamiento con fuentes: revisión entre compañeros",
       "body": [
         "Keep the paragraph before the check.",
         "Point to evidence. Test the explanation and limit.",
         "Identify a specific issue or strength.",
         "Revise a sentence and explain the source-based reason."
+      ],
+      "body_es": [
+        "Guarda el párrafo antes de la revisión.",
+        "Señala la evidencia. Pon a prueba la explicación y el límite.",
+        "Identifica un problema o un punto fuerte específico.",
+        "Cambia una oración y explica la razón basada en la fuente."
       ],
       "origin": "AP Seminar student view, slide 7",
       "deck_no": 7,
@@ -649,12 +731,18 @@
     "sem-8": {
       "kind": "content",
       "title": "Source reasoning: Exit and next lesson",
+      "title_es": "Razonamiento con fuentes: salida y próxima clase",
       "body": [
         "Show the sentence that changed.",
         "Say what the partner's check found.",
         "Explain one choice in the revision.",
-        "Check the changed sentence against the source.",
-        "P2/P5/P7: exit /4. P6/P8: paragraph /4."
+        "Check the changed sentence against the source."
+      ],
+      "body_es": [
+        "Muestra la oración que cambiaste.",
+        "Di lo que encontró la revisión de tu compañero.",
+        "Explica una decisión de tu revisión.",
+        "Compara la oración cambiada con la fuente."
       ],
       "origin": "AP Seminar student view, slide 8",
       "deck_no": 8,
@@ -685,6 +773,7 @@
     "sem-10": {
       "kind": "content",
       "title": "Comparing sources: Retrieve",
+      "title_es": "Comparar fuentes: recuerda",
       "body": [
         "Open your Workshop 1 paragraph. Highlight the claim. Bold its support. Put one limit in [brackets]."
       ],
@@ -699,6 +788,7 @@
     "sem-11": {
       "kind": "content",
       "title": "Comparing sources: Read Carr",
+      "title_es": "Comparar fuentes: lee a Carr",
       "body": [
         "Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7 to 10.",
         "What was compared? Who participated? What was measured? What does Carr infer?",
@@ -719,6 +809,7 @@
     "sem-12": {
       "kind": "content",
       "title": "Comparing sources: Comparison model",
+      "title_es": "Comparar fuentes: modelo de comparación",
       "body": [
         "Conditions | outcome | support | scope"
       ],
@@ -743,6 +834,7 @@
     "sem-13": {
       "kind": "content",
       "title": "Comparing sources: A real connection",
+      "title_es": "Comparar fuentes: una conexión real",
       "body": [
         "Agree / qualify / complement / conflict: explain the relation."
       ],
@@ -757,6 +849,7 @@
     "sem-14": {
       "kind": "content",
       "title": "Comparing sources: Own-source matrix",
+      "title_es": "Comparar fuentes: matriz con tus fuentes",
       "body": [
         "For two sources from your log, write each one's claim, support and one limit. Then name how they relate and what that changes. Write it in your current document under today's date."
       ],
@@ -780,6 +873,7 @@
     "sem-15": {
       "kind": "content",
       "title": "Comparing sources: Write the synthesis",
+      "title_es": "Comparar fuentes: escribe la síntesis",
       "body": [
         "Turn your table into one paragraph about the idea, not one per author. Name each author with a verb: reports, argues or infers."
       ],
@@ -794,6 +888,7 @@
     "sem-16": {
       "kind": "content",
       "title": "Comparing sources: From paragraph to report plan",
+      "title_es": "Comparar fuentes: del párrafo al plan del informe",
       "body": [
         "Write two or three report section headings. Name each by an idea, not an author."
       ],
@@ -814,6 +909,7 @@
     "sem-17": {
       "kind": "content",
       "title": "Comparing sources: Exit",
+      "title_es": "Comparar fuentes: salida",
       "body": [
         "What did the comparison change? What is your next evidence need?"
       ],
@@ -843,6 +939,7 @@
     "r-open": {
       "kind": "opener",
       "title": "Proposal work",
+      "title_es": "Trabajo en la propuesta",
       "subtitle": "AP Research · Week of November 16",
       "subtitle_es": "AP Research · Semana del 16 de noviembre",
       "body": [],
@@ -855,6 +952,7 @@
     "r1-lab": {
       "kind": "lab",
       "title": "Lab: the three libraries",
+      "title_es": "Laboratorio: las tres bibliotecas",
       "body": [],
       "note": "All three libraries in this lab are fictional.",
       "visual": {
@@ -864,26 +962,41 @@
     "q-dec1": {
       "kind": "content",
       "title": "Questions for our December 1 guest",
+      "title_es": "Preguntas para la visita del 1 de diciembre",
       "body": [
         "Dr. Mario Del Angel-Guevara, University of New Mexico Curanderismo Program, visits Period 8 on Tuesday, December 1.",
         "Topic: documenting traditional healing, and experience versus clinical evidence.",
         "Write two questions you would ask Dr. Del Angel-Guevara. Make each one about evidence: how something is known, recorded or tested.",
         "Write them in your current document."
+      ],
+      "body_es": [
+        "Dr. Mario Del Angel-Guevara, del Programa de Curanderismo de la University of New Mexico, visita el Periodo 8 el martes 1 de diciembre.",
+        "Tema: documentar la sanación tradicional, y la experiencia frente a la evidencia clínica.",
+        "Escribe dos preguntas para Dr. Del Angel-Guevara. Que cada una trate de la evidencia: cómo se sabe, se registra o se pone a prueba algo.",
+        "Escríbelas en tu documento actual."
       ]
     },
     "study": {
       "kind": "content",
       "title": "Study sheet: one finished AP Research paper",
+      "title_es": "Hoja de estudio: un trabajo terminado de AP Research",
       "body": [
         "Read the top box: what the paper set out to do and what it found.",
         "Part 1, with a partner: mark which of the four things your own method section already does.",
         "Part 2: what does the paper do before it gives its reasons?",
         "Part 3: answer the three questions about your own plan in your research log."
+      ],
+      "body_es": [
+        "Lee el recuadro de arriba: qué se propuso el trabajo y qué encontró.",
+        "Parte 1, con un compañero: marca cuáles de las cuatro cosas ya hace tu propia sección de método.",
+        "Parte 2: ¿qué hace el trabajo antes de dar sus razones?",
+        "Parte 3: responde en tu registro de investigación las tres preguntas sobre tu propio plan."
       ]
     },
     "fieldnote": {
       "kind": "content",
       "title": "Guest field note",
+      "title_es": "Nota de campo de la visita",
       "body": [
         "Take a field-note sheet. It has six headings: claim; evidence and its type; method; limit; my question; how it connects to my project.",
         "Before the guest starts, write one question under My question.",
@@ -898,15 +1011,22 @@
     "fieldnote-k": {
       "kind": "content",
       "title": "Guest field note",
+      "title_es": "Nota de campo de la visita",
       "body": [
         "Head a field note with six fields: claim, evidence and its type, method, limit, my question, link to me.",
         "Write one question about a specimen or its label.",
         "Complete the note while the guest speaks."
+      ],
+      "body_es": [
+        "Encabeza una nota de campo con seis campos: afirmación, evidencia y su tipo, método, límite, mi pregunta, conexión conmigo.",
+        "Escribe una pregunta sobre un espécimen o su etiqueta.",
+        "Completa la nota mientras habla la persona invitada."
       ]
     },
     "debrief": {
       "kind": "content",
       "title": "Debrief",
+      "title_es": "Cierre",
       "body": [
         "Write one sentence that links the talk to your own method.",
         "Two or three of us read ours aloud."
@@ -919,17 +1039,27 @@
     "debrief-k": {
       "kind": "content",
       "title": "Debrief",
+      "title_es": "Cierre",
       "body": [
         "Write one sentence that separates an observation from an inference in what the guest showed.",
         "Two or three of us read ours aloud."
+      ],
+      "body_es": [
+        "Escribe una oración que separe una observación de una inferencia en lo que mostró la persona invitada.",
+        "Dos o tres de nosotros leemos la nuestra en voz alta."
       ]
     },
     "decide": {
       "kind": "content",
       "title": "Decision and reflection",
+      "title_es": "Decisión y reflexión",
       "body": [
         "Write today's daily entry: Did, Changed, Next.",
         "Add one decision you made today, with its reason."
+      ],
+      "body_es": [
+        "Escribe la entrada diaria de hoy: qué hiciste, qué cambiaste y qué sigue.",
+        "Agrega una decisión que tomaste hoy, con su razón."
       ]
     },
     "bf-title": {
@@ -1174,6 +1304,12 @@
         "Keep the paragraph before the peer check.",
         "Show a changed sentence and explain your choice.",
         "Report the partner check; check against the source."
+      ],
+      "lines_es": [
+        "Párrafo: afirmación, apoyo, inferencia, límite.",
+        "Guarda el párrafo antes de la revisión entre compañeros.",
+        "Muestra una oración que cambiaste y explica tu decisión.",
+        "Anota lo que encontró la revisión de tu compañero; compara con la fuente."
       ]
     },
     "w1-sup": {
@@ -1188,6 +1324,11 @@
         "Use current work or the accessible passage.",
         "Mark claim, example and inference.",
         "Write: claim, support, explanation, limit."
+      ],
+      "lines_es": [
+        "Usa tu trabajo actual o el pasaje accesible.",
+        "Marca la afirmación, el ejemplo y la inferencia.",
+        "Escribe: afirmación, apoyo, explicación, límite."
       ]
     },
     "w1-ext": {
@@ -1204,6 +1345,12 @@
         "Who produced it? What supports trust?",
         "Why does it fit? What needs checking?",
         "Treat the passage as a historical argument, not a current scientific finding."
+      ],
+      "lines_es": [
+        "Revisa la credibilidad y la relevancia.",
+        "¿Quién la produjo? ¿Qué apoya la confianza?",
+        "¿Por qué encaja? ¿Qué hay que verificar?",
+        "Lee el pasaje como un argumento histórico, no como un hallazgo científico actual."
       ]
     },
     "w2-core": {
@@ -1326,6 +1473,11 @@
         "Explain your question → evidence → analysis connection.",
         "Identify one unresolved step or justify the fit.",
         "Keep earlier work; record your own decision and reason."
+      ],
+      "lines_es": [
+        "Explica la conexión pregunta → evidencia → análisis.",
+        "Identifica un paso sin resolver o justifica que encajan.",
+        "Conserva tu trabajo anterior; anota tu propia decisión y tu razón."
       ]
     },
     "r1-sup": {
@@ -1340,6 +1492,11 @@
         "What is one record?",
         "What time does it represent?",
         "What claim could it support?"
+      ],
+      "lines_es": [
+        "¿Qué es un registro?",
+        "¿Qué momento representa?",
+        "¿Qué afirmación podría apoyar?"
       ]
     },
     "r1-ext": {
@@ -1354,6 +1511,10 @@
       "lines": [
         "Which claims exceed the records?",
         "Separate the question's period, collection date and period represented."
+      ],
+      "lines_es": [
+        "¿Qué afirmaciones van más allá de los registros?",
+        "Separa el periodo de la pregunta, la fecha de recolección y el periodo que representan los datos."
       ]
     }
   },
@@ -1723,10 +1884,12 @@
       },
       {
         "label": "Bhattacherjee, Social Science Research (free text)",
+        "label_es": "Bhattacherjee, Social Science Research (texto gratuito)",
         "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"
       },
       {
         "label": "ZoteroBib (citations)",
+        "label_es": "ZoteroBib (citas)",
         "url": "https://zbib.org/"
       }
     ],
@@ -1737,62 +1900,73 @@
       },
       {
         "label": "ZoteroBib (citations)",
+        "label_es": "ZoteroBib (citas)",
         "url": "https://zbib.org/"
       }
     ],
     "P1": [
       {
         "label": "P1 Classroom: Research checkpoints (Material)",
+        "label_es": "Classroom de P1: Research checkpoints (material)",
         "url": "https://classroom.google.com/c/ODcyMDU3MjYzNjg2/m/ODgzMTAzNjM1MTk5/details"
       }
     ],
     "P3": [
       {
         "label": "P3 Classroom: Research checkpoints (Material)",
+        "label_es": "Classroom de P3: Research checkpoints (material)",
         "url": "https://classroom.google.com/c/ODcyMDU3Njg5NzE4/m/ODgzMTAzMTY5Mjg2/details"
       }
     ],
     "P4": [
       {
         "label": "P4 Classroom: Research checkpoints (Material)",
+        "label_es": "Classroom de P4: Research checkpoints (material)",
         "url": "https://classroom.google.com/c/ODcyMDU3ODQ3NzEx/m/ODgzMTAzNTczNzUy/details"
       }
     ],
     "P5": [
       {
         "label": "P5 Classroom: Classwork",
+        "label_es": "Classroom de P5: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU2NDExMjAx/t/all"
       },
       {
         "label": "Carr reading (school sign-in)",
+        "label_es": "Lectura de Carr (inicio de sesión de la escuela)",
         "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
       }
     ],
     "P7": [
       {
         "label": "P7 Classroom: Classwork",
+        "label_es": "Classroom de P7: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU3NzM4NjIz/t/all"
       },
       {
         "label": "Carr reading (school sign-in)",
+        "label_es": "Lectura de Carr (inicio de sesión de la escuela)",
         "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
       }
     ],
     "P2": [
       {
         "label": "P2 Classroom: Classwork",
+        "label_es": "Classroom de P2: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU4MDI5MTYz/t/all"
       }
     ],
     "P6": [
       {
         "label": "P6 Classroom: Classwork",
+        "label_es": "Classroom de P6: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU3NTEzOTUx/t/all"
       }
     ],
     "P8": [
       {
         "label": "P8 Classroom: Classwork",
+        "label_es": "Classroom de P8: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU3NjcyMDY5/t/all"
       }
     ]
@@ -1834,6 +2008,7 @@
         },
         {
           "label": "Bhattacherjee, Social Science Research (free text)",
+          "label_es": "Bhattacherjee, Social Science Research (texto gratuito)",
           "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"
         },
         {
