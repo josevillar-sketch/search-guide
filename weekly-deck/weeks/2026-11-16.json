@@ -941,12 +941,12 @@
       "body": [
         "8:00 AM: bus leaves Mater",
         "10:00 AM: Teens Read",
-        "2:00 PM: back at Mater (2:30 at the latest)"
+        "2:15 PM: back at Mater. Have your ride there by 2:15 PM."
       ],
       "body_es": [
         "8:00 AM: el autobús sale de Mater",
         "10:00 AM: Teens Read",
-        "2:00 PM: de regreso en Mater (a más tardar a las 2:30)"
+        "2:15 PM: de regreso en Mater. Que te recojan allí a las 2:15 PM."
       ]
     },
     "bf-before": {
@@ -957,13 +957,13 @@
       "body": [
         "Permission form and $5: pick up your permission form in Room 63. Can't get to Room 63? Print the copy attached to the email. Have your parent or guardian fill out and sign it, list any allergies or medicines, and turn it in with $5 by Thursday, November 19, at 3:00 PM. Nobody goes on the trip without a signed form turned in on time. No exceptions. The $5 can't be refunded.",
         "Your book: pick up your Teens Read book in Room 63. Only a few copies are left, so it's first come, first served.",
-        "Your ride home: we expect to be back at Mater by 2:00 PM, 2:30 PM at the latest. Have your ride at Mater by 2:15 PM.",
+        "Your ride home: have your ride at Mater by 2:15 PM.",
         "Can't make it? Reply to the email by Thursday, November 19, at 3:00 PM so your seat can go to a classmate who's waiting. Same goes for any change or question."
       ],
       "body_es": [
         "Permiso y $5: recoge tu permiso en el salón 63. ¿No puedes ir al salón 63? Imprime la copia adjunta al correo. Pide a tu padre, madre o tutor que lo llene y lo firme, que anote cualquier alergia o medicina, y entrégalo con $5 a más tardar el jueves 19 de noviembre a las 3:00 PM. Nadie va al viaje sin un permiso firmado entregado a tiempo. Sin excepciones. Los $5 no se devuelven.",
         "Tu libro: recoge tu libro de Teens Read en el salón 63. Quedan pocas copias, así que se entregan por orden de llegada.",
-        "Tu transporte a casa: esperamos estar de regreso en Mater a las 2:00 PM, a más tardar a las 2:30 PM. Que te recojan en Mater a las 2:15 PM.",
+        "Tu transporte a casa: que te recojan en Mater a las 2:15 PM.",
         "¿No puedes ir? Responde al correo a más tardar el jueves 19 de noviembre a las 3:00 PM para que tu puesto pase a alguien de la clase que está esperando. Lo mismo si tienes algún cambio o pregunta."
       ]
     },
@@ -980,7 +980,7 @@
         "12:10 PM · Buddy text check-in. Text your chaperone: your name, your buddy's name, and OK.",
         "12:40 PM · Meet back up. Meet at the spot we'll point out after Teens Read. Be on time.",
         "1:00 PM · Bus pickup at the Fair. We head back to Mater together.",
-        "2:00 PM · Back at Mater. We expect to be back by 2:00 PM, 2:30 at the latest. Have your ride there by 2:15."
+        "2:15 PM · Back at Mater. Have your ride there by 2:15 PM."
       ],
       "body_es": [
         "Mañana · Ven a la escuela como siempre. Ve a clase como cualquier día normal. Haremos un anuncio cuando sea hora de ir al autobús. (Período 2: Media Center a las 7:30)",
@@ -990,7 +990,7 @@
         "12:10 PM · Reporte por mensaje. Envía un mensaje a tu chaperón: tu nombre, el nombre de tu compañero y OK.",
         "12:40 PM · Nos reunimos de nuevo. Ve al lugar que te mostraremos después de Teens Read. Llega a tiempo.",
         "1:00 PM · El autobús nos recoge en la Feria. Regresamos juntos a Mater.",
-        "2:00 PM · De regreso en Mater. Esperamos estar de regreso a las 2:00 PM, a más tardar a las 2:30. Que te recojan allí a las 2:15."
+        "2:15 PM · De regreso en Mater. Que te recojan allí a las 2:15 PM."
       ]
     },
     "bf-bring": {
@@ -5092,9 +5092,9 @@
     "loc-newspaper": {
       "item_id": "2020636246",
       "rights_statement": "No known restrictions on publication.",
-      "file": "assets/img/loc-newspaper.webp",
-      "w": 810,
-      "h": 1024,
+      "file": "assets/img/loc-newspaper-trim.webp",
+      "w": 643,
+      "h": 953,
       "alt": "A young man leans on a counter, reading a newspaper closely.",
       "title": "[Young man reading newspaper]",
       "creator": "Rizzuto, Angelo, 1906-1967, photographer",
@@ -5167,9 +5167,9 @@
     "loc-butterflies": {
       "item_id": "2018679080",
       "rights_statement": "No known restrictions on publication.",
-      "file": "assets/img/loc-butterflies.webp",
-      "w": 1024,
-      "h": 914,
+      "file": "assets/img/loc-butterflies-trim.webp",
+      "w": 995,
+      "h": 856,
       "alt": "A 1905 photograph of a poster of butterfly specimens arranged in rows.",
       "title": "[Poster showing scientific illustrations of butterfly specimens, taken in the Academy of Sciences, St. Petersburg]",
       "creator": "Prokudin-Gorskii, Sergei Mikhailovich, 1863-1944, photographer",
