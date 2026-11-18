@@ -2217,7 +2217,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 1 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -2279,7 +2279,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 2 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -2292,7 +2292,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 3 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -2541,11 +2541,11 @@
    "donow": {
     "lines": [
      "Open your team's existing outline or deck.",
-     "Have your device ready for the timed practice."
+     "Have a pen ready: the timed practice is on paper."
     ],
     "lines_es": [
      "Abre el esquema o la presentación que tu equipo ya tiene.",
-     "Ten tu dispositivo listo para la práctica cronometrada."
+     "Ten un bolígrafo listo: la práctica cronometrada es en papel."
     ]
    },
    "exit": {
@@ -2615,7 +2615,7 @@
        "slide": "e-9",
        "minutes": 35,
        "mode": "Silent",
-       "cue": "Directions 2, independent response 30 (reading included), stop and save 3. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays in its own place."
+       "cue": "Hand out the printed passage face down with two sheets of lined paper. One 35-minute timer: about 10 to read and annotate, 25 to write; call time to start writing at 15, five-minute warning, then collect responses and handouts. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays on paper."
       }
      ]
     },
@@ -3328,11 +3328,11 @@
    "donow": {
     "lines": [
      "Open your team's existing outline or deck.",
-     "Have your device ready for the timed practice."
+     "Have a pen ready: the timed practice is on paper."
     ],
     "lines_es": [
      "Abre el esquema o la presentación que tu equipo ya tiene.",
-     "Ten tu dispositivo listo para la práctica cronometrada."
+     "Ten un bolígrafo listo: la práctica cronometrada es en papel."
     ]
    },
    "exit": {
@@ -3402,7 +3402,7 @@
        "slide": "e-9",
        "minutes": 35,
        "mode": "Silent",
-       "cue": "Directions 2, independent response 30 (reading included), stop and save 3. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays in its own place."
+       "cue": "Hand out the printed passage face down with two sheets of lined paper. One 35-minute timer: about 10 to read and annotate, 25 to write; call time to start writing at 15, five-minute warning, then collect responses and handouts. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays on paper."
       }
      ]
     },
@@ -3415,7 +3415,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 1 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -3428,7 +3428,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 2 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -3601,7 +3601,7 @@
        "slide": "e-7",
        "minutes": 2,
        "mode": "Group",
-       "cue": "Up to five slots in the 70 protected minutes. Slot: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, change and record. Team order is not settled."
+       "cue": "Up to five slots in the 70 protected minutes. Slot: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, change and record. Mock order: Teams 1, 2, 3, 4, 5 (November 5 team record; recheck before December 16). Teams 6, 7, 8 in January."
       }
      ]
     },
@@ -3777,7 +3777,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 4 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -3839,7 +3839,7 @@
        "slide": "e-7",
        "minutes": 14,
        "mode": "Group",
-       "cue": "One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+       "cue": "Mock order: Team 5 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
       }
      ]
     },
@@ -4411,7 +4411,7 @@
        "slide": "e-7",
        "minutes": 2,
        "mode": "Group",
-       "cue": "Up to five slots in the 70 protected minutes. Slot: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, change and record. Team order is not settled."
+       "cue": "Up to five slots in the 70 protected minutes. Slot: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, change and record. Mock order: Teams 1, 2, 3, 4, 5 (November 5 team record; recheck before December 17). Teams 6, 7, 8 in January."
       }
      ]
     },
