@@ -196,26 +196,6 @@
     ]
    }
   },
-  "s-4": {
-   "kind": "content",
-   "title": "Reverse outline your draft",
-   "body": [
-    "Name each paragraph's job.",
-    "Find a missing explanation or connection.",
-    "Choose the more consequential revision."
-   ],
-   "origin": "AP Seminar deck, Build a whole practice report, slide 4",
-   "deck_no": 4,
-   "deck_of": 7,
-   "visual": {
-    "type": "chain",
-    "steps": [
-     "Each paragraph's job",
-     "Missing explanation or connection",
-     "Revision"
-    ]
-   }
-  },
   "s-5": {
    "kind": "content",
    "title": "Show the whole draft",
@@ -233,26 +213,6 @@
      "Sections",
      "Next revision",
      "Sources kept"
-    ]
-   }
-  },
-  "s-7": {
-   "kind": "content",
-   "title": "Return from the guest to your research",
-   "body": [
-    "Notice how evidence supports a claim.",
-    "Return to your report.",
-    "Use the habit of questioning the connection."
-   ],
-   "origin": "AP Seminar deck, Build a whole practice report, slide 7",
-   "deck_no": 7,
-   "deck_of": 7,
-   "visual": {
-    "type": "chain",
-    "steps": [
-     "Evidence",
-     "Claim",
-     "Your report"
     ]
    }
   },
@@ -539,26 +499,6 @@
     ]
    }
   },
-  "e-2": {
-   "kind": "content",
-   "title": "Can a listener follow the argument?",
-   "body": [
-    "Make the evidence-to-claim connection clear.",
-    "Explain the conclusion and its limits.",
-    "Use visuals to help the audience inspect evidence."
-   ],
-   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 2",
-   "deck_no": 2,
-   "deck_of": 9,
-   "visual": {
-    "type": "chain",
-    "steps": [
-     "Evidence to claim",
-     "Conclusion and limits",
-     "Visuals the audience can inspect"
-    ]
-   }
-  },
   "e-3": {
    "kind": "content",
    "title": "Paired rehearsal",
@@ -600,16 +540,6 @@
     ]
    }
   },
-  "c-open": {
-   "kind": "content",
-   "title": "Finish what is still open",
-   "body": [
-    "Finish the work still open from Wednesday: your focused revision or your part of T1.",
-    "Record where it stands.",
-    "Save it in its existing location."
-   ],
-   "origin": "Planbook entry for December 11, Period 6, contingency work"
-  },
   "g-gordin": {
    "kind": "guest",
    "guest": "gordin",
@@ -640,15 +570,42 @@
     "mode": "editorial"
    }
   },
-  "s-gclose": {
+  "s-attr": {
    "kind": "content",
-   "title": "Finish your guest note",
+   "title": "Check every attribution",
    "body": [
-    "Add one sentence: what would count as enough evidence for him.",
-    "Save the note with your work.",
-    "Pack up quietly and leave at the bell."
+    "Check every quotation and paraphrase against its source.",
+    "Fix any attribution that is missing or wrong."
    ],
-   "origin": "Week plan, guest close before the 12:28 bell"
+   "origin": "Planbook entries for December 7, attribution check",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Quotation or paraphrase",
+     "Its source",
+     "Attribution fixed"
+    ]
+   }
+  },
+  "pb-task": {
+   "kind": "content",
+   "title": "Part B planning task",
+   "body": [
+    "Read the four short sources.",
+    "Plan a line of reasoning that uses at least two of them.",
+    "Write your introduction and one body paragraph.",
+    "Work on your own: 40 minutes, timed and typed.",
+    "Your work is scored with the College Board rows it shows."
+   ],
+   "origin": "Planbook entries for December 11, 14, 15 and 17, Part B planning task",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Four short sources",
+     "Line of reasoning",
+     "Introduction and one body paragraph"
+    ]
+   }
   }
  },
  "practice": {
@@ -992,21 +949,21 @@
     "es": "Nombramos la alternativa o el límite que más afecta nuestra conclusión."
    }
   ],
-  "rp": [
+  "pb": [
+   {
+    "row": "Line of reasoning",
+    "en": "My introduction and paragraph follow one clear line of reasoning.",
+    "es": "Mi introducción y mi párrafo siguen una línea de razonamiento clara."
+   },
+   {
+    "row": "Evidence",
+    "en": "I use and explain evidence from at least two sources.",
+    "es": "Uso y explico evidencia de al menos dos fuentes."
+   },
    {
     "row": "Compare perspectives",
-    "en": "A listener can follow our argument from evidence to claim to conclusion.",
-    "es": "Quien escucha puede seguir nuestro argumento de la evidencia a la afirmación y a la conclusión."
-   },
-   {
-    "row": "Credibility and relevance",
-    "en": "I answer a question about a real decision in our project.",
-    "es": "Respondo una pregunta sobre una decisión real de nuestro proyecto."
-   },
-   {
-    "row": "Analyze and evaluate sources",
-    "en": "We make one repair, check it, and explain why it helps.",
-    "es": "Hacemos una reparación, la comprobamos y explicamos por qué ayuda."
+    "en": "I connect the perspectives in the sources I use.",
+    "es": "Relaciono las perspectivas de las fuentes que uso."
    }
   ]
  },
@@ -1151,24 +1108,6 @@
     "Guarda tu trabajo donde ya está."
    ]
   },
-  "rv-open": {
-   "lines": [
-    "Finish the work still open from Wednesday: your focused revision or your part of T1.",
-    "Keep the earlier passage. Make the change and write one sentence on why it helps the reader.",
-    "If the change alters your claim, check that the source still supports it.",
-    "Read your team's existing document. In writing, explain one finding from another member's investigation and what it changes about your team's thinking.",
-    "Record where your work stands and save it in its existing location."
-   ],
-   "lines_es": [
-    "Termina el trabajo que quedó pendiente del miércoles: tu revisión enfocada o tu parte de T1.",
-    "Conserva el pasaje anterior. Haz el cambio y escribe una oración sobre por qué ayuda al lector.",
-    "Si el cambio altera tu afirmación, comprueba que la fuente todavía la apoya.",
-    "Lee el documento que tu equipo ya tiene. Por escrito, explica un hallazgo de la investigación de otro integrante y lo que cambia en el pensamiento de tu equipo.",
-    "Anota en qué punto está tu trabajo y guárdalo donde ya está."
-   ],
-   "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
-   "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
-  },
   "t2-guest": {
    "lines": [
     "Open your team's existing outline or deck.",
@@ -1201,14 +1140,16 @@
     "Guarda tu trabajo donde ya está."
    ]
   },
-  "rp": {
+  "pb": {
    "lines": [
+    "Ask Mr. Portela when you will do the Part B planning task you missed.",
     "Open your team's current outline or deck.",
     "Ask a teammate what the listeners said and which repair the team chose.",
     "In writing, explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
     "Save your work in its existing location."
    ],
    "lines_es": [
+    "Pregúntale al Sr. Portela cuándo harás la tarea de planificación de la Parte B que te perdiste.",
     "Abre el esquema o la presentación actual de tu equipo.",
     "Pregúntale a un compañero de equipo qué dijeron quienes escucharon y qué reparación eligió el equipo.",
     "Por escrito, explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
@@ -1537,8 +1478,8 @@
    "label": "Focused revision and team block T1",
    "label_es": "Revisión enfocada y bloque de equipo T1",
    "target": {
-    "en": "I can revise one passage so its reasoning is easier to follow, and, with my team, explain a finding with its support and limit and weigh a plausible alternative.",
-    "es": "Puedo revisar un pasaje para que su razonamiento sea más fácil de seguir y, con mi equipo, explicar un hallazgo con su apoyo y su límite, y considerar una alternativa razonable.",
+    "en": "I can revise one passage for a reader, and with my team explain a finding and weigh an alternative.",
+    "es": "Puedo revisar un pasaje para el lector y, con mi equipo, explicar un hallazgo y sopesar una alternativa.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -1565,7 +1506,7 @@
    },
    "next": {
     "en": "Wednesday, December 9: guest Dean Michael Gordin, Princeton University, on The Pseudoscience Wars and how historians examine disputed claims, 8:00-8:30 AM. Then T2: build one connected argument.",
-    "es": "Miércoles 9 de diciembre: visita de Michael Gordin, decano, Universidad de Princeton, sobre The Pseudoscience Wars y cómo los historiadores examinan las afirmaciones en disputa, 8:00-8:30 AM. Luego, T2: construye un solo argumento conectado."
+    "es": "Miércoles 9 de diciembre: visita de Michael Gordin, Universidad de Princeton, sobre The Pseudoscience Wars y cómo los historiadores examinan las afirmaciones en disputa, 8:00-8:30 AM. Luego, T2: construye un solo argumento conectado."
    },
    "criteria": "rv",
    "glossary": [
@@ -1595,7 +1536,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -1611,25 +1552,18 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Revise the reasoning",
-     "label_es": "Revisa el razonamiento",
-     "steps": [
-      {
-       "slide": "d-2",
-       "minutes": 10,
-       "mode": "Partner"
-      }
-     ]
-    },
-    {
      "type": "practice",
      "label": "Focused revision",
      "label_es": "Revisión enfocada",
      "steps": [
       {
+       "slide": "d-2",
+       "minutes": 2,
+       "mode": "Partner"
+      },
+      {
        "slide": "@practice",
-       "minutes": 20,
+       "minutes": 18,
        "mode": "Silent"
       }
      ]
@@ -1641,7 +1575,7 @@
      "steps": [
       {
        "slide": "d-3",
-       "minutes": 18,
+       "minutes": 20,
        "mode": "Group"
       }
      ]
@@ -1653,7 +1587,7 @@
      "steps": [
       {
        "slide": "d-4",
-       "minutes": 9,
+       "minutes": 13,
        "mode": "Group"
       }
      ]
@@ -1665,7 +1599,7 @@
      "steps": [
       {
        "slide": "d-5",
-       "minutes": 8,
+       "minutes": 12,
        "mode": "Group"
       }
      ]
@@ -1701,12 +1635,12 @@
     },
     {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -1917,8 +1851,8 @@
    "label": "Practice report: completion and revision",
    "label_es": "Informe de práctica: completar y revisar",
    "target": {
-    "en": "I can continue my practice report so the whole investigation is visible, keep attribution accurate, and name my next revision.",
-    "es": "Puedo continuar mi informe de práctica para que toda la investigación se vea, mantener la atribución precisa y nombrar mi próxima revisión.",
+    "en": "I can finish my practice report as it stands, check every attribution and revise one passage.",
+    "es": "Puedo terminar mi informe de práctica tal como está, revisar cada atribución y revisar un pasaje.",
     "why_en": "Feeds the Individual Research Report (IRR), AP Seminar Performance Task 1: explaining the reasoning in sources and how perspectives relate.",
     "why_es": "Prepara el Informe de Investigación Individual (IRR), Tarea de Desempeño 1 de AP Seminar: explicar el razonamiento de las fuentes y cómo se relacionan las perspectivas."
    },
@@ -1975,7 +1909,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 5,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -1991,21 +1925,9 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Reverse outline",
-     "label_es": "Esquema inverso",
-     "steps": [
-      {
-       "slide": "s-4",
-       "minutes": 10,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
      "type": "practice",
-     "label": "Sustain the explanation",
-     "label_es": "Sostener la explicación",
+     "label": "Finish the practice report as it stands",
+     "label_es": "Termina el informe de práctica tal como está",
      "steps": [
       {
        "slide": "s-3",
@@ -2014,31 +1936,55 @@
       },
       {
        "slide": "@practice",
-       "minutes": 48,
+       "minutes": 38,
        "mode": "Silent"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "Keep writing",
-     "label_es": "Sigue escribiendo",
+     "label": "Check every attribution",
+     "label_es": "Revisa cada atribución",
+     "steps": [
+      {
+       "slide": "s-attr",
+       "minutes": 15,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Revise one passage",
+     "label_es": "Revisa un pasaje",
+     "steps": [
+      {
+       "slide": "d-2",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Name the next revision",
+     "label_es": "Nombra la próxima revisión",
+     "steps": [
+      {
+       "slide": "s-5",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Optional time: keep working on your next revision",
+     "label_es": "Tiempo opcional: sigue trabajando en tu próxima revisión",
      "steps": [
       {
        "slide": "s-3",
        "minutes": 14,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Show the whole draft",
-     "label_es": "Muestra el borrador completo",
-     "steps": [
-      {
-       "slide": "s-5",
-       "minutes": 10,
        "mode": "Silent"
       }
      ]
@@ -2067,7 +2013,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 5,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
@@ -2106,8 +2052,8 @@
    "label": "Practice report: completion and revision",
    "label_es": "Informe de práctica: completar y revisar",
    "target": {
-    "en": "I can continue my practice report so the whole investigation is visible, keep attribution accurate, and name my next revision.",
-    "es": "Puedo continuar mi informe de práctica para que toda la investigación se vea, mantener la atribución precisa y nombrar mi próxima revisión.",
+    "en": "I can finish my practice report as it stands, check every attribution and revise one passage.",
+    "es": "Puedo terminar mi informe de práctica tal como está, revisar cada atribución y revisar un pasaje.",
     "why_en": "Feeds the Individual Research Report (IRR), AP Seminar Performance Task 1: explaining the reasoning in sources and how perspectives relate.",
     "why_es": "Prepara el Informe de Investigación Individual (IRR), Tarea de Desempeño 1 de AP Seminar: explicar el razonamiento de las fuentes y cómo se relacionan las perspectivas."
    },
@@ -2164,7 +2110,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -2181,8 +2127,8 @@
     },
     {
      "type": "practice",
-     "label": "Sustain the explanation",
-     "label_es": "Sostener la explicación",
+     "label": "Finish the practice report as it stands",
+     "label_es": "Termina el informe de práctica tal como está",
      "steps": [
       {
        "slide": "s-3",
@@ -2191,19 +2137,43 @@
       },
       {
        "slide": "@practice",
-       "minutes": 53,
+       "minutes": 38,
        "mode": "Silent"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "Show the whole draft",
-     "label_es": "Muestra el borrador completo",
+     "label": "Check every attribution",
+     "label_es": "Revisa cada atribución",
+     "steps": [
+      {
+       "slide": "s-attr",
+       "minutes": 15,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Revise one passage",
+     "label_es": "Revisa un pasaje",
+     "steps": [
+      {
+       "slide": "d-2",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Name the next revision",
+     "label_es": "Nombra la próxima revisión",
      "steps": [
       {
        "slide": "s-5",
-       "minutes": 10,
+       "minutes": 5,
        "mode": "Silent"
       }
      ]
@@ -2232,7 +2202,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 5,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
@@ -2636,11 +2606,11 @@
    "period": 5,
    "course": "AP Seminar",
    "opener": "s7-open",
-   "label": "Focused revision and team block T1",
-   "label_es": "Revisión enfocada y bloque de equipo T1",
+   "label": "Focused revision and team block T1: share evidence and test alternatives",
+   "label_es": "Revisión enfocada y bloque de equipo T1: comparte evidencia y pon a prueba alternativas",
    "target": {
-    "en": "I can revise one passage so its reasoning is easier to follow, and, with my team, explain a finding with its support and limit and weigh a plausible alternative.",
-    "es": "Puedo revisar un pasaje para que su razonamiento sea más fácil de seguir y, con mi equipo, explicar un hallazgo con su apoyo y su límite, y considerar una alternativa razonable.",
+    "en": "I can revise one passage for a reader, and with my team explain a finding and weigh an alternative.",
+    "es": "Puedo revisar un pasaje para el lector y, con mi equipo, explicar un hallazgo y sopesar una alternativa.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -2666,8 +2636,8 @@
     "carry": true
    },
    "next": {
-    "en": "Thursday, December 10: Professor Claire Fanger, Rice University, on medieval magic and its manuscripts, 11:15-11:40 AM. Then T2: one connected argument.",
-    "es": "Jueves 10 de diciembre: la profesora Claire Fanger, Universidad Rice, sobre la magia medieval y sus manuscritos, 11:15-11:40 AM. Luego, T2: un solo argumento conectado."
+    "en": "Thursday, December 10: guest Professor Claire Fanger, Rice University, on medieval magic and finding the manuscripts, 11:15-11:40 AM. Then T2: one connected argument.",
+    "es": "Jueves 10 de diciembre: visita de Claire Fanger, Universidad Rice, sobre la magia medieval y la búsqueda de los manuscritos, 11:15-11:40 AM. Luego, T2: un solo argumento conectado."
    },
    "criteria": "rv",
    "glossary": [
@@ -2697,7 +2667,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -2713,25 +2683,18 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Revise the reasoning",
-     "label_es": "Revisa el razonamiento",
-     "steps": [
-      {
-       "slide": "d-2",
-       "minutes": 10,
-       "mode": "Partner"
-      }
-     ]
-    },
-    {
      "type": "practice",
      "label": "Focused revision",
      "label_es": "Revisión enfocada",
      "steps": [
       {
+       "slide": "d-2",
+       "minutes": 2,
+       "mode": "Partner"
+      },
+      {
        "slide": "@practice",
-       "minutes": 20,
+       "minutes": 18,
        "mode": "Silent"
       }
      ]
@@ -2743,7 +2706,7 @@
      "steps": [
       {
        "slide": "d-3",
-       "minutes": 18,
+       "minutes": 15,
        "mode": "Group"
       }
      ]
@@ -2755,7 +2718,7 @@
      "steps": [
       {
        "slide": "d-4",
-       "minutes": 9,
+       "minutes": 10,
        "mode": "Group"
       }
      ]
@@ -2767,19 +2730,19 @@
      "steps": [
       {
        "slide": "d-5",
-       "minutes": 8,
+       "minutes": 10,
        "mode": "Group"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "T1: Finish the team matrix",
-     "label_es": "T1: Termina la matriz del equipo",
+     "label": "T1: Explain another member's contribution",
+     "label_es": "T1: Explica la contribución de otro integrante",
      "steps": [
       {
-       "slide": "d-4",
-       "minutes": 14,
+       "slide": "d-6",
+       "minutes": 10,
        "mode": "Group"
       }
      ]
@@ -2814,13 +2777,25 @@
      ]
     },
     {
+     "type": "slide",
+     "label": "Optional time: keep working on your next revision",
+     "label_es": "Tiempo opcional: sigue trabajando en tu próxima revisión",
+     "steps": [
+      {
+       "slide": "d-2",
+       "minutes": 14,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -2844,11 +2819,11 @@
    "period": 7,
    "course": "AP Seminar",
    "opener": "s7-open",
-   "label": "Focused revision and team block T1",
-   "label_es": "Revisión enfocada y bloque de equipo T1",
+   "label": "Focused revision and team block T1: share evidence and test alternatives",
+   "label_es": "Revisión enfocada y bloque de equipo T1: comparte evidencia y pon a prueba alternativas",
    "target": {
-    "en": "I can revise one passage so its reasoning is easier to follow, and, with my team, explain a finding with its support and limit and weigh a plausible alternative.",
-    "es": "Puedo revisar un pasaje para que su razonamiento sea más fácil de seguir y, con mi equipo, explicar un hallazgo con su apoyo y su límite, y considerar una alternativa razonable.",
+    "en": "I can revise one passage for a reader, and with my team explain a finding and weigh an alternative.",
+    "es": "Puedo revisar un pasaje para el lector y, con mi equipo, explicar un hallazgo y sopesar una alternativa.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -2905,7 +2880,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -2921,25 +2896,18 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Revise the reasoning",
-     "label_es": "Revisa el razonamiento",
-     "steps": [
-      {
-       "slide": "d-2",
-       "minutes": 10,
-       "mode": "Partner"
-      }
-     ]
-    },
-    {
      "type": "practice",
      "label": "Focused revision",
      "label_es": "Revisión enfocada",
      "steps": [
       {
+       "slide": "d-2",
+       "minutes": 2,
+       "mode": "Partner"
+      },
+      {
        "slide": "@practice",
-       "minutes": 20,
+       "minutes": 18,
        "mode": "Silent"
       }
      ]
@@ -2951,7 +2919,7 @@
      "steps": [
       {
        "slide": "d-3",
-       "minutes": 18,
+       "minutes": 15,
        "mode": "Group"
       }
      ]
@@ -2963,7 +2931,7 @@
      "steps": [
       {
        "slide": "d-4",
-       "minutes": 9,
+       "minutes": 10,
        "mode": "Group"
       }
      ]
@@ -2975,7 +2943,19 @@
      "steps": [
       {
        "slide": "d-5",
-       "minutes": 8,
+       "minutes": 10,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "T1: Explain another member's contribution",
+     "label_es": "T1: Explica la contribución de otro integrante",
+     "steps": [
+      {
+       "slide": "d-6",
+       "minutes": 10,
        "mode": "Group"
       }
      ]
@@ -3011,12 +2991,12 @@
     },
     {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -3041,11 +3021,11 @@
    "course": "AP Seminar",
    "opener": "s7-open",
    "guest": "gordin",
-   "label": "Team block T2, with guest Michael Gordin",
-   "label_es": "Bloque de equipo T2, con la visita de Michael Gordin",
+   "label": "Team block T2, with guest Michael Gordin (Princeton University)",
+   "label_es": "Bloque de equipo T2, con la visita de Michael Gordin (Princeton University)",
    "target": {
-    "en": "I can help my team build one connected argument: a provisional conclusion, ordered claims with located evidence, and the limit that matters most.",
-    "es": "Puedo ayudar a mi equipo a construir un solo argumento conectado: una conclusión provisional, afirmaciones ordenadas con su evidencia ubicada y el límite que más importa.",
+    "en": "I can help my team build one connected argument and take one accurate guest note.",
+    "es": "Puedo ayudar a mi equipo a construir un solo argumento conectado y tomar una nota precisa durante la visita.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -3071,8 +3051,8 @@
     "carry": true
    },
    "next": {
-    "en": "Friday, December 11: paired rehearsal of your team argument, one repair, and an exit.",
-    "es": "Viernes 11 de diciembre: ensayo en parejas de equipos del argumento de tu equipo, una reparación y una salida."
+    "en": "Friday, December 11: the Part B planning task, timed and typed, then a shortened paired rehearsal of your team's argument.",
+    "es": "Viernes 11 de diciembre: la tarea de planificación de la Parte B, cronometrada y escrita en computadora, y luego un ensayo breve en parejas de equipos del argumento de tu equipo."
    },
    "criteria": "t2",
    "glossary": [
@@ -3102,7 +3082,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 7,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -3118,34 +3098,20 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "T2: Build one connected argument",
-     "label_es": "T2: Construye un solo argumento conectado",
+     "type": "practice",
+     "label": "Team block T2, part 1",
+     "label_es": "Bloque de equipo T2, parte 1",
      "steps": [
       {
        "slide": "d-7",
        "minutes": 4,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Evidence on screen, reasoning aloud",
-     "label_es": "T2: Evidencia en pantalla, razonamiento en voz alta",
-     "steps": [
+      },
       {
        "slide": "d-8",
-       "minutes": 4,
+       "minutes": 3,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "practice",
-     "label": "T2: Sequence the argument",
-     "label_es": "T2: Ordena el argumento",
-     "steps": [
+      },
       {
        "slide": "d-9",
        "minutes": 1,
@@ -3153,27 +3119,27 @@
       },
       {
        "slide": "@practice",
-       "minutes": 9,
+       "minutes": 8,
        "mode": "Group"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "Guest note",
-     "label_es": "Nota de la visita",
+     "label": "Change-over: guest note",
+     "label_es": "Cambio: nota de la visita",
      "steps": [
       {
        "slide": "s-gnote",
-       "minutes": 2,
+       "minutes": 5,
        "mode": "Silent"
       }
      ]
     },
     {
      "type": "guest",
-     "label": "Guest: Dean Michael Gordin",
-     "label_es": "Visita: Michael Gordin",
+     "label": "Guest: Dean Michael Gordin (Princeton University)",
+     "label_es": "Visita: Michael Gordin (Princeton University)",
      "steps": [
       {
        "slide": "g-gordin",
@@ -3184,48 +3150,22 @@
     },
     {
      "type": "slide",
-     "label": "Return from the guest",
-     "label_es": "Regreso de la visita",
-     "steps": [
-      {
-       "slide": "s-7",
-       "minutes": 3,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Check the visual evidence",
-     "label_es": "T2: Revisa la evidencia visual",
+     "label": "Team block T2, part 2",
+     "label_es": "Bloque de equipo T2, parte 2",
      "steps": [
       {
        "slide": "d-10",
        "minutes": 8,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Make the transitions meaningful",
-     "label_es": "T2: Haz que las transiciones tengan sentido",
-     "steps": [
+      },
       {
        "slide": "d-11",
-       "minutes": 5,
+       "minutes": 6,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Show the readiness evidence",
-     "label_es": "T2: Muestra la evidencia de preparación",
-     "steps": [
+      },
       {
        "slide": "d-12",
-       "minutes": 4,
+       "minutes": 5,
        "mode": "Group"
       }
      ]
@@ -3254,7 +3194,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 3,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
@@ -3477,8 +3417,8 @@
    "label": "Focused revision and team block T1",
    "label_es": "Revisión enfocada y bloque de equipo T1",
    "target": {
-    "en": "I can revise one passage so its reasoning is easier to follow, and, with my team, explain a finding with its support and limit and weigh a plausible alternative.",
-    "es": "Puedo revisar un pasaje para que su razonamiento sea más fácil de seguir y, con mi equipo, explicar un hallazgo con su apoyo y su límite, y considerar una alternativa razonable.",
+    "en": "I can revise one passage for a reader, and with my team explain a finding and weigh an alternative.",
+    "es": "Puedo revisar un pasaje para el lector y, con mi equipo, explicar un hallazgo y sopesar una alternativa.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -3504,8 +3444,8 @@
     "carry": true
    },
    "next": {
-    "en": "Friday, December 11: finish the work still open from today. Then guest Professor Avi Loeb, Harvard University, Galileo Project, on instruments, uncertainty and standards for discovery, 12:00-12:30 PM.",
-    "es": "Viernes 11 de diciembre: termina el trabajo que quede pendiente de hoy. Luego, visita de Avi Loeb, profesor de la Universidad de Harvard, Proyecto Galileo, sobre instrumentos, incertidumbre y criterios para un descubrimiento, 12:00-12:30 PM."
+    "en": "Friday, December 11: team block T2, build one connected argument. Then guest Professor Avi Loeb, Harvard University, Galileo Project, on instruments, uncertainty and standards for discovery, 12:00-12:30 PM.",
+    "es": "Viernes 11 de diciembre: bloque de equipo T2, construye un solo argumento conectado. Luego, visita de Avi Loeb, Universidad de Harvard, Proyecto Galileo, sobre instrumentos, incertidumbre y criterios para un descubrimiento, 12:00-12:30 PM."
    },
    "criteria": "rv",
    "glossary": [
@@ -3535,7 +3475,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -3551,25 +3491,18 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Revise the reasoning",
-     "label_es": "Revisa el razonamiento",
-     "steps": [
-      {
-       "slide": "d-2",
-       "minutes": 10,
-       "mode": "Partner"
-      }
-     ]
-    },
-    {
      "type": "practice",
      "label": "Focused revision",
      "label_es": "Revisión enfocada",
      "steps": [
       {
+       "slide": "d-2",
+       "minutes": 2,
+       "mode": "Partner"
+      },
+      {
        "slide": "@practice",
-       "minutes": 20,
+       "minutes": 18,
        "mode": "Silent"
       }
      ]
@@ -3581,7 +3514,7 @@
      "steps": [
       {
        "slide": "d-3",
-       "minutes": 18,
+       "minutes": 20,
        "mode": "Group"
       }
      ]
@@ -3593,7 +3526,7 @@
      "steps": [
       {
        "slide": "d-4",
-       "minutes": 9,
+       "minutes": 13,
        "mode": "Group"
       }
      ]
@@ -3605,19 +3538,7 @@
      "steps": [
       {
        "slide": "d-5",
-       "minutes": 8,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T1: Finish the team matrix",
-     "label_es": "T1: Termina la matriz del equipo",
-     "steps": [
-      {
-       "slide": "d-4",
-       "minutes": 14,
+       "minutes": 12,
        "mode": "Group"
       }
      ]
@@ -3652,13 +3573,25 @@
      ]
     },
     {
+     "type": "slide",
+     "label": "Optional time: keep working on your next revision",
+     "label_es": "Tiempo opcional: sigue trabajando en tu próxima revisión",
+     "steps": [
+      {
+       "slide": "d-2",
+       "minutes": 14,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -3685,8 +3618,8 @@
    "label": "Focused revision and team block T1",
    "label_es": "Revisión enfocada y bloque de equipo T1",
    "target": {
-    "en": "I can revise one passage so its reasoning is easier to follow, and, with my team, explain a finding with its support and limit and weigh a plausible alternative.",
-    "es": "Puedo revisar un pasaje para que su razonamiento sea más fácil de seguir y, con mi equipo, explicar un hallazgo con su apoyo y su límite, y considerar una alternativa razonable.",
+    "en": "I can revise one passage for a reader, and with my team explain a finding and weigh an alternative.",
+    "es": "Puedo revisar un pasaje para el lector y, con mi equipo, explicar un hallazgo y sopesar una alternativa.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -3743,7 +3676,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -3759,25 +3692,18 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "Revise the reasoning",
-     "label_es": "Revisa el razonamiento",
-     "steps": [
-      {
-       "slide": "d-2",
-       "minutes": 10,
-       "mode": "Partner"
-      }
-     ]
-    },
-    {
      "type": "practice",
      "label": "Focused revision",
      "label_es": "Revisión enfocada",
      "steps": [
       {
+       "slide": "d-2",
+       "minutes": 2,
+       "mode": "Partner"
+      },
+      {
        "slide": "@practice",
-       "minutes": 20,
+       "minutes": 18,
        "mode": "Silent"
       }
      ]
@@ -3789,7 +3715,7 @@
      "steps": [
       {
        "slide": "d-3",
-       "minutes": 18,
+       "minutes": 20,
        "mode": "Group"
       }
      ]
@@ -3801,7 +3727,7 @@
      "steps": [
       {
        "slide": "d-4",
-       "minutes": 9,
+       "minutes": 13,
        "mode": "Group"
       }
      ]
@@ -3813,7 +3739,7 @@
      "steps": [
       {
        "slide": "d-5",
-       "minutes": 8,
+       "minutes": 12,
        "mode": "Group"
       }
      ]
@@ -3849,12 +3775,12 @@
     },
     {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -4247,11 +4173,11 @@
    "course": "AP Seminar",
    "opener": "s7-open",
    "guest": "fanger",
-   "label": "Team block T2, with guest Claire Fanger",
-   "label_es": "Bloque de equipo T2, con la visita de Claire Fanger",
+   "label": "Team block T2, with guest Claire Fanger (Rice University)",
+   "label_es": "Bloque de equipo T2, con la visita de Claire Fanger (Rice University)",
    "target": {
-    "en": "I can help my team build one connected argument: a provisional conclusion, ordered claims with located evidence, and the limit that matters most.",
-    "es": "Puedo ayudar a mi equipo a construir un solo argumento conectado: una conclusión provisional, afirmaciones ordenadas con su evidencia ubicada y el límite que más importa.",
+    "en": "I can help my team build one connected argument and take one accurate guest note.",
+    "es": "Puedo ayudar a mi equipo a construir un solo argumento conectado y tomar una nota precisa durante la visita.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
@@ -4277,8 +4203,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 14: team rehearsal of your argument.",
-    "es": "El lunes 14 de diciembre: ensayo en equipo del argumento de tu equipo."
+    "en": "Monday, December 14: the Part B planning task, timed and typed, then a shortened paired rehearsal of your team's argument.",
+    "es": "Lunes 14 de diciembre: la tarea de planificación de la Parte B, cronometrada y escrita en computadora, y luego un ensayo breve en parejas de equipos del argumento de tu equipo."
    },
    "criteria": "t2",
    "glossary": [
@@ -4308,7 +4234,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 3,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -4324,34 +4250,15 @@
      ]
     },
     {
-     "type": "slide",
-     "label": "T2: Build one connected argument",
-     "label_es": "T2: Construye un solo argumento conectado",
+     "type": "practice",
+     "label": "Team block T2, part 1",
+     "label_es": "Bloque de equipo T2, parte 1",
      "steps": [
       {
        "slide": "d-7",
-       "minutes": 4,
+       "minutes": 3,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Evidence on screen, reasoning aloud",
-     "label_es": "T2: Evidencia en pantalla, razonamiento en voz alta",
-     "steps": [
-      {
-       "slide": "d-8",
-       "minutes": 4,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "practice",
-     "label": "T2: Sequence the argument",
-     "label_es": "T2: Ordena el argumento",
-     "steps": [
+      },
       {
        "slide": "d-9",
        "minutes": 1,
@@ -4359,27 +4266,27 @@
       },
       {
        "slide": "@practice",
-       "minutes": 9,
+       "minutes": 8,
        "mode": "Group"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "Guest note",
-     "label_es": "Nota de la visita",
+     "label": "Change-over: guest note",
+     "label_es": "Cambio: nota de la visita",
      "steps": [
       {
        "slide": "s-gnote",
-       "minutes": 2,
+       "minutes": 5,
        "mode": "Silent"
       }
      ]
     },
     {
      "type": "guest",
-     "label": "Guest: Professor Claire Fanger",
-     "label_es": "Visita: Claire Fanger",
+     "label": "Guest: Professor Claire Fanger (Rice University)",
+     "label_es": "Visita: Claire Fanger (Rice University)",
      "steps": [
       {
        "slide": "g-fanger",
@@ -4390,61 +4297,40 @@
     },
     {
      "type": "slide",
-     "label": "Return from the guest",
-     "label_es": "Regreso de la visita",
+     "label": "Team block T2, part 2",
+     "label_es": "Bloque de equipo T2, parte 2",
      "steps": [
       {
-       "slide": "s-7",
-       "minutes": 3,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Check the visual evidence",
-     "label_es": "T2: Revisa la evidencia visual",
-     "steps": [
+       "slide": "d-8",
+       "minutes": 8,
+       "mode": "Group"
+      },
       {
        "slide": "d-10",
        "minutes": 8,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Make the transitions meaningful",
-     "label_es": "T2: Haz que las transiciones tengan sentido",
-     "steps": [
+      },
       {
        "slide": "d-11",
-       "minutes": 5,
+       "minutes": 6,
        "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "T2: Show the readiness evidence",
-     "label_es": "T2: Muestra la evidencia de preparación",
-     "steps": [
+      },
       {
        "slide": "d-12",
-       "minutes": 4,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
     },
     {
      "type": "slide",
-     "label": "Check or rehearse the transitions",
-     "label_es": "Revisa o ensaya las transiciones",
+     "label": "Optional time: keep working on your next revision",
+     "label_es": "Tiempo opcional: sigue trabajando en tu próxima revisión",
      "steps": [
       {
-       "slide": "d-11",
-       "minutes": 19,
-       "mode": "Group"
+       "slide": "d-2",
+       "minutes": 14,
+       "mode": "Silent"
       }
      ]
     },
@@ -4472,7 +4358,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 7,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
@@ -4511,8 +4397,8 @@
    "label": "Timed Part A practice, then team block T2",
    "label_es": "Práctica cronometrada de la Parte A, luego bloque de equipo T2",
    "target": {
-    "en": "I can analyze an author's argument, line of reasoning and evidence on my own in a timed practice, and then help my team build one connected argument.",
-    "es": "Puedo analizar por mi cuenta el argumento, la línea de razonamiento y la evidencia de un autor en una práctica cronometrada, y luego ayudar a mi equipo a construir un solo argumento conectado.",
+    "en": "I can analyze an author's argument under time, then help my team build one connected argument.",
+    "es": "Puedo analizar el argumento de un autor con tiempo limitado y luego ayudar a mi equipo a construir un solo argumento conectado.",
     "why_en": "Practice for Part A of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
     "why_es": "Práctica para la Parte A del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
    },
@@ -4538,8 +4424,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 14: team rehearsal of your argument.",
-    "es": "El lunes 14 de diciembre: ensayo en equipo del argumento de tu equipo."
+    "en": "Monday, December 14: the Part B planning task, timed and typed, then a shortened paired rehearsal of your team's argument.",
+    "es": "Lunes 14 de diciembre: la tarea de planificación de la Parte B, cronometrada y escrita en computadora, y luego un ensayo breve en parejas de equipos del argumento de tu equipo."
    },
    "criteria": "pa",
    "glossary": [
@@ -4569,7 +4455,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 5,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -4697,7 +4583,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 5,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
@@ -4733,49 +4619,49 @@
    "period": 2,
    "course": "AP Seminar",
    "opener": "s7-open",
-   "label": "Paired rehearsal, one repair and exit",
-   "label_es": "Ensayo en parejas de equipos, una reparación y salida",
+   "label": "Part B planning task and shortened paired rehearsal",
+   "label_es": "Tarea de planificación de la Parte B y ensayo breve en parejas de equipos",
    "target": {
-    "en": "I can present my team's argument to another team, answer a question about a real decision, and make and check one repair.",
-    "es": "Puedo presentar el argumento de mi equipo a otro equipo, responder una pregunta sobre una decisión real, y hacer y comprobar una reparación.",
-    "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: an argument a listener can follow, and answers about the team's real choices.",
-    "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un argumento que quien escucha puede seguir, y respuestas sobre las decisiones reales del equipo."
+    "en": "I can plan a line of reasoning from at least two sources and write under time, then rehearse and repair with my team.",
+    "es": "Puedo planificar una línea de razonamiento con al menos dos fuentes y escribir con tiempo limitado, y luego ensayar y reparar con mi equipo.",
+    "why_en": "Practice for Part B of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte B del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
    },
    "donow": {
     "lines": [
-     "Open your team's current outline or deck and your evidence.",
-     "Find the evidence for each claim you will present."
+     "Have your device ready for the timed Part B planning task.",
+     "Open your team's current outline or deck for the rehearsal."
     ],
     "lines_es": [
-     "Abre el esquema o la presentación actual de tu equipo y tu evidencia.",
-     "Busca la evidencia de cada afirmación que vas a presentar."
+     "Ten tu dispositivo listo para la tarea cronometrada de planificación de la Parte B.",
+     "Abre el esquema o la presentación actual de tu equipo para el ensayo."
     ]
    },
    "exit": {
     "lines": [
-     "Explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
-     "If you cannot yet explain one, write what you still need to understand."
+     "What is your next step after today's Part B task and rehearsal? Write it in your current work.",
+     "Save your work in its existing location."
     ],
     "lines_es": [
-     "Explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
-     "Si todavía no puedes explicar una, escribe lo que aún necesitas entender."
+     "¿Cuál es tu próximo paso después de la tarea de la Parte B y el ensayo de hoy? Escríbelo en tu trabajo actual.",
+     "Guarda tu trabajo donde ya está."
     ],
     "carry": true
    },
    "next": {
-    "en": "On Tuesday, December 15: keep your team's outline, your evidence and your repair note ready.",
-    "es": "El martes 15 de diciembre: ten listos el esquema de tu equipo, tu evidencia y tu nota de reparación."
+    "en": "Tuesday, December 15: short teacher practice presentations, with guest Professor Sara Seager, University of Toronto, on when the evidence would be enough to say there is life on another world, 8:00-8:20 AM.",
+    "es": "Martes 15 de diciembre: presentaciones de práctica breves con el profesor, con la visita de Sara Seager, Universidad de Toronto, sobre cuándo la evidencia bastaría para decir que hay vida en otro mundo, 8:00-8:20 AM."
    },
-   "criteria": "rp",
+   "criteria": "pb",
    "glossary": [
+    "line-of-reasoning",
+    "perspective",
     "claim",
     "limit",
-    "transition",
     "revision",
-    "feedback",
-    "synthesis"
+    "feedback"
    ],
-   "absent": "rp",
+   "absent": "pb",
    "practice": [
     "rp-core",
     "rp-sup",
@@ -4794,7 +4680,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 10,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -4811,57 +4697,26 @@
     },
     {
      "type": "slide",
-     "label": "What rehearsal tests",
-     "label_es": "Lo que pone a prueba el ensayo",
+     "label": "Part B planning task",
+     "label_es": "Tarea de planificación de la Parte B",
      "steps": [
       {
-       "slide": "e-2",
-       "minutes": 8,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Paired rehearsal, round 1",
-     "label_es": "Ensayo en parejas, ronda 1",
-     "steps": [
-      {
-       "slide": "e-3",
-       "minutes": 20,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Paired rehearsal, round 2",
-     "label_es": "Ensayo en parejas, ronda 2",
-     "steps": [
-      {
-       "slide": "e-3",
-       "minutes": 20,
-       "mode": "Group"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Record and select",
-     "label_es": "Registra y elige",
-     "steps": [
-      {
-       "slide": "e-3",
-       "minutes": 5,
-       "mode": "Group"
+       "slide": "pb-task",
+       "minutes": 40,
+       "mode": "Silent"
       }
      ]
     },
     {
      "type": "practice",
-     "label": "Make and check one repair",
-     "label_es": "Haz y comprueba una reparación",
+     "label": "Shortened paired rehearsal and one repair",
+     "label_es": "Ensayo breve en parejas de equipos y una reparación",
      "steps": [
+      {
+       "slide": "e-3",
+       "minutes": 13,
+       "mode": "Group"
+      },
       {
        "slide": "e-5",
        "minutes": 1,
@@ -4893,8 +4748,8 @@
     },
     {
      "type": "exit",
-     "label": "Exit: explain what another member changed",
-     "label_es": "Salida: explica lo que cambió otro integrante",
+     "label": "Exit: your next step",
+     "label_es": "Salida: tu próximo paso",
      "steps": [
       {
        "slide": "@exit",
@@ -4905,12 +4760,12 @@
     },
     {
      "type": "info",
-     "label": "Next class",
-     "label_es": "Próxima clase",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
      "steps": [
       {
        "slide": "@next",
-       "minutes": 2,
+       "minutes": 6,
        "mode": "Group"
       }
      ]
@@ -5119,23 +4974,21 @@
    "course": "AP Seminar",
    "opener": "s7-open",
    "guest": "loeb",
-   "label": "Finish open work, then guest Avi Loeb",
-   "label_es": "Termina el trabajo pendiente, luego la visita de Avi Loeb",
+   "label": "Team block T2, with guest Avi Loeb (Harvard University)",
+   "label_es": "Bloque de equipo T2, con la visita de Avi Loeb (Harvard University)",
    "target": {
-    "en": "I can finish the revision or team work still open from Wednesday, record where it stands, and take one accurate guest note.",
-    "es": "Puedo terminar la revisión o el trabajo de equipo que quedó pendiente del miércoles, anotar en qué punto está y tomar una nota precisa durante la visita.",
+    "en": "I can help my team build one connected argument and take one accurate guest note.",
+    "es": "Puedo ayudar a mi equipo a construir un solo argumento conectado y tomar una nota precisa durante la visita.",
     "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: one argument built from every member's research.",
     "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un solo argumento construido con la investigación de cada integrante."
    },
    "donow": {
     "lines": [
-     "Open the work still open from Wednesday: your focused revision or your part of T1.",
-     "Write the one thing you will finish today.",
+     "Open your team's existing outline or deck and your research.",
      "Ready one page for a guest note."
     ],
     "lines_es": [
-     "Abre el trabajo que quedó pendiente del miércoles: tu revisión enfocada o tu parte de T1.",
-     "Escribe lo único que vas a terminar hoy.",
+     "Abre el esquema o la presentación que tu equipo ya tiene y tu investigación.",
      "Prepara una página para la nota de la visita."
     ]
    },
@@ -5151,23 +5004,23 @@
     "carry": true
    },
    "next": {
-    "en": "On Tuesday, December 15: T2, build one connected argument, and revision.",
-    "es": "El martes 15 de diciembre: T2, construye un solo argumento conectado, y revisión."
+    "en": "Tuesday, December 15: timed Part A practice, team block T2 and final team placements.",
+    "es": "Martes 15 de diciembre: práctica cronometrada de la Parte A, bloque de equipo T2 y ubicación final en los equipos."
    },
-   "criteria": "rv",
+   "criteria": "t2",
    "glossary": [
     "claim",
     "limit",
     "alternative",
     "provisional",
-    "revision",
+    "transition",
     "synthesis"
    ],
-   "absent": "rv-open",
+   "absent": "t2-guest",
    "practice": [
-    "rv-core",
-    "rv-sup",
-    "rv-ext"
+    "t2-core",
+    "t2-sup",
+    "t2-ext"
    ],
    "segments": [
     {
@@ -5182,7 +5035,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 7,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -5199,30 +5052,43 @@
     },
     {
      "type": "practice",
-     "label": "Finish what is still open",
-     "label_es": "Termina lo que quedó pendiente",
+     "label": "Team block T2: one connected argument",
+     "label_es": "Bloque de equipo T2: un solo argumento conectado",
      "steps": [
       {
-       "slide": "c-open",
-       "minutes": 2,
+       "slide": "d-7",
+       "minutes": 6,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-8",
+       "minutes": 6,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-9",
+       "minutes": 1,
        "mode": "Group"
       },
       {
        "slide": "@practice",
-       "minutes": 33,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Keep working",
-     "label_es": "Sigue trabajando",
-     "steps": [
+       "minutes": 12,
+       "mode": "Group"
+      },
       {
-       "slide": "c-open",
-       "minutes": 14,
-       "mode": "Silent"
+       "slide": "d-10",
+       "minutes": 9,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-11",
+       "minutes": 8,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-12",
+       "minutes": 8,
+       "mode": "Group"
       }
      ]
     },
@@ -5250,46 +5116,33 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 5,
-       "mode": "Silent"
-      }
-     ]
-    },
-    {
-     "type": "slide",
-     "label": "Guest note",
-     "label_es": "Nota de la visita",
-     "steps": [
-      {
-       "slide": "s-gnote",
        "minutes": 7,
        "mode": "Silent"
       }
      ]
     },
     {
-     "type": "guest",
-     "label": "Guest: Professor Avi Loeb",
-     "label_es": "Visita: Avi Loeb",
+     "type": "slide",
+     "label": "Change-over: guest note",
+     "label_es": "Cambio: nota de la visita",
      "steps": [
       {
-       "slide": "g-loeb",
-       "minutes": 26,
-       "mode": "Group",
-       "cue": "At 12:26, send Professor Loeb a two-minute heads-up in the chat: the bell rings at 12:28 and students will leave then, and you will stay on the call for his closing remarks."
+       "slide": "s-gnote",
+       "minutes": 5,
+       "mode": "Silent"
       }
      ]
     },
     {
-     "type": "slide",
-     "label": "Guest note close",
-     "label_es": "Cierre de la nota de la visita",
+     "type": "guest",
+     "label": "Guest: Professor Avi Loeb (Harvard University)",
+     "label_es": "Visita: Avi Loeb (Harvard University)",
      "steps": [
       {
-       "slide": "s-gclose",
-       "minutes": 2,
-       "mode": "Silent",
-       "cue": "Students finish the note silently while Professor Loeb wraps up. Keep the call open after the bell and thank him once the room is clear."
+       "slide": "g-loeb",
+       "minutes": 28,
+       "mode": "Group",
+       "cue": "At 12:26, send Professor Loeb a two-minute heads-up in the chat: the bell rings at 12:28 and students will leave then, and you will stay on the call for his closing remarks."
       }
      ]
     },
@@ -5327,8 +5180,8 @@
    "label": "Timed Part A practice, then team block T2",
    "label_es": "Práctica cronometrada de la Parte A, luego bloque de equipo T2",
    "target": {
-    "en": "I can analyze an author's argument, line of reasoning and evidence on my own in a timed practice, and then help my team build one connected argument.",
-    "es": "Puedo analizar por mi cuenta el argumento, la línea de razonamiento y la evidencia de un autor en una práctica cronometrada, y luego ayudar a mi equipo a construir un solo argumento conectado.",
+    "en": "I can analyze an author's argument under time, then help my team build one connected argument.",
+    "es": "Puedo analizar el argumento de un autor con tiempo limitado y luego ayudar a mi equipo a construir un solo argumento conectado.",
     "why_en": "Practice for Part A of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
     "why_es": "Práctica para la Parte A del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
    },
@@ -5354,8 +5207,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Tuesday, December 15: keep your team's outline, your evidence and your practice report ready.",
-    "es": "El martes 15 de diciembre: ten listos el esquema de tu equipo, tu evidencia y tu informe de práctica."
+    "en": "Tuesday, December 15: the Part B planning task, timed and typed, then a shortened paired rehearsal of your team's argument.",
+    "es": "Martes 15 de diciembre: la tarea de planificación de la Parte B, cronometrada y escrita en computadora, y luego un ensayo breve en parejas de equipos del argumento de tu equipo."
    },
    "criteria": "pa",
    "glossary": [
@@ -5385,7 +5238,7 @@
       },
       {
        "slide": "@donow",
-       "minutes": 5,
+       "minutes": 6,
        "mode": "Silent"
       },
       {
@@ -5513,7 +5366,7 @@
      "steps": [
       {
        "slide": "@exit",
-       "minutes": 5,
+       "minutes": 4,
        "mode": "Silent"
       }
      ]
