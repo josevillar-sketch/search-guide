@@ -21,7 +21,8 @@ const BAD_CHARS = [
   [/[\u2018\u2019\u201A\u201B\u201C\u201D\u201E\u201F\u2032\u2033]/, 'curly quote (use straight quotes)'],
   [/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}\u{200D}]/u, 'emoji or pictograph'],
 ];
-const PRIVATE_URL = /(zoom\.us|meet\.google|teams\.microsoft|webex\.com|mail\.google|drive\.google|docs\.google|calendar\.google|chatgpt\.com)/i;
+// One Drive file is allowed: the Carr reading, school sign-in (decided 2026-11-18). Every other Drive or Docs link still fails.
+const PRIVATE_URL = /(zoom\.us|meet\.google|teams\.microsoft|webex\.com|mail\.google|drive\.google(?!\.com\/file\/d\/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC\/view(?![^\s"'<>\\]))|docs\.google|calendar\.google|chatgpt\.com)/i;
 (function walk(v, where) {
   if (typeof v === 'string') {
     for (const [re, what] of BAD_CHARS) if (re.test(v)) err(`${where}: ${what} in "${v.slice(0, 60)}"`);

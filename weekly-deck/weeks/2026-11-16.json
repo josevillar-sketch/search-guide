@@ -95,26 +95,28 @@
       "card": {
         "title": "Early release",
         "lines": [
-          "School ends at noon. On the Miami Book Fair trip? The bus is back at school by 2:30 PM.",
+          "School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM.",
           "Not on the trip? Go to the Media Center. Silvina Macho is with you. Your class meets for 47 minutes: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. You work alone, then write a short closing note.",
           "AP Seminar: Open the own-source writing, source log, report plan or feedback you already have. Choose one existing piece to improve. If you have no draft, use an accessible source already in your work to identify its claim, evidence, reasoning and one limitation in your existing document. If you cannot open your work, record the access problem and your next step on paper. Work quietly on your own piece. If you are stuck, record the exact question and continue another part you can advance.",
           "AP Seminar closing: Save your work where it already belongs. Record what you improved and one question for Mr. Portela. If access failed, record that problem and your next step. You do not need a new report, a word-count total or a separate extra slip.",
           "AP Research: Open your portfolio and your latest feedback or last status entry. Work on one part of your proposal you can advance. If you are stuck, record the exact question, then continue another accessible part. Before the bell, update your status and the first step for the next class.",
-          "If you cannot access your existing materials, use paper to record the access problem, your current status and your next step.",
           "AP Research closing: Save your work. In your portfolio, update your status and write the first step for the next class. If you could not open your work, write the problem, your status and your next step on paper.",
+          "AP Research: Sample Paper Reasoning Move is due today in Classroom. Revised Inquiry Proposal and records is due Monday, November 30, 11:59 PM.",
           "AP Research: no surveys, interviews, observations or data from other people today, and do not invite anyone to take part in a study. That work needs a review first.",
-          "Nobody has to finish a report, a plan or a section today. No new grade and no homework come from these classes."
+          "Nobody has to finish a report, a plan or a section today. Today's class adds no new grade or homework.",
+          "Links: tap Sources at the top, or open your class's Classroom."
         ],
         "lines_es": [
-          "La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? El autobús regresa a la escuela a las 2:30 PM.",
+          "La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM.",
           "¿No vas al viaje? Ve al Media Center. Silvina Macho estará contigo. Tu clase dura 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas de forma individual y luego escribes una nota breve de cierre.",
           "AP Seminar: Abre el escrito con tus fuentes, el registro de fuentes, el plan del informe o la retroalimentación que ya tienes. Elige una parte que ya existe para mejorarla. Si no tienes borrador, usa una fuente accesible que ya esté en tu trabajo para identificar su afirmación, evidencia, razonamiento y una limitación en tu documento. Si no puedes abrir tu trabajo, anota en papel el problema de acceso y tu próximo paso. Trabaja en silencio en tu propia parte. Si te atascas, anota la pregunta exacta y sigue con otra parte que puedas avanzar.",
           "Cierre de AP Seminar: Guarda tu trabajo donde ya está. Anota lo que mejoraste y una pregunta para el Sr. Portela. Si no pudiste entrar, anota el problema y tu próximo paso. No necesitas un informe nuevo, un total de palabras ni una hoja aparte.",
           "AP Research: Abre tu portafolio y tu retroalimentación más reciente o tu última entrada de estado. Trabaja en una parte de tu propuesta que puedas avanzar. Si te atascas, anota la pregunta exacta y sigue con otra parte accesible. Antes del timbre, actualiza tu estado y el primer paso para la próxima clase.",
-          "Si no puedes entrar a tus materiales, usa papel para anotar el problema de acceso, tu estado actual y tu próximo paso.",
           "Cierre de AP Research: Guarda tu trabajo. En tu portafolio, actualiza tu estado y escribe el primer paso para la próxima clase. Si no pudiste abrir tu trabajo, escribe en papel el problema, tu estado y tu próximo paso.",
+          "AP Research: Sample Paper Reasoning Move se entrega hoy en Classroom. Revised Inquiry Proposal and records se entrega el lunes 30 de noviembre, 11:59 PM.",
           "AP Research: hoy no hay encuestas, entrevistas, observaciones ni datos de otras personas, y no invites a nadie a participar en un estudio. Ese trabajo necesita una revisión primero.",
-          "Nadie tiene que terminar un informe, un plan ni una sección hoy. Estas clases no dan nota nueva ni tarea."
+          "Nadie tiene que terminar un informe, un plan ni una sección hoy. La clase de hoy no da nota nueva ni tarea.",
+          "Enlaces: toca Sources arriba, o abre el Classroom de tu clase."
         ],
         "title_es": "Salida temprana"
       },
@@ -136,10 +138,13 @@
       "before": "Nicholas Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7-10. In ",
       "book": "They Say / I Say with Readings",
       "after": ", 6th ed. (Norton, 2024), beginning on p. 418.",
-      "note": "Use the class copy. This site gives the citation only.",
-      "note_es": "Usa la copia de la clase. Este sitio da solo la cita.",
+      "note": "Use the class copy.",
+      "note_es": "Usa la copia de la clase.",
       "year": 2017,
-      "short": "Carr essay"
+      "short": "Carr essay",
+      "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view",
+      "link": "Carr reading (school sign-in)",
+      "link_es": "Lectura de Carr (con tu cuenta de la escuela)"
     }
   },
   "guests": {
@@ -205,7 +210,8 @@
       "links": [],
       "label_es": "Invitado",
       "when_es": "8:00-8:30 AM, hora del Este",
-      "mode_es": "Visita virtual"
+      "mode_es": "Visita virtual",
+      "topic_es": "Cómo elegir mediciones, poner a prueba otras explicaciones y juzgar lo que los resultados apoyan"
     },
     "rosales": {
       "name": "Colleen Rosales",
@@ -222,7 +228,8 @@
       ],
       "label_es": "Invitada",
       "when_es": "9:30-10:00 AM, hora del Este",
-      "mode_es": "Visita virtual"
+      "mode_es": "Visita virtual",
+      "topic_es": "El Global Landscape Report, la cobertura de datos sobre la calidad del aire y las mediciones que faltan"
     }
   },
   "slides": {
@@ -252,7 +259,14 @@
         "Save your decision and next step; keep prior work.",
         "Individual help is by agreed appointment."
       ],
-      "footer": "Use your existing portfolio · No new submission",
+      "body_es": [
+        "Usa la retroalimentación que ya tienes.",
+        "Elige tu próximo paso más importante.",
+        "Revisa, conserva o investiga; explica por qué.",
+        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+        "La ayuda individual es con cita acordada."
+      ],
+      "footer": "Use your existing portfolio · Due dates are on the Next slide",
       "origin": "AP Research deck, SL_STUDIO_1",
       "visual": {
         "type": "flow",
@@ -269,6 +283,27 @@
           "Save your decision and next step"
         ]
       }
+    },
+    "r-practice-run": {
+      "kind": "content",
+      "title": "Practice run of the instrument",
+      "title_es": "Ensayo del instrumento",
+      "body": [
+        "Answer your own survey, interview guide or observation sheet first.",
+        "Trade with one classmate. Your classmate answers it and marks any question that is confusing, leading or too long.",
+        "This is practice only. Nobody keeps the answers, and they are not data. Delete or shred the answered copy before you move on.",
+        "Using content or document analysis? Code one source with your coding sheet. Your classmate codes the same source, and you compare.",
+        "In your portfolio, write the changes you will make and how long it took."
+      ],
+      "body_es": [
+        "Primero responde tu propia encuesta, guía de entrevista u hoja de observación.",
+        "Intercambia con un compañero o compañera. Esa persona la responde y marca cualquier pregunta confusa, que sugiera la respuesta o demasiado larga.",
+        "Esto es solo práctica. Nadie guarda las respuestas y no son datos. Borra o destruye la copia respondida antes de seguir.",
+        "¿Usas análisis de contenido o de documentos? Codifica una fuente con tu hoja de codificación. Tu compañero o compañera codifica la misma fuente y comparan.",
+        "En tu portafolio, escribe los cambios que vas a hacer y cuánto tiempo tomó."
+      ],
+      "footer": "The real pilot starts only after Mr. Portela approves your Ethics Audit.",
+      "footer_es": "La prueba piloto real empieza solo después de que el Sr. Portela apruebe tu Ethics Audit."
     },
     "r1-open": {
       "kind": "opener",
@@ -620,11 +655,12 @@
       "kind": "content",
       "title": "Comparing sources: Retrieve",
       "body": [
-        "Read your Workshop 1 paragraph. Circle the claim; underline its support; box the limit."
+        "Open your Workshop 1 paragraph. Highlight the claim. Bold its support. Put one limit in [brackets]."
+      ],
+      "body_es": [
+        "Abre tu párrafo del Taller 1. Resalta la afirmación. Pon en negrita su apoyo. Pon un límite entre [corchetes]."
       ],
       "origin": "AP Seminar student view, slide 10",
-      "deck_no": 10,
-      "deck_of": 18,
       "visual": {
         "type": "mark"
       }
@@ -635,12 +671,15 @@
       "body": [
         "Carr, \"How Smartphones Hijack Our Minds\" (2017), paragraphs 7 to 10.",
         "What was compared? Who participated? What was measured? What does Carr infer?",
-        "Carr reports others' research. Separate his account from the original study."
+        "Carr reports others' research. Separate Carr's account from the original study."
+      ],
+      "body_es": [
+        "Carr, \"How Smartphones Hijack Our Minds\" (2017), párrafos 7 a 10.",
+        "¿Qué se comparó? ¿Quiénes participaron? ¿Qué se midió? ¿Qué infiere Carr?",
+        "Carr informa sobre la investigación de otras personas. Separa el relato de Carr del estudio original."
       ],
       "reading": "carr",
       "origin": "AP Seminar student view, slide 11",
-      "deck_no": 11,
-      "deck_of": 18,
       "visual": {
         "type": "rtime",
         "focus": "carr"
@@ -652,9 +691,10 @@
       "body": [
         "Conditions | outcome | support | scope"
       ],
+      "body_es": [
+        "Condiciones | resultado | apoyo | alcance"
+      ],
       "origin": "AP Seminar student view, slide 12",
-      "deck_no": 12,
-      "deck_of": 18,
       "visual": {
         "type": "matrix",
         "cols": [
@@ -675,9 +715,10 @@
       "body": [
         "Agree / qualify / complement / conflict: explain the relation."
       ],
+      "body_es": [
+        "Coinciden / una matiza a la otra / se complementan / se contradicen: explica la relación."
+      ],
       "origin": "AP Seminar student view, slide 13",
-      "deck_no": 13,
-      "deck_of": 18,
       "visual": {
         "type": "concept"
       }
@@ -686,11 +727,12 @@
       "kind": "content",
       "title": "Comparing sources: Own-source matrix",
       "body": [
-        "Source A claim/support/limit; Source B claim/support/limit; relationship; significance."
+        "For two sources from your log, write each one's claim, support and one limit. Then name how they relate and what that changes. Write it in your current document under today's date."
+      ],
+      "body_es": [
+        "Para dos fuentes de tu registro, escribe la afirmación, el apoyo y un límite de cada una. Luego nombra cómo se relacionan y qué cambia eso. Escríbelo en tu documento actual bajo la fecha de hoy."
       ],
       "origin": "AP Seminar student view, slide 14",
-      "deck_no": 14,
-      "deck_of": 18,
       "visual": {
         "type": "matrix",
         "cols": [
@@ -708,11 +750,12 @@
       "kind": "content",
       "title": "Comparing sources: Write the synthesis",
       "body": [
-        "Write a connected explanation. Preserve attribution."
+        "Turn your table into one paragraph about the idea, not one per author. Name each author with a verb: reports, argues or infers."
+      ],
+      "body_es": [
+        "Convierte tu tabla en un párrafo sobre la idea, no uno por autor. Nombra a cada autor con un verbo: informa, argumenta o infiere."
       ],
       "origin": "AP Seminar student view, slide 15",
-      "deck_no": 15,
-      "deck_of": 18,
       "visual": {
         "type": "merge"
       }
@@ -721,11 +764,12 @@
       "kind": "content",
       "title": "Comparing sources: From paragraph to report plan",
       "body": [
-        "Investigation question → analytical sections → evidence connections → unresolved gap."
+        "Write two or three report section headings. Name each by an idea, not an author."
+      ],
+      "body_es": [
+        "Escribe dos o tres encabezados de sección para el informe. Nombra cada uno por una idea, no por un autor."
       ],
       "origin": "AP Seminar student view, slide 16",
-      "deck_no": 16,
-      "deck_of": 18,
       "visual": {
         "type": "chain",
         "steps": [
@@ -742,9 +786,10 @@
       "body": [
         "What did the comparison change? What is your next evidence need?"
       ],
+      "body_es": [
+        "¿Qué cambió la comparación? ¿Qué evidencia necesitas ahora?"
+      ],
       "origin": "AP Seminar student view, slide 17",
-      "deck_no": 17,
-      "deck_of": 18,
       "visual": {
         "type": "concept"
       }
@@ -809,9 +854,14 @@
       "kind": "content",
       "title": "Guest field note",
       "body": [
-        "Head a field note with six fields: claim, evidence and its type, method, limit, my question, link to me.",
-        "Write one question for our guest.",
-        "Complete the note while the guest speaks."
+        "Take a field-note sheet. It has six headings: claim; evidence and its type; method; limit; my question; how it connects to my project.",
+        "Before the guest starts, write one question under My question.",
+        "While the guest speaks, write only what the guest says. Label your own ideas \"my idea.\" If something is not covered, write \"not addressed.\""
+      ],
+      "body_es": [
+        "Toma una hoja de notas de campo. Tiene seis encabezados: afirmación; evidencia y su tipo; método; límite; mi pregunta; cómo se conecta con mi proyecto.",
+        "Antes de que empiece la visita, escribe una pregunta bajo Mi pregunta.",
+        "Mientras habla la persona invitada, escribe solo lo que dice. Marca tus propias ideas como \"my idea\". Si algo no se trata, escribe \"not addressed\"."
       ]
     },
     "fieldnote-k": {
@@ -829,6 +879,10 @@
       "body": [
         "Write one sentence that links the talk to your own method.",
         "Two or three of us read ours aloud."
+      ],
+      "body_es": [
+        "Escribe una oración que conecte la charla con tu propio método.",
+        "Dos o tres de nosotros leemos la nuestra en voz alta."
       ]
     },
     "debrief-k": {
@@ -907,6 +961,10 @@
       "lines": [
         "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
         "Agree / qualify / complement / conflict: explain the relation."
+      ],
+      "lines_es": [
+        "Conecta dos fuentes que ya leíste y explica qué cambia esa relación. Conserva la atribución.",
+        "Coinciden / una matiza a la otra / se complementan / se contradicen: explica la relación."
       ]
     },
     "w2-sup": {
@@ -920,6 +978,10 @@
       "lines": [
         "Source A claim/support/limit; Source B claim/support/limit; relationship; significance.",
         "If a second source is unavailable, name the gap and continue source reasoning."
+      ],
+      "lines_es": [
+        "Afirmación, apoyo y límite de la fuente A; afirmación, apoyo y límite de la fuente B; relación; importancia.",
+        "Si no tienes una segunda fuente, nombra lo que falta y continúa el razonamiento con fuentes."
       ]
     },
     "w2-ext": {
@@ -933,6 +995,9 @@
       "dok": 4,
       "lines": [
         "Investigation question → analytical sections → evidence connections → unresolved gap."
+      ],
+      "lines_es": [
+        "Pregunta de investigación → secciones de análisis → conexiones con la evidencia → lo que queda sin resolver."
       ]
     },
     "r-core": {
@@ -948,6 +1013,12 @@
         "Choose your most important next step.",
         "Revise, retain or investigate; explain why.",
         "Save your decision and next step; keep prior work."
+      ],
+      "lines_es": [
+        "Usa la retroalimentación que ya tienes.",
+        "Elige tu próximo paso más importante.",
+        "Revisa, conserva o investiga; explica por qué.",
+        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior."
       ]
     },
     "r-sup": {
@@ -962,6 +1033,11 @@
         "Use your existing feedback.",
         "Choose your most important next step.",
         "Individual help is by agreed appointment."
+      ],
+      "lines_es": [
+        "Usa la retroalimentación que ya tienes.",
+        "Elige tu próximo paso más importante.",
+        "La ayuda individual es con cita acordada."
       ]
     },
     "r-ext": {
@@ -975,6 +1051,10 @@
       "lines": [
         "Explain your question → evidence → analysis connection.",
         "Identify one unresolved step or justify the fit."
+      ],
+      "lines_es": [
+        "Explica la conexión pregunta → evidencia → análisis.",
+        "Identifica un paso sin resolver o justifica que encaja."
       ]
     },
     "r1-core": {
@@ -1246,13 +1326,13 @@
       "lines": [
         "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
         "If a second source is unavailable, name the gap and continue source reasoning.",
-        "Use your current document. Formative practice."
+        "Write it in your current document. Due when you return on Monday, November 30."
       ],
       "reading": "carr",
       "lines_es": [
         "Conecta dos fuentes que ya leíste y explica qué cambia esa relación. Conserva la atribución.",
         "Si no tienes una segunda fuente, nombra lo que falta y continúa el razonamiento con fuentes.",
-        "Usa tu documento actual. Práctica formativa."
+        "Escríbelo en tu documento actual. Se entrega cuando regreses el lunes 30 de noviembre."
       ]
     },
     "w2-guest": {
@@ -1425,12 +1505,20 @@
       {
         "label": "P5 Classroom: Classwork",
         "url": "https://classroom.google.com/w/ODcyMDU2NDExMjAx/t/all"
+      },
+      {
+        "label": "Carr reading (school sign-in)",
+        "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
       }
     ],
     "P7": [
       {
         "label": "P7 Classroom: Classwork",
         "url": "https://classroom.google.com/w/ODcyMDU3NzM4NjIz/t/all"
+      },
+      {
+        "label": "Carr reading (school sign-in)",
+        "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
       }
     ],
     "P2": [
@@ -3162,8 +3250,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon. Not on the Miami Book Fair trip? Go to the Media Center, where Silvina Macho is with you. On the trip? The bus is back at school by 2:30 PM. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía. ¿No vas al viaje a la Feria del Libro de Miami? Ve al Media Center, donde Silvina Macho estará contigo. ¿Vas al viaje? El autobús regresa a la escuela a las 2:30 PM. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -3354,8 +3442,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon. Not on the Miami Book Fair trip? Go to the Media Center, where Silvina Macho is with you. On the trip? The bus is back at school by 2:30 PM. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía. ¿No vas al viaje a la Feria del Libro de Miami? Ve al Media Center, donde Silvina Macho estará contigo. ¿Vas al viaje? El autobús regresa a la escuela a las 2:30 PM. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "r1-core",
@@ -3398,9 +3486,21 @@
           "steps": [
             {
               "slide": "r-studio",
-              "minutes": 50,
+              "minutes": 40,
               "mode": "Silent",
               "cue": "Individual work from the feedback already in the portfolio Doc. Help by agreed appointment or as a need shows."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Practice run of the instrument",
+          "label_es": "Ensayo del instrumento",
+          "steps": [
+            {
+              "slide": "r-practice-run",
+              "minutes": 10,
+              "mode": "Partner"
             }
           ]
         },
@@ -3546,8 +3646,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon. Not on the Miami Book Fair trip? Go to the Media Center, where Silvina Macho is with you. On the trip? The bus is back at school by 2:30 PM. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía. ¿No vas al viaje a la Feria del Libro de Miami? Ve al Media Center, donde Silvina Macho estará contigo. ¿Vas al viaje? El autobús regresa a la escuela a las 2:30 PM. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -3724,8 +3824,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: early release, school ends at noon. Not on the Miami Book Fair trip? Go to the Media Center, where Silvina Macho is with you. On the trip? The bus is back at school by 2:30 PM. Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Viernes 20 de noviembre: salida temprana, la escuela termina al mediodía. ¿No vas al viaje a la Feria del Libro de Miami? Ve al Media Center, donde Silvina Macho estará contigo. ¿Vas al viaje? El autobús regresa a la escuela a las 2:30 PM. Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -3888,8 +3988,8 @@
       "day": "thu",
       "period": 1,
       "course": "AP Research",
-      "label": "Proposal work, then guest Daqing Piao",
-      "label_es": "Trabajo de propuesta, luego el invitado Daqing Piao",
+      "label": "Proposal work, then guest Daqing Piao (Oklahoma State University)",
+      "label_es": "Trabajo de propuesta, luego el invitado Daqing Piao (Oklahoma State University)",
       "opener": "r-open",
       "target": {
         "en": "I can choose my most important next proposal step and explain why.",
@@ -3922,14 +4022,14 @@
           "Close the Doc."
         ],
         "lines_es": [
-          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Actualiza tu línea de estado: lista para que el Sr. Portela la lea; haciendo cambios, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
           "Cierra el documento."
         ],
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "r-core",
@@ -3950,7 +4050,7 @@
             },
             {
               "slide": "@donow",
-              "minutes": 2,
+              "minutes": 5,
               "mode": "Silent"
             },
             {
@@ -3972,9 +4072,21 @@
           "steps": [
             {
               "slide": "r-studio",
-              "minutes": 20,
+              "minutes": 7,
               "mode": "Silent",
               "cue": "Individual work from the feedback already in the portfolio Doc. Help by agreed appointment or as a need shows."
+            }
+          ]
+        },
+        {
+          "type": "slide",
+          "label": "Practice run of the instrument",
+          "label_es": "Ensayo del instrumento",
+          "steps": [
+            {
+              "slide": "r-practice-run",
+              "minutes": 10,
+              "mode": "Partner"
             }
           ]
         },
@@ -3993,8 +4105,8 @@
         },
         {
           "type": "guest",
-          "label": "Guest: Professor Daqing Piao",
-          "label_es": "Invitado: el profesor Daqing Piao",
+          "label": "Guest: Professor Daqing Piao, Oklahoma State University",
+          "label_es": "Invitado: el profesor Daqing Piao, Oklahoma State University",
           "steps": [
             {
               "slide": "g-piao",
@@ -4090,8 +4202,8 @@
       "day": "thu",
       "period": 3,
       "course": "AP Research",
-      "label": "Guest Colleen Rosales, then proposal work",
-      "label_es": "La invitada Colleen Rosales, luego trabajo de propuesta",
+      "label": "Guest Colleen Rosales (OpenAQ), then proposal work",
+      "label_es": "La invitada Colleen Rosales (OpenAQ), luego trabajo de propuesta",
       "opener": "r-open",
       "target": {
         "en": "I can choose my most important next proposal step and explain why.",
@@ -4124,14 +4236,14 @@
           "Close the Doc."
         ],
         "lines_es": [
-          "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+          "Actualiza tu línea de estado: lista para que el Sr. Portela la lea; haciendo cambios, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
           "Cierra el documento."
         ],
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "r-core",
@@ -4182,8 +4294,8 @@
         },
         {
           "type": "guest",
-          "label": "Guest: Colleen Rosales",
-          "label_es": "Invitada: Colleen Rosales",
+          "label": "Guest: Colleen Rosales, OpenAQ",
+          "label_es": "Invitada: Colleen Rosales, OpenAQ",
           "steps": [
             {
               "slide": "g-rosales",
@@ -4206,13 +4318,25 @@
           ]
         },
         {
+          "type": "slide",
+          "label": "Practice run of the instrument",
+          "label_es": "Ensayo del instrumento",
+          "steps": [
+            {
+              "slide": "r-practice-run",
+              "minutes": 10,
+              "mode": "Partner"
+            }
+          ]
+        },
+        {
           "type": "practice",
           "label": "Proposal work, part 2",
           "label_es": "Trabajo de propuesta, parte 2",
           "steps": [
             {
               "slide": "@practice",
-              "minutes": 32,
+              "minutes": 22,
               "mode": "Silent",
               "cue": "Individual work. Help by agreed appointment or as a need shows."
             }

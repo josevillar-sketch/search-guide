@@ -40,7 +40,8 @@ const FILE_RULES = [
   [/[\u2012\u2013\u2014\u2015]/g, 'en or em dash'],
   [/[\u2018\u2019\u201C\u201D]/g, 'curly quote'],
   [/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{FE0F}]/gu, 'emoji or pictograph'],
-  [/(zoom\.us|meet\.google|teams\.microsoft|webex\.com|mail\.google|drive\.google|docs\.google|pwd=)/gi, 'meeting or private link'],
+  // One Drive file is allowed: the Carr reading, school sign-in (2026-11-18). Every other Drive or Docs link still fails.
+  [/(zoom\.us|meet\.google|teams\.microsoft|webex\.com|mail\.google|drive\.google(?!\.com\/file\/d\/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC\/view(?![^\s"'<>\\]))|docs\.google|pwd=)/gi, 'meeting or private link'],
   [/<script[^>]+src=|<link[^>]+href="http|@import|url\(['"]?https?:/gi, 'external script, stylesheet or font (the file must work offline)'],
 ];
 const fileHits = {};
