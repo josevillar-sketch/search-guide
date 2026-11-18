@@ -1,0 +1,3 @@
+# Netlify site: current-week-room-63  (current variant). Deploy only with Mr. Portela's approval.
+[build]
+  publish = "."

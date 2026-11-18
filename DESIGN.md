@@ -233,6 +233,19 @@ Corners are barely eased (6px) on controls and cards; stamps are tighter (3px) a
 - **The rule box.** A sheet's one rule, in Fraunces, inside a full-width ink frame. A sign-off line inside the frame keeps the reading face; each label stays with its blank, and each blank is a drawn rule long enough for what goes on it.
 - **The slug.** One mono line under a handout's title rule saying who the sheet is for.
 
+## Weekly lesson decks (a separate register)
+
+The weekly projected decks (`weekly-deck/` and the matching Google Slides) do not use the Search Guide palette above. Mr. Portela set this on 2026-11-16: every weekly deck keeps the look of the Room 63 weekly sites of November 2 and 9, 2026, the look he has used all year. Projected from the front of the room, it reads better dark.
+
+- Night only: background `#14110d`, panel `#1d1913`, ink `#efe7d6`, mute `#cdc3ad`, line `#4a3f2e`, brass `#e0ab49`, teal `#6fc7b9`, warn `#e88e6a`, rule `#806b4c`. Nothing is brighter than paper `#f6efd8`.
+- Fraunces for titles, Cormorant Garamond at weight 600 for body text, Space Mono for labels. Cormorant sets small, so projected body text runs as large as the slide allows (up to 32 pt in Slides, at least 28 px at 1920 wide on the web) and never below 20 pt.
+- Motion is part of this register by his decision: transitions, build-ins, timer motion and ambient backgrounds. Keep it to transform and opacity.
+- Images are toned in this palette. Every image carries a verified license and a credit; generated images are stylized illustrations, never documentary-looking photographs.
+- `weekly-deck/qa.cjs` checks this register. `tools/design_check.cjs` keeps checking the Search Guide pages against the rules above.
+
+
+Public language: a weekly site never shows teacher-facing or production language (rule 6 in `CLAUDE.md`; the gate in `weekly-deck/README.md`). On a day Mr. Portela is out, the site's directions match the substitute plan for that day.
+
 ## Do's and Don'ts
 
 ### Do:

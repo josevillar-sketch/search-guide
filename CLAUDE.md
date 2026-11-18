@@ -15,6 +15,7 @@ Read this first. It saves re-explaining the project every session.
 3. No human-participant data collection before the ethics review packet is complete (risk screen, consent/assent, data plan, school approval).
 4. Every number a student reports traces to their own data file. Nothing invented.
 5. Recommend to students only tools listed in `RESOURCES.md`. Add a tool there only after opening and checking it.
+6. Nothing teacher-facing or production-related ever appears in a public or student-facing product (Mr. Portela, 2026-11-16: "All such teacher-facing and production-related language can never be in public facing products"). That means no draft or release labels, timing or AV cues, scripts, approval or placeholder notes, file or tool names, or build notes. Read every student-facing line before handing anything over; see the public-language gate in `weekly-deck/README.md`.
 
 ## Where things live (Google Drive)
 
@@ -65,7 +66,7 @@ What that means in this repo:
 - Audit after you build. Re-read what you made against the primary source, not against your memory of it. The 2026-11-12 audit found a claim about a College Board guide that had never been checked against the guide; read the document before describing it.
 
 **The approval does not change these**
-- Rules 1 to 5 above. Rule 1 is College Board policy; no approval lifts it.
+- Rules 1 to 6 above. Rule 1 is College Board policy; no approval lifts it.
 - Student privacy. No names or records leave the teacher-only Drive folders.
 - Nothing goes to students or families until Mr. Portela has seen it. Building and merging is not distributing.
 - Anything sent in Mr. Portela's name states only facts that are confirmed. Remove a guess before sending.

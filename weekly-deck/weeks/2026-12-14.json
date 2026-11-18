@@ -1,0 +1,4363 @@
+{
+ "$schema": "../week.schema.json",
+ "week": {
+  "id": "2026-12-14",
+  "title": "Week of December 14-18, 2026",
+  "range": "Dec 14-18",
+  "date": "2026-12-14",
+  "brand": "ROOM 63",
+  "school": "Mater Academy",
+  "teacher": "Mr. Portela",
+  "owner": "Portela J",
+  "version": "Room 63 weekly deck, week of 2026-12-14, from the Planbook entries for December 14 to 17, the AP Seminar deck for December 14 to 17 and the December 7 deck, as read 2026-11-18",
+  "publish": {
+   "archive_site": "dec-14-2026-week-room-63",
+   "current_site": "current-week-room-63",
+   "note": "Going live always needs Mr. Portela's approval."
+  }
+ },
+ "teacher": {
+  "passcode_sha256": "6b78ba9bf15ef3db6abdfad59d8e36e31fc844d224b7bfba52f23d6e066739d1",
+  "note": "A passcode on a static site hides the panel; it is not security. Scripts and timing cues only."
+ },
+ "bells": {
+  "1": [
+   "7:30",
+   "8:55"
+  ],
+  "2": [
+   "7:30",
+   "8:55"
+  ],
+  "3": [
+   "9:17",
+   "10:42"
+  ],
+  "4": [
+   "9:17",
+   "10:42"
+  ],
+  "5": [
+   "10:49",
+   "12:28"
+  ],
+  "6": [
+   "10:49",
+   "12:28"
+  ],
+  "7": [
+   "13:05",
+   "14:30"
+  ],
+  "8": [
+   "13:05",
+   "14:30"
+  ]
+ },
+ "days": [
+  {
+   "id": "mon",
+   "name": "Monday",
+   "date": "December 14",
+   "letter": "A",
+   "name_es": "Lunes",
+   "date_es": "14 de diciembre"
+  },
+  {
+   "id": "tue",
+   "name": "Tuesday",
+   "date": "December 15",
+   "letter": "B",
+   "name_es": "Martes",
+   "date_es": "15 de diciembre"
+  },
+  {
+   "id": "wed",
+   "name": "Wednesday",
+   "date": "December 16",
+   "letter": "A",
+   "name_es": "Miércoles",
+   "date_es": "16 de diciembre"
+  },
+  {
+   "id": "thu",
+   "name": "Thursday",
+   "date": "December 17",
+   "letter": "B",
+   "name_es": "Jueves",
+   "date_es": "17 de diciembre"
+  },
+  {
+   "id": "fri",
+   "name": "Friday",
+   "date": "December 18",
+   "letter": "A",
+   "name_es": "Viernes",
+   "date_es": "18 de diciembre",
+   "card": {
+    "title": "No classes for students",
+    "title_es": "No hay clases para estudiantes",
+    "lines": [
+     "Friday, December 18 is a teacher planning day. There are no classes for students.",
+     "Thursday, December 17 is the last day of classes before the winter break.",
+     "The winter break runs from Monday, December 21 to Friday, January 1.",
+     "Classes start again on Monday, January 4."
+    ],
+    "lines_es": [
+     "El viernes 18 de diciembre es un día de planificación para los maestros. No hay clases para estudiantes.",
+     "El jueves 17 de diciembre es el último día de clases antes de las vacaciones de invierno.",
+     "Las vacaciones de invierno van del lunes 21 de diciembre al viernes 1 de enero.",
+     "Las clases vuelven a empezar el lunes 4 de enero."
+    ]
+   }
+  }
+ ],
+ "readings": {},
+ "guests": {
+  "seager": {
+   "name": "Professor Sara Seager",
+   "affiliation": "University of Toronto; Professor Emerita, Massachusetts Institute of Technology",
+   "topic": "When the evidence would be enough to say there is life on another world, and which other explanations must be ruled out first",
+   "when": "8:00-8:20 AM Eastern",
+   "mode": "Virtual visit",
+   "initials": "SS",
+   "links": [],
+   "label_es": "Persona invitada",
+   "when_es": "8:00-8:20 AM, hora del Este",
+   "mode_es": "Visita virtual"
+  },
+  "sarfati": {
+   "name": "Dr. Liora Sarfati",
+   "affiliation": "Tel Aviv University, Department of East Asian Studies",
+   "topic": "Korean shamanism in lived practice and digital media",
+   "when": "8:00-8:30 AM Eastern",
+   "mode": "Virtual visit",
+   "initials": "LS",
+   "links": [],
+   "label_es": "Persona invitada",
+   "when_es": "8:00-8:30 AM, hora del Este",
+   "mode_es": "Visita virtual"
+  }
+ },
+ "slides": {
+  "decide": {
+   "kind": "content",
+   "title": "Decision and reflection",
+   "body": [
+    "Write today's daily entry: Did, Changed, Next.",
+    "Add one decision you made today, with its reason."
+   ]
+  },
+  "r-studio": {
+   "kind": "content",
+   "title": "Your research work",
+   "body": [
+    "Use your existing feedback.",
+    "Choose your most important next step.",
+    "Revise, retain or investigate; explain why.",
+    "Save your decision and next step; keep prior work.",
+    "Individual help is by agreed appointment.",
+    "No surveys, interviews or data from other people until Mr. Portela tells you your study is approved."
+   ],
+   "origin": "AP Research deck, SL_STUDIO_1",
+   "visual": {
+    "type": "flow",
+    "steps": [
+     "Use your existing feedback",
+     "Choose your most important next step",
+     {
+      "branch": [
+       "Revise",
+       "Retain",
+       "Investigate"
+      ]
+     },
+     "Save your decision and next step"
+    ]
+   },
+   "title_es": "Tu trabajo de investigación",
+   "body_es": [
+    "Usa la retroalimentación que ya tienes.",
+    "Elige tu próximo paso más importante.",
+    "Revisa, conserva o investiga; explica por qué.",
+    "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+    "La ayuda individual es con cita acordada.",
+    "No hagas encuestas ni entrevistas, ni reúnas datos de otras personas, hasta que el Sr. Portela te diga que tu estudio está aprobado."
+   ]
+  },
+  "s-gnote": {
+   "kind": "content",
+   "title": "Guest note",
+   "body": [
+    "Ready one page for a single accurate note.",
+    "Note how the speaker connects evidence to a claim.",
+    "You do not need to cite the talk."
+   ],
+   "origin": "Week plan, guest setup"
+  },
+  "d-7": {
+   "kind": "content",
+   "title": "T2: Build one connected argument",
+   "body": [
+    "Order the claims and evidence.",
+    "Explain how each supports the conclusion.",
+    "Make the meaningful limit visible."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 7",
+   "deck_no": 7,
+   "deck_of": 13,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Claims and evidence",
+     "Conclusion",
+     "Meaningful limit"
+    ]
+   }
+  },
+  "d-8": {
+   "kind": "content",
+   "title": "T2: Evidence on screen, reasoning aloud",
+   "body": [
+    "Choose a useful visual.",
+    "Preserve its source, labels and scale.",
+    "Prepare to explain choices and respond to feedback."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 8",
+   "deck_no": 8,
+   "deck_of": 13,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Useful visual",
+     "Source, labels and scale",
+     "Explain and respond"
+    ]
+   }
+  },
+  "d-9": {
+   "kind": "content",
+   "title": "T2: Sequence the argument",
+   "body": [
+    "State the provisional conclusion.",
+    "Locate evidence for each claim.",
+    "Include the alternative or limitation."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 9",
+   "deck_no": 9,
+   "deck_of": 13,
+   "visual": {
+    "type": "flow",
+    "steps": [
+     "State the provisional conclusion",
+     "Locate evidence for each claim",
+     {
+      "branch": [
+       "Supported",
+       "Mark the gap"
+      ]
+     },
+     "Include the alternative or limitation"
+    ]
+   }
+  },
+  "d-10": {
+   "kind": "content",
+   "title": "T2: Check the visual evidence",
+   "body": [
+    "Keep only what the listener needs.",
+    "Check the original source.",
+    "Preserve sound work in the existing deck."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 10",
+   "deck_no": 10,
+   "deck_of": 13,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "What the listener needs",
+     "Original source",
+     "Existing deck"
+    ]
+   }
+  },
+  "d-11": {
+   "kind": "content",
+   "title": "T2: Make the transitions meaningful",
+   "body": [
+    "Explain why one point follows another.",
+    "Keep speaking responsibilities clear.",
+    "Understand research beyond your own section."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 11",
+   "deck_no": 11,
+   "deck_of": 13,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Why this point follows",
+     "Who speaks",
+     "Beyond your section"
+    ]
+   }
+  },
+  "d-12": {
+   "kind": "content",
+   "title": "T2: Show the readiness evidence",
+   "body": [
+    "Explain the central argument and a supported connection.",
+    "Name the alternative and limitation.",
+    "Identify any essential unfinished work."
+   ],
+   "origin": "AP Seminar deck, Revise, share and build the argument (December 7-11), slide 12",
+   "deck_no": 12,
+   "deck_of": 13,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Central argument",
+     "Alternative and limitation",
+     "Unfinished work"
+    ]
+   }
+  },
+  "e-3": {
+   "kind": "content",
+   "title": "Paired rehearsal",
+   "body": [
+    "Present, respond, listen and record.",
+    "Each team presents once.",
+    "Choose the change the evidence warrants."
+   ],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 3",
+   "deck_no": 3,
+   "deck_of": 9,
+   "visual": {
+    "type": "flow",
+    "steps": [
+     "Present",
+     "Respond",
+     "Listen",
+     "Record"
+    ]
+   }
+  },
+  "e-5": {
+   "kind": "content",
+   "title": "Make and check one consequential repair",
+   "body": [
+    "Locate the feedback and original passage.",
+    "Change the explanation or evidence connection.",
+    "Rehearse the change and explain why it helps."
+   ],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 5",
+   "deck_no": 5,
+   "deck_of": 9,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Feedback and original",
+     "Change",
+     "Rehearse and explain"
+    ]
+   }
+  },
+  "r-open": {
+   "kind": "opener",
+   "title": "Individual research studio",
+   "subtitle": "AP Research · Week of December 14",
+   "subtitle_es": "AP Research · Semana del 14 de diciembre",
+   "body": [],
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-kcreading"
+   }
+  },
+  "e-open": {
+   "kind": "opener",
+   "title": "Rehearse, explain and repair",
+   "subtitle": "AP Seminar · December 14-17",
+   "subtitle_es": "AP Seminar · 14 al 17 de diciembre",
+   "body": [],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 1",
+   "visual": {
+    "type": "photo",
+    "mode": "documentary",
+    "img": "loc-office"
+   }
+  },
+  "e-7": {
+   "kind": "content",
+   "title": "Short teacher diagnostic",
+   "body": [
+    "Explain the central argument.",
+    "Point to the evidence and decisions.",
+    "Each member answers about actual work."
+   ],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 7",
+   "deck_no": 7,
+   "deck_of": 9,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Central argument",
+     "Evidence and decisions",
+     "Each member answers"
+    ]
+   }
+  },
+  "e-8": {
+   "kind": "content",
+   "title": "Keep the practice evidence together",
+   "body": [
+    "Save the report and explained revision.",
+    "Keep the team matrix and current outline.",
+    "Identify the next confirmed class activity."
+   ],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 8",
+   "deck_no": 8,
+   "deck_of": 9,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Report and revision",
+     "Matrix and outline",
+     "Next class"
+    ]
+   }
+  },
+  "e-9": {
+   "kind": "content",
+   "title": "Timed Part A practice",
+   "body": [
+    "Read the complete passage and all three prompts.",
+    "Analyze the author's argument and evidence.",
+    "Work independently in the agreed response location.",
+    "Follow the access and timing arrangements confirmed for you.",
+    "Keep the original response for later feedback."
+   ],
+   "origin": "AP Seminar deck, Rehearse, explain and repair (December 14-17), slide 9",
+   "deck_no": 9,
+   "deck_of": 9,
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Passage and prompts",
+     "Argument and evidence",
+     "Original response kept"
+    ]
+   }
+  },
+  "e-cont": {
+   "kind": "content",
+   "title": "Keep working on the repair",
+   "body": [
+    "Continue your team's one repair.",
+    "Or have a second listener restate the repaired reasoning.",
+    "Keep the old version visible."
+   ],
+   "origin": "Planbook entry, remaining minutes of the 99-minute period (draft use)"
+  },
+  "t-trans": {
+   "kind": "content",
+   "title": "Rehearse the transitions",
+   "body": [
+    "Rehearse the transitions once more from your speaking outline.",
+    "Explain why each point follows the one before.",
+    "Keep speaking responsibilities clear."
+   ],
+   "origin": "Planbook entry, remaining minutes of the 99-minute period (draft use)"
+  },
+  "prio": {
+   "kind": "content",
+   "title": "Your practice priority",
+   "body": [
+    "Work on your existing practice priority at your table.",
+    "If you are stuck, write the exact question and keep going."
+   ],
+   "origin": "Planbook entry, practice priority after the second mock"
+  },
+  "g-seager": {
+   "kind": "guest",
+   "guest": "seager",
+   "title": "Professor Sara Seager",
+   "visual": {
+    "type": "guest",
+    "img": "nasa-mirrors",
+    "mode": "editorial"
+   }
+  },
+  "g-sarfati": {
+   "kind": "guest",
+   "guest": "sarfati",
+   "title": "Dr. Liora Sarfati",
+   "visual": {
+    "type": "guest",
+    "img": "loc-newspaper",
+    "mode": "editorial"
+   }
+  },
+  "pb-task": {
+   "kind": "content",
+   "title": "Part B planning task",
+   "body": [
+    "Read the four short sources.",
+    "Plan a line of reasoning that uses at least two of them.",
+    "Write your introduction and one body paragraph.",
+    "Work on your own: 40 minutes, timed and typed.",
+    "Your work is scored with the College Board rows it shows."
+   ],
+   "origin": "Planbook entries for December 11, 14, 15 and 17, Part B planning task",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Four short sources",
+     "Line of reasoning",
+     "Introduction and one body paragraph"
+    ]
+   }
+  },
+  "s-place": {
+   "kind": "content",
+   "title": "Final team placements",
+   "body": [
+    "If you are not yet on a team, you join one today.",
+    "Every team then has 3 to 5 students.",
+    "Formal teams are confirmed on Thursday, December 17."
+   ],
+   "origin": "Planbook entry for December 15, final placements",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Join a team today",
+     "Teams of 3 to 5",
+     "Formal teams on December 17"
+    ]
+   }
+  },
+  "s-formal": {
+   "kind": "content",
+   "title": "Formal Team Project teams",
+   "body": [
+    "Formal Team Project teams are confirmed and posted today.",
+    "Every team has 3 to 5 students.",
+    "Find your team on the posted list."
+   ],
+   "origin": "Planbook entries for December 16 and 17, formal teams",
+   "visual": {
+    "type": "chain",
+    "steps": [
+     "Teams confirmed",
+     "3 to 5 students",
+     "Posted list"
+    ]
+   }
+  }
+ },
+ "practice": {
+  "r-core": {
+   "tier": "core",
+   "task": "Academic Paper",
+   "rubric_rows": [
+    "Method, Process, or Approach"
+   ],
+   "minutes": 20,
+   "dok": 4,
+   "lines": [
+    "Revise one part your feedback names: introduction, literature review or method.",
+    "Under it, write what you changed and why."
+   ],
+   "lines_es": [
+    "Revisa una parte que nombra tu retroalimentación: introducción, revisión de literatura o método.",
+    "Debajo, escribe qué cambiaste y por qué."
+   ]
+  },
+  "r-sup": {
+   "tier": "supported",
+   "task": "Academic Paper",
+   "rubric_rows": [
+    "Method, Process, or Approach"
+   ],
+   "minutes": 20,
+   "dok": 2,
+   "lines": [
+    "Begin from one named next step in your existing feedback.",
+    "If you are blocked, write the exact question.",
+    "Individual help is by agreed appointment."
+   ]
+  },
+  "r-ext": {
+   "tier": "extension",
+   "task": "Academic Paper",
+   "rubric_rows": [
+    "Method, Process, or Approach"
+   ],
+   "minutes": 20,
+   "dok": 4,
+   "lines": [
+    "Work from your feedback and your last daily entry.",
+    "Also write what evidence would change today's decision."
+   ]
+  },
+  "t2-core": {
+   "tier": "core",
+   "task": "IRR",
+   "rubric_rows": [
+    "Compare perspectives",
+    "Credibility and relevance"
+   ],
+   "minutes": 10,
+   "dok": 4,
+   "lines": [
+    "State the provisional conclusion.",
+    "Locate evidence for each claim.",
+    "Include the alternative or limitation.",
+    "Mark a claim the evidence does not yet support as a gap."
+   ]
+  },
+  "t2-sup": {
+   "tier": "supported",
+   "task": "IRR",
+   "rubric_rows": [
+    "Credibility and relevance"
+   ],
+   "minutes": 10,
+   "dok": 3,
+   "lines": [
+    "Read your finding from a prepared note, and a teammate restates it.",
+    "Locate the evidence for your own claim."
+   ]
+  },
+  "t2-ext": {
+   "tier": "extension",
+   "task": "IRR",
+   "rubric_rows": [
+    "Compare perspectives"
+   ],
+   "minutes": 10,
+   "dok": 4,
+   "lines": [
+    "State the strongest fair case for the alternative your team did not choose.",
+    "Explain why your conclusion still holds, or how it changes."
+   ]
+  },
+  "rp-core": {
+   "tier": "core",
+   "task": "IRR",
+   "rubric_rows": [
+    "Analyze and evaluate sources",
+    "Credibility and relevance"
+   ],
+   "minutes": 12,
+   "dok": 4,
+   "lines": [
+    "Locate the feedback and original passage.",
+    "Change the explanation or evidence connection.",
+    "Rehearse the change and explain why it helps.",
+    "Leave a short note beside the change: what changed, why, and what still needs work."
+   ]
+  },
+  "rp-sup": {
+   "tier": "supported",
+   "task": "IRR",
+   "rubric_rows": [
+    "Analyze and evaluate sources"
+   ],
+   "minutes": 12,
+   "dok": 3,
+   "lines": [
+    "Point to the exact slide or outline passage.",
+    "Say what the listener could not follow.",
+    "Keep the old version visible while you change it."
+   ]
+  },
+  "rp-ext": {
+   "tier": "extension",
+   "task": "IRR",
+   "rubric_rows": [
+    "Credibility and relevance"
+   ],
+   "minutes": 12,
+   "dok": 4,
+   "lines": [
+    "If the evidence does not support the claim, qualify the claim or name the gap.",
+    "Have a listener restate the reasoning after the change."
+   ]
+  },
+  "mk-core": {
+   "tier": "core",
+   "task": "IRR",
+   "rubric_rows": [
+    "Compare perspectives",
+    "Credibility and relevance"
+   ],
+   "minutes": 14,
+   "dok": 4,
+   "lines": [
+    "When your team is called, give the central argument and the evidence that connects it.",
+    "Each member answers a question about an actual decision by pointing to the work.",
+    "While you wait, work on your existing practice priority at your table."
+   ]
+  },
+  "mk-sup": {
+   "tier": "supported",
+   "task": "IRR",
+   "rubric_rows": [
+    "Credibility and relevance"
+   ],
+   "minutes": 14,
+   "dok": 3,
+   "lines": [
+    "You may hold your speaking outline while you present.",
+    "Point to the exact slide, source or note behind your answer.",
+    "While you wait, finish one part of your practice priority."
+   ]
+  },
+  "mk-ext": {
+   "tier": "extension",
+   "task": "IRR",
+   "rubric_rows": [
+    "Area of investigation"
+   ],
+   "minutes": 14,
+   "dok": 4,
+   "lines": [
+    "Be ready for a follow-up question about a limit of your team's conclusion.",
+    "While you wait, check that every claim in your outline points to its evidence."
+   ]
+  }
+ },
+ "rubric_rows": {
+  "IRR": {
+   "source": "AP Seminar Performance Task 1 student task directions, as quoted in classroom/seminar-task-check.html",
+   "rows": {
+    "Area of investigation": "Identify an area of investigation and explain its relationship to the overall problem or issue.",
+    "Analyze and evaluate sources": "Summarize, explain, analyze and evaluate the main ideas and reasoning in the chosen sources.",
+    "Credibility and relevance": "Demonstrate you have evaluated the credibility of your chosen sources and selected evidence relevant to the inquiry.",
+    "Compare perspectives": "Identify, compare and interpret a range of perspectives about the problem or issue."
+   },
+   "links": [
+    {
+     "label": "AP Seminar scoring guidelines and rubrics (College Board)",
+     "url": "https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions"
+    },
+    {
+     "label": "AP Seminar Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"
+    }
+   ],
+   "cite": "Wording from the AP Seminar Performance Task 1 student directions (College Board)."
+  },
+  "Academic Paper": {
+   "source": "AP Research Course and Exam Description, academic paper elements, as quoted in classroom/paper-elements-check.html",
+   "rows": {
+    "Method, Process, or Approach": "Explains and provides justification for the chosen method, process, or approach and its alignment with the research question.",
+    "Results, Product, or Findings": "Presents the findings, evidence, results, or performance/exhibit/product generated by the research method."
+   },
+   "links": [
+    {
+     "label": "AP Research Course and Exam Description (rubrics)",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf"
+    },
+    {
+     "label": "Scored AP Research samples (College Board)",
+     "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions"
+    }
+   ],
+   "cite": "Wording from the AP Research Course and Exam Description, academic paper elements (College Board)."
+  }
+ },
+ "criteria": {
+  "r": [
+   {
+    "row": "Method, Process, or Approach",
+    "en": "I act on my existing feedback.",
+    "es": "Actúo según la retroalimentación que ya tengo."
+   },
+   {
+    "row": "Method, Process, or Approach",
+    "en": "I explain why my next step fits my question.",
+    "es": "Explico por qué mi próximo paso encaja con mi pregunta."
+   },
+   {
+    "row": "Method, Process, or Approach",
+    "en": "I keep earlier work and record my decision.",
+    "es": "Conservo el trabajo anterior y registro mi decisión."
+   }
+  ],
+  "t2": [
+   {
+    "row": "Compare perspectives",
+    "en": "Our claims build one argument, not a list of separate reports.",
+    "es": "Nuestras afirmaciones forman un solo argumento, no una lista de informes separados."
+   },
+   {
+    "row": "Credibility and relevance",
+    "en": "Every claim points to its evidence, and each visual keeps its source, labels and scale.",
+    "es": "Cada afirmación señala su evidencia, y cada imagen conserva su fuente, sus etiquetas y su escala."
+   },
+   {
+    "row": "Area of investigation",
+    "en": "We name the alternative or limit that most affects our conclusion.",
+    "es": "Nombramos la alternativa o el límite que más afecta nuestra conclusión."
+   }
+  ],
+  "pa": [
+   {
+    "row": "Analyze and evaluate sources",
+    "en": "I explain the author's argument, line of reasoning and evidence, without writing my own essay on the issue.",
+    "es": "Explico el argumento del autor, su línea de razonamiento y su evidencia, sin escribir mi propio ensayo sobre el tema."
+   },
+   {
+    "row": "Compare perspectives",
+    "en": "Our claims build one argument, not a list of separate reports.",
+    "es": "Nuestras afirmaciones forman un solo argumento, no una lista de informes separados."
+   },
+   {
+    "row": "Area of investigation",
+    "en": "We name the alternative or limit that most affects our conclusion.",
+    "es": "Nombramos la alternativa o el límite que más afecta nuestra conclusión."
+   }
+  ],
+  "mk": [
+   {
+    "row": "Compare perspectives",
+    "en": "Our team explains the central argument and its evidence.",
+    "es": "Nuestro equipo explica el argumento central y su evidencia."
+   },
+   {
+    "row": "Credibility and relevance",
+    "en": "I answer a question about a real decision with our work.",
+    "es": "Respondo una pregunta sobre una decisión real con nuestro trabajo."
+   },
+   {
+    "row": "Area of investigation",
+    "en": "I name the limit that most affects our conclusion.",
+    "es": "Nombro el límite que más afecta nuestra conclusión."
+   }
+  ],
+  "pamk": [
+   {
+    "row": "Analyze and evaluate sources",
+    "en": "I explain the author's argument, line of reasoning and evidence, without writing my own essay on the issue.",
+    "es": "Explico el argumento del autor, su línea de razonamiento y su evidencia, sin escribir mi propio ensayo sobre el tema."
+   },
+   {
+    "row": "Compare perspectives",
+    "en": "Our team explains the central argument and the evidence that connects it.",
+    "es": "Nuestro equipo explica el argumento central y la evidencia que lo conecta."
+   },
+   {
+    "row": "Credibility and relevance",
+    "en": "I answer a question about an actual decision by pointing to our work.",
+    "es": "Respondo una pregunta sobre una decisión real señalando nuestro trabajo."
+   }
+  ],
+  "pb": [
+   {
+    "row": "Line of reasoning",
+    "en": "My introduction and paragraph follow one clear line of reasoning.",
+    "es": "Mi introducción y mi párrafo siguen una línea de razonamiento clara."
+   },
+   {
+    "row": "Evidence",
+    "en": "I use and explain evidence from at least two sources.",
+    "es": "Uso y explico evidencia de al menos dos fuentes."
+   },
+   {
+    "row": "Compare perspectives",
+    "en": "I connect the perspectives in the sources I use.",
+    "es": "Relaciono las perspectivas de las fuentes que uso."
+   }
+  ]
+ },
+ "glossary": {
+  "claim": {
+   "en": "claim",
+   "es": "afirmación",
+   "def_en": "What the author says is true.",
+   "def_es": "Lo que el autor dice que es cierto."
+  },
+  "limit": {
+   "en": "limit",
+   "es": "límite",
+   "def_en": "What the evidence cannot show.",
+   "def_es": "Lo que la evidencia no puede mostrar."
+  },
+  "attribution": {
+   "en": "attribution",
+   "es": "atribución",
+   "def_en": "Saying which source an idea comes from.",
+   "def_es": "Decir de qué fuente viene una idea."
+  },
+  "synthesis": {
+   "en": "synthesis",
+   "es": "síntesis",
+   "def_en": "Connecting sources to explain something new.",
+   "def_es": "Conectar fuentes para explicar algo nuevo."
+  },
+  "perspective": {
+   "en": "perspective",
+   "es": "perspectiva",
+   "def_en": "A point of view on an issue.",
+   "def_es": "Un punto de vista sobre un tema."
+  },
+  "record": {
+   "en": "record",
+   "es": "registro",
+   "def_en": "One documented observation or entry in your data.",
+   "def_es": "Una observación o entrada documentada en tus datos."
+  },
+  "method": {
+   "en": "method",
+   "es": "método",
+   "def_en": "How you will collect and analyze evidence.",
+   "def_es": "Cómo vas a recolectar y analizar la evidencia."
+  },
+  "feedback": {
+   "en": "feedback",
+   "es": "retroalimentación",
+   "def_en": "Comments on your work that guide revision.",
+   "def_es": "Comentarios sobre tu trabajo que guían la revisión."
+  },
+  "revision": {
+   "en": "revision",
+   "es": "revisión",
+   "def_en": "A change to your work, with a reason.",
+   "def_es": "Un cambio en tu trabajo, con una razón."
+  },
+  "reverse-outline": {
+   "en": "reverse outline",
+   "es": "esquema inverso",
+   "def_en": "A note beside each paragraph of your draft that says what the paragraph does.",
+   "def_es": "Una nota junto a cada párrafo de tu borrador que dice lo que hace ese párrafo."
+  },
+  "alternative": {
+   "en": "alternative",
+   "es": "alternativa",
+   "def_en": "Another reasonable conclusion or solution that the same evidence could support.",
+   "def_es": "Otra conclusión o solución razonable que la misma evidencia podría apoyar."
+  },
+  "provisional": {
+   "en": "provisional",
+   "es": "provisional",
+   "def_en": "Held for now, and open to change if new evidence appears.",
+   "def_es": "Válido por ahora, y abierto a cambiar si aparece nueva evidencia."
+  },
+  "transition": {
+   "en": "transition",
+   "es": "transición",
+   "def_en": "The words that explain why one point follows another.",
+   "def_es": "Las palabras que explican por qué un punto sigue a otro."
+  },
+  "line-of-reasoning": {
+   "en": "line of reasoning",
+   "es": "línea de razonamiento",
+   "def_en": "The order of claims an author uses to lead to a conclusion.",
+   "def_es": "El orden de las afirmaciones que un autor usa para llegar a una conclusión."
+  },
+  "literature-review": {
+   "en": "literature review",
+   "es": "revisión de literatura",
+   "def_en": "The part of your paper that shows what is already known, how the sources relate, and the gap your study addresses.",
+   "def_es": "La parte de tu trabajo que muestra lo que ya se sabe, cómo se relacionan las fuentes y el vacío que tu estudio atiende."
+  }
+ },
+ "absent": {
+  "r": {
+   "lines": [
+    "Use your existing feedback.",
+    "Choose your most important next step.",
+    "Revise, retain or investigate; explain why.",
+    "Save your decision and next step; keep prior work.",
+    "Individual help is by agreed appointment."
+   ],
+   "lines_es": [
+    "Usa la retroalimentación que ya tienes.",
+    "Elige tu próximo paso más importante.",
+    "Revisa, conserva o investiga; explica por qué.",
+    "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+    "La ayuda individual es con cita acordada."
+   ]
+  },
+  "pa": {
+   "lines": [
+    "Ask Mr. Portela about the timed Part A practice you missed.",
+    "If you are not yet on a team, ask Mr. Portela which team you join.",
+    "Open your team's existing outline or deck.",
+    "Under each claim, locate the evidence and explain the connection. Mark a claim the evidence does not yet support as a gap.",
+    "Write the alternative or limitation that most affects your team's conclusion.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Pregúntale al Sr. Portela sobre la práctica cronometrada de la Parte A que te perdiste.",
+    "Si todavía no estás en un equipo, pregúntale al Sr. Portela a qué equipo te unes.",
+    "Abre el esquema o la presentación que tu equipo ya tiene.",
+    "Debajo de cada afirmación, ubica la evidencia y explica la conexión. Marca como vacío la afirmación que la evidencia todavía no apoya.",
+    "Escribe la alternativa o el límite que más afecta la conclusión de tu equipo.",
+    "Guarda tu trabajo donde ya está."
+   ]
+  },
+  "mk": {
+   "lines": [
+    "Open your team's current outline or deck.",
+    "Ask a teammate whether your team gave its practice presentation and what next step was recorded.",
+    "Write your team's central argument in two sentences and point to the evidence for each claim.",
+    "Write one actual decision you made in this project, and why.",
+    "Keep your practice evidence together: the report, the revision you can explain, the team matrix and the current outline.",
+    "Check the posted list for your formal Team Project team.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo si tu equipo ya hizo su presentación de práctica y qué próximo paso se anotó.",
+    "Escribe el argumento central de tu equipo en dos oraciones y señala la evidencia de cada afirmación.",
+    "Escribe una decisión real que tomaste en este proyecto y por qué.",
+    "Mantén junta tu evidencia de práctica: el informe, la revisión que puedes explicar, la matriz del equipo y el esquema actual.",
+    "Revisa la lista publicada para ver tu equipo formal del Proyecto en Equipo.",
+    "Guarda tu trabajo donde ya está."
+   ]
+  },
+  "mk-guest": {
+   "lines": [
+    "Open your team's current outline or deck.",
+    "Ask a teammate whether your team gave its practice presentation and what next step was recorded.",
+    "Write your team's central argument in two sentences and point to the evidence for each claim.",
+    "Write one actual decision you made in this project, and why.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo si tu equipo ya hizo su presentación de práctica y qué próximo paso se anotó.",
+    "Escribe el argumento central de tu equipo en dos oraciones y señala la evidencia de cada afirmación.",
+    "Escribe una decisión real que tomaste en este proyecto y por qué.",
+    "Guarda tu trabajo donde ya está."
+   ],
+   "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
+   "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+  },
+  "mk-guest-break": {
+   "lines": [
+    "Open your team's current outline or deck.",
+    "Ask a teammate whether your team gave its practice presentation and what next step was recorded.",
+    "Write your team's central argument in two sentences and point to the evidence for each claim.",
+    "Write one actual decision you made in this project, and why.",
+    "Keep your practice evidence together: the report, the revision you can explain, the team matrix and the current outline.",
+    "Check the posted list for your formal Team Project team.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo si tu equipo ya hizo su presentación de práctica y qué próximo paso se anotó.",
+    "Escribe el argumento central de tu equipo en dos oraciones y señala la evidencia de cada afirmación.",
+    "Escribe una decisión real que tomaste en este proyecto y por qué.",
+    "Mantén junta tu evidencia de práctica: el informe, la revisión que puedes explicar, la matriz del equipo y el esquema actual.",
+    "Revisa la lista publicada para ver tu equipo formal del Proyecto en Equipo.",
+    "Guarda tu trabajo donde ya está."
+   ],
+   "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
+   "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
+  },
+  "pamk": {
+   "lines": [
+    "Ask Mr. Portela about the timed Part A practice you missed.",
+    "Open your team's current outline or deck.",
+    "Ask a teammate whether your team gave its practice presentation and what next step was recorded.",
+    "Write your team's central argument in two sentences and point to the evidence for each claim.",
+    "Write one actual decision you made in this project, and why.",
+    "Keep your practice evidence together: the report, the revision you can explain, the team matrix and the current outline.",
+    "Check the posted list for your formal Team Project team.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Pregúntale al Sr. Portela sobre la práctica cronometrada de la Parte A que te perdiste.",
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo si tu equipo ya hizo su presentación de práctica y qué próximo paso se anotó.",
+    "Escribe el argumento central de tu equipo en dos oraciones y señala la evidencia de cada afirmación.",
+    "Escribe una decisión real que tomaste en este proyecto y por qué.",
+    "Mantén junta tu evidencia de práctica: el informe, la revisión que puedes explicar, la matriz del equipo y el esquema actual.",
+    "Revisa la lista publicada para ver tu equipo formal del Proyecto en Equipo.",
+    "Guarda tu trabajo donde ya está."
+   ]
+  },
+  "pb": {
+   "lines": [
+    "Ask Mr. Portela when you will do the Part B planning task you missed.",
+    "Open your team's current outline or deck.",
+    "Ask a teammate what the listeners said and which repair the team chose.",
+    "In writing, explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Pregúntale al Sr. Portela cuándo harás la tarea de planificación de la Parte B que te perdiste.",
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo qué dijeron quienes escucharon y qué reparación eligió el equipo.",
+    "Por escrito, explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
+    "Guarda tu trabajo donde ya está."
+   ]
+  },
+  "pb-teams": {
+   "lines": [
+    "Ask Mr. Portela when you will do the Part B planning task you missed.",
+    "Open your team's current outline or deck.",
+    "Ask a teammate what the listeners said and which repair the team chose.",
+    "In writing, explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
+    "Check the posted list for your formal Team Project team.",
+    "Save your work in its existing location."
+   ],
+   "lines_es": [
+    "Pregúntale al Sr. Portela cuándo harás la tarea de planificación de la Parte B que te perdiste.",
+    "Abre el esquema o la presentación actual de tu equipo.",
+    "Pregúntale a un compañero de equipo qué dijeron quienes escucharon y qué reparación eligió el equipo.",
+    "Por escrito, explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
+    "Revisa la lista publicada para ver tu equipo formal del Proyecto en Equipo.",
+    "Guarda tu trabajo donde ya está."
+   ]
+  }
+ },
+ "materials": {
+  "all": [],
+  "AP Research": [
+   {
+    "label": "AP Research Course and Exam Description (College Board)",
+    "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf"
+   },
+   {
+    "label": "Bhattacherjee, Social Science Research (free text)",
+    "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"
+   },
+   {
+    "label": "ZoteroBib (citations)",
+    "url": "https://zbib.org/"
+   }
+  ],
+  "AP Seminar": [
+   {
+    "label": "AP Seminar Course and Exam Description (College Board)",
+    "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf"
+   },
+   {
+    "label": "ZoteroBib (citations)",
+    "url": "https://zbib.org/"
+   }
+  ],
+  "P1": [
+   {
+    "label": "P1 Classroom: Research checkpoints (Material)",
+    "url": "https://classroom.google.com/c/ODcyMDU3MjYzNjg2/m/ODgzMTAzNjM1MTk5/details"
+   }
+  ],
+  "P3": [
+   {
+    "label": "P3 Classroom: Research checkpoints (Material)",
+    "url": "https://classroom.google.com/c/ODcyMDU3Njg5NzE4/m/ODgzMTAzMTY5Mjg2/details"
+   }
+  ],
+  "P4": [
+   {
+    "label": "P4 Classroom: Research checkpoints (Material)",
+    "url": "https://classroom.google.com/c/ODcyMDU3ODQ3NzEx/m/ODgzMTAzNTczNzUy/details"
+   }
+  ],
+  "P5": [
+   {
+    "label": "P5 Classroom: Classwork",
+    "url": "https://classroom.google.com/w/ODcyMDU2NDExMjAx/t/all"
+   }
+  ],
+  "P7": [
+   {
+    "label": "P7 Classroom: Classwork",
+    "url": "https://classroom.google.com/w/ODcyMDU3NzM4NjIz/t/all"
+   }
+  ],
+  "P2": [
+   {
+    "label": "P2 Classroom: Classwork",
+    "url": "https://classroom.google.com/w/ODcyMDU4MDI5MTYz/t/all"
+   }
+  ],
+  "P6": [
+   {
+    "label": "P6 Classroom: Classwork",
+    "url": "https://classroom.google.com/w/ODcyMDU3NTEzOTUx/t/all"
+   }
+  ],
+  "P8": [
+   {
+    "label": "P8 Classroom: Classwork",
+    "url": "https://classroom.google.com/w/ODcyMDU3NjcyMDY5/t/all"
+   }
+  ]
+ },
+ "library": [
+  {
+   "id": "approved",
+   "label": "Approved resources",
+   "label_es": "Recursos aprobados",
+   "intro": "Tools and data sources for your research.",
+   "items": [
+    {
+     "label": "SDA: Survey Documentation and Analysis (UC Berkeley)",
+     "url": "https://sda.berkeley.edu/"
+    },
+    {
+     "label": "Pew Research Center datasets",
+     "url": "https://www.pewresearch.org/datasets/"
+    },
+    {
+     "label": "General Social Survey (NORC)",
+     "url": "https://gss.norc.org/"
+    },
+    {
+     "label": "Google Dataset Search",
+     "url": "https://datasetsearch.research.google.com/"
+    },
+    {
+     "label": "IPUMS USA",
+     "url": "https://usa.ipums.org/usa/"
+    },
+    {
+     "label": "data.census.gov",
+     "url": "https://data.census.gov/"
+    },
+    {
+     "label": "CDC WONDER",
+     "url": "https://wonder.cdc.gov/"
+    },
+    {
+     "label": "Bhattacherjee, Social Science Research (free text)",
+     "url": "https://digitalcommons.usf.edu/oa_textbooks/3/"
+    },
+    {
+     "label": "OpenIntro Statistics",
+     "url": "https://www.openintro.org/book/os/"
+    },
+    {
+     "label": "ZoteroBib",
+     "url": "https://zbib.org/"
+    },
+    {
+     "label": "Taguette",
+     "url": "https://www.taguette.org/"
+    },
+    {
+     "label": "jamovi",
+     "url": "https://www.jamovi.org/"
+    },
+    {
+     "label": "UC Berkeley CPHS informed consent templates",
+     "url": "https://cphs.berkeley.edu/informedconsent.html"
+    }
+   ]
+  },
+  {
+   "id": "cb",
+   "label": "College Board rubrics and guides",
+   "label_es": "Rúbricas y guías del College Board",
+   "intro": "Official rubrics and course descriptions for this week's tasks.",
+   "items": [
+    {
+     "label": "AP Seminar Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-seminar-course-and-exam-description.pdf",
+     "note": "IRR task directions and rubric."
+    },
+    {
+     "label": "AP Seminar scoring guidelines",
+     "url": "https://apcentral.collegeboard.org/courses/ap-seminar/exam/past-exam-questions",
+     "note": "Scoring guidelines for both performance tasks."
+    },
+    {
+     "label": "AP Research Course and Exam Description",
+     "url": "https://apcentral.collegeboard.org/media/pdf/ap-research-course-and-exam-description.pdf",
+     "note": "Academic paper elements and rubric."
+    },
+    {
+     "label": "Scored AP Research samples",
+     "url": "https://apcentral.collegeboard.org/courses/ap-research/exam/past-exam-questions",
+     "note": "Real papers with scoring commentary."
+    },
+    {
+     "label": "College Board guidance for AI tools",
+     "url": "https://apcentral.collegeboard.org/exam-administration-ordering-scores/administering-exams/exam-policies/artificial-intelligence-tools",
+     "note": "What students may and may not use AI for."
+    }
+   ]
+  },
+  {
+   "id": "archive",
+   "label": "Past weeks",
+   "label_es": "Semanas anteriores",
+   "intro": "Earlier weekly decks.",
+   "items": [
+    {
+     "label": "Week of December 7-11, 2026",
+     "url": "https://dec-7-2026-week-room-63.netlify.app/"
+    },
+    {
+     "label": "Week of November 30-December 4, 2026",
+     "url": "https://nov-30-2026-week-room-63.netlify.app/"
+    },
+    {
+     "label": "Week of November 16-20, 2026",
+     "url": "https://nov-16-2026-week-room-63.netlify.app/"
+    },
+    {
+     "label": "Week of November 9-13, 2026",
+     "url": "https://nov-9-2026-week-room-63.netlify.app/"
+    },
+    {
+     "label": "Week of November 2-6, 2026",
+     "url": "https://nov-2-2026-week-room-63.netlify.app/"
+    }
+   ]
+  },
+  {
+   "id": "portfolio",
+   "label": "Portfolio directory",
+   "label_es": "Directorio de portafolios",
+   "intro": "Room 63 portfolio directory.",
+   "items": [
+    {
+     "label": "Room 63 portfolio directory",
+     "url": "https://my-portfolio-room-63.netlify.app/"
+    }
+   ]
+  }
+ ],
+ "images": {
+  "loc-kcreading": {
+   "item_id": "2021756055",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-kcreading.webp",
+   "w": 1024,
+   "h": 768,
+   "alt": "A quiet public library reading room with long tables, lamps and shelves of books.",
+   "title": "Reading room at the Kansas City Central Library, the main downtown library in Missouri's largest city",
+   "creator": "Highsmith, Carol M., 1946-, photographer",
+   "date": "2021",
+   "source_url": "https://www.loc.gov/item/2021756055/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Carol M. Highsmith / Library of Congress · 2021 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-office": {
+   "item_id": "2016884729",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-office.webp",
+   "w": 1024,
+   "h": 743,
+   "alt": "A large early twentieth-century office with rows of people working at desks.",
+   "title": "[Office workers]",
+   "creator": "Harris & Ewing, photographer",
+   "date": "between 1915 and 1923",
+   "source_url": "https://www.loc.gov/item/2016884729/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Harris & Ewing / Library of Congress · 1915-1923 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "loc-newspaper": {
+   "item_id": "2020636246",
+   "rights_statement": "No known restrictions on publication.",
+   "file": "assets/img/loc-newspaper-trim.webp",
+   "w": 810,
+   "h": 1024,
+   "alt": "A young man leans on a counter, reading a newspaper closely.",
+   "title": "[Young man reading newspaper]",
+   "creator": "Rizzuto, Angelo, 1906-1967, photographer",
+   "date": "1956",
+   "source_url": "https://www.loc.gov/item/2020636246/",
+   "license": "Public domain: No known restrictions on publication.",
+   "credit": "Angelo Rizzuto / Library of Congress · 1956 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  },
+  "nasa-mirrors": {
+   "item_id": "PIA26386",
+   "rights_statement": "NASA Image and Video Library item; NASA images and media guidelines: NASA content is generally not subject to copyright in the United States. Credited to NASA, no third-party credit.",
+   "file": "assets/img/nasa-mirrors.webp",
+   "w": 1600,
+   "h": 1199,
+   "alt": "Technicians in clean-room suits inspect a large telescope mirror in a laboratory.",
+   "title": "NEO Surveyor's Mirrors Undergo Inspection at JPL",
+   "creator": "NASA/JPL-Caltech",
+   "date": "2024-08-28",
+   "source_url": "https://images.nasa.gov/details/PIA26386",
+   "license": "Public domain: NASA media usage guidelines: not subject to copyright in the United States",
+   "credit": "NASA/JPL-Caltech / NASA/JPL-Caltech · 2024 · public domain · tri-tone by Room 63",
+   "treatment": "tri-tone in the deck palette (ground, teal, brass)"
+  }
+ },
+ "maps_credit": "Maps: U.S. Census Bureau boundaries via us-atlas, and Natural Earth via world-atlas; both public domain. Drawn by Room 63.",
+ "anthology": {
+  "year": 2024,
+  "short": "Anthology, 6th ed."
+ },
+ "step_visuals": {
+  "@donow:r": {
+   "type": "mark"
+  },
+  "@exit:r": {
+   "type": "flow",
+   "steps": [
+    "Decision",
+    "Next step",
+    "Prior work kept"
+   ]
+  }
+ },
+ "next_visuals": {},
+ "video": [],
+ "audio": {
+  "default": "off",
+  "sounds": [
+   "timer chime",
+   "transition",
+   "work-time soundscape"
+  ],
+  "source": "made on this page; no recordings are used"
+ },
+ "routes": [
+  {
+   "day": "mon",
+   "period": 1,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Wednesday, December 16: individual research studio.",
+    "es": "Miércoles 16 de diciembre: taller de investigación individual."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "mon",
+   "period": 3,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Wednesday, December 16: individual research studio.",
+    "es": "Miércoles 16 de diciembre: taller de investigación individual."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "mon",
+   "period": 5,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Part B planning task and shortened paired rehearsal",
+   "label_es": "Tarea de planificación de la Parte B y ensayo breve en parejas de equipos",
+   "target": {
+    "en": "I can plan a line of reasoning from at least two sources and write under time, then rehearse and repair with my team.",
+    "es": "Puedo planificar una línea de razonamiento con al menos dos fuentes y escribir con tiempo limitado, y luego ensayar y reparar con mi equipo.",
+    "why_en": "Practice for Part B of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte B del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Have your device ready for the timed Part B planning task.",
+     "Open your team's current outline or deck for the rehearsal."
+    ],
+    "lines_es": [
+     "Ten tu dispositivo listo para la tarea cronometrada de planificación de la Parte B.",
+     "Abre el esquema o la presentación actual de tu equipo para el ensayo."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
+     "If you cannot yet explain one, write what you still need to understand."
+    ],
+    "lines_es": [
+     "Explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
+     "Si todavía no puedes explicar una, escribe lo que aún necesitas entender."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Wednesday, December 16: timed Part A practice, short teacher practice presentations and your formal Team Project team.",
+    "es": "Miércoles 16 de diciembre: práctica cronometrada de la Parte A, presentaciones de práctica breves con el profesor y tu equipo formal del Proyecto en Equipo."
+   },
+   "criteria": "pb",
+   "glossary": [
+    "line-of-reasoning",
+    "perspective",
+    "claim",
+    "limit",
+    "revision",
+    "feedback"
+   ],
+   "absent": "pb",
+   "practice": [
+    "rp-core",
+    "rp-sup",
+    "rp-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Part B planning task",
+     "label_es": "Tarea de planificación de la Parte B",
+     "steps": [
+      {
+       "slide": "pb-task",
+       "minutes": 40,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Shortened paired rehearsal and one repair",
+     "label_es": "Ensayo breve en parejas de equipos y una reparación",
+     "steps": [
+      {
+       "slide": "e-3",
+       "minutes": 13,
+       "mode": "Group"
+      },
+      {
+       "slide": "e-5",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 11,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: explain what another member changed",
+     "label_es": "Salida: explica lo que cambió otro integrante",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Optional time: keep working on the repair",
+     "label_es": "Tiempo opcional: sigue trabajando en la reparación",
+     "steps": [
+      {
+       "slide": "e-cont",
+       "minutes": 14,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 6,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "mon",
+   "period": 7,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Part B planning task and shortened paired rehearsal",
+   "label_es": "Tarea de planificación de la Parte B y ensayo breve en parejas de equipos",
+   "target": {
+    "en": "I can plan a line of reasoning from at least two sources and write under time, then rehearse and repair with my team.",
+    "es": "Puedo planificar una línea de razonamiento con al menos dos fuentes y escribir con tiempo limitado, y luego ensayar y reparar con mi equipo.",
+    "why_en": "Practice for Part B of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte B del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Have your device ready for the timed Part B planning task.",
+     "Open your team's current outline or deck for the rehearsal."
+    ],
+    "lines_es": [
+     "Ten tu dispositivo listo para la tarea cronometrada de planificación de la Parte B.",
+     "Abre el esquema o la presentación actual de tu equipo para el ensayo."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Explain one way another member's evidence or reasoning changed your understanding or your team's argument. Name the contribution and its effect.",
+     "If you cannot yet explain one, write what you still need to understand."
+    ],
+    "lines_es": [
+     "Explica una forma en que la evidencia o el razonamiento de otro integrante cambió tu comprensión o el argumento de tu equipo. Nombra la contribución y su efecto.",
+     "Si todavía no puedes explicar una, escribe lo que aún necesitas entender."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Wednesday, December 16: short teacher practice presentations and your formal Team Project team.",
+    "es": "Miércoles 16 de diciembre: presentaciones de práctica breves con el profesor y tu equipo formal del Proyecto en Equipo."
+   },
+   "criteria": "pb",
+   "glossary": [
+    "line-of-reasoning",
+    "perspective",
+    "claim",
+    "limit",
+    "revision",
+    "feedback"
+   ],
+   "absent": "pb",
+   "practice": [
+    "rp-core",
+    "rp-sup",
+    "rp-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Part B planning task",
+     "label_es": "Tarea de planificación de la Parte B",
+     "steps": [
+      {
+       "slide": "pb-task",
+       "minutes": 40,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Shortened paired rehearsal and one repair",
+     "label_es": "Ensayo breve en parejas de equipos y una reparación",
+     "steps": [
+      {
+       "slide": "e-3",
+       "minutes": 13,
+       "mode": "Group"
+      },
+      {
+       "slide": "e-5",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 11,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: explain what another member changed",
+     "label_es": "Salida: explica lo que cambió otro integrante",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 6,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "tue",
+   "period": 2,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "guest": "seager",
+   "label": "Short teacher practice presentations, with guest Sara Seager (University of Toronto)",
+   "label_es": "Presentaciones de práctica breves con el profesor, con la visita de Sara Seager (University of Toronto)",
+   "target": {
+    "en": "I can explain my team's argument and a real decision in a practice presentation, and take one guest note.",
+    "es": "Puedo explicar el argumento de mi equipo y una decisión real en una presentación de práctica, y tomar una nota de la visita.",
+    "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: an argument a listener can follow, and answers about the team's real choices.",
+    "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un argumento que quien escucha puede seguir, y respuestas sobre las decisiones reales del equipo."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's current outline or deck and your evidence.",
+     "Find the evidence for each claim and one decision you can explain.",
+     "Ready one page for a guest note."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación actual de tu equipo y tu evidencia.",
+     "Busca la evidencia de cada afirmación y una decisión que puedas explicar.",
+     "Prepara una página para la nota de la visita."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Finish your one accurate note on how the speaker connected evidence to a claim.",
+     "Save your work in its existing location."
+    ],
+    "lines_es": [
+     "Termina tu única nota precisa sobre cómo la persona invitada conectó la evidencia con una afirmación.",
+     "Guarda tu trabajo donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Thursday, December 17: guest Dr. Liora Sarfati, Tel Aviv University, on Korean shamanism in lived practice and digital media, 8:00-8:30 AM, with short teacher practice presentations and formal Team Project teams.",
+    "es": "Jueves 17 de diciembre: visita de Liora Sarfati, Universidad de Tel Aviv, sobre el chamanismo coreano en la práctica vivida y en los medios digitales, 8:00-8:30 AM, con presentaciones de práctica breves con el profesor y los equipos formales del Proyecto en Equipo."
+   },
+   "criteria": "mk",
+   "glossary": [
+    "claim",
+    "limit",
+    "feedback",
+    "revision",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "mk-guest",
+   "practice": [
+    "mk-core",
+    "mk-sup",
+    "mk-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 8,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Short teacher practice presentation: first team",
+     "label_es": "Presentación de práctica breve con el profesor: primer equipo",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 14,
+       "mode": "Group",
+       "cue": "Mock order: Team 1 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Change-over: guest note",
+     "label_es": "Cambio: nota de la visita",
+     "steps": [
+      {
+       "slide": "s-gnote",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "guest",
+     "label": "Guest: Professor Sara Seager (University of Toronto)",
+     "label_es": "Visita: Sara Seager (University of Toronto)",
+     "steps": [
+      {
+       "slide": "g-seager",
+       "minutes": 20,
+       "mode": "Group",
+       "cue": "Seager hosts the meeting; join from her invitation at the teacher station. No recording unless she agrees."
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Short teacher practice presentations: second and third teams",
+     "label_es": "Presentaciones de práctica breves con el profesor: segundo y tercer equipo",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Order: Team 2, then Team 3 (team numbers from the November 5 team record; recheck teams first). Each team: 6 minutes of presentation, 1 minute per member for question and response, then directions, the change of teams and the record. Ask before coaching."
+      },
+      {
+       "slide": "@practice",
+       "minutes": 27,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: finish your guest note",
+     "label_es": "Salida: termina tu nota de la visita",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "tue",
+   "period": 4,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Thursday, December 17: individual research studio.",
+    "es": "Jueves 17 de diciembre: taller de investigación individual."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "tue",
+   "period": 6,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Timed Part A practice, team block T2 and final placements",
+   "label_es": "Práctica cronometrada de la Parte A, bloque de equipo T2 y ubicación final en los equipos",
+   "target": {
+    "en": "I can analyze an author's argument under time, then help my team finish one connected argument.",
+    "es": "Puedo analizar el argumento de un autor con tiempo limitado y luego ayudar a mi equipo a terminar un solo argumento conectado.",
+    "why_en": "Practice for Part A of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte A del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's existing outline or deck.",
+     "Have your device ready for the timed practice."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación que tu equipo ya tiene.",
+     "Ten tu dispositivo listo para la práctica cronometrada."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Name one essential piece of work your team must finish before the rehearsal.",
+     "Save your work in its existing location."
+    ],
+    "lines_es": [
+     "Nombra una parte esencial del trabajo que tu equipo debe terminar antes del ensayo.",
+     "Guarda tu trabajo donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Thursday, December 17: the Part B planning task, timed and typed, a shortened paired rehearsal and your formal Team Project team.",
+    "es": "Jueves 17 de diciembre: la tarea de planificación de la Parte B, cronometrada y escrita en computadora, un ensayo breve en parejas de equipos y tu equipo formal del Proyecto en Equipo."
+   },
+   "criteria": "pa",
+   "glossary": [
+    "claim",
+    "line-of-reasoning",
+    "limit",
+    "alternative",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "pa",
+   "practice": [
+    "t2-core",
+    "t2-sup",
+    "t2-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Final team placements",
+     "label_es": "Ubicación final en los equipos",
+     "steps": [
+      {
+       "slide": "s-place",
+       "minutes": 5,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Timed Part A practice",
+     "label_es": "Práctica cronometrada de la Parte A",
+     "steps": [
+      {
+       "slide": "e-9",
+       "minutes": 35,
+       "mode": "Silent",
+       "cue": "Hand out the printed handout \"Let Us Fix Our Own Phones\" (the December 15 and 16 version, not the December 10 and 11 one) face down with two sheets of lined paper. One 35-minute timer: about 10 to read and annotate, 25 to write; call time to start writing at 15, five-minute warning, then collect responses and handouts. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays on paper."
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Team block T2, continued",
+     "label_es": "Bloque de equipo T2, continuación",
+     "steps": [
+      {
+       "slide": "d-7",
+       "minutes": 2,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-8",
+       "minutes": 2,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-9",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 9,
+       "mode": "Group"
+      },
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "d-10",
+       "minutes": 6,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-11",
+       "minutes": 5,
+       "mode": "Group"
+      },
+      {
+       "slide": "d-12",
+       "minutes": 5,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Optional time: rehearse the transitions",
+     "label_es": "Tiempo opcional: ensaya las transiciones",
+     "steps": [
+      {
+       "slide": "t-trans",
+       "minutes": 14,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: name the essential unfinished work",
+     "label_es": "Salida: nombra el trabajo esencial pendiente",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 4,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "tue",
+   "period": 8,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Part B planning task and shortened paired rehearsal",
+   "label_es": "Tarea de planificación de la Parte B y ensayo breve en parejas de equipos",
+   "target": {
+    "en": "I can plan a line of reasoning from at least two sources and write under time, then rehearse and repair with my team.",
+    "es": "Puedo planificar una línea de razonamiento con al menos dos fuentes y escribir con tiempo limitado, y luego ensayar y reparar con mi equipo.",
+    "why_en": "Practice for Part B of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte B del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Have your device ready for the timed Part B planning task.",
+     "Open your team's current outline or deck for the rehearsal."
+    ],
+    "lines_es": [
+     "Ten tu dispositivo listo para la tarea cronometrada de planificación de la Parte B.",
+     "Abre el esquema o la presentación actual de tu equipo para el ensayo."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "What is your next step after today's Part B task and rehearsal? Write it in your current work.",
+     "Save your work in its existing location."
+    ],
+    "lines_es": [
+     "¿Cuál es tu próximo paso después de la tarea de la Parte B y el ensayo de hoy? Escríbelo en tu trabajo actual.",
+     "Guarda tu trabajo donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Thursday, December 17: short teacher practice presentations and your formal Team Project team.",
+    "es": "Jueves 17 de diciembre: presentaciones de práctica breves con el profesor y tu equipo formal del Proyecto en Equipo."
+   },
+   "criteria": "pb",
+   "glossary": [
+    "line-of-reasoning",
+    "perspective",
+    "claim",
+    "limit",
+    "revision",
+    "feedback"
+   ],
+   "absent": "pb",
+   "practice": [
+    "rp-core",
+    "rp-sup",
+    "rp-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Part B planning task",
+     "label_es": "Tarea de planificación de la Parte B",
+     "steps": [
+      {
+       "slide": "pb-task",
+       "minutes": 40,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Shortened paired rehearsal and one repair",
+     "label_es": "Ensayo breve en parejas de equipos y una reparación",
+     "steps": [
+      {
+       "slide": "e-3",
+       "minutes": 13,
+       "mode": "Group"
+      },
+      {
+       "slide": "e-5",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 11,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: your next step",
+     "label_es": "Salida: tu próximo paso",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Close and next class",
+     "label_es": "Cierre y próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 6,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "wed",
+   "period": 1,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Next class: Monday, January 4, after the winter break. Bring your portfolio Doc and your next step.",
+    "es": "Próxima clase: lunes 4 de enero, después de las vacaciones de invierno. Trae tu documento de portafolio y tu próximo paso."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "wed",
+   "period": 3,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Monday, January 4: your next AP Research class. Bring your portfolio Doc and your next step.",
+    "es": "Después de las vacaciones de invierno, el lunes 4 de enero: tu próxima clase de AP Research. Trae tu documento de portafolio y tu próximo paso."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "wed",
+   "period": 5,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Timed Part A practice and practice presentations; formal teams",
+   "label_es": "Práctica cronometrada de la Parte A y presentaciones de práctica; equipos formales",
+   "target": {
+    "en": "I can analyze an author's argument under time, then present my team's argument in a short practice presentation.",
+    "es": "Puedo analizar el argumento de un autor con tiempo limitado y luego presentar el argumento de mi equipo en una presentación de práctica breve.",
+    "why_en": "Practice for Part A of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte A del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's existing outline or deck.",
+     "Have your device ready for the timed practice."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación que tu equipo ya tiene.",
+     "Ten tu dispositivo listo para la práctica cronometrada."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Write your team's next step from the practice presentation, or your next practice priority.",
+     "Keep your practice evidence together and save it in its existing location."
+    ],
+    "lines_es": [
+     "Escribe el próximo paso de tu equipo a partir de la presentación de práctica, o tu próxima prioridad de práctica.",
+     "Mantén junta tu evidencia de práctica y guárdala donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Monday, January 4: practice presentations continue for the teams not yet seen. Your practice evidence stays together until then.",
+    "es": "Después de las vacaciones de invierno, el lunes 4 de enero: continúan las presentaciones de práctica de los equipos que aún no presentaron. Tu evidencia de práctica queda junta hasta entonces."
+   },
+   "criteria": "pamk",
+   "glossary": [
+    "claim",
+    "line-of-reasoning",
+    "limit",
+    "feedback",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "pamk",
+   "practice": [
+    "mk-core",
+    "mk-sup",
+    "mk-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Timed Part A practice",
+     "label_es": "Práctica cronometrada de la Parte A",
+     "steps": [
+      {
+       "slide": "e-9",
+       "minutes": 35,
+       "mode": "Silent",
+       "cue": "Hand out the printed handout \"Let Us Fix Our Own Phones\" (the December 15 and 16 version, not the December 10 and 11 one) face down with two sheets of lined paper. One 35-minute timer: about 10 to read and annotate, 25 to write; call time to start writing at 15, five-minute warning, then collect responses and handouts. Approved access support only; no hints, no comparing. Directions only on screen; the passage stays on paper."
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Short teacher practice presentations: two teams",
+     "label_es": "Presentaciones de práctica breves con el profesor: dos equipos",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Order: Team 1, then Team 2 (team numbers from the November 5 team record; recheck teams first). Each team: 6 minutes of presentation, 1 minute per member for question and response, then directions, the change of teams and the record. Ask before coaching."
+      },
+      {
+       "slide": "@practice",
+       "minutes": 27,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Formal Team Project teams",
+     "label_es": "Equipos formales del Proyecto en Equipo",
+     "steps": [
+      {
+       "slide": "s-formal",
+       "minutes": 7,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Optional time: your practice priority",
+     "label_es": "Tiempo opcional: tu prioridad de práctica",
+     "steps": [
+      {
+       "slide": "prio",
+       "minutes": 14,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Keep the practice evidence together",
+     "label_es": "Mantén junta la evidencia de práctica",
+     "steps": [
+      {
+       "slide": "e-8",
+       "minutes": 1,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: name your next step",
+     "label_es": "Salida: nombra tu próximo paso",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "wed",
+   "period": 7,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Short teacher practice presentations; formal teams",
+   "label_es": "Presentaciones de práctica breves con el profesor; equipos formales",
+   "target": {
+    "en": "I can present my team's argument and evidence in a short practice presentation and explain a real decision we made.",
+    "es": "Puedo presentar el argumento y la evidencia de mi equipo en una presentación de práctica breve y explicar una decisión real que tomamos.",
+    "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: an argument a listener can follow, and answers about the team's real choices.",
+    "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un argumento que quien escucha puede seguir, y respuestas sobre las decisiones reales del equipo."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's current outline or deck and your evidence.",
+     "Find the evidence for each claim and one decision you can explain."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación actual de tu equipo y tu evidencia.",
+     "Busca la evidencia de cada afirmación y una decisión que puedas explicar."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Write your team's next step from the practice presentation, or your next practice priority.",
+     "Keep your practice evidence together and save it in its existing location."
+    ],
+    "lines_es": [
+     "Escribe el próximo paso de tu equipo a partir de la presentación de práctica, o tu próxima prioridad de práctica.",
+     "Mantén junta tu evidencia de práctica y guárdala donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Monday, January 4: practice presentations continue for the teams not yet seen. Your practice evidence stays together until then.",
+    "es": "Después de las vacaciones de invierno, el lunes 4 de enero: continúan las presentaciones de práctica de los equipos que aún no presentaron. Tu evidencia de práctica queda junta hasta entonces."
+   },
+   "criteria": "mk",
+   "glossary": [
+    "claim",
+    "limit",
+    "feedback",
+    "revision",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "mk",
+   "practice": [
+    "mk-core",
+    "mk-sup",
+    "mk-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Short teacher practice presentations: four teams",
+     "label_es": "Presentaciones de práctica breves con el profesor: cuatro equipos",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Four slots, 14 minutes each: 6 minutes of presentation, 1 minute per member for question and response, then directions, the change of teams and the record. Order: Teams 1, 2, 3 and 4 (November 5 team record; recheck before December 16). The other teams present in January."
+      },
+      {
+       "slide": "@practice",
+       "minutes": 55,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Formal Team Project teams",
+     "label_es": "Equipos formales del Proyecto en Equipo",
+     "steps": [
+      {
+       "slide": "s-formal",
+       "minutes": 10,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Keep the practice evidence together",
+     "label_es": "Mantén junta la evidencia de práctica",
+     "steps": [
+      {
+       "slide": "e-8",
+       "minutes": 2,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: name your next step",
+     "label_es": "Salida: nombra tu próximo paso",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 6,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "thu",
+   "period": 2,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "guest": "sarfati",
+   "label": "Practice presentations, with guest Liora Sarfati (Tel Aviv University); formal teams",
+   "label_es": "Presentaciones de práctica, con la visita de Liora Sarfati (Tel Aviv University); equipos formales",
+   "target": {
+    "en": "I can explain my team's argument and a real decision in a practice presentation, and take one guest note.",
+    "es": "Puedo explicar el argumento de mi equipo y una decisión real en una presentación de práctica, y tomar una nota de la visita.",
+    "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: an argument a listener can follow, and answers about the team's real choices.",
+    "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un argumento que quien escucha puede seguir, y respuestas sobre las decisiones reales del equipo."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's current outline or deck and your evidence.",
+     "Find the evidence for each claim and one decision you can explain.",
+     "Ready one page for a guest note."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación actual de tu equipo y tu evidencia.",
+     "Busca la evidencia de cada afirmación y una decisión que puedas explicar.",
+     "Prepara una página para la nota de la visita."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Finish your one accurate note on how the speaker connected evidence to a claim.",
+     "Keep your practice evidence together and save it in its existing location."
+    ],
+    "lines_es": [
+     "Termina tu única nota precisa sobre cómo la persona invitada conectó la evidencia con una afirmación.",
+     "Mantén junta tu evidencia de práctica y guárdala donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Tuesday, January 5: practice presentations continue for the teams not yet seen. Your practice evidence stays together until then.",
+    "es": "Después de las vacaciones de invierno, el martes 5 de enero: continúan las presentaciones de práctica de los equipos que aún no presentaron. Tu evidencia de práctica queda junta hasta entonces."
+   },
+   "criteria": "mk",
+   "glossary": [
+    "claim",
+    "limit",
+    "feedback",
+    "revision",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "mk-guest-break",
+   "practice": [
+    "mk-core",
+    "mk-sup",
+    "mk-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 8,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Short teacher practice presentation: first team",
+     "label_es": "Presentación de práctica breve con el profesor: primer equipo",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 14,
+       "mode": "Group",
+       "cue": "Mock order: Team 4 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Change-over: guest note",
+     "label_es": "Cambio: nota de la visita",
+     "steps": [
+      {
+       "slide": "s-gnote",
+       "minutes": 5,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "guest",
+     "label": "Guest: Dr. Liora Sarfati (Tel Aviv University)",
+     "label_es": "Visita: Liora Sarfati (Tel Aviv University)",
+     "steps": [
+      {
+       "slide": "g-sarfati",
+       "minutes": 30,
+       "mode": "Group",
+       "cue": "Join from the confirmed invitation at the teacher station. No recording unless the guest agrees."
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Short teacher practice presentation: second team",
+     "label_es": "Presentación de práctica breve con el profesor: segundo equipo",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Mock order: Team 5 (team numbers from the November 5 team record; recheck teams before the mocks). One team at a time: 6 minutes of presentation, 1 minute per member for question and response, 2.5 minutes for directions, the change of teams and the record. Ask before coaching."
+      },
+      {
+       "slide": "@practice",
+       "minutes": 13,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Formal Team Project teams",
+     "label_es": "Equipos formales del Proyecto en Equipo",
+     "steps": [
+      {
+       "slide": "s-formal",
+       "minutes": 7,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: finish your guest note",
+     "label_es": "Salida: termina tu nota de la visita",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 2,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "thu",
+   "period": 4,
+   "course": "AP Research",
+   "label": "Individual research studio",
+   "label_es": "Taller de investigación individual",
+   "opener": "r-open",
+   "target": {
+    "en": "I can move my own research forward from the feedback I already have, and record one decision and my next step.",
+    "es": "Puedo avanzar mi propia investigación a partir de la retroalimentación que ya tengo, y registrar una decisión y mi próximo paso.",
+    "why_en": "Feeds the AP Research academic paper: a method you can explain and justify, with each decision recorded.",
+    "why_es": "Prepara el trabajo académico de AP Research: un método que puedes explicar y justificar, con cada decisión registrada."
+   },
+   "criteria": "r",
+   "glossary": [
+    "feedback",
+    "method",
+    "revision",
+    "literature-review",
+    "claim",
+    "limit"
+   ],
+   "donow": {
+    "lines": [
+     "Open your portfolio Doc.",
+     "Reread your latest feedback and your last daily entry.",
+     "Write the one thing you will finish today."
+    ],
+    "lines_es": [
+     "Abre tu documento de portafolio.",
+     "Vuelve a leer tu retroalimentación más reciente y tu última entrada diaria.",
+     "Escribe lo único que vas a terminar hoy."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Update your status line: ready for review; revising, with the next step named; or blocked, with the block named.",
+     "Close the Doc."
+    ],
+    "lines_es": [
+     "Actualiza tu línea de estado: lista para revisión; en revisión, con el próximo paso nombrado; o bloqueada, con el bloqueo nombrado.",
+     "Cierra el documento."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "Next class: Tuesday, January 5, after the winter break. Bring your portfolio Doc and your next step.",
+    "es": "Próxima clase: martes 5 de enero, después de las vacaciones de invierno. Trae tu documento de portafolio y tu próximo paso."
+   },
+   "practice": [
+    "r-core",
+    "r-sup",
+    "r-ext"
+   ],
+   "absent": "r",
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 2,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Your research work",
+     "label_es": "Tu trabajo de investigación",
+     "steps": [
+      {
+       "slide": "r-studio",
+       "minutes": 45,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Research work, part 2",
+     "label_es": "Trabajo de investigación, parte 2",
+     "steps": [
+      {
+       "slide": "@practice",
+       "minutes": 20,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Decision and reflection",
+     "label_es": "Decisión y reflexión",
+     "steps": [
+      {
+       "slide": "decide",
+       "minutes": 10,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Close: update your status line",
+     "label_es": "Cierre: actualiza tu línea de estado",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "thu",
+   "period": 6,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Part B planning task and shortened paired rehearsal; formal teams",
+   "label_es": "Tarea de planificación de la Parte B y ensayo breve en parejas de equipos; equipos formales",
+   "target": {
+    "en": "I can plan a line of reasoning from at least two sources and write under time, then rehearse and repair with my team.",
+    "es": "Puedo planificar una línea de razonamiento con al menos dos fuentes y escribir con tiempo limitado, y luego ensayar y reparar con mi equipo.",
+    "why_en": "Practice for Part B of the AP Seminar end-of-course exam, and for the Team Multimedia Presentation (TMP), Performance Task 1.",
+    "why_es": "Práctica para la Parte B del examen de fin de curso de AP Seminar y para la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1."
+   },
+   "donow": {
+    "lines": [
+     "Have your device ready for the timed Part B planning task.",
+     "Open your team's current outline or deck for the rehearsal."
+    ],
+    "lines_es": [
+     "Ten tu dispositivo listo para la tarea cronometrada de planificación de la Parte B.",
+     "Abre el esquema o la presentación actual de tu equipo para el ensayo."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "What is your next step after today's Part B task and rehearsal? Write it in your current work.",
+     "Save your work in its existing location."
+    ],
+    "lines_es": [
+     "¿Cuál es tu próximo paso después de la tarea de la Parte B y el ensayo de hoy? Escríbelo en tu trabajo actual.",
+     "Guarda tu trabajo donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Tuesday, January 5: short teacher practice presentations begin. Your practice evidence stays together until then.",
+    "es": "Después de las vacaciones de invierno, el martes 5 de enero: empiezan las presentaciones de práctica breves con el profesor. Tu evidencia de práctica queda junta hasta entonces."
+   },
+   "criteria": "pb",
+   "glossary": [
+    "line-of-reasoning",
+    "perspective",
+    "claim",
+    "limit",
+    "revision",
+    "feedback"
+   ],
+   "absent": "pb-teams",
+   "practice": [
+    "rp-core",
+    "rp-sup",
+    "rp-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Part B planning task",
+     "label_es": "Tarea de planificación de la Parte B",
+     "steps": [
+      {
+       "slide": "pb-task",
+       "minutes": 40,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Shortened paired rehearsal and one repair",
+     "label_es": "Ensayo breve en parejas de equipos y una reparación",
+     "steps": [
+      {
+       "slide": "e-3",
+       "minutes": 13,
+       "mode": "Group"
+      },
+      {
+       "slide": "e-5",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@practice",
+       "minutes": 11,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Formal Team Project teams",
+     "label_es": "Equipos formales del Proyecto en Equipo",
+     "steps": [
+      {
+       "slide": "s-formal",
+       "minutes": 5,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Optional time: keep working on the repair",
+     "label_es": "Tiempo opcional: sigue trabajando en la reparación",
+     "steps": [
+      {
+       "slide": "e-cont",
+       "minutes": 14,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Keep the practice evidence together",
+     "label_es": "Mantén junta la evidencia de práctica",
+     "steps": [
+      {
+       "slide": "e-8",
+       "minutes": 1,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: your next step",
+     "label_es": "Salida: tu próximo paso",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 3,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": "thu",
+   "period": 8,
+   "course": "AP Seminar",
+   "opener": "e-open",
+   "label": "Short teacher practice presentations; formal teams",
+   "label_es": "Presentaciones de práctica breves con el profesor; equipos formales",
+   "target": {
+    "en": "I can present my team's argument and evidence in a short practice presentation and explain a real decision we made.",
+    "es": "Puedo presentar el argumento y la evidencia de mi equipo en una presentación de práctica breve y explicar una decisión real que tomamos.",
+    "why_en": "Feeds the Team Multimedia Presentation (TMP), AP Seminar Performance Task 1: an argument a listener can follow, and answers about the team's real choices.",
+    "why_es": "Prepara la Presentación Multimedia en Equipo (TMP), Tarea de Desempeño 1 de AP Seminar: un argumento que quien escucha puede seguir, y respuestas sobre las decisiones reales del equipo."
+   },
+   "donow": {
+    "lines": [
+     "Open your team's current outline or deck and your evidence.",
+     "Find the evidence for each claim and one decision you can explain."
+    ],
+    "lines_es": [
+     "Abre el esquema o la presentación actual de tu equipo y tu evidencia.",
+     "Busca la evidencia de cada afirmación y una decisión que puedas explicar."
+    ]
+   },
+   "exit": {
+    "lines": [
+     "Write your team's next step from the practice presentation, or your next practice priority.",
+     "Keep your practice evidence together and save it in its existing location."
+    ],
+    "lines_es": [
+     "Escribe el próximo paso de tu equipo a partir de la presentación de práctica, o tu próxima prioridad de práctica.",
+     "Mantén junta tu evidencia de práctica y guárdala donde ya está."
+    ],
+    "carry": true
+   },
+   "next": {
+    "en": "After the winter break, on Tuesday, January 5: practice presentations continue for the teams not yet seen. Your practice evidence stays together until then.",
+    "es": "Después de las vacaciones de invierno, el martes 5 de enero: continúan las presentaciones de práctica de los equipos que aún no presentaron. Tu evidencia de práctica queda junta hasta entonces."
+   },
+   "criteria": "mk",
+   "glossary": [
+    "claim",
+    "limit",
+    "feedback",
+    "revision",
+    "transition",
+    "synthesis"
+   ],
+   "absent": "mk",
+   "practice": [
+    "mk-core",
+    "mk-sup",
+    "mk-ext"
+   ],
+   "segments": [
+    {
+     "type": "intro",
+     "label": "Target, do now, agenda, success criteria",
+     "label_es": "Meta, para empezar, agenda, criterios de éxito",
+     "steps": [
+      {
+       "slide": "@target",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@donow",
+       "minutes": 6,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@agenda",
+       "minutes": 1,
+       "mode": "Group"
+      },
+      {
+       "slide": "@criteria",
+       "minutes": 1,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "practice",
+     "label": "Short teacher practice presentations: four teams",
+     "label_es": "Presentaciones de práctica breves con el profesor: cuatro equipos",
+     "steps": [
+      {
+       "slide": "e-7",
+       "minutes": 1,
+       "mode": "Group",
+       "cue": "Four slots, 14 minutes each: 6 minutes of presentation, 1 minute per member for question and response, then directions, the change of teams and the record. Order: Teams 1, 2, 3 and 4 (November 5 team record; recheck before December 17). The other teams present in January."
+      },
+      {
+       "slide": "@practice",
+       "minutes": 55,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Formal Team Project teams",
+     "label_es": "Equipos formales del Proyecto en Equipo",
+     "steps": [
+      {
+       "slide": "s-formal",
+       "minutes": 10,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Materials and glossary",
+     "label_es": "Materiales y glosario",
+     "steps": [
+      {
+       "slide": "@materials",
+       "minutes": 0,
+       "mode": "Silent"
+      },
+      {
+       "slide": "@glossary",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "slide",
+     "label": "Keep the practice evidence together",
+     "label_es": "Mantén junta la evidencia de práctica",
+     "steps": [
+      {
+       "slide": "e-8",
+       "minutes": 2,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "exit",
+     "label": "Exit: name your next step",
+     "label_es": "Salida: nombra tu próximo paso",
+     "steps": [
+      {
+       "slide": "@exit",
+       "minutes": 6,
+       "mode": "Silent"
+      }
+     ]
+    },
+    {
+     "type": "info",
+     "label": "Next class",
+     "label_es": "Próxima clase",
+     "steps": [
+      {
+       "slide": "@next",
+       "minutes": 2,
+       "mode": "Group"
+      }
+     ]
+    },
+    {
+     "type": "absent",
+     "label": "Absent work",
+     "label_es": "Trabajo para ausentes",
+     "steps": [
+      {
+       "slide": "@absent",
+       "minutes": 0,
+       "mode": "Silent"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
