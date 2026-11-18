@@ -103,36 +103,36 @@
    "affiliation": "Princeton University",
    "topic": "The Pseudoscience Wars, and how historians examine disputed claims",
    "when": "8:00-8:30 AM Eastern",
-   "mode": "Live visit",
+   "mode": "Virtual visit",
    "initials": "MG",
    "links": [],
    "label_es": "Persona invitada",
    "when_es": "8:00-8:30 AM, hora del Este",
-   "mode_es": "Visita en vivo"
+   "mode_es": "Visita virtual"
   },
   "fanger": {
    "name": "Professor Claire Fanger",
    "affiliation": "Rice University",
    "topic": "Medieval magic and finding the manuscripts",
    "when": "11:15-11:40 AM Eastern",
-   "mode": "Live visit",
+   "mode": "Virtual visit",
    "initials": "CF",
    "links": [],
    "label_es": "Persona invitada",
    "when_es": "11:15-11:40 AM, hora del Este",
-   "mode_es": "Visita en vivo"
+   "mode_es": "Visita virtual"
   },
   "loeb": {
    "name": "Professor Avi Loeb",
    "affiliation": "Harvard University, Galileo Project",
    "topic": "Instruments, uncertainty and standards for discovery",
    "when": "12:00-12:30 PM Eastern",
-   "mode": "Live visit",
+   "mode": "Virtual visit",
    "initials": "AL",
    "links": [],
    "label_es": "Persona invitada",
    "when_es": "12:00-12:30 PM, hora del Este",
-   "mode_es": "Visita en vivo"
+   "mode_es": "Visita virtual"
   }
  },
  "slides": {
