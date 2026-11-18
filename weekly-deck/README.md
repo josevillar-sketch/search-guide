@@ -42,7 +42,9 @@ Friday and any day Mr. Portela is out: the site's directions must match the subs
 5. Build: `node weekly-deck/build.mjs <week>`
 6. QA: `NODE_PATH="$(npm root -g)" node weekly-deck/qa.cjs <week> --shots <folder>` until it prints `QA PASS`. Look at the screenshots.
 7. Sunday: final build, QA again, the public-language gate read line by line (above), and hand the two zips to Mr. Portela with a note saying what the gate removed.
-8. Deploy only after his approval: drag `dist/<week>/archive/` to the dated site (`room-63-week-of-<month>-<day>-<year>`) and `dist/<week>/current/` to the permanent current-week site named in `week.publish.current_site`. Both send `X-Robots-Tag: noindex`.
+8. Deploy only after his approval: drag `dist/<week>/archive/` to the dated site (`<mon>-<day>-<year>-week-room-63`, for example `nov-30-2026-week-room-63`) and `dist/<week>/current/` to the permanent current-week site named in `week.publish.current_site` (`current-week-room-63`). Both send `X-Robots-Tag: noindex`.
+
+Site names: the part that tells one link from another always comes first (the week, date or topic), and `room-63` comes last. Never start a site name with `room-63`. The old `room-63-...` addresses are kept only as forwarding sites so links already posted in Classroom keep working.
 
 Cadence: Thursday draft, Sunday final.
 

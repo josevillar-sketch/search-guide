@@ -11,8 +11,8 @@
   "owner": "Portela J",
   "version": "Documented example: one day, one route",
   "publish": {
-   "archive_site": "room-63-week-of-<month>-<day>-<year>",
-   "current_site": "room-63-current-week",
+   "archive_site": "<mon>-<day>-<year>-week-room-63",
+   "current_site": "current-week-room-63",
    "note": "Going live always needs Mr. Portela's approval."
   }
  },
