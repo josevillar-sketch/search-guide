@@ -102,7 +102,7 @@
           "AP Seminar closing: Save your work where it already belongs. Record what you improved and one question for Mr. Portela. If access failed, record that problem and your next step. You do not need a new report, a word-count total or a separate extra slip.",
           "AP Research: Open your portfolio and your latest feedback or last status entry. Work on one part of your proposal you can advance. If you are stuck, record the exact question, then continue another accessible part. Before the bell, update your status and the first step for the next class.",
           "AP Research closing: Save your work. In your portfolio, update your status and write the first step for the next class. If you could not open your work, write the problem, your status and your next step on paper.",
-          "AP Research: Sample Paper Reasoning Move is due today in Classroom. Revised Inquiry Proposal and records is due Monday, November 30, 11:59 PM.",
+          "AP Research: Sample Paper Reasoning Move is due today, Friday, November 20, at 11:59 PM, in Classroom. Revised Inquiry Proposal and records is due Monday, November 30, 11:59 PM.",
           "AP Research: no surveys, interviews, observations or data from other people today, and do not invite anyone to take part in a study. That work needs a review first.",
           "Nobody has to finish a report, a plan or a section today. Today's class adds no new grade or homework.",
           "Links: on a computer, open Sources at the top, or open your class's Classroom."
@@ -115,7 +115,7 @@
           "Cierre de AP Seminar: Guarda tu trabajo donde ya está. Anota lo que mejoraste y una pregunta para el Sr. Portela. Si no pudiste entrar, anota el problema y tu próximo paso. No necesitas un informe nuevo, un total de palabras ni una hoja aparte.",
           "AP Research: Abre tu portafolio y tu retroalimentación más reciente o tu última entrada de estado. Trabaja en una parte de tu propuesta que puedas avanzar. Si te atascas, anota la pregunta exacta y sigue con otra parte accesible. Antes del timbre, actualiza tu estado y el primer paso para la próxima clase.",
           "Cierre de AP Research: Guarda tu trabajo. En tu portafolio, actualiza tu estado y escribe el primer paso para la próxima clase. Si no pudiste abrir tu trabajo, escribe en papel el problema, tu estado y tu próximo paso.",
-          "AP Research: Sample Paper Reasoning Move se entrega hoy en Classroom. Revised Inquiry Proposal and records se entrega el lunes 30 de noviembre, 11:59 PM.",
+          "AP Research: Sample Paper Reasoning Move se entrega hoy, viernes 20 de noviembre, a las 11:59 PM, en Classroom. Revised Inquiry Proposal and records se entrega el lunes 30 de noviembre, 11:59 PM.",
           "AP Research: hoy no hay encuestas, entrevistas, observaciones ni datos de otras personas, y no invites a nadie a participar en un estudio. Ese trabajo necesita una revisión primero.",
           "Nadie tiene que terminar un informe, un plan ni una sección hoy. La clase de hoy no da nota nueva ni tarea.",
           "Enlaces: en una computadora, abre Sources arriba, o abre el Classroom de tu clase."
@@ -1723,155 +1723,169 @@
   "absent": {
     "w1": {
       "lines": [
-        "Use current work or the accessible passage.",
-        "Paragraph: claim, support, inference, limit.",
-        "Keep the paragraph before the peer check.",
-        "Show a changed sentence and explain your choice.",
-        "Report the partner check; check against the source.",
-        "Check your paragraph against this class's success criteria on the class site."
+        "1. Read Goldsmith, paragraphs 4-7 (class copy), or use a source from your current work.",
+        "2. Write one paragraph: claim, support, inference, limit.",
+        "3. Save a copy. Then check each sentence against the source yourself.",
+        "4. Change one sentence and write one line on why the change helps.",
+        "5. Check your paragraph against this class's success criteria on the class site.",
+        "6. Turn in: Classroom, \"Workshop 1 and 2 Source Paragraphs\", due Monday, November 30, 11:59 PM."
       ],
       "reading": "goldsmith",
       "lines_es": [
-        "Usa tu trabajo actual o el pasaje accesible.",
-        "Párrafo: afirmación, apoyo, inferencia, límite.",
-        "Guarda el párrafo antes de la revisión entre compañeros.",
-        "Muestra una oración que cambiaste y explica tu decisión.",
-        "Informa lo que encontró la revisión de tu compañero; compara con la fuente.",
-        "Revisa tu párrafo con los criterios de éxito de esta clase en el sitio de la clase."
+        "1. Lee a Goldsmith, párrafos 4-7 (copia de la clase), o usa una fuente de tu trabajo actual.",
+        "2. Escribe un párrafo: afirmación, apoyo, inferencia, límite.",
+        "3. Guarda una copia. Luego compara tú mismo cada oración con la fuente.",
+        "4. Cambia una oración y escribe una línea sobre por qué el cambio ayuda.",
+        "5. Revisa tu párrafo con los criterios de éxito de esta clase en el sitio de la clase.",
+        "6. Entrega: Classroom, \"Workshop 1 and 2 Source Paragraphs\", para el lunes 30 de noviembre, 11:59 PM."
       ]
     },
     "w2": {
       "lines": [
-        "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
-        "If a second source is unavailable, name the gap and continue source reasoning.",
-        "Write it in your current document. Due when you return on Monday, November 30."
+        "1. Read Carr, paragraphs 7-10 (link on this slide), and reread one source you already read.",
+        "2. Write one paragraph that connects the two sources and explains what the connection changes. Name each source.",
+        "3. No second source? Name what is missing and keep reasoning with the one you have.",
+        "4. Turn in both Workshop paragraphs: Classroom, \"Workshop 1 and 2 Source Paragraphs\", due Monday, November 30, 11:59 PM."
       ],
       "reading": "carr",
       "lines_es": [
-        "Conecta dos fuentes que ya leíste y explica qué cambia esa relación. Conserva la atribución.",
-        "Si no tienes una segunda fuente, nombra lo que falta y continúa el razonamiento con fuentes.",
-        "Escríbelo en tu documento actual. Se entrega cuando regreses el lunes 30 de noviembre."
+        "1. Lee a Carr, párrafos 7-10 (enlace en esta diapositiva), y vuelve a leer una fuente que ya leíste.",
+        "2. Escribe un párrafo que conecte las dos fuentes y explique qué cambia esa conexión. Nombra cada fuente.",
+        "3. ¿No tienes una segunda fuente? Nombra lo que falta y sigue razonando con la que tienes.",
+        "4. Entrega los dos párrafos de los Talleres: Classroom, \"Workshop 1 and 2 Source Paragraphs\", para el lunes 30 de noviembre, 11:59 PM."
       ]
     },
     "w2-guest": {
       "lines": [
-        "Connect two already-read sources and explain what the relationship changes. Preserve attribution.",
-        "If a second source is unavailable, name the gap and continue source reasoning.",
-        "Use your current document. Formative practice."
+        "1. Read Carr, paragraphs 7-10 (link on this slide), and reread one source you already read.",
+        "2. Write one paragraph that connects the two sources and explains what the connection changes. Name each source.",
+        "3. No second source? Name what is missing and keep reasoning with the one you have.",
+        "4. Turn in both Workshop paragraphs: Classroom, \"Workshop 1 and 2 Source Paragraphs\", due Monday, November 30, 11:59 PM."
       ],
       "reading": "carr",
       "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
       "lines_es": [
-        "Conecta dos fuentes que ya leíste y explica qué cambia esa relación. Conserva la atribución.",
-        "Si no tienes una segunda fuente, nombra lo que falta y continúa el razonamiento con fuentes.",
-        "Usa tu documento actual. Práctica formativa."
+        "1. Lee a Carr, párrafos 7-10 (enlace en esta diapositiva), y vuelve a leer una fuente que ya leíste.",
+        "2. Escribe un párrafo que conecte las dos fuentes y explique qué cambia esa conexión. Nombra cada fuente.",
+        "3. ¿No tienes una segunda fuente? Nombra lo que falta y sigue razonando con la que tienes.",
+        "4. Entrega los dos párrafos de los Talleres: Classroom, \"Workshop 1 and 2 Source Paragraphs\", para el lunes 30 de noviembre, 11:59 PM."
       ],
       "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r": {
       "lines": [
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Revise, retain or investigate; explain why.",
-        "Save your decision and next step; keep prior work.",
-        "Individual help is by agreed appointment."
+        "1. Open your portfolio Doc and reread your latest feedback.",
+        "2. Choose your most important next step.",
+        "3. Decide: revise, keep or investigate further. Write why in your portfolio.",
+        "4. Save your decision and next step in your portfolio. Keep earlier work.",
+        "5. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "6. Need help? Ask Mr. Portela for an appointment."
       ],
       "lines_es": [
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Revisa, conserva o investiga; explica por qué.",
-        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
-        "La ayuda individual es con cita acordada."
+        "1. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "2. Elige tu próximo paso más importante.",
+        "3. Decide: revisar, conservar o investigar más. Escribe por qué en tu portafolio.",
+        "4. Guarda tu decisión y tu próximo paso en tu portafolio. Conserva el trabajo anterior.",
+        "5. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM.",
+        "6. ¿Necesitas ayuda? Pídele una cita al Sr. Portela."
       ]
     },
     "r-guest": {
       "lines": [
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Revise, retain or investigate; explain why.",
-        "Save your decision and next step; keep prior work.",
-        "Individual help is by agreed appointment."
+        "1. Open your portfolio Doc and reread your latest feedback.",
+        "2. Choose your most important next step.",
+        "3. Decide: revise, keep or investigate further. Write why in your portfolio.",
+        "4. Save your decision and next step in your portfolio. Keep earlier work.",
+        "5. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "6. Need help? Ask Mr. Portela for an appointment."
       ],
       "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
       "lines_es": [
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Revisa, conserva o investiga; explica por qué.",
-        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
-        "La ayuda individual es con cita acordada."
+        "1. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "2. Elige tu próximo paso más importante.",
+        "3. Decide: revisar, conservar o investigar más. Escribe por qué en tu portafolio.",
+        "4. Guarda tu decisión y tu próximo paso en tu portafolio. Conserva el trabajo anterior.",
+        "5. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM.",
+        "6. ¿Necesitas ayuda? Pídele una cita al Sr. Portela."
       ],
       "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r1": {
       "lines": [
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Explain your question → evidence → analysis connection.",
-        "Identify one unresolved step or justify the fit.",
-        "Keep earlier work; record your own decision and reason."
+        "1. Open your portfolio Doc and reread your latest feedback.",
+        "2. Choose your most important next step.",
+        "3. In your portfolio, explain how your question, evidence and analysis connect.",
+        "4. Name one step that is still unresolved, or explain why the parts fit.",
+        "5. Save your decision and your reason. Keep earlier work.",
+        "6. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM."
       ],
       "lines_es": [
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Explica la conexión pregunta → evidencia → análisis.",
-        "Identifica un paso sin resolver o justifica que encaja.",
-        "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
+        "1. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "2. Elige tu próximo paso más importante.",
+        "3. En tu portafolio, explica cómo se conectan tu pregunta, tu evidencia y tu análisis.",
+        "4. Nombra un paso que todavía no está resuelto, o explica por qué las partes encajan.",
+        "5. Guarda tu decisión y tu razón. Conserva el trabajo anterior.",
+        "6. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       ]
     },
     "r1-guest": {
       "lines": [
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Explain your question → evidence → analysis connection.",
-        "Identify one unresolved step or justify the fit.",
-        "Keep earlier work; record your own decision and reason."
+        "1. Open your portfolio Doc and reread your latest feedback.",
+        "2. Choose your most important next step.",
+        "3. In your portfolio, explain how your question, evidence and analysis connect.",
+        "4. Name one step that is still unresolved, or explain why the parts fit.",
+        "5. Save your decision and your reason. Keep earlier work.",
+        "6. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM."
       ],
       "guest_note": "The guest conversation is live only. A talk you did not hear is not a source; do not cite it.",
       "lines_es": [
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Explica la conexión pregunta → evidencia → análisis.",
-        "Identifica un paso sin resolver o justifica que encaja.",
-        "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
+        "1. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "2. Elige tu próximo paso más importante.",
+        "3. En tu portafolio, explica cómo se conectan tu pregunta, tu evidencia y tu análisis.",
+        "4. Nombra un paso que todavía no está resuelto, o explica por qué las partes encajan.",
+        "5. Guarda tu decisión y tu razón. Conserva el trabajo anterior.",
+        "6. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       ],
       "guest_note_es": "La conversación con la persona invitada es solo en vivo. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r-study-guest": {
       "lines": [
-        "Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Revise, retain or investigate; explain why.",
-        "Save your decision and next step; keep prior work.",
-        "Individual help is by agreed appointment."
+        "1. Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
+        "2. Open your portfolio Doc and reread your latest feedback.",
+        "3. Choose your most important next step.",
+        "4. Decide: revise, keep or investigate further. Write why in your portfolio.",
+        "5. Save your decision and next step in your portfolio. Keep earlier work.",
+        "6. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM."
       ],
       "guest_note": "The guest talk was not recorded, so there is no talk to make up. A talk you did not hear is not a source; do not cite it.",
       "lines_es": [
-        "Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Revisa, conserva o investiga; explica por qué.",
-        "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
-        "La ayuda individual es con cita acordada."
+        "1. Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
+        "2. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "3. Elige tu próximo paso más importante.",
+        "4. Decide: revisar, conservar o investigar más. Escribe por qué en tu portafolio.",
+        "5. Guarda tu decisión y tu próximo paso en tu portafolio. Conserva el trabajo anterior.",
+        "6. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       ],
       "guest_note_es": "La charla no se grabó, así que no hay charla que reponer. Una charla que no escuchaste no es una fuente; no la cites."
     },
     "r1-study": {
       "lines": [
-        "Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
-        "Use your existing feedback.",
-        "Choose your most important next step.",
-        "Explain your question → evidence → analysis connection.",
-        "Identify one unresolved step or justify the fit.",
-        "Keep earlier work; record your own decision and reason."
+        "1. Read the study sheet in the reading version assigned to you and answer the three Part 3 questions about your own plan in your research log.",
+        "2. Open your portfolio Doc and reread your latest feedback.",
+        "3. Choose your most important next step.",
+        "4. In your portfolio, explain how your question, evidence and analysis connect.",
+        "5. Name one step that is still unresolved, or explain why the parts fit.",
+        "6. Save your decision and your reason. Keep earlier work.",
+        "7. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM."
       ],
       "lines_es": [
-        "Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
-        "Usa la retroalimentación que ya tienes.",
-        "Elige tu próximo paso más importante.",
-        "Explica la conexión pregunta → evidencia → análisis.",
-        "Identifica un paso sin resolver o justifica que encaja.",
-        "Conserva el trabajo anterior; registra tu propia decisión y tu razón."
+        "1. Lee la hoja de estudio en la versión de lectura que te asignaron y responde en tu registro de investigación las tres preguntas de la Parte 3 sobre tu propio plan.",
+        "2. Abre tu documento de portafolio y vuelve a leer tu retroalimentación más reciente.",
+        "3. Elige tu próximo paso más importante.",
+        "4. En tu portafolio, explica cómo se conectan tu pregunta, tu evidencia y tu análisis.",
+        "5. Nombra un paso que todavía no está resuelto, o explica por qué las partes encajan.",
+        "6. Guarda tu decisión y tu razón. Conserva el trabajo anterior.",
+        "7. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       ]
     }
   },
@@ -4465,8 +4479,8 @@
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
+        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "r-core",
@@ -4684,8 +4698,8 @@
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
+        "en": "Thanksgiving break is November 23-27. We meet again Monday, November 30. Due in Classroom: Sample Paper Reasoning Move, Friday, November 20, 11:59 PM. Revised Inquiry Proposal and records, Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Nos vemos el lunes 30 de noviembre. Para entregar en Classroom: Sample Paper Reasoning Move, viernes 20 de noviembre, 11:59 PM. Revised Inquiry Proposal and records, lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "r-core",
@@ -4876,8 +4890,8 @@
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30. Due in Classroom: \"Workshop 1 and 2 Source Paragraphs\", Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre. Para entregar en Classroom: \"Workshop 1 and 2 Source Paragraphs\", lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "w2-core",
@@ -5054,8 +5068,8 @@
         "carry": true
       },
       "next": {
-        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30.",
-        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre."
+        "en": "Thanksgiving break is November 23-27. Classes resume Monday, November 30. Due in Classroom: \"Workshop 1 and 2 Source Paragraphs\", Monday, November 30, 11:59 PM.",
+        "es": "Las vacaciones de Acción de Gracias son del 23 al 27 de noviembre. Las clases vuelven el lunes 30 de noviembre. Para entregar en Classroom: \"Workshop 1 and 2 Source Paragraphs\", lunes 30 de noviembre, 11:59 PM."
       },
       "practice": [
         "w2-core",
