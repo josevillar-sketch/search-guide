@@ -70,6 +70,7 @@
         "course": {"enum": ["AP Seminar", "AP Research"]}, "label": {"type": "string"}, "label_es": {"type": "string"},
         "opener": {"type": "string", "description": "Slide whose title, subtitle and photo frame the learning target"},
         "guest": {"type": "string"},
+        "due": {"type": "array", "description": "Due dates shown on the opening slide", "items": {"type": "object", "required": ["en"], "properties": {"en": {"type": "string"}, "es": {"type": "string"}}}},
         "target": {"type": "object", "required": ["en", "why_en"], "properties": {"en": {"type": "string"}, "es": {"type": "string"}, "why_en": {"type": "string"}, "why_es": {"type": "string"}}},
         "donow": {"type": "object", "description": "Either a deck slide or lines", "properties": {"slide": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}}},
         "exit": {"type": "object", "properties": {"slide": {"type": "string"}, "lines": {"type": "array", "items": {"type": "string"}}, "lines_es": {"type": "array", "items": {"type": "string"}}, "carry": {"type": "boolean", "description": "If not reached, show it again as the next class's do-now"}}},
