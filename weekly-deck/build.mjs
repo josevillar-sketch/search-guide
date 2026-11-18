@@ -52,8 +52,12 @@ for (const [k, p] of Object.entries(week.practice || {})) {
 }
 const SPECIAL = ['@target', '@donow', '@agenda', '@criteria', '@practice', '@materials', '@glossary', '@exit', '@next', '@absent'];
 const report = [];
+const seenRoutes = new Set();
 for (const r of week.routes || []) {
-  const rid = `${r.day}/P${r.period}`;
+  const rid = `${r.day}/P${r.period}${r.variant || ''}`;
+  if (r.variant !== undefined && !/^[A-Z]$/.test(r.variant)) err(`route ${rid}: variant must be one capital letter, like B`);
+  if (seenRoutes.has(rid)) err(`route ${rid}: listed twice`);
+  seenRoutes.add(rid);
   if (!dayIds.has(r.day)) err(`route ${rid}: unknown day`);
   const b = week.bells[String(r.period)];
   if (!b) { err(`route ${rid}: no bell time for period ${r.period}`); continue; }

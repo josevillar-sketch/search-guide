@@ -67,6 +67,7 @@
       "required": ["day", "period", "course", "label", "target", "donow", "criteria", "glossary", "practice", "exit", "next", "absent", "segments"],
       "properties": {
         "day": {"enum": ["mon", "tue", "wed", "thu", "fri"]}, "period": {"type": "integer", "minimum": 1, "maximum": 8},
+        "variant": {"type": "string", "pattern": "^[A-Z]$", "description": "A second plan for the same class and day, such as B. The route opens at #thu/P2B-0; the plan without a variant stays at #thu/P2-0."},
         "course": {"enum": ["AP Seminar", "AP Research"]}, "label": {"type": "string"}, "label_es": {"type": "string"},
         "opener": {"type": "string", "description": "Slide whose title, subtitle and photo frame the learning target"},
         "guest": {"type": "string"},
