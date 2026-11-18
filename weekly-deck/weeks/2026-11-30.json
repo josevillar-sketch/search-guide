@@ -105,7 +105,10 @@
      "AP Seminar, Periods 5 and 7: Short-day checkpoint. Choose one passage. State the problem and revise. Explain why the change helps.",
      "Keep the earlier version so that before and after can both be seen. Tell a partner why the change helps the reader. Then write down your next revision. Mr. Portela may meet with you for about five minutes.",
      "AP Seminar, Period 7: guest Mike Lomas, Bigelow Laboratory for Ocean Sciences, on how one ordinary algae strain is identified, kept alive and documented so another lab can repeat the work, 11:25-11:45 AM.",
-     "AP Research: no surveys, interviews, observations or data from other people, and do not invite anyone to take part in a study. That work needs a review first."
+     "AP Research: no surveys, interviews, observations or data from other people, and do not invite anyone to take part in a study. That work needs a review first.",
+     "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM.",
+     "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+     "Next class: Tuesday, December 8."
     ],
     "lines_es": [
      "La escuela termina al mediodía. Cada clase se reúne 47 minutos: P1 Research 7:30-8:17, P3 Research 9:25-10:12, P5 Seminar 10:19-11:06, P7 Seminar 11:13-12:00.",
@@ -115,7 +118,10 @@
      "AP Seminar, Períodos 5 y 7: revisión breve. Elige un pasaje. Di cuál es el problema y revísalo. Explica por qué el cambio ayuda.",
      "Conserva la versión anterior para que se vean el antes y el después. Explícale a un compañero por qué el cambio ayuda al lector. Luego anota tu próxima revisión. El Sr. Portela puede reunirse contigo unos cinco minutos.",
      "AP Seminar, Período 7: visita de Mike Lomas, Bigelow Laboratory for Ocean Sciences, sobre cómo se identifica, se mantiene viva y se documenta una cepa común de algas para que otro laboratorio pueda repetir el trabajo, 11:25-11:45 AM.",
-     "AP Research: no hay encuestas, entrevistas, observaciones ni datos de otras personas, y no invites a nadie a participar en un estudio. Ese trabajo necesita una revisión primero."
+     "AP Research: no hay encuestas, entrevistas, observaciones ni datos de otras personas, y no invites a nadie a participar en un estudio. Ese trabajo necesita una revisión primero.",
+     "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM.",
+     "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM.",
+     "Próxima clase: martes 8 de diciembre."
     ]
    }
   }
@@ -239,7 +245,9 @@
     "Choose your most important next step.",
     "Revise, retain or investigate; explain why.",
     "Save your decision and next step; keep prior work.",
-    "Individual help is by agreed appointment."
+    "Individual help is by agreed appointment.",
+    "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM.",
+    "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM."
    ],
    "origin": "AP Research deck, SL_STUDIO_1",
    "visual": {
@@ -256,7 +264,16 @@
      },
      "Save your decision and next step"
     ]
-   }
+   },
+   "body_es": [
+    "Usa la retroalimentación que ya tienes.",
+    "Elige tu próximo paso más importante.",
+    "Revisa, conserva o investiga; explica por qué.",
+    "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+    "La ayuda individual es con cita acordada.",
+    "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM.",
+    "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
+   ]
   },
   "r-open": {
    "kind": "opener",
@@ -1265,8 +1282,8 @@
    "day": "mon",
    "period": 1,
    "course": "AP Research",
-   "label": "Tentative guest Mayor Karyn Cunningham, then proposal work",
-   "label_es": "Visita por confirmar de la alcaldesa Karyn Cunningham, luego trabajo de propuesta",
+   "label": "Tentative guest Mayor Karyn Cunningham (Village of Palmetto Bay), then proposal work",
+   "label_es": "Visita por confirmar de Karyn Cunningham (Village of Palmetto Bay), luego trabajo de propuesta",
    "opener": "r-open",
    "target": {
     "en": "I can move my own proposal forward from the feedback I already have, and record one decision and my next step.",
@@ -1274,16 +1291,6 @@
     "why_en": "Feeds the AP Research academic paper: a method that fits the research question.",
     "why_es": "Prepara el trabajo académico de AP Research: un método que encaja con la pregunta de investigación."
    },
-   "due": [
-    {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
-    },
-    {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
-    }
-   ],
    "criteria": "r",
    "glossary": [
     "feedback",
@@ -1317,8 +1324,8 @@
     "carry": true
    },
    "next": {
-    "en": "Wednesday, December 2: guest David Barstow, University of California, Berkeley, Graduate School of Journalism, on how an investigative question develops and how evidence is corroborated, 8:10-8:40 AM. Then proposal work.",
-    "es": "Miércoles 2 de diciembre: visita de David Barstow, Escuela de Posgrado de Periodismo de la Universidad de California, Berkeley, sobre cómo se desarrolla una pregunta de investigación periodística y cómo se corrobora la evidencia, 8:10-8:40 AM. Luego, trabajo de propuesta."
+    "en": "Wednesday, December 2: guest David Barstow, University of California, Berkeley, Graduate School of Journalism, on how an investigative question develops and how evidence is corroborated, 8:10-8:40 AM. Then proposal work. Revised Inquiry Proposal and records: Monday, November 30, 11:59 PM.",
+    "es": "Miércoles 2 de diciembre: visita de David Barstow, Escuela de Posgrado de Periodismo de la Universidad de California, Berkeley, sobre cómo se desarrolla una pregunta de investigación periodística y cómo se corrobora la evidencia, 8:10-8:40 AM. Luego, trabajo de propuesta. Propuesta de investigación revisada y registros: lunes 30 de noviembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -1380,8 +1387,8 @@
     },
     {
      "type": "guest",
-     "label": "Guest (tentative): Mayor Karyn Cunningham",
-     "label_es": "Visita por confirmar: alcaldesa Karyn Cunningham",
+     "label": "Guest (tentative): Mayor Karyn Cunningham (Village of Palmetto Bay)",
+     "label_es": "Visita por confirmar: Karyn Cunningham (Village of Palmetto Bay)",
      "steps": [
       {
        "slide": "g-cunningham",
@@ -1495,16 +1502,6 @@
     "why_en": "Feeds the AP Research academic paper: a method that fits the research question.",
     "why_es": "Prepara el trabajo académico de AP Research: un método que encaja con la pregunta de investigación."
    },
-   "due": [
-    {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
-    },
-    {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
-    }
-   ],
    "criteria": "r",
    "glossary": [
     "feedback",
@@ -1538,8 +1535,8 @@
     "carry": true
    },
    "next": {
-    "en": "Wednesday, December 2: proposal work.",
-    "es": "Miércoles 2 de diciembre: trabajo de propuesta."
+    "en": "Wednesday, December 2: proposal work. Revised Inquiry Proposal and records: Monday, November 30, 11:59 PM.",
+    "es": "Miércoles 2 de diciembre: trabajo de propuesta. Propuesta de investigación revisada y registros: lunes 30 de noviembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -2290,12 +2287,12 @@
    },
    "due": [
     {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
+     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
+     "es": "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM"
     },
     {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -2867,8 +2864,8 @@
    "day": "wed",
    "period": 1,
    "course": "AP Research",
-   "label": "Proposal work, then guest David Barstow",
-   "label_es": "Trabajo de propuesta, luego la visita de David Barstow",
+   "label": "Proposal work, then guest David Barstow (University of California, Berkeley, Graduate School of Journalism)",
+   "label_es": "Trabajo de propuesta, luego la visita de David Barstow (University of California, Berkeley, Graduate School of Journalism)",
    "opener": "r-open",
    "target": {
     "en": "I can take an accurate field note on how an investigative question develops and how evidence is corroborated, and link it to my own method.",
@@ -2878,12 +2875,12 @@
    },
    "due": [
     {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
+     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
+     "es": "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM"
     },
     {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -2982,8 +2979,8 @@
     },
     {
      "type": "guest",
-     "label": "Guest: David Barstow",
-     "label_es": "Visita: David Barstow",
+     "label": "Guest: David Barstow (University of California, Berkeley, Graduate School of Journalism)",
+     "label_es": "Visita: David Barstow (University of California, Berkeley, Graduate School of Journalism)",
      "steps": [
       {
        "slide": "g-barstow",
@@ -3087,12 +3084,12 @@
    },
    "due": [
     {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
+     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
+     "es": "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM"
     },
     {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -3312,8 +3309,8 @@
     "carry": true
    },
    "next": {
-    "en": "Friday, December 4: early release. Period 5 meets 10:19-11:06 AM for a short revision check.",
-    "es": "Viernes 4 de diciembre: salida temprana. El Período 5 se reúne de 10:19 a 11:06 AM para una revisión breve."
+    "en": "Friday, December 4: early release. Period 5 meets 10:19-11:06 AM for a short revision check. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "Viernes 4 de diciembre: salida temprana. El Período 5 se reúne de 10:19 a 11:06 AM para una revisión breve. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
@@ -3519,8 +3516,8 @@
     "carry": true
    },
    "next": {
-    "en": "Friday, December 4: early release. Period 7 meets 11:13 AM-12:00 PM for a short revision check, with guest Mike Lomas, Bigelow Laboratory for Ocean Sciences, 11:25-11:45 AM.",
-    "es": "Viernes 4 de diciembre: salida temprana. El Período 7 se reúne de 11:13 AM a 12:00 PM para una revisión breve, con la visita de Mike Lomas, Bigelow Laboratory for Ocean Sciences, 11:25-11:45 AM."
+    "en": "Friday, December 4: early release. Period 7 meets 11:13 AM-12:00 PM for a short revision check, with guest Mike Lomas, Bigelow Laboratory for Ocean Sciences, 11:25-11:45 AM. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "Viernes 4 de diciembre: salida temprana. El Período 7 se reúne de 11:13 AM a 12:00 PM para una revisión breve, con la visita de Mike Lomas, Bigelow Laboratory for Ocean Sciences, 11:25-11:45 AM. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
@@ -3714,8 +3711,8 @@
     "carry": true
    },
    "next": {
-    "en": "Monday, December 7: revise one passage of your practice report, then team block 1 with your practice team.",
-    "es": "Lunes 7 de diciembre: revisa un pasaje de tu informe de práctica y luego el bloque de equipo 1 con tu equipo de práctica."
+    "en": "On Monday, December 7: focused revision, then your first team block. Bring your draft and your sources. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "El lunes 7 de diciembre: revisión enfocada y luego tu primer bloque de equipo. Trae tu borrador y tus fuentes. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
@@ -3887,8 +3884,8 @@
     ]
    },
    "next": {
-    "en": "Monday, December 7: revise one passage of your practice report, then team block 1 with your practice team.",
-    "es": "Lunes 7 de diciembre: revisa un pasaje de tu informe de práctica y luego el bloque de equipo 1 con tu equipo de práctica."
+    "en": "On Monday, December 7: focused revision, then your first team block. Bring your draft and your sources. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "El lunes 7 de diciembre: revisión enfocada y luego tu primer bloque de equipo. Trae tu borrador y tus fuentes. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
@@ -4029,12 +4026,12 @@
    },
    "due": [
     {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
+     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
+     "es": "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM"
     },
     {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -4070,8 +4067,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 7, proposal work continues.",
-    "es": "El lunes 7 de diciembre seguimos con el trabajo de propuesta."
+    "en": "On Monday, December 7: research and literature studio. Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "El lunes 7 de diciembre: taller de investigación y literatura. Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -4213,12 +4210,12 @@
    },
    "due": [
     {
-     "en": "Revised Inquiry Proposal, Monday, November 30",
-     "es": "Propuesta de investigación revisada, lunes 30 de noviembre"
+     "en": "Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM",
+     "es": "Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM"
     },
     {
-     "en": "Ethics Audit, Thursday, December 3",
-     "es": "Auditoría de ética, jueves 3 de diciembre"
+     "en": "Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM",
+     "es": "Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM"
     }
    ],
    "criteria": "r",
@@ -4254,8 +4251,8 @@
     "carry": true
    },
    "next": {
-    "en": "On Monday, December 7, proposal work continues.",
-    "es": "El lunes 7 de diciembre seguimos con el trabajo de propuesta."
+    "en": "On Monday, December 7: research and literature studio. Research on People Ethics Audit and Certificate: Thursday, December 3, 11:59 PM. Annotations 7 to 12 and Literature Review Map: Tuesday, December 8, 11:59 PM.",
+    "es": "El lunes 7 de diciembre: taller de investigación y literatura. Auditoría de ética de la investigación con personas y certificado: jueves 3 de diciembre, 11:59 PM. Anotaciones 7 a 12 y mapa de la revisión de literatura: martes 8 de diciembre, 11:59 PM."
    },
    "practice": [
     "r-core",
@@ -4305,8 +4302,8 @@
     },
     {
      "type": "guest",
-     "label": "Guest: Professor Joshua Gundersen",
-     "label_es": "Visita: Joshua Gundersen",
+     "label": "Guest: Professor Joshua Gundersen (University of Miami)",
+     "label_es": "Visita: Joshua Gundersen (University of Miami)",
      "steps": [
       {
        "slide": "s-predict",
@@ -4472,8 +4469,8 @@
     "carry": true
    },
    "next": {
-    "en": "Monday, December 7: finish your practice report as it stands, check every attribution and revise one passage.",
-    "es": "Lunes 7 de diciembre: termina tu informe de práctica tal como está, revisa cada atribución y revisa un pasaje."
+    "en": "Monday, December 7: finish your practice report as it stands, check every attribution and revise one passage. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "Lunes 7 de diciembre: termina tu informe de práctica tal como está, revisa cada atribución y revisa un pasaje. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
@@ -4679,8 +4676,8 @@
     "carry": true
    },
    "next": {
-    "en": "Monday, December 7: finish your practice report as it stands, check every attribution and revise one passage.",
-    "es": "Lunes 7 de diciembre: termina tu informe de práctica tal como está, revisa cada atribución y revisa un pasaje."
+    "en": "Monday, December 7: finish your practice report as it stands, check every attribution and revise one passage. Seminar Team Reflection: Friday, December 4, 11:59 PM.",
+    "es": "Lunes 7 de diciembre: termina tu informe de práctica tal como está, revisa cada atribución y revisa un pasaje. Reflexión del equipo de Seminar: viernes 4 de diciembre, 11:59 PM."
    },
    "segments": [
     {
