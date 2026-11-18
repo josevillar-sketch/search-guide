@@ -96,6 +96,7 @@
         "title": "Early release",
         "lines": [
           "School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM.",
+          "Period 2 trip students: go to the Media Center at 7:30 like everyone else. Ms. Macho marks you TRIP and sends you to the bus when it is announced. The bus leaves at 8:00 AM.",
           "Not on the trip? Go to the Media Center. Silvina Macho is with you. Your class meets for 47 minutes: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. You work alone, then write a short closing note.",
           "AP Seminar: Open the own-source writing, source log, report plan or feedback you already have. Choose one existing piece to improve. If you have no draft, use an accessible source already in your work to identify its claim, evidence, reasoning and one limitation in your existing document. If you cannot open your work, record the access problem and your next step on paper. Work quietly on your own piece. If you are stuck, record the exact question and continue another part you can advance.",
           "AP Seminar closing: Save your work where it already belongs. Record what you improved and one question for Mr. Portela. If access failed, record that problem and your next step. You do not need a new report, a word-count total or a separate extra slip.",
@@ -104,10 +105,11 @@
           "AP Research: Sample Paper Reasoning Move is due today in Classroom. Revised Inquiry Proposal and records is due Monday, November 30, 11:59 PM.",
           "AP Research: no surveys, interviews, observations or data from other people today, and do not invite anyone to take part in a study. That work needs a review first.",
           "Nobody has to finish a report, a plan or a section today. Today's class adds no new grade or homework.",
-          "Links: tap Sources at the top, or open your class's Classroom."
+          "Links: on a computer, open Sources at the top, or open your class's Classroom."
         ],
         "lines_es": [
           "La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM.",
+          "Estudiantes del Período 2 que van al viaje: vayan al Media Center a las 7:30 como todos. La Sra. Macho los marca TRIP y los manda al autobús cuando lo anuncien. El autobús sale a las 8:00 AM.",
           "¿No vas al viaje? Ve al Media Center. Silvina Macho estará contigo. Tu clase dura 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas de forma individual y luego escribes una nota breve de cierre.",
           "AP Seminar: Abre el escrito con tus fuentes, el registro de fuentes, el plan del informe o la retroalimentación que ya tienes. Elige una parte que ya existe para mejorarla. Si no tienes borrador, usa una fuente accesible que ya esté en tu trabajo para identificar su afirmación, evidencia, razonamiento y una limitación en tu documento. Si no puedes abrir tu trabajo, anota en papel el problema de acceso y tu próximo paso. Trabaja en silencio en tu propia parte. Si te atascas, anota la pregunta exacta y sigue con otra parte que puedas avanzar.",
           "Cierre de AP Seminar: Guarda tu trabajo donde ya está. Anota lo que mejoraste y una pregunta para el Sr. Portela. Si no pudiste entrar, anota el problema y tu próximo paso. No necesitas un informe nuevo, un total de palabras ni una hoja aparte.",
@@ -116,7 +118,7 @@
           "AP Research: Sample Paper Reasoning Move se entrega hoy en Classroom. Revised Inquiry Proposal and records se entrega el lunes 30 de noviembre, 11:59 PM.",
           "AP Research: hoy no hay encuestas, entrevistas, observaciones ni datos de otras personas, y no invites a nadie a participar en un estudio. Ese trabajo necesita una revisión primero.",
           "Nadie tiene que terminar un informe, un plan ni una sección hoy. La clase de hoy no da nota nueva ni tarea.",
-          "Enlaces: toca Sources arriba, o abre el Classroom de tu clase."
+          "Enlaces: en una computadora, abre Sources arriba, o abre el Classroom de tu clase."
         ],
         "title_es": "Salida temprana"
       },
@@ -291,15 +293,24 @@
       "body": [
         "Answer your own survey, interview guide or observation sheet first.",
         "Trade with one classmate. Your classmate answers it and marks any question that is confusing, leading or too long.",
-        "This is practice only. Nobody keeps the answers, and they are not data. Delete or shred the answered copy before you move on.",
-        "Using content or document analysis? Code one source with your coding sheet. Your classmate codes the same source, and you compare.",
-        "In your portfolio, write the changes you will make and how long it took."
+        "Using content or document analysis? Code one source with your coding sheet. Your classmate codes the same source, and you compare."
       ],
       "body_es": [
         "Primero responde tu propia encuesta, guía de entrevista u hoja de observación.",
         "Intercambia con un compañero o compañera. Esa persona la responde y marca cualquier pregunta confusa, que sugiera la respuesta o demasiado larga.",
+        "¿Usas análisis de contenido o de documentos? Codifica una fuente con tu hoja de codificación. Tu compañero o compañera codifica la misma fuente y comparan."
+      ]
+    },
+    "r-practice-run-2": {
+      "kind": "content",
+      "title": "Practice run of the instrument, part 2",
+      "title_es": "Ensayo del instrumento, parte 2",
+      "body": [
+        "This is practice only. Nobody keeps the answers, and they are not data. Delete or shred the answered copy before you move on.",
+        "In your portfolio, write the changes you will make and how long it took."
+      ],
+      "body_es": [
         "Esto es solo práctica. Nadie guarda las respuestas y no son datos. Borra o destruye la copia respondida antes de seguir.",
-        "¿Usas análisis de contenido o de documentos? Codifica una fuente con tu hoja de codificación. Tu compañero o compañera codifica la misma fuente y comparan.",
         "En tu portafolio, escribe los cambios que vas a hacer y cuánto tiempo tomó."
       ],
       "footer": "The real pilot starts only after Mr. Portela approves your Ethics Audit.",
@@ -3499,7 +3510,12 @@
           "steps": [
             {
               "slide": "r-practice-run",
-              "minutes": 10,
+              "minutes": 6,
+              "mode": "Partner"
+            },
+            {
+              "slide": "r-practice-run-2",
+              "minutes": 4,
               "mode": "Partner"
             }
           ]
@@ -4085,7 +4101,12 @@
           "steps": [
             {
               "slide": "r-practice-run",
-              "minutes": 10,
+              "minutes": 6,
+              "mode": "Partner"
+            },
+            {
+              "slide": "r-practice-run-2",
+              "minutes": 4,
               "mode": "Partner"
             }
           ]
@@ -4324,7 +4345,12 @@
           "steps": [
             {
               "slide": "r-practice-run",
-              "minutes": 10,
+              "minutes": 6,
+              "mode": "Partner"
+            },
+            {
+              "slide": "r-practice-run-2",
+              "minutes": 4,
               "mode": "Partner"
             }
           ]
