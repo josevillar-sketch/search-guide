@@ -95,7 +95,7 @@
       "card": {
         "title": "Early release",
         "lines": [
-          "School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM.",
+          "School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Have your ride at Mater by 2:00 PM.",
           "Period 2 trip students: go to the Media Center at 7:30 like everyone else. Ms. Macho marks you TRIP and sends you to the bus when it is announced. The bus leaves at 8:00 AM.",
           "Not on the trip? Go to the Media Center. Silvina Macho is with you. Your class meets for 47 minutes: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. You work alone, then write a short closing note.",
           "AP Seminar: Open the own-source writing, source log, report plan or feedback you already have. Choose one existing piece to improve. If you have no draft, use an accessible source already in your work to identify its claim, evidence, reasoning and one limitation in your existing document. If you cannot open your work, record the access problem and your next step on paper. Work quietly on your own piece. If you are stuck, record the exact question and continue another part you can advance.",
@@ -108,7 +108,7 @@
           "Links: on a computer, open Sources at the top, or open your class's Classroom."
         ],
         "lines_es": [
-          "La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM.",
+          "La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Que te recojan en Mater a las 2:00 PM.",
           "Estudiantes del Período 2 que van al viaje: vayan al Media Center a las 7:30 como todos. La Sra. Macho los marca TRIP y los manda al autobús cuando lo anuncien. El autobús sale a las 8:00 AM.",
           "¿No vas al viaje? Ve al Media Center. Silvina Macho estará contigo. Tu clase dura 47 minutos: P2 Seminar 7:30-8:17, P4 Research 9:25-10:12, P6 Seminar 10:19-11:06, P8 Seminar 11:13-12:00. Trabajas de forma individual y luego escribes una nota breve de cierre.",
           "AP Seminar: Abre el escrito con tus fuentes, el registro de fuentes, el plan del informe o la retroalimentación que ya tienes. Elige una parte que ya existe para mejorarla. Si no tienes borrador, usa una fuente accesible que ya esté en tu trabajo para identificar su afirmación, evidencia, razonamiento y una limitación en tu documento. Si no puedes abrir tu trabajo, anota en papel el problema de acceso y tu próximo paso. Trabaja en silencio en tu propia parte. Si te atascas, anota la pregunta exacta y sigue con otra parte que puedas avanzar.",
@@ -135,6 +135,7 @@
           "bf-before",
           "bf-day",
           "bf-bring",
+          "bf-lunch",
           "bf-books-1",
           "bf-books-2",
           "bf-street",
@@ -940,12 +941,12 @@
       "body": [
         "8:00 AM: bus leaves Mater",
         "10:00 AM: Teens Read",
-        "2:30 PM: back at Mater"
+        "2:00 PM: back at Mater (2:30 at the latest)"
       ],
       "body_es": [
         "8:00 AM: el autobús sale de Mater",
         "10:00 AM: Teens Read",
-        "2:30 PM: de regreso en Mater"
+        "2:00 PM: de regreso en Mater (a más tardar a las 2:30)"
       ]
     },
     "bf-before": {
@@ -956,13 +957,13 @@
       "body": [
         "Permission form and $5: pick up your permission form in Room 63. Can't get to Room 63? Print the copy attached to the email. Have your parent or guardian fill out and sign it, list any allergies or medicines, and turn it in with $5 by Thursday, November 19, at 3:00 PM. Nobody goes on the trip without a signed form turned in on time. No exceptions. The $5 can't be refunded.",
         "Your book: pick up your Teens Read book in Room 63. Only a few copies are left, so it's first come, first served.",
-        "Your ride home: ask a parent or guardian to pick you up at Mater at 2:30 PM on the dot on Friday.",
+        "Your ride home: we expect to be back at Mater by 2:00 PM, 2:30 PM at the latest. Have your ride at Mater by 2:00 PM.",
         "Can't make it? Reply to the email by Thursday, November 19, at 3:00 PM so your seat can go to a classmate who's waiting. Same goes for any change or question."
       ],
       "body_es": [
         "Permiso y $5: recoge tu permiso en el salón 63. ¿No puedes ir al salón 63? Imprime la copia adjunta al correo. Pide a tu padre, madre o tutor que lo llene y lo firme, que anote cualquier alergia o medicina, y entrégalo con $5 a más tardar el jueves 19 de noviembre a las 3:00 PM. Nadie va al viaje sin un permiso firmado entregado a tiempo. Sin excepciones. Los $5 no se devuelven.",
         "Tu libro: recoge tu libro de Teens Read en el salón 63. Quedan pocas copias, así que se entregan por orden de llegada.",
-        "Tu transporte a casa: pide a tu padre, madre o tutor que te recoja en Mater el viernes a las 2:30 PM en punto.",
+        "Tu transporte a casa: esperamos estar de regreso en Mater a las 2:00 PM, a más tardar a las 2:30 PM. Que te recojan en Mater a las 2:00 PM.",
         "¿No puedes ir? Responde al correo a más tardar el jueves 19 de noviembre a las 3:00 PM para que tu puesto pase a alguien de la clase que está esperando. Lo mismo si tienes algún cambio o pregunta."
       ]
     },
@@ -979,7 +980,7 @@
         "12:10 PM · Buddy text check-in. Text your chaperone: your name, your buddy's name, and OK.",
         "12:40 PM · Meet back up. Meet at the spot we'll point out after Teens Read. Be on time.",
         "1:00 PM · Bus pickup at the Fair. We head back to Mater together.",
-        "2:30 PM · Parent pickup at Mater. Have your ride at school at 2:30 on the dot."
+        "2:00 PM · Back at Mater. We expect to be back by 2:00 PM, 2:30 at the latest. Have your ride there by 2:00."
       ],
       "body_es": [
         "Mañana · Ven a la escuela como siempre. Ve a clase como cualquier día normal. Haremos un anuncio cuando sea hora de ir al autobús. (Período 2: Media Center a las 7:30)",
@@ -989,7 +990,7 @@
         "12:10 PM · Reporte por mensaje. Envía un mensaje a tu chaperón: tu nombre, el nombre de tu compañero y OK.",
         "12:40 PM · Nos reunimos de nuevo. Ve al lugar que te mostraremos después de Teens Read. Llega a tiempo.",
         "1:00 PM · El autobús nos recoge en la Feria. Regresamos juntos a Mater.",
-        "2:30 PM · Los padres recogen en Mater. Que te recojan en la escuela a las 2:30 en punto."
+        "2:00 PM · De regreso en Mater. Esperamos estar de regreso a las 2:00 PM, a más tardar a las 2:30. Que te recojan allí a las 2:00."
       ]
     },
     "bf-bring": {
@@ -1003,10 +1004,10 @@
         "Comfortable shoes. We'll be walking a lot.",
         "A tote bag for the books you'll pick up.",
         "Your Teens Read book and booklet, with your questions ready.",
+        "Any medicines you may need during the day, also listed on your permission form.",
+        "An empty water bottle if you like. You can refill it at the Wolfson Campus.",
         "Money for food trucks and books: bring some cash, plus a card if you have one, since each vendor decides how it takes payment.",
-        "A charged phone.",
-        "Lunch: the school is packing chips, a cereal bar and juice for each of you. That's more of a snack, so bring money for the food trucks at Smorgasburg Miami and the Food Court.",
-        "Food allergy or a health need? Write it on your permission form and tell Mr. Portela in Room 63 by Thursday, so we can plan for it."
+        "A charged phone."
       ],
       "body_es": [
         "Jeans sin roturas. Nada de shorts, faldas ni leggings.",
@@ -1014,10 +1015,10 @@
         "Zapatos cómodos. Vamos a caminar mucho.",
         "Una bolsa de tela para los libros que consigas.",
         "Tu libro y tu cuadernillo de Teens Read, con tus preguntas listas.",
+        "Cualquier medicina que puedas necesitar durante el día, también anotada en tu permiso.",
+        "Una botella de agua vacía, si quieres. Puedes llenarla en el Wolfson Campus.",
         "Dinero para los food trucks y los libros: trae algo de efectivo y una tarjeta si tienes una, porque cada vendedor decide cómo acepta el pago.",
-        "Un teléfono cargado.",
-        "Almuerzo: la escuela prepara papitas, una barra de cereal y jugo para cada estudiante. Es más bien una merienda, así que trae dinero para los food trucks de Smorgasburg Miami y el Food Court.",
-        "¿Tienes una alergia a alimentos o una necesidad de salud? Escríbela en tu permiso y díselo al Sr. Portela en el salón 63 a más tardar el jueves, para que podamos prepararnos."
+        "Un teléfono cargado."
       ]
     },
     "bf-books-1": {
@@ -1140,6 +1141,21 @@
         "Oficina principal de Mater: (305) 828-1886. Oficina de Miami Book Fair: 305-237-3258.",
         "¿Una emergencia real? Llama primero al 911 y luego a un chaperón.",
         "Nunca salgas de la Feria con nadie y nunca te subas a un carro allí. Todos regresan a Mater en el autobús."
+      ]
+    },
+    "bf-lunch": {
+      "kind": "content",
+      "title": "Snack, water and lunch",
+      "title_es": "Merienda, agua y almuerzo",
+      "body": [
+        "The school is packing a snack for each of you: chips, a cereal bar and juice. Water will be provided too, and you're welcome to bring an empty water bottle to refill on campus.",
+        "For a real lunch, bring money for the food trucks at Smorgasburg Miami and the Food Court. You'll want something filling after a morning with the authors.",
+        "Food allergy or a health need? Write it on your permission form and tell Mr. Portela in Room 63 by Thursday, so we can plan for it."
+      ],
+      "body_es": [
+        "La escuela prepara una merienda para cada estudiante: papitas, una barra de cereal y jugo. También habrá agua, y puedes traer una botella de agua vacía para llenarla en el campus.",
+        "Para un almuerzo de verdad, trae dinero para los food trucks de Smorgasburg Miami y el Food Court. Vas a querer algo que llene después de una mañana con los autores.",
+        "¿Tienes una alergia a alimentos o una necesidad de salud? Escríbela en tu permiso y díselo al Sr. Portela en el salón 63 a más tardar el jueves, para que podamos prepararnos."
       ]
     }
   },
@@ -3491,8 +3507,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
-        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Have your ride at Mater by 2:00 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Que te recojan en Mater a las 2:00 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -3683,8 +3699,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
-        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Have your ride at Mater by 2:00 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Que te recojan en Mater a las 2:00 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "r1-core",
@@ -3892,8 +3908,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
-        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Have your ride at Mater by 2:00 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Que te recojan en Mater a las 2:00 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
@@ -4070,8 +4086,8 @@
         "carry": true
       },
       "next": {
-        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Parents pick up at Mater at 2:30 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
-        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Los padres recogen en Mater a las 2:30 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
+        "en": "Friday, November 20: School ends at noon. On the Miami Book Fair trip? Go to your first class as usual. The bus leaves at 8:00 AM. Have your ride at Mater by 2:00 PM. Not on the trip? Go to the Media Center with Silvina Macho. After Thanksgiving break, we meet again Monday, November 30.",
+        "es": "Viernes 20 de noviembre. La escuela termina al mediodía. ¿Vas al viaje a la Feria del Libro de Miami? Ve a tu primera clase como siempre. El autobús sale a las 8:00 AM. Que te recojan en Mater a las 2:00 PM. ¿No vas al viaje? Ve al Media Center con Silvina Macho. Después de las vacaciones de Acción de Gracias, nos vemos el lunes 30 de noviembre."
       },
       "practice": [
         "w2-core",
