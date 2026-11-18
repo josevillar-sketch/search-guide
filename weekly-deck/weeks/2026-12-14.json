@@ -150,13 +150,14 @@
   },
   "r-studio": {
    "kind": "content",
-   "title": "Your proposal work",
+   "title": "Your research work",
    "body": [
     "Use your existing feedback.",
     "Choose your most important next step.",
     "Revise, retain or investigate; explain why.",
     "Save your decision and next step; keep prior work.",
-    "Individual help is by agreed appointment."
+    "Individual help is by agreed appointment.",
+    "No surveys, interviews or data from other people until Mr. Portela tells you your study is approved."
    ],
    "origin": "AP Research deck, SL_STUDIO_1",
    "visual": {
@@ -173,7 +174,16 @@
      },
      "Save your decision and next step"
     ]
-   }
+   },
+   "title_es": "Tu trabajo de investigación",
+   "body_es": [
+    "Usa la retroalimentación que ya tienes.",
+    "Elige tu próximo paso más importante.",
+    "Revisa, conserva o investiga; explica por qué.",
+    "Guarda tu decisión y tu próximo paso; conserva el trabajo anterior.",
+    "La ayuda individual es con cita acordada.",
+    "No hagas encuestas ni entrevistas, ni reúnas datos de otras personas, hasta que el Sr. Portela te diga que tu estudio está aprobado."
+   ]
   },
   "s-gnote": {
    "kind": "content",
@@ -555,10 +565,12 @@
    "minutes": 20,
    "dok": 4,
    "lines": [
-    "Use your existing feedback.",
-    "Choose your most important next step.",
-    "Revise, retain or investigate; explain why.",
-    "Save your decision and next step; keep prior work."
+    "Revise one part your feedback names: introduction, literature review or method.",
+    "Under it, write what you changed and why."
+   ],
+   "lines_es": [
+    "Revisa una parte que nombra tu retroalimentación: introducción, revisión de literatura o método.",
+    "Debajo, escribe qué cambiaste y por qué."
    ]
   },
   "r-sup": {
