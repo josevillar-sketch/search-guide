@@ -1946,6 +1946,11 @@
         "url": "https://classroom.google.com/w/ODcyMDU2NDExMjAx/t/all"
       },
       {
+        "label": "Turn in Workshop 1 and 2 (Classroom)",
+        "url": "https://classroom.google.com/c/ODcyMDU2NDExMjAx/a/ODgzNTQwMTI4ODMw/details",
+        "label_es": "Entrega los Talleres 1 y 2 (Classroom)"
+      },
+      {
         "label": "Carr reading (school sign-in)",
         "label_es": "Lectura de Carr (inicio de sesión de la escuela)",
         "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
@@ -1958,6 +1963,11 @@
         "url": "https://classroom.google.com/w/ODcyMDU3NzM4NjIz/t/all"
       },
       {
+        "label": "Turn in Workshop 1 and 2 (Classroom)",
+        "url": "https://classroom.google.com/c/ODcyMDU3NzM4NjIz/a/ODgzNTQwMTI4ODQ0/details",
+        "label_es": "Entrega los Talleres 1 y 2 (Classroom)"
+      },
+      {
         "label": "Carr reading (school sign-in)",
         "label_es": "Lectura de Carr (inicio de sesión de la escuela)",
         "url": "https://drive.google.com/file/d/1E1KjN7S5cH2kN1cinRdzKfkbxaHFpwkC/view"
@@ -1968,6 +1978,11 @@
         "label": "P2 Classroom: Classwork",
         "label_es": "Classroom de P2: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU4MDI5MTYz/t/all"
+      },
+      {
+        "label": "Turn in Workshop 1 and 2 (Classroom)",
+        "url": "https://classroom.google.com/c/ODcyMDU4MDI5MTYz/a/ODgzNTQwMTI1NTYw/details",
+        "label_es": "Entrega los Talleres 1 y 2 (Classroom)"
       }
     ],
     "P6": [
@@ -1975,6 +1990,11 @@
         "label": "P6 Classroom: Classwork",
         "label_es": "Classroom de P6: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU3NTEzOTUx/t/all"
+      },
+      {
+        "label": "Turn in Workshop 1 and 2 (Classroom)",
+        "url": "https://classroom.google.com/c/ODcyMDU3NTEzOTUx/a/ODgzNTQwMTI4ODM3/details",
+        "label_es": "Entrega los Talleres 1 y 2 (Classroom)"
       }
     ],
     "P8": [
@@ -1982,6 +2002,11 @@
         "label": "P8 Classroom: Classwork",
         "label_es": "Classroom de P8: Trabajo de clase",
         "url": "https://classroom.google.com/w/ODcyMDU3NjcyMDY5/t/all"
+      },
+      {
+        "label": "Turn in Workshop 1 and 2 (Classroom)",
+        "url": "https://classroom.google.com/c/ODcyMDU3NjcyMDY5/a/ODgzNTQwMTI4ODUz/details",
+        "label_es": "Entrega los Talleres 1 y 2 (Classroom)"
       }
     ]
   },
