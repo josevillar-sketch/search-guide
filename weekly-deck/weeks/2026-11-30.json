@@ -438,9 +438,9 @@
   },
   "pb-open": {
    "kind": "opener",
-   "title": "Drafts ready: timed Part A practice",
-   "subtitle": "Version B · AP Seminar · Thursday, December 3",
-   "subtitle_es": "Versión B · AP Seminar · jueves 3 de diciembre",
+   "title": "Timed Part A practice",
+   "subtitle": "AP Seminar · Thursday, December 3",
+   "subtitle_es": "AP Seminar · jueves 3 de diciembre",
    "body": [],
    "origin": "AP Seminar Version B teacher script, Thu Dec 3, slide cover",
    "visual": {
@@ -3812,8 +3812,8 @@
    "day": "thu",
    "period": 2,
    "variant": "B",
-   "label": "Version B: timed Part A practice",
-   "label_es": "Versión B: práctica cronometrada de la Parte A",
+   "label": "Timed Part A practice",
+   "label_es": "Práctica cronometrada de la Parte A",
    "target": {
     "en": "I can explain an argument's claims, line of reasoning and evidence, under time.",
     "es": "Puedo explicar las afirmaciones, la línea de razonamiento y la evidencia de un argumento, con tiempo limitado.",
