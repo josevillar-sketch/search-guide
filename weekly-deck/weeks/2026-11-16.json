@@ -123,7 +123,26 @@
         "title_es": "Salida temprana"
       },
       "name_es": "Viernes",
-      "date_es": "20 de noviembre"
+      "date_es": "20 de noviembre",
+      "seq": {
+        "id": "bookfair",
+        "label": "Miami Book Fair",
+        "label_es": "Feria del Libro de Miami",
+        "blurb": "Trip slides: the times, what to bring, the books, the rules and what to do if something goes wrong.",
+        "blurb_es": "Diapositivas del viaje: los horarios, qué traer, los libros, las reglas y qué hacer si algo sale mal.",
+        "slides": [
+          "bf-title",
+          "bf-before",
+          "bf-day",
+          "bf-bring",
+          "bf-books-1",
+          "bf-books-2",
+          "bf-street",
+          "bf-rules",
+          "bf-buddies",
+          "bf-help"
+        ]
+      }
     }
   ],
   "readings": {
@@ -910,6 +929,211 @@
       "body": [
         "Write today's daily entry: Did, Changed, Next.",
         "Add one decision you made today, with its reason."
+      ]
+    },
+    "bf-title": {
+      "kind": "cover",
+      "title": "Friday is Book Fair day!",
+      "title_es": "¡El viernes es el día de la Feria del Libro!",
+      "subtitle": "Miami Book Fair · Friday, November 20 · Miami Dade College, Wolfson Campus",
+      "subtitle_es": "Feria del Libro de Miami · viernes 20 de noviembre · Miami Dade College, Wolfson Campus",
+      "body": [
+        "8:00 AM: bus leaves Mater",
+        "10:00 AM: Teens Read",
+        "2:30 PM: back at Mater"
+      ],
+      "body_es": [
+        "8:00 AM: el autobús sale de Mater",
+        "10:00 AM: Teens Read",
+        "2:30 PM: de regreso en Mater"
+      ]
+    },
+    "bf-before": {
+      "kind": "content",
+      "title": "Before you go",
+      "title_es": "Antes de ir",
+      "layout": "grid",
+      "body": [
+        "Permission form and $5: pick up your permission form in Room 63, have your parent or guardian sign it, and turn it in with $5 by Thursday, November 19, at 3:00 PM. No signed form and $5 on time means you can't go. No exceptions.",
+        "Your book: pick up your Teens Read book in Room 63. Only a few copies are left, so it's first come, first served.",
+        "Your ride home: ask a parent or guardian to pick you up at Mater at 2:30 PM on the dot on Friday.",
+        "Can't make it? Reply to the email by Thursday, November 19, at 3:00 PM so your seat can go to a classmate who's waiting. Same goes for any change or question."
+      ],
+      "body_es": [
+        "Permiso y $5: recoge tu permiso en el salón 63, pide a tu padre, madre o tutor que lo firme y entrégalo con $5 a más tardar el jueves 19 de noviembre a las 3:00 PM. Sin el permiso firmado y los $5 a tiempo, no puedes ir. Sin excepciones.",
+        "Tu libro: recoge tu libro de Teens Read en el salón 63. Quedan pocas copias, así que se entregan por orden de llegada.",
+        "Tu transporte a casa: pide a tu padre, madre o tutor que te recoja en Mater el viernes a las 2:30 PM en punto.",
+        "¿No puedes ir? Responde al correo a más tardar el jueves 19 de noviembre a las 3:00 PM para que tu puesto pase a alguien de la clase que está esperando. Lo mismo si tienes algún cambio o pregunta."
+      ]
+    },
+    "bf-day": {
+      "kind": "content",
+      "title": "The day",
+      "title_es": "El día",
+      "layout": "grid",
+      "body": [
+        "Morning · Come to school as usual. Go to class like any normal day. We'll make an announcement when it's time to head to the bus.",
+        "8:00 AM · Bus 4 leaves Mater. We ride together to Miami Dade College's Wolfson Campus downtown.",
+        "10:00 AM · Teens Read the National Book Awards. Room 2106. Readings, conversation and your questions for the authors, until 11:30.",
+        "11:30 AM · Headcount, then lunch and Street Fair. Quick headcount outside Room 2106 with your buddy. Then explore together, grab food, browse books, and do our fieldwork.",
+        "12:10 PM · Buddy text check-in. Text your chaperone: your name, your buddy's name, and OK.",
+        "12:40 PM · Meet back up. Meet at the spot we'll point out after Teens Read. Be on time.",
+        "1:00 PM · Bus pickup at the Fair. We head back to Mater together.",
+        "2:30 PM · Parent pickup at Mater. Have your ride at school at 2:30 on the dot."
+      ],
+      "body_es": [
+        "Mañana · Ven a la escuela como siempre. Ve a clase como cualquier día normal. Haremos un anuncio cuando sea hora de ir al autobús.",
+        "8:00 AM · El autobús 4 sale de Mater. Vamos juntos al Wolfson Campus de Miami Dade College, en el centro de la ciudad.",
+        "10:00 AM · Teens Read the National Book Awards. Salón 2106. Lecturas, conversación y tus preguntas para los autores, hasta las 11:30.",
+        "11:30 AM · Conteo y luego almuerzo y Street Fair. Conteo rápido afuera del salón 2106 con tu compañero (buddy). Luego exploren juntos, busquen comida, miren libros y hagan nuestro trabajo de campo.",
+        "12:10 PM · Reporte por mensaje. Envía un mensaje a tu chaperón: tu nombre, el nombre de tu compañero y OK.",
+        "12:40 PM · Nos reunimos de nuevo. Ve al lugar que te mostraremos después de Teens Read. Llega a tiempo.",
+        "1:00 PM · El autobús nos recoge en la Feria. Regresamos juntos a Mater.",
+        "2:30 PM · Los padres recogen en Mater. Que te recojan en la escuela a las 2:30 en punto."
+      ]
+    },
+    "bf-bring": {
+      "kind": "content",
+      "title": "What to bring",
+      "title_es": "Qué traer",
+      "layout": "grid",
+      "body": [
+        "Jeans with no rips.",
+        "Your school t-shirt or uniform top.",
+        "Comfortable shoes. We'll be walking a lot.",
+        "A tote bag for the books you'll pick up.",
+        "Your Teens Read book and booklet, with your questions ready.",
+        "Money for food trucks and books: bring some cash, plus a card if you have one, since each vendor decides how it takes payment.",
+        "A charged phone.",
+        "Lunch: the school is packing chips, a cereal bar and juice for each of you. That's more of a snack, so bring money for the food trucks at Smorgasburg Miami and the Food Court."
+      ],
+      "body_es": [
+        "Jeans sin roturas.",
+        "Tu camiseta de la escuela o la parte de arriba del uniforme.",
+        "Zapatos cómodos. Vamos a caminar mucho.",
+        "Una bolsa de tela para los libros que consigas.",
+        "Tu libro y tu cuadernillo de Teens Read, con tus preguntas listas.",
+        "Dinero para los food trucks y los libros: trae algo de efectivo y una tarjeta si tienes una, porque cada vendedor decide cómo acepta el pago.",
+        "Un teléfono cargado.",
+        "Almuerzo: la escuela prepara papitas, una barra de cereal y jugo para cada estudiante. Es más bien una merienda, así que trae dinero para los food trucks de Smorgasburg Miami y el Food Court."
+      ]
+    },
+    "bf-books-1": {
+      "kind": "content",
+      "title": "The books: our host and the finalists",
+      "title_es": "Los libros: la anfitriona y los finalistas",
+      "layout": "grid",
+      "body": [
+        "Host: Sabaa Tahir, National Book Award winner and author of Empire.",
+        "Holloway, by Elana K. Arnold. National Book Award Finalist. Grieving her mom, Nora runs into a French forest at night and wakes up years in the future.",
+        "That Which Feeds Us: A Hawaiian Gothic, by Keala Kendall. National Book Award Finalist. A girl searches a luxury resort island with no cell service for her missing twin, and the island's past starts reaching for her.",
+        "Shook, by Julian Randall. National Book Award Finalist. A Chicago eighth grader with varsity basketball dreams breaks his ankle in the big game and has to figure out who he is off the court. A novel in verse."
+      ],
+      "body_es": [
+        "Anfitriona: Sabaa Tahir, ganadora del National Book Award y autora de Empire.",
+        "Holloway, de Elana K. Arnold. Finalista del National Book Award. En duelo por su mamá, Nora corre de noche hacia un bosque francés y despierta años en el futuro.",
+        "That Which Feeds Us: A Hawaiian Gothic, de Keala Kendall. Finalista del National Book Award. Una chica busca a su gemelo o gemela desaparecida en una isla de resorts de lujo sin señal de celular, y el pasado de la isla empieza a alcanzarla.",
+        "Shook, de Julian Randall. Finalista del National Book Award. Un chico de octavo grado de Chicago que sueña con el equipo varsity de baloncesto se rompe el tobillo en el gran partido y tiene que descubrir quién es fuera de la cancha. Una novela en verso."
+      ]
+    },
+    "bf-books-2": {
+      "kind": "content",
+      "title": "The books: the longlist",
+      "title_es": "Los libros: la lista larga",
+      "layout": "grid",
+      "body": [
+        "The Free Verse Society, by Delali Adjoa. Longlist. A teen with a past bigger than her classmates know gets stuck planning a poetry reading with the one boy who might see through her.",
+        "The Celestial Seas, by T. A. Chan. Longlist. Moby-Dick in outer space: the last survivor of a space whaling crew hunts the living ship that destroyed it.",
+        "Life on the Moon, by Matthew Swanson and illustrator Robbi Behr. Longlist. Twelve-year-old Leo's dad vanishes on a Moon-colony mission nobody admits exists, and Leo finds out the Moon isn't empty."
+      ],
+      "body_es": [
+        "The Free Verse Society, de Delali Adjoa. Lista larga. Una adolescente con un pasado más grande de lo que saben sus compañeros tiene que organizar una lectura de poesía con el único chico que podría ver quién es de verdad.",
+        "The Celestial Seas, de T. A. Chan. Lista larga. Moby-Dick en el espacio: la última persona viva de una tripulación ballenera espacial caza a la nave viviente que la destruyó.",
+        "Life on the Moon, de Matthew Swanson, con ilustraciones de Robbi Behr. Lista larga. Leo tiene doce años. Su papá desaparece en una misión a una colonia en la Luna que nadie admite que existe, y Leo descubre que la Luna no está vacía."
+      ]
+    },
+    "bf-street": {
+      "kind": "content",
+      "title": "Street Fair and food",
+      "title_es": "Street Fair y comida",
+      "layout": "grid",
+      "body": [
+        "After Teens Read, the Street Fair is yours to explore. Friday is free for everyone, so it's a full festival: more than 150 booksellers and artisans, record stands, games, and live performances on the Off the Shelf stage, including a Teen Poetry Open Mic.",
+        "Off the Shelf stage: on N.E. 1st Ave., between Building 2 and Children's Alley. Home of the Teen Poetry Open Mic.",
+        "Hungry? Smorgasburg Miami and the Food Court have food trucks and stands with plenty to choose from.",
+        "Food: Smorgasburg Miami Food Court, at the south end of the Fair by N.E. 2nd St."
+      ],
+      "body_es": [
+        "Después de Teens Read, puedes explorar la Street Fair. El viernes la entrada es gratis para todos, así que es un festival completo: más de 150 libreros y artesanos, puestos de discos, juegos y presentaciones en vivo en el escenario Off the Shelf, incluido un Teen Poetry Open Mic.",
+        "Escenario Off the Shelf: en N.E. 1st Ave., entre el Edificio 2 y Children's Alley. Allí es el Teen Poetry Open Mic.",
+        "¿Tienes hambre? Smorgasburg Miami y el Food Court tienen food trucks y puestos con mucho para escoger.",
+        "Comida: Smorgasburg Miami Food Court, en el extremo sur de la Feria, cerca de N.E. 2nd St."
+      ]
+    },
+    "bf-rules": {
+      "kind": "content",
+      "title": "Rules",
+      "title_es": "Reglas",
+      "layout": "grid",
+      "body": [
+        "Stay with your buddy the whole day. Nobody walks around alone.",
+        "Stay inside the Fair. Don't leave the Fair area for any reason.",
+        "Be on time. The bus leaves at 1:00 PM, with or without you.",
+        "School rules apply all day. You're representing Mater downtown.",
+        "Be a great audience at Teens Read: phones away, questions ready.",
+        "Bags get checked by campus Public Safety at the entrance. Weapons of any kind are banned.",
+        "Go home only from Mater. Everyone rides the bus back, no early pickups at the Fair."
+      ],
+      "body_es": [
+        "Quédate con tu compañero (buddy) todo el día. Nadie anda solo.",
+        "Quédate dentro de la Feria. No salgas del área de la Feria por ningún motivo.",
+        "Llega a tiempo. El autobús sale a la 1:00 PM, contigo o sin ti.",
+        "Las reglas de la escuela aplican todo el día. Representas a Mater en el centro de la ciudad.",
+        "Sé un gran público en Teens Read: teléfonos guardados, preguntas listas.",
+        "Public Safety del campus revisa las bolsas en la entrada. Se prohíben armas de cualquier tipo.",
+        "Vete a casa solo desde Mater. Todos regresan en el autobús; nadie se va antes desde la Feria."
+      ]
+    },
+    "bf-buddies": {
+      "kind": "content",
+      "title": "Buddies and check-ins",
+      "title_es": "Compañeros y reportes",
+      "layout": "grid",
+      "body": [
+        "Chaperone numbers: on the bus Friday morning, you'll get a card with your chaperones' cell numbers. Save them in your phone before we arrive.",
+        "Buddy pairs: choose one classmate who is also going as your buddy, and reply to the email with their name by Thursday, November 19, at 3:00 PM. No buddy yet? Mr. Portela will pair you up on the bus. You and your buddy stay together all day.",
+        "8:00 AM: roll call on the bus.",
+        "11:30 AM: headcount outside Room 2106.",
+        "12:10 PM: text your chaperone your name, your buddy's name and OK.",
+        "12:40 PM: meet at the spot we'll show you after Teens Read."
+      ],
+      "body_es": [
+        "Números de los chaperones: el viernes por la mañana, en el autobús, recibirás una tarjeta con los números de celular de tus chaperones. Guárdalos en tu teléfono antes de llegar.",
+        "Parejas: elige como compañero (buddy) a alguien de tu clase que también vaya, y responde al correo con su nombre a más tardar el jueves 19 de noviembre a las 3:00 PM. ¿Todavía no tienes pareja? El Sr. Portela te asignará una en el autobús. Tú y tu compañero se quedan juntos todo el día.",
+        "8:00 AM: se pasa lista en el autobús.",
+        "11:30 AM: conteo afuera del salón 2106.",
+        "12:10 PM: envía un mensaje a tu chaperón con tu nombre, el nombre de tu compañero y OK.",
+        "12:40 PM: reúnete en el lugar que te mostraremos después de Teens Read."
+      ]
+    },
+    "bf-help": {
+      "kind": "content",
+      "title": "If something goes wrong",
+      "title_es": "Si algo sale mal",
+      "layout": "grid",
+      "body": [
+        "Lost or separated? Stay where you are and call or text a chaperone right away.",
+        "Need help on site? Go to the Fair's Information Booth or the Miami Dade College Public Safety Office. Both are on the attached map, marked with an i.",
+        "Campus Public Safety: 305-237-3100.",
+        "A real emergency? Call 911 first, then a chaperone.",
+        "Never leave the Fair with anyone, and never get in a car there. Everyone rides the bus back to Mater."
+      ],
+      "body_es": [
+        "¿Te perdiste o te separaste? Quédate donde estás y llama o envía un mensaje a un chaperón de inmediato.",
+        "¿Necesitas ayuda allí? Ve al Information Booth de la Feria o a la oficina de Public Safety de Miami Dade College. Los dos están en el mapa adjunto, marcados con una i.",
+        "Public Safety del campus: 305-237-3100.",
+        "¿Una emergencia real? Llama primero al 911 y luego a un chaperón.",
+        "Nunca salgas de la Feria con nadie y nunca te subas a un carro allí. Todos regresan a Mater en el autobús."
       ]
     }
   },

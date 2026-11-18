@@ -218,11 +218,11 @@ footer#controls{flex:none;min-height:76px;padding:8px 1.6vw;display:flex;gap:10p
 .cell.fri{background:var(--night-card-2);color:var(--night-ink);border-color:var(--night-edge);justify-content:flex-start}
 .cell.fri b{color:var(--night-brass)}
 .choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:0 0 22px}
-.choice{display:flex;flex-direction:column;gap:6px;padding:20px 20px 22px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-top:4px solid var(--brass);border-radius:0;text-decoration:none;min-height:44px;animation:upIn .7s cubic-bezier(.2,.75,.2,1) both;animation-delay:calc(var(--d,0)*.08s)}
-.choice:hover{border-color:var(--brass)}
-.choice b{font:700 clamp(24px,2vw,40px)/1.1 var(--fd)}
+.choice,.seqlink{display:flex;flex-direction:column;gap:6px;padding:20px 20px 22px;background:var(--panel);color:var(--ink);border:1px solid var(--rule);border-top:4px solid var(--brass);border-radius:0;text-decoration:none;min-height:44px;animation:upIn .7s cubic-bezier(.2,.75,.2,1) both;animation-delay:calc(var(--d,0)*.08s)}
+.choice:hover,.seqlink:hover{border-color:var(--brass)}
+.choice b,.seqlink b{font:700 clamp(24px,2vw,40px)/1.1 var(--fd)}
 .choice .c{font:700 clamp(16px,1vw,20px)/1.4 var(--fm);color:var(--brass-text);letter-spacing:.04em}
-.choice .l{font-size:clamp(18px,1.3vw,26px);line-height:1.3}
+.choice .l,.seqlink .l{font-size:clamp(18px,1.3vw,26px);line-height:1.3}
 .choice .g{font-size:clamp(16px,1.05vw,21px);line-height:1.35;border-top:1px solid var(--hair);padding-top:8px;margin-top:4px;font-weight:700}
 .homenote{background:var(--night-card);border-top:1px solid var(--night-hair);border-bottom:1px solid var(--night-hair);padding:12px 18px;margin:0 0 14px;font-size:clamp(17px,1.1vw,22px);line-height:1.45;max-width:110ch}
 .homenote b{font-family:var(--fm);color:var(--night-brass);letter-spacing:.05em}
@@ -454,6 +454,9 @@ g.bi{transform-box:fill-box}
  .panel p,.panel li,.plist a,.panel label{font-size:17px}
 }
 @media (max-width:900px) and (min-width:600px){.choices{grid-template-columns:1fr 1fr}}
+.seqlink{max-width:900px;margin:0 0 18px}
+.slide.gridslide .lines{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:1.4em;max-width:none}
+@media (max-width:900px){.slide.gridslide .lines{grid-template-columns:1fr}.lines li .es{font-size:max(.78em,16px)}}
 /* ===== print (US Letter handouts, 5x7 cards, landscape slides) ===== */
 @page slide{size:13.333in 7.5in;margin:0}
 @page letter{size:8.5in 11in;margin:0}
@@ -565,6 +568,7 @@ const PRN='<svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2
 // ---------- routes ----------
 const rk=r=>String(r.period)+(r.variant||'');const vtag=r=>'';const tvtag=r=>r.variant?' · '+(es()?'Versión ':'Version ')+r.variant:'';const rlab=r=>es()&&r.label_es?r.label_es:r.label;
 const ROUTES=D.routes.map(r=>{const steps=[];let m=toMin(D.bells[String(r.period)][0]);r.segments.forEach((s,si)=>s.steps.forEach(st=>{steps.push({...st,seg:si,type:s.type,label:s.label,label_es:s.label_es,start:m,end:m+(st.minutes||0)});m+=st.minutes||0}));return {...r,id:r.day+'-p'+rk(r).toLowerCase(),steps}});
+const SEQS=DAYS.filter(d=>d.seq).map(d=>({day:d.id,seq:d.seq.id,label:d.seq.label,label_es:d.seq.label_es,id:d.id+'-'+d.seq.id,steps:d.seq.slides.map(x=>({slide:x,seg:0,start:0,end:0}))}));const seqBy=(day,k)=>SEQS.find(r=>r.day===day&&r.seq===String(k).toLowerCase());
 const routeBy=(day,p)=>ROUTES.find(r=>r.day===day&&rk(r)===String(p).toUpperCase());
 const dayRoutes=day=>ROUTES.filter(r=>r.day===day).sort((a,b)=>a.period-b.period||(a.variant||'').localeCompare(b.variant||''));
 const prevRoute=r=>{const di=DAYS.findIndex(d=>d.id===r.day);for(let k=di-1;k>=0;k--){const x=routeBy(DAYS[k].id,r.period);if(x)return x}return null};
@@ -576,7 +580,7 @@ function cite(id){const r=D.readings[id];if(!r)return '';return `<p class="sourc
 function mats(r){return [...(D.materials.all||[]),...(D.materials[r.course]||[]),...(D.materials['P'+r.period]||[])]}
 function qr(url){const q=D.qr&&D.qr[url];if(!q)return '';return `<div class="qr" aria-hidden="true"><svg viewBox="0 0 ${q.n+8} ${q.n+8}" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#efe7d6"/><path transform="translate(4 4)" fill="#14110d" d="${q.d}"/></svg></div>`}
 function deckNo(s){return s&&s.deck_no?` · ${t('deck')} ${s.deck_no} / ${s.deck_of}`:''}
-function foot(r,i,s){const d=dayBy(r.day);return `<footer class="sfoot"><span>${esc(D.week.brand)} · ${esc(d.name.slice(0,3))} ${esc(d.date.replace('November','Nov'))} · P${r.period}${vtag(r)} ${esc(r.course)} · ${esc(bell(r.period))}${deckNo(s)}</span><span>${i===0?t('opening'):i} / ${r.steps.length-1}</span></footer>`}
+function foot(r,i,s){const d=dayBy(r.day);if(r.seq)return `<footer class="sfoot"><span>${esc(D.week.brand)} · ${esc(d.name.slice(0,3))} ${esc(d.date.replace('November','Nov'))} · ${esc(rlab(r))}</span><span>${i+1} / ${r.steps.length}</span></footer>`;return `<footer class="sfoot"><span>${esc(D.week.brand)} · ${esc(d.name.slice(0,3))} ${esc(d.date.replace('November','Nov'))} · P${r.period}${vtag(r)} ${esc(r.course)} · ${esc(bell(r.period))}${deckNo(s)}</span><span>${i===0?t('opening'):i} / ${r.steps.length-1}</span></footer>`}
 function dn(d){return es()&&d.name_es||d.name}
 function dd(d){return es()&&d.date_es||d.date}
 function gl(g){return es()&&g.label_es||t('guest')}
@@ -610,13 +614,13 @@ function slideHTML(r,i,opt){
  const s=D.slides[st.slide];if(!s)return wrap('content','<p>Missing slide '+esc(st.slide)+'</p>');
  if(s.kind==='lab')return wrap('content labslide',`${SEAL}<h2>${esc(s.title)}</h2><div class="rule"></div>${labVis()}`);
  const dv=s.visual&&s.visual.mode==='documentary'?s.visual.img:null;
- if(s.kind==='cover')return wrap('night cover'+(dv?' has-doc':''),`${AMB}${dv?docPhoto(dv):''}${SEAL}<h1>${esc(s.title)}</h1>${s.subtitle?`<p class="sub">${esc(s.subtitle)}</p>`:''}<div class="rule"></div><div class="body">${lines(s.body,null,false)}${s.footer?`<p class="deckfoot">${esc(s.footer)}</p>`:''}</div>`,s);
+ if(s.kind==='cover')return wrap('night cover'+(dv?' has-doc':''),`${AMB}${dv?docPhoto(dv):''}${SEAL}<h1>${esc(es()&&s.title_es||s.title)}</h1>${s.subtitle?`<p class="sub">${bil(s.subtitle,s.subtitle_es)}</p>`:''}<div class="rule"></div><div class="body">${lines(s.body,s.body_es,false)}${s.footer?`<p class="deckfoot">${esc(s.footer)}</p>`:''}</div>`,s);
  if(s.kind==='opener')return wrap('night opener'+(dv?' has-doc':''),`${AMB}${dv?docPhoto(dv):''}${SEAL}<div class="body"><h1>${esc(s.title)}</h1><p class="sub">${bil(s.subtitle||'',s.subtitle_es)}</p><div class="rule"></div><p class="when">${esc(d.name)}, ${esc(d.date)} · Period ${r.period}${vtag(r)} · ${esc(bell(r.period))}</p></div>`,s);
  if(s.kind==='guest'){const g=D.guests[s.guest];return wrap('guestslide',`${head(esc(g.name),(es()&&g.label_es?g.label_es.toUpperCase():t('guestslug'))+' · '+esc(((es()&&g.mode_es)||g.mode||'').toUpperCase()))}${withVis(`<div class="body" style="justify-content:center"><div class="plate" aria-hidden="true" style="width:calc(var(--u)*9);font-size:calc(var(--u)*3.6*var(--zoom));margin-bottom:calc(var(--u)*1.4)">${esc(g.initials||'')}</div><p class="aff">${esc(g.affiliation)}</p><p class="topic">${bil(g.topic,g.topic_es)}</p><p class="gwhen">${esc(d.name)}, ${esc(d.date)} · ${esc(g.when)}${g.language?'<br>'+esc(g.language):''}</p>${g.links&&g.links.length?`<ul class="mats">${g.links.map(l=>`<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></li>`).join('')}</ul>`:''}</div>`,s.visual,B)}`)}
  if(s.kind==='pair'){const a=D.slides[s.pair[0]],b=D.slides[s.pair[1]];const part=(x,k)=>`<section class="${B?'bi':''}"><h3>${esc(x.title)}</h3>${lines(x.body,null,false)}${x.footer?`<p class="deckfoot">${esc(x.footer)}</p>`:''}${k===0&&s.visual?`<div class="mini">${chartSVG()}</div>`:''}</section>`;return wrap('pairslide',`${SEAL}<h2 class="vh">${esc(a.title)} and ${esc(b.title)}</h2><div class="pair">${part(a,0)}${part(b,1)}</div>`)}
  const statement=s.body.length===1&&s.body[0].length<140;
  const bodyHTML=`<div class="body">${slideLines(s,B)}${s.reading?cite(s.reading):''}</div>`;
- return wrap('content'+(statement?' statement':''),`${SEAL}<h2>${es()&&s.title_es?esc(s.title_es):esc(s.title)}</h2><div class="rule"></div>${withVis(bodyHTML,s.visual,B)}${s.footer?`<p class="deckfoot">${bil(s.footer,s.footer_es)}</p>`:''}`,s);
+ return wrap('content'+(statement?' statement':'')+(s.layout==='grid'?' gridslide':''),`${SEAL}<h2>${es()&&s.title_es?esc(s.title_es):esc(s.title)}</h2><div class="rule"></div>${withVis(bodyHTML,s.visual,B)}${s.footer?`<p class="deckfoot">${bil(s.footer,s.footer_es)}</p>`:''}`,s);
 }
 function withVis(body,v,B){if(!v)return body;const sm=v.type==='meter'||v.type==='poll'?' sm':'';return `<div class="stage2${sm}">${body}<div class="vis">${visualHTML(v,B)}</div></div>`}
 function rowsVis(c){const rows=[...new Set(c.map(x=>x.row))];return flow(rows,false)}
@@ -714,6 +718,7 @@ function weekHTML(){const periods=[...new Set(ROUTES.map(r=>r.period))].sort((a,
 function dayHTML(day){const d=dayBy(day);const rr=dayRoutes(day);
  let h=`<div class="home">${AMB}<h1>${esc(d.name)}, ${esc(d.date)}</h1><div class="rule"></div><p class="slug">${dl(d)}${rr.length?' · '+t('choose').toUpperCase():''}</p>`;
  if(rr.length)h+=`<div class="homebar"><button type="button" class="pday">${PRN}<span>Print day handout</span></button></div>`;
+ if(d.seq)h+=`<a class="seqlink" href="#${d.id}/${esc(d.seq.id)}-0"><b>${esc(es()&&d.seq.label_es||d.seq.label)}</b><span class="l">${bil(d.seq.blurb,d.seq.blurb_es)}</span></a>`;
  if(d.card)h+=`<div class="fricard">${SEAL.replace('class="seal"','class="seal" style="position:absolute;top:16px;right:18px;width:56px;height:56px;color:var(--ink)"')}<h2>${esc(es()&&d.card.title_es||d.card.title)}</h2><div class="rule"></div>${d.card.lines.map((x,k)=>`<p>${esc(x)}${es()&&d.card.lines_es?`<span class="es"> ${esc(d.card.lines_es[k])}</span>`:''}</p>`).join('')}</div>`;
  if(rr.length)h+='<div class="choices">'+rr.map((r,k)=>`<a class="choice" style="--d:${k}" href="#${r.day}/P${rk(r)}-0"><b>Period ${r.period}${vtag(r)}</b><span class="c">${esc(r.course)} · ${esc(bell(r.period))}</span><span class="l">${bil(r.label,r.label_es)}</span>${r.guest?`<span class="g">${gl(D.guests[r.guest])}: ${esc(D.guests[r.guest].name)}, ${esc(D.guests[r.guest].when)}</span>`:''}</a>`).join('')+'</div>';
  [...new Set(rr.flatMap(routeReadings))].forEach(id=>{const x=D.readings[id];h+=`<p class="homenote"><b>${t('reading')}</b> ${esc(x.before)}<i>${esc(x.book)}</i>${esc(x.after)} ${bil(x.note,x.note_es)}${rlink(x)}</p>`});
@@ -722,21 +727,21 @@ function dayHTML(day){const d=dayBy(day);const rr=dayRoutes(day);
 function setTabs(){document.querySelectorAll('#days button').forEach(b=>b.setAttribute('aria-pressed',String(cur.view!=='week'&&b.dataset.day===cur.day)));const rr=dayRoutes(cur.day);$('route').innerHTML=`<option value="">${t('choose')}</option>`+rr.map(r=>`<option value="${rk(r)}">P${r.period} ${esc(r.course.replace('AP ',''))}${r.variant?' · '+esc(rlab(r)):''}</option>`).join('');$('route').value=cur.route?rk(cur.route):'';
  const g=cur.route?cur.route.guest:dayRoutes(cur.day).some(r=>r.guest);$('guestbtn').hidden=!(cur.view!=='week'&&g)}
 function setHash(h){if(location.hash!==h)history.replaceState(null,'',h)}
-function go(hash){const h=(hash||'').replace(/^#/,'');if(!h||h==='week')return weekView();const m=h.match(/^([a-z]{3})(?:\/p(\d[a-z]?)-(\d+))?\/?$/i);const day=m&&dayBy(m[1].toLowerCase())?m[1].toLowerCase():null;if(!day)return weekView();const r=m[2]?routeBy(day,m[2]):null;if(r)show(r,Math.max(0,Math.min(Number(m[3]||0),r.steps.length-1)),{built:'all'});else dayView(day)}
+function go(hash){const h=(hash||'').replace(/^#/,'');if(!h||h==='week')return weekView();const m=h.match(/^([a-z]{3})(?:\/(?:p(\d[a-z]?)|([a-z][a-z-]*))-(\d+))?\/?$/i);const day=m&&dayBy(m[1].toLowerCase())?m[1].toLowerCase():null;if(!day)return weekView();const r=m[2]?routeBy(day,m[2]):m[3]?seqBy(day,m[3]):null;if(r)show(r,Math.max(0,Math.min(Number(m[4]||0),r.steps.length-1)),{built:'all'});else dayView(day)}
 function idle(label){stop();['prev','next','play','reset','jump','agbtn'].forEach(k=>$(k).disabled=true);$('progress').textContent=label;$('jump').innerHTML='<option>Slide</option>';$('mode').textContent='';$('dots').innerHTML='';remain=0;timerText();$('main').scrollTop=0}
 function swap(html,dir){const c=$('content');c.querySelectorAll(':scope > .leave').forEach(x=>x.remove());const old=c.firstElementChild;const still=document.documentElement.classList.contains('still');c.insertAdjacentHTML('beforeend',html);const nw=c.lastElementChild;if(old&&!still){sfx('trans');const H=document.documentElement;H.classList.add('moving');clearTimeout(swap._t);swap._t=setTimeout(()=>H.classList.remove('moving'),800);old.classList.add('leave');if(dir<0)old.classList.add('back');setTimeout(()=>old.remove(),210);nw.classList.add('enter');if(dir<0)nw.classList.add('back');const w=$('wash');w.classList.remove('go','back');void w.offsetWidth;if(dir<0)w.classList.add('back');w.classList.add('go')}else{if(old)old.remove();if(!still)nw.classList.add('enter')}
  }
 function weekView(){cur={view:'week',day:cur.day,route:null,i:0,built:0};setTabs();swap(weekHTML(),1);idle(t('weekof'));setHash('#week');document.title=D.week.brand+' | '+D.week.title;wireHome();$('print').innerHTML='';sync()}
 function dayView(day){cur={view:'day',day,route:null,i:0,built:0};setTabs();swap(dayHTML(day),1);idle(t('choose'));setHash('#'+day);document.title=D.week.brand+' | '+dayBy(day).name;wireHome();$('print').innerHTML='';sync()}
 function show(r,i,o){o=o||{};const dir=o.dir||(cur.route===r&&i<cur.i?-1:1);stop();speechStop();cur={view:'route',day:r.day,route:r,i,built:0};setTabs();swap(slideHTML(r,i),dir);
- const st=r.steps[i];$('progress').textContent=`P${rk(r)} · ${i} / ${r.steps.length-1} · ${clock(st.start).h}-${clock(st.end).h}`;
+ const st=r.steps[i];$('progress').textContent=r.seq?`${rlab(r)} · ${i+1} / ${r.steps.length}`:`P${rk(r)} · ${i} / ${r.steps.length-1} · ${clock(st.start).h}-${clock(st.end).h}`;
  $('mode').textContent=t(st.mode||'');$('mode').dataset.m=st.mode||'';
- $('jump').innerHTML=r.steps.map((s,j)=>`<option value="${j}"${j===i?' selected':''}>${j}. ${esc(stepTitle(r,j))}</option>`).join('');
- $('prev').disabled=i===0;$('next').disabled=false;$('play').disabled=!st.minutes;$('reset').disabled=!st.minutes;$('jump').disabled=false;$('agbtn').disabled=false;
+ $('jump').innerHTML=r.steps.map((s,j)=>`<option value="${j}"${j===i?' selected':''}>${r.seq?j+1:j}. ${esc(stepTitle(r,j))}</option>`).join('');
+ $('prev').disabled=i===0;$('next').disabled=false;$('play').disabled=!st.minutes;$('reset').disabled=!st.minutes;$('jump').disabled=false;$('agbtn').disabled=!!r.seq;
  $('dots').innerHTML=r.steps.map((s,j)=>`<i class="${j<i?'done':j===i?'now':''}${j&&r.steps[j-1].seg!==s.seg?' gap':''}"></i>`).join('');
  const sl0=document.querySelector('#content > .slide:not(.leave)');if(sl0&&buildsOn()&&o.built!=='all')sl0.classList.add('builds');inkClear();wireSlide();const items=builds();if(o.built==='all'||!buildsOn())items.forEach(x=>x.classList.add('in'));else if(typeof o.built==='number'){items.slice(0,o.built).forEach(x=>x.classList.add('in'))}cur.built=items.filter(x=>x.classList.contains('in')).length;
  $('next').disabled=i===r.steps.length-1&&cur.built>=items.length;
- tload();fit();$('main').scrollTop=0;setHash(`#${r.day}/P${rk(r)}-${i}`);document.title=`${D.week.brand} | ${dayBy(r.day).name} P${r.period}${vtag(r)} | ${stepTitle(r,i)}`;say(stepTitle(r,i)+'. '+i+' / '+(r.steps.length-1));$('print').innerHTML='';if(!$('agenda').hidden)agenda();sync()}
+ tload();fit();$('main').scrollTop=0;setHash(r.seq?`#${r.day}/${r.seq}-${i}`:`#${r.day}/P${rk(r)}-${i}`);document.title=`${D.week.brand} | ${dayBy(r.day).name} ${r.seq?rlab(r):'P'+r.period+vtag(r)} | ${stepTitle(r,i)}`;say(stepTitle(r,i)+'. '+i+' / '+(r.steps.length-1));$('print').innerHTML='';if(!$('agenda').hidden)agenda();sync()}
 function buildsOn(){return prefs.builds&&matchMedia('(min-width:901px)').matches}
 function builds(){return [...document.querySelectorAll('#content > .slide:not(.leave) .bi')]}
 function advance(n){if(!cur.route)return;const items=builds();if(n>0&&cur.built<items.length){items[cur.built].classList.add('in');cur.built++;$('next').disabled=cur.i===cur.route.steps.length-1&&cur.built>=items.length;sync();return}const j=cur.i+n;if(j>=0&&j<cur.route.steps.length)show(cur.route,j,{dir:n,built:n<0?'all':0})}
@@ -760,7 +765,7 @@ function readAloud(){const sl=document.querySelector('#content > .slide:not(.lea
 let lastFocus=null;const PANELS=['agenda','res','lib','guest','tools'];
 function openPanel(id){PANELS.forEach(k=>$(k).hidden=k!==id);lastFocus=document.activeElement;['bar','main','controls'].forEach(k=>$(k).inert=true);$(id).hidden=false;$(id).querySelector('.close').focus()}
 function closePanels(){PANELS.forEach(k=>$(k).hidden=true);['bar','main','controls'].forEach(k=>$(k).inert=false);if(lastFocus&&lastFocus.focus)lastFocus.focus()}
-function agenda(){const r=cur.route;if(!r)return;const st=r.steps[cur.i];$('agbody').innerHTML=`<p>${esc(dayBy(r.day).name)}, ${esc(dayBy(r.day).date)} · Period ${r.period}${vtag(r)} · ${esc(r.course)} · ${esc(bell(r.period))}</p><ul class="ag">`+segRows(r).map(x=>`<li class="${st.seg===x.si?'now':''}"><span class="t">${x.b>x.a?esc(range(x.a,x.b)):t('anytime')}</span><span>${bil(x.s.label,x.s.label_es)}</span><span class="k">${esc(t(x.mode))}</span><button data-step="${x.first}">${t('go')}</button></li>`).join('')+'</ul>';
+function agenda(){const r=cur.route;if(!r||r.seq)return;const st=r.steps[cur.i];$('agbody').innerHTML=`<p>${esc(dayBy(r.day).name)}, ${esc(dayBy(r.day).date)} · Period ${r.period}${vtag(r)} · ${esc(r.course)} · ${esc(bell(r.period))}</p><ul class="ag">`+segRows(r).map(x=>`<li class="${st.seg===x.si?'now':''}"><span class="t">${x.b>x.a?esc(range(x.a,x.b)):t('anytime')}</span><span>${bil(x.s.label,x.s.label_es)}</span><span class="k">${esc(t(x.mode))}</span><button data-step="${x.first}">${t('go')}</button></li>`).join('')+'</ul>';
  $('agbody').querySelectorAll('button[data-step]').forEach(b=>b.onclick=()=>{closePanels();show(r,Number(b.dataset.step))})}
 function resources(){const r=cur.route;const rr=r?[r]:cur.view==='day'?dayRoutes(cur.day):ROUTES;let h='';
  const reads=[...new Set(ROUTES.flatMap(routeReadings))];h+=`<h3>Readings this week</h3><ul class="plist">`+reads.map(id=>{const x=D.readings[id];return `<li>${esc(x.before)}<i>${esc(x.book)}</i>${esc(x.after)} <span class="meta">${bil(x.note,x.note_es)}</span></li>`}).join('')+'</ul>';
@@ -810,9 +815,9 @@ function cardPages(r){const ps=(r.practice||[]).map(id=>({id,...D.practice[id]})
 function packet(){let h=lpage(lhead(D.week.title+': student packet','AP Seminar and AP Research · '+D.week.school)+`<h2>This week</h2><table>${DAYS.map(d=>`<tr><td><b>${esc(d.name)}, ${esc(d.date)}</b> (${esc(d.letter)} day)</td><td>${d.card?esc(d.card.title+'. '+d.card.lines.join(' ')):dayRoutes(d.id).map(r=>`P${r.period} ${esc(r.course.replace('AP ',''))}: ${esc(r.label)}`).join('<br>')}</td></tr>`).join('')}</table><h2>Readings</h2><ul>${Object.values(D.readings).map(x=>`<li>${esc(x.before)}<i>${esc(x.book)}</i>${esc(x.after)} ${esc(x.note)}</li>`).join('')}</ul>`,'Week packet')+lpage(lhead('Glossary','English and Spanish')+`<table>${Object.values(D.glossary).map(g=>`<tr><td><b>${esc(g.en)}</b> / ${esc(g.es)}</td><td>${esc(g.def_en)}<br><span class="es">${esc(g.def_es)}</span></td></tr>`).join('')}</table>`,'Week packet');return h+ROUTES.map(handout).join('')}
 function renderPrint(mode){const p=$('print');const r=cur.route;let h='';
  if(mode==='slides'&&r)h=r.steps.map((_,j)=>slideHTML(r,j,{print:true})).join('');
- else if(mode==='absent-one'&&r)h=absentSheet(r);
+ else if(mode==='absent-one'&&r&&!r.seq)h=absentSheet(r);
  else if(mode==='absent-all')h=ROUTES.map(absentSheet).join('');
- else if(mode==='cards'&&r)h=cardPages(r);
+ else if(mode==='cards'&&r&&!r.seq)h=cardPages(r);
  else if(mode==='day')h=dayRoutes(cur.day).map(handout).join('')||(dayBy(cur.day).card?lpage(lhead(dayBy(cur.day).name+', '+dayBy(cur.day).date,dayBy(cur.day).card.title)+'<ul>'+dayBy(cur.day).card.lines.map((l,k)=>`<li>${bil(l,dayBy(cur.day).card.lines_es&&dayBy(cur.day).card.lines_es[k])}</li>`).join('')+'</ul>',dayBy(cur.day).name):lpage(lhead(dayBy(cur.day).name,dayBy(cur.day).date),''));
  else h=packet();
  p.innerHTML=h;p.dataset.mode=mode}
@@ -841,7 +846,7 @@ document.addEventListener('click',e=>{if(e.target.closest('.panel .close'))close
 $('blk').onclick=()=>{$('blk').hidden=true;sync()};
 window.addEventListener('hashchange',()=>go(location.hash));
 let digits='',dtimer=null;
-function jumpTo(n){if(cur.route&&n>=0&&n<cur.route.steps.length)show(cur.route,n,{built:'all'});digits=''}
+function jumpTo(n){if(cur.route&&cur.route.seq)n--;if(cur.route&&n>=0&&n<cur.route.steps.length)show(cur.route,n,{built:'all'});digits=''}
 window.addEventListener('keydown',e=>{const open=PANELS.find(k=>!$(k).hidden);
  if(open){if(e.key==='Escape'){e.preventDefault();closePanels();return}if(e.key==='Tab'){const f=[...$(open).querySelectorAll('button:not(:disabled),a[href],input,textarea')].filter(x=>x.offsetParent);const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}if(e.target.getAttribute&&e.target.getAttribute('role')==='tab'&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){e.preventDefault();const tb=[...$(open).querySelectorAll('[role=tab]')];const x=tb[(tb.indexOf(e.target)+(e.key==='ArrowRight'?1:-1)+tb.length)%tb.length];x.focus();x.click()}return}
  if(e.ctrlKey||e.metaKey||e.altKey)return;
