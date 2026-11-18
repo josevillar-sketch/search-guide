@@ -9,7 +9,8 @@
 // Then checks behavior: keyboard, number jump, builds, day tabs, panels, timer, sound off by default,
 // swipe, two-window sync, poll, sort, chart, flip cards, annotation, name picker, teacher mode,
 // Spanish toggle, text size, every print mode (page counts with pdfinfo), and animation smoothness under
-// a 4x CPU throttle.
+// a 4x CPU throttle. Every check reads the week's own routes and slides, so it runs on any week file;
+// a check whose slide type the week does not have is listed as SKIP.
 const fs = require('fs');
 const path = require('path');
 const http = require('http');
@@ -153,9 +154,11 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
     const page = await ctx.newPage(); listen(page, v.name);
     await page.goto(BASE + '#week'); await page.evaluate(() => document.fonts.ready);
     await page.evaluate(() => window.DECK_TEST.still(true));
-    const { routes, days } = await page.evaluate(() => ({ routes: window.DECK_TEST.routes.map(r => ({ day: r.day, period: r.period, n: r.steps.length })), days: window.DECK_TEST.data.days.map(d => d.id) }));
+    const { routes, days, seqs } = await page.evaluate(() => ({ routes: window.DECK_TEST.routes.map(r => ({ day: r.day, key: String(r.period) + (r.variant || ''), guest: !!r.guest, n: r.steps.length })), days: window.DECK_TEST.data.days.map(d => d.id), seqs: window.DECK_TEST.data.days.filter(d => d.seq).map(d => ({ day: d.id, id: d.seq.id, n: d.seq.slides.length })) }));
     const hashes = ['#week', ...days.map(d => '#' + d)];
-    for (const r of routes) for (let i = 0; i < r.n; i++) hashes.push(`#${r.day}/P${r.period}-${i}`);
+    for (const r of routes) for (let i = 0; i < r.n; i++) hashes.push(`#${r.day}/P${r.key}-${i}`);
+    // A day's own slide sequence (days[].seq, for example #fri/bookfair-0) renders like a route.
+    for (const q of seqs) for (let i = 0; i < q.n; i++) hashes.push(`#${q.day}/${q.id}-${i}`);
     for (const h of hashes) {
       await page.evaluate(h => { location.hash = h; }, h);
       await page.waitForFunction(h => location.hash === h, h, { timeout: 3000 }).catch(() => {});
@@ -172,8 +175,11 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
         if (size !== null && size < 28) fail(`${h} @ ${v.name}`, `body text ${size.toFixed(1)}px is under 28px at 1920x1080`);
       }
     }
-    for (const [btn, panel] of [['#agbtn', '#agenda'], ['#resbtn', '#res'], ['#libbtn', '#lib'], ['#guestbtn', '#guest'], ['#toolsbtn', '#tools']]) {
-      await page.evaluate(() => { location.hash = '#wed/P8-0'; }); await settle(page);
+    // Panels open on this week's first route with a guest (so the Guest button shows), else its first route.
+    const pr = routes.find(r => r.guest) || routes[0];
+    const panelHash = `#${pr.day}/P${pr.key}-0`;
+    for (const [btn, panel] of [['#agbtn', '#agenda'], ['#resbtn', '#res'], ['#libbtn', '#lib'], ['#guestbtn', '#guest'], ['#toolsbtn', '#tools']].filter(([b]) => b !== '#guestbtn' || pr.guest)) {
+      await page.evaluate(h => { location.hash = h; }, panelHash); await settle(page);
       if (v.phone && ['#resbtn', '#libbtn', '#guestbtn'].includes(btn)) await page.evaluate(b => document.querySelector(b).click(), btn); else await page.click(btn);
       if (!(await page.isVisible(panel))) fail(`${panel} @ ${v.name}`, 'panel did not open');
       record(`${panel} panel @ ${v.name}`, await page.evaluate(PROBE));
@@ -193,49 +199,68 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   const st = () => page.evaluate(() => window.DECK_TEST.state());
   const go0 = page.goto.bind(page);
   page.goto = async (u, o) => { const r = await go0(u, o); await page.reload(); await page.waitForTimeout(150); return r; };
-  await page.goto(BASE + '#mon/P2-0'); await page.evaluate(() => document.fonts.ready);
-  const IX = await page.evaluate(() => Object.fromEntries(window.DECK_TEST.routes.map(r => [r.id, r.steps.map(s => s.slide)])));
-  const ix = (rid, slide) => IX[rid].indexOf(slide);
+  await page.goto(BASE + '#week'); await page.evaluate(() => document.fonts.ready);
+  // Every check below reads this week's own routes, so the same checks run on any week file.
+  const W = await page.evaluate(() => ({ id: window.DECK_TEST.data.week.id, days: window.DECK_TEST.data.days.map(d => d.id), seqs: window.DECK_TEST.data.days.filter(d => d.seq).map(d => ({ day: d.id, id: d.seq.id, slides: d.seq.slides })), slides: window.DECK_TEST.data.slides, routes: window.DECK_TEST.routes.map(r => ({ id: r.id, day: r.day, period: r.period, key: String(r.period) + (r.variant || ''), practice: r.practice || [], steps: r.steps.map(s => ({ slide: s.slide, minutes: s.minutes || 0 })) })) }));
+  const hashOf = (r, i) => `#${r.day}/P${r.key}-${i}`;
+  const sorted = [...W.routes].sort((a, b) => W.days.indexOf(a.day) - W.days.indexOf(b.day) || a.period - b.period || a.key.localeCompare(b.key));
+  const dayRoutes = d => sorted.filter(r => r.day === d);
+  // The behavior route opens on the target, then a timed do now, has practice cards and at least 11 steps.
+  const B = sorted.find(r => r.steps.length >= 11 && r.steps[0].slide === '@target' && r.steps[1].slide === '@donow' && r.steps[1].minutes > 0 && r.practice.length) || sorted[0];
+  const H = i => hashOf(B, i);
+  const findStep = test => { for (const r of sorted) { const i = r.steps.findIndex(s => test(s.slide)); if (i >= 0) return { hash: hashOf(r, i), slide: r.steps[i].slide }; } return null; };
+  const skip = label => behave.push(`SKIP  ${label}: this week has no slide for it`);
+  const mmss = m => String(m).padStart(2, '0') + ':00';
+  behave.push(`INFO  behavior checks run on route ${B.id}`);
+  await page.goto(BASE + H(0)); await page.evaluate(() => document.fonts.ready);
   ok(await page.evaluate(() => !window.DECK_TEST.snd().chime && !window.DECK_TEST.snd().trans && !window.DECK_TEST.snd().scape && !window.DECK_TEST.snd().ac), 'all sound off by default, no audio context created');
   await page.focus('#main');
-  await page.keyboard.press('ArrowRight'); await hashIs('ArrowRight moves on from a step with no builds', '#mon/P2-1');
+  await page.keyboard.press('ArrowRight'); await hashIs('ArrowRight moves on from a step with no builds', H(1));
   let s0 = await st();
   await page.keyboard.press('ArrowRight'); let s1 = await st();
   ok(s0.items > 0 && s1.built === s0.built + 1 && s1.i === 1, 'Next builds the next line in before moving on', `${s0.built} -> ${s1.built} of ${s1.items}`);
   await page.keyboard.press('a'); s1 = await st(); ok(s1.built === s1.items, 'A reveals every build on the slide');
-  await page.keyboard.press('PageDown'); await hashIs('PageDown (clicker) moves on', '#mon/P2-2');
-  await page.keyboard.press('PageUp'); await hashIs('PageUp (clicker) goes back', '#mon/P2-1');
-  await page.keyboard.press('1'); await page.keyboard.press('0'); await page.keyboard.press('Enter'); await hashIs('number jump 1 0 Enter', '#mon/P2-10');
-  await page.keyboard.press('End'); await hashIs('End goes to absent work', '#mon/P2-15');
+  await page.keyboard.press('PageDown'); await hashIs('PageDown (clicker) moves on', H(2));
+  await page.keyboard.press('PageUp'); await hashIs('PageUp (clicker) goes back', H(1));
+  await page.keyboard.press('1'); await page.keyboard.press('0'); await page.keyboard.press('Enter'); await hashIs('number jump 1 0 Enter', H(10));
+  await page.keyboard.press('End'); await hashIs('End goes to the last step', H(B.steps.length - 1));
   await page.keyboard.press('b'); ok(await page.isVisible('#blk'), 'B blacks out the screen'); await page.keyboard.press('b'); ok(!(await page.isVisible('#blk')), 'B again brings it back');
-  await page.keyboard.press('Home'); await hashIs('Home goes to the day page', '#mon');
+  await page.keyboard.press('Home'); await hashIs('Home goes to the day page', '#' + B.day);
   await page.keyboard.press('Home'); await hashIs('Home again goes to the week overview', '#week');
   await page.waitForTimeout(500);
-  const cells = await page.evaluate(() => [document.querySelectorAll('#content > :not(.leave) .cell:not(.empty):not(.fri)').length, window.DECK_TEST.routes.length]);
-  ok(cells[0] === cells[1], 'week overview has a cell for every route', `${cells[0]} cells, ${cells[1]} routes`);
-  for (const d of ['tue', 'wed', 'thu', 'fri', 'mon']) {
+  // A second version of a period (variant B) is listed inside its period's cell, so count day and period pairs.
+  const cells = await page.evaluate(() => [document.querySelectorAll('#content > :not(.leave) .cell:not(.empty):not(.fri)').length, new Set(window.DECK_TEST.routes.map(r => r.day + r.period)).size]);
+  ok(cells[0] === cells[1], 'week overview has a cell for every period', `${cells[0]} cells, ${cells[1]} periods`);
+  for (const d of [...W.days.filter(d => d !== B.day), B.day]) {
     await page.click(`#days button[data-day=${d}]`); await hashIs(`day tab ${d}`, '#' + d);
     const x = await page.evaluate(d => ({ pressed: document.querySelector(`#days button[data-day=${d}]`).getAttribute('aria-pressed'), cards: document.querySelectorAll('#content > :not(.leave) .choice').length, routes: window.DECK_TEST.routes.filter(r => r.day === d).length }), d);
     ok(x.pressed === 'true' && x.cards === x.routes, `day tab ${d} state`, `${x.cards} period cards for ${x.routes} routes`);
   }
-  await page.click('#content .choice'); await hashIs('a period card opens its route', '#mon/P2-0');
-  await page.selectOption('#jump', '4'); await hashIs('jump control', '#mon/P2-4');
-  await page.selectOption('#route', '4'); await hashIs('period control', '#mon/P4-0');
-  await page.goto(BASE + '#mon/P2-1');
+  const F = dayRoutes(B.day)[0], O = dayRoutes(B.day).find(r => r !== F);
+  await page.click('#content .choice'); await hashIs('a period card opens its route', hashOf(F, 0));
+  await page.selectOption('#jump', '4'); await hashIs('jump control', hashOf(F, 4));
+  if (O) { await page.selectOption('#route', O.key); await hashIs('period control', hashOf(O, 0)); } else skip('period control (one route that day)');
+  await page.goto(BASE + H(1));
   const t0 = await page.textContent('#timer'); await page.click('#play'); await page.waitForTimeout(2300); const t1 = await page.textContent('#timer');
-  ok(t0 === '05:00' && t1 < t0, 'segment timer counts down from the step minutes', `${t0} then ${t1}`);
+  ok(t0 === mmss(B.steps[1].minutes) && t1 < t0, 'segment timer counts down from the step minutes', `${t0} then ${t1}`);
   const off = await page.evaluate(() => getComputedStyle(document.querySelector('#tring .fg')).strokeDashoffset);
   ok(parseFloat(off) > 0, 'timer ring sweeps', off);
-  await page.click('#reset'); ok((await page.textContent('#timer')) === '05:00', 'timer reset');
+  await page.click('#reset'); ok((await page.textContent('#timer')) === mmss(B.steps[1].minutes), 'timer reset');
   // the timer never advances on its own
-  await page.goto(BASE + '#mon/P2-0'); await page.evaluate(() => { sessionStorage.setItem('r63-week-timer', JSON.stringify({ '2026-11-16/mon-p2/0': { end: Date.now() + 1500 } })); });
+  await page.goto(BASE + H(0)); await page.evaluate(k => { sessionStorage.setItem('r63-week-timer', JSON.stringify({ [k]: { end: Date.now() + 1500 } })); }, `${W.id}/${B.id}/0`);
   await page.reload(); await page.waitForTimeout(2600);
-  ok((await page.evaluate(() => location.hash)) === '#mon/P2-0' && (await page.textContent('#timer')) === '00:00', 'at zero the timer stops and waits for the teacher');
+  ok((await page.evaluate(() => location.hash)) === H(0) && (await page.textContent('#timer')) === '00:00', 'at zero the timer stops and waits for the teacher');
   // interactives
-  await page.goto(BASE + '#mon/P2-' + ix('mon-p2', 'sem-5')); await page.evaluate(() => window.DECK_TEST.revealAll());
-  await page.click('[data-opt="A"]'); await page.click('[data-opt="A"]'); await page.click('[data-opt="C"]');
-  ok((await page.evaluate(() => [...document.querySelectorAll('#content .prow .pn')].map(x => x.textContent).join(','))) === '2,0,1', 'room poll tallies taps locally');
-  await page.goto(BASE + '#tue/P1-' + ix('tue-p1', 'r1-lab')); await page.waitForTimeout(200);
+  const poll = findStep(k => W.slides[k] && W.slides[k].visual && W.slides[k].visual.type === 'poll');
+  if (poll) {
+    const opts = W.slides[poll.slide].visual.options, first = opts[0], last = opts[opts.length - 1];
+    await page.goto(BASE + poll.hash); await page.evaluate(() => window.DECK_TEST.revealAll());
+    await page.click(`[data-opt="${first}"]`); await page.click(`[data-opt="${first}"]`); await page.click(`[data-opt="${last}"]`);
+    ok((await page.evaluate(() => [...document.querySelectorAll('#content .prow .pn')].map(x => x.textContent).join(','))) === opts.map((o, k) => k === 0 ? 2 : k === opts.length - 1 ? 1 : 0).join(','), 'room poll tallies taps locally');
+  } else skip('room poll');
+  const lab = findStep(k => W.slides[k] && W.slides[k].kind === 'lab');
+  if (lab) {
+  await page.goto(BASE + lab.hash); await page.waitForTimeout(200);
   const chartA = await page.evaluate(() => document.querySelector('[data-lib="2"] .val').textContent);
   await page.click('[data-var="a"]'); const chartB = await page.evaluate(() => document.querySelector('[data-lib="2"] .val').textContent);
   ok(chartA === '1,200' && chartB === '6', 'chart toggles the variable', `${chartA} -> ${chartB}`);
@@ -245,8 +270,9 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   const chip = await page.$('[data-chip="1"]'); const bin = await page.$('[data-bin="out"]'); const cb = await chip.boundingBox(), bb = await bin.boundingBox();
   await page.mouse.move(cb.x + 20, cb.y + 10); await page.mouse.down(); await page.mouse.move(bb.x + 40, bb.y + 60, { steps: 8 }); await page.mouse.up();
   ok(await page.evaluate(() => !!document.querySelector('[data-bin="out"] [data-chip="1"]')), 'drag moves a claim into a bin');
-  const gl = ix('mon-p2', '@glossary');
-  await page.goto(BASE + '#mon/P2-' + gl); await page.evaluate(() => window.DECK_TEST.revealAll());
+  } else skip('lab chart, slider and claim bins');
+  const gl = findStep(k => k === '@glossary');
+  await page.goto(BASE + gl.hash); await page.evaluate(() => window.DECK_TEST.revealAll());
   await page.click('.gflip'); ok(await page.evaluate(() => document.querySelector('.gflip').classList.contains('on')), 'glossary card flips');
   await page.keyboard.press('p'); ok(await page.isVisible('#ink'), 'P opens the annotation layer');
   await page.mouse.move(700, 500); await page.mouse.down(); await page.mouse.move(900, 600, { steps: 6 }); await page.mouse.up();
@@ -262,15 +288,16 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   ok(!(await page.$('#tpass')), 'no teacher mode in the public site');
   { const html = await page.evaluate(() => { const c = document.body.cloneNode(true); c.querySelectorAll('script,style').forEach(e => e.remove()); return c.textContent + ' ' + [...document.querySelectorAll('[alt],[aria-label],[title]')].map(e => (e.getAttribute('alt') || '') + ' ' + (e.getAttribute('aria-label') || '') + ' ' + (e.getAttribute('title') || '')).join(' '); }); const m = html.match(/release hold|private review|review draft|speaker notes|teacher scripts|placeholder|visual manifest|for approval|passcode|teacher mode|AV check|test-joined/i); ok(!m, 'no teacher-facing or production language in the page' + (m ? ': ' + m[0] : '')); }
   await page.click('[data-pref=lang][data-v=es]'); await page.keyboard.press('Escape');
-  await page.goto(BASE + '#mon/P2-' + ix('mon-p2', '@absent')); ok(await page.evaluate(() => document.querySelectorAll('#content .es').length >= 3), 'Spanish toggle adds Spanish directions and absent work');
-  await page.evaluate(() => window.DECK_TEST.setPref('lang', 'en'));
+  await page.goto(BASE + H(B.steps.findIndex(s => s.slide === '@absent'))); ok(await page.evaluate(() => document.querySelectorAll('#content .es').length >= 3), 'Spanish toggle adds Spanish directions and absent work');
+  // The Spanish button saved its choice; setPref only changes memory, so save English too or later reloads come back in Spanish.
+  await page.evaluate(() => { window.DECK_TEST.setPref('lang', 'en'); localStorage.setItem('r63deck-lang', JSON.stringify('en')); });
   await page.evaluate(() => window.DECK_TEST.setPref('ts', 2)); ok(await page.evaluate(() => document.documentElement.classList.contains('ts2')), 'text size A++');
   await page.evaluate(() => window.DECK_TEST.setPref('ts', 0)); await page.evaluate(() => window.DECK_TEST.setPref('dys', true)); ok(await page.evaluate(() => document.documentElement.classList.contains('dys')), 'wide reading spacing'); await page.evaluate(() => window.DECK_TEST.setPref('dys', false));
   // print: every mode, page counts and nothing clipped
-  const PRINTS = [['#tue/P1-0', 'slides', null], ['#tue/P1-0', 'absent-one', 1], ['#week', 'absent-all', null], ['#tue/P1-0', 'cards', 4], ['#mon', 'day', 4], ['#week', 'week', null]];
-  for (const [h, mode, want0] of PRINTS) {
+  // Expected pages: one per step; one absent sheet; one per route; two per pair of practice cards; one handout per route that day; packet, glossary and one handout per route.
+  const PRINTS = [[H(0), 'slides', B.steps.length], [H(0), 'absent-one', 1], ['#week', 'absent-all', W.routes.length], [H(0), 'cards', 2 * Math.ceil(B.practice.length / 2)], ['#' + B.day, 'day', dayRoutes(B.day).length || 1], ['#week', 'week', W.routes.length + 2]];
+  for (const [h, mode, want] of PRINTS) {
     await page.goto(BASE + h); await page.evaluate(() => document.fonts.ready);
-    const want = want0 || await page.evaluate(m => m === 'slides' ? window.DECK_TEST.routes.find(r => r.id === 'tue-p1').steps.length : m === 'absent-all' ? window.DECK_TEST.routes.length : window.DECK_TEST.routes.length + 2, mode);
     await page.evaluate(m => window.DECK_TEST.renderPrint(m), mode);
     await page.emulateMedia({ media: 'print' });
     const info = await page.evaluate(() => { const pages = [...document.querySelectorAll('#print > .slide, #print > .lp')]; return { clipped: pages.map((p, i) => (p.scrollHeight > p.clientHeight + 2 || [...p.querySelectorAll('.c57')].some(c => c.scrollHeight > c.clientHeight + 2)) ? i : -1).filter(i => i >= 0), front: Math.min(...[...document.querySelectorAll('#print .c57:not(.back) li')].map(l => parseFloat(getComputedStyle(l).fontSize)), 99) }; });
@@ -286,25 +313,25 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   // swipe on a touch screen
   const tctx = await browser.newContext({ viewport: { width: 390, height: 844 }, hasTouch: true });
   const tp = await tctx.newPage(); listen(tp, 'touch');
-  await tp.goto(BASE + '#mon/P2-2'); await tp.waitForTimeout(200);
+  await tp.goto(BASE + H(2)); await tp.waitForTimeout(200);
   await tp.evaluate(() => { const m = document.getElementById('main'); const mk = (type, x) => { const t = new Touch({ identifier: 1, target: m, clientX: x, clientY: 400 }); m.dispatchEvent(new TouchEvent(type, { touches: type === 'touchend' ? [] : [t], changedTouches: [t], bubbles: true })); }; mk('touchstart', 320); mk('touchend', 120); });
   await tp.waitForTimeout(150);
-  ok((await tp.evaluate(() => location.hash)) === '#mon/P2-3', 'swipe left moves to the next slide (builds are off on phones)');
+  ok((await tp.evaluate(() => location.hash)) === H(3), 'swipe left moves to the next slide (builds are off on phones)');
   await tctx.close();
 
   // two windows on one computer stay in step
   const sctx = await browser.newContext({ viewport: { width: 1280, height: 720 } });
   const a = await sctx.newPage(), b2 = await sctx.newPage(); listen(a, 'sync A'); listen(b2, 'sync B');
-  await a.goto(BASE + '#mon/P2-0'); await b2.goto(BASE + '#mon/P2-0');
-  await a.evaluate(() => { location.hash = '#mon/P2-5'; }); await b2.waitForTimeout(500);
-  ok((await b2.evaluate(() => location.hash)) === '#mon/P2-5', 'second window follows the first (BroadcastChannel)');
+  await a.goto(BASE + H(0)); await b2.goto(BASE + H(0));
+  await a.evaluate(h => { location.hash = h; }, H(5)); await b2.waitForTimeout(500);
+  ok((await b2.evaluate(() => location.hash)) === H(5), 'second window follows the first (BroadcastChannel)');
   await a.keyboard.press('b'); await b2.waitForTimeout(300); ok(await b2.isVisible('#blk'), 'blackout reaches the second window');
   await sctx.close();
 
   // ---------- 4. motion under a school-laptop CPU (4x throttle) ----------
   const mctx = await browser.newContext({ viewport: { width: 1920, height: 1080 } });
   const mp = await mctx.newPage(); listen(mp, 'motion');
-  await mp.goto(BASE + '#mon/P4-0'); await mp.evaluate(() => document.fonts.ready);
+  await mp.goto(BASE + H(0)); await mp.evaluate(() => document.fonts.ready);
   const cdp = await mctx.newCDPSession(mp); await cdp.send('Emulation.setCPUThrottlingRate', { rate: 4 });
   const frames = [];
   for (let k = 0; k < 10; k++) {
@@ -321,16 +348,10 @@ const pdfPages = buf => { const f = path.join(require('os').tmpdir(), 'r63qa-' +
   // ---------- 5. screenshots of each distinct type ----------
   if (SHOTS) {
     fs.mkdirSync(SHOTS, { recursive: true });
-    const r = await (async () => { const c = await browser.newContext(); const p = await c.newPage(); await p.goto(BASE); const x = await p.evaluate(() => window.DECK_TEST.routes.map(r => ({ id: r.id, steps: r.steps.map(s => s.slide) }))); await c.close(); return x; })();
-    const idx = (rid, slide) => r.find(x => x.id === rid).steps.indexOf(slide);
-    const T = (rid, slide, label) => [rid.replace('-p', '/P') + '-' + idx(rid, slide), label];
-    const TYPES = [['week', 'week overview'], ['mon', 'day page'], ['fri', 'Friday card'],
-      T('mon-p4', '@target', 'learning target'), T('mon-p4', '@donow', 'do now'), T('mon-p4', '@agenda', 'agenda'), T('mon-p4', '@criteria', 'success criteria'), T('mon-p4', 'r-cover', 'cover'), T('mon-p4', 'r-studio', 'proposal work'), T('mon-p4', 'g-kohler', 'guest exhibit and map'),
-      T('mon-p4', '@practice', 'practice tiers'), T('mon-p4', '@materials', 'materials and QR'), T('mon-p4', '@glossary', 'glossary'), T('mon-p4', '@exit', 'exit ticket'), T('mon-p4', '@next', 'next class'), T('mon-p4', '@absent', 'absent work'),
-      T('mon-p2', '@donow', 'do now from the deck'), T('mon-p2', 'sem-2', 'meter'), T('mon-p2', 'sem-3', 'reading citation and timeline'), T('mon-p2', 'sem-4', 'reasoning chain'), T('mon-p2', 'sem-5', 'room poll'), T('mon-p2', 'sem-6', 'credibility check'), T('mon-p2', 'sem-7', 'peer check'), T('mon-p2', '@exit', 'Seminar exit'),
-      T('tue-p1', 'r1-open', 'R1 opener'), T('tue-p1', 'r1-1', 'record exhibit'), T('tue-p1', 'r1-23', 'R1.2 with R1.3'), T('tue-p1', 'r1-lab', 'lab'), T('tue-p1', 'r1-4', 'R1.4 timeline'), T('tue-p1', '@exit', 'R1.5 exit'),
-      T('wed-p2', '@donow', 'Workshop 2 do now'), T('wed-p2', 'sem-11', 'Carr citation'), T('wed-p2', 'sem-12', 'matrix'), T('wed-p2', 'sem-13', 'concept map'), T('wed-p2', 'sem-15', 'merge'), T('wed-p2', 'sem-16', 'report plan chain'), T('wed-p2', '@next', 'Book Fair map'),
-      T('wed-p8', 'g-obejas', 'guest editorial'), T('thu-p3', 'g-rosales', 'guest world map'), T('tue-p3', 'g-cooper', 'guest Miami map'), T('thu-p1', 'g-piao', 'guest US map')];
+    // One screenshot for the week, each day, and the first use of each distinct step or slide type in this week.
+    const TYPES = [['week', 'week overview'], ...W.days.map(d => [d, 'day page ' + d])], seen = new Set();
+    for (const q of W.seqs) q.slides.forEach((k, i) => TYPES.push([`${q.day}/${q.id}-${i}`, `${q.id} slide ${i}`]));
+    for (const r of sorted) r.steps.forEach((st, i) => { const sl = W.slides[st.slide]; const kind = st.slide.startsWith('@') ? st.slide : sl ? sl.kind + (sl.visual && sl.visual.type ? ' ' + sl.visual.type : '') : st.slide; if (!seen.has(kind)) { seen.add(kind); TYPES.push([hashOf(r, i).slice(1), kind]); } });
     for (const v of [VIEWS[0], VIEWS[1]]) {
       const c = await browser.newContext({ viewport: { width: v.w, height: v.h } });
       const p = await c.newPage(); await p.goto(BASE + '#week'); await p.evaluate(() => document.fonts.ready);
