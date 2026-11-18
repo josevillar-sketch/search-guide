@@ -909,12 +909,16 @@
    "intro": "Earlier weekly decks.",
    "items": [
     {
+     "label": "Week of November 16-20, 2026",
+     "url": "https://nov-16-2026-week-room-63.netlify.app/"
+    },
+    {
      "label": "Week of November 9-13, 2026",
-     "url": "https://room-63-week-of-nov-9-2026.netlify.app/"
+     "url": "https://nov-9-2026-week-room-63.netlify.app/"
     },
     {
      "label": "Week of November 2-6, 2026",
-     "url": "https://room63-week-of-nov-2-2026.netlify.app/"
+     "url": "https://nov-2-2026-week-room-63.netlify.app/"
     }
    ]
   },
